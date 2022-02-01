@@ -9,14 +9,14 @@ import {
   CollectionNormalized,
   Manifest,
   ManifestNormalized,
-  RangeNormalized,
-  Range,
-  Reference,
   PolyEntity,
+  Range,
+  RangeNormalized,
+  Reference,
 } from '@iiif/presentation-3';
-import { emptyCollection, emptyAnnotationPage, emptyCanvas, emptyManifest, emptyRange } from './empty-types';
+import { emptyAnnotationPage, emptyCanvas, emptyCollection, emptyManifest, emptyRange } from './empty-types';
 import { convertPresentation2 } from '../presentation-2';
-import {NormalizedEntity} from "./serialize";
+import { NormalizedEntity } from './serialize';
 
 export const defaultEntities = {
   Collection: {},
@@ -65,7 +65,10 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
         storeType[resource.id] = storeType[resource.id]
           ? (Object.assign({}, storeType[resource.id], resource) as any)
           : Object.assign({}, resource);
-        return { id: resource.id, type: type === 'ContentResource' ? type : resource.type } as T;
+        return {
+          id: resource.id,
+          type: type === 'ContentResource' ? type : resource.type,
+        } as T;
       }
       return resource as T;
     };

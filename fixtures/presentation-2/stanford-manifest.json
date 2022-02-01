@@ -1,0 +1,111 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "http://dms-data.stanford.edu/data/manifests/RomanCoins/bb853kn3021/manifest.json",
+  "@type": "sc:Manifest",
+  "label": "Roman Imperial denarius",
+  "metadata": [
+    {
+      "label": "Mint/Source",
+      "value": "Lugdunum"
+    },
+    {
+      "label": "Obverse type",
+      "value": "portrait of Tiberius, laureate, facing right, laurel ribbons divergent"
+    },
+    {
+      "label": "Obverse inscription",
+      "value": "TI CAESAR DIVI AUG F AUGUSTUS"
+    },
+    {
+      "label": "Reverse type",
+      "value": "female seated on chair, facing right, laurel branch in left hand, scepter in right hand, 2 lines below chair with plain legs"
+    },
+    {
+      "label": "Reverse inscription",
+      "value": "PONTIF MAX(IM)"
+    },
+    {
+      "label": "Coin number",
+      "value": "1.03"
+    },
+    {
+      "label": "Bibliography",
+      "value": "Row, R. M. The Tribute Penny: A Guide to the Pontif Maxim Aureus-Denarius Issue of Tiberius, AD 14-37. Austin, 2013. Type 1."
+    },
+    {
+      "label": "Bibliography",
+      "value": "Sutherland, C. H. V. The Roman Imperial Coinage: Volume I, 31 BC-AD 69. Revised edition. London, 1984. 26."
+    },
+    {
+      "label": "Bibliography",
+      "value": "Mattingly, H. B. Coins of the Roman Empire in the British Museum: Volume I, Augustus to Vitellius. London, 1976. 34."
+    }
+  ],
+  "attribution": "Provided by the Stanford University Libraries",
+  "seeAlso": {
+    "@id": "http://purl.stanford.edu/bb853kn3021.mods",
+    "format": "application/mods+xml"
+  },
+  "within": "http://dms-data.stanford.edu/data/manifests/RomanCoins/",
+  "sequences": [
+    {
+      "@id": "http://dms-data.stanford.edu/data/manifests/RomanCoins/bb853kn3021/normal",
+      "@type": "sc:Sequence",
+      "label": "Current page order",
+      "canvases": [
+        {
+          "@id": "http://dms-data.stanford.edu/data/manifests/RomanCoins/bb853kn3021/canvas/canvas-1",
+          "@type": "sc:Canvas",
+          "label": "Image 1",
+          "height": 790,
+          "width": 790,
+          "images": [
+            {
+              "@id": "http://dms-data.stanford.edu/data/manifests/RomanCoins/bb853kn3021/imageanno/anno-1",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://stacks.stanford.edu/image/bb853kn3021/bb853kn3021_00_0001",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 790,
+                "width": 790,
+                "service": {
+                  "@id": "https://stacks.stanford.edu/image/iiif/bb853kn3021%252Fbb853kn3021_00_0001",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1"
+                }
+              },
+              "on": "http://dms-data.stanford.edu/data/manifests/RomanCoins/bb853kn3021/canvas/canvas-1"
+            }
+          ]
+        },
+        {
+          "@id": "http://dms-data.stanford.edu/data/manifests/RomanCoins/bb853kn3021/canvas/canvas-2",
+          "@type": "sc:Canvas",
+          "label": "Image 2",
+          "height": 790,
+          "width": 790,
+          "images": [
+            {
+              "@id": "http://dms-data.stanford.edu/data/manifests/RomanCoins/bb853kn3021/imageanno/anno-2",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://stacks.stanford.edu/image/bb853kn3021/bb853kn3021_00_0002",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 790,
+                "width": 790,
+                "service": {
+                  "@id": "https://stacks.stanford.edu/image/iiif/bb853kn3021%252Fbb853kn3021_00_0002",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1"
+                }
+              },
+              "on": "http://dms-data.stanford.edu/data/manifests/RomanCoins/bb853kn3021/canvas/canvas-2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

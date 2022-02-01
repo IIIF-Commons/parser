@@ -1,0 +1,1388 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/manifest",
+  "@type": "sc:Manifest",
+  "label": "BU29",
+  "thumbnail": {
+    "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/5adbb9c50f534f6393605b528be2812fb98a0807.jpg",
+    "@type": "dctypes:Image",
+    "format": "image/jpeg",
+    "width": 181,
+    "height": 200
+  },
+  "related": {
+    "@id": "https://www.omeka.ugent.be/libraries.lw21/s/Indo-IranianVirtualLibrary/item/235",
+    "format": "text/html"
+  },
+  "seeAlso": { "@id": "https://www.omeka.ugent.be/libraries.lw21/api/items/235", "format": "application/ld+json" },
+  "metadata": [
+    { "label": "Title", "value": "BU29" },
+    { "label": "Coverage", "value": "Rivāyāts" },
+    { "label": "Owner", "value": "Mumbai University" },
+    { "label": "Date", "value": "1760" },
+    { "label": "Language", "value": "Persian, Avestan, Pazand, Pahlavi, Gujarati." }
+  ],
+  "sequences": [
+    {
+      "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/sequence/normal",
+      "@type": "sc:Sequence",
+      "label": "Current Page Order",
+      "viewingDirection": "left-to-right",
+      "canvases": [
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p1",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R2"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/5adbb9c50f534f6393605b528be2812fb98a0807.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 181,
+            "height": 200
+          },
+          "width": 1666,
+          "height": 1843,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0001-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/236/full/723,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1666,
+                "height": 1843,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/236",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p1"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R2" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p2",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V2"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/0594575676ed7eea0d960b1193d5f5b7b619760d.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 172,
+            "height": 200
+          },
+          "width": 1720,
+          "height": 1996,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0002-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/237/full/689,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1720,
+                "height": 1996,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/237",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p2"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V2" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p3",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R3"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/7d216975e0faff767266c6a9e53ddc313754f731.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 157,
+            "height": 200
+          },
+          "width": 1452,
+          "height": 1848,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0003-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/238/full/629,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1452,
+                "height": 1848,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/238",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p3"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R3" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p4",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V3"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/fb0bc6eea00905688c14c166e382030eab804b5a.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 148,
+            "height": 200
+          },
+          "width": 1576,
+          "height": 2128,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0004-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/239/full/592,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1576,
+                "height": 2128,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/239",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p4"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V3" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p5",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R4"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/61de60db06ee5ca24cfca0556ab0f8d7e035ccc9.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 145,
+            "height": 200
+          },
+          "width": 1441,
+          "height": 1993,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0005-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/240/full/578,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1441,
+                "height": 1993,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/240",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p5"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R4" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p6",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V4"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/48e33e5b8705d6c1b64649ab6dead1c8e1ba7e82.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 145,
+            "height": 200
+          },
+          "width": 1441,
+          "height": 1993,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0006-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/241/full/578,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1441,
+                "height": 1993,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/241",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p6"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V4" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p7",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R5"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/9b64490f422accd10135ca5b2e5c58300adb9988.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 152,
+            "height": 200
+          },
+          "width": 1399,
+          "height": 1843,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0007-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/242/full/607,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1399,
+                "height": 1843,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/242",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p7"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R5" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p8",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V5"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/63895b3e4e97980b480a93403a188d7b5ae43922.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 150,
+            "height": 200
+          },
+          "width": 1489,
+          "height": 1984,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0008-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/243/full/600,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1489,
+                "height": 1984,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/243",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p8"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V5" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p9",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R6"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/0f44f1e1793e45eda6f8e8f707fabf667e9cad89.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 153,
+            "height": 200
+          },
+          "width": 1381,
+          "height": 1810,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0009-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/244/full/610,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1381,
+                "height": 1810,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/244",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p9"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R6" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p10",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V6"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/5be9b6f9e3286fc4eb7b59bcc465929029073e42.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 166,
+            "height": 200
+          },
+          "width": 1504,
+          "height": 1816,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0010-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/245/full/663,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1504,
+                "height": 1816,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/245",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p10"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V6" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p11",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R7"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/ad2e6cb4b356a8a35cc884e48c509bb5e92f58e0.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 149,
+            "height": 200
+          },
+          "width": 1402,
+          "height": 1879,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0011-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/246/full/597,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1402,
+                "height": 1879,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/246",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p11"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R7" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p12",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V7"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/31e0ee4313acadd81cddd26814972ff6e7926646.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 144,
+            "height": 200
+          },
+          "width": 1374,
+          "height": 1905,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0012-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/247/full/577,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1374,
+                "height": 1905,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/247",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p12"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V7" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p13",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R8"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/1af2411f97859ed6481ec5bedd4a74a7c18aacba.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 151,
+            "height": 200
+          },
+          "width": 1218,
+          "height": 1611,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0013-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/266/full/605,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1218,
+                "height": 1611,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/266",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p13"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R8" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p14",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V8"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/0b0446f237b12301772d4b4db742c5d689813599.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 142,
+            "height": 200
+          },
+          "width": 1290,
+          "height": 1815,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0014-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/267/full/569,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1290,
+                "height": 1815,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/267",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p14"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V8" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p15",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R9"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/9c327033f1bd7af2e73dc578e860414212f674ff.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 168,
+            "height": 200
+          },
+          "width": 1578,
+          "height": 1881,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0015-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/268/full/671,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1578,
+                "height": 1881,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/268",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p15"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R9" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p16",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V9"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/114cd8f264086ff2cb741e655cecdd6f43f49099.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 150,
+            "height": 200
+          },
+          "width": 1365,
+          "height": 1821,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0016-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/269/full/600,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1365,
+                "height": 1821,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/269",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p16"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V9" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p17",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R10"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/bf00db756165c7a1132bde9670d5b8df1d190a36.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 148,
+            "height": 200
+          },
+          "width": 1254,
+          "height": 1692,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0017-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/270/full/593,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1254,
+                "height": 1692,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/270",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p17"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R10" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p18",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V10"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/db7054f475ec895e6e512207541ed70674989ea7.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 168,
+            "height": 200
+          },
+          "width": 1557,
+          "height": 1854,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0018-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/271/full/672,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1557,
+                "height": 1854,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/271",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p18"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V10" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p19",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R11"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/72a6c7d12f7a17f8f1e8eaf13c307e7e461754fa.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 161,
+            "height": 200
+          },
+          "width": 1350,
+          "height": 1677,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0019-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/272/full/644,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1350,
+                "height": 1677,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/272",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p19"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R11" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p20",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V11"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/9d5e19c2c314d8780cf529178497bf9795b4a650.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 144,
+            "height": 200
+          },
+          "width": 1317,
+          "height": 1830,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0020-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/273/full/576,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1317,
+                "height": 1830,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/273",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p20"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V11" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p21",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R12"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/0515d2d0777faab0a0f25fead4117991b2a7b296.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 146,
+            "height": 200
+          },
+          "width": 1239,
+          "height": 1692,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0021-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/274/full/586,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1239,
+                "height": 1692,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/274",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p21"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R12" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p22",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V12"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/a9e9dfed2f38c01411413921eb0e9f9994faee7d.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 148,
+            "height": 200
+          },
+          "width": 1380,
+          "height": 1860,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0022-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/275/full/594,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1380,
+                "height": 1860,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/275",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p22"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V12" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p23",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R13"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/4ca2bf940eef8d0903acc4bf4326dda4e7245366.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 149,
+            "height": 200
+          },
+          "width": 1266,
+          "height": 1698,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0023-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/276/full/596,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1266,
+                "height": 1698,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/276",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p23"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R13" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p24",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V13"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/1c8f0254d3a163da0c98970523a4641c7b35431c.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 162,
+            "height": 200
+          },
+          "width": 1419,
+          "height": 1749,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0024-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/277/full/649,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1419,
+                "height": 1749,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/277",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p24"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V13" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p25",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R14"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/e61fc41d1e9888973aaf7c84f272d94a434df860.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 164,
+            "height": 200
+          },
+          "width": 1332,
+          "height": 1623,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0025-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/278/full/657,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1332,
+                "height": 1623,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/278",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p25"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R14" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p26",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V14"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/405d9a9c9274b5f95dc9e8da093a786b1e3440bd.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 167,
+            "height": 200
+          },
+          "width": 1428,
+          "height": 1707,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0026-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/279/full/669,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1428,
+                "height": 1707,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/279",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p26"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V14" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p27",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R15"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/6fcef7369cf0b1b84c84644948775d7e4b2ce9ef.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 155,
+            "height": 200
+          },
+          "width": 1287,
+          "height": 1665,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0027-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/280/full/618,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1287,
+                "height": 1665,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/280",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p27"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R15" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p28",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V15"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/22c7314224cf8c5a5613f27fb0c971a8a3067d79.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 145,
+            "height": 200
+          },
+          "width": 1368,
+          "height": 1881,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0028-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/281/full/582,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1368,
+                "height": 1881,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/281",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p28"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V15" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p29",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R16"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/6b9312ce8638eb8865f1c2034072cc1c882561df.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 161,
+            "height": 200
+          },
+          "width": 1551,
+          "height": 1932,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0029-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/282/full/642,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1551,
+                "height": 1932,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/282",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p29"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R16" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p30",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V16"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/b945019d648cfcc80328ae5c5e495b2255ed4167.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 161,
+            "height": 200
+          },
+          "width": 1551,
+          "height": 1932,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0030-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/283/full/642,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1551,
+                "height": 1932,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/283",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p30"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V16" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p31",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R17"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/cb59f5dd2455c66106152a38b25a2aeee6b3b2d6.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 167,
+            "height": 200
+          },
+          "width": 1605,
+          "height": 1926,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0031-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/284/full/667,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1605,
+                "height": 1926,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/284",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p31"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R17" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p32",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "V17"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/ec81efc1dd3209acdb0594b391a3787968f2181c.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 159,
+            "height": 200
+          },
+          "width": 1440,
+          "height": 1815,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0032-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/285/full/635,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1440,
+                "height": 1815,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/285",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p32"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "V17" }]
+        },
+        {
+          "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p33",
+          "@type": "sc:Canvas",
+          "label": {
+            "type": "literal",
+            "property_id": 1,
+            "property_label": "Title",
+            "is_public": true,
+            "@value": "R18"
+          },
+          "thumbnail": {
+            "@id": "https://www.omeka.ugent.be/libraries.lw21/files/medium/aa0a79ff4f08974ef57c3252c0fcd3cafa415914.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "width": 140,
+            "height": 200
+          },
+          "width": 1218,
+          "height": 1740,
+          "images": [
+            {
+              "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/annotation/p0033-image",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/286/full/560,800/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "width": 1218,
+                "height": 1740,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://www.omeka.ugent.be/libraries.lw21/iiif-img/2/286",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://www.omeka.ugent.be/libraries.lw21/iiif/2/235/canvas/p33"
+            }
+          ],
+          "metadata": [{ "label": "Title", "value": "R18" }]
+        }
+      ]
+    }
+  ]
+}

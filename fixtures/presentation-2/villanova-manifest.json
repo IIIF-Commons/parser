@@ -1,0 +1,168 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@type": "sc:Manifest",
+  "@id": "https://digital.library.villanova.edu/Item/vudl:30471/Manifest",
+  "label": "Letter, To: Ellie From: A. M. Thackara, April 12, 1882.",
+  "metadata": [
+    {
+      "label": "Full Title",
+      "value": "<span>Letter, To: Ellie From: A. M. Thackara, April 12, 1882.</span>"
+    },
+    {
+      "label": "Author",
+      "value": "<span><a href=\"https://digital.library.villanova.edu/Search/Results?lookfor=author_or_contributor_facet_str_mv%3A%22Thackara%2C+A.+M.+%28Alexander+Montgomery%29.%22\">Thackara, A. M. (Alexander Montgomery).</a></span>"
+    },
+    {
+      "label": "Date Added",
+      "value": "<span>12 January 2014</span>"
+    },
+    {
+      "label": "Format",
+      "value": "<span><a href=\"https://digital.library.villanova.edu/Search/Results?filter[]=format:Transcribed\">Transcribed</a></span>"
+    },
+    {
+      "label": "Language",
+      "value": "<span><a href=\"https://digital.library.villanova.edu/Search/Results?filter[]=language:English\">English</a></span>"
+    },
+    {
+      "label": "Publish Date",
+      "value": "<span><a href=\"https://digital.library.villanova.edu/Search/Results?filter[]=dc_date_str:1882-04-12\">1882-04-12</a></span>"
+    },
+    {
+      "label": "Source",
+      "value": "<span><a href=\"https://digital.library.villanova.edu/Search/Results?filter[]=dc_source_str_mv:Sherman+Thackara\">Sherman Thackara</a></span>"
+    },
+    {
+      "label": "Topic",
+      "value": "<span><a href=\"https://digital.library.villanova.edu/Search/Results?type=Subject&lookfor=%22Thackara%2C+Eleanor+Mary+Sherman%2C+1859-1915.%22\">Thackara, Eleanor Mary Sherman, 1859-1915.</a></span>"
+    },
+    {
+      "label": "About",
+      "value": "<span><a href=\"https://digital.library.villanova.edu/Record/vudl:30471\">More Details</a><br /><a href=\"https://digital.library.villanova.edu/Item/vudl:30471\">Permanent Link</a></span>"
+    },
+    {
+      "label": "Disclaimers",
+      "value": "<span><a href=\"https://digital.library.villanova.edu/copyright.html#liability\">Disclaimer of Liability</a><br /><a href=\"https://digital.library.villanova.edu/copyright.html#endorsement\">Disclaimer of Endorsement</a></span>"
+    }
+  ],
+  "description": "<p>6b/2/2 OM E467.S53</p>",
+  "license": "http://creativecommons.org/licenses/by-sa/4.0/",
+  "requiredStatement": {
+    "label": "ATTRIBUTION",
+    "value": "<span>Digital Library@Villanova University<br /><br /><b>Disclaimers</b>: <br /><a href=\"https://digital.library.villanova.edu/copyright.html#liability\">Disclaimer of Liability</a><br /><a href=\"https://digital.library.villanova.edu/copyright.html#endorsement\">Disclaimer of Endorsement</a><br /><br /><b>License</b>: <br /><a href=\"http://creativecommons.org/licenses/by-sa/4.0/\"><img src=\"https://digital.library.villanova.edu/themes/vudiglib3/images/license/by-sa.png\" alt=\"Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)\"></a></span>"
+  },
+  "attribution": "Digital Library@Villanova University",
+  "related": {
+    "@id": "https://digital.library.villanova.edu/Item/vudl:30471",
+    "format": "text/html"
+  },
+  "within": "https://digital.library.villanova.edu/Collection/vudl:25033/IIIF",
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "label": "Pages",
+      "viewingDirection": "left-to-right",
+      "viewingHint": "paged",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "https://digital.library.villanova.edu/Item/vudl:30471/Canvas/p0",
+          "label": "Front",
+          "rendering": [
+            {
+              "@id": "https://digital.library.villanova.edu/files/vudl:30473/MASTER",
+              "format": "image/tiff",
+              "label": "Original source file - 159.33 MB"
+            },
+            {
+              "@id": "https://digital.library.villanova.edu/files/vudl:30473/OCR-DIRTY",
+              "format": "text/plain",
+              "label": "Raw OCR Data"
+            },
+            {
+              "@id": "https://digital.library.villanova.edu/files/vudl:30473/MASTER-MD",
+              "format": "application/xml",
+              "label": "Technical Metadata"
+            }
+          ],
+          "height": 8514,
+          "width": 6530,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://digital.library.villanova.edu/files/vudl:30473/LARGE",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.library.villanova.edu/image/vudl%3A30473",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                },
+                "height": 8514,
+                "width": 6530
+              },
+              "on": "https://digital.library.villanova.edu/Item/vudl:30471/Canvas/p0"
+            }
+          ]
+        },
+        {
+          "@type": "sc:Canvas",
+          "@id": "https://digital.library.villanova.edu/Item/vudl:30471/Canvas/p1",
+          "label": "Back",
+          "rendering": [
+            {
+              "@id": "https://digital.library.villanova.edu/files/vudl:30474/MASTER",
+              "format": "image/tiff",
+              "label": "Original source file - 159.91 MB"
+            },
+            {
+              "@id": "https://digital.library.villanova.edu/files/vudl:30474/OCR-DIRTY",
+              "format": "text/plain",
+              "label": "Raw OCR Data"
+            },
+            {
+              "@id": "https://digital.library.villanova.edu/files/vudl:30474/MASTER-MD",
+              "format": "application/xml",
+              "label": "Technical Metadata"
+            }
+          ],
+          "height": 8526,
+          "width": 6554,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://digital.library.villanova.edu/files/vudl:30474/LARGE",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.library.villanova.edu/image/vudl%3A30474",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                },
+                "height": 8526,
+                "width": 6554
+              },
+              "on": "https://digital.library.villanova.edu/Item/vudl:30471/Canvas/p1"
+            }
+          ]
+        }
+      ],
+      "rendering": [
+        {
+          "@id": "https://digital.library.villanova.edu/files/vudl:451455/MASTER",
+          "format": "application/pdf",
+          "label": "Transcription"
+        },
+        {
+          "@id": "https://digital.library.villanova.edu/files/vudl:451456/MASTER",
+          "format": "application/msword",
+          "label": "Transcription"
+        }
+      ]
+    }
+  ]
+}

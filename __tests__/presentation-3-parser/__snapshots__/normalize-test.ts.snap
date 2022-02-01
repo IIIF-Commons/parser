@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`normalize normalize 1`] = `
+Object {
+  "Annotation": Object {
+    "https://example.org/iiif/book1/annotation/p0001-image": Object {
+      "body": Array [
+        Object {
+          "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+          "type": "ContentResource",
+        },
+      ],
+      "id": "https://example.org/iiif/book1/annotation/p0001-image",
+      "motivation": Array [
+        "painting",
+      ],
+      "target": "https://example.org/iiif/book1/canvas/p1",
+      "type": "Annotation",
+    },
+  },
+  "AnnotationCollection": Object {},
+  "AnnotationPage": Object {
+    "https://example.org/iiif/book1/page/p1/1": Object {
+      "behavior": Array [],
+      "homepage": null,
+      "id": "https://example.org/iiif/book1/page/p1/1",
+      "items": Array [
+        Object {
+          "id": "https://example.org/iiif/book1/annotation/p0001-image",
+          "type": "Annotation",
+        },
+      ],
+      "label": null,
+      "logo": Array [],
+      "metadata": Array [],
+      "motivation": null,
+      "provider": Array [],
+      "rendering": Array [],
+      "requiredStatement": null,
+      "rights": null,
+      "seeAlso": Array [],
+      "service": Array [],
+      "summary": null,
+      "thumbnail": Array [],
+      "type": "AnnotationPage",
+    },
+  },
+  "Canvas": Object {
+    "https://example.org/iiif/book1/canvas/p1": Object {
+      "accompanyingCanvas": null,
+      "annotations": Array [],
+      "behavior": Array [],
+      "duration": 0,
+      "height": 1800,
+      "homepage": null,
+      "id": "https://example.org/iiif/book1/canvas/p1",
+      "items": Array [
+        Object {
+          "id": "https://example.org/iiif/book1/page/p1/1",
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": null,
+      "logo": Array [],
+      "metadata": Array [],
+      "motivation": null,
+      "navDate": null,
+      "partOf": Array [],
+      "placeholderCanvas": null,
+      "posterCanvas": null,
+      "provider": Array [],
+      "rendering": Array [],
+      "requiredStatement": null,
+      "rights": null,
+      "seeAlso": Array [],
+      "service": Array [],
+      "summary": null,
+      "thumbnail": Array [],
+      "type": "Canvas",
+      "width": 1200,
+    },
+  },
+  "Collection": Object {},
+  "ContentResource": Object {
+    "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png": Object {
+      "format": "image/png",
+      "height": 1800,
+      "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+      "type": "Image",
+      "width": 1200,
+    },
+    "http://myhomepage.com": Object {
+      "id": "http://myhomepage.com",
+      "type": "ContentResource",
+    },
+  },
+  "Manifest": Object {
+    "https://example.org/iiif/book1/manifest": Object {
+      "@context": Array [
+        "http://www.w3.org/ns/anno.jsonld",
+        "http://iiif.io/api/presentation/{{ page.major }}/context.json",
+      ],
+      "accompanyingCanvas": null,
+      "annotations": Array [],
+      "behavior": Array [],
+      "homepage": Object {
+        "id": "http://myhomepage.com",
+        "type": "ContentResource",
+      },
+      "id": "https://example.org/iiif/book1/manifest",
+      "items": Array [
+        Object {
+          "id": "https://example.org/iiif/book1/canvas/p1",
+          "type": "Canvas",
+        },
+      ],
+      "label": Object {
+        "en": Array [
+          "Image 1",
+        ],
+      },
+      "logo": Array [],
+      "metadata": Array [],
+      "motivation": null,
+      "navDate": null,
+      "partOf": Array [],
+      "placeholderCanvas": null,
+      "posterCanvas": null,
+      "provider": Array [],
+      "rendering": Array [],
+      "requiredStatement": null,
+      "rights": null,
+      "seeAlso": Array [],
+      "service": Array [],
+      "services": Array [],
+      "start": null,
+      "structures": Array [],
+      "summary": null,
+      "thumbnail": Array [],
+      "type": "Manifest",
+      "viewingDirection": "left-to-right",
+    },
+  },
+  "Range": Object {},
+  "Selector": Object {},
+  "Service": Object {},
+}
+`;

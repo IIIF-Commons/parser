@@ -1,0 +1,111 @@
+{
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "metadata": [
+    {
+      "value": "<a href=\"https://lib.ugent.be/catalog/rug01%3A001876993/items/800000081674\">https://lib.ugent.be/catalog/rug01%3A001876993/items/800000081674</a>",
+      "label": "Record"
+    },
+    {
+      "value": "[poster] Zoo stemt men voor de liberalen.",
+      "label": "Title"
+    },
+    {
+      "label": "Description",
+      "value": "1 beeldaffiche."
+    },
+    {
+      "value": "Gent : Annoot-Braeckman, [1878].",
+      "label": "Publisher"
+    },
+    {
+      "value": "archive.ugent.be:DEED7A64-2798-11E3-B8DE-18E597481370",
+      "label": "Object ID"
+    },
+    {
+      "value": "800000081674",
+      "label": "Barcode"
+    },
+    {
+      "label": "Callnr",
+      "value": "BIB.AFF.C.002248"
+    }
+  ],
+  "@id": "https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370",
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "related": {
+    "format": "text/html",
+    "@id": "https://lib.ugent.be/viewer/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370"
+  },
+  "attribution": "Provided by Ghent University Library",
+  "sequences": [
+    {
+      "rendering": [
+        {
+          "format": "application/zip",
+          "label": "Download all images (68.45 MB)",
+          "@id": "https://lib.ugent.be/catalog/rug01%3A001876993/requests/new?objectid=archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370"
+        }
+      ],
+      "viewingDirection": "left-to-right",
+      "startCanvas": "https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370/canvases/DS.2",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "height": 5566,
+          "width": 4025,
+          "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "@id": "https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370/canvases/DS.2",
+          "thumbnail": {
+            "@id": "https://adore.ugent.be/IIIF/images/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370%3ADS.2/0,0,4025,5566/226,/0/default.jpg",
+            "@type": "dctypes:Image"
+          },
+          "label": "1",
+          "images": [
+            {
+              "@id": "https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370/canvases/DS.2/image-annotations/0",
+              "resource": {
+                "@type": "dctypes:Image",
+                "height": 5566,
+                "@id": "https://adore.ugent.be/IIIF/images/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370%3ADS.2/full/full/0/native.jpg",
+                "width": 4025,
+                "service": {
+                  "@id": "https://adore.ugent.be/IIIF/images/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370%3ADS.2",
+                  "profile": "http://iiif.io/api/image/2/level1.json",
+                  "@context": "http://iiif.io/api/image/2/context.json"
+                },
+                "label": "BIB-AFF-C-002248_2013_0001_AC.jp2",
+                "format": "image/jpeg"
+              },
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370/canvases/DS.2"
+            }
+          ],
+          "attribution": "Provided by Ghent University Library",
+          "rendering": [
+            {
+              "label": "Download as jpeg2000 (15.75 MB)",
+              "format": "image/jp2",
+              "@id": "https://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370%3ADS.2&svc_id=original"
+            }
+          ]
+        }
+      ],
+      "@id": "https://adore.ugent.be/IIIF/manifests/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370/sequences/0",
+      "@type": "sc:Sequence"
+    }
+  ],
+  "description": "",
+  "@type": "sc:Manifest",
+  "logo": "https://adore.ugent.be/IIIF/img/logo_i.svg",
+  "thumbnail": {
+    "@id": "https://adore.ugent.be/IIIF/images/archive.ugent.be%3ADEED7A64-2798-11E3-B8DE-18E597481370%3ADS.2/0,0,4025,5566/226,/0/default.jpg",
+    "@type": "dctypes:Image"
+  },
+  "label": "Zoo stemt men voor de liberalen",
+  "seeAlso": {
+    "@id": "https://lib.ugent.be/catalog/rug01%3A001876993.marcxml",
+    "dcterms:format": "application/marcxml+xml"
+  },
+  "within": []
+}

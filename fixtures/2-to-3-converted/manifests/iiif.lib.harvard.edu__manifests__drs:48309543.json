@@ -1,0 +1,2356 @@
+{
+  "structures": [
+    {
+      "label": {
+        "@none": ["Table of Contents"]
+      },
+      "type": "Range",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1.json",
+      "items": [
+        {
+          "label": {
+            "@none": ["Bibliographic information (seq. 1-20)"]
+          },
+          "type": "Range",
+          "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1.json",
+          "items": [
+            {
+              "label": {
+                "@none": ["(seq. 1)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-1.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309544.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 2)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-2.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309545.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 3)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-3.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309546.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 4)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-4.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309547.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 5)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-5.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309548.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 6)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-6.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309549.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 7)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-7.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309550.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 8)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-8.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309551.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 9)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-9.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309552.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 10)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-10.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309553.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 11)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-11.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309554.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 12)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-12.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309555.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 13)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-13.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309556.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 14)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-14.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309557.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 15)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-15.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309558.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 16)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-16.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309559.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 17)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-17.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309560.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 18)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-18.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309561.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 19)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-19.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309562.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 20)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-20.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309563.json",
+                  "type": "Canvas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["Recto (seq. 21-40)"]
+          },
+          "type": "Range",
+          "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2.json",
+          "items": [
+            {
+              "label": {
+                "@none": ["(seq. 21)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-1.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309564.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 22)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-2.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309565.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 23)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-3.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309566.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 24)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-4.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309567.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 25)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-5.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309568.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 26)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-6.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309569.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 27)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-7.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309570.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 28)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-8.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309571.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 29)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-9.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309572.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 30)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-10.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309573.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 31)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-11.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309574.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 32)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-12.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309575.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 33)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-13.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309576.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 34)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-14.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309577.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 35)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-15.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309578.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 36)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-16.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309579.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 37)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-17.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309580.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 38)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-18.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309581.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 39)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-19.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309582.json",
+                  "type": "Canvas"
+                }
+              ]
+            },
+            {
+              "label": {
+                "@none": ["(seq. 40)"]
+              },
+              "type": "Range",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-20.json",
+              "items": [
+                {
+                  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309583.json",
+                  "type": "Canvas"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["Scroll view (stitched digital image) (seq. 41)"]
+          },
+          "type": "Range",
+          "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-3.json",
+          "items": [
+            {
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48530377.json",
+              "type": "Canvas"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "label": {
+    "@none": [
+      "Chronique du monde depuis la création, et des rois de France et d'Angleterre, jusqu'à l'an 1461: manuscript, [ca. 1461]. MS Typ 41. Houghton Library, Harvard University, Cambridge, Mass."
+    ]
+  },
+  "logo": [
+    {
+      "id": "https://iiif.lib.harvard.edu/static/manifests/harvard_logo.jpg",
+      "type": "Image"
+    }
+  ],
+  "type": "Manifest",
+  "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543",
+  "metadata": [
+    {
+      "label": {
+        "@none": ["Rights/License"]
+      },
+      "value": {
+        "@none": ["http://nrs.harvard.edu/urn-3:hul.ois:hlviewerterms"]
+      }
+    }
+  ],
+  "items": [
+    {
+      "label": {
+        "@none": ["(seq. 1)"]
+      },
+      "width": 1694,
+      "height": 2317,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309544/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309544.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309544.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309544.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309544",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 2317,
+                "width": 1694,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309544/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/63d7a009-3671-4518-9b6d-70dd1d4334f7"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 2)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309545/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309545.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309545.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309545.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309545",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309545/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/c5187b3e-4c20-4e3c-8f26-6ba34fe859dc"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 3)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309546/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309546.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309546.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309546.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309546",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309546/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/0a233b56-8d4e-4062-a812-61ea18a58f5a"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 4)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309547/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309547.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309547.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309547.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309547",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309547/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/7bdaf80a-e9e0-48e1-a8bd-3e223ab9c156"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 5)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309548/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309548.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309548.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309548.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309548",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309548/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/51e6a500-8ec0-4cb4-863b-bb8416325a9e"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 6)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309549/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309549.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309549.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309549.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309549",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309549/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/2fd19b72-4602-4b7a-84ab-bbb00e97bebf"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 7)"]
+      },
+      "width": 8000,
+      "height": 5616,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309550/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309550.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309550.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309550.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309550",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 5616,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309550/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/af7cd84d-d061-4155-80e8-4516fe6e484f"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 8)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309551/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309551.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309551.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309551.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309551",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309551/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/b209e63d-90ee-4d8e-a3e2-881b47046ed4"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 9)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309552/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309552.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309552.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309552.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309552",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309552/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/44b6c480-15e2-41a0-bd71-200e34794d56"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 10)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309553/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309553.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309553.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309553.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309553",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309553/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/368b9d6f-27e8-4f42-9ccf-33df96898dc8"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 11)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309554/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309554.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309554.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309554.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309554",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309554/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/80553e76-a514-4808-93f4-cda265813506"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 12)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309555/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309555.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309555.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309555.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309555",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309555/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/92c92677-e5e7-41bc-833c-8b36d469c663"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 13)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309556/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309556.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309556.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309556.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309556",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309556/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/ac90c2b8-b93e-4046-8517-1180c4210274"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 14)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309557/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309557.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309557.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309557.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309557",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309557/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/2d3b3d56-0bac-4f48-b714-406c4a10495d"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 15)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309558/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309558.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309558.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309558.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309558",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309558/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/f43402fb-4231-4b3a-9008-790b11b6b8a4"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 16)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309559/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309559.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309559.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309559.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309559",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309559/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/b9e08aff-3f01-4eef-9718-0135be0c22f3"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 17)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309560/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309560.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309560.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309560.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309560",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309560/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/8332a055-35dd-40fe-a019-89c6fb1eff27"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 18)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309561/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309561.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309561.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309561.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309561",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309561/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/a8c2b69c-51f0-4e80-b3ab-c732163b31fd"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 19)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309562/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309562.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309562.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309562.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309562",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309562/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/384e8b43-37b7-4cee-8664-b1881202aacf"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 20)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309563/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309563.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309563.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309563.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309563",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309563/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/c8b4cc90-93ea-46df-9bd8-061937b52556"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 21)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309564/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309564.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309564.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309564.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309564",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309564/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/9aab6e3d-45ac-4c08-96f0-a154980960db"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 22)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309565/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309565.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309565.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309565.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309565",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309565/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/80c4fd77-de67-4894-ae2e-c4814292db72"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 23)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309566/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309566.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309566.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309566.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309566",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309566/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/3cb55258-8b6c-4f1b-bdb9-255b72468c44"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 24)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309567/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309567.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309567.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309567.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309567",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309567/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/b058f82b-43be-4a5b-bdb0-1a1d50cf5833"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 25)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309568/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309568.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309568.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309568.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309568",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309568/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/ab9de61e-1b7a-4923-b953-69a6c8977944"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 26)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309569/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309569.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309569.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309569.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309569",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309569/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/99a193f5-ad24-4a3f-b124-bc7f65f3fc3b"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 27)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309570/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309570.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309570.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309570.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309570",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309570/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/091ad20a-14d0-40eb-b733-876bb226fdb2"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 28)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309571/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309571.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309571.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309571.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309571",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309571/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/7379a562-ac2c-4363-af23-4907ee3da6cf"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 29)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309572/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309572.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309572.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309572.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309572",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309572/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/86077528-a172-449e-81be-67769721269f"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 30)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309573/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309573.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309573.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309573.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309573",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309573/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/79daa74b-fcc5-4529-9d5b-050ebe490c96"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 31)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309574/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309574.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309574.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309574.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309574",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309574/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/ac9102d2-7ecf-414c-a7a6-ffe4f26c8bcf"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 32)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309575/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309575.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309575.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309575.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309575",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309575/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/2c2a43b5-74b5-4e00-9726-e8135fb0465e"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 33)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309576/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309576.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309576.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309576.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309576",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309576/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/0e654d0f-2b4c-4cde-8610-e53c2322c175"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 34)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309577/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309577.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309577.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309577.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309577",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309577/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/28ddb974-fbae-4703-acec-80c85fa51796"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 35)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309578/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309578.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309578.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309578.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309578",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309578/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/d34b18d3-079b-4523-808e-0084319e8ae8"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 36)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309579/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309579.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309579.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309579.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309579",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309579/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/d569bac7-0312-48d2-9e67-6e119d47a215"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 37)"]
+      },
+      "width": 8000,
+      "height": 5052,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309580/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309580.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309580.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309580.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309580",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 5052,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309580/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/5c5cdf41-71d3-4f0a-9c09-5a2d298bcbae"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 38)"]
+      },
+      "width": 8000,
+      "height": 5412,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309581/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309581.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309581.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309581.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309581",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309581/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/6bb6ae62-b25f-4e3e-8f10-97f23572ad08"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 39)"]
+      },
+      "width": 8000,
+      "height": 6000,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309582/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309582.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309582.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309582.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309582",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 6000,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309582/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/78277260-2fc9-4473-a124-66463498b351"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 40)"]
+      },
+      "width": 8000,
+      "height": 5340,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48309583/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309583.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48309583.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309583.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48309583",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 5340,
+                "width": 8000,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48309583/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/0d349ac2-cf30-450b-be3d-79c0e5761faa"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["(seq. 41)"]
+      },
+      "width": 8154,
+      "height": 142849,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "https://ids.lib.harvard.edu/ids/iiif/48530377/full/,150/0/native.jpg"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48530377.json",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/annotation/anno-48530377.json",
+              "target": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48530377.json",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/48530377",
+                    "type": "ImageService1"
+                  }
+                ],
+                "format": "image/jpeg",
+                "height": 142849,
+                "width": 8154,
+                "type": "Image",
+                "id": "https://ids.lib.harvard.edu/ids/iiif/48530377/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/e56a1d91-e995-4b45-9ea2-81a669fc3bce"
+        }
+      ]
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}

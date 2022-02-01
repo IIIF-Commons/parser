@@ -1,10 +1,10 @@
 import { SerializeConfig, UNWRAP } from './serialize';
 import {
-  TechnicalProperties,
   DescriptiveNormalized,
-  LinkingNormalized,
-  ImageService3,
   ImageService2,
+  ImageService3,
+  LinkingNormalized,
+  TechnicalProperties,
 } from '@iiif/presentation-3';
 
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
@@ -91,7 +91,7 @@ function* linkingProperties(
 }
 
 export const serializeConfigPresentation3: SerializeConfig = {
-  Manifest: function*(entity) {
+  Manifest: function* (entity) {
     return [
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
@@ -101,7 +101,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  Canvas: function*(entity) {
+  Canvas: function* (entity) {
     return [
       // Items.
       ...technicalProperties(entity),
@@ -112,7 +112,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  AnnotationPage: function*(entity) {
+  AnnotationPage: function* (entity) {
     const entries = Object.entries(entity)
       .map(([key, item]) => {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
@@ -129,12 +129,12 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  Service: function*(entity) {
+  Service: function* (entity) {
     // Are there other properties on a service?
     return [[UNWRAP, service2compat(entity as any)]];
   },
 
-  Annotation: function*(entity) {
+  Annotation: function* (entity) {
     const entries = Object.entries(entity)
       .map(([key, item]) => {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
@@ -146,7 +146,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     return [...entries, ['body', yield entity.body]];
   },
 
-  ContentResource: function*(entity: any) {
+  ContentResource: function* (entity: any) {
     return [
       // Image properties.
       ...technicalProperties(entity),
@@ -155,7 +155,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  AnnotationCollection: function*(entity) {
+  AnnotationCollection: function* (entity) {
     return [
       // @todo expand properties if they are actually used.
       ['id', entity.id],
@@ -164,7 +164,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  Collection: function*(entity) {
+  Collection: function* (entity) {
     return [
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
@@ -173,7 +173,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  Range: function*(entity) {
+  Range: function* (entity) {
     const rangeItems = [];
 
     for (const item of entity.items) {

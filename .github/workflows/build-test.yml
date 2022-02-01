@@ -1,0 +1,33 @@
+name: Yarn build + test
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '16', '14' ]
+
+    name: Node ${{ matrix.node }} build
+    steps:
+      - uses: actions/checkout@v1
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+      - uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-${{ matrix.node }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+      - run: yarn install --frozen-lockfile --non-interactive
+      - run: yarn run build
+      - run: yarn run test
+      - run: node pkg-tests/node-load.js
+      - run: node pkg-tests/node-load.mjs
+      - run: node pkg-tests/node-umd.js

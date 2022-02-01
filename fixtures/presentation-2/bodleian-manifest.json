@@ -1,0 +1,3929 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/13344a35-b6d2-431f-8abd-6c2e27c4a1e7.json",
+  "@type": "sc:Manifest",
+  "label": "CBL MS. 1407, Wolfen. Cod. Guelf. 12.11 Aug. 2\u00b0, Bodleian MS. Marsh 178, BnF MS. Arabe 350",
+  "metadata": [
+    {
+      "label": "Shelfmark",
+      "value": "CBL MS. 1407, Wolfen. Cod. Guelf. 12.11 Aug. 2\u00b0, Bodleian MS. Marsh 178, BnF MS. Arabe 350"
+    },
+    {
+      "label": "Type",
+      "value": "Multi-page record"
+    },
+    {
+      "label": "Title",
+      "value": "Mushaf"
+    },
+    {
+      "label": "Source",
+      "value": "Bodleian Libraries"
+    },
+    {
+      "label": "Source",
+      "value": "Chester Beatty"
+    },
+    {
+      "label": "Source",
+      "value": "BnF"
+    },
+    {
+      "label": "Source",
+      "value": "Wolfenbuhtel"
+    },
+    {
+      "label": "Collection",
+      "value": "Oriental"
+    },
+    {
+      "label": "Id",
+      "value": "13344a35-b6d2-431f-8abd-6c2e27c4a1e7"
+    }
+  ],
+  "viewingHint": "paged",
+  "viewingDirection": "right-to-left",
+  "sequences": [
+    {
+      "@id": "https://iiif.bodleian.ox.ac.uk/iiif/sequence/13344a35-b6d2-431f-8abd-6c2e27c4a1e7_default.json",
+      "@type": "sc:Sequence",
+      "label": "Default",
+      "canvases": [
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c0c15feb-0406-4cb5-9e0e-b4118eda2c90.json",
+          "@type": "sc:Canvas",
+          "label": "MS. 1407 fol. 1r",
+          "height": 5412,
+          "width": 7216,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c0c15feb-0406-4cb5-9e0e-b4118eda2c90/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c0c15feb-0406-4cb5-9e0e-b4118eda2c90",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c0c15feb-0406-4cb5-9e0e-b4118eda2c90.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/b76edf23-4d35-446c-8e24-4c8d93a54196.json",
+          "@type": "sc:Canvas",
+          "label": "MS. 1407 fol. 1v 29:44-45",
+          "height": 5412,
+          "width": 7216,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/b76edf23-4d35-446c-8e24-4c8d93a54196/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/b76edf23-4d35-446c-8e24-4c8d93a54196",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/b76edf23-4d35-446c-8e24-4c8d93a54196.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/77f75e65-5ad0-4f19-86df-05c2d86989b3.json",
+          "@type": "sc:Canvas",
+          "label": "MS. 1407 fol. 2r 31:34-34",
+          "height": 5412,
+          "width": 7216,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/77f75e65-5ad0-4f19-86df-05c2d86989b3/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/77f75e65-5ad0-4f19-86df-05c2d86989b3",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/77f75e65-5ad0-4f19-86df-05c2d86989b3.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/2af143e4-2ee8-4ec1-855f-4c3fdabdf82f.json",
+          "@type": "sc:Canvas",
+          "label": "MS. 1407 fol. 2v 31:34-32:1",
+          "height": 5412,
+          "width": 7216,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/2af143e4-2ee8-4ec1-855f-4c3fdabdf82f/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/2af143e4-2ee8-4ec1-855f-4c3fdabdf82f",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/2af143e4-2ee8-4ec1-855f-4c3fdabdf82f.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/004d0f15-f152-4cbf-91a6-c522798d4e26.json",
+          "@type": "sc:Canvas",
+          "label": "MS. 1407 fol. 3r 33:30-30",
+          "height": 5412,
+          "width": 7216,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/004d0f15-f152-4cbf-91a6-c522798d4e26/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/004d0f15-f152-4cbf-91a6-c522798d4e26",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/004d0f15-f152-4cbf-91a6-c522798d4e26.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0dc495c8-fb60-4fc0-8f68-ce62d350628d.json",
+          "@type": "sc:Canvas",
+          "label": "MS. 1407 fol. 3v",
+          "height": 5412,
+          "width": 7216,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/0dc495c8-fb60-4fc0-8f68-ce62d350628d/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/0dc495c8-fb60-4fc0-8f68-ce62d350628d",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0dc495c8-fb60-4fc0-8f68-ce62d350628d.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4701fce0-934c-44fe-90dd-c36857d76bc6.json",
+          "@type": "sc:Canvas",
+          "label": "MS. 1407 fol. 4r",
+          "height": 5412,
+          "width": 7216,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/4701fce0-934c-44fe-90dd-c36857d76bc6/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/4701fce0-934c-44fe-90dd-c36857d76bc6",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4701fce0-934c-44fe-90dd-c36857d76bc6.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4754b3a8-a774-4d5a-8868-5d6719493bcc.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 1r 37:114-117",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/4754b3a8-a774-4d5a-8868-5d6719493bcc/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/4754b3a8-a774-4d5a-8868-5d6719493bcc",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4754b3a8-a774-4d5a-8868-5d6719493bcc.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/383921b9-9b8c-498d-a3a4-4ac8252d25fe.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 1v 37:117-121",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/383921b9-9b8c-498d-a3a4-4ac8252d25fe/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/383921b9-9b8c-498d-a3a4-4ac8252d25fe",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/383921b9-9b8c-498d-a3a4-4ac8252d25fe.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c38fcf3e-cb21-4a6a-95ef-b63d0f76d0f9.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 2r 37:159-163",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c38fcf3e-cb21-4a6a-95ef-b63d0f76d0f9/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c38fcf3e-cb21-4a6a-95ef-b63d0f76d0f9",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c38fcf3e-cb21-4a6a-95ef-b63d0f76d0f9.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/eaa0f6a2-23b5-417e-b5c9-edaebbfed0f2.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 2v 37:163-167",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/eaa0f6a2-23b5-417e-b5c9-edaebbfed0f2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/eaa0f6a2-23b5-417e-b5c9-edaebbfed0f2",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/eaa0f6a2-23b5-417e-b5c9-edaebbfed0f2.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/70424314-cb04-41d5-b2f2-a3ab9bd3ed75.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 3r 37:168-170",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/70424314-cb04-41d5-b2f2-a3ab9bd3ed75/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/70424314-cb04-41d5-b2f2-a3ab9bd3ed75",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/70424314-cb04-41d5-b2f2-a3ab9bd3ed75.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/24a5e0b3-8585-4b5e-ad9a-7f6c7a2536aa.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 3v 37:171-174",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/24a5e0b3-8585-4b5e-ad9a-7f6c7a2536aa/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/24a5e0b3-8585-4b5e-ad9a-7f6c7a2536aa",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/24a5e0b3-8585-4b5e-ad9a-7f6c7a2536aa.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c2c3c878-cea6-4674-8d62-e56bfd18be8f.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 4r 37:174-177",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c2c3c878-cea6-4674-8d62-e56bfd18be8f/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c2c3c878-cea6-4674-8d62-e56bfd18be8f",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c2c3c878-cea6-4674-8d62-e56bfd18be8f.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/8f64fbf9-2cb6-4be3-8e7d-73d74fe4d9f4.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 4v 37:177-180",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/8f64fbf9-2cb6-4be3-8e7d-73d74fe4d9f4/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/8f64fbf9-2cb6-4be3-8e7d-73d74fe4d9f4",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/8f64fbf9-2cb6-4be3-8e7d-73d74fe4d9f4.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c8863099-038d-4c69-91b5-9791bab46118.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 5r 38:12-13",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c8863099-038d-4c69-91b5-9791bab46118/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c8863099-038d-4c69-91b5-9791bab46118",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c8863099-038d-4c69-91b5-9791bab46118.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ade82e86-d403-482b-9ebc-ed0b184ea060.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 5v 38:13-15",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ade82e86-d403-482b-9ebc-ed0b184ea060/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ade82e86-d403-482b-9ebc-ed0b184ea060",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ade82e86-d403-482b-9ebc-ed0b184ea060.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/441a59c5-5b1f-4a21-a596-6765f2068262.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 6r 38:15-16",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/441a59c5-5b1f-4a21-a596-6765f2068262/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/441a59c5-5b1f-4a21-a596-6765f2068262",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/441a59c5-5b1f-4a21-a596-6765f2068262.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c821c1a7-5c71-4083-92b5-00bad10618c5.json",
+          "@type": "sc:Canvas",
+          "label": "Cod. G. 12.11 Aug. 2\u00b0 fol. 6v 38:17-18",
+          "height": 1551,
+          "width": 2000,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c821c1a7-5c71-4083-92b5-00bad10618c5/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1551,
+                "width": 2000,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c821c1a7-5c71-4083-92b5-00bad10618c5",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c821c1a7-5c71-4083-92b5-00bad10618c5.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/265470f5-7c11-4054-ac28-8438a8f07703.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 15r 38:18-20",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/265470f5-7c11-4054-ac28-8438a8f07703/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/265470f5-7c11-4054-ac28-8438a8f07703",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/265470f5-7c11-4054-ac28-8438a8f07703.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ccd0d7d4-bf69-41c5-aff8-176030478d82.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 15v 38:20-21",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ccd0d7d4-bf69-41c5-aff8-176030478d82/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ccd0d7d4-bf69-41c5-aff8-176030478d82",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ccd0d7d4-bf69-41c5-aff8-176030478d82.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/97ba49d3-d440-496f-9376-87e91e905171.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 31r 38:22-22",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/97ba49d3-d440-496f-9376-87e91e905171/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/97ba49d3-d440-496f-9376-87e91e905171",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/97ba49d3-d440-496f-9376-87e91e905171.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5bc861a3-eefd-4bf4-9ce7-10cbda6cd127.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 31v 38:22-23",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/5bc861a3-eefd-4bf4-9ce7-10cbda6cd127/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/5bc861a3-eefd-4bf4-9ce7-10cbda6cd127",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5bc861a3-eefd-4bf4-9ce7-10cbda6cd127.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/286a6e5a-b07b-44f7-ac76-af05a88fda60.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 27r 38:23-24",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/286a6e5a-b07b-44f7-ac76-af05a88fda60/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/286a6e5a-b07b-44f7-ac76-af05a88fda60",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/286a6e5a-b07b-44f7-ac76-af05a88fda60.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/741d3e8a-1816-4e58-ab2d-a189f9c786be.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 27v 38:24-24",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/741d3e8a-1816-4e58-ab2d-a189f9c786be/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/741d3e8a-1816-4e58-ab2d-a189f9c786be",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/741d3e8a-1816-4e58-ab2d-a189f9c786be.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1bf3dd0d-f5da-4d89-a2dc-4f7c9035dd2b.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 23r 38:24-25",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/1bf3dd0d-f5da-4d89-a2dc-4f7c9035dd2b/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/1bf3dd0d-f5da-4d89-a2dc-4f7c9035dd2b",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1bf3dd0d-f5da-4d89-a2dc-4f7c9035dd2b.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/6e3317f5-2b3d-4eab-a037-269298773e8a.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 23v 38:25-26",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/6e3317f5-2b3d-4eab-a037-269298773e8a/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/6e3317f5-2b3d-4eab-a037-269298773e8a",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/6e3317f5-2b3d-4eab-a037-269298773e8a.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/51fce298-e81d-4a9e-8984-53d69c08154e.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 26r 38:26-26",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/51fce298-e81d-4a9e-8984-53d69c08154e/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/51fce298-e81d-4a9e-8984-53d69c08154e",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/51fce298-e81d-4a9e-8984-53d69c08154e.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3795e1b4-4f6a-48a6-b026-172dee1a1849.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 26v 38:26-27",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3795e1b4-4f6a-48a6-b026-172dee1a1849/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3795e1b4-4f6a-48a6-b026-172dee1a1849",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3795e1b4-4f6a-48a6-b026-172dee1a1849.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1f30e445-dcf4-49b4-9705-f2e03a501b2c.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 28r 38:27-28",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/1f30e445-dcf4-49b4-9705-f2e03a501b2c/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/1f30e445-dcf4-49b4-9705-f2e03a501b2c",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1f30e445-dcf4-49b4-9705-f2e03a501b2c.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/6c7a5399-5453-4d56-92d7-3d0891ead805.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 28v 38:28-29",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/6c7a5399-5453-4d56-92d7-3d0891ead805/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/6c7a5399-5453-4d56-92d7-3d0891ead805",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/6c7a5399-5453-4d56-92d7-3d0891ead805.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ed7ece36-ab59-4116-a638-9ae0c7822b10.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 32r 38:29-31",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ed7ece36-ab59-4116-a638-9ae0c7822b10/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ed7ece36-ab59-4116-a638-9ae0c7822b10",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ed7ece36-ab59-4116-a638-9ae0c7822b10.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ecced453-9a6c-430f-975f-612a57927d1b.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 32v 38:31-32",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ecced453-9a6c-430f-975f-612a57927d1b/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ecced453-9a6c-430f-975f-612a57927d1b",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ecced453-9a6c-430f-975f-612a57927d1b.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ee61d3ab-57f5-4a03-975a-37685d99df2d.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 16r 38:33-34",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ee61d3ab-57f5-4a03-975a-37685d99df2d/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ee61d3ab-57f5-4a03-975a-37685d99df2d",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ee61d3ab-57f5-4a03-975a-37685d99df2d.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/bf68ba47-ca6f-4fc1-a929-14f5b463d9b6.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 16v 38:34-36",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/bf68ba47-ca6f-4fc1-a929-14f5b463d9b6/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/bf68ba47-ca6f-4fc1-a929-14f5b463d9b6",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/bf68ba47-ca6f-4fc1-a929-14f5b463d9b6.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/e77afad3-727c-4504-a0f9-08e0b50c5bde.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 17r 38:36-38",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/e77afad3-727c-4504-a0f9-08e0b50c5bde/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/e77afad3-727c-4504-a0f9-08e0b50c5bde",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/e77afad3-727c-4504-a0f9-08e0b50c5bde.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/72e51836-674c-4334-ae2d-f3dd0a19b1d2.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 17v 38:38-40",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/72e51836-674c-4334-ae2d-f3dd0a19b1d2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/72e51836-674c-4334-ae2d-f3dd0a19b1d2",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/72e51836-674c-4334-ae2d-f3dd0a19b1d2.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/7be7a297-19f7-4bc8-8ea7-57faab6916f4.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 24r 38:40-42",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/7be7a297-19f7-4bc8-8ea7-57faab6916f4/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/7be7a297-19f7-4bc8-8ea7-57faab6916f4",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/7be7a297-19f7-4bc8-8ea7-57faab6916f4.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d5b5df9d-1ee1-4200-889a-d4cca4fe484c.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 24v 38:42-43",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/d5b5df9d-1ee1-4200-889a-d4cca4fe484c/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/d5b5df9d-1ee1-4200-889a-d4cca4fe484c",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/d5b5df9d-1ee1-4200-889a-d4cca4fe484c.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3fe5dafb-68e3-46c4-b46c-14e29a7956dc.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 19r 38:43-44",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3fe5dafb-68e3-46c4-b46c-14e29a7956dc/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3fe5dafb-68e3-46c4-b46c-14e29a7956dc",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3fe5dafb-68e3-46c4-b46c-14e29a7956dc.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f0d13bf7-821f-41cc-a2b2-a3d79460b312.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 19v 38:44-46",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f0d13bf7-821f-41cc-a2b2-a3d79460b312/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f0d13bf7-821f-41cc-a2b2-a3d79460b312",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f0d13bf7-821f-41cc-a2b2-a3d79460b312.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/9bdc0e79-d0d8-46e6-ac98-243fc37f6431.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 20r 38:46-48",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/9bdc0e79-d0d8-46e6-ac98-243fc37f6431/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/9bdc0e79-d0d8-46e6-ac98-243fc37f6431",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/9bdc0e79-d0d8-46e6-ac98-243fc37f6431.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/caeec3ff-1d06-4744-8fc3-56b9e166247b.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 20v 38:48-50",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/caeec3ff-1d06-4744-8fc3-56b9e166247b/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/caeec3ff-1d06-4744-8fc3-56b9e166247b",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/caeec3ff-1d06-4744-8fc3-56b9e166247b.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c187d394-963a-49c9-a6f4-ff101268ba02.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 21r 38:50-52",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c187d394-963a-49c9-a6f4-ff101268ba02/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/c187d394-963a-49c9-a6f4-ff101268ba02",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/c187d394-963a-49c9-a6f4-ff101268ba02.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f6b5020f-8a73-4a6b-aedc-148245ec5f6c.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 21v 38:52-55",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f6b5020f-8a73-4a6b-aedc-148245ec5f6c/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f6b5020f-8a73-4a6b-aedc-148245ec5f6c",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/f6b5020f-8a73-4a6b-aedc-148245ec5f6c.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/62921036-40c7-43fb-bf21-16ef290b388f.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 22r 38:55-58",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/62921036-40c7-43fb-bf21-16ef290b388f/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/62921036-40c7-43fb-bf21-16ef290b388f",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/62921036-40c7-43fb-bf21-16ef290b388f.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/39ce2f20-893b-4dda-bd9d-6da95496a89b.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 22v 38:58-60",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/39ce2f20-893b-4dda-bd9d-6da95496a89b/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/39ce2f20-893b-4dda-bd9d-6da95496a89b",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/39ce2f20-893b-4dda-bd9d-6da95496a89b.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/a60e03f6-f2f1-48a0-b699-b3ca5089e73b.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 25r 38:60-61",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/a60e03f6-f2f1-48a0-b699-b3ca5089e73b/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/a60e03f6-f2f1-48a0-b699-b3ca5089e73b",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/a60e03f6-f2f1-48a0-b699-b3ca5089e73b.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0978baae-f724-4ebc-b371-a29bb6aeab95.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 25v 38:61-63",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/0978baae-f724-4ebc-b371-a29bb6aeab95/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/0978baae-f724-4ebc-b371-a29bb6aeab95",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/0978baae-f724-4ebc-b371-a29bb6aeab95.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/6a418100-406e-4ed6-a500-e2d5fbb271c4.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 18r 38:63-65",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/6a418100-406e-4ed6-a500-e2d5fbb271c4/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/6a418100-406e-4ed6-a500-e2d5fbb271c4",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/6a418100-406e-4ed6-a500-e2d5fbb271c4.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ad7007e5-e5dd-457b-b4c4-28511f6deb0f.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 18v 38:65-66",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ad7007e5-e5dd-457b-b4c4-28511f6deb0f/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ad7007e5-e5dd-457b-b4c4-28511f6deb0f",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ad7007e5-e5dd-457b-b4c4-28511f6deb0f.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/dccf419a-861f-48c8-b4e2-fdd6b1b16ef4.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 29r 38:67-70",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/dccf419a-861f-48c8-b4e2-fdd6b1b16ef4/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/dccf419a-861f-48c8-b4e2-fdd6b1b16ef4",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/dccf419a-861f-48c8-b4e2-fdd6b1b16ef4.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4d9100e4-ec09-4c6c-9d3b-f38c68eb1aad.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 29v 38:70-72",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/4d9100e4-ec09-4c6c-9d3b-f38c68eb1aad/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/4d9100e4-ec09-4c6c-9d3b-f38c68eb1aad",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4d9100e4-ec09-4c6c-9d3b-f38c68eb1aad.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/aed8252c-f4fb-4057-9440-e8547bca073f.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 33r 38:81-84",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/aed8252c-f4fb-4057-9440-e8547bca073f/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/aed8252c-f4fb-4057-9440-e8547bca073f",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/aed8252c-f4fb-4057-9440-e8547bca073f.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/2846b23d-26cf-4fab-ac6d-27ee4457e2ee.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 33v 38:84-87",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/2846b23d-26cf-4fab-ac6d-27ee4457e2ee/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/2846b23d-26cf-4fab-ac6d-27ee4457e2ee",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/2846b23d-26cf-4fab-ac6d-27ee4457e2ee.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4ef028cc-c86d-430f-8ace-314f4822378c.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 34r 38:87-39:1",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/4ef028cc-c86d-430f-8ace-314f4822378c/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/4ef028cc-c86d-430f-8ace-314f4822378c",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/4ef028cc-c86d-430f-8ace-314f4822378c.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/a13bef48-9688-474b-80cb-be46ea08d12d.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 34v 39:1-2",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/a13bef48-9688-474b-80cb-be46ea08d12d/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/a13bef48-9688-474b-80cb-be46ea08d12d",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/a13bef48-9688-474b-80cb-be46ea08d12d.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3392d228-e8f7-42f9-b2b9-c9f40a9c69b9.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 30r 39:5-6",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3392d228-e8f7-42f9-b2b9-c9f40a9c69b9/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/3392d228-e8f7-42f9-b2b9-c9f40a9c69b9",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/3392d228-e8f7-42f9-b2b9-c9f40a9c69b9.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/de66338e-964c-4682-b678-fbcaf6ed3bc5.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 30v 39:6-6",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/de66338e-964c-4682-b678-fbcaf6ed3bc5/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/de66338e-964c-4682-b678-fbcaf6ed3bc5",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/de66338e-964c-4682-b678-fbcaf6ed3bc5.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ee9cc1fa-2c22-4de8-bbc2-19e28252c202.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 35r 39:6-6",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ee9cc1fa-2c22-4de8-bbc2-19e28252c202/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/ee9cc1fa-2c22-4de8-bbc2-19e28252c202",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/ee9cc1fa-2c22-4de8-bbc2-19e28252c202.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5baae82b-9fee-4e7b-9538-78de3891558e.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 35v 39:6-7",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/5baae82b-9fee-4e7b-9538-78de3891558e/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/5baae82b-9fee-4e7b-9538-78de3891558e",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/5baae82b-9fee-4e7b-9538-78de3891558e.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1aa8e991-59da-407f-978e-f8d51623c665.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 36r 39:18-19",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/1aa8e991-59da-407f-978e-f8d51623c665/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/1aa8e991-59da-407f-978e-f8d51623c665",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/1aa8e991-59da-407f-978e-f8d51623c665.json"
+            }
+          ]
+        },
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/a9f4c411-4368-4941-a2b0-de047bb2e9eb.json",
+          "@type": "sc:Canvas",
+          "label": "MS. Marsh 178 fol. 36v 39:19-20",
+          "height": 5356,
+          "width": 7141,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/a9f4c411-4368-4941-a2b0-de047bb2e9eb/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 5356,
+                "width": 7141,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/a9f4c411-4368-4941-a2b0-de047bb2e9eb",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/a9f4c411-4368-4941-a2b0-de047bb2e9eb.json"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f213",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 99r 39:21-22",
+          "height": 3878,
+          "width": 5230,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f213.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5230,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f213",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f213"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f214",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 99v 39:22-23",
+          "height": 3923,
+          "width": 5131,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f214.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3923,
+                "width": 5131,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f214",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f214"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f215",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 100r 39:23-23",
+          "height": 3878,
+          "width": 5230,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f215.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5230,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f215",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f215"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f216",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 100v 39:23-24",
+          "height": 3891,
+          "width": 5176,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f216.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3891,
+                "width": 5176,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f216",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f216"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f217",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 101r 39:24-25",
+          "height": 3878,
+          "width": 5275,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f217.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5275,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f217",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f217"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f218",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 101v 39:25-26",
+          "height": 3891,
+          "width": 5106,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f218.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3891,
+                "width": 5106,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f218",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f218"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f219",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 102r 39:26-27",
+          "height": 3878,
+          "width": 5252,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f219.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5252,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f219",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f219"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f220",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 102v 39:27-29",
+          "height": 3875,
+          "width": 5106,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f220.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3875,
+                "width": 5106,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f220",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f220"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f221",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 103r 42:30-31",
+          "height": 3852,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f221.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f221",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f221"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f222",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 103v 42:31-33",
+          "height": 3875,
+          "width": 5106,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f222.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3875,
+                "width": 5106,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f222",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f222"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f223",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 104r 42:33-34",
+          "height": 3852,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f223.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f223",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f223"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f224",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 104v 42:34-36",
+          "height": 3904,
+          "width": 5124,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f224.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5124,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f224",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f224"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f225",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 105r 42:36-37",
+          "height": 3852,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f225.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f225",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f225"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f226",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 105v 42:37-38",
+          "height": 3904,
+          "width": 5124,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f226.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5124,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f226",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f226"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f227",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 106r 42:38-39",
+          "height": 3852,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f227.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f227",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f227"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f228",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 106v 42:40-41",
+          "height": 3904,
+          "width": 5124,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f228.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5124,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f228",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f228"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f229",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 107r 42:41-42",
+          "height": 3852,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f229.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f229",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f229"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f230",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 107v 42:42-44",
+          "height": 3904,
+          "width": 5124,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f230.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5124,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f230",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f230"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f231",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 108r 42:44-44",
+          "height": 3852,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f231.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f231",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f231"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f232",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 108v 42:44-45",
+          "height": 3904,
+          "width": 5124,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f232.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5124,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f232",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f232"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f233",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 109r 42:45-45",
+          "height": 3852,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f233.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f233",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f233"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f234",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 109v 42:46-47",
+          "height": 3934,
+          "width": 5124,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f234.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5124,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f234",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f234"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f235",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 110r 42:47-48",
+          "height": 3852,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f235.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f235",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f235"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f236",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 110v 42:48-48",
+          "height": 3934,
+          "width": 5124,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f236.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5124,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f236",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f236"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f237",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 111r 52:11-14",
+          "height": 3916,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f237.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3916,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f237",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f237"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f238",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 111v 52:14-16",
+          "height": 3934,
+          "width": 5124,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f238.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5124,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f238",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f238"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f239",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 112r 52:16-18",
+          "height": 3916,
+          "width": 5223,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f239.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3916,
+                "width": 5223,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f239",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f239"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f240",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 112v 52:18-20",
+          "height": 3934,
+          "width": 5153,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f240.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5153,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f240",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f240"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f241",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 113r 52:20-21",
+          "height": 3895,
+          "width": 5233,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f241.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5233,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f241",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f241"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f242",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 113v 52:21-22",
+          "height": 3934,
+          "width": 5153,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f242.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5153,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f242",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f242"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f243",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 114r 52:22-24",
+          "height": 3895,
+          "width": 5233,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f243.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5233,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f243",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f243"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f244",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 114v 52:24-27",
+          "height": 3934,
+          "width": 5153,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f244.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5153,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f244",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f244"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f245",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 115r 52:27-29",
+          "height": 3895,
+          "width": 5233,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f245.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5233,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f245",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f245"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f246",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 115v 52:29-31",
+          "height": 3934,
+          "width": 5153,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f246.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5153,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f246",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f246"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f247",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 116r 52:31-33",
+          "height": 3904,
+          "width": 5233,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f247.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5233,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f247",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f247"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f248",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 116v 52:33-35",
+          "height": 3934,
+          "width": 5153,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f248.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5153,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f248",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f248"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f249",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 117r 52:35-37",
+          "height": 3904,
+          "width": 5233,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f249.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5233,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f249",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f249"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f250",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 117v 52:37-39",
+          "height": 3934,
+          "width": 5153,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f250.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5153,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f250",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f250"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f251",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 118r 52:40-42",
+          "height": 3904,
+          "width": 5233,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f251.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5233,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f251",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f251"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f252",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 118v 52:42-44",
+          "height": 3934,
+          "width": 5153,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f252.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5153,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f252",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f252"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f253",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 119r 52:44-45",
+          "height": 3904,
+          "width": 5233,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f253.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3904,
+                "width": 5233,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f253",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f253"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f254",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 119v 52:45-47",
+          "height": 3934,
+          "width": 5153,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8415221r/f254.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3934,
+                "width": 5153,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/f254",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8415221r/canvas/f254"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f11",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 120r 53:21-23",
+          "height": 3912,
+          "width": 5121,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f11.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3912,
+                "width": 5121,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f11",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f11"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f12",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 120v 53:23-23",
+          "height": 3880,
+          "width": 5057,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f12.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3880,
+                "width": 5057,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f12",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f12"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f13",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 121r 53:24-26",
+          "height": 3921,
+          "width": 5121,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f13.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3921,
+                "width": 5121,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f13",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f13"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f14",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 121v 53:26-27",
+          "height": 3862,
+          "width": 5057,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f14.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3862,
+                "width": 5057,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f14",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f14"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f15",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 122r 53:27-29",
+          "height": 3909,
+          "width": 5224,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f15.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3909,
+                "width": 5224,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f15",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f15"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f16",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 122v 53:29-30",
+          "height": 3878,
+          "width": 5128,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f16.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5128,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f16",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f16"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f17",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 123r 53:30-31",
+          "height": 3912,
+          "width": 5224,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f17.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3912,
+                "width": 5224,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f17",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f17"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f18",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 123v 53:31-32",
+          "height": 3878,
+          "width": 5128,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f18.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5128,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f18",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f18"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f19",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 124r 53:32-32",
+          "height": 3895,
+          "width": 5224,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f19.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5224,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f19",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f19"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f20",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 124v 53:32-32",
+          "height": 3878,
+          "width": 5168,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f20.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5168,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f20",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f20"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f21",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 125r 53:32-35",
+          "height": 3895,
+          "width": 5224,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f21.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5224,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f21",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f21"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f22",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 125v 53:35-38",
+          "height": 3878,
+          "width": 5168,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f22.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5168,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f22",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f22"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f23",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 126r 53:38-41",
+          "height": 3895,
+          "width": 5208,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f23.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5208,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f23",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f23"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f24",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 126v 53:41-44",
+          "height": 3878,
+          "width": 5136,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f24.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5136,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f24",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f24"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f25",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 127r 53:45-47",
+          "height": 3895,
+          "width": 5208,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f25.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5208,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f25",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f25"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f26",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 127v 53:48-50",
+          "height": 3878,
+          "width": 5156,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f26.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5156,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f26",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f26"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f27",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 128r 53:51-53",
+          "height": 3895,
+          "width": 5208,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f27.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5208,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f27",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f27"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f28",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 128v 53:53-57",
+          "height": 3878,
+          "width": 5168,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f28.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5168,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f28",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f28"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f29",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 129r 53:57-61",
+          "height": 3895,
+          "width": 5208,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f29.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5208,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f29",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f29"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f30",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 129v 53:61-54:1",
+          "height": 3878,
+          "width": 5156,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f30.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5156,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f30",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f30"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f31",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 130r 54:1-2",
+          "height": 3895,
+          "width": 5208,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f31.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5208,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f31",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f31"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f32",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 130v 54:3-4",
+          "height": 3878,
+          "width": 5156,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f32.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5156,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f32",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f32"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f33",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 131r 54:4-7",
+          "height": 3895,
+          "width": 5208,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f33.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5208,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f33",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f33"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f34",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 131v 54:7-8",
+          "height": 3832,
+          "width": 5080,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f34.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3832,
+                "width": 5080,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f34",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f34"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f35",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 132r 54:8-9",
+          "height": 3895,
+          "width": 5229,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f35.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5229,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f35",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f35"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f36",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 132v 54:9-12",
+          "height": 3863,
+          "width": 5119,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f36.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3863,
+                "width": 5119,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f36",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f36"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f37",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 133r 54:12-13",
+          "height": 3895,
+          "width": 5229,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f37.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3895,
+                "width": 5229,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f37",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f37"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f38",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 133v 54:14-16",
+          "height": 3863,
+          "width": 5119,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f38.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3863,
+                "width": 5119,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f38",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f38"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f39",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 134r 54:16-18",
+          "height": 3852,
+          "width": 5229,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f39.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5229,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f39",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f39"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f40",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 134v 54:18-20",
+          "height": 3863,
+          "width": 5119,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f40.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3863,
+                "width": 5119,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f40",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f40"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f41",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 135r 54:20-22",
+          "height": 3852,
+          "width": 5229,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f41.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5229,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f41",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f41"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f42",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 135v 54:22-24",
+          "height": 3863,
+          "width": 5144,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f42.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3863,
+                "width": 5144,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f42",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f42"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f43",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 136r 54:24-26",
+          "height": 3852,
+          "width": 5229,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f43.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3852,
+                "width": 5229,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f43",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f43"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f44",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 136v 54:26-28",
+          "height": 3863,
+          "width": 5144,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f44.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3863,
+                "width": 5144,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f44",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f44"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f45",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 137r 54:28-31",
+          "height": 3914,
+          "width": 5229,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f45.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3914,
+                "width": 5229,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f45",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f45"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f46",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 137v 54:31-32",
+          "height": 3892,
+          "width": 5144,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f46.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3892,
+                "width": 5144,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f46",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f46"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f47",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 138r 54:33-35",
+          "height": 3879,
+          "width": 5229,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f47.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3879,
+                "width": 5229,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f47",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f47"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f48",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 138v 54:35-37",
+          "height": 3892,
+          "width": 5144,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f48.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3892,
+                "width": 5144,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f48",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f48"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f49",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 139r 54:37-38",
+          "height": 3856,
+          "width": 5229,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f49.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3856,
+                "width": 5229,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f49",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f49"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f50",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 139v 54:39-41",
+          "height": 3878,
+          "width": 5159,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f50.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5159,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f50",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f50"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f51",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 140r 54:41-43",
+          "height": 3856,
+          "width": 5204,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f51.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3856,
+                "width": 5204,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f51",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f51"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f52",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 140v 54:43-45",
+          "height": 3878,
+          "width": 5149,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f52.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3878,
+                "width": 5149,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f52",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f52"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f53",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 141r 92:14-19",
+          "height": 3828,
+          "width": 5099,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f53.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3828,
+                "width": 5099,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f53",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f53"
+            }
+          ]
+        },
+        {
+          "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f54",
+          "@type": "sc:Canvas",
+          "label": "MS. Arabe 350 fol. 141v 92:19-93:1",
+          "height": 3808,
+          "width": 4968,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "http://gallica.bnf.fr/ark:/12148/btv1b8419223t/f54.highres",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3808,
+                "width": 4968,
+                "service": {
+                  "@context": "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+                  "@id": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/f54",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+                }
+              },
+              "on": "http://gallica.bnf.fr/iiif/ark:/12148/btv1b8419223t/canvas/f54"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import {
+  AnnotationCollection,
   AnnotationCollectionNormalized,
   AnnotationNormalized,
   AnnotationPageNormalized,
@@ -7,10 +8,9 @@ import {
   ContentResource,
   ManifestNormalized,
   RangeNormalized,
-  ServiceNormalized,
-  Selector,
   Reference,
-  AnnotationCollection,
+  Selector,
+  ServiceNormalized,
 } from '@iiif/presentation-3';
 
 export const UNSET = '__$UNSET$__';
@@ -20,34 +20,34 @@ export type Field = any[];
 
 export type CompatibleStore<T extends string = string> = {
   requests: {
-    [url: string]: {resourceUri?: string} & any;
-  }
+    [url: string]: { resourceUri?: string } & any;
+  };
   entities: {
     [type in T]: {
-      [id: string]: NormalizedEntity
+      [id: string]: NormalizedEntity;
     };
-  }
+  };
   mapping: {
-    [id: string]: T
-  }
+    [id: string]: T;
+  };
 };
 
 export type NormalizedEntity =
-    | CollectionNormalized
-    | ManifestNormalized
-    | CanvasNormalized
-    | AnnotationPageNormalized
-    | AnnotationCollectionNormalized
-    | AnnotationCollection
-    | AnnotationNormalized
-    | ContentResource
-    | RangeNormalized
-    | ServiceNormalized
-    | Selector;
+  | CollectionNormalized
+  | ManifestNormalized
+  | CanvasNormalized
+  | AnnotationPageNormalized
+  | AnnotationCollectionNormalized
+  | AnnotationCollection
+  | AnnotationNormalized
+  | ContentResource
+  | RangeNormalized
+  | ServiceNormalized
+  | Selector;
 
 export type Serializer<Type extends NormalizedEntity> = (
   entity: Type,
-  state: { }
+  state: {}
 ) => Generator<Reference | Reference[], typeof UNSET | Field[], any>;
 
 export type SerializeConfig = {
@@ -67,10 +67,7 @@ function resolveIfExists<T extends NormalizedEntity>(state: CompatibleStore, url
   const request = state.requests[url];
   // Return the resource.
   const resourceType = state.mapping[url];
-  if (
-    !resourceType ||
-    (request && request.resourceUri && !state.entities[resourceType][request.resourceUri])
-  ) {
+  if (!resourceType || (request && request.resourceUri && !state.entities[resourceType][request.resourceUri])) {
     // Continue refetching resource, this is an invalid state.
     return undefined;
   }

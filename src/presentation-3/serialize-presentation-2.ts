@@ -39,7 +39,7 @@ export function languageString2to3(
     };
   }
 
-  return languages.map(language => {
+  return languages.map((language) => {
     return {
       '@language': language,
       '@value': (value[language] || []).join(''),
@@ -49,7 +49,7 @@ export function languageString2to3(
 
 function parseCanvasTarget(target: any): any {
   if (Array.isArray(target)) {
-    return target.map(t => parseCanvasTarget(t));
+    return target.map((t) => parseCanvasTarget(t));
   }
 
   if (typeof target === 'string') {
@@ -120,7 +120,7 @@ function* descriptiveProperties(prop: Partial<DescriptiveNormalized>): Generator
     [
       'metadata',
       prop.metadata && prop.metadata.length
-        ? prop.metadata.map(item => ({
+        ? prop.metadata.map((item) => ({
             label: languageString2to3(item.label) || '',
             value: languageString2to3(item.value) || '',
           }))
@@ -150,7 +150,7 @@ function* linkingProperties(prop: Partial<LinkingNormalized>) {
 }
 
 export const serializeConfigPresentation2: SerializeConfig = {
-  Manifest: function*(entity) {
+  Manifest: function* (entity) {
     return [
       ...technicalProperties(entity, 'sc:Manifest'),
       ...(yield* descriptiveProperties(entity)),
@@ -171,7 +171,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  Canvas: function*(entity) {
+  Canvas: function* (entity) {
     const paintingPage = yield entity.items;
     const resources = paintingPage[0];
     return [
@@ -187,7 +187,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  AnnotationPage: function*(entity) {
+  AnnotationPage: function* (entity) {
     return [
       ...technicalProperties(entity, 'sc:AnnotationList'),
       ...(yield* descriptiveProperties(entity)),
@@ -195,7 +195,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  Annotation: function*(entity) {
+  Annotation: function* (entity) {
     return [
       ['@id', entity.id],
       ['@type', 'oa:Annotation'],
@@ -206,7 +206,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  ContentResource: function*(entity: any) {
+  ContentResource: function* (entity: any) {
     switch (entity.type) {
       case 'Image':
         return [
@@ -222,7 +222,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     }
   },
 
-  AnnotationCollection: function*(entity) {
+  AnnotationCollection: function* (entity) {
     return [
       // @todo expand properties if they are actually used.
       ['@id', entity.id],
@@ -231,7 +231,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  Collection: function*(entity) {
+  Collection: function* (entity) {
     return [
       ...technicalProperties(entity, 'sc:Collection'),
       ...(yield* descriptiveProperties(entity)),
@@ -240,7 +240,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  Range: function*(entity) {
+  Range: function* (entity) {
     const members = [];
     const canvases = [];
 

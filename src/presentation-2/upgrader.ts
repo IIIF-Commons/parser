@@ -1,6 +1,6 @@
 import * as Presentation3 from '@iiif/presentation-3';
 import * as Presentation2 from '@iiif/presentation-2';
-import { level1Support, imageServiceProfiles } from '../shared/image-api-profiles';
+import { imageServiceProfiles, level1Support } from '../shared/image-api-profiles';
 import { Traverse } from './traverse';
 
 const configuration = {
@@ -47,7 +47,7 @@ export function convertLanguageMapping(
 
 export function getProfile(profile: any | any[]): string | undefined {
   if (Array.isArray(profile)) {
-    return getProfile(profile.find(s => typeof s === 'string'));
+    return getProfile(profile.find((s) => typeof s === 'string'));
   }
 
   if (imageServiceProfiles.indexOf(profile) !== -1) {
@@ -214,6 +214,7 @@ function getNewType(resource: any): string {
 }
 
 const licenseRegex = /http(s)?:\/\/(creativecommons.org|rightsstatements.org)[^"'\\<\n]+/gm;
+
 function extractLicense(license: string) {
   const matches = license.match(licenseRegex);
   if (matches) {
@@ -313,14 +314,12 @@ function convertMetadata(
     return [];
   }
 
-  return metadata.map(
-    (item): Presentation3.MetadataItem => {
-      return {
-        label: convertLanguageMapping(item.label),
-        value: convertLanguageMapping(item.value),
-      };
-    }
-  );
+  return metadata.map((item): Presentation3.MetadataItem => {
+    return {
+      label: convertLanguageMapping(item.label),
+      value: convertLanguageMapping(item.value),
+    };
+  });
 }
 
 function removeUndefinedProperties(obj: any) {
@@ -457,7 +456,7 @@ function linkingProperties(resource: Presentation2.LinkingProperties & Presentat
         ? [
             {
               id: configuration.providerId,
-              type: 'Agent' as 'Agent',
+              type: 'Agent' as const,
               homepage: related.length ? [related[0] as any] : undefined,
               logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
               label: convertLanguageMapping(configuration.providerName),
@@ -548,9 +547,7 @@ function upgradeAnnotationList(annotationPage: Presentation2.AnnotationList): Pr
   });
 }
 
-function upgradeSequence(
-  sequence: Presentation2.Sequence
-): {
+function upgradeSequence(sequence: Presentation2.Sequence): {
   canvases: Presentation3.Canvas[];
   behavior?: string[];
 } {
@@ -606,6 +603,7 @@ function upgradeContentResource(inputContentResource: Presentation2.ContentResou
     ...(linkingProperties(contentResource as any) as any),
   });
 }
+
 function upgradeChoice(choice: Presentation2.ChoiceEmbeddedContent): Presentation3.ChoiceBody {
   const items = [];
 
@@ -623,6 +621,7 @@ function upgradeChoice(choice: Presentation2.ChoiceEmbeddedContent): Presentatio
     items: items as any,
   };
 }
+
 function upgradeRange(range: Presentation2.Range): Presentation3.Range {
   // range.members;
   // range.canvases;

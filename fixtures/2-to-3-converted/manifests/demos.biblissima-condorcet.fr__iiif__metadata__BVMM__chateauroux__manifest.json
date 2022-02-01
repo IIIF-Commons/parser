@@ -1,0 +1,1406 @@
+{
+  "label": {
+    "@none": [
+      "Reconstructed manifest (partial): Grandes Chroniques de France (Châteauroux, BM, ms 5)"
+    ]
+  },
+  "thumbnail": [
+    {
+      "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0038/full/150,/0/default.jpg",
+      "type": "Image"
+    }
+  ],
+  "logo": [
+    {
+      "id": "http://static.biblissima.fr/images/logo-biblissima-350w.jpg",
+      "type": "Image"
+    }
+  ],
+  "metadata": [
+    {
+      "label": {
+        "@none": ["Type"]
+      },
+      "value": {
+        "@none": ["Reconstructed manuscrit (partial reconstruction)"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Holding institution (manuscript)"]
+      },
+      "value": {
+        "@none": ["Bibliothèque municipale de Châteauroux"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Holding institution (cuttings)"]
+      },
+      "value": {
+        "@none": [
+          "Bibliothèque nationale de France, Département des Estampes et de la photographie"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Shelfmarks"]
+      },
+      "value": {
+        "@none": [
+          "Châteauroux, Bibliothèque municipale, ms. 5",
+          "Paris, BnF, Département des Estampes et de la photographie, RESERVE 4-AD-133"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Images Providers"]
+      },
+      "value": {
+        "@none": [
+          "Gallica - Bibliothèque nationale de France",
+          "BVMM (IRHT-CNRS) - Bibliothèque municipale de Châteauroux"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Manifest Provider"]
+      },
+      "value": {
+        "@none": ["Equipex Biblissima"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Description"]
+      },
+      "value": {
+        "@none": [
+          "This manifest is a partial reconstruction of the Grandes Chroniques de France manuscript (Châteauroux, BM, ms 5 ; full page images coming from the BVMM). The miniatures are associated as detail images on their respective canvas (images coming from Gallica). It only shows the mutilated pages of the original manuscript, not the full object."
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Related"]
+      },
+      "value": {
+        "@none": [
+          "<a href='http://ccfr.bnf.fr/portailccfr/jsp/index_view_direct_anonymous.jsp?record=eadcgm:EADC:D15100021'>Catalogue record (CCFr)</a>"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Related"]
+      },
+      "value": {
+        "@none": [
+          "<a href='https://gallica.bnf.fr/ark:/12148/btv1b10511137f'>Digitized miscellany containing the miniatures (Gallica)</a>"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Related"]
+      },
+      "value": {
+        "@none": [
+          "<a href='https://gallica.bnf.fr/Search?idArk=&n=50&p=1&lang=FR&adva=1&adv=1&reset=&urlReferer=%2Fadvancedsearch%3Flang%3DFR&enreg=&tri=&catsel1=f_source&cat1=4-AD-133&ope2=MUST&catsel2=f_creator&cat2=&ope3=MUST&catsel3=f_tdm&cat3=&date=daTo&daFr=&daTo=&t_typedoc=images&sel_collection=toutesCollections&biblio=Biblioth%C3%A8que+nationale+de+France&sel_source=toutSources&biblioSpecifique=Gallica&sel_provenance_Part=toutPartenaires&sel_provenance_Edist=toutSNE&dateMiseEnLigne=indexDateFrom&firstIndexationDateDebut=&firstIndexationDateFin=&tri=&submit2=Lancer+la+recherche'>Digitized miniatures, retail (Gallica)</a>"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Related"]
+      },
+      "value": {
+        "@none": [
+          "<a href='http://catalogue.bnf.fr/ark:/12148/cb40341664z'>Catalogue record of the miscellany (BnF)</a>"
+        ]
+      }
+    }
+  ],
+  "type": "Manifest",
+  "id": "http://demos.biblissima-condorcet.fr/iiif/metadata/BVMM/chateauroux/manifest.json",
+  "requiredStatement": {
+    "label": {
+      "@none": ["Attribution"]
+    },
+    "value": {
+      "@none": [
+        "Images : Gallica - Bibliothèque nationale de France / BVMM (IRHT-CNRS) - Bibliothèque municipale de Châteauroux ; Manifest IIIF : Régis Robineau (Biblissima)"
+      ]
+    }
+  },
+  "homepage": {
+    "label": {
+      "@none": ["Digitized manuscript (BVMM, IRHT-CNRS)"]
+    },
+    "id": "http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=4490",
+    "type": "Text"
+  },
+  "items": [
+    {
+      "label": {
+        "@none": ["f. 033v - 034"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981394",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/e9618d7e-ed21-47ed-ad33-4206ed79762e",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981394",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0038",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0038/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/59103bf1-d5b2-48f3-bcdb-757a43bd6d2b",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981394#xywh=3949,994,1091,1232",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2138,
+                "height": 2414,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511139b/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511139b/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/a26867f6-99dd-468f-86b6-0bd364ff0771"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 034v - 035"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981395",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/cc127582-de23-45bc-b591-93f5fb2b2254",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981395",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0039",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0039/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/f5c3fe24-f7c5-4866-bd81-57a66b55375f",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981395#xywh=2618,927,1080,1224",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2159,
+                "height": 2447,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511139b/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511139b/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/a86cbafd-9ad4-4c07-8764-6c3aac565be2"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 045v - 046"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981406",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/8d5171ce-08cd-42fb-9af3-f8bd38b5e35b",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981406",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0050",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0050/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/fd91238f-b309-4967-a864-7db8c5f855d2",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981406#xywh=3953,927,1078,1045",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2161,
+                "height": 2094,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111432/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111432/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/0b47e9ca-e4ac-4c7c-b882-d2417a17b269"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 046v - 047"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981407",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/001744a1-9d1c-471c-8b8d-3a300636dd8e",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981407",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0051",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0051/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/b3991a64-7eec-432a-9094-5f424f2b7f92",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981407#xywh=2632,881,1091,1024",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2175,
+                "height": 2041,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111432/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111432/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/45205e4a-da48-427d-92ea-cf38f78fa656"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 053v - 054"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981414",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/89fd5f39-d6ef-4e8c-aa46-9c3f78492a21",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981414",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0058",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0058/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/da8acf69-1bcb-4e26-8212-2eadef54278c",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981414#xywh=3928,956,1093,1381",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2183,
+                "height": 2758,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511147v/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511147v/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/07a639d1-9e82-4f09-a742-d06defcdcb16"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 054v - 055"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981415",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/5b3deb20-7b67-4c70-aab1-4e54e67ee9f3",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981415",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0059",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0059/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/91d1b01e-6217-4487-b21b-d96171e58ec8",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981415#xywh=2683,925,1046,1333",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2186,
+                "height": 2785,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511147v/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511147v/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/ba5c5e9a-f42b-447b-8d11-e81177b61d3d"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 067v - 068"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981428",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/9aca10df-0da4-42ec-93f1-4c20c011e655",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981428",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0072",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0072/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/a7f04eaf-2c34-45ec-a8f9-7ed818ee212c",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981428#xywh=4053,964,1096,1051",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2161,
+                "height": 2073,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111504/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111504/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/ada02011-6ae7-4249-ac40-c9cf0a07b67d"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 068v - 069"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981429",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/0edb1fac-2ad1-4a28-b0f6-5d9e3c94a8a5",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981429",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0073",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0073/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/e299cb5b-9066-4e39-9fe4-16103a4c8e0c",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981429#xywh=2695,938,1087,1025",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2230,
+                "height": 2102,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111504/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111504/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/f07e8141-2f7f-4799-bdf9-0a05eee54b5c"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 080v - 081"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981441",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/948c049c-d6e9-4acc-b3cb-a73bff01f02b",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981441",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0085",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0085/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/552c7765-7a64-40a4-972b-0781a78710c0",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981441#xywh=4007,970,1094,1064",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2227,
+                "height": 2165,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511154x/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511154x/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/05560e25-5c79-4c0f-ba84-6acb55886779"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 081v - 082"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981442",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/61baeb0c-1584-46cb-8f14-e5ba856e3515",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981442",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0086",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0086/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/a736cc82-c11a-44e0-928d-4d1aed795e22",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981442#xywh=2758,974,1044,1046",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2157,
+                "height": 2162,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511154x/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511154x/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/9593efbe-6bb2-4dd9-a3d4-2e72465ceab6"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 084v - 085"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981445",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/7afcb16a-662a-4207-b646-863827662948",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981445",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0089",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0089/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/26af6c1a-63fd-4985-a276-b0785a166bb4",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981445#xywh=4005,963,1089,1085",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2150,
+                "height": 2143,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511158q/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511158q/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/f76cc0c7-e490-41bd-afb9-f1014d1dfdb6"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 085v - 086"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981446",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/4324ffe6-f99d-4522-b844-9bef382b54a4",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981446",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0090",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0090/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/dc1c62bb-3560-4bd5-983c-d0b7bf5d70ea",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981446#xywh=2726,970,1097,1080",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2171,
+                "height": 2137,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511158q/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511158q/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/a282c5ea-6a76-4de4-bebb-c2c3ca2d0b8b"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 088v - 089"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981449",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/ce4b7733-3add-4a58-8dcb-8158efbfc66e",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981449",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0093",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0093/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/c7739be7-c274-4a1f-a30d-536ff9eb1852",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981449#xywh=4077,1028,1055,1015",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2177,
+                "height": 2095,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111610/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111610/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/c9a24721-4af8-4ce7-b598-11105c024c57"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 089v - 090"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981450",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/32902573-0c4d-4470-9bdd-8c67552d6e84",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981450",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0094",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0094/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/91ee62c7-3845-4524-b357-1a58158eb3fe",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981450#xywh=2904,956,1030,1008",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2129,
+                "height": 2083,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111610/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111610/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/be39b461-8086-406d-812d-1891bf231704"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 181v - 182"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981542",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/a29fb20e-5db3-4468-bddb-f766c631e53c",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981542",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0186",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0186/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/36678d9c-c7fb-45b8-8035-82c53a8b3ad2",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981542#xywh=4064,1409,976,1026",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2015,
+                "height": 2119,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511164b/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511164b/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/cc2646de-0cde-4f36-98ff-b38a3205db4b"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 182v - 183"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981543",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/6d43244a-d1e9-4dc6-8173-13eb592e2721",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981543",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0187",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0187/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/48c645ac-68a9-4fc3-ad73-765ecd24b61c",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981543#xywh=2843,1384,990,1039",
+              "body": {
+                "format": "image/jpeg",
+                "width": 1991,
+                "height": 2089,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511164b/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511164b/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/55bc8536-ba09-4d40-a88e-1b8dadb86038"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 188v - 189"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981549",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/2bca9afa-096e-470c-b242-9f0e2f76d343",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981549",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0193",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0193/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/a2dc5623-8f64-4e03-a9d6-5eaab919506d",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981549#xywh=4067,2816,961,1027",
+              "body": {
+                "format": "image/jpeg",
+                "width": 1972,
+                "height": 2107,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511167p/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511167p/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/7dfa4153-ba41-49e9-b65e-2a808e43f3de"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 189v - 190"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981550",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/a9430862-1d59-4a0d-9f1c-f1fb910c20fb",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981550",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0194",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0194/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/34de1b61-e72d-4b0d-bf5f-f355e5e84515",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981550#xywh=2864,2853,1000,1074",
+              "body": {
+                "format": "image/jpeg",
+                "width": 1932,
+                "height": 2075,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511167p/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511167p/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/1a85109b-2bb8-4204-8e16-841d1b1208ba"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 359v - 360"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981720",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/ff9a29f2-48a3-42b8-bfa0-92c695a01f1f",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981720",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0364",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0364/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/86605cd4-07db-4fb4-884b-3c5b5e262f03",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981720#xywh=5025,2529,1058,1045",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2115,
+                "height": 2090,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511170z/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511170z/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/efe7d60e-e468-4c53-8478-79962437aa9b"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 360v - 361"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981721",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/ec7bc4c0-df72-4811-a0b9-69a62940d5a0",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981721",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0365",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0365/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/49e11810-2bbf-4beb-8327-75dab46c9fc8",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981721#xywh=1093,2503,1085,1060",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2103,
+                "height": 2054,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511170z/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511170z/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/1126591a-6479-4331-b8fe-ded4fc13b405"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 415v - 416"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981776",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/cf96470a-3ca8-4fd6-8092-694eb65aec4d",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981776",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0420",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0420/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/a4b0c83b-3e81-4081-84c8-de164fd05b70",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981776#xywh=4865,2140,1053,1168",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2053,
+                "height": 2277,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111739/f2",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111739/f2/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/e558f974-0d98-4a98-95b1-3b6879e5bd84"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["f. 416v - 417"]
+      },
+      "height": 5412,
+      "width": 7216,
+      "type": "Canvas",
+      "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981777",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/580d867a-cd6f-4b48-b4ae-ea902dd7acda",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981777",
+              "body": {
+                "format": "image/jpeg",
+                "height": 5412,
+                "width": 7216,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0421",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0421/full/full/0/default.jpg"
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://example.org/uuid/4a445562-d56d-46e8-8293-b63fd31b69d9",
+              "target": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981777#xywh=1019,2146,1077,1185",
+              "body": {
+                "format": "image/jpeg",
+                "width": 2047,
+                "height": 2253,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2",
+                    "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111739/f1",
+                    "type": "ImageService1"
+                  }
+                ],
+                "type": "Image",
+                "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111739/f1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/c00659d7-9c03-456d-b444-382cf5b93188"
+        }
+      ]
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}

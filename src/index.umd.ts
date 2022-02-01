@@ -3,5 +3,5 @@ import * as Presentation3 from './presentation-3';
 
 export default {
   Presentation2,
-  Presentation3
+  Presentation3,
 };
