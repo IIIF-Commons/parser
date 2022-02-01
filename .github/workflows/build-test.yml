@@ -28,3 +28,6 @@ jobs:
       - run: yarn install --frozen-lockfile --non-interactive
       - run: yarn run build
       - run: yarn run test
+      - run: node pkg-tests/node-load.js
+      - run: node pkg-tests/node-load.mjs
+      - run: node pkg-tests/node-umd.js
