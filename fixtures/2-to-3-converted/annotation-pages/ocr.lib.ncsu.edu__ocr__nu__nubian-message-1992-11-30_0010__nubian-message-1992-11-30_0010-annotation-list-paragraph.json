@@ -1,0 +1,363 @@
+{
+  "@label": "OCR text granularity of paragraph",
+  "type": "AnnotationPage",
+  "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph.json",
+  "items": [
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/715,678,813,88",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=715,678,813,88",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "November 30, 1992"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/714,822,865,350",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=714,822,865,350",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Halloween... Aggie Style!"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/707,1247,580,590",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=707,1247,580,590",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Slammin’! North Carolina A & T’s homecomming was stacked with top talent from the hip—hop in- dustry; for all of you who missed it, it was all that!"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/699,1867,585,982",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=699,1867,585,982",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Musical flavors for all tastes were present on the Aggies’ cam- pus, as four different groups gave live per- formances (not includ- ing R. Kelley,the pre- vious night.) It was Halloween and Pete Rock & C. L. Smooth stormed the stage wearing masks to open things up."
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/868,2865,404,50",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=868,2865,404,50",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "After the soul"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/696,2941,577,122",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=696,2941,577,122",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "brothers frOm M t . V e r n o n"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/695,3089,577,61",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=695,3089,577,61",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "“Straighted It Out,”"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/697,3165,618,62",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=697,3165,618,62",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "sultry songstress Ce Ce ‘"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/678,3243,594,1914",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=678,3243,594,1914",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Peniston took the stage. She had the floor j umpin g with her smash hit, “Finally,” and swooned the crowd with slow fa- vorites such as “As We Lay” by Shirley Murdock. She deﬁ- nitely came off. She was looking good too. Speaking of looks, the next group, TLC, would have had you thinking their name stood for “They Look Corny,” because they sure did. Of all the groups, they were the only gig that got no props. The songs were alright, but they lacked stage skills, and the ploys they used were juvenile. Oh, Well."
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/1344,1256,590,1450",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=1344,1256,590,1450",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Any defeciencies TLC left were made up for, and then some, by the next group, Naughty By Nature. The bad boys from 1 18th Streetrocked the house. They per- formed old hits, as well as two slammin’ new hits off their new a1- bumdue outnext year. Old school lyricist Freddie Foxx was with Treach and his crew. He got busy overa beat box and dropped bombs. They both get much dap."
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/1334,2722,585,600",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=1334,2722,585,600",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "All in all, Home- coming was the joint. People came in peace and everybody en- joyed the show. State was deep, so if you missed it, check it out next year. Peace"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/1337,3413,363,50",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=1337,3413,363,50",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Glenn French"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/1338,3568,260,48",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=1338,3568,260,48",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Freshman"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/1760,682,879,94",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=1760,682,879,94",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "The Nubian Message"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/2956,677,848,74",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=2956,677,848,74",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Entertainment 10"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/2026,826,1828,277",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=2026,826,1828,277",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Sister Souljah... ...A Sister with a Cause."
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/1992,1339,589,1207",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=1992,1339,589,1207",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Sister Souljah, rap artist, lecturer and activist, drops bombs every time she opens her mouth. She puts the fury and frustra- tion of our people into words with a style and eloquence few speak- ers can achieve. When addressingourpeople, she refers to us as “Af- ricans” for our lost brothers and sisters who have forgotten their roots."
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/1981,2574,590,1756",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=1981,2574,590,1756",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Born Lisa Williamson in Englewood, New Jer- sey, Souljah grew up on welfare in a public housing project. De- termined not to letpov- erty hold her back, she won many scholar- ships while in high school and attended Rutgers University. While she was there, she was also involved in many community activities. Her wealth of knowledge caught the attention of rapper Carlton Ridenhour, a.k.a. Chuck D. This incident resulted in the birth of Sister Souljah’s rap career."
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/1975,4346,588,749",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=1975,4346,588,749",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Souljah has lec- tured all over the world. The Soviet Union, Spain and Zim- babwe are just a few of the countries she has toured. Since 1986, she has founded two youth organizations, coordinated numerous"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/2640,1265,586,676",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=2640,1265,586,676",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "youth conferences and established a free six- week summer camp for homeless children. Souljah has also ap- peared on numberous talk shows such as Oprah, Donahue and Geraldo; her"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/2641,1972,597,127",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=2641,1972,597,127",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "arguements were solid! She states, “my"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/2660,2108,574,54",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=2660,2108,574,54",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "studies make me se-"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/2616,3193,614,1917",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=2616,3193,614,1917",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "cure intellectually, so that nobody can get me on Nightline and have me start wobbling.” Sister Souljah speaks for her people, in her lectures as well as on her records. Fa- mous for saying “We are at war,” in her de- but on Terminator X ’5 single, Buckwilin’. Since then it has be- come her slogan. President elect, Bill Clinton did not know “who he was messin’ with” when he took her comments on the riot out of context and called her racist. Millions of people got the chance to hear Souljah take on the press and in the end,"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/3290,1268,581,362",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=3290,1268,581,362",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "they all got served. She further ex- plains why she cannot be called a racist in her work. Take this ex-"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/3288,1656,577,139",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=3288,1656,577,139",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "cerpt from “360 De- grees of Power:”"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/3450,2074,431,60",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=3450,2074,431,60",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Black racist,"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/3300,2149,510,121",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=3300,2149,510,121",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Black racist, Black racists!"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/3289,2298,595,526",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=3289,2298,595,526",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "No Black person or group ofBlack people any place in the world had the power to deny white people or Euro- peans access to any- thing."
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/3280,2839,596,446",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=3280,2839,596,446",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "What can you call me? Call me preju- dice, because I pre- judge situations based on my understanding of history."
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/3273,3300,594,992",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=3273,3300,594,992",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "Some of the Indians trusted white people. If you ask any brother or sitster today how many Native Ameri- cans do they know, they’ll tell you that they don't know any. Whit e people killed them and they did so in the name of friend- ship, civilization and Christianty!"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/3271,4461,443,211",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=3271,4461,443,211",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "-- Jeff Hudgens and . Glenn French"
+      }
+    },
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://ocr.lib.ncsu.edu/ocr/nu/nubian-message-1992-11-30_0010/nubian-message-1992-11-30_0010-annotation-list-paragraph/4564,191,74,1175",
+      "target": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010#xywh=4564,191,74,1175",
+      "body": {
+        "format": "text/plain",
+        "type": "TextualBody",
+        "value": "a. _...L,,_._r,ﬂ_,., 7 “ _.—,...._‘.—...rq,‘ ,r m\" ‘ 1\"”. m mwnz-yrfp‘j‘fﬂw, mr mm W. . Gym“ ‘ am “new r—rr"
+      }
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}

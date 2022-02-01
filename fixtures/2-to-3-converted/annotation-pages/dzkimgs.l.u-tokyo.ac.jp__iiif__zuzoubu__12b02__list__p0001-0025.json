@@ -1,0 +1,36 @@
+{
+  "type": "AnnotationPage",
+  "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/list/p0001-0025.json",
+  "items": [
+    {
+      "motivation": "classifying",
+      "type": "Annotation",
+      "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025/1",
+      "target": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025#xywh=9912,13519,2583,2663",
+      "body": {
+        "@id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025/1/1",
+        "language": "ja",
+        "format": "text/html",
+        "type": "TextualBody",
+        "value": "<div style=\"font-weight:bold\" span class=\"ksch\" s=\"title\">大日如來</div><div>（仏・如來）</div>  <span class=\"ecat\">目の数</span>: <span class=\"ksch\" s=\"eye\">二目</span>  <span class=\"ecat\">額</span>: <span class=\"ksch\" s=\"brow\">白毫無</span> <span class=\"ecat\">持物</span>: <span class=\"ksch\" s=\"stuff\">輪宝 </span>, <span class=\"ksch\" s=\"stuff\"></span> <span class=\"ecat\">臂数</span>: <span class=\"ksch\" s=\"elbow\">二臂</span>   <span class=\"ecat\">台座</span>: <span class=\"ksch\" s=\"base\">蓮華 </span>, <span class=\"ksch\" s=\"base\"></span> <span class=\"ecat\">光背</span>: <span class=\"ksch\" s=\"backl\">炎光 </span>, <span class=\"ksch\" s=\"backl\"></span>  <span class=\"ecat\">顔の向き</span>: <span class=\"ksch\" s=\"facial\">正面</span> <div style=\"font-size:9px\">タグ付け担当: 永崎研宣</div>"
+      }
+    },
+    {
+      "motivation": "classifying",
+      "type": "Annotation",
+      "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025/2",
+      "target": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025#xywh=8457,11791,5583,6317",
+      "body": {
+        "@id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025/2/1",
+        "language": "ja",
+        "format": "text/html",
+        "type": "TextualBody",
+        "value": "<div style=\"font-weight:bold\" span class=\"ksch\" s=\"title\">八葉院</div><div>（曼荼羅）</div>  <span class=\"ecat\">目の数</span>: <span class=\"ksch\" s=\"eye\">二目</span>  <span class=\"ecat\">額</span>: <span class=\"ksch\" s=\"brow\">白毫無</span>  <span class=\"ecat\">臂数</span>: <span class=\"ksch\" s=\"elbow\">二臂</span>       <div style=\"font-size:9px\">タグ付け担当: 永崎研宣</div>"
+      }
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}

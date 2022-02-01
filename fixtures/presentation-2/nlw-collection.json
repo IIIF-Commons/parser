@@ -1,0 +1,1021 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373813/manifest.json",
+  "@type": "sc:Collection",
+  "label": "ardd",
+  "metadata": [
+    {
+      "label": [
+        {
+          "@value": "Title",
+          "@language": "en"
+        },
+        {
+          "@value": "Teitl",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": "Yr ardd"
+    },
+    {
+      "label": [
+        {
+          "@value": "Journal details",
+          "@language": "en"
+        },
+        {
+          "@value": "Manylion y cylchgrawn",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": [
+        {
+          "@value": "Published in Dolgellau and Bethesda by William Ogwen Jones, Margaret Ogwen Jones and Robert Jones.",
+          "@language": "en"
+        },
+        {
+          "@value": "Cyhoeddwyd yn Nolgellau a Bethesda gan William Ogwen Jones, Margaret Ogwen Jones a Robert Jones.",
+          "@language": "cy-GB"
+        }
+      ]
+    },
+    {
+      "label": [
+        {
+          "@value": "Frequency",
+          "@language": "en"
+        },
+        {
+          "@value": "Amlder",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": [
+        {
+          "@value": "Monthly",
+          "@language": "en"
+        },
+        {
+          "@value": "Misol",
+          "@language": "cy-GB"
+        }
+      ]
+    },
+    {
+      "label": [
+        {
+          "@value": "Repository",
+          "@language": "en"
+        },
+        {
+          "@value": "Ystorfa",
+          "@language": "cy-GB"
+        }
+      ],
+      "value": [
+        {
+          "@value": "This content has been digitised by The National Library of Wales",
+          "@language": "en"
+        },
+        {
+          "@value": "Digidwyd y cynnwys hwn gan Lyfrgell Gendlaethol Cymru",
+          "@language": "cy-GB"
+        }
+      ]
+    }
+  ],
+  "description": [
+    {
+      "@value": "A monthly Welsh language periodical that served the Congregationalist denomination, mainly in north Wales, which published articles related to religious affairs and religious education. The periodical was established by David Roberts (Dewi Ogwen, 1818-1897) who was also its first editor between 1863 and 1865. Form 1866 to 1869 the periodical was jointly edited by David Rowlands (Dewi Môn, 1836-1907) and Rowland Williams (Hwfa Môn, 1825-1905).",
+      "@language": "en"
+    },
+    {
+      "@value": "Cylchgrawn misol, Cymraeg ei iaith, a oedd yn gwasanaethu enwad yr Annibynwyr, yn bennaf yng ngogledd Cymru, a oedd yn ymwneud gyda materion crefyddol ac addysg grefyddol. Sefydlwyd y cylchgrawn gan David Roberts (Dewi Ogwen, 1818-1897) a oedd hefyd yn ei golygu rhwng 1863 a 1865. O 1866 hyd at 1869 golygwyd y cylchgrawn ar y cyd gan David Rowlands (Dewi Môn, 1836-1907) a Rowland Williams (Hwfa Môn, 1825-1905).",
+      "@language": "cy-GB"
+    }
+  ],
+  "seeAlso": {
+    "@id": "https://damsssl.llgc.org.uk/object/llgc-id:2373813",
+    "format": "application/rdf+xml",
+    "profile": "http://www.europeana.eu/schemas/edm/"
+  },
+  "service": {
+    "@context": "http://iiif.io/api/search/1/context.json",
+    "@id": "https://damsssl.llgc.org.uk/iiif/journals/2373813/search",
+    "profile": "http://iiif.io/api/search/1/search"
+  },
+  "manifests": [
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373814/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373832/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 1 - Awst 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373852/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 2 - Medi 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373876/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 3 - Hydref 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373896/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 4 - Tachwedd 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373918/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 5 - Rhagfyr 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373940/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 6 - Ionawr 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373962/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-02-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 7 - Chwefror 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373984/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 8 - Mawrth 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374006/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-04-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 9 - Ebrill 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374028/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-05-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 10 - Mai 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374050/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 11 - Mehefin 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374072/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-07-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 12 - Gorffennaf 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374087/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374099/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 13 - Awst 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374121/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 14 - Medi 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374143/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 15 - Hydref 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374165/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 16 - Tachwedd 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374187/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 17 Rhagfyr 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374209/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 18 - Ionawr 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374231/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-02-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 19 - Chwefror 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374253/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 20 - Mawrth 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374275/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-04-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 21 - Ebrill 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374297/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-05-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 22 - Mai 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374319/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 23 - Mehefin 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374341/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-07-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 24 - Gorffennaf 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374363/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 25 - Awst 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374385/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 26 - Medi 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374407/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 27 - Hydref 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374429/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 28 - Tachwedd 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374451/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 29 Rhagfyr 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880459/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880464/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 30 - Ionawr 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880485/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-02-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 31 - Chwefror 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880506/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 32 - Mawrth 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880527/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-04-14T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 33 - Ebrill 14 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880548/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-05-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 34 - Mai 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880569/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 35 - Mehefin 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880590/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-07-14T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 36 - Gorffennaf 14 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880611/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 37 - Awst 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880632/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 38 - Medi 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880653/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 39 - Hydref 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880674/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 40 - Tachwedd 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880695/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 41 Rhagfyr 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880712/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880717/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 42 - Ionawr 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880734/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-02-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 43 - Chwefror 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880751/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 44 - Mawrth 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880768/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-04-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 45 - Ebrill 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880785/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-05-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 46 - Mai 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880802/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 47 - Mehefin 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880819/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-07-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 48 - Gorffennaf 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880836/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 49 - Awst 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880853/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-09-14T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 50 - Medi 14 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880870/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 51 - Hydref 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880887/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 52 - Tachwedd 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880904/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-12-14T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 53 - Rhagfyr 14 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740698/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740703/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 56 - Mawrth 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740720/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-04-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 57 - Ebrill 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740737/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 59 - Mehefin 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740754/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 62 - Medi 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740775/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 65 Rhagfyr 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740788/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1869-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. VI rhif. 66 - Ionawr 15 1869"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740805/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1869-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. VI rhif. 68 - Mawrth 15 1869"
+    }
+  ],
+  "members": [
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373814/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373832/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 1 - Awst 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373852/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 2 - Medi 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373876/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 3 - Hydref 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373896/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 4 - Tachwedd 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373918/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1863-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 5 - Rhagfyr 15 1863"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373940/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 6 - Ionawr 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373962/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-02-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 7 - Chwefror 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2373984/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 8 - Mawrth 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374006/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-04-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 9 - Ebrill 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374028/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-05-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 10 - Mai 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374050/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 11 - Mehefin 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374072/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-07-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. I rhif. 12 - Gorffennaf 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374087/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374099/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 13 - Awst 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374121/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 14 - Medi 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374143/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 15 - Hydref 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374165/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 16 - Tachwedd 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374187/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1864-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 17 Rhagfyr 15 1864"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374209/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 18 - Ionawr 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374231/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-02-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 19 - Chwefror 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374253/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 20 - Mawrth 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374275/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-04-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 21 - Ebrill 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374297/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-05-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 22 - Mai 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374319/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 23 - Mehefin 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374341/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-07-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 24 - Gorffennaf 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374363/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 25 - Awst 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374385/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 26 - Medi 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374407/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 27 - Hydref 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374429/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 28 - Tachwedd 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2374451/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1865-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. II rhif. 29 Rhagfyr 15 1865"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880459/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880464/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 30 - Ionawr 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880485/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-02-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 31 - Chwefror 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880506/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 32 - Mawrth 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880527/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-04-14T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 33 - Ebrill 14 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880548/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-05-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 34 - Mai 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880569/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 35 - Mehefin 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880590/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-07-14T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 36 - Gorffennaf 14 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880611/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 37 - Awst 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880632/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 38 - Medi 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880653/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 39 - Hydref 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880674/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 40 - Tachwedd 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880695/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1866-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. III rhif. 41 Rhagfyr 15 1866"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880712/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880717/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 42 - Ionawr 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880734/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-02-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 43 - Chwefror 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880751/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 44 - Mawrth 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880768/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-04-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 45 - Ebrill 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880785/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-05-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 46 - Mai 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880802/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 47 - Mehefin 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880819/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-07-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 48 - Gorffennaf 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880836/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-08-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 49 - Awst 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880853/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-09-14T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 50 - Medi 14 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880870/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-10-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 51 - Hydref 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880887/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-11-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 52 - Tachwedd 15 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2880904/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1867-12-14T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. IV rhif. 53 - Rhagfyr 14 1867"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740698/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-01-01T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740703/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 56 - Mawrth 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740720/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-04-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 57 - Ebrill 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740737/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-06-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 59 - Mehefin 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740754/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-09-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 62 - Medi 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740775/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1868-12-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. V rhif. 65 Rhagfyr 15 1868"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740788/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1869-01-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. VI rhif. 66 - Ionawr 15 1869"
+    },
+    {
+      "@id": "https://damsssl.llgc.org.uk/iiif/2.0/2740805/manifest.json",
+      "@type": "sc:Manifest",
+      "navDate": "1869-03-15T00:00:00Z",
+      "license": "<a href=\"https://creativecommons.org/publicdomain/mark/1.0/\">https://creativecommons.org/publicdomain/mark/1.0/</a>",
+      "label": "Cyf. VI rhif. 68 - Mawrth 15 1869"
+    }
+  ]
+}

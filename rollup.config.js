@@ -73,4 +73,20 @@ export default [
             treeshake: true,
         }
     }),
+
+    // Standalone validator
+    createRollupConfig({
+        ...baseConfig,
+        inlineDynamicImports: true,
+        input: './src/presentation-3/validator/index.ts',
+        distPreset: 'umd',
+        dist: 'dist/presentation-3/validator',
+        distOptions: {
+            globalName: 'IIIFValidator',
+            globals: {}
+        },
+        extra: {
+            treeshake: true,
+        }
+    }),
 ];

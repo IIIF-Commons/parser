@@ -1,0 +1,1001 @@
+{
+  "label": {
+    "@none": ["Cambrian (1804-01-28)"]
+  },
+  "navDate": "1804-01-28T00:00:00Z",
+  "metadata": [
+    {
+      "label": {
+        "en": ["Publisher"],
+        "cy-GB": ["Cyhoeddwr"]
+      },
+      "value": {
+        "@none": ["T. Jenkins"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Place of Publication"]
+      },
+      "value": {
+        "@none": ["Swansea"]
+      }
+    },
+    {
+      "label": {
+        "en": ["Frequency"],
+        "cy-GB": ["Amlder"]
+      },
+      "value": {
+        "@none": ["Weekly"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Language"]
+      },
+      "value": {
+        "@none": ["eng"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Subject"]
+      },
+      "value": {
+        "@none": ["Swansea (Wales) Newspapers"]
+      }
+    },
+    {
+      "label": {
+        "en": ["Repository"],
+        "cy-GB": ["Ystorfa"]
+      },
+      "value": {
+        "en": [
+          "This content has been digitised by The National Library of Wales"
+        ],
+        "cy-GB": ["Digidwyd y cynnwys hwn gan Lyfrgell Gendlaethol Cymru"]
+      }
+    }
+  ],
+  "logo": [
+    {
+      "service": [
+        {
+          "profile": "http://iiif.io/api/image/2/level1.json",
+          "id": "http://dams.llgc.org.uk/iiif/2.0/image/logo",
+          "type": "ImageService2"
+        }
+      ],
+      "type": "Image",
+      "id": "http://dams.llgc.org.uk/iiif/2.0/image/logo/full/400,/0/default.jpg"
+    }
+  ],
+  "seeAlso": [
+    {
+      "format": "application/rdf+xml",
+      "profile": "http://www.europeana.eu/schemas/edm/",
+      "type": "Dataset",
+      "id": "http://hdl.handle.net/10107/3320640"
+    }
+  ],
+  "structures": [
+    {
+      "label": {
+        "@none": ["TO THE PUBLIC."]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["News"]
+          }
+        },
+        {
+          "label": {
+            "@none": ["Description"]
+          },
+          "value": {
+            "@none": [
+              "ON the first appearance of a New Paper be-Cyfore that august Tribunal which is ultimately to fix its destiny, Custom exacts a disclosure of its claim to notice: obedient to. her"
+            ]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle1",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320641#xywh=540,5040,3306,18510",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle1.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["Advertising"]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["Advertising"]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle2",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320641#xywh=3834,4983,13134,18528",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle2.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["LONDON."]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["News"]
+          }
+        },
+        {
+          "label": {
+            "@none": ["Description"]
+          },
+          "value": {
+            "@none": [
+              "___THURSDAY, Jan. 19. THE invasion of this country by the French has for some time been the general topic of .. conversation, and various rumours are con"
+            ]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle3",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320642#xywh=582,555,16413,22638",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle3.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["Advertising"]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["Advertising"]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle4",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320642#xywh=13773,9642,3387,13467",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle4.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["-THE -"]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["News"]
+          }
+        },
+        {
+          "label": {
+            "@none": ["Description"]
+          },
+          "value": {
+            "@none": [
+              "m The difficulties attending the first publications of a Newspaper being inconceivably great, we trust they will operate in extenuation of whatever errors and imperfections may be observed. Maturity will speedily"
+            ]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle5",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643#xywh=525,525,9993,22614",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle5.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["Family Notices"]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["Family Notices"]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle6",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643#xywh=7173,14520,3303,6357",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle6.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["HIGH WATER ON SWANSEA BAR"]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["Detailed Lists, Results and Guides"]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle7",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643#xywh=7209,20913,3120,1470",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle7.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["TO CORRESPONDENTS."]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["News"]
+          }
+        },
+        {
+          "label": {
+            "@none": ["Description"]
+          },
+          "value": {
+            "@none": [
+              "The Parody from Gray in our next. Communications from our Holywell Correspondent will always be acceptable. We have, for the present, omitted his last favour, on account of the extraordinary mildness of"
+            ]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle8",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643#xywh=7218,22359,3222,714",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle8.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["COUNTRY MARKETS. I"]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["Detailed Lists, Results and Guides"]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle9",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643#xywh=10401,540,3360,15036",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle9.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["Advertising"]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["Advertising"]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle10",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643#xywh=10377,546,6693,22560",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle10.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["ODE FOR THE NEW YEAR."]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["News"]
+          }
+        },
+        {
+          "label": {
+            "@none": ["Description"]
+          },
+          "value": {
+            "@none": [
+              "WHEN, at the Despot's dread command, Bridg'd Hellespont his myriads bore From servile Asia's peopled strand To Graecia's and to Freedom's share—"
+            ]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle11",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644#xywh=549,744,3213,9366",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle11.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["THE CURATE.—A FRAGMENT."]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["News"]
+          }
+        },
+        {
+          "label": {
+            "@none": ["Description"]
+          },
+          "value": {
+            "@none": [
+              "O'ER the pale embers of a-dying fire, His little lampe fed with but little oile, The Curate sat (for scantie was his hire) ;And ruminated sad the morrow's toil."
+            ]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle12",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644#xywh=510,10398,3210,8079",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle12.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["VOLUNTEERS.\""]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["News"]
+          }
+        },
+        {
+          "label": {
+            "@none": ["Description"]
+          },
+          "value": {
+            "@none": [
+              "Copy of a circular letter _from Mr. Secretary . Yorke to the Lieutenants in the several counties in Great Britain :-My Lord, \" Whitehall, Jan. 14, 1804."
+            ]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle13",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644#xywh=549,576,16377,20817",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle13.json"
+      }
+    },
+    {
+      "label": {
+        "@none": ["Advertising"]
+      },
+      "metadata": [
+        {
+          "label": {
+            "@none": ["Article Category"]
+          },
+          "value": {
+            "@none": ["Advertising"]
+          }
+        }
+      ],
+      "type": "Range",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle14",
+      "items": [
+        {
+          "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644#xywh=660,21486,16311,1770",
+          "type": "Canvas"
+        }
+      ],
+      "supplementary": {
+        "label": {
+          "@none": ["OCR Article Text"]
+        },
+        "type": "AnnotationCollection",
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle14.json"
+      }
+    }
+  ],
+  "type": "Manifest",
+  "id": "http://dams.llgc.org.uk/iiif/newspaper/issue/3320640/manifest.json",
+  "partOf": [
+    {
+      "id": "http://dams.llgc.org.uk/iiif/newspapers/3320639.json",
+      "type": "Collection"
+    }
+  ],
+  "items": [
+    {
+      "label": {
+        "@none": ["[1]"]
+      },
+      "height": 7905,
+      "width": 5826,
+      "type": "Canvas",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320641",
+      "annotations": [
+        {
+          "label": {
+            "@none": ["TO THE PUBLIC."]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320641/annotation/list/ART1.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle1.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["Advertising"]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320641/annotation/list/ART2.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle2.json"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/3320641.json",
+              "target": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320641",
+              "body": {
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "height": 7905,
+                    "width": 5826,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "scaleFactors": [1, 2, 4, 8, 16, 32]
+                      }
+                    ],
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320641",
+                    "type": "ImageService2"
+                  }
+                ],
+                "height": 7905,
+                "width": 5826,
+                "type": "Image",
+                "id": "http://dams.llgc.org.uk/iiif/2.0/3320641/image/full/512,/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/d3be76ef-08c2-4785-af95-9fbdfe9f51c4"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["[2]"]
+      },
+      "height": 7905,
+      "width": 5826,
+      "type": "Canvas",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320642",
+      "annotations": [
+        {
+          "label": {
+            "@none": ["LONDON."]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320642/annotation/list/ART3.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle3.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["Advertising"]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320642/annotation/list/ART4.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle4.json"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/3320642.json",
+              "target": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320642",
+              "body": {
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "height": 7905,
+                    "width": 5826,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "scaleFactors": [1, 2, 4, 8, 16, 32]
+                      }
+                    ],
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320642",
+                    "type": "ImageService2"
+                  }
+                ],
+                "height": 7905,
+                "width": 5826,
+                "type": "Image",
+                "id": "http://dams.llgc.org.uk/iiif/2.0/3320642/image/full/512,/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/9cf25dca-c464-4aad-b2d2-93bd48c5c592"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["[3]"]
+      },
+      "height": 7905,
+      "width": 5826,
+      "type": "Canvas",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643",
+      "annotations": [
+        {
+          "label": {
+            "@none": ["-THE -"]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320643/annotation/list/ART5.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle5.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["Family Notices"]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320643/annotation/list/ART6.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle6.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["HIGH WATER ON SWANSEA BAR"]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320643/annotation/list/ART7.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle7.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["TO CORRESPONDENTS."]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320643/annotation/list/ART8.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle8.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["COUNTRY MARKETS. I"]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320643/annotation/list/ART9.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle9.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["Advertising"]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320643/annotation/list/ART10.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle10.json"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/3320643.json",
+              "target": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643",
+              "body": {
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "height": 7905,
+                    "width": 5826,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "scaleFactors": [1, 2, 4, 8, 16, 32]
+                      }
+                    ],
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320643",
+                    "type": "ImageService2"
+                  }
+                ],
+                "height": 7905,
+                "width": 5826,
+                "type": "Image",
+                "id": "http://dams.llgc.org.uk/iiif/2.0/3320643/image/full/512,/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/3ac0e970-0982-47a4-8c15-58e96fea5b61"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["[4]"]
+      },
+      "height": 7905,
+      "width": 5826,
+      "type": "Canvas",
+      "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644",
+      "annotations": [
+        {
+          "label": {
+            "@none": ["ODE FOR THE NEW YEAR."]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320644/annotation/list/ART11.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle11.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["THE CURATE.—A FRAGMENT."]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320644/annotation/list/ART12.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle12.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["VOLUNTEERS.\""]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320644/annotation/list/ART13.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle13.json"
+            }
+          ]
+        },
+        {
+          "label": {
+            "@none": ["Advertising"]
+          },
+          "type": "AnnotationPage",
+          "id": "http://dams.llgc.org.uk/iiif/3320644/annotation/list/ART14.json",
+          "partOf": [
+            {
+              "label": {
+                "@none": ["OCR Article Text"]
+              },
+              "type": "AnnotationCollection",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle14.json"
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/3320644.json",
+              "target": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644",
+              "body": {
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "height": 7905,
+                    "width": 5826,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "scaleFactors": [1, 2, 4, 8, 16, 32]
+                      }
+                    ],
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320644",
+                    "type": "ImageService2"
+                  }
+                ],
+                "height": 7905,
+                "width": 5826,
+                "type": "Image",
+                "id": "http://dams.llgc.org.uk/iiif/2.0/3320644/image/full/512,/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/86e66f91-8c5e-4754-82f7-94ddfc168c97"
+        }
+      ]
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}

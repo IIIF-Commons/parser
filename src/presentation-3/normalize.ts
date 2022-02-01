@@ -1,4 +1,4 @@
-import { Traverse } from './traverse';
+import { Traverse } from "./traverse";
 import {
   Annotation,
   AnnotationPage,
@@ -13,10 +13,16 @@ import {
   Range,
   Reference,
   PolyEntity,
-} from '@iiif/presentation-3';
-import { emptyCollection, emptyAnnotationPage, emptyCanvas, emptyManifest, emptyRange } from './empty-types';
-import { convertPresentation2 } from '../presentation-2';
-import {NormalizedEntity} from "./serialize";
+} from "@iiif/presentation-3";
+import {
+  emptyCollection,
+  emptyAnnotationPage,
+  emptyCanvas,
+  emptyManifest,
+  emptyRange,
+} from "./empty-types";
+import { convertPresentation2 } from "../presentation-2";
+import { NormalizedEntity } from "./serialize";
 
 export const defaultEntities = {
   Collection: {},
@@ -47,7 +53,7 @@ export function getDefaultEntities() {
 }
 
 function getResource(entityOrString: PolyEntity, type: string): Reference {
-  if (typeof entityOrString === 'string') {
+  if (typeof entityOrString === "string") {
     return { id: entityOrString, type };
   }
   if (!entityOrString.id) {
@@ -56,8 +62,13 @@ function getResource(entityOrString: PolyEntity, type: string): Reference {
   return entityOrString as Reference;
 }
 
-function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>>) {
-  return <T extends Reference | string>(type: string, defaultStringType?: string) => {
+function mapToEntities(
+  entities: Record<string, Record<string, NormalizedEntity>>
+) {
+  return <T extends Reference | string>(
+    type: string,
+    defaultStringType?: string
+  ) => {
     const storeType = entities[type] ? entities[type] : {};
     return (r: T): T => {
       const resource = getResource(r, defaultStringType || type);
@@ -65,7 +76,10 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
         storeType[resource.id] = storeType[resource.id]
           ? (Object.assign({}, storeType[resource.id], resource) as any)
           : Object.assign({}, resource);
-        return { id: resource.id, type: type === 'ContentResource' ? type : resource.type } as T;
+        return {
+          id: resource.id,
+          type: type === "ContentResource" ? type : resource.type,
+        } as T;
       }
       return resource as T;
     };
@@ -73,13 +87,16 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
 }
 
 function recordTypeInMapping(mapping: Record<string, string>) {
-  return <T extends Reference | string>(type: string, defaultStringType?: string) => {
+  return <T extends Reference | string>(
+    type: string,
+    defaultStringType?: string
+  ) => {
     return (r: T): T => {
       const { id, type: foundType } = getResource(r, defaultStringType || type);
-      if (typeof id === 'undefined') {
-        throw new Error('Found invalid entity without an ID.');
+      if (typeof id === "undefined") {
+        throw new Error("Found invalid entity without an ID.");
       }
-      if (type === 'ContentResource') {
+      if (type === "ContentResource") {
         mapping[id] = type;
       } else {
         mapping[id] = foundType as any;
@@ -107,14 +124,16 @@ function hash(object: any): string {
 
   const hexString = num.toString(16);
   if (hexString.length % 2) {
-    return '0' + hexString;
+    return "0" + hexString;
   }
   return hexString;
 }
 
-function addMissingIdToContentResource<T extends Partial<Reference>>(type: string) {
+function addMissingIdToContentResource<T extends Partial<Reference>>(
+  type: string
+) {
   return (resource: T | string): T => {
-    if (typeof resource === 'string') {
+    if (typeof resource === "string") {
       return { id: resource, type } as T;
     }
     if (!resource.id) {
@@ -176,45 +195,47 @@ export function normalize(unknownEntity: unknown) {
   const traversal = new Traverse({
     collection: [
       ensureDefaultFields<Collection, CollectionNormalized>(emptyCollection),
-      addToMapping<Collection>('Collection'),
-      addToEntities<Collection>('Collection'),
+      addToMapping<Collection>("Collection"),
+      addToEntities<Collection>("Collection"),
     ],
     manifest: [
       ensureDefaultFields<Manifest, ManifestNormalized>(emptyManifest),
-      addToMapping<Manifest>('Manifest'),
-      addToEntities<Manifest>('Manifest'),
+      addToMapping<Manifest>("Manifest"),
+      addToEntities<Manifest>("Manifest"),
     ],
     canvas: [
       ensureDefaultFields<Canvas, CanvasNormalized>(emptyCanvas),
-      addToMapping<Canvas>('Canvas'),
-      addToEntities<Canvas>('Canvas'),
+      addToMapping<Canvas>("Canvas"),
+      addToEntities<Canvas>("Canvas"),
     ],
     annotationPage: [
-      addMissingIdToContentResource('AnnotationPage'),
-      ensureDefaultFields<AnnotationPage, AnnotationPageNormalized>(emptyAnnotationPage),
-      addToMapping<AnnotationPage>('AnnotationPage'),
-      addToEntities<AnnotationPage>('AnnotationPage'),
+      addMissingIdToContentResource("AnnotationPage"),
+      ensureDefaultFields<AnnotationPage, AnnotationPageNormalized>(
+        emptyAnnotationPage
+      ),
+      addToMapping<AnnotationPage>("AnnotationPage"),
+      addToEntities<AnnotationPage>("AnnotationPage"),
     ],
     annotation: [
       // This won't be normalized before going into the state.
       // It will be normalized through selectors and pattern matching.
-      addMissingIdToContentResource('Annotation'),
+      addMissingIdToContentResource("Annotation"),
       ensureArrayOnAnnotation,
-      addToMapping<Annotation>('Annotation'),
-      addToEntities<Annotation>('Annotation'),
+      addToMapping<Annotation>("Annotation"),
+      addToEntities<Annotation>("Annotation"),
     ],
     contentResource: [
       // This won't be normalized before going into the state.
       // It will be normalized through selectors and pattern matching.
-      addMissingIdToContentResource<any>('ContentResource'),
-      addToMapping<any>('ContentResource'),
-      addToEntities<any>('ContentResource'),
+      addMissingIdToContentResource<any>("ContentResource"),
+      addToMapping<any>("ContentResource"),
+      addToEntities<any>("ContentResource"),
     ],
     range: [
       // This will add a LOT to the state, maybe this will be configurable down the line.
       ensureDefaultFields<Range, RangeNormalized>(emptyRange),
-      addToMapping<Range>('Range', 'Canvas'),
-      addToEntities<Range>('Range', 'Canvas'),
+      addToMapping<Range>("Range", "Canvas"),
+      addToEntities<Range>("Range", "Canvas"),
     ],
     // Remove this, content resources are NOT usually processed by this library.
     // They need to be available in full when they get passed down the chain.

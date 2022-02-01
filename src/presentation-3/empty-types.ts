@@ -5,11 +5,11 @@ import {
   CollectionNormalized,
   ManifestNormalized,
   RangeNormalized,
-} from '@iiif/presentation-3';
+} from "@iiif/presentation-3";
 
 export const emptyAnnotation: AnnotationNormalized = {
-  id: 'https://iiif-parser/annotation',
-  type: 'Annotation',
+  id: "https://iiif-parser/annotation",
+  type: "Annotation",
   behavior: [],
   label: null,
   thumbnail: [],
@@ -41,8 +41,8 @@ export const emptyAnnotation: AnnotationNormalized = {
 };
 
 export const emptyAnnotationPage: AnnotationPageNormalized = {
-  id: 'https://iiif-parser/annotation-page',
-  type: 'AnnotationPage',
+  id: "https://iiif-parser/annotation-page",
+  type: "AnnotationPage",
   behavior: [],
   motivation: null,
   label: null,
@@ -61,8 +61,8 @@ export const emptyAnnotationPage: AnnotationPageNormalized = {
 };
 
 export const emptyCanvas: CanvasNormalized = {
-  id: 'https://iiif-parser/empty-canvas',
-  type: 'Canvas',
+  id: "https://iiif-parser/empty-canvas",
+  type: "Canvas",
   label: null,
   behavior: [],
   motivation: null,
@@ -90,10 +90,10 @@ export const emptyCanvas: CanvasNormalized = {
 };
 
 export const emptyCollection: CollectionNormalized = {
-  id: 'https://iiif-parser/empty-collection',
-  type: 'Collection',
+  id: "https://iiif-parser/empty-collection",
+  type: "Collection",
   label: null,
-  viewingDirection: 'left-to-right',
+  viewingDirection: "left-to-right",
   behavior: [],
   motivation: null,
   thumbnail: [],
@@ -118,8 +118,8 @@ export const emptyCollection: CollectionNormalized = {
 };
 
 export const emptyManifest: ManifestNormalized = {
-  id: 'https://iiif-parser/empty-manifest',
-  type: 'Manifest',
+  id: "https://iiif-parser/empty-manifest",
+  type: "Manifest",
   annotations: [],
   behavior: [],
   homepage: null,
@@ -144,12 +144,12 @@ export const emptyManifest: ManifestNormalized = {
   structures: [],
   summary: null,
   thumbnail: [],
-  viewingDirection: 'left-to-right',
+  viewingDirection: "left-to-right",
 };
 
 export const emptyRange: RangeNormalized = {
-  id: 'https://iiif-parser/empty-canvas',
-  type: 'Range',
+  id: "https://iiif-parser/empty-canvas",
+  type: "Range",
   label: null,
   behavior: [],
   motivation: null,
@@ -173,5 +173,5 @@ export const emptyRange: RangeNormalized = {
   service: [],
   start: null,
   supplementary: null,
-  viewingDirection: 'left-to-right',
+  viewingDirection: "left-to-right",
 };

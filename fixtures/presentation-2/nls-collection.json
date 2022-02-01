@@ -1,0 +1,108 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://view.nls.uk/collections/7446/74462370.json",
+  "@type": "sc:Collection",
+  "label": "First World War 'Official Photographs'",
+  "manifests": [
+    {
+      "@id": "https://view.nls.uk/manifest/7517/75171407/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Ernest Brooks"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7517/75171408/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "John Warwick Brooke"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7517/75171409/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Tom Aitken"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7517/75171410/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "David McLellan"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75201623/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Photographs of Haig"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75201640/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "After the War"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75201641/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "British Western Front"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75201649/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Germans"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75201717/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Royal visits"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75206933/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Cavalry"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7517/75172459/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "French"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7517/75172559/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Canadian and Newfoundland"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75208534/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "South African"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75209726/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Chinese"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7520/75209781/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "American"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7521/75210000/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Australian and New Zealand"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7521/75210064/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Portuguese"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7521/75210218/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Belgian"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7521/75210267/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "East Indian"
+    },
+    {
+      "@id": "https://view.nls.uk/manifest/7521/75210287/manifest.json",
+      "@type": "sc:Manifest",
+      "label": "Other visitors"
+    }
+  ]
+}

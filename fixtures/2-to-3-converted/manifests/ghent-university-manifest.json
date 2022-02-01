@@ -1,0 +1,260 @@
+{
+  "metadata": [
+    {
+      "label": {
+        "@none": ["Record"]
+      },
+      "value": {
+        "@none": [
+          "<a href=\"https://lib.ugent.be/catalog/rug01%3A001484515/items/800000096237\">https://lib.ugent.be/catalog/rug01%3A001484515/items/800000096237</a>"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Title"]
+      },
+      "value": {
+        "@none": [
+          "[papyrus] Document uit het archief van de dichter Dioskoros van Aphrodite (?)."
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Description"]
+      },
+      "value": {
+        "@none": ["34 regels ; 29 x 72,5 cm."]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Description"]
+      },
+      "value": {
+        "@none": ["Papyrus"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Publisher"]
+      },
+      "value": {
+        "@none": ["537-538?"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Provenance"]
+      },
+      "value": {
+        "@none": ["BHSL.PAP.000044 Herkomst: Aphroditô"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Contents"]
+      },
+      "value": {
+        "@none": [
+          "Het document bevat een overeenkomst tussen een corporatie en haar leiders. De leden van de corporatie van jagers (en waarschijnlijk ook van vissers) gaan de verbintenis aan t.o.v. Flavius Hermauos en Flavius Dios, hen als hun chefs te erkennen voor de duu"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Object ID"]
+      },
+      "value": {
+        "@none": ["archive.ugent.be:4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Description"]
+      },
+      "value": {
+        "@none": [
+          "Het document bevat een overeenkomst tussen een corporatie en haar leiders. De leden van de corporatie van jagers (en waarschijnlijk ook van vissers) gaan de verbintenis aan t.o.v. Flavius Hermauos en Flavius Dios, hen als hun chefs te erkennen voor de duu"
+        ]
+      }
+    }
+  ],
+  "seeAlso": [
+    {
+      "dcterms:format": "application/marcxml+xml",
+      "type": "Dataset",
+      "id": "https://lib.ugent.be/catalog/rug01%3A001484515.marcxml"
+    }
+  ],
+  "logo": [
+    {
+      "id": "http://adore.ugent.be/IIIF/img/logo_i.svg",
+      "type": "Image"
+    }
+  ],
+  "label": {
+    "@none": [
+      "Document uit het archief van de dichter Dioskoros van Aphrodite (?)[manuscript]"
+    ]
+  },
+  "thumbnail": [
+    {
+      "type": "Image",
+      "id": "https://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/0,0,6215,15076/226,/0/default.jpg"
+    }
+  ],
+  "type": "Manifest",
+  "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
+  "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+  "requiredStatement": {
+    "label": {
+      "@none": ["Attribution"]
+    },
+    "value": {
+      "@none": ["Provided by Ghent University Library"]
+    }
+  },
+  "homepage": {
+    "format": "text/html",
+    "type": "Text",
+    "id": "https://lib.ugent.be/viewer/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"
+  },
+  "items": [
+    {
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/0,0,6215,15076/226,/0/default.jpg"
+        }
+      ],
+      "label": {
+        "@none": ["1"]
+      },
+      "height": 15076,
+      "width": 6215,
+      "rendering": [
+        {
+          "format": "image/jp2",
+          "label": {
+            "@none": ["Download as jpeg2000 (78.77 MB)"]
+          },
+          "type": "Image",
+          "id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1&svc_id=original"
+        }
+      ],
+      "type": "Canvas",
+      "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
+      "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+      "requiredStatement": {
+        "label": {
+          "@none": ["Attribution"]
+        },
+        "value": {
+          "@none": ["Provided by Ghent University Library"]
+        }
+      },
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1/image-annotations/0",
+              "target": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
+              "body": {
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1",
+                    "type": "ImageService2"
+                  }
+                ],
+                "height": 15076,
+                "label": {
+                  "@none": ["BHSL-PAP-000044_2010_0001_AC.jp2"]
+                },
+                "width": 6215,
+                "format": "image/jpeg",
+                "type": "Image",
+                "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/e68bf9f3-4544-4e31-a4cf-ef0810019f76"
+        }
+      ]
+    },
+    {
+      "label": {
+        "@none": ["2"]
+      },
+      "height": 15036,
+      "thumbnail": [
+        {
+          "type": "Image",
+          "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/0,0,6235,15036/226,/0/default.jpg"
+        }
+      ],
+      "rendering": [
+        {
+          "format": "image/jp2",
+          "label": {
+            "@none": ["Download as jpeg2000 (78.29 MB)"]
+          },
+          "type": "Image",
+          "id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3&svc_id=original"
+        }
+      ],
+      "width": 6235,
+      "type": "Canvas",
+      "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
+      "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+      "requiredStatement": {
+        "label": {
+          "@none": ["Attribution"]
+        },
+        "value": {
+          "@none": ["Provided by Ghent University Library"]
+        }
+      },
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3/image-annotations/0",
+              "target": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
+              "body": {
+                "label": {
+                  "@none": ["BHSL-PAP-000044_2010_0002_AC.jp2"]
+                },
+                "height": 15036,
+                "width": 6235,
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3",
+                    "type": "ImageService2"
+                  }
+                ],
+                "type": "Image",
+                "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/full/full/0/native.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/edb590d9-43f7-4e52-b2e8-17112e87843b"
+        }
+      ]
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}

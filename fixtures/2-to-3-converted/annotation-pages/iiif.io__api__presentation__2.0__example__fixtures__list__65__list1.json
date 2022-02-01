@@ -1,0 +1,36 @@
+{
+  "label": {
+    "@none": ["Test 65 List 1"]
+  },
+  "type": "AnnotationPage",
+  "id": "http://iiif.io/api/presentation/2.0/example/fixtures/list/65/list1.json",
+  "items": [
+    {
+      "motivation": "painting",
+      "type": "Annotation",
+      "id": "https://example.org/uuid/12badf4b-9e14-4076-a63b-cb5fb4cc2e22",
+      "target": {
+        "selector": {
+          "value": "xywh=225,70,750,150",
+          "type": "FragmentSelector"
+        },
+        "type": "SpecificResource",
+        "source": {
+          "label": {
+            "@none": ["Test 65 Canvas: 1"]
+          },
+          "type": "Canvas",
+          "id": "http://iiif.io/api/presentation/2.0/example/fixtures/canvas/65/c1.json"
+        }
+      },
+      "body": {
+        "type": "TextualBody",
+        "value": "Top of First Page to Display"
+      }
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}

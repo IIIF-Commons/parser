@@ -1,0 +1,316 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "manifest.json",
+  "@type": "sc:Manifest",
+  "label": "Thumbnail tests",
+  "sequences": [
+    {
+      "@id": "sequence0",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@id": "http://wellcomelibrary.org/iiif/b21068811/canvas/c6",
+          "@type": "sc:Canvas",
+          "label": "1. Sizes A",
+          "description": "Portrait aspect canvas. The canvas has a thumbnail resource, and the thumbnail resource has a level0 image service with inline sizes",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/af0634e1-cf36-4290-b7bd-a7ed8699f42d/full/62,100/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/af0634e1-cf36-4290-b7bd-a7ed8699f42d",
+              "protocol": "http://iiif.io/api/image",
+              "height": 1024,
+              "width": 630,
+              "sizes": [
+                {
+                  "width": 62,
+                  "height": 100
+                },
+                {
+                  "width": 123,
+                  "height": 200
+                },
+                {
+                  "width": 246,
+                  "height": 400
+                },
+                {
+                  "width": 630,
+                  "height": 1024
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 3626,
+          "width": 2231,
+          "images": [
+            {
+              "@id": "http://wellcomelibrary.org/iiif/b21068811/imageanno/af0634e1-cf36-4290-b7bd-a7ed8699f42d",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/af0634e1-cf36-4290-b7bd-a7ed8699f42d/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 630,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/af0634e1-cf36-4290-b7bd-a7ed8699f42d",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "http://wellcomelibrary.org/iiif/b21068811/canvas/c6"
+            }
+          ]
+        },
+        {
+          "@id": "http://wellcomelibrary.org/iiif/b21522431/canvas/c46",
+          "@type": "sc:Canvas",
+          "label": "2. Sizes B",
+          "description": "Landscape aspect canvas. The canvas has a thumbnail resource, and the thumbnail resource has a level0 image service with inline sizes. getThumbnail(..) will use one of these sizes if it can.",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/0791d344-2716-463f-b21f-cf38ef3d5592/full/100,38/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/0791d344-2716-463f-b21f-cf38ef3d5592",
+              "protocol": "http://iiif.io/api/image",
+              "height": 392,
+              "width": 1024,
+              "sizes": [
+                {
+                  "width": 100,
+                  "height": 38
+                },
+                {
+                  "width": 200,
+                  "height": 77
+                },
+                {
+                  "width": 400,
+                  "height": 153
+                },
+                {
+                  "width": 1024,
+                  "height": 392
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 2110,
+          "width": 5516,
+          "images": [
+            {
+              "@id": "http://wellcomelibrary.org/iiif/b21522431/imageanno/0791d344-2716-463f-b21f-cf38ef3d5592",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/0791d344-2716-463f-b21f-cf38ef3d5592/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 392,
+                "width": 1024,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/0791d344-2716-463f-b21f-cf38ef3d5592",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "http://wellcomelibrary.org/iiif/b21522431/canvas/c46"
+            }
+          ]
+        },
+        {
+          "@id": "http://wellcomelibrary.org/iiif/b14658197/canvas/c00",
+          "@type": "sc:Canvas",
+          "label": "3. Sizes C",
+          "description": "Landscape aspect canvas. The canvas has a thumbnail resource, and the thumbnail resource has a level0 image service with inline sizes. getThumbnail(..) will use one of these sizes if it can.",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/8ac70935-b55b-4c6f-89ca-33e6ab9bb161/full/100,62/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://dlcs.io/thumbs/wellcome/1/8ac70935-b55b-4c6f-89ca-33e6ab9bb161",
+              "protocol": "http://iiif.io/api/image",
+              "height": 631,
+              "width": 1024,
+              "sizes": [
+                {
+                  "width": 100,
+                  "height": 62
+                },
+                {
+                  "width": 200,
+                  "height": 123
+                },
+                {
+                  "width": 400,
+                  "height": 246
+                },
+                {
+                  "width": 1024,
+                  "height": 631
+                }
+              ],
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json"
+              ]
+            }
+          },
+          "height": 3294,
+          "width": 5346,
+          "images": [
+            {
+              "@id": "http://wellcomelibrary.org/iiif/b14658197/imageanno/8ac70935-b55b-4c6f-89ca-33e6ab9bb161",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/8ac70935-b55b-4c6f-89ca-33e6ab9bb161/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 631,
+                "width": 1024,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/8ac70935-b55b-4c6f-89ca-33e6ab9bb161",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "http://wellcomelibrary.org/iiif/b14658197/canvas/c0"
+            }
+          ]
+        },
+        {
+          "@id": "http://wellcomelibrary.org/iiif/b14658197/canvas/c1",
+          "@type": "sc:Canvas",
+          "label": "4. Single thumbnail with dimensions",
+          "description": "The canvas has a thumbnail property, and it's an image resource with a height and width. There is no image service on the thumbnail.getThumbnail(..) will use this image resource if it is between min and max.",
+          "thumbnail": {
+            "@id": "https://dlcs.io/thumbs/wellcome/1/8ac70935-b55b-4c6f-89ca-33e6ab9bb161/full/100,62/0/default.jpg",
+            "@type": "dctypes:Image",
+            "width": 100,
+            "height": 62
+          },
+          "height": 3294,
+          "width": 5346,
+          "images": [
+            {
+              "@id": "http://wellcomelibrary.org/iiif/b14658197/imageanno/8ac70935-b55b-4c6f-89ca-33e6ab9bb161",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlcs.io/iiif-img/wellcome/1/8ac70935-b55b-4c6f-89ca-33e6ab9bb161/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 631,
+                "width": 1024,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://dlcs.io/iiif-img/wellcome/1/8ac70935-b55b-4c6f-89ca-33e6ab9bb161",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "http://wellcomelibrary.org/iiif/b14658197/canvas/c0"
+            }
+          ]
+        },
+        {
+          "@id": "https://view.nls.uk/iiif/7446/74464117/canvas/1",
+          "@type": "sc:Canvas",
+          "height": 1868,
+          "images": [
+            {
+              "@id": "https://view.nls.uk/iiif/7443/74438561.5/annotation",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "https://view.nls.uk/iiif/7446/74464117/canvas/1",
+              "resource": {
+                "@id": "https://view.nls.uk/iiif/7443/74438561.5/full/full/0/native.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 1868,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://view.nls.uk/iiif/7443/74438561.5",
+                  "profile": "http://iiif.io/api/image/2/profiles/level2.json"
+                },
+                "width": 2500
+              }
+            }
+          ],
+          "label": "1",
+          "thumbnail": {
+            "@id": "https://deriv.nls.uk/dcn4/7443/74438561.4.jpg",
+            "@type": "dctypes:Image",
+            "height": 113,
+            "width": 150
+          },
+          "width": 2500
+        },
+        {
+          "@id": "http://manifests.desmm.yale.edu/canvas/a88288c6-06e5-40bb-a832-c6e74a89b60b",
+          "@type": "sc:Canvas",
+          "height": 6299,
+          "images": [
+            {
+              "@id": "http://manifests.desmm.yale.edu/annotation/78f8d7bb-e15d-48fd-9fd8-71e7f82aae02",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "http://manifests.desmm.yale.edu/canvas/a88288c6-06e5-40bb-a832-c6e74a89b60b",
+              "resource": {
+                "@id": "https://images.desmm.yale.edu/iiif/2/desmm:78f8d7bb-e15d-48fd-9fd8-71e7f82aae02.jp2/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 6299,
+                "label": "1",
+                "service": {
+                  "@id": "https://images.desmm.yale.edu/iiif/2/desmm:78f8d7bb-e15d-48fd-9fd8-71e7f82aae02.jp2",
+                  "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                  "@context": "http://iiif.io/api/image/2/context.json"
+                },
+                "width": 4800
+              }
+            }
+          ],
+          "label": "1",
+          "width": 4800
+        },
+        {
+          "@id": "https://purl.stanford.edu/bb475kg5932/iiif/canvas/image_1",
+          "@type": "sc:Canvas",
+          "label": "1",
+          "height": 2459,
+          "width": 1715,
+          "images": [
+            {
+              "@id": "https://purl.stanford.edu/bb475kg5932/iiif/annotation/image_1",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://stacks.stanford.edu/image/iiif/bb475kg5932%2Fbb475kg5932_05_0001/full/full/0/default.jpg",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 2459,
+                "width": 1715,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://stacks.stanford.edu/image/iiif/bb475kg5932%2Fbb475kg5932_05_0001",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://purl.stanford.edu/bb475kg5932/iiif/canvas/image_1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

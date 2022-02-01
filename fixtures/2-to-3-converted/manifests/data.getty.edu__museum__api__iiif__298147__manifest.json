@@ -1,0 +1,187 @@
+{
+  "label": {
+    "@none": [
+      "La Surprise (1718–1719), Jean-Antoine Watteau (French, 1684 - 1721)"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "@none": ["Artist / Maker"]
+      },
+      "value": {
+        "@none": ["Jean-Antoine Watteau (French, 1684 - 1721)"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Culture & Date"]
+      },
+      "value": {
+        "@none": ["French, 1718–1719"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Medium"]
+      },
+      "value": {
+        "@none": ["Oil on panel"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Dimensions"]
+      },
+      "value": {
+        "@none": ["36.4 × 28.2 cm (14 5/16 × 11 1/8 in.)"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Object Number"]
+      },
+      "value": {
+        "@none": ["2017.72"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Object Type"]
+      },
+      "value": {
+        "@none": ["Painting"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Place Created"]
+      },
+      "value": {
+        "@none": ["France"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Collection"]
+      },
+      "value": {
+        "@none": [
+          "<a href='http://www.getty.edu/art/collection/' target='_blank'>The J. Paul Getty Museum</a>"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Rights Statement"]
+      },
+      "value": {
+        "@none": [
+          "<div>Images provided here are believed to be in the public domain and are made available under the terms of the Getty's <nobr><a href='http://www.getty.edu/about/opencontent.html'>Open Content Program</a></nobr>. Texts provided here are © J. Paul Getty Trust, licensed under <a href='https://creativecommons.org/licenses/by/4.0/legalcode/' taget='_target'>CC BY 4.0</a>. Terms of use for the Getty logo can be found <a href='http://www.getty.edu/legal/copyright.html#logo' target='_blank'>here</a>.</div>"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Rights/License"]
+      },
+      "value": {
+        "@none": ["http://www.getty.edu/legal/copyright.html#oc"]
+      }
+    },
+    {
+      "label": {
+        "@none": ["Description"]
+      },
+      "value": {
+        "@none": [
+          "In a verdant park at sunset, a young woman abandons herself to her tousle-haired companion’s ardent embrace. Coiled up in a pose of centrifugal energy, the impulsive lovers are oblivious to the third figure: Mezzetin, sitting on the same rocky outcrop. Drawn from the theatrical tradition of the commedia dell’arte, this character represents a poignant foil to the couple’s unbridled passion. Introverted and with a melancholy air, he tunes his guitar, knowing that his serenading will mean nothing to the lovers and serve only to heighten his own sense of lonely longing as he gazes upon them. His costume, a rose-coloured jacket and knee-britches slashed with yellow and adorned with blue ribbons as well as a lace ruff and cuffs, is reminiscent of the paintings of Anthony van Dyck. The small dog at lower right, a quotation from Rubens, watches the couple with considerably more appreciation than Mezzetin can muster."
+        ]
+      }
+    }
+  ],
+  "thumbnail": [
+    {
+      "id": "https://data.getty.edu/museum/api/iiif/633385/full/231,300/0/default.jpg",
+      "type": "Image"
+    }
+  ],
+  "viewingDirection": "left-to-right",
+  "logo": [
+    {
+      "id": "http://www.getty.edu/museum/media/graphics/web/logos/getty-logo.png",
+      "type": "Image"
+    }
+  ],
+  "type": "Manifest",
+  "id": "https://data.getty.edu/museum/api/iiif/298147/manifest.json",
+  "requiredStatement": {
+    "label": {
+      "@none": ["Attribution"]
+    },
+    "value": {
+      "@none": [
+        "Digital image courtesy of the Getty's <a href='http://www.getty.edu/about/opencontent.html' target='_blank'>Open Content Program</a>."
+      ]
+    }
+  },
+  "homepage": {
+    "id": "https://www.getty.edu/art/collection/objects/298147/jean-antoine-watteau-la-surprise-french-1718-1719/",
+    "type": "Text"
+  },
+  "partOf": [
+    {
+      "id": "http://www.getty.edu/art/collection/",
+      "type": "Collection"
+    }
+  ],
+  "items": [
+    {
+      "label": {
+        "@none": ["Main Image"]
+      },
+      "width": 4937,
+      "height": 6406,
+      "thumbnail": [
+        {
+          "id": "https://data.getty.edu/museum/api/iiif/633385/full/231,300/0/default.jpg",
+          "type": "Image"
+        }
+      ],
+      "type": "Canvas",
+      "id": "https://data.getty.edu/museum/api/iiif/298147/canvas/main",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "id": "https://data.getty.edu/museum/api/iiif/298147/annotation/main-image",
+              "target": "https://data.getty.edu/museum/api/iiif/298147/canvas/main",
+              "body": {
+                "format": "image/jpeg",
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level0.json",
+                    "id": "https://data.getty.edu/museum/api/iiif/633385",
+                    "type": "ImageService2"
+                  }
+                ],
+                "width": 789,
+                "height": 1024,
+                "type": "Image",
+                "id": "https://data.getty.edu/museum/api/iiif/633385/full/789,1024/0/default.jpg"
+              }
+            }
+          ],
+          "id": "https://example.org/uuid/7817ebfa-5c4b-4dc6-8af9-8dd6043ed31a"
+        }
+      ]
+    }
+  ],
+  "@context": [
+    "http://www.w3.org/ns/anno.jsonld",
+    "http://iiif.io/api/presentation/3/context.json"
+  ]
+}
