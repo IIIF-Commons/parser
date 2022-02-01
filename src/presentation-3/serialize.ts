@@ -1,4 +1,5 @@
 import {
+  AnnotationCollection,
   AnnotationCollectionNormalized,
   AnnotationNormalized,
   AnnotationPageNormalized,
@@ -7,14 +8,13 @@ import {
   ContentResource,
   ManifestNormalized,
   RangeNormalized,
-  ServiceNormalized,
-  Selector,
   Reference,
-  AnnotationCollection,
-} from "@iiif/presentation-3";
+  Selector,
+  ServiceNormalized,
+} from '@iiif/presentation-3';
 
-export const UNSET = "__$UNSET$__";
-export const UNWRAP = "__$UNWRAP$__";
+export const UNSET = '__$UNSET$__';
+export const UNWRAP = '__$UNWRAP$__';
 
 export type Field = any[];
 
@@ -63,19 +63,11 @@ export type SerializeConfig = {
   Selector?: Serializer<Selector>;
 };
 
-function resolveIfExists<T extends NormalizedEntity>(
-  state: CompatibleStore,
-  url: string
-): T | undefined {
+function resolveIfExists<T extends NormalizedEntity>(state: CompatibleStore, url: string): T | undefined {
   const request = state.requests[url];
   // Return the resource.
   const resourceType = state.mapping[url];
-  if (
-    !resourceType ||
-    (request &&
-      request.resourceUri &&
-      !state.entities[resourceType][request.resourceUri])
-  ) {
+  if (!resourceType || (request && request.resourceUri && !state.entities[resourceType][request.resourceUri])) {
     // Continue refetching resource, this is an invalid state.
     return undefined;
   }
@@ -89,7 +81,7 @@ export function serializedFieldsToObject<T>(fields: Field[] | [string]): T {
     if (key === UNWRAP) {
       return value as T;
     }
-    if (value !== UNSET && typeof value !== "undefined" && value !== null) {
+    if (value !== UNSET && typeof value !== 'undefined' && value !== null) {
       object[key] = value;
     }
   }
@@ -97,13 +89,9 @@ export function serializedFieldsToObject<T>(fields: Field[] | [string]): T {
   return object as T;
 }
 
-export function serialize<Return>(
-  state: CompatibleStore,
-  subject: Reference,
-  config: SerializeConfig
-): Return {
+export function serialize<Return>(state: CompatibleStore, subject: Reference, config: SerializeConfig): Return {
   if (!subject.type || !subject.id) {
-    throw new Error("Unknown entity");
+    throw new Error('Unknown entity');
   }
 
   if (!config[subject.type as keyof SerializeConfig]) {

@@ -1,9 +1,9 @@
-import { normalize } from "../../src/presentation-3";
+import { normalize } from '../../src/presentation-3';
 
-import manifestFixture from "../../fixtures/2-to-3-converted/manifests/iiif.io__api__presentation__2.1__example__fixtures__1__manifest.json";
+import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__api__presentation__2.1__example__fixtures__1__manifest.json';
 
-describe("normalize", () => {
-  test("normalize simple manifest", () => {
+describe('normalize', () => {
+  test('normalize simple manifest', () => {
     const db = normalize(manifestFixture);
 
     expect(db.mapping).toMatchInlineSnapshot(`
@@ -18,39 +18,36 @@ describe("normalize", () => {
     `);
   });
 
-  test("normalize", () => {
+  test('normalize', () => {
     const manifest = () => ({
-      "@context": [
-        "http://www.w3.org/ns/anno.jsonld",
-        "http://iiif.io/api/presentation/{{ page.major }}/context.json",
-      ],
-      id: "https://example.org/iiif/book1/manifest",
-      type: "Manifest",
-      label: { en: ["Image 1"] },
-      homepage: { id: "http://myhomepage.com" },
+      '@context': ['http://www.w3.org/ns/anno.jsonld', 'http://iiif.io/api/presentation/{{ page.major }}/context.json'],
+      id: 'https://example.org/iiif/book1/manifest',
+      type: 'Manifest',
+      label: { en: ['Image 1'] },
+      homepage: { id: 'http://myhomepage.com' },
       items: [
         {
-          id: "https://example.org/iiif/book1/canvas/p1",
-          type: "Canvas",
+          id: 'https://example.org/iiif/book1/canvas/p1',
+          type: 'Canvas',
           height: 1800,
           width: 1200,
           items: [
             {
-              id: "https://example.org/iiif/book1/page/p1/1",
-              type: "AnnotationPage",
+              id: 'https://example.org/iiif/book1/page/p1/1',
+              type: 'AnnotationPage',
               items: [
                 {
-                  id: "https://example.org/iiif/book1/annotation/p0001-image",
-                  type: "Annotation",
-                  motivation: "painting",
+                  id: 'https://example.org/iiif/book1/annotation/p0001-image',
+                  type: 'Annotation',
+                  motivation: 'painting',
                   body: {
-                    id: "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
-                    type: "Image",
-                    format: "image/png",
+                    id: 'http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png',
+                    type: 'Image',
+                    format: 'image/png',
                     height: 1800,
                     width: 1200,
                   },
-                  target: "https://example.org/iiif/book1/canvas/p1",
+                  target: 'https://example.org/iiif/book1/canvas/p1',
                 },
               ],
             },
@@ -64,18 +61,17 @@ describe("normalize", () => {
     expect(result.entities).toMatchSnapshot();
 
     expect(result.mapping).toEqual({
-      "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png":
-        "ContentResource",
-      "http://myhomepage.com": "ContentResource",
-      "https://example.org/iiif/book1/annotation/p0001-image": "Annotation",
-      "https://example.org/iiif/book1/canvas/p1": "Canvas",
-      "https://example.org/iiif/book1/manifest": "Manifest",
-      "https://example.org/iiif/book1/page/p1/1": "AnnotationPage",
+      'http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png': 'ContentResource',
+      'http://myhomepage.com': 'ContentResource',
+      'https://example.org/iiif/book1/annotation/p0001-image': 'Annotation',
+      'https://example.org/iiif/book1/canvas/p1': 'Canvas',
+      'https://example.org/iiif/book1/manifest': 'Manifest',
+      'https://example.org/iiif/book1/page/p1/1': 'AnnotationPage',
     });
 
     expect(result.resource).toEqual({
-      id: "https://example.org/iiif/book1/manifest",
-      type: "Manifest",
+      id: 'https://example.org/iiif/book1/manifest',
+      type: 'Manifest',
     });
   });
 });

@@ -1,36 +1,26 @@
-import { SerializeConfig, UNWRAP } from "./serialize";
+import { SerializeConfig, UNWRAP } from './serialize';
 import {
-  TechnicalProperties,
   DescriptiveNormalized,
-  LinkingNormalized,
-  ImageService3,
   ImageService2,
-} from "@iiif/presentation-3";
+  ImageService3,
+  LinkingNormalized,
+  TechnicalProperties,
+} from '@iiif/presentation-3';
 
-function technicalProperties(
-  entity: Partial<TechnicalProperties>
-): Array<[keyof TechnicalProperties, any]> {
+function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
   return [
     // Technical
-    ["id", entity.id],
-    ["type", entity.type],
-    ["format", entity.format],
-    ["profile", entity.profile],
-    ["height", entity.height],
-    ["width", entity.width],
-    ["duration", entity.duration || undefined],
-    [
-      "viewingDirection",
-      entity.viewingDirection !== "left-to-right"
-        ? entity.viewingDirection
-        : undefined,
-    ],
-    [
-      "behavior",
-      entity.behavior && entity.behavior.length ? entity.behavior : undefined,
-    ],
-    ["timeMode", entity.timeMode],
-    ["motivation", entity.motivation],
+    ['id', entity.id],
+    ['type', entity.type],
+    ['format', entity.format],
+    ['profile', entity.profile],
+    ['height', entity.height],
+    ['width', entity.width],
+    ['duration', entity.duration || undefined],
+    ['viewingDirection', entity.viewingDirection !== 'left-to-right' ? entity.viewingDirection : undefined],
+    ['behavior', entity.behavior && entity.behavior.length ? entity.behavior : undefined],
+    ['timeMode', entity.timeMode],
+    ['motivation', entity.motivation],
   ];
 }
 
@@ -42,14 +32,12 @@ function filterEmpty<T>(item?: T[]): T[] | undefined {
 }
 
 function service2compat(service: ImageService3): ImageService2 | ImageService3 {
-  if (service && service.type && service.type === "ImageService2") {
+  if (service && service.type && service.type === 'ImageService2') {
     const { id, type, profile, ..._service } = service;
     return {
-      "@id": id,
-      "@type": type,
-      profile: profile.startsWith("http")
-        ? profile
-        : `http://iiif.io/api/image/2/${profile}.json`,
+      '@id': id,
+      '@type': type,
+      profile: profile.startsWith('http') ? profile : `http://iiif.io/api/image/2/${profile}.json`,
       ..._service,
     } as any;
   }
@@ -69,20 +57,20 @@ function* descriptiveProperties(
   entity: Partial<DescriptiveNormalized>
 ): Generator<any, any, Array<[keyof DescriptiveNormalized, any]>> {
   return [
-    ["label", entity.label],
-    ["metadata", filterEmpty(entity.metadata)],
-    ["summary", entity.summary],
-    ["requiredStatement", entity.requiredStatement],
-    ["rights", entity.rights],
-    ["navDate", entity.navDate],
-    ["language", entity.language],
+    ['label', entity.label],
+    ['metadata', filterEmpty(entity.metadata)],
+    ['summary', entity.summary],
+    ['requiredStatement', entity.requiredStatement],
+    ['rights', entity.rights],
+    ['navDate', entity.navDate],
+    ['language', entity.language],
     // We yield these fully as they are embedded in here.
-    ["thumbnail", filterEmpty(yield entity.thumbnail)],
-    ["placeholderCanvas", yield entity.placeholderCanvas],
-    ["accompanyingCanvas", yield entity.accompanyingCanvas],
+    ['thumbnail', filterEmpty(yield entity.thumbnail)],
+    ['placeholderCanvas', yield entity.placeholderCanvas],
+    ['accompanyingCanvas', yield entity.accompanyingCanvas],
 
     // @todo need to test this one.
-    ["provider", filterEmpty(entity.provider)],
+    ['provider', filterEmpty(entity.provider)],
   ];
 }
 
@@ -90,15 +78,15 @@ function* linkingProperties(
   entity: Partial<LinkingNormalized>
 ): Generator<any, any, Array<[keyof LinkingNormalized, any]>> {
   return [
-    ["seeAlso", filterEmpty(yield entity.seeAlso)],
-    ["service", filterService2Compat(entity.service)],
-    ["services", filterService2Compat(entity.services)],
-    ["rendering", filterEmpty(yield entity.rendering)],
-    ["supplementary", filterEmpty(yield entity.supplementary)],
+    ['seeAlso', filterEmpty(yield entity.seeAlso)],
+    ['service', filterService2Compat(entity.service)],
+    ['services', filterService2Compat(entity.services)],
+    ['rendering', filterEmpty(yield entity.rendering)],
+    ['supplementary', filterEmpty(yield entity.supplementary)],
 
     // Don't yield these, they are references.
-    ["partOf", filterEmpty(entity.partOf)],
-    ["start", entity.start],
+    ['partOf', filterEmpty(entity.partOf)],
+    ['start', entity.start],
   ];
 }
 
@@ -108,8 +96,8 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ["items", yield entity.items],
-      ["structures", filterEmpty(yield entity.structures)],
+      ['items', yield entity.items],
+      ['structures', filterEmpty(yield entity.structures)],
     ];
   },
 
@@ -119,8 +107,8 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ["items", yield entity.items],
-      ["annotations", filterEmpty(yield entity.annotations)],
+      ['items', yield entity.items],
+      ['annotations', filterEmpty(yield entity.annotations)],
     ];
   },
 
@@ -130,14 +118,14 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key, value]) => {
-        return key !== "items";
+        return key !== 'items';
       });
 
     return [
       // Any more properties?
       ...entries,
       ...(yield* linkingProperties(entity)),
-      ["items", yield entity.items],
+      ['items', yield entity.items],
     ];
   },
 
@@ -152,10 +140,10 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key]) => {
-        return key !== "body";
+        return key !== 'body';
       });
 
-    return [...entries, ["body", yield entity.body]];
+    return [...entries, ['body', yield entity.body]];
   },
 
   ContentResource: function* (entity: any) {
@@ -170,9 +158,9 @@ export const serializeConfigPresentation3: SerializeConfig = {
   AnnotationCollection: function* (entity) {
     return [
       // @todo expand properties if they are actually used.
-      ["id", entity.id],
-      ["type", "AnnotationCollection"],
-      ["label", entity.label],
+      ['id', entity.id],
+      ['type', 'AnnotationCollection'],
+      ['label', entity.label],
     ];
   },
 
@@ -181,7 +169,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ["items", yield* entity.items],
+      ['items', yield* entity.items],
     ];
   },
 
@@ -189,7 +177,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     const rangeItems = [];
 
     for (const item of entity.items) {
-      if (item.type === "Range") {
+      if (item.type === 'Range') {
         // Resolve the full range
         rangeItems.push(yield item);
       } else {
@@ -203,8 +191,8 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ["items", rangeItems],
-      ["annotations", filterEmpty(yield entity.annotations)],
+      ['items', rangeItems],
+      ['annotations', filterEmpty(yield entity.annotations)],
     ];
   },
 };

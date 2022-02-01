@@ -1,26 +1,26 @@
-import iiifManifest from "../../fixtures/presentation-2/iiif-fixture-manifest.json";
-import iiifManifest2 from "../../fixtures/presentation-2/biblissima-manifest.json";
-import blManifest from "../../fixtures/presentation-2/bl-manifest.json";
-import nlwManifest from "../../fixtures/presentation-2/nlw-manifest.json";
-import bodleianManifest from "../../fixtures/presentation-2/bodleian-manifest.json";
-import stanfordManifest from "../../fixtures/presentation-2/stanford-manifest.json";
-import folgerManifest from "../../fixtures/presentation-2/folger-manifest.json";
-import villanovaManifest from "../../fixtures/presentation-2/villanova-manifest.json";
-import ngaManifest from "../../fixtures/presentation-2/nga-manifest.json";
-import quatarManifest from "../../fixtures/presentation-2/quatar-manifest.json";
-import nlsCollection from "../../fixtures/presentation-2/nls-collection.json";
-import nlsManifest from "../../fixtures/presentation-2/nls-manifest.json";
-import nlsManifest2 from "../../fixtures/presentation-2/nls-manifest-2.json";
-import ghent from "../../fixtures/presentation-2/ghent.json";
-import sbbManifest from "../../fixtures/presentation-2/sbb-test.json";
-import codexManifest from "../../fixtures/presentation-2/codex.json";
-import { presentation2to3 } from "../../src/presentation-2";
-import { Validator } from "@hyperion-framework/validator";
+import iiifManifest from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
+import iiifManifest2 from '../../fixtures/presentation-2/biblissima-manifest.json';
+import blManifest from '../../fixtures/presentation-2/bl-manifest.json';
+import nlwManifest from '../../fixtures/presentation-2/nlw-manifest.json';
+import bodleianManifest from '../../fixtures/presentation-2/bodleian-manifest.json';
+import stanfordManifest from '../../fixtures/presentation-2/stanford-manifest.json';
+import folgerManifest from '../../fixtures/presentation-2/folger-manifest.json';
+import villanovaManifest from '../../fixtures/presentation-2/villanova-manifest.json';
+import ngaManifest from '../../fixtures/presentation-2/nga-manifest.json';
+import quatarManifest from '../../fixtures/presentation-2/quatar-manifest.json';
+import nlsCollection from '../../fixtures/presentation-2/nls-collection.json';
+import nlsManifest from '../../fixtures/presentation-2/nls-manifest.json';
+import nlsManifest2 from '../../fixtures/presentation-2/nls-manifest-2.json';
+import ghent from '../../fixtures/presentation-2/ghent.json';
+import sbbManifest from '../../fixtures/presentation-2/sbb-test.json';
+import codexManifest from '../../fixtures/presentation-2/codex.json';
+import { presentation2to3 } from '../../src/presentation-2';
+import { Validator } from '@hyperion-framework/validator';
 
-describe("Presentation 2 to 3", () => {
+describe('Presentation 2 to 3', () => {
   const validator = new Validator();
 
-  test("Simple manifest", () => {
+  test('Simple manifest', () => {
     const result = presentation2to3.traverseManifest(iiifManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -28,7 +28,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("Biblissima manifest", () => {
+  test('Biblissima manifest', () => {
     const result = presentation2to3.traverseManifest(iiifManifest2 as any);
     const isValid = validator.validateManifest(result);
 
@@ -36,7 +36,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("British Library manifest", () => {
+  test('British Library manifest', () => {
     const result = presentation2to3.traverseManifest(blManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -44,7 +44,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("NLW manifest", () => {
+  test('NLW manifest', () => {
     const result = presentation2to3.traverseManifest(nlwManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -52,7 +52,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("Ghent manifest", () => {
+  test('Ghent manifest', () => {
     const result = presentation2to3.traverseManifest(ghent as any);
     const isValid = validator.validateManifest(result);
 
@@ -65,7 +65,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("Bodleian manifest", () => {
+  test('Bodleian manifest', () => {
     const result = presentation2to3.traverseManifest(bodleianManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -73,7 +73,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("Stanford manifest", () => {
+  test('Stanford manifest', () => {
     const result = presentation2to3.traverseManifest(stanfordManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -81,7 +81,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("Folger manifest", () => {
+  test('Folger manifest', () => {
     const result = presentation2to3.traverseManifest(folgerManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -89,7 +89,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("Villanova manifest", () => {
+  test('Villanova manifest', () => {
     const result = presentation2to3.traverseManifest(villanovaManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -97,7 +97,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("NGA manifest", () => {
+  test('NGA manifest', () => {
     const result = presentation2to3.traverseManifest(ngaManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -105,10 +105,8 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("Quatar manifest", () => {
-    const result: any = presentation2to3.traverseManifest(
-      quatarManifest as any
-    );
+  test('Quatar manifest', () => {
+    const result: any = presentation2to3.traverseManifest(quatarManifest as any);
     const isValid = validator.validateManifest(result);
 
     expect(result.structures).not.toBeUndefined();
@@ -120,7 +118,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(false);
   });
 
-  test("NLS Collection", () => {
+  test('NLS Collection', () => {
     const result = presentation2to3.traverseManifest(nlsCollection as any);
     const isValid = validator.validateCollection(result);
 
@@ -128,7 +126,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("NLS Manifest", () => {
+  test('NLS Manifest', () => {
     const result = presentation2to3.traverseManifest(nlsManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -166,7 +164,7 @@ describe("Presentation 2 to 3", () => {
     expect(validator.validators.manifest.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
-  test("NLS Manifest 2", () => {
+  test('NLS Manifest 2', () => {
     const result = presentation2to3.traverseManifest(nlsManifest2 as any);
     const isValid = validator.validateManifest(result);
 
@@ -174,7 +172,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("SBB manifest", () => {
+  test('SBB manifest', () => {
     const result = presentation2to3.traverseManifest(sbbManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -182,7 +180,7 @@ describe("Presentation 2 to 3", () => {
     expect(isValid).toEqual(true);
   });
 
-  test("Codex manifest", () => {
+  test('Codex manifest', () => {
     const result = presentation2to3.traverseManifest(codexManifest as any);
     const isValid = validator.validateManifest(result);
 
