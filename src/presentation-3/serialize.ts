@@ -12,6 +12,7 @@ import {
   Selector,
   ServiceNormalized,
 } from '@iiif/presentation-3';
+import { ResourceProvider, ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
 
 export const UNSET = '__$UNSET$__';
 export const UNWRAP = '__$UNWRAP$__';
@@ -43,11 +44,12 @@ export type NormalizedEntity =
   | ContentResource
   | RangeNormalized
   | ServiceNormalized
-  | Selector;
+  | Selector
+  | ResourceProviderNormalized;
 
 export type Serializer<Type extends NormalizedEntity> = (
   entity: Type,
-  state: {}
+  state: any
 ) => Generator<Reference | Reference[], typeof UNSET | Field[], any>;
 
 export type SerializeConfig = {
@@ -61,6 +63,7 @@ export type SerializeConfig = {
   Range?: Serializer<RangeNormalized>;
   Service?: Serializer<ServiceNormalized>;
   Selector?: Serializer<Selector>;
+  Agent?: Serializer<ResourceProviderNormalized>;
 };
 
 function resolveIfExists<T extends NormalizedEntity>(state: CompatibleStore, url: string): T | undefined {
@@ -78,7 +81,7 @@ export function serializedFieldsToObject<T>(fields: Field[] | [string]): T {
   const object: any = {};
 
   for (const [key, value] of fields) {
-    if (key === UNWRAP) {
+    if (key === UNWRAP && value !== UNSET) {
       return value as T;
     }
     if (value !== UNSET && typeof value !== 'undefined' && value !== null) {
@@ -104,7 +107,7 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
       return UNSET;
     }
 
-    const resource = resolveIfExists(state, sub.id);
+    const resource = resolveIfExists(state, sub.id) || (sub.id && sub.type ? sub : null);
     if (!resource) {
       return UNSET;
     }

@@ -14,9 +14,17 @@ import {
   RangeNormalized,
   Reference,
 } from '@iiif/presentation-3';
-import { emptyAnnotationPage, emptyCanvas, emptyCollection, emptyManifest, emptyRange } from './empty-types';
+import {
+  emptyAgent,
+  emptyAnnotationPage,
+  emptyCanvas,
+  emptyCollection,
+  emptyManifest,
+  emptyRange,
+} from './empty-types';
 import { convertPresentation2 } from '../presentation-2';
 import { NormalizedEntity } from './serialize';
+import { ResourceProvider, ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
 
 export const defaultEntities = {
   Collection: {},
@@ -29,6 +37,7 @@ export const defaultEntities = {
   Range: {},
   Service: {},
   Selector: {},
+  Agent: {},
 };
 
 export function getDefaultEntities() {
@@ -43,6 +52,7 @@ export function getDefaultEntities() {
     Range: {},
     Service: {},
     Selector: {},
+    Agent: {},
   };
 }
 
@@ -218,6 +228,11 @@ export function normalize(unknownEntity: unknown) {
       ensureDefaultFields<Range, RangeNormalized>(emptyRange),
       addToMapping<Range>('Range', 'Canvas'),
       addToEntities<Range>('Range', 'Canvas'),
+    ],
+    agent: [
+      ensureDefaultFields<ResourceProvider, ResourceProviderNormalized>(emptyAgent),
+      addToMapping<ResourceProvider>('Agent'),
+      addToEntities<ResourceProvider>('Agent'),
     ],
     // Remove this, content resources are NOT usually processed by this library.
     // They need to be available in full when they get passed down the chain.

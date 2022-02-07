@@ -1,4 +1,5 @@
 import {
+  Agent,
   Annotation,
   AnnotationCollection,
   AnnotationPage,
@@ -16,6 +17,7 @@ import {
   Required,
   Service,
 } from '@iiif/presentation-3';
+import { ResourceProvider } from '@iiif/presentation-3/resources/provider';
 
 export const types = [
   'Collection',
@@ -28,6 +30,7 @@ export const types = [
   'Range',
   'Service',
   'Selector',
+  'Agent',
 ];
 
 export type Traversal<T> = (jsonLd: T) => Partial<T> | any;
@@ -43,6 +46,7 @@ export type TraversalMap = {
   choice?: Array<Traversal<ChoiceTarget | ChoiceBody>>;
   range?: Array<Traversal<Range>>;
   service?: Array<Traversal<Service>>;
+  agent?: Array<Traversal<ResourceProvider>>;
 };
 
 export type TraverseOptions = {
@@ -91,6 +95,7 @@ export class Traverse {
       choice: [],
       range: [],
       service: [],
+      agent: [],
       ...traversals,
     };
     this.options = {
@@ -120,6 +125,9 @@ export class Traverse {
         this.traverseType(thumbnail, this.traversals.contentResource)
       );
     }
+    if (resource.provider) {
+      resource.provider = resource.provider.map((agent) => this.traverseAgent(agent));
+    }
     return resource;
   }
 
@@ -137,7 +145,9 @@ export class Traverse {
       resource.logo = resource.logo.map((content) => this.traverseType(content, this.traversals.contentResource));
     }
     if (resource.homepage) {
-      resource.homepage = this.traverseType(resource.homepage, this.traversals.contentResource);
+      resource.homepage = resource.homepage.map((homepage) =>
+        this.traverseType(homepage, this.traversals.contentResource)
+      );
     }
     if (resource.partOf) {
       // Array<ContentResource | Canvas | AnnotationCollection>
@@ -155,7 +165,7 @@ export class Traverse {
       });
     }
     if (resource.start) {
-      resource.start = resource.start.map((start) => this.traverseType(start, this.traversals.canvas));
+      resource.start = resource.start ? this.traverseType(resource.start, this.traversals.canvas) : null;
     }
     if (resource.rendering) {
       resource.rendering = resource.rendering.map((content) =>
@@ -187,7 +197,9 @@ export class Traverse {
   traverseCollection(collection: Collection): Collection {
     return this.traverseType<Collection>(
       this.traverseDescriptive(
-        this.traverseLinking(this.traversePosterCanvas(this.traverseCollectionItems(collection)))
+        this.traverseInlineAnnotationPages(
+          this.traverseLinking(this.traversePosterCanvas(this.traverseCollectionItems(collection)))
+        )
       ),
       this.traversals.collection
     );
@@ -209,8 +221,12 @@ export class Traverse {
 
   traverseManifest(manifest: Manifest): Manifest {
     return this.traverseType<Manifest>(
-      this.traverseManifestStructures(
-        this.traversePosterCanvas(this.traverseDescriptive(this.traverseLinking(this.traverseManifestItems(manifest))))
+      this.traverseInlineAnnotationPages(
+        this.traverseManifestStructures(
+          this.traversePosterCanvas(
+            this.traverseDescriptive(this.traverseLinking(this.traverseManifestItems(manifest)))
+          )
+        )
       ),
       this.traversals.manifest
     );
@@ -224,7 +240,10 @@ export class Traverse {
     return canvas;
   }
 
-  traverseInlineAnnotationPages<T extends Manifest | Canvas>(resource: T): T {
+  traverseInlineAnnotationPages<T extends Manifest | Canvas | Range | string>(resource: T): T {
+    if (typeof resource === 'string' || !resource) {
+      return resource;
+    }
     if (resource.annotations) {
       resource.annotations = resource.annotations.map((annotationPage: AnnotationPage): AnnotationPage => {
         return this.traverseAnnotationPage(annotationPage);
@@ -337,7 +356,10 @@ export class Traverse {
     }
 
     return this.traverseType<ContentResource>(
-      this.traverseContentResourceLinking(contentResourceJson),
+      // This needs an `any` because of the scope of W3C annotation bodies (covered by ContentResource).
+      // ContentResources are permitted to have a `.annotations` property, so we can pass it as any  for this
+      // case.
+      this.traverseInlineAnnotationPages(this.traverseContentResourceLinking(contentResourceJson) as any),
       this.traversals.contentResource
     );
   }
@@ -362,6 +384,13 @@ export class Traverse {
     return this.traverseType<Range>(
       this.traversePosterCanvas(this.traverseDescriptive(this.traverseLinking(this.traverseRangeRanges(range)))),
       this.traversals.range
+    );
+  }
+
+  traverseAgent(agent: ResourceProvider) {
+    return this.traverseType<ResourceProvider>(
+      this.traverseDescriptive(this.traverseLinking(agent)),
+      this.traversals.agent
     );
   }
 
@@ -399,6 +428,8 @@ export class Traverse {
         return this.traverseRange(resource as Range);
       case 'Service':
         return this.traverseService(resource as Service);
+      case 'Agent':
+        return this.traverseAgent(resource as ResourceProvider);
       default:
         throw new Error(`Unknown or unsupported resource type of ${type}`);
     }

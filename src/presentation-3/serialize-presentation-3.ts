@@ -70,7 +70,7 @@ function* descriptiveProperties(
     ['accompanyingCanvas', yield entity.accompanyingCanvas],
 
     // @todo need to test this one.
-    ['provider', filterEmpty(entity.provider)],
+    ['provider', filterEmpty(yield entity.provider)],
   ];
 }
 
@@ -83,9 +83,11 @@ function* linkingProperties(
     ['services', filterService2Compat(entity.services)],
     ['rendering', filterEmpty(yield entity.rendering)],
     ['supplementary', filterEmpty(yield entity.supplementary)],
+    ['homepage', filterEmpty(yield entity.homepage)],
+    ['logo', filterEmpty(yield entity.logo)],
 
     // Don't yield these, they are references.
-    ['partOf', filterEmpty(entity.partOf)],
+    ['partOf', filterEmpty(yield entity.partOf)],
     ['start', entity.start],
   ];
 }
@@ -93,11 +95,13 @@ function* linkingProperties(
 export const serializeConfigPresentation3: SerializeConfig = {
   Manifest: function* (entity) {
     return [
+      ['@context', 'http://iiif.io/api/presentation/3/context.json'],
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
       ['items', yield entity.items],
       ['structures', filterEmpty(yield entity.structures)],
+      ['annotations', filterEmpty(yield entity.annotations)],
     ];
   },
 
@@ -109,6 +113,16 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...(yield* linkingProperties(entity)),
       ['items', yield entity.items],
       ['annotations', filterEmpty(yield entity.annotations)],
+    ];
+  },
+
+  Agent: function* (entity) {
+    return [
+      //
+      ['id', entity.id],
+      ['type', 'Agent'],
+      ['label', entity.label],
+      ...(yield* linkingProperties(entity)),
     ];
   },
 
@@ -152,6 +166,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
+      ['annotations', filterEmpty(yield entity.annotations)],
     ];
   },
 
@@ -170,6 +185,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
       ['items', yield* entity.items],
+      ['annotations', filterEmpty(yield entity.annotations)],
     ];
   },
 

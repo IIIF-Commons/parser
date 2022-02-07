@@ -377,10 +377,10 @@
   dependencies:
     "@iiif/presentation-3" "1.0.0"
 
-"@iiif/presentation-3@1.0.0", "@iiif/presentation-3@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@iiif/presentation-3/-/presentation-3-1.0.0.tgz#2ed414354f4dbf2b09cc03a39256e08df0b7c06e"
-  integrity sha512-EHiqGTMZx+3EDd6oYRzmJ7c0d9bTJA7NdkOXN0xOQlCbgbBUB2xeBFbacACqW6Rh04+nplv046C392Z+QoUCBg==
+"@iiif/presentation-3@1.0.0", "@iiif/presentation-3@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@iiif/presentation-3/-/presentation-3-1.0.3.tgz#3c08b740a8c3d3362f159beef4b7f14f3f0a3df7"
+  integrity sha512-NpN/U9oEcA8Axt78nSHOubUBGis7yaTWJFz2PiFemwamuGhDT2QPp9Yt0LsR/ZmWxqoZPldlMUH7989CLoirtg==
   dependencies:
     "@types/geojson" "^7946.0.7"
 
