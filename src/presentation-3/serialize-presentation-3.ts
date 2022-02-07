@@ -83,6 +83,8 @@ function* linkingProperties(
     ['services', filterService2Compat(entity.services)],
     ['rendering', filterEmpty(yield entity.rendering)],
     ['supplementary', filterEmpty(yield entity.supplementary)],
+    ['homepage', filterEmpty(yield entity.homepage)],
+    ['logo', filterEmpty(yield entity.logo)],
 
     // Don't yield these, they are references.
     ['partOf', filterEmpty(entity.partOf)],

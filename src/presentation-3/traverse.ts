@@ -137,7 +137,9 @@ export class Traverse {
       resource.logo = resource.logo.map((content) => this.traverseType(content, this.traversals.contentResource));
     }
     if (resource.homepage) {
-      resource.homepage = this.traverseType(resource.homepage, this.traversals.contentResource);
+      resource.homepage = resource.homepage.map((homepage) =>
+        this.traverseType(homepage, this.traversals.contentResource)
+      );
     }
     if (resource.partOf) {
       // Array<ContentResource | Canvas | AnnotationCollection>
@@ -155,7 +157,7 @@ export class Traverse {
       });
     }
     if (resource.start) {
-      resource.start = resource.start.map((start) => this.traverseType(start, this.traversals.canvas));
+      resource.start = resource.start ? this.traverseType(resource.start, this.traversals.canvas) : null;
     }
     if (resource.rendering) {
       resource.rendering = resource.rendering.map((content) =>
