@@ -23,6 +23,7 @@
     "@typescript-eslint/semi": "warn",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "require-yield": "off",
     "curly": "warn",
     "no-throw-literal": "warn",
     "semi": "off"
