@@ -8,6 +8,9 @@
   "files": [
     "dist"
   ],
+  "resolutions": {
+    "@iiif/presentation-3": "^1.0.3"
+  },
   "exports": {
     ".": {
       "require": "./dist/cjs/index.js",
@@ -28,11 +31,12 @@
   },
   "scripts": {
     "build": "tsc -p . --declaration --emitDeclarationOnly && rollup -c",
+    "prepublishOnly": "tsc -p . --declaration --emitDeclarationOnly && rollup -c",
     "test": "jest"
   },
   "dependencies": {
     "@iiif/presentation-2": "^1.0.0",
-    "@iiif/presentation-3": "^1.0.0",
+    "@iiif/presentation-3": "^1.0.3",
     "@types/geojson": "^7946.0.8"
   },
   "devDependencies": {
