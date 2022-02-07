@@ -370,14 +370,12 @@
   dependencies:
     ajv "6.12.2"
 
-"@iiif/presentation-2@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@iiif/presentation-2/-/presentation-2-1.0.0.tgz#b85d33f79cdb441b8044afb41ef2e92417f3e1c0"
-  integrity sha512-HZdjlvPwxRweO4ZjV3uvy6r4Rm/iE+CefRHVBZ0x5irEUZuUKEQySMdFqFJpV2/kDFTlGHcZPgbkTbNeEtfLIA==
-  dependencies:
-    "@iiif/presentation-3" "1.0.0"
+"@iiif/presentation-2@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@iiif/presentation-2/-/presentation-2-1.0.1.tgz#0d76fedfeac65b31afcc30d9a8dc17f2e57041e4"
+  integrity sha512-iWF6rgAi9ksSwbH/4uJW1/49DOL1wN2mLKovu0qy1GYtCTg42bryAxYtnBsw6LrJZWykTStv7R3DynChfECmnA==
 
-"@iiif/presentation-3@1.0.0", "@iiif/presentation-3@^1.0.3":
+"@iiif/presentation-3@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@iiif/presentation-3/-/presentation-3-1.0.3.tgz#3c08b740a8c3d3362f159beef4b7f14f3f0a3df7"
   integrity sha512-NpN/U9oEcA8Axt78nSHOubUBGis7yaTWJFz2PiFemwamuGhDT2QPp9Yt0LsR/ZmWxqoZPldlMUH7989CLoirtg==
