@@ -183,7 +183,27 @@ Object {
   },
   "Annotation": Object {},
   "AnnotationCollection": Object {},
-  "AnnotationPage": Object {},
+  "AnnotationPage": Object {
+    "https://example.org/iiif/book1/annotations/p1": Object {
+      "behavior": Array [],
+      "homepage": Array [],
+      "id": "https://example.org/iiif/book1/annotations/p1",
+      "items": Array [],
+      "label": null,
+      "logo": Array [],
+      "metadata": Array [],
+      "motivation": null,
+      "provider": Array [],
+      "rendering": Array [],
+      "requiredStatement": null,
+      "rights": null,
+      "seeAlso": Array [],
+      "service": Array [],
+      "summary": null,
+      "thumbnail": Array [],
+      "type": "AnnotationPage",
+    },
+  },
   "Canvas": Object {
     "https://example.org/iiif/book1/canvas/p1": Object {
       "accompanyingCanvas": null,
@@ -326,7 +346,6 @@ Object {
       "annotations": Array [
         Object {
           "id": "https://example.org/iiif/book1/annotations/p1",
-          "items": Array [],
           "type": "AnnotationPage",
         },
       ],

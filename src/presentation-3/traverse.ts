@@ -197,7 +197,9 @@ export class Traverse {
   traverseCollection(collection: Collection): Collection {
     return this.traverseType<Collection>(
       this.traverseDescriptive(
-        this.traverseLinking(this.traversePosterCanvas(this.traverseCollectionItems(collection)))
+        this.traverseInlineAnnotationPages(
+          this.traverseLinking(this.traversePosterCanvas(this.traverseCollectionItems(collection)))
+        )
       ),
       this.traversals.collection
     );
@@ -219,8 +221,12 @@ export class Traverse {
 
   traverseManifest(manifest: Manifest): Manifest {
     return this.traverseType<Manifest>(
-      this.traverseManifestStructures(
-        this.traversePosterCanvas(this.traverseDescriptive(this.traverseLinking(this.traverseManifestItems(manifest))))
+      this.traverseInlineAnnotationPages(
+        this.traverseManifestStructures(
+          this.traversePosterCanvas(
+            this.traverseDescriptive(this.traverseLinking(this.traverseManifestItems(manifest)))
+          )
+        )
       ),
       this.traversals.manifest
     );
@@ -234,7 +240,10 @@ export class Traverse {
     return canvas;
   }
 
-  traverseInlineAnnotationPages<T extends Manifest | Canvas>(resource: T): T {
+  traverseInlineAnnotationPages<T extends Manifest | Canvas | Range | string>(resource: T): T {
+    if (typeof resource === 'string' || !resource) {
+      return resource;
+    }
     if (resource.annotations) {
       resource.annotations = resource.annotations.map((annotationPage: AnnotationPage): AnnotationPage => {
         return this.traverseAnnotationPage(annotationPage);
@@ -347,7 +356,10 @@ export class Traverse {
     }
 
     return this.traverseType<ContentResource>(
-      this.traverseContentResourceLinking(contentResourceJson),
+      // This needs an `any` because of the scope of W3C annotation bodies (covered by ContentResource).
+      // ContentResources are permitted to have a `.annotations` property, so we can pass it as any  for this
+      // case.
+      this.traverseInlineAnnotationPages(this.traverseContentResourceLinking(contentResourceJson) as any),
       this.traversals.contentResource
     );
   }

@@ -272,6 +272,7 @@ describe('normalize', () => {
       'https://example.org/': 'ContentResource',
       'https://example.org/collections/books/': 'ContentResource',
       'https://example.org/iiif/book1.pdf': 'ContentResource',
+      'https://example.org/iiif/book1/annotations/p1': 'AnnotationPage',
       'https://example.org/iiif/book1/canvas/p1': 'Canvas',
       'https://example.org/iiif/book1/canvas/p2': 'Canvas',
       'https://example.org/iiif/book1/manifest': 'Manifest',
