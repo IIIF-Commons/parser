@@ -113,7 +113,7 @@ function technicalProperties(props: Partial<TechnicalProperties>, type?: string)
 }
 
 function* descriptiveProperties(prop: Partial<DescriptiveNormalized>): Generator<any, any, any> {
-  const provider = prop.provider ? prop.provider[0] : undefined;
+  const provider = prop.provider ? yield prop.provider[0] : undefined;
 
   return [
     ['label', languageString2to3(prop.label)],

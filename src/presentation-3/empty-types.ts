@@ -6,6 +6,7 @@ import {
   ManifestNormalized,
   RangeNormalized,
 } from '@iiif/presentation-3';
+import { ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
 
 export const emptyAnnotation: AnnotationNormalized = {
   id: 'https://iiif-parser/annotation',
@@ -174,4 +175,13 @@ export const emptyRange: RangeNormalized = {
   start: null,
   supplementary: null,
   viewingDirection: 'left-to-right',
+};
+
+export const emptyAgent: ResourceProviderNormalized = {
+  id: 'https://iiif-parser/empty-agent',
+  type: 'Agent',
+  label: {},
+  logo: [],
+  seeAlso: [],
+  homepage: [],
 };

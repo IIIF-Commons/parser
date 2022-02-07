@@ -70,7 +70,7 @@ function* descriptiveProperties(
     ['accompanyingCanvas', yield entity.accompanyingCanvas],
 
     // @todo need to test this one.
-    ['provider', filterEmpty(entity.provider)],
+    ['provider', filterEmpty(yield entity.provider)],
   ];
 }
 
@@ -111,6 +111,16 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...(yield* linkingProperties(entity)),
       ['items', yield entity.items],
       ['annotations', filterEmpty(yield entity.annotations)],
+    ];
+  },
+
+  Agent: function* (entity) {
+    return [
+      //
+      ['id', entity.id],
+      ['type', 'Agent'],
+      ['label', entity.label],
+      ...(yield* linkingProperties(entity)),
     ];
   },
 

@@ -1,4 +1,5 @@
 import {
+  Agent,
   Annotation,
   AnnotationCollection,
   AnnotationPage,
@@ -16,6 +17,7 @@ import {
   Required,
   Service,
 } from '@iiif/presentation-3';
+import { ResourceProvider } from '@iiif/presentation-3/resources/provider';
 
 export const types = [
   'Collection',
@@ -28,6 +30,7 @@ export const types = [
   'Range',
   'Service',
   'Selector',
+  'Agent',
 ];
 
 export type Traversal<T> = (jsonLd: T) => Partial<T> | any;
@@ -43,6 +46,7 @@ export type TraversalMap = {
   choice?: Array<Traversal<ChoiceTarget | ChoiceBody>>;
   range?: Array<Traversal<Range>>;
   service?: Array<Traversal<Service>>;
+  agent?: Array<Traversal<ResourceProvider>>;
 };
 
 export type TraverseOptions = {
@@ -91,6 +95,7 @@ export class Traverse {
       choice: [],
       range: [],
       service: [],
+      agent: [],
       ...traversals,
     };
     this.options = {
@@ -119,6 +124,9 @@ export class Traverse {
       resource.thumbnail = resource.thumbnail.map((thumbnail) =>
         this.traverseType(thumbnail, this.traversals.contentResource)
       );
+    }
+    if (resource.provider) {
+      resource.provider = resource.provider.map((agent) => this.traverseAgent(agent));
     }
     return resource;
   }
@@ -367,6 +375,13 @@ export class Traverse {
     );
   }
 
+  traverseAgent(agent: ResourceProvider) {
+    return this.traverseType<ResourceProvider>(
+      this.traverseDescriptive(this.traverseLinking(agent)),
+      this.traversals.agent
+    );
+  }
+
   traverseType<T>(object: T, traversals: Array<Traversal<T>>): T {
     return traversals.reduce((acc: T, traversal: Traversal<T>): T => {
       const returnValue = traversal(acc);
@@ -401,6 +416,8 @@ export class Traverse {
         return this.traverseRange(resource as Range);
       case 'Service':
         return this.traverseService(resource as Service);
+      case 'Agent':
+        return this.traverseAgent(resource as ResourceProvider);
       default:
         throw new Error(`Unknown or unsupported resource type of ${type}`);
     }
