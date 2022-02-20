@@ -93,7 +93,15 @@ function* linkingProperties(
 }
 
 export const serializeConfigPresentation3: SerializeConfig = {
-  Manifest: function* (entity) {
+  Manifest: function* (entity, state, { isTopLevel }) {
+    if (!isTopLevel) {
+      return [
+        // Only a snippet.
+        ...technicalProperties(entity),
+        ...(yield* descriptiveProperties(entity)),
+      ];
+    }
+
     return [
       ['@context', 'http://iiif.io/api/presentation/3/context.json'],
       ...technicalProperties(entity),
@@ -179,14 +187,18 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  Collection: function* (entity) {
-    return [
-      ...technicalProperties(entity),
-      ...(yield* descriptiveProperties(entity)),
-      ...(yield* linkingProperties(entity)),
-      ['items', yield* entity.items],
-      ['annotations', filterEmpty(yield entity.annotations)],
-    ];
+  Collection: function* (entity, state, { isTopLevel }) {
+    if (isTopLevel) {
+      return [
+        ['@context', 'http://iiif.io/api/presentation/3/context.json'],
+        ...technicalProperties(entity),
+        ...(yield* descriptiveProperties(entity)),
+        ...(yield* linkingProperties(entity)),
+        ['items', filterEmpty(yield entity.items)],
+        ['annotations', filterEmpty(yield entity.annotations)],
+      ];
+    }
+    return [...technicalProperties(entity), ...(yield* descriptiveProperties(entity))];
   },
 
   Range: function* (entity) {

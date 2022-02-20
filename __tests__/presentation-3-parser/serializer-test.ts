@@ -1,4 +1,5 @@
 import { normalize, serialize, serializeConfigPresentation2, serializeConfigPresentation3 } from '../../src';
+import { Collection } from '@iiif/presentation-3';
 
 describe('serializer', () => {
   test('parse, then serialize', () => {
@@ -548,5 +549,54 @@ describe('serializer', () => {
         "viewingDirection": "right-to-left",
       }
     `);
+  });
+
+  test('serialize collection', () => {
+    const input = () => ({
+      '@context': 'http://iiif.io/api/presentation/3/context.json',
+      id: 'https://example.org/collection-1',
+      type: 'Collection',
+      items: [
+        {
+          id: 'https://example.org/manifest-1',
+          type: 'Manifest',
+          label: { en: ['Manifest 1'] },
+        },
+        {
+          id: 'https://example.org/manifest-2',
+          type: 'Manifest',
+        },
+        {
+          id: 'https://example.org/manifest-3',
+          type: 'Manifest',
+          label: { en: ['Manifest 3'] },
+          thumbnail: [
+            {
+              id: 'https://example.org/manifest-3/thumb.jpg',
+              type: 'Image',
+              format: 'image/jpg',
+            },
+          ],
+        },
+      ],
+    });
+
+    const result = normalize(input());
+
+    expect(result.resource).toBeDefined();
+
+    const serialized = serialize<Collection>(
+      {
+        mapping: result.mapping,
+        entities: result.entities,
+        requests: {},
+      },
+      result.resource,
+      serializeConfigPresentation3
+    );
+
+    expect(serialized).toEqual(input());
+
+    expect(serialized.items).toHaveLength(3);
   });
 });
