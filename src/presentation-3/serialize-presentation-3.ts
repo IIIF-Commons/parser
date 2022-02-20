@@ -195,7 +195,6 @@ export const serializeConfigPresentation3: SerializeConfig = {
         ...(yield* descriptiveProperties(entity)),
         ...(yield* linkingProperties(entity)),
         ['items', filterEmpty(yield entity.items)],
-        ['annotations', filterEmpty(yield entity.annotations)],
       ];
     }
     return [...technicalProperties(entity), ...(yield* descriptiveProperties(entity))];
