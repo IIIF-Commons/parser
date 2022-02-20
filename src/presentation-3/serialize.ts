@@ -47,9 +47,14 @@ export type NormalizedEntity =
   | Selector
   | ResourceProviderNormalized;
 
+type SerializerContext = {
+  isTopLevel?: boolean;
+};
+
 export type Serializer<Type extends NormalizedEntity> = (
   entity: Type,
-  state: any
+  state: any,
+  context: SerializerContext
 ) => Generator<Reference | Reference[], typeof UNSET | Field[], any>;
 
 export type SerializeConfig = {
@@ -111,7 +116,7 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
     if (!resource) {
       return UNSET;
     }
-    const iterator = generator(resource as any, state);
+    const iterator = generator(resource as any, state, { isTopLevel: subject.id === sub.id });
     let current = iterator.next();
     while (!current.done) {
       const requestToHydrate: Reference | Reference[] = current.value as any;
