@@ -190,6 +190,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
   Collection: function* (entity, state, { isTopLevel }) {
     if (isTopLevel) {
       return [
+        ['@context', 'http://iiif.io/api/presentation/3/context.json'],
         ...technicalProperties(entity),
         ...(yield* descriptiveProperties(entity)),
         ...(yield* linkingProperties(entity)),
