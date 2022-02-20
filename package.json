@@ -26,6 +26,22 @@
     },
     "./upgrader": "./dist/upgrader/index.umd.js"
   },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/index.d.ts"
+      ],
+      "presentation-2": [
+        "dist/presentation-2/index.d.ts"
+      ],
+      "presentation-3": [
+        "dist/index.d.ts"
+      ],
+      "upgrader": [
+        "dist/upgrader/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
     "build": "tsc -p . --declaration --emitDeclarationOnly && rollup -c",
     "prepublishOnly": "tsc -p . --declaration --emitDeclarationOnly && rollup -c",
