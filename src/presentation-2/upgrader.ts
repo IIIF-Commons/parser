@@ -136,6 +136,8 @@ function removePrefix(str: string) {
   return str;
 }
 
+const knownTypes = ['Collection', 'Manifest', 'Annotation', 'AnnotationPage', 'Range', 'Service'];
+
 function getNewType(resource: any): string {
   const id = resource['@id'] || resource.id;
   let oldType: string | string[] = resource['@type'] || resource.type;
@@ -184,6 +186,10 @@ function getNewType(resource: any): string {
         return 'TextualBody';
       // @todo There are definitely some missing annotation types here.
     }
+  }
+
+  if (oldType && knownTypes.indexOf(oldType) !== -1) {
+    return oldType;
   }
 
   if (resource.format) {
