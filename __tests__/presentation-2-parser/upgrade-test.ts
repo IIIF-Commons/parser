@@ -14,6 +14,7 @@ import nlsManifest2 from '../../fixtures/presentation-2/nls-manifest-2.json';
 import ghent from '../../fixtures/presentation-2/ghent.json';
 import sbbManifest from '../../fixtures/presentation-2/sbb-test.json';
 import codexManifest from '../../fixtures/presentation-2/codex.json';
+import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
 import { presentation2to3 } from '../../src/presentation-2';
 import { Validator } from '@hyperion-framework/validator';
 
@@ -182,6 +183,17 @@ describe('Presentation 2 to 3', () => {
 
   test('Codex manifest', () => {
     const result = presentation2to3.traverseManifest(codexManifest as any);
+    const isValid = validator.validateManifest(result);
+
+    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(isValid).toEqual(true);
+  });
+
+  test('Wikimedia proxy manifest', () => {
+    const result = presentation2to3.traverseManifest(wikimediaProxy as any);
+
+    expect(result.type).toEqual('Manifest');
+
     const isValid = validator.validateManifest(result);
 
     expect(validator.validators.manifest.errors).toEqual(null);

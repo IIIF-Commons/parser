@@ -1,0 +1,137 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://iiifmediawiki.herokuapp.com/presentation/File:Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg",
+  "@type": "sc:Manifest",
+  "label": "File:Gustave Courbet - A Burial at Ornans - Google Art Project 2.jpg",
+  "sequences": [
+    {
+      "@id": "https://iiifmediawiki.herokuapp.com/presentation/sequence/normal.json",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@id": "https://iiifmediawiki.herokuapp.com/presentation/canvas/c20250332.json",
+          "@type": "sc:Canvas",
+          "height": 2777,
+          "images": [
+            {
+              "@id": "https://iiifmediawiki.herokuapp.com/presentation/annotation/a20250332.json",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "on": "https://iiifmediawiki.herokuapp.com/presentation/canvas/c20250332.json",
+              "resource": {
+                "@id": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg",
+                "@type": "dctypes:Image",
+                "height": 2777,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://iiifmediawiki.herokuapp.com/image/a/a0/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg",
+                  "height": 2777,
+                  "profile": [
+                    "http://iiif.io/api/image/2/level0.json"
+                  ],
+                  "protocol": "http://iiif.io/api/image",
+                  "sizes": [
+                    {
+                      "height": 147,
+                      "width": 320
+                    },
+                    {
+                      "height": 294,
+                      "width": 640
+                    },
+                    {
+                      "height": 367,
+                      "width": 800
+                    },
+                    {
+                      "height": 470,
+                      "width": 1024
+                    },
+                    {
+                      "height": 588,
+                      "width": 1280
+                    },
+                    {
+                      "height": 1176,
+                      "width": 2560
+                    },
+                    {
+                      "height": 2777,
+                      "width": 6042
+                    }
+                  ],
+                  "width": 6042
+                },
+                "width": 6042
+              }
+            }
+          ],
+          "label": "File:Gustave Courbet - A Burial at Ornans - Google Art Project 2.jpg",
+          "metadata": [
+            {
+              "label": "Wikipedia user",
+              "value": "Hohum"
+            },
+            {
+              "label": "DateTime",
+              "value": "2021-04-30 15:09:38"
+            },
+            {
+              "label": "ObjectName",
+              "value": "A Burial at Ornans."
+            },
+            {
+              "label": "CommonsMetadataExtension",
+              "value": "1.2"
+            },
+            {
+              "label": "Categories",
+              "value": "Artworks digital representation of 2D work|Artworks with Wikidata item|Artworks with accession number from Wikidata|Artworks with known accession number|CC-PD-Mark|Ecclesiastical guards|Featured pictures on Wikipedia, Turkish|Files with Assessments template missing SDC Commons quality assessment|PD-Art (PD-old-100)|Un enterrement \u00e0 Ornans by Gustave Courbet"
+            },
+            {
+              "label": "Artist",
+              "value": "<a href=\"https://en.wikipedia.org/wiki/en:Gustave_Courbet\"><span>Gustave Courbet</span></a> "
+            },
+            {
+              "label": "DateTimeOriginal",
+              "value": "1849-50."
+            },
+            {
+              "label": "Credit",
+              "value": "Google Art Project: <a href=\"http://www.googleartproject.com/\">Home</a> - <a href=\"http://www.googleartproject.com/es/collection/musee-dorsay-paris/artwork/a-burial-at-ornans-gustave-courbet/484074/\">pic</a> Maximum resolution."
+            },
+            {
+              "label": "LicenseShortName",
+              "value": "Public domain"
+            },
+            {
+              "label": "UsageTerms",
+              "value": "Public domain"
+            },
+            {
+              "label": "AttributionRequired",
+              "value": "false"
+            },
+            {
+              "label": "Copyrighted",
+              "value": "False"
+            },
+            {
+              "label": "License",
+              "value": "pd"
+            }
+          ],
+          "thumbnail": {
+            "@id": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg/100px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg",
+            "@type": "dctypes:Image",
+            "format": "image/jpeg",
+            "height": 46,
+            "width": 100
+          },
+          "width": 6042
+        }
+      ],
+      "label": "default order"
+    }
+  ]
+}
