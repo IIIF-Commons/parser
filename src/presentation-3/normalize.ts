@@ -131,7 +131,7 @@ function addMissingIdToContentResource<T extends Partial<Reference>>(type: strin
       return { id: resource, type } as T;
     }
     if (!resource.id) {
-      return { id: hash(resource), type, ...resource };
+      return { id: `vault://${hash(resource)}`, type, ...resource };
     }
     if (!resource.type) {
       return { type, ...resource };
