@@ -10,7 +10,7 @@ import {
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
   return [
     // Technical
-    ['id', entity.id],
+    ['id', !entity.id?.startsWith('vault://') ? entity.id : undefined],
     ['type', entity.type],
     ['format', entity.format],
     ['profile', entity.profile],
@@ -20,7 +20,7 @@ function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof
     ['viewingDirection', entity.viewingDirection !== 'left-to-right' ? entity.viewingDirection : undefined],
     ['behavior', entity.behavior && entity.behavior.length ? entity.behavior : undefined],
     ['timeMode', entity.timeMode],
-    ['motivation', entity.motivation],
+    ['motivation', Array.isArray(entity.motivation) ? entity.motivation[0] : entity.motivation],
   ];
 }
 
@@ -159,13 +159,20 @@ export const serializeConfigPresentation3: SerializeConfig = {
   Annotation: function* (entity) {
     const entries = Object.entries(entity)
       .map(([key, item]) => {
+        if (key === 'motivation') {
+          // Annotation non-array items can be added here.
+          return [key, Array.isArray(item) ? item[0] : item];
+        }
+
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key]) => {
         return key !== 'body';
       });
 
-    return [...entries, ['body', yield entity.body]];
+    const resolvedBody = yield entity.body;
+
+    return [...entries, ['body', resolvedBody.length === 1 ? resolvedBody[0] : resolvedBody]];
   },
 
   ContentResource: function* (entity: any) {
@@ -175,6 +182,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
       ['annotations', filterEmpty(yield entity.annotations)],
+      ['items', filterEmpty(yield entity.items)],
     ];
   },
 
