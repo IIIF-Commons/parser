@@ -643,18 +643,22 @@ function upgradeRange(range: Presentation2.Range): Presentation3.Range {
 }
 
 function upgradeService(service: Presentation2.Service): Presentation3.Service {
-  const { '@id': id, '@type': type, '@context': context, profile, ...newService } = service as any;
+  const { '@id': id, '@type': type, '@context': context, profile, ...additionalProps } = service as any;
+
+  const newService: any = {};
 
   if (id) {
-    // @todo revisit encoded image URLs.
-    newService.id = id;
-    // newService.id = encodeURI(id).trim();
+    newService['@id'] = id;
   }
 
-  newService.type = getNewType(service);
+  newService['@type'] = getNewType(service);
 
-  if (newService.type === 'unknown') {
-    newService.type = 'Service'; // optional on services.
+  if (newService['@type'] === 'unknown') {
+    // @todo handle case where there might be multiple contexts.
+    if (context && context.length) {
+      newService['@context'] = context;
+    }
+    newService['@type'] = 'Service'; // optional on services.
   }
 
   if (profile) {
@@ -663,7 +667,7 @@ function upgradeService(service: Presentation2.Service): Presentation3.Service {
 
   return removeUndefinedProperties({
     ...newService,
-    ...descriptiveProperties(newService as any),
+    ...additionalProps,
   });
 }
 
