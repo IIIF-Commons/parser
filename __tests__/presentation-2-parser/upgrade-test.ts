@@ -15,6 +15,7 @@ import ghent from '../../fixtures/presentation-2/ghent.json';
 import sbbManifest from '../../fixtures/presentation-2/sbb-test.json';
 import codexManifest from '../../fixtures/presentation-2/codex.json';
 import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
+import withDimensions from '../../fixtures/presentation-2/iiif-fixture-manifest-with-dimensions.json';
 import { presentation2to3 } from '../../src/presentation-2';
 import { Validator } from '@hyperion-framework/validator';
 
@@ -39,10 +40,63 @@ describe('Presentation 2 to 3', () => {
 
   test('British Library manifest', () => {
     const result = presentation2to3.traverseManifest(blManifest as any);
+
     const isValid = validator.validateManifest(result);
 
     expect(validator.validators.manifest.errors).toEqual(null);
     expect(isValid).toEqual(true);
+
+    expect(result.service).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "@id": "https://api.bl.uk/auth/iiif/login",
+          "@type": "AuthCookieService1",
+          "description": "Some content may only be available to registered readers or staff. Please log-in to The British Library to continue.",
+          "header": "Please Log-In",
+          "label": "Login to The British Library",
+          "profile": "http://iiif.io/api/auth/0/login",
+          "service": Array [
+            Object {
+              "@id": "https://api.bl.uk/auth/iiif/token",
+              "@type": "AuthTokenService1",
+              "profile": "http://iiif.io/api/auth/0/token",
+            },
+          ],
+        },
+        Object {
+          "@id": "https://api.bl.uk/search/iiif/ark:/81055/vdc_100022545251.0x000002",
+          "@type": "SearchService1",
+          "label": "Search within this item",
+          "profile": "http://iiif.io/api/search/0/search",
+          "service": Array [
+            Object {
+              "@id": "https://api.bl.uk/search/iiif/ark:/81055/vdc_100022545251.0x000002/autocomplete",
+              "@type": "AutoCompleteService1",
+              "label": "Get suggested words in this item",
+              "profile": "http://iiif.io/api/search/0/autocomplete",
+            },
+          ],
+        },
+        Object {
+          "@context": "http://universalviewer.io/context.json",
+          "@id": "http://access.bl.uk/item/share/ark:/81055/vdc_100022545251.0x000002",
+          "@type": "Service",
+          "profile": "http://universalviewer.io/share-extensions-profile",
+        },
+        Object {
+          "@context": "http://universalviewer.io/context.json",
+          "@id": "http://access.bl.uk/item/feedback/ark:/81055/vdc_100022545251.0x000002",
+          "@type": "Service",
+          "profile": "http://universalviewer.io/feedback-extensions-profile",
+        },
+        Object {
+          "@context": "http://universalviewer.io/context.json",
+          "@id": "http://access.bl.uk/item/print/ark:/81055/vdc_100022545251.0x000002",
+          "@type": "Service",
+          "profile": "http://universalviewer.io/print-extensions-profile",
+        },
+      ]
+    `);
   });
 
   test('NLW manifest', () => {
@@ -198,5 +252,28 @@ describe('Presentation 2 to 3', () => {
 
     expect(validator.validators.manifest.errors).toEqual(null);
     expect(isValid).toEqual(true);
+  });
+
+  test('IIIF Fixture with dimensions', () => {
+    const result = presentation2to3.traverseManifest(withDimensions as any);
+    expect(result.type).toEqual('Manifest');
+
+    const isValid = validator.validateManifest(result);
+
+    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(isValid).toEqual(true);
+
+    expect(result.service).toMatchInlineSnapshot(`
+      Array [
+        Object {
+          "@context": "http://iiif.io/api/annex/services/physdim/1/context.json",
+          "@id": "http://example.org/iiif/manifest/1/dims",
+          "@type": "Service",
+          "physicalScale": 0.0025,
+          "physicalUnits": "in",
+          "profile": "http://iiif.io/api/annex/services/physdim",
+        },
+      ]
+    `);
   });
 });
