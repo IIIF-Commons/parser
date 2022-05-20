@@ -119,37 +119,54 @@ export class Traverse {
     });
   }
 
-  traverseDescriptive<T extends Partial<DescriptiveProperties>>(resource: T) {
+  traverseDescriptive<T extends Partial<DescriptiveProperties>>(_resource: T) {
+    let changed = false;
+    const resource = Object.assign({}, _resource) as T;
     if (resource.thumbnail) {
+      changed = true;
       resource.thumbnail = resource.thumbnail.map((thumbnail) =>
         this.traverseType(thumbnail, this.traversals.contentResource)
       );
     }
     if (resource.provider) {
+      changed = true;
       resource.provider = resource.provider.map((agent) => this.traverseAgent(agent));
     }
+
+    if (!changed) {
+      return _resource;
+    }
+
     return resource;
   }
 
-  traverseLinking<T extends Partial<LinkingProperties>>(resource: T) {
+  traverseLinking<T extends Partial<LinkingProperties>>(_resource: T) {
+    let changed = false;
+    const resource = Object.assign({}, _resource) as T;
     if (resource.seeAlso) {
+      changed = true;
       resource.seeAlso = resource.seeAlso.map((content) => this.traverseType(content, this.traversals.contentResource));
     }
     if (resource.service) {
+      changed = true;
       resource.service = resource.service.map((service) => this.traverseType(service, this.traversals.service));
     }
     if (resource.services) {
+      changed = true;
       resource.services = resource.services.map((service) => this.traverseType(service, this.traversals.service));
     }
     if (resource.logo) {
+      changed = true;
       resource.logo = resource.logo.map((content) => this.traverseType(content, this.traversals.contentResource));
     }
     if (resource.homepage) {
+      changed = true;
       resource.homepage = resource.homepage.map((homepage) =>
         this.traverseType(homepage, this.traversals.contentResource)
       );
     }
     if (resource.partOf) {
+      changed = true;
       // Array<ContentResource | Canvas | AnnotationCollection>
       resource.partOf = resource.partOf.map((partOf) => {
         if (typeof partOf === 'string' || !partOf.type) {
@@ -165,23 +182,32 @@ export class Traverse {
       });
     }
     if (resource.start) {
+      changed = true;
       resource.start = resource.start ? this.traverseType(resource.start, this.traversals.canvas) : null;
     }
     if (resource.rendering) {
+      changed = true;
       resource.rendering = resource.rendering.map((content) =>
         this.traverseType(content, this.traversals.contentResource)
       );
     }
     if (resource.supplementary) {
+      changed = true;
       resource.supplementary = resource.supplementary.map((content) =>
         this.traverseType(content, this.traversals.contentResource)
       );
     }
 
+    if (!changed) {
+      return _resource;
+    }
+
     return resource;
   }
 
-  traverseCollectionItems(collection: Collection): Collection {
+  traverseCollectionItems(_collection: Collection): Collection {
+    const collection = Object.assign({}, _collection) as Collection;
+
     if (collection.items) {
       collection.items.map((collectionOrManifest: Manifest | Collection) => {
         if (collectionOrManifest.type === 'Collection') {
@@ -189,9 +215,11 @@ export class Traverse {
         }
         return this.traverseManifest(collectionOrManifest as Manifest);
       });
+
+      return collection;
     }
 
-    return collection;
+    return _collection;
   }
 
   traverseCollection(collection: Collection): Collection {
@@ -205,18 +233,26 @@ export class Traverse {
     );
   }
 
-  traverseManifestItems(manifest: Manifest): Manifest {
+  traverseManifestItems(_manifest: Manifest): Manifest {
+    const manifest = Object.assign({}, _manifest) as Manifest;
     if (manifest.items) {
       manifest.items = manifest.items.map((canvas) => this.traverseCanvas(canvas));
+
+      return manifest;
     }
-    return manifest;
+
+    return _manifest;
   }
 
-  traverseManifestStructures(manifest: Manifest): Manifest {
+  traverseManifestStructures(_manifest: Manifest): Manifest {
+    const manifest = Object.assign({}, _manifest) as Manifest;
+
     if (manifest.structures) {
       manifest.structures = manifest.structures.map((range) => this.traverseRange(range));
+
+      return manifest;
     }
-    return manifest;
+    return _manifest;
   }
 
   traverseManifest(manifest: Manifest): Manifest {
@@ -232,25 +268,34 @@ export class Traverse {
     );
   }
 
-  traverseCanvasItems(canvas: Canvas): Canvas {
-    canvas.items = (canvas.items || []).map((annotationPage: AnnotationPage): AnnotationPage => {
-      return this.traverseAnnotationPage(annotationPage);
-    });
+  traverseCanvasItems(_canvas: Canvas): Canvas {
+    const canvas = Object.assign({}, _canvas) as Canvas;
 
-    return canvas;
+    if (canvas.items && canvas.items.length) {
+      canvas.items = canvas.items.map((annotationPage: AnnotationPage): AnnotationPage => {
+        return this.traverseAnnotationPage(annotationPage);
+      });
+
+      return canvas;
+    }
+
+    return _canvas;
   }
 
-  traverseInlineAnnotationPages<T extends Manifest | Canvas | Range | string>(resource: T): T {
-    if (typeof resource === 'string' || !resource) {
-      return resource;
+  traverseInlineAnnotationPages<T extends Manifest | Canvas | Range | string>(_resource: T): T {
+    if (typeof _resource === 'string' || !_resource) {
+      return _resource;
     }
-    if (resource.annotations) {
+    const resource = Object.assign({}, _resource) as T extends string ? never : T;
+    if (resource.annotations && resource.annotations.length) {
       resource.annotations = resource.annotations.map((annotationPage: AnnotationPage): AnnotationPage => {
         return this.traverseAnnotationPage(annotationPage);
       });
+
+      return resource;
     }
 
-    return resource;
+    return _resource;
   }
 
   traverseCanvas(canvas: Canvas): Canvas {
@@ -262,13 +307,17 @@ export class Traverse {
     );
   }
 
-  traverseAnnotationPageItems(annotationPage: AnnotationPage): AnnotationPage {
-    if (annotationPage.items) {
+  traverseAnnotationPageItems(_annotationPage: AnnotationPage): AnnotationPage {
+    const annotationPage = Object.assign({}, _annotationPage) as AnnotationPage;
+
+    if (annotationPage.items && annotationPage.items.length) {
       annotationPage.items = annotationPage.items.map((annotation: Annotation): Annotation => {
         return this.traverseAnnotation(annotation);
       });
+
+      return annotationPage;
     }
-    return annotationPage;
+    return _annotationPage;
   }
 
   traverseAnnotationPage(annotationPageJson: AnnotationPage): AnnotationPage {
@@ -280,7 +329,9 @@ export class Traverse {
 
   // Disabling these.
 
-  traverseAnnotationBody(annotation: Annotation): Annotation {
+  traverseAnnotationBody(_annotation: Annotation): Annotation {
+    const annotation = Object.assign({}, _annotation) as Annotation;
+
     if (Array.isArray(annotation.body)) {
       annotation.body = annotation.body.map((annotationBody: any): ContentResource => {
         return this.traverseContentResource(annotationBody);
@@ -308,7 +359,8 @@ export class Traverse {
   }
   */
 
-  traversePosterCanvas<T extends Collection | Manifest | Canvas | Range>(json: T): T {
+  traversePosterCanvas<T extends Collection | Manifest | Canvas | Range>(_json: T): T {
+    const json = Object.assign({}, _json) as T;
     // @deprecated
     if (json.posterCanvas) {
       json.posterCanvas = this.traverseType(json.posterCanvas, this.traversals.canvas);
@@ -335,10 +387,11 @@ export class Traverse {
     );
   }
 
-  traverseContentResourceLinking(contentResourceJson: ContentResource): ContentResource {
-    if (typeof contentResourceJson === 'string' || !contentResourceJson) {
-      return contentResourceJson;
+  traverseContentResourceLinking(_contentResourceJson: ContentResource): ContentResource {
+    if (typeof _contentResourceJson === 'string' || !_contentResourceJson) {
+      return _contentResourceJson;
     }
+    const contentResourceJson = Object.assign({}, _contentResourceJson) as any;
     if (contentResourceJson && (contentResourceJson as IIIFExternalWebResource)!.service) {
       (contentResourceJson as IIIFExternalWebResource).service = (
         (contentResourceJson as IIIFExternalWebResource).service || []
@@ -348,7 +401,12 @@ export class Traverse {
     return contentResourceJson;
   }
 
-  traverseContentResource(contentResourceJson: ContentResource): ContentResource {
+  traverseContentResource(_contentResourceJson: ContentResource): ContentResource {
+    const contentResourceJson =
+      typeof _contentResourceJson === 'string'
+        ? _contentResourceJson
+        : (Object.assign({}, _contentResourceJson) as ContentResource);
+
     if ((contentResourceJson as any).type === 'Choice') {
       (contentResourceJson as any).items = (contentResourceJson as any).items.map((choiceItem: ContentResource) => {
         return this.traverseContentResource(choiceItem);
@@ -364,7 +422,8 @@ export class Traverse {
     );
   }
 
-  traverseRangeRanges(range: Range): Range {
+  traverseRangeRanges(_range: Range): Range {
+    const range = Object.assign({}, _range) as Range;
     if (range.items) {
       range.items = range.items.map((rangeOrManifest: RangeItems) => {
         if (typeof rangeOrManifest === 'string') {

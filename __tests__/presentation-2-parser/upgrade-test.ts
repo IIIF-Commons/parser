@@ -41,6 +41,12 @@ describe('Presentation 2 to 3', () => {
   test('British Library manifest', () => {
     const result = presentation2to3.traverseManifest(blManifest as any);
 
+    // Make sure it doesn't mutate the passed in resource.
+    expect(result.items[0].id).toEqual('https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100022545254.0x000002');
+    expect(blManifest.sequences[0].canvases[0]['@id']).toEqual(
+      'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100022545254.0x000002'
+    );
+
     const isValid = validator.validateManifest(result);
 
     expect(validator.validators.manifest.errors).toEqual(null);
