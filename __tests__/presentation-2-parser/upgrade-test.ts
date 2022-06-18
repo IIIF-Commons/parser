@@ -16,6 +16,7 @@ import sbbManifest from '../../fixtures/presentation-2/sbb-test.json';
 import codexManifest from '../../fixtures/presentation-2/codex.json';
 import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
 import withDimensions from '../../fixtures/presentation-2/iiif-fixture-manifest-with-dimensions.json';
+import europeana from '../../fixtures/presentation-2/europeana.json';
 import { presentation2to3 } from '../../src/presentation-2';
 import { Validator } from '@hyperion-framework/validator';
 
@@ -275,5 +276,17 @@ describe('Presentation 2 to 3', () => {
         },
       ]
     `);
+  });
+
+  test('europeana', () => {
+    const result = presentation2to3.traverseCanvas(europeana as any);
+    expect(result.type).toEqual('Canvas');
+
+    expect(result.annotations).toEqual([
+      {
+        id: 'https://iiif.europeana.eu/presentation/9200396/BibliographicResource_3000118436165/annopage/21',
+        type: 'AnnotationPage',
+      },
+    ]);
   });
 });
