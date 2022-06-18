@@ -531,6 +531,7 @@ function upgradeCanvas(canvas: Presentation2.Canvas): Presentation3.Canvas {
     ...technicalProperties(canvas),
     ...descriptiveProperties(canvas),
     ...linkingProperties(canvas),
+    annotations: canvas.otherContent && canvas.otherContent.length ? (canvas.otherContent as any[]) : undefined,
     items:
       canvas.images && canvas.images.length
         ? [
@@ -549,7 +550,7 @@ function upgradeAnnotationList(annotationPage: Presentation2.AnnotationList): Pr
     ...(technicalProperties(annotationPage) as any),
     ...(descriptiveProperties(annotationPage) as any),
     ...(linkingProperties(annotationPage) as any),
-    items: annotationPage.resources as any,
+    items: annotationPage.resources && annotationPage.resources.length ? (annotationPage.resources as any) : undefined,
   });
 }
 

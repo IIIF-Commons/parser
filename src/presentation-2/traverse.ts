@@ -287,8 +287,13 @@ export class Traverse<
   }
 
   traverseAnnotationList(annotationList: AnnotationList): T['AnnotationList'] {
+    const list =
+      typeof annotationList === 'string'
+        ? ({ '@id': annotationList, '@type': 'oa:AnnotationList' } as any)
+        : annotationList;
+
     return this.traverseType(
-      this.traverseDescriptive(this.traverseLinking(this.traverseAnnotationListItems(annotationList))),
+      this.traverseDescriptive(this.traverseAnnotationListItems(list)),
       this.traversals.annotationList
     );
   }
@@ -353,7 +358,7 @@ export class Traverse<
 
   traverseContentResource(contentResource: CommonContentResource): T['ContentResource'] {
     if (contentResource['@type'] === 'oa:Choice') {
-      return this.traverseChoice(contentResource);
+      return this.traverseChoice(contentResource as any);
     }
 
     return this.traverseType(
