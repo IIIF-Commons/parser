@@ -1,5 +1,6 @@
 import { Traverse } from '../../src/presentation-3';
 import { Canvas, Manifest } from '@iiif/presentation-3';
+import accompanying from '../../fixtures/presentation-3/accompanying-canvas.json';
 
 describe('utility/iiif-traverse', () => {
   const manifest = (): Manifest => ({
@@ -186,5 +187,24 @@ describe('utility/iiif-traverse', () => {
       'https://example.org/iiif/book1/canvas/p1',
       'https://example.org/iiif/book1/manifest',
     ]);
+  });
+
+  test('it can traverse accompanying canvas', () => {
+    const annotationIds: string[] = [];
+
+    const traversal = new Traverse({
+      annotation: [
+        (anno) => {
+          annotationIds.push(anno.id);
+          return anno;
+        },
+      ],
+    });
+
+    traversal.traverseManifest(accompanying as any);
+
+    expect(annotationIds).toContain(
+      'https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying/annotation/image'
+    );
   });
 });

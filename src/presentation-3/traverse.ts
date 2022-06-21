@@ -311,15 +311,15 @@ export class Traverse {
   traversePosterCanvas<T extends Collection | Manifest | Canvas | Range>(json: T): T {
     // @deprecated
     if (json.posterCanvas) {
-      json.posterCanvas = this.traverseType(json.posterCanvas, this.traversals.canvas);
+      json.posterCanvas = this.traverseCanvas(json.posterCanvas);
     }
 
     if (json.placeholderCanvas) {
-      json.placeholderCanvas = this.traverseType(json.placeholderCanvas, this.traversals.canvas);
+      json.placeholderCanvas = this.traverseCanvas(json.placeholderCanvas);
     }
 
     if (json.accompanyingCanvas) {
-      json.accompanyingCanvas = this.traverseType(json.accompanyingCanvas, this.traversals.canvas);
+      json.accompanyingCanvas = this.traverseCanvas(json.accompanyingCanvas);
     }
 
     return json;
