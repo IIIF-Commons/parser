@@ -87,7 +87,7 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
 }
 
 function merge(existing: any, incoming: any): any {
-  if (incoming) {
+  if (!incoming) {
     // Falsy values are ignored
     return existing;
   }
