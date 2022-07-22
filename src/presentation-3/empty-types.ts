@@ -9,6 +9,8 @@ import {
 import { ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
 
 export const EMPTY = [];
+// Prevent accidental mutation
+Object.freeze(EMPTY);
 
 export const emptyAnnotation: AnnotationNormalized = {
   id: 'https://iiif-parser/annotation',
