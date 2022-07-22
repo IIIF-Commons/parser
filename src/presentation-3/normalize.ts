@@ -15,6 +15,7 @@ import {
   Reference,
 } from '@iiif/presentation-3';
 import {
+  EMPTY,
   emptyAgent,
   emptyAnnotationPage,
   emptyCanvas,
@@ -73,7 +74,7 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
       const resource = getResource(r, defaultStringType || type);
       if (resource && resource.id && type) {
         storeType[resource.id] = storeType[resource.id]
-          ? (Object.assign({}, storeType[resource.id], resource) as any)
+          ? (mergeEntities(storeType[resource.id], resource) as any)
           : Object.assign({}, resource);
         return {
           id: resource.id,
@@ -83,6 +84,68 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
       return resource as T;
     };
   };
+}
+
+function merge(existing: any, incoming: any): any {
+  if (!incoming) {
+    // Falsy values are ignored
+    return existing;
+  }
+  if (Array.isArray(existing)) {
+    if (!Array.isArray(incoming)) {
+      throw new Error('Cannot merge array with non-array');
+    }
+    // For arrays, we check if any of the incoming values are not already in the
+    // existing values and add them if this is not the case. If the incoming
+    // value is an entity that is already in the existing values, it will be
+    // merged with the existing value.
+    const merged = [...existing];
+    for (const item of incoming) {
+      if (item === null || item === undefined) {
+        continue;
+      } if (Array.isArray(item)) {
+        // FIXME: How to handle this properly?
+        merged.push(item);
+      } else if (typeof item === 'object' && item.id && item.type) {
+        const existingIdx = merged.findIndex((e) => e.id === item.id && e.type === item.type);
+        if (existingIdx >= 0) {
+          merged[existingIdx] = merge(merged[existingIdx], item);
+        }
+      } else if (existing.indexOf(item) === -1) {
+        merged.push(item);
+      }
+    }
+    return merged;
+  } else if (typeof existing === 'object') {
+    if (Array.isArray(incoming) || typeof incoming !== 'object') {
+      throw new Error('Cannot merge object with non-object');
+    }
+    // For objects, we check the existing object for non-existing or "empty"
+    // properties and use the value from the incoming object for them
+    const merged = { ...existing };
+    for (const [key, val] of Object.entries(incoming)) {
+      const currentVal = merged[key];
+      if (currentVal === EMPTY || !currentVal) {
+        merged[key] = val;
+      } else {
+        merged[key] = merge(currentVal, val);
+      }
+    }
+    return merged;
+  } else if (existing) {
+    return existing;
+  }
+  return incoming;
+}
+
+function mergeEntities(existing: NormalizedEntity, incoming: any): NormalizedEntity {
+  if (typeof existing === 'string') {
+    return existing;
+  }
+  if (incoming.id !== (existing as any).id || incoming.type !== (existing as any).type) {
+    throw new Error('Can only merge entities with identical identifiers and type!');
+  }
+  return merge({ ...existing }, incoming);
 }
 
 function recordTypeInMapping(mapping: Record<string, string>) {

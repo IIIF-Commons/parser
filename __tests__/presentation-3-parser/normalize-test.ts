@@ -1,6 +1,7 @@
 import { normalize } from '../../src/presentation-3';
 
 import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__api__presentation__2.1__example__fixtures__1__manifest.json';
+import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
 
 describe('normalize', () => {
   test('normalize simple manifest', () => {
@@ -287,6 +288,21 @@ describe('normalize', () => {
     expect(result.resource).toEqual({
       id: 'https://example.org/iiif/book1/manifest',
       type: 'Manifest',
+    });
+  });
+
+  test('normalize manifest with start property', () => {
+    const db = normalize(manifestWithStartFixture);
+    expect(
+      (db.entities.Canvas as any)['https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2']
+    ).toMatchObject({
+      id: 'https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2',
+      type: 'Canvas',
+      label: {
+        en: ['Frontispiece'],
+      },
+      width: 3186,
+      height: 4612,
     });
   });
 });
