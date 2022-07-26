@@ -3,6 +3,7 @@ import { convertPresentation2 } from '../../src/presentation-2';
 import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__api__presentation__2.1__example__fixtures__1__manifest.json';
 import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
 import p2ManifestWithStart from '../../fixtures/presentation-2/bl-manifest.json';
+import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
 import { Manifest } from '@iiif/presentation-3';
 
 describe('normalize', () => {
@@ -341,5 +342,19 @@ describe('normalize', () => {
         "type": "SpecificResource",
       }
     `);
+
+  test('normalize manifest with start property', () => {
+    const db = normalize(manifestWithStartFixture);
+    expect(
+      (db.entities.Canvas as any)['https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2']
+    ).toMatchObject({
+      id: 'https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2',
+      type: 'Canvas',
+      label: {
+        en: ['Frontispiece'],
+      },
+      width: 3186,
+      height: 4612,
+    });
   });
 });
