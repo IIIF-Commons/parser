@@ -10,6 +10,7 @@ import {
   TechnicalProperties,
 } from '@iiif/presentation-3';
 import * as Presentation2 from '@iiif/presentation-2';
+import { compressSpecificResource } from '../shared/compress-specific-resource';
 
 export function languageString2to3(
   value: InternationalString | null | undefined
@@ -141,6 +142,11 @@ function* descriptiveProperties(prop: Partial<DescriptiveNormalized>): Generator
 }
 
 function* linkingProperties(prop: Partial<LinkingNormalized>) {
+  const startProp =
+    prop.start && prop.start.type && (prop.start as any).type === 'SpecificResource'
+      ? compressSpecificResource(prop.start as any)
+      : prop.start;
+
   return [
     ['seeAlso', unNestArray(yield prop.seeAlso)],
     // @todo support more services (like auth)
@@ -149,7 +155,7 @@ function* linkingProperties(prop: Partial<LinkingNormalized>) {
     // @todo part of to within
     // ['within', unNestArray(yield prop.partOf)],
     // @todo this may not work completely.
-    ['startCanvas', prop.start ? prop.start.id : undefined],
+    ['startCanvas', startProp ? startProp.id : undefined],
   ];
 }
 
@@ -161,7 +167,7 @@ function isFragmentSelector(resource: unknown): resource is FragmentSelector {
 }
 
 function specificResourceToString(resource: Reference<any> | SpecificResource) {
-  if (isSpecificResource(resource)) {
+  if (resource && isSpecificResource(resource)) {
     let id = resource.id;
     const selector: Selector | undefined = resource.selector
       ? Array.isArray(resource.selector)
@@ -174,7 +180,7 @@ function specificResourceToString(resource: Reference<any> | SpecificResource) {
     }
     return id;
   }
-  return resource.id;
+  return resource?.id;
 }
 
 export const serializeConfigPresentation2: SerializeConfig = {

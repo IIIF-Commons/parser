@@ -15,7 +15,13 @@ Object {
       "motivation": Array [
         "painting",
       ],
-      "target": "https://example.org/iiif/book1/canvas/p1",
+      "target": Object {
+        "source": Object {
+          "id": "https://example.org/iiif/book1/canvas/p1",
+          "type": "Canvas",
+        },
+        "type": "SpecificResource",
+      },
       "type": "Annotation",
     },
   },

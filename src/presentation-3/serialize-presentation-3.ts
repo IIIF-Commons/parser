@@ -4,8 +4,10 @@ import {
   ImageService2,
   ImageService3,
   LinkingNormalized,
+  SpecificResource,
   TechnicalProperties,
 } from '@iiif/presentation-3';
+import { compressSpecificResource } from '../shared/compress-specific-resource';
 
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
   return [
@@ -88,7 +90,13 @@ function* linkingProperties(
 
     // Don't yield these, they are references.
     ['partOf', filterEmpty(yield entity.partOf)],
-    ['start', entity.start],
+    [
+      'start',
+      // @todo remove once types updated.
+      entity.start && (entity.start as any).type === 'SpecificResource'
+        ? compressSpecificResource(entity.start as any as SpecificResource)
+        : entity.start,
+    ],
   ];
 }
 
@@ -164,6 +172,10 @@ export const serializeConfigPresentation3: SerializeConfig = {
           return [key, Array.isArray(item) ? item[0] : item];
         }
 
+        if (key === 'target') {
+          return [key, compressSpecificResource(item, true)];
+        }
+
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key]) => {
@@ -218,7 +230,11 @@ export const serializeConfigPresentation3: SerializeConfig = {
       } else {
         // Just push the reference.
         // @todo could also push in the label of the item?
-        rangeItems.push(item);
+        if (item && item.type === 'SpecificResource') {
+          rangeItems.push(compressSpecificResource(item));
+        } else {
+          rangeItems.push(item);
+        }
       }
     }
 

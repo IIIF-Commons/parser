@@ -27,6 +27,7 @@ import {
 import { convertPresentation2 } from '../presentation-2';
 import { NormalizedEntity } from './serialize';
 import { ResourceProvider, ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
+import { expandTargetToSpecificResource } from '../shared/expand-target';
 
 export const defaultEntities = {
   Collection: {},
@@ -247,10 +248,10 @@ function startCanvasToSpecificResource(manifest: Manifest): Manifest {
   return manifest;
 }
 
-function annotationTargetToSpecificResource(manifest: Annotation): Annotation {
+function annotationTargetToSpecificResource(annotation: Annotation): Annotation {
   const _annotation = Object.assign({}, annotation);
   if (_annotation.target) {
-    _annotation.start = toSpecificResource(_annotation.start, { typeHint: 'Canvas' }) as any;
+    _annotation.target = expandTargetToSpecificResource(_annotation.target as any, { typeHint: 'Canvas' }) as any;
     return _annotation;
   }
   return annotation;
