@@ -2,6 +2,8 @@ import * as Presentation3 from '@iiif/presentation-3';
 import * as Presentation2 from '@iiif/presentation-2';
 import { imageServiceProfiles, level1Support } from '../shared/image-api-profiles';
 import { Traverse } from './traverse';
+import { ensureArray } from '../shared/ensure-array';
+import { removeUndefinedProperties } from "../shared/remove-undefined-properties";
 
 const configuration = {
   attributionLabel: 'Attribution',
@@ -117,13 +119,6 @@ function getTypeFromProfile(inputProfile: string): string | undefined {
   }
 
   return undefined;
-}
-
-function ensureArray<T>(maybeArray: T | T[]): T[] {
-  if (Array.isArray(maybeArray)) {
-    return maybeArray;
-  }
-  return [maybeArray];
 }
 
 function removePrefix(str: string) {
@@ -326,15 +321,6 @@ function convertMetadata(
       value: convertLanguageMapping(item.value),
     };
   });
-}
-
-function removeUndefinedProperties(obj: any) {
-  for (const prop in obj) {
-    if (typeof obj[prop] === 'undefined' || obj[prop] === null) {
-      delete obj[prop];
-    }
-  }
-  return obj;
 }
 
 let mintedIdCounter = 0;

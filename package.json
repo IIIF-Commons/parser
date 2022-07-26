@@ -24,6 +24,11 @@
       "import": "./dist/esm/index.mjs",
       "default": "./dist/index.umd.js"
     },
+    "./strict": {
+      "require": "./dist/strict/cjs/index.js",
+      "import": "./dist/strict/esm/index.mjs",
+      "default": "./dist/strict/index.umd.js"
+    },
     "./upgrader": "./dist/upgrader/index.umd.js"
   },
   "typesVersions": {

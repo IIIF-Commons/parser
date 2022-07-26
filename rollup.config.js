@@ -15,6 +15,10 @@ export default [
     dist: './dist/presentation-2/index.d.ts',
   }),
   createTypeConfig({
+    source: './.build/types/presentation-3/strict-upgrade.d.ts',
+    dist: './dist/strict/index.d.ts',
+  }),
+  createTypeConfig({
     source: './.build/types/upgrader.d.ts',
     dist: './dist/upgrader/index.d.ts',
   }),
@@ -55,6 +59,20 @@ export default [
     ...baseConfig,
     dist: 'dist/presentation-2',
     input: './src/presentation-2/index.ts',
+    distPreset: 'cjs',
+  }),
+
+  // import {} from '@iiif/parser/strict';
+  createRollupConfig({
+    ...baseConfig,
+    dist: 'dist/strict',
+    input: './src/presentation-3/strict-upgrade.ts',
+    distPreset: 'esm',
+  }),
+  createRollupConfig({
+    ...baseConfig,
+    dist: 'dist/strict',
+    input: './src/presentation-3/strict-upgrade.ts',
     distPreset: 'cjs',
   }),
 
