@@ -489,8 +489,12 @@ Object {
         },
       ],
       "start": Object {
-        "id": "https://example.org/iiif/book1/canvas/p2",
-        "type": "Canvas",
+        "selector": undefined,
+        "source": Object {
+          "id": "https://example.org/iiif/book1/canvas/p2",
+          "type": "Canvas",
+        },
+        "type": "SpecificResource",
       },
       "structures": Array [
         Object {

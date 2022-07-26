@@ -1,5 +1,4 @@
 import {
-  Agent,
   Annotation,
   AnnotationCollection,
   AnnotationPage,
@@ -16,6 +15,7 @@ import {
   RangeItems,
   Required,
   Service,
+  SpecificResource,
 } from '@iiif/presentation-3';
 import { ResourceProvider } from '@iiif/presentation-3/resources/provider';
 
@@ -47,6 +47,7 @@ export type TraversalMap = {
   range?: Array<Traversal<Range>>;
   service?: Array<Traversal<Service>>;
   agent?: Array<Traversal<ResourceProvider>>;
+  specificResource?: Array<Traversal<SpecificResource>>;
 };
 
 export type TraverseOptions = {
@@ -96,6 +97,7 @@ export class Traverse {
       range: [],
       service: [],
       agent: [],
+      specificResource: [],
       ...traversals,
     };
     this.options = {
@@ -364,11 +366,24 @@ export class Traverse {
     );
   }
 
+  traverseSpecificResource(specificResource: SpecificResource, typeHint?: string): SpecificResource {
+    return this.traverseType<SpecificResource>(
+      {
+        ...specificResource,
+        source: this.traverseUnknown(specificResource.source, typeHint),
+      },
+      this.traversals.specificResource
+    );
+  }
+
   traverseRangeRanges(range: Range): Range {
     if (range.items) {
       range.items = range.items.map((rangeOrManifest: RangeItems) => {
         if (typeof rangeOrManifest === 'string') {
           return this.traverseCanvas({ id: rangeOrManifest, type: 'Canvas' });
+        }
+        if (rangeOrManifest.type === 'SpecificResource') {
+          return this.traverseSpecificResource(rangeOrManifest as SpecificResource, 'Canvas');
         }
         if (rangeOrManifest.type === 'Manifest') {
           return this.traverseManifest(rangeOrManifest as Manifest);
@@ -408,7 +423,7 @@ export class Traverse {
     return this.traverseType<Service>(service, this.traversals.service);
   }
 
-  traverseUnknown(resource: any) {
+  traverseUnknown(resource: any, typeHint?: string) {
     const type = identifyResource(resource);
 
     switch (type) {
@@ -430,8 +445,12 @@ export class Traverse {
         return this.traverseService(resource as Service);
       case 'Agent':
         return this.traverseAgent(resource as ResourceProvider);
-      default:
+      default: {
+        if (typeHint) {
+          return typeHint;
+        }
         throw new Error(`Unknown or unsupported resource type of ${type}`);
+      }
     }
   }
 }

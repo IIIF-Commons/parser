@@ -498,12 +498,16 @@ function flattenArray<T>(array: T[][]): T[] {
 function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manifest {
   const allCanvases = [];
   const behavior = [];
+  let start = undefined;
   for (const sequence of manifest.sequences || []) {
     if (sequence.canvases.length) {
       allCanvases.push(...sequence.canvases);
     }
     if (sequence.behavior) {
       behavior.push(...sequence.behavior);
+    }
+    if (sequence.startCanvas) {
+      start = sequence.startCanvas;
     }
   }
 
@@ -521,6 +525,7 @@ function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manife
     ...technical,
     ...descriptiveProperties(manifest),
     ...linkingProperties(manifest),
+    start: start,
     items: allCanvases,
     structures: manifest.structures as any,
   });
@@ -557,6 +562,7 @@ function upgradeAnnotationList(annotationPage: Presentation2.AnnotationList): Pr
 function upgradeSequence(sequence: Presentation2.Sequence): {
   canvases: Presentation3.Canvas[];
   behavior?: string[];
+  startCanvas?: Presentation3.Reference<'Canvas'> | undefined;
 } {
   /*
     rng = {"id": s.get('@id', self.mint_uri()), "type": "Range"}
@@ -582,11 +588,11 @@ function upgradeSequence(sequence: Presentation2.Sequence): {
       behavior: [],
     };
   }
-
   // @todo possibly return some ranges too.
   return {
     canvases: sequence.canvases as any[],
     behavior: sequence.viewingHint ? [sequence.viewingHint] : [],
+    startCanvas: sequence.startCanvas as any,
   };
 }
 

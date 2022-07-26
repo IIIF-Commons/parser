@@ -1,8 +1,12 @@
 import { SerializeConfig } from './serialize';
 import {
   DescriptiveNormalized,
+  FragmentSelector,
   InternationalString,
   LinkingNormalized,
+  Reference,
+  Selector,
+  SpecificResource,
   TechnicalProperties,
 } from '@iiif/presentation-3';
 import * as Presentation2 from '@iiif/presentation-2';
@@ -149,6 +153,30 @@ function* linkingProperties(prop: Partial<LinkingNormalized>) {
   ];
 }
 
+function isSpecificResource(resource: unknown): resource is SpecificResource {
+  return (resource as any).type === 'SpecificResource';
+}
+function isFragmentSelector(resource: unknown): resource is FragmentSelector {
+  return (resource as any) && (resource as any).type === 'FragmentSelector';
+}
+
+function specificResourceToString(resource: Reference<any> | SpecificResource) {
+  if (isSpecificResource(resource)) {
+    let id = resource.id;
+    const selector: Selector | undefined = resource.selector
+      ? Array.isArray(resource.selector)
+        ? resource.selector[0]
+        : resource.selector
+      : undefined;
+
+    if (isFragmentSelector(selector)) {
+      id += '#' + selector.value;
+    }
+    return id;
+  }
+  return resource.id;
+}
+
 export const serializeConfigPresentation2: SerializeConfig = {
   Manifest: function* (entity) {
     return [
@@ -245,10 +273,11 @@ export const serializeConfigPresentation2: SerializeConfig = {
     const canvases = [];
 
     if (entity.items) {
-      for (const item of entity.items) {
+      for (const _item of entity.items) {
+        const item = _item.type === 'SpecificResource' ? _item.source : _item;
         const canvas = yield item;
         members.push({
-          '@id': item.id,
+          '@id': specificResourceToString(_item),
           '@type': item.type,
           label: canvas ? canvas.label : undefined,
           within: entity.id,
