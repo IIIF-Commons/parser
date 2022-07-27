@@ -382,14 +382,14 @@
   resolved "https://registry.yarnpkg.com/@iiif/presentation-2/-/presentation-2-1.0.2.tgz#c712c4a40cc5b7291b8d92646b0ec8b8215b9b3d"
   integrity sha512-EN/p+td5VrHvUsQXV26VkaDFW0HG2GPRaibPlxJRip8au8ABBrOYPIcBH69Hyk3I0UnW3xzK2VsZ9TcuQEn0Mw==
 
-"@iiif/presentation-3-normalized@^0.9.6":
-  version "0.9.6"
-  resolved "https://registry.yarnpkg.com/@iiif/presentation-3-normalized/-/presentation-3-normalized-0.9.6.tgz#9346ae6307c5121e7e590c75f8f0e130fa91e38f"
-  integrity sha512-EHLfw9rNjfL5uFSHK9JqIveqhBU/s7hIQrc/Z6UEuO64vHXYdran5CL7nEPXeJDFFalG/DNfoLCrj5bWa1EnHg==
+"@iiif/presentation-3-normalized@^0.9.7":
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/@iiif/presentation-3-normalized/-/presentation-3-normalized-0.9.7.tgz#19386234e07c91c996d15ac5e1d86d1e1882e128"
+  integrity sha512-Aqk0sYBFIH5W3wmVxW02tnAFbNzUU5oPygGQjvszB3PP2nSkFQ1skVjqJhQPPZTyi/de1qcJUrgSy0vp6s+c5A==
   dependencies:
-    "@iiif/presentation-3" "^2.0.4"
+    "@iiif/presentation-3" "^2.0.5"
 
-"@iiif/presentation-3@^2.0.4", "@iiif/presentation-3@^2.0.5":
+"@iiif/presentation-3@^2.0.5":
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/@iiif/presentation-3/-/presentation-3-2.0.5.tgz#04c0c980ba586881984ed9433375d207f9af52ad"
   integrity sha512-Iy5erfTKs1zOjwq8WiTmOeP5ZmrBFVVzBXMbKIIdv38ci1loeAR9fboncncPW7ZPqXUqeCMkjFGnP/HL22TggA==
