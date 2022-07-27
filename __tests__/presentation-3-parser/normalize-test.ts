@@ -342,7 +342,7 @@ describe('normalize', () => {
         "type": "SpecificResource",
       }
     `);
-
+  });
   test('normalize manifest with start property', () => {
     const db = normalize(manifestWithStartFixture);
     expect(

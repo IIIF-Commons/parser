@@ -3,7 +3,7 @@ import * as Presentation2 from '@iiif/presentation-2';
 import { imageServiceProfiles, level1Support } from '../shared/image-api-profiles';
 import { Traverse } from './traverse';
 import { ensureArray } from '../shared/ensure-array';
-import { removeUndefinedProperties } from "../shared/remove-undefined-properties";
+import { removeUndefinedProperties } from '../shared/remove-undefined-properties';
 
 const configuration = {
   attributionLabel: 'Attribution',

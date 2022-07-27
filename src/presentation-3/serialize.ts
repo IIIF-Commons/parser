@@ -1,18 +1,15 @@
+import { AnnotationCollection, ContentResource, Reference, Selector } from '@iiif/presentation-3';
 import {
-  AnnotationCollection,
   AnnotationCollectionNormalized,
   AnnotationNormalized,
   AnnotationPageNormalized,
   CanvasNormalized,
   CollectionNormalized,
-  ContentResource,
   ManifestNormalized,
   RangeNormalized,
-  Reference,
-  Selector,
+  ResourceProviderNormalized,
   ServiceNormalized,
-} from '@iiif/presentation-3';
-import { ResourceProvider, ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
+} from '@iiif/presentation-3-normalized';
 
 export const UNSET = '__$UNSET$__';
 export const UNWRAP = '__$UNWRAP$__';

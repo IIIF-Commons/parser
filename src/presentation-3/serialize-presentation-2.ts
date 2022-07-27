@@ -1,14 +1,13 @@
 import { SerializeConfig } from './serialize';
 import {
-  DescriptiveNormalized,
   FragmentSelector,
   InternationalString,
-  LinkingNormalized,
   Reference,
   Selector,
   SpecificResource,
   TechnicalProperties,
 } from '@iiif/presentation-3';
+import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
 import * as Presentation2 from '@iiif/presentation-2';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 
@@ -281,15 +280,17 @@ export const serializeConfigPresentation2: SerializeConfig = {
     if (entity.items) {
       for (const _item of entity.items) {
         const item = _item.type === 'SpecificResource' ? _item.source : _item;
-        const canvas = yield item;
-        members.push({
-          '@id': specificResourceToString(_item),
-          '@type': item.type,
-          label: canvas ? canvas.label : undefined,
-          within: entity.id,
-        });
-        if (item.type === 'Canvas') {
-          canvases.push(item.id);
+        if (item) {
+          const canvas = yield item;
+          members.push({
+            '@id': specificResourceToString(_item),
+            '@type': item.type,
+            label: canvas ? canvas.label : undefined,
+            within: entity.id,
+          });
+          if (item.type === 'Canvas') {
+            canvases.push(item.id);
+          }
         }
       }
     }

@@ -2,19 +2,15 @@ import { Traverse } from './traverse';
 import {
   Annotation,
   AnnotationPage,
-  AnnotationPageNormalized,
   Canvas,
-  CanvasNormalized,
   Collection,
-  CollectionNormalized,
   Manifest,
-  ManifestNormalized,
   PolyEntity,
   Range,
-  RangeNormalized,
   Reference,
   Selector,
   SpecificResource,
+  ResourceProvider,
 } from '@iiif/presentation-3';
 import {
   EMPTY,
@@ -27,8 +23,16 @@ import {
 } from './empty-types';
 import { convertPresentation2 } from '../presentation-2';
 import { NormalizedEntity } from './serialize';
-import { ResourceProvider, ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
 import { expandTargetToSpecificResource } from '../shared/expand-target';
+import {
+  AnnotationPageNormalized,
+  CanvasNormalized,
+  CollectionNormalized,
+  ManifestNormalized,
+  RangeNormalized,
+  ResourceProviderNormalized,
+} from '@iiif/presentation-3-normalized';
+import { isSpecificResource } from '../shared/is-specific-resource';
 
 export const defaultEntities = {
   Collection: {},
@@ -106,7 +110,8 @@ function merge(existing: any, incoming: any): any {
     for (const item of incoming) {
       if (item === null || item === undefined) {
         continue;
-      } if (Array.isArray(item)) {
+      }
+      if (Array.isArray(item)) {
         // FIXME: How to handle this properly?
         merged.push(item);
       } else if (typeof item === 'object' && item.id && item.type) {
@@ -229,9 +234,6 @@ function ensureArrayOnAnnotation(annotation: Annotation): Annotation {
   if (annotation.seeAlso) {
     annotation.seeAlso = ensureArray(annotation.seeAlso);
   }
-  if (annotation.body) {
-    annotation.body = ensureArray(annotation.body);
-  }
   if (annotation.audience) {
     annotation.audience = ensureArray(annotation.audience);
   }
@@ -245,10 +247,6 @@ function ensureArrayOnAnnotation(annotation: Annotation): Annotation {
   return annotation;
 }
 
-function isSpecificResource(resource: unknown): resource is SpecificResource {
-  return (resource as any).type === 'SpecificResource';
-}
-
 function toSpecificResource(
   target: string | Reference<any> | SpecificResource,
   { typeHint, partOfTypeHint }: { typeHint?: string; partOfTypeHint?: string } = {}
@@ -258,6 +256,10 @@ function toSpecificResource(
   }
 
   if (isSpecificResource(target)) {
+    if (typeof target.source === 'string') {
+      target.source = { id: target.source, type: typeHint || 'unknown' };
+    }
+
     if (target.source.type === 'Canvas' && target.source.partOf && typeof target.source.partOf === 'string') {
       target.source.partOf = [
         {
@@ -320,6 +322,10 @@ function annotationTargetToSpecificResource(annotation: Annotation): Annotation 
   return annotation;
 }
 
+export function traverseSpecificResource(specificResource: SpecificResource): SpecificResource {
+  return specificResource;
+}
+
 export function normalize(unknownEntity: unknown) {
   const entity = convertPresentation2(unknownEntity);
   const entities = getDefaultEntities();
@@ -377,6 +383,9 @@ export function normalize(unknownEntity: unknown) {
       ensureDefaultFields<ResourceProvider, ResourceProviderNormalized>(emptyAgent),
       addToMapping<ResourceProvider>('Agent'),
       addToEntities<ResourceProvider>('Agent'),
+    ],
+    specificResource: [
+      traverseSpecificResource,
     ],
     // Remove this, content resources are NOT usually processed by this library.
     // They need to be available in full when they get passed down the chain.

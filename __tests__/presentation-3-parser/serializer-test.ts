@@ -191,9 +191,9 @@ describe('serializer', () => {
           {
             id: 'https://example.org/iiif/book1/annotations/p1',
             type: 'AnnotationPage',
-            items: [
-              // Annotations about the Manifest are included here
-            ],
+            // items: [
+            //   // Annotations about the Manifest are included here
+            // ],
           },
         ],
       } as const);
@@ -219,7 +219,6 @@ describe('serializer', () => {
         "annotations": Array [
           Object {
             "id": "https://example.org/iiif/book1/annotations/p1",
-            "items": Array [],
             "type": "AnnotationPage",
           },
         ],

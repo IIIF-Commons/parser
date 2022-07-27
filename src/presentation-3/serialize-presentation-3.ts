@@ -1,13 +1,12 @@
-import { SerializeConfig, UNWRAP } from './serialize';
+import { SerializeConfig, UNSET, UNWRAP } from './serialize';
 import {
-  DescriptiveNormalized,
   ImageService2,
   ImageService3,
-  LinkingNormalized,
-  SpecificResource,
+  ResourceProvider,
   TechnicalProperties,
 } from '@iiif/presentation-3';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
+import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
 
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
   return [
@@ -16,8 +15,8 @@ function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof
     ['type', entity.type],
     ['format', entity.format],
     ['profile', entity.profile],
-    ['height', entity.height],
-    ['width', entity.width],
+    ['height', entity.height || undefined],
+    ['width', entity.width || undefined],
     ['duration', entity.duration || undefined],
     ['viewingDirection', entity.viewingDirection !== 'left-to-right' ? entity.viewingDirection : undefined],
     ['behavior', entity.behavior && entity.behavior.length ? entity.behavior : undefined],
@@ -86,16 +85,14 @@ function* linkingProperties(
     ['rendering', filterEmpty(yield entity.rendering)],
     ['supplementary', filterEmpty(yield entity.supplementary)],
     ['homepage', filterEmpty(yield entity.homepage)],
-    ['logo', filterEmpty(yield entity.logo)],
+    ['logo', filterEmpty(yield (entity as ResourceProvider).logo)],
 
     // Don't yield these, they are references.
     ['partOf', filterEmpty(yield entity.partOf)],
     [
       'start',
       // @todo remove once types updated.
-      entity.start && (entity.start as any).type === 'SpecificResource'
-        ? compressSpecificResource(entity.start as any as SpecificResource)
-        : entity.start,
+      entity.start ? compressSpecificResource(entity.start) : entity.start,
     ],
   ];
 }
@@ -111,13 +108,17 @@ export const serializeConfigPresentation3: SerializeConfig = {
     }
 
     return [
-      ['@context', 'http://iiif.io/api/presentation/3/context.json'],
+      [
+        '@context',
+        (entity as any)['@context'] ? (entity as any)['@context'] : 'http://iiif.io/api/presentation/3/context.json',
+      ],
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
       ['items', yield entity.items],
       ['structures', filterEmpty(yield entity.structures)],
       ['annotations', filterEmpty(yield entity.annotations)],
+      ['navPlace', (entity as any).navPlace], // @todo remove when types are updated
     ];
   },
 
@@ -129,6 +130,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...(yield* linkingProperties(entity)),
       ['items', yield entity.items],
       ['annotations', filterEmpty(yield entity.annotations)],
+      ['navPlace', (entity as any).navPlace], // @todo remove when types are updated
     ];
   },
 
@@ -151,11 +153,13 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return key !== 'items';
       });
 
+    const items = yield entity.items;
+
     return [
       // Any more properties?
       ...entries,
       ...(yield* linkingProperties(entity)),
-      ['items', yield entity.items],
+      ['items', items.length ? items : UNSET],
     ];
   },
 
@@ -173,7 +177,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         }
 
         if (key === 'target') {
-          return [key, compressSpecificResource(item, true)];
+          return [key, compressSpecificResource(item, { allowString: true, allowSourceString: true })];
         }
 
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
@@ -188,14 +192,17 @@ export const serializeConfigPresentation3: SerializeConfig = {
   },
 
   ContentResource: function* (entity: any) {
-    return [
-      // Image properties.
-      ...technicalProperties(entity),
-      ...(yield* descriptiveProperties(entity)),
-      ...(yield* linkingProperties(entity)),
-      ['annotations', filterEmpty(yield entity.annotations)],
-      ['items', filterEmpty(yield entity.items)],
-    ];
+    return mergeRemainingProperties(
+      [
+        // Image properties.
+        ...technicalProperties(entity),
+        ...(yield* descriptiveProperties(entity)),
+        ...(yield* linkingProperties(entity)),
+        ['annotations', filterEmpty(yield entity.annotations)],
+        ['items', filterEmpty(yield entity.items)],
+      ],
+      entity
+    );
   },
 
   AnnotationCollection: function* (entity) {
@@ -215,6 +222,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         ...(yield* descriptiveProperties(entity)),
         ...(yield* linkingProperties(entity)),
         ['items', filterEmpty(yield entity.items)],
+        ['navPlace', (entity as any).navPlace], // @todo remove when types are updated
       ];
     }
     return [...technicalProperties(entity), ...(yield* descriptiveProperties(entity))];
@@ -244,6 +252,19 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...(yield* linkingProperties(entity)),
       ['items', rangeItems],
       ['annotations', filterEmpty(yield entity.annotations)],
+      ['navPlace', (entity as any).navPlace], // @todo remove when types are updated
     ];
   },
 };
+
+function mergeRemainingProperties(entries: [string, any][], object: any): [string, any][] {
+  const keys = Object.keys(object);
+  const alreadyParsed = entries.map(([a]) => a);
+
+  for (const key of keys) {
+    if (alreadyParsed.indexOf(key) === -1 && typeof object[key] !== 'undefined') {
+      entries.push([key, object[key]]);
+    }
+  }
+  return entries;
+}

@@ -1,10 +1,23 @@
-import { SpecificResource } from '../../../presentation-3-types';
+import { SpecificResource } from '@iiif/presentation-3';
 
-export function compressSpecificResource(target: undefined | SpecificResource, allowString = false): any {
+export function compressSpecificResource(
+  target: undefined | SpecificResource,
+  { allowSourceString = true, allowString = false }: { allowString?: boolean; allowSourceString?: boolean } = {}
+): any {
+  const fixSource = (resource: any) => {
+    if (allowSourceString && resource && resource.source && typeof resource.source !== 'string') {
+      const keys = Object.keys(resource.source);
+      if (resource.source.id && resource.source.type && keys.length === 2) {
+        return { ...resource, source: resource.source.id };
+      }
+    }
+    return resource;
+  };
+
   if (target) {
     if (target.source && target.source.partOf) {
       // Ignore if we have a partOf
-      return target;
+      return fixSource(target);
     }
     const keys = Object.keys(target);
     if (
@@ -25,5 +38,5 @@ export function compressSpecificResource(target: undefined | SpecificResource, a
       }
     }
   }
-  return target;
+  return fixSource(target);
 }
