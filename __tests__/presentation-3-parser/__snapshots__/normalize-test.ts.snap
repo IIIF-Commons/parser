@@ -15,7 +15,13 @@ Object {
       "motivation": Array [
         "painting",
       ],
-      "target": "https://example.org/iiif/book1/canvas/p1",
+      "target": Object {
+        "source": Object {
+          "id": "https://example.org/iiif/book1/canvas/p1",
+          "type": "Canvas",
+        },
+        "type": "SpecificResource",
+      },
       "type": "Annotation",
     },
   },
@@ -489,8 +495,12 @@ Object {
         },
       ],
       "start": Object {
-        "id": "https://example.org/iiif/book1/canvas/p2",
-        "type": "Canvas",
+        "selector": undefined,
+        "source": Object {
+          "id": "https://example.org/iiif/book1/canvas/p2",
+          "type": "Canvas",
+        },
+        "type": "SpecificResource",
       },
       "structures": Array [
         Object {

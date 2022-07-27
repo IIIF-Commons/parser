@@ -13,6 +13,8 @@ import {
   Range,
   RangeNormalized,
   Reference,
+  Selector,
+  SpecificResource,
 } from '@iiif/presentation-3';
 import {
   EMPTY,
@@ -26,6 +28,7 @@ import {
 import { convertPresentation2 } from '../presentation-2';
 import { NormalizedEntity } from './serialize';
 import { ResourceProvider, ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
+import { expandTargetToSpecificResource } from '../shared/expand-target';
 
 export const defaultEntities = {
   Collection: {},
@@ -242,6 +245,81 @@ function ensureArrayOnAnnotation(annotation: Annotation): Annotation {
   return annotation;
 }
 
+function isSpecificResource(resource: unknown): resource is SpecificResource {
+  return (resource as any).type === 'SpecificResource';
+}
+
+function toSpecificResource(
+  target: string | Reference<any> | SpecificResource,
+  { typeHint, partOfTypeHint }: { typeHint?: string; partOfTypeHint?: string } = {}
+): SpecificResource {
+  if (typeof target === 'string') {
+    target = { id: target, type: typeHint || 'unknown' };
+  }
+
+  if (isSpecificResource(target)) {
+    if (target.source.type === 'Canvas' && target.source.partOf && typeof target.source.partOf === 'string') {
+      target.source.partOf = [
+        {
+          id: target.source.partOf,
+          type: partOfTypeHint || 'Manifest', // Most common is manifest.
+        },
+      ];
+    }
+
+    return target;
+  }
+
+  let selector: Selector | undefined;
+  if (target.id.indexOf('#') !== -1) {
+    const [id, fragment] = target.id.split('#');
+    target.id = id;
+    if (fragment) {
+      selector = {
+        type: 'FragmentSelector',
+        value: fragment,
+      };
+    }
+  }
+
+  return {
+    type: 'SpecificResource',
+    source: target,
+    selector,
+  };
+}
+
+function rangeItemToSpecificResource(range: Range): Range {
+  const _range = Object.assign({}, range);
+  if (range && range.items) {
+    _range.items = range.items.map((rangeItem) => {
+      if (typeof rangeItem === 'string' || rangeItem.type === 'Canvas') {
+        return toSpecificResource(rangeItem);
+      }
+      return rangeItem;
+    });
+  }
+  return _range;
+}
+
+function startCanvasToSpecificResource(manifest: Manifest): Manifest {
+  const _manifest = Object.assign({}, manifest);
+  if (_manifest.start) {
+    _manifest.start = toSpecificResource(_manifest.start, { typeHint: 'Canvas' }) as any;
+    return _manifest;
+  }
+  return manifest;
+}
+
+function annotationTargetToSpecificResource(annotation: Annotation): Annotation {
+  const _annotation = Object.assign({}, annotation);
+  if (_annotation.target) {
+    _annotation.target = expandTargetToSpecificResource(_annotation.target as any, { typeHint: 'Canvas' }) as any;
+    return _annotation;
+  }
+  return annotation;
+}
+
 export function normalize(unknownEntity: unknown) {
   const entity = convertPresentation2(unknownEntity);
   const entities = getDefaultEntities();
@@ -257,6 +335,7 @@ export function normalize(unknownEntity: unknown) {
     ],
     manifest: [
       ensureDefaultFields<Manifest, ManifestNormalized>(emptyManifest),
+      startCanvasToSpecificResource,
       addToMapping<Manifest>('Manifest'),
       addToEntities<Manifest>('Manifest'),
     ],
@@ -276,6 +355,7 @@ export function normalize(unknownEntity: unknown) {
       // It will be normalized through selectors and pattern matching.
       addMissingIdToContentResource('Annotation'),
       ensureArrayOnAnnotation,
+      annotationTargetToSpecificResource,
       addToMapping<Annotation>('Annotation'),
       addToEntities<Annotation>('Annotation'),
     ],
@@ -289,6 +369,7 @@ export function normalize(unknownEntity: unknown) {
     range: [
       // This will add a LOT to the state, maybe this will be configurable down the line.
       ensureDefaultFields<Range, RangeNormalized>(emptyRange),
+      rangeItemToSpecificResource,
       addToMapping<Range>('Range', 'Canvas'),
       addToEntities<Range>('Range', 'Canvas'),
     ],

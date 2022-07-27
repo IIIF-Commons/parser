@@ -1,7 +1,10 @@
 import { normalize } from '../../src/presentation-3';
-
+import { convertPresentation2 } from '../../src/presentation-2';
 import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__api__presentation__2.1__example__fixtures__1__manifest.json';
+import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
+import p2ManifestWithStart from '../../fixtures/presentation-2/bl-manifest.json';
 import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
+import { Manifest } from '@iiif/presentation-3';
 
 describe('normalize', () => {
   test('normalize simple manifest', () => {
@@ -290,6 +293,55 @@ describe('normalize', () => {
       type: 'Manifest',
     });
   });
+
+  test('normalize with ranges', () => {
+    const result = normalize(blManifestWithRanges);
+
+    expect(result.resource).toEqual({
+      id: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/manifest.json',
+      type: 'Manifest',
+    });
+
+    const range = (result.entities.Range as any)[
+      'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00002e'
+    ];
+
+    expect(range.type).toEqual('Range');
+    expect(range.items[0].type).toEqual('SpecificResource');
+    expect(range.items[0]).toMatchInlineSnapshot(`
+      Object {
+        "selector": Object {
+          "type": "FragmentSelector",
+          "value": "t=0,1398.84",
+        },
+        "source": Object {
+          "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000b",
+          "type": "Canvas",
+        },
+        "type": "SpecificResource",
+      }
+    `);
+  });
+
+  test('upgrade + normalize start property', () => {
+    const p3manifest = convertPresentation2(p2ManifestWithStart) as Manifest;
+    expect(p3manifest).toBeDefined();
+    expect(p3manifest.start).toEqual({
+      id: 'https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100022545254.0x000002',
+      type: 'Canvas',
+    });
+
+    const result = normalize(p3manifest);
+    expect(((result.entities.Manifest as any)[p3manifest.id] as Manifest).start).toMatchInlineSnapshot(`
+      Object {
+        "selector": undefined,
+        "source": Object {
+          "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100022545254.0x000002",
+          "type": "Canvas",
+        },
+        "type": "SpecificResource",
+      }
+    `);
 
   test('normalize manifest with start property', () => {
     const db = normalize(manifestWithStartFixture);
