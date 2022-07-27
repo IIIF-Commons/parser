@@ -1,5 +1,5 @@
 import { compressSpecificResource } from '../../src/shared/compress-specific-resource';
-import { SpecificResource } from '../../../presentation-3-types';
+import { SpecificResource } from '@iiif/presentation-3';
 
 describe('Misc Utilites', function () {
   test('compressSpecificResource', () => {
