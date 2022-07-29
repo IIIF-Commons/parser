@@ -11,6 +11,8 @@ export * from './profiles/level-to-profile';
 export * from './profiles/is-level-0';
 export * from './profiles/supports';
 export * from './profiles/supports-custom-sizes';
+export * from './profiles/image-service-supports-format';
+export * from './profiles/image-service-supports-request';
 export * from './serialize/image-service-request-to-string';
 export * from './serialize/region-parameter-to-string';
 export * from './serialize/rotation-parameter-to-string';

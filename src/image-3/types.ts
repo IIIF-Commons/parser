@@ -1,6 +1,3 @@
-import { ImageService, LinkingProperties } from '@iiif/presentation-3';
-import { ExtraFeature } from './profiles/profiles';
-
 /**
  * Size parameter
  *
