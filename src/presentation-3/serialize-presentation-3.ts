@@ -1,10 +1,5 @@
 import { SerializeConfig, UNSET, UNWRAP } from './serialize';
-import {
-  ImageService2,
-  ImageService3,
-  ResourceProvider,
-  TechnicalProperties,
-} from '@iiif/presentation-3';
+import { ImageService2, ImageService3, ResourceProvider, TechnicalProperties } from '@iiif/presentation-3';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
 
