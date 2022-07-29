@@ -1,8 +1,8 @@
-import { Service } from '../types';
+import { ImageService } from '@iiif/presentation-3';
 import { isImageService } from '../utilities/is-image-service';
 import { level1Support, Profile } from './profiles';
 
-export function supportsCustomSizes(service: Service): boolean {
+export function supportsCustomSizes(service: ImageService): boolean {
   if (!isImageService(service)) {
     return false;
   }

@@ -1,10 +1,10 @@
+import { ImageService } from '@iiif/presentation-3';
 import { extraFeatures, Profile } from './profiles';
-import { Service } from '../types';
 import { isImageService } from '../utilities/is-image-service';
 import { combineProfiles } from './combine-profiles';
 
 export function supports(
-  service: Service,
+  service: ImageService,
   req: Partial<Profile> & { exactSize?: { width?: number; height?: number } }
 ) {
   if (!isImageService(service)) {
