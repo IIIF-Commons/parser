@@ -11,7 +11,7 @@ import { execa } from "execa";
   buildMsg('UMD');
   await build(
     defineConfig({
-      entry: `src/index.ts`,
+      entry: `src/index.umd.ts`,
       name: 'index',
       outDir: DIST,
       globalName: 'IIIFParser',
@@ -44,6 +44,14 @@ import { execa } from "execa";
       outDir: `${DIST}/strict`,
     })
   )
+  buildMsg('@iiif/parser/image-3');
+  await build(
+    defineConfig({
+      entry: './src/image-3/index.ts',
+      name: 'index',
+      outDir: `${DIST}/image-3`,
+    })
+  )
 
   buildMsg('@iiif/parser/upgrader');
   await build(
@@ -68,6 +76,9 @@ import { execa } from "execa";
 
   listItem('@iiif/parser/upgrader');
   await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/upgrader/index.d.ts`, './src/upgrader.ts'])
+
+  listItem('@iiif/parser/image-3');
+  await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/image-3/index.d.ts`, './src/image-3/index.ts'])
 
   function buildMsg(name) {
     console.log(chalk.grey(`\n\nBuilding ${chalk.blue(name)}\n`));

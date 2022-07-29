@@ -19,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fragment selectors in SpecificResources, strings and `{id,type}` References are now normalised, reducing the need to parse IDs to grab the ID/Type
 - Added expand target helper, used internally for normalization (possibly useful for content state).
 - New sub-package `@iiif/parser/strict` for fixing common mistakes in Presentation 3, with detailed feedback for implementors.
+- New sub-package `@iiif/parser/image-3` for parsing IIIF Image API and some helpers
 - Test coverage across every [IIIF Cookbook](https://iiif.io/api/cookbook) recipe, testing:
   - Parsing / Traversing the IIIF
   - Normalizing the IIIF correctly
