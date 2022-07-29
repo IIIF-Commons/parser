@@ -14,13 +14,13 @@ describe('Misc Utilites', function () {
     };
 
     expect(compressSpecificResource(state, { allowSourceString: false })).toMatchInlineSnapshot(`
-      Object {
+      {
         "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
-        "selector": Object {
+        "selector": {
           "t": 120.5,
           "type": "PointSelector",
         },
-        "source": Object {
+        "source": {
           "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
           "type": "Canvas",
         },
@@ -40,9 +40,9 @@ describe('Misc Utilites', function () {
     };
 
     expect(compressSpecificResource(state, { allowSourceString: true })).toMatchInlineSnapshot(`
-      Object {
+      {
         "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
-        "selector": Object {
+        "selector": {
           "t": 120.5,
           "type": "PointSelector",
         },
