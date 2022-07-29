@@ -23,9 +23,7 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "rootDir": "./src",
-    "paths": {
-      "@iiif/presentation-2": ["./node_modules/@hyperion-framework/presentation-2"],
-    }
+    "types": ["vitest/globals"]
   },
   "include": [
     "./src/**/*",
@@ -33,7 +31,6 @@
   ],
   "exclude": [
     "node_modules",
-    "dist",
-    "lib",
+    "dist"
   ]
 }
