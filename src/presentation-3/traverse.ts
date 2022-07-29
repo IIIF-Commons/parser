@@ -147,10 +147,10 @@ export class Traverse {
       resource.seeAlso = resource.seeAlso.map((content) => this.traverseType(content, this.traversals.contentResource));
     }
     if (resource.service) {
-      resource.service = resource.service.map((service) => this.traverseType(service, this.traversals.service));
+      resource.service = resource.service.map((service) => this.traverseService(service));
     }
     if (resource.services) {
-      resource.services = resource.services.map((service) => this.traverseType(service, this.traversals.service));
+      resource.services = resource.services.map((service) => this.traverseService(service));
     }
     if (resource.logo) {
       resource.logo = resource.logo.map((content) => this.traverseType(content, this.traversals.contentResource));
@@ -363,7 +363,7 @@ export class Traverse {
     if (contentResourceJson && (contentResourceJson as IIIFExternalWebResource)!.service) {
       (contentResourceJson as IIIFExternalWebResource).service = (
         (contentResourceJson as IIIFExternalWebResource).service || []
-      ).map((service) => this.traverseType(service, this.traversals.service));
+      ).map((service) => this.traverseService(service));
     }
 
     return contentResourceJson;
@@ -447,7 +447,11 @@ export class Traverse {
   }
 
   traverseService(service: Service): Service {
-    return this.traverseType<Service>(service, this.traversals.service);
+    const _service: any = Object.assign({}, service);
+    if (_service && _service.service) {
+      _service.service = _service.service.map((innerService: any) => this.traverseService(innerService));
+    }
+    return this.traverseType<Service>(_service, this.traversals.service);
   }
 
   traverseUnknown(resource: any, typeHint?: string) {

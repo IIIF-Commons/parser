@@ -11,6 +11,7 @@ import {
   Selector,
   SpecificResource,
   ResourceProvider,
+  Service,
 } from '@iiif/presentation-3';
 import {
   EMPTY,
@@ -20,9 +21,10 @@ import {
   emptyCollection,
   emptyManifest,
   emptyRange,
+  emptyService,
 } from './empty-types';
 import { convertPresentation2 } from '../presentation-2';
-import { NormalizedEntity } from './serialize';
+import { CompatibleStore, NormalizedEntity } from './serialize';
 import { expandTargetToSpecificResource } from '../shared/expand-target';
 import {
   AnnotationPageNormalized,
@@ -69,7 +71,7 @@ function getResource(entityOrString: PolyEntity, type: string): Reference {
     return { id: entityOrString, type };
   }
   if (!entityOrString.id) {
-    throw new Error(`Invalid resource does not have an ID (${type})`);
+    throw new Error(`Invalid resource does not have an ID (${JSON.stringify(entityOrString)}, ${type})`);
   }
   return entityOrString as Reference;
 }
@@ -163,13 +165,60 @@ function recordTypeInMapping(mapping: Record<string, string>) {
       if (typeof id === 'undefined') {
         throw new Error('Found invalid entity without an ID.');
       }
-      if (type === 'ContentResource') {
+      if (type === 'ContentResource' || type === 'Service') {
         mapping[id] = type;
       } else {
         mapping[id] = foundType as any;
       }
       return r;
     };
+  };
+}
+
+function normalizeService(_service: any): any {
+  const service = Object.assign({}, _service);
+  if (service['@id']) {
+    service.id = service['@id'];
+  }
+
+  if (service['@type']) {
+    service.type = service['@type'];
+  }
+
+  if (service.service) {
+    const serviceReferences = [];
+    service.service = Array.isArray(service.service) ? service.service : [service.service];
+    for (const innerService of service.service) {
+      serviceReferences.push({
+        id: innerService['@id'] || innerService.id,
+        type: innerService['@type'] || innerService.type,
+      });
+    }
+    service.service = serviceReferences;
+  }
+
+  return Object.assign({}, emptyService, service);
+}
+
+function recordServiceForLoading(store: CompatibleStore['entities']) {
+  return (resource: Service) => {
+    store.Service = store.Service ? store.Service : {};
+    const id: string = (resource as any).id || (resource as any)['@id'];
+    const normalizedResource = normalizeService(resource);
+
+    // @todo add loading status for image services.
+
+    if (normalizedResource && normalizedResource.id) {
+      if (store.Service[normalizedResource.id]) {
+        // We need to merge.
+        store.Service[id] = mergeEntities(store.Service[id], normalizedResource);
+      } else {
+        store.Service[id] = normalizedResource as any;
+      }
+    }
+
+    // Keep original on resource - this is a parallel copy for READING
+    return resource;
   };
 }
 
@@ -385,16 +434,13 @@ export function normalize(unknownEntity: unknown) {
       addToEntities<ResourceProvider>('Agent'),
     ],
     specificResource: [
+      // Special-case changes to this type of resource.
       traverseSpecificResource,
     ],
-    // Remove this, content resources are NOT usually processed by this library.
-    // They need to be available in full when they get passed down the chain.
-    // There may be a better way to preserve annotations and content resources.
-    // service: [
-    //   ensureDefaultFields<Service, ServiceNormalized>(emptyService),
-    //   addToMapping<Service>('Service'),
-    //   addToEntities<Service>('Service'),
-    // ],
+    service: [
+      // Only record, don't replace.
+      recordServiceForLoading(entities),
+    ],
   });
   const resource = traversal.traverseUnknown(entity) as Reference;
 

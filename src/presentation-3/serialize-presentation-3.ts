@@ -1,10 +1,5 @@
 import { SerializeConfig, UNSET, UNWRAP } from './serialize';
-import {
-  ImageService2,
-  ImageService3,
-  ResourceProvider,
-  TechnicalProperties,
-} from '@iiif/presentation-3';
+import { ImageService2, ImageService3, ResourceProvider, TechnicalProperties } from '@iiif/presentation-3';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
 
@@ -25,11 +20,21 @@ function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof
   ];
 }
 
-function filterEmpty<T>(item?: T[]): T[] | undefined {
+function filterEmpty<T>(item?: T[] | typeof UNSET): T[] | undefined | typeof UNSET {
+  if (item === UNSET) {
+    return undefined;
+  }
+
   if (!item || item.length === 0) {
     return undefined;
   }
-  return item;
+  const filtered = item.filter((item) => (item as any) !== UNSET);
+
+  if (filtered.length === 0) {
+    return undefined;
+  }
+
+  return filtered;
 }
 
 function service2compat(service: ImageService3): ImageService2 | ImageService3 {

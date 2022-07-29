@@ -6,7 +6,9 @@ import {
   ManifestNormalized,
   RangeNormalized,
   ResourceProviderNormalized,
+  ServiceNormalized,
 } from '@iiif/presentation-3-normalized';
+import { _ServiceNormalized } from './serialize';
 
 export const EMPTY = [];
 // Prevent accidental mutation
@@ -174,3 +176,8 @@ export const emptyAgent: ResourceProviderNormalized = {
   seeAlso: EMPTY,
   homepage: EMPTY,
 };
+
+export const emptyService: _ServiceNormalized = {
+  id: 'https://iiif-parser/empty-service',
+  type: 'UnknownService',
+} as any;

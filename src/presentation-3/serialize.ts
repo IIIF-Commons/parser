@@ -30,6 +30,8 @@ export type CompatibleStore<T extends string = string> = {
   };
 };
 
+export type _ServiceNormalized = ServiceNormalized & { id: string; type: string };
+
 export type NormalizedEntity =
   | CollectionNormalized
   | ManifestNormalized
@@ -40,7 +42,7 @@ export type NormalizedEntity =
   | AnnotationNormalized
   | ContentResource
   | RangeNormalized
-  | ServiceNormalized
+  | _ServiceNormalized
   | Selector
   | ResourceProviderNormalized;
 
@@ -63,7 +65,7 @@ export type SerializeConfig = {
   Annotation?: Serializer<AnnotationNormalized>;
   ContentResource?: Serializer<ContentResource>;
   Range?: Serializer<RangeNormalized>;
-  Service?: Serializer<ServiceNormalized>;
+  Service?: Serializer<_ServiceNormalized>;
   Selector?: Serializer<Selector>;
   Agent?: Serializer<ResourceProviderNormalized>;
 };
