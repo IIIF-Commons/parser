@@ -25,7 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Re-serializing the IIIF back to identical JSON
 - New traversal option for `SpecificResource`
 - New traversal option for `GeoJson` (e.g. from the `navPlace` extension)
-- 
+- New storing of `Services` when normalizing [^4]
 
 ### Fixed
 - `[presentation-2]` `startCanvas` property on Sequences are now added to the Manifest when converting
@@ -34,7 +34,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bug where AV canvases would have height and width of `0` when serializing
 - Bug where custom `@context` on Manifest was not retained during serialization
 - Bug where Content Resources did not keep extra properties when serializing (e.g. `value` or `geometry`)
-- 
+- Bug where serialization may sometimes include `UNSET` keyword. 
 
 ### Removed
 - `posterCanvas` - hangover from pre-3.0, this will be ignored
@@ -54,3 +54,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [^2]: SpecificResource is defined by the W3C Annotation specification, but in short you can access the original reference by accessing `specificResource.source`
 
 [^3]: These properties were added to the specification pre-3.0 and then later removed.
+
+[^4]: This does not replace the inline services with references, instead it's a parallel store of normalized services. Editing tools will have to update both. This moves the problem of multiple services with different structures and fields to the user. The normalized structures will be specifically useful for loading Image services progressively in a store without affecting the serialisation of the IIIF. 

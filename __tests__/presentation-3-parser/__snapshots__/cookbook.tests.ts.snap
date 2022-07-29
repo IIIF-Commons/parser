@@ -908,7 +908,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0005-image-service https://iiif.io
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image": "Annotation",
@@ -1176,7 +1182,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0006-text-language https://iiif.io
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Whistlers_Mother": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Whistlers_Mother",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0006-text-language/annotation/p0001-image": "Annotation",
@@ -1470,7 +1482,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0007-string-formats https://iiif.i
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0007-string-formats/annotation/p0001-image": "Annotation",
@@ -1722,7 +1740,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0008-rights/annotation/p0001-image": "Annotation",
@@ -2327,7 +2351,33 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0001-image": "Annotation",
@@ -3096,7 +3146,33 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0001-image": "Annotation",
@@ -3774,7 +3850,28 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0001-image": "Annotation",
@@ -4407,7 +4504,28 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmd9_1300412_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmd9_1300412_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmft_1300418_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmft_1300418_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmgb_1300426_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmgb_1300426_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmhv_1300436_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmhv_1300436_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0001-image": "Annotation",
@@ -5037,7 +5155,28 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-1-21198-zz00022882-1-master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-1-21198-zz00022882-1-master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-2-21198-zz000228b3-1-master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-2-21198-zz000228b3-1-master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-3-21198-zz000228d4-1-master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-3-21198-zz000228d4-1-master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0001-image": "Annotation",
@@ -5775,7 +5914,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0014-accompanyingcanvas https://ii
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4": "ContentResource",
@@ -6531,7 +6676,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0021-tagging https://iiif.io/api/c
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0001-image": "Annotation",
@@ -7603,7 +7754,38 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
       },
     },
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-2-21198-zz001d8m5j_774612_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-2-21198-zz001d8m5j_774612_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-5-21198-zz001d8v6f_775077_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-5-21198-zz001d8v6f_775077_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-6-21198-zz001d8v7z_775085_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-6-21198-zz001d8v7z_775085_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0001-image": "Annotation",
@@ -8855,7 +9037,18 @@ exports[`Cookbook > Testing normalize %p (%p) 0029-metadata-anywhere https://iii
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/annotation/p0001-image": "Annotation",
@@ -9755,7 +9948,33 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_001": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_001",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_002": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_002",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_003": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_003",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_007": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_007",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_008": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_008",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image": "Annotation",
@@ -10523,7 +10742,33 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_001": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_001",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_002": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_002",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_003": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_003",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_004": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_004",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_005": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_005",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image": "Annotation",
@@ -11719,7 +11964,38 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
       },
     },
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-1_frontcover": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-1_frontcover",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-2_insidefrontcover": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-2_insidefrontcover",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-3_titlepage1": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-3_titlepage1",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-4_titlepage1_verso": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-4_titlepage1_verso",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-5_titlepage2": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-5_titlepage2",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-6_titlepage2_verso": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-6_titlepage2_verso",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0001-image": "Annotation",
@@ -12256,7 +12532,18 @@ exports[`Cookbook > Testing normalize %p (%p) 0033-choice https://iiif.io/api/co
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0033-choice/annotation/p0001-image": "Annotation",
@@ -13252,7 +13539,53 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0001-image": "Annotation",
@@ -13863,7 +14196,18 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature",
+        "profile": "level2",
+        "type": "ImageService1",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0001-image": "Annotation",
@@ -14961,7 +15305,33 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://fixtures.iiif.io/other/UCLA/kabuki_ezukushi_rtl.pdf": "ContentResource",
@@ -15762,7 +16132,33 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://fixtures.iiif.io/other/UCLA/ezukushi_mods.xml": "ContentResource",
@@ -18021,7 +18417,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/annotation/p0000-image": "Annotation",
@@ -18614,7 +19016,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0139-geolocate-canvas-fragment htt
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/canvas.json": "Canvas",
@@ -18927,7 +19335,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0154-geo-extension https://iiif.io
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0154-geo-extension/anno-page/1": "AnnotationPage",
@@ -19554,7 +19968,33 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0001-image": "Annotation",
@@ -19944,7 +20384,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate_map_1-manifes
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0230-navdate/annotation/p0001-image": "Annotation",
@@ -20159,7 +20605,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate_map_2-manifes
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-87691274-1986/": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-87691274-1986/",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0230-navdate/annotation/p0001-image": "Annotation",
@@ -20673,7 +21125,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://digital.library.ucla.edu/": "ContentResource",
@@ -21027,7 +21485,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0258-tagging-external-resource htt
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/anno/p0002-wikidata": "Annotation",
@@ -21317,7 +21781,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0261-non-rectangular-commenting ht
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/annotation/p0001-image": "Annotation",
@@ -21606,7 +22076,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0266-full-canvas-annotation https:
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1": "Canvas",
@@ -21856,7 +22332,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0269-embedded-or-referenced-annota
     },
     "Range": {},
     "Selector": {},
-    "Service": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
   },
   "mapping": {
     "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json": "AnnotationPage",
