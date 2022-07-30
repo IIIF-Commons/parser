@@ -36,7 +36,9 @@ export function resolveIfExists<T extends NormalizedEntity>(
   const fullEntity: any = state.entities[resourceType][request ? request.resourceUri : url] as T;
 
   if (fullEntity[HAS_PART]) {
-    const framing = fullEntity[HAS_PART].find((t: any) => t[PART_OF] === parent.id);
+    const framing = fullEntity[HAS_PART].find((t: any) => {
+      return parent ? t[PART_OF] === parent.id : t[PART_OF] === fullEntity.id;
+    });
     if (framing && framing['@explicit']) {
       const newEntity: any = {};
       const keys = Object.keys(framing);

@@ -66,4 +66,54 @@ describe('Has part issues', function () {
 
     expect(reserialized).toEqual(original);
   });
+
+  describe('Collection and manifest labels', () => {
+    const manifestFromCollection = {
+      id: 'https://iiif.wellcomecollection.org/presentation/b18031511_0001',
+      type: 'Manifest',
+      label: {
+        en: ['Volume 1', 'The biological basis of medicine / edited by E. Edward Bittar ; assisted by Neville Bittar.'],
+      },
+    };
+    const manifestOnItsOwn = {
+      id: 'https://iiif.wellcomecollection.org/presentation/b18031511_0001',
+      type: 'Manifest',
+      label: {
+        en: ['The biological basis of medicine / edited by E. Edward Bittar ; assisted by Neville Bittar.'],
+      },
+    };
+
+    test('Collection, then manifest.', () => {
+      const initial = mergeEntities(
+        {
+          id: 'https://iiif.wellcomecollection.org/presentation/b18031511_0001',
+          type: 'Manifest',
+        } as any,
+        manifestFromCollection,
+        { parent: { id: 'https://example.org/collection-1' } }
+      );
+      expect(initial).toMatchSnapshot();
+
+      const merged = mergeEntities(initial as any, manifestOnItsOwn, { parent: undefined, isTopLevel: true });
+      expect(merged).toMatchSnapshot();
+    });
+
+    test('Manifest then Collection', () => {
+      // Then test Manifest, then collection
+      const initial = mergeEntities(
+        {
+          id: 'https://iiif.wellcomecollection.org/presentation/b18031511_0001',
+          type: 'Manifest',
+        } as any,
+        manifestOnItsOwn,
+        { parent: undefined, isTopLevel: true }
+      );
+      expect(initial).toMatchSnapshot();
+
+      const merged = mergeEntities(initial as any, manifestFromCollection, {
+        parent: { id: 'https://example.org/collection-1' },
+      });
+      expect(merged).toMatchSnapshot();
+    });
+  });
 });

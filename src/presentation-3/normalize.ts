@@ -76,15 +76,21 @@ function getResource(entityOrString: PolyEntity, type: string): Reference {
   return entityOrString as Reference;
 }
 
-function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>>) {
+function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>>, topLevel: any) {
   return <T extends Reference | string>(type: string, defaultStringType?: string) => {
     const storeType = entities[type] ? entities[type] : {};
     return (r: T, context: TraversalContext): T => {
       const resource = getResource(r, defaultStringType || type);
       if (resource && resource.id && type) {
         storeType[resource.id] = storeType[resource.id]
-          ? (mergeEntities(storeType[resource.id], resource, { parent: context.parent }) as any)
-          : mergeEntities({ id: resource.id, type: resource.type } as any, resource, { parent: context.parent });
+          ? (mergeEntities(storeType[resource.id], resource, {
+              parent: context.parent,
+              isTopLevel: topLevel.id === resource.id,
+            }) as any)
+          : mergeEntities({ id: resource.id, type: resource.type } as any, resource, {
+              parent: context.parent,
+              isTopLevel: topLevel.id === resource.id,
+            });
         return {
           id: resource.id,
           type: type === 'ContentResource' ? type : resource.type,
@@ -95,7 +101,7 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
   };
 }
 
-export function merge(existing: any, incoming: any, context?: { parent?: any }): any {
+export function merge(existing: any, incoming: any, context?: { parent?: any; isTopLevel?: boolean }): any {
   if (!incoming) {
     // Falsy values are ignored
     return existing;
@@ -161,11 +167,14 @@ export function merge(existing: any, incoming: any, context?: { parent?: any }):
       }
     }
 
-    if (context && context.parent && context.parent.id) {
+    if (context && ((context.parent && context.parent.id) || context.isTopLevel)) {
       const newHasPart: any[] = [];
-      const part: any = {
-        [PART_OF]: context.parent.id,
-      };
+      const part: any = {};
+      if (context.parent) {
+        part[PART_OF] = context.parent.id;
+      } else if (context.isTopLevel) {
+        part[PART_OF] = existing.id;
+      }
 
       if (merged[HAS_PART] && merged[HAS_PART].length) {
         // We already have one, it may conflict here.
@@ -217,7 +226,11 @@ export function merge(existing: any, incoming: any, context?: { parent?: any }):
   return incoming;
 }
 
-export function mergeEntities(existing: NormalizedEntity, incoming: any, context?: { parent?: any }): NormalizedEntity {
+export function mergeEntities(
+  existing: NormalizedEntity,
+  incoming: any,
+  context?: { parent?: any; isTopLevel?: boolean }
+): NormalizedEntity {
   if (typeof existing === 'string') {
     return existing;
   }
@@ -448,7 +461,7 @@ export function normalize(unknownEntity: unknown) {
   const entity = convertPresentation2(unknownEntity);
   const entities = getDefaultEntities();
   const mapping = {};
-  const addToEntities = mapToEntities(entities);
+  const addToEntities = mapToEntities(entities, entity);
   const addToMapping = recordTypeInMapping(mapping);
 
   const traversal = new Traverse({

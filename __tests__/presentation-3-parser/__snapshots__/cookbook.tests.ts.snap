@@ -115,6 +115,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0001-mvm-image https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/canvas/p1",
@@ -319,6 +326,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0002-mvm-audio https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas",
@@ -523,6 +537,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0003-mvm-video https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas",
@@ -730,6 +751,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0004-canvas-size https://iiif.io/a
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/canvas/p1",
@@ -946,6 +974,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0005-image-service https://iiif.io
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
@@ -1176,6 +1211,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0006-text-language https://iiif.io
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0006-text-language/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0006-text-language/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0006-text-language/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0006-text-language/canvas/p1",
@@ -1520,6 +1562,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0007-string-formats https://iiif.i
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0007-string-formats/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/canvas/p1",
@@ -1805,6 +1854,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0008-rights/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0008-rights/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0008-rights/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0008-rights/canvas/p1",
@@ -2485,6 +2541,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
         ],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/canvas/p1",
@@ -3346,6 +3409,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-rtl.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-rtl.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-rtl.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p1",
@@ -4110,6 +4180,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-ttb.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-ttb.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-ttb.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v1",
@@ -4824,6 +4901,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
         ],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-continuous.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-continuous.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-continuous.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s1",
@@ -5531,6 +5615,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
         ],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-individuals.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-individuals.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-individuals.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/v1",
@@ -6010,6 +6101,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0013-placeholderCanvas https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti",
@@ -6358,6 +6456,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0014-accompanyingcanvas https://ii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/p1",
@@ -6621,6 +6726,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0015-start https://iiif.io/api/coo
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0015-start/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0015-start/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0015-start/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
@@ -6891,6 +7003,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0017-transcription-av https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/canvas",
@@ -7190,6 +7309,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0021-tagging https://iiif.io/api/c
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/canvas/p1",
@@ -7962,6 +8088,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
@@ -8972,6 +9105,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1",
@@ -9732,6 +9872,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0029-metadata-anywhere https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/canvas/p1",
@@ -10060,6 +10207,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-collection https
         ],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/collection.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/collection.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/collection.json",
+            "type": "Collection",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json",
@@ -10761,6 +10915,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
         ],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p1",
@@ -11625,6 +11786,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
         ],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v2.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v2.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v2.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p1",
@@ -12591,6 +12759,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
@@ -13592,6 +13767,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0033-choice https://iiif.io/api/co
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0033-choice/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0033-choice/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0033-choice/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0033-choice/canvas/p1",
@@ -14693,6 +14875,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         ],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/1",
@@ -15410,6 +15599,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/canvas/p1",
@@ -15684,6 +15880,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0040-image-rotation-service-manife
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-css.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-css.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-css.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
@@ -15929,6 +16132,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0040-image-rotation-service-manife
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-service.json ",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-service.json ",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-service.json ",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
@@ -16599,6 +16809,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/canvas/p1",
@@ -17503,6 +17720,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/canvas/p1",
@@ -18034,6 +18258,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1",
@@ -18862,6 +19093,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1",
@@ -19691,6 +19929,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0074-multiple-language-captions ht
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
@@ -20028,6 +20273,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/canvas/p0",
@@ -20302,6 +20554,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://example.org/iiif/text-language/manifest",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://example.org/iiif/text-language/manifest",
+            "iiif-parser:partOf": "https://example.org/iiif/text-language/manifest",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://example.org/iiif/text-language/canvas1",
@@ -20674,6 +20933,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0139-geolocate-canvas-fragment htt
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/canvas.json",
@@ -20984,6 +21250,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0154-geo-extension https://iiif.io
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/canvas/1",
@@ -21698,6 +21971,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p1",
@@ -22151,6 +22431,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate_map_1-manifes
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_1-manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_1-manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_1-manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/canvas/p1",
@@ -22386,6 +22673,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate_map_2-manifes
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/canvas/p1",
@@ -22511,6 +22805,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate-collection ht
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate-collection.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate-collection.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate-collection.json",
+            "type": "Collection",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json",
@@ -22946,6 +23247,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0234-provider/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0234-provider/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0234-provider/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0234-provider/canvas/p0",
@@ -23350,6 +23658,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0258-tagging-external-resource htt
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1",
@@ -23674,6 +23989,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0261-non-rectangular-commenting ht
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/canvas/p1",
@@ -23997,6 +24319,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0266-full-canvas-annotation https:
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1",
@@ -24267,6 +24596,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0269-embedded-or-referenced-annota
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/manifest.json",
+            "type": "Manifest",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1",
