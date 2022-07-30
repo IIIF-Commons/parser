@@ -1,7 +1,8 @@
-import { SerializeConfig, UNSET, UNWRAP } from './serialize';
+import { SerializeConfig } from './serialize';
 import { ImageService2, ImageService3, ResourceProvider, TechnicalProperties } from '@iiif/presentation-3';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
+import { HAS_PART, UNSET, UNWRAP } from './utilities';
 
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
   return [
@@ -17,6 +18,7 @@ function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof
     ['behavior', entity.behavior && entity.behavior.length ? entity.behavior : undefined],
     ['timeMode', entity.timeMode],
     ['motivation', Array.isArray(entity.motivation) ? entity.motivation[0] : entity.motivation],
+    ['iiif-parser:hasPart' as any, UNSET],
   ];
 }
 
@@ -200,7 +202,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key]) => {
-        return key !== 'body';
+        return key !== 'body' && key !== HAS_PART;
       });
 
     const resolvedBody = yield entity.body;
@@ -279,6 +281,9 @@ function mergeRemainingProperties(entries: [string, any][], object: any): [strin
   const alreadyParsed = entries.map(([a]) => a);
 
   for (const key of keys) {
+    if (key === HAS_PART) {
+      continue;
+    }
     if (alreadyParsed.indexOf(key) === -1 && typeof object[key] !== 'undefined') {
       entries.push([key, object[key]]);
     }

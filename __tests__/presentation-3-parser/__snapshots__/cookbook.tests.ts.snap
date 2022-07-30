@@ -13,6 +13,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0001-mvm-image https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -89,6 +96,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0001-mvm-image https://iiif.io/api
         "format": "image/png",
         "height": 1800,
         "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+        "iiif-parser:hasPart": [
+          {
+            "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "type": "Image",
         "width": 1200,
       },
@@ -204,6 +218,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0002-mvm-audio https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas/page/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas/page/annotation",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas/page",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -280,6 +301,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0002-mvm-audio https://iiif.io/api
         "duration": 1985.024,
         "format": "audio/mp4",
         "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas/page/annotation",
+            "type": "Sound",
+          },
+        ],
         "type": "Sound",
       },
     },
@@ -392,6 +420,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0003-mvm-video https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas/page/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas/page/annotation",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas/page",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -469,6 +504,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0003-mvm-video https://iiif.io/api
         "format": "video/mp4",
         "height": 360,
         "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas/page/annotation",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 480,
       },
@@ -586,6 +628,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0004-canvas-size https://iiif.io/a
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -662,6 +711,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0004-canvas-size https://iiif.io/a
         "format": "image/png",
         "height": 360,
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "type": "Image",
         "width": 640,
       },
@@ -777,6 +833,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0005-image-service https://iiif.io
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -857,6 +920,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0005-image-service https://iiif.io
         "format": "image/jpeg",
         "height": 3024,
         "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
@@ -997,6 +1067,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0006-text-language https://iiif.io
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0006-text-language/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0006-text-language/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0006-text-language/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -1073,6 +1150,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0006-text-language https://iiif.io
         "format": "image/jpeg",
         "height": 991,
         "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Whistlers_Mother/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Whistlers_Mother/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0006-text-language/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Whistlers_Mother",
@@ -1327,6 +1411,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0007-string-formats https://iiif.i
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0007-string-formats/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -1403,6 +1494,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0007-string-formats https://iiif.i
         "format": "image/jpeg",
         "height": 3024,
         "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0007-string-formats/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
@@ -1598,6 +1696,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0008-rights/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0008-rights/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0008-rights/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -1674,6 +1779,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
         "format": "image/jpeg",
         "height": 3024,
         "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0008-rights/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
@@ -1842,6 +1954,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -1862,6 +1981,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -1882,6 +2008,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -1902,6 +2035,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -1922,6 +2062,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -2226,6 +2373,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
         "format": "image/jpeg",
         "height": 4613,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18",
@@ -2240,6 +2394,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
         "format": "image/jpeg",
         "height": 4612,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19",
@@ -2254,6 +2415,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
         "format": "image/jpeg",
         "height": 4613,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20",
@@ -2268,6 +2436,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
         "format": "image/jpeg",
         "height": 4578,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21",
@@ -2282,6 +2457,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0009-book-1 https://iiif.io/api/co
         "format": "image/jpeg",
         "height": 4632,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22",
@@ -2635,6 +2817,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -2655,6 +2844,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -2675,6 +2871,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -2695,6 +2898,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -2715,6 +2925,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -3019,6 +3236,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 4823,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001",
@@ -3033,6 +3257,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 4804,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002",
@@ -3047,6 +3278,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 4776,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003",
@@ -3061,6 +3299,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 4751,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004",
@@ -3075,6 +3320,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 4808,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005",
@@ -3433,6 +3685,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/v1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -3453,6 +3712,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/v2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -3473,6 +3739,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/v3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -3493,6 +3766,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/v4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -3741,6 +4021,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 3152,
         "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02",
@@ -3755,6 +4042,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 3135,
         "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03",
@@ -3769,6 +4063,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 3135,
         "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04",
@@ -3783,6 +4084,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "format": "image/jpeg",
         "height": 3135,
         "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/annotation/v0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05",
@@ -4089,6 +4397,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/s1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -4109,6 +4424,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/s2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -4129,6 +4451,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/s3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -4149,6 +4478,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/s4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -4397,6 +4733,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
         "format": "image/jpeg",
         "height": 1592,
         "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmd9_1300412_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmd9_1300412_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmd9_1300412_master",
@@ -4411,6 +4754,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
         "format": "image/jpeg",
         "height": 1536,
         "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmft_1300418_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmft_1300418_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmft_1300418_master",
@@ -4425,6 +4775,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
         "format": "image/jpeg",
         "height": 1504,
         "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmgb_1300426_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmgb_1300426_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmgb_1300426_master",
@@ -4439,6 +4796,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-cont
         "format": "image/jpeg",
         "height": 1464,
         "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmhv_1300436_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmhv_1300436_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/s0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmhv_1300436_master",
@@ -4740,6 +5104,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/v1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -4760,6 +5131,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/v2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -4780,6 +5158,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/v3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -4800,6 +5185,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/v4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -5048,6 +5440,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
         "format": "image/jpeg",
         "height": 2250,
         "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-master",
@@ -5062,6 +5461,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
         "format": "image/jpeg",
         "height": 2250,
         "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-1-21198-zz00022882-1-master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-1-21198-zz00022882-1-master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-1-21198-zz00022882-1-master",
@@ -5076,6 +5482,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
         "format": "image/jpeg",
         "height": 2250,
         "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-2-21198-zz000228b3-1-master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-2-21198-zz000228b3-1-master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-2-21198-zz000228b3-1-master",
@@ -5090,6 +5503,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0011-book-3-behavior-manifest-indi
         "format": "image/jpeg",
         "height": 2250,
         "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-3-21198-zz000228d4-1-master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-3-21198-zz000228d4-1-master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/annotation/v0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-3-21198-zz000228d4-1-master",
@@ -5391,6 +5811,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0013-placeholderCanvas https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti/placeholder/1-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti/placeholder/1-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti/placeholder/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -5411,6 +5838,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0013-placeholderCanvas https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/donizetti/1-video",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/donizetti/1-video",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/donizetti/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -5542,6 +5976,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0013-placeholderCanvas https://iii
         "format": "image/png",
         "height": 360,
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti/placeholder/1-image",
+            "type": "Image",
+          },
+        ],
         "type": "Image",
         "width": 640,
       },
@@ -5550,6 +5991,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0013-placeholderCanvas https://iii
         "format": "video/mp4",
         "height": 360,
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/donizetti/1-video",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 640,
       },
@@ -5698,6 +6146,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0014-accompanyingcanvas https://ii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying/annotation/image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying/annotation/image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying/annotation/page",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -5718,6 +6173,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0014-accompanyingcanvas https://ii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/annotation/segment1-audio",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/annotation/segment1-audio",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/p1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -5857,12 +6319,26 @@ exports[`Cookbook > Testing normalize %p (%p) 0014-accompanyingcanvas https://ii
         "duration": 1985.024,
         "format": "video/mp4",
         "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/annotation/segment1-audio",
+            "type": "Sound",
+          },
+        ],
         "type": "Sound",
       },
       "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0/full/,998/0/default.jpg": {
         "format": "image/jpeg",
         "height": 998,
         "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0/full/,998/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0/full/,998/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying/annotation/image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0",
@@ -6037,6 +6513,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0015-start https://iiif.io/api/coo
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0015-start/annotation/segment1-video",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0015-start/annotation/segment1-video",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0015-start/annotation/segment1/page",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -6084,6 +6567,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0015-start https://iiif.io/api/coo
         "height": 0,
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0015-start/manifest.json",
+            "type": "Canvas",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0015-start/annotation/segment1/page",
@@ -6113,6 +6603,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0015-start https://iiif.io/api/coo
         "duration": 1801.055,
         "format": "video/mp4",
         "id": "https://fixtures.iiif.io/video/indiana/30-minute-clock/medium/30-minute-clock.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/30-minute-clock/medium/30-minute-clock.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0015-start/annotation/segment1-video",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
       },
     },
@@ -6269,6 +6766,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0017-transcription-av https://iiif
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/canvas/page/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/canvas/page/annotation",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/canvas/page",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -6351,12 +6855,26 @@ exports[`Cookbook > Testing normalize %p (%p) 0017-transcription-av https://iiif
         "format": "video/mp4",
         "height": 1080,
         "id": "https://fixtures.iiif.io/video/indiana/volleyball/high/volleyball-for-boys.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/volleyball/high/volleyball-for-boys.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/canvas/page/annotation",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 1920,
       },
       "https://fixtures.iiif.io/video/indiana/volleyball/volleyball.txt": {
         "format": "text/txt",
         "id": "https://fixtures.iiif.io/video/indiana/volleyball/volleyball.txt",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/volleyball/volleyball.txt",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/canvas",
+            "type": "Text",
+          },
+        ],
         "label": {
           "en": [
             "Transcript",
@@ -6491,6 +7009,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0021-tagging https://iiif.io/api/c
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0021-tagging/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -6511,6 +7036,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0021-tagging https://iiif.io/api/c
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0002-tag",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0002-tag",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0021-tagging/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "tagging",
         ],
@@ -6618,6 +7150,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0021-tagging https://iiif.io/api/c
         "format": "image/jpeg",
         "height": 3024,
         "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
@@ -6631,6 +7170,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0021-tagging https://iiif.io/api/c
       "vault://605b9d93": {
         "format": "text/plain",
         "id": "vault://605b9d93",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://605b9d93",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0002-tag",
+            "type": "TextualBody",
+          },
+        ],
         "language": "de",
         "type": "TextualBody",
         "value": "Gänseliesel-Brunnen",
@@ -6783,6 +7329,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -6803,6 +7356,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -6823,6 +7383,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -6843,6 +7410,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -6863,6 +7437,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -6883,6 +7464,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0006-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0006-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p6/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -7243,6 +7831,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "format": "image/jpeg",
         "height": 2504,
         "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master",
@@ -7257,6 +7852,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "format": "image/jpeg",
         "height": 2512,
         "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-2-21198-zz001d8m5j_774612_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-2-21198-zz001d8m5j_774612_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-2-21198-zz001d8m5j_774612_master",
@@ -7271,6 +7873,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "format": "image/jpeg",
         "height": 2456,
         "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master",
@@ -7285,6 +7894,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "format": "image/jpeg",
         "height": 2440,
         "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master",
@@ -7299,6 +7915,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "format": "image/jpeg",
         "height": 2416,
         "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-5-21198-zz001d8v6f_775077_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-5-21198-zz001d8v6f_775077_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-5-21198-zz001d8v6f_775077_master",
@@ -7313,6 +7936,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "format": "image/jpeg",
         "height": 2416,
         "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-6-21198-zz001d8v7z_775085_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-6-21198-zz001d8v7z_775085_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/annotation/p0006-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-6-21198-zz001d8v7z_775085_master",
@@ -7394,6 +8024,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r1",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -7419,6 +8056,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r1",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -7444,6 +8088,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p3",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p3",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/1",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -7469,6 +8120,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/1",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -7494,6 +8152,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p5",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p5",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/2",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -7519,6 +8184,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p6",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p6",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/2",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -7582,6 +8254,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r0",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": undefined,
@@ -7628,6 +8307,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r0",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/1",
@@ -7666,6 +8352,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": undefined,
@@ -7712,6 +8405,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0024-book-4-toc https://iiif.io/ap
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": undefined,
@@ -8169,6 +8869,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1/annotation_page/1/annotation/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1/annotation_page/1/annotation/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1/annotation_page/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -8246,6 +8953,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "format": "video/mp4",
         "height": 1080,
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1/annotation_page/1/annotation/1",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 1920,
       },
@@ -8303,6 +9017,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1#t=0,302.05",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1#t=0,302.05",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/3",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -8328,6 +9049,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1#t=302.05,3971.24",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1#t=302.05,3971.24",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/4",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -8353,6 +9081,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1#t=3971.24",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1#t=3971.24",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/5",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -8416,6 +9151,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/1",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/3",
@@ -8454,6 +9196,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/3",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/3",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/2",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -8495,6 +9244,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/2",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -8536,6 +9292,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0026-toc-opera https://iiif.io/api
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/5",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/5",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/1",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -8726,6 +9489,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0029-metadata-anywhere https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -8746,6 +9516,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0029-metadata-anywhere https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -8908,6 +9685,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0029-metadata-anywhere https://iii
         "format": "image/jpeg",
         "height": 1271,
         "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural",
@@ -8922,6 +9706,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0029-metadata-anywhere https://iii
         "format": "image/jpeg",
         "height": 1271,
         "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray",
@@ -9439,6 +10230,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -9459,6 +10257,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -9479,6 +10284,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -9499,6 +10311,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -9519,6 +10338,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -9823,6 +10649,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
         "format": "image/jpeg",
         "height": 5730,
         "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_001/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_001/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_001",
@@ -9837,6 +10670,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
         "format": "image/jpeg",
         "height": 5702,
         "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_002/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_002/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_002",
@@ -9851,6 +10691,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
         "format": "image/jpeg",
         "height": 5702,
         "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_003/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_003/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_003",
@@ -9865,6 +10712,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
         "format": "image/jpeg",
         "height": 5702,
         "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_007/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_007/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_007",
@@ -9879,6 +10733,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v1 http
         "format": "image/jpeg",
         "height": 5702,
         "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_008/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_008/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/5b0b39c2bf5591d21d807f9aadb437fa-uclaeal_wahon_A06_bib1974505_vol01_008",
@@ -10233,6 +11094,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -10253,6 +11121,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -10273,6 +11148,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -10293,6 +11175,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -10313,6 +11202,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -10617,6 +11513,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
         "format": "image/jpeg",
         "height": 5745,
         "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_001/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_001/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_001",
@@ -10631,6 +11534,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
         "format": "image/jpeg",
         "height": 5745,
         "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_002/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_002/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_002",
@@ -10645,6 +11555,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
         "format": "image/jpeg",
         "height": 5745,
         "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_003/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_003/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_003",
@@ -10659,6 +11576,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
         "format": "image/jpeg",
         "height": 5745,
         "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_004/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_004/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_004",
@@ -10673,6 +11597,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-manifest_v2 http
         "format": "image/jpeg",
         "height": 5745,
         "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_005/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_005/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_005",
@@ -11027,6 +11958,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -11047,6 +11985,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -11067,6 +12012,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -11087,6 +12039,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -11107,6 +12066,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -11127,6 +12093,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0006-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0006-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p6/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -11487,6 +12460,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "format": "image/jpeg",
         "height": 7230,
         "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-1_frontcover/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-1_frontcover/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-1_frontcover",
@@ -11501,6 +12481,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "format": "image/jpeg",
         "height": 7230,
         "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-2_insidefrontcover/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-2_insidefrontcover/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-2_insidefrontcover",
@@ -11515,6 +12502,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "format": "image/jpeg",
         "height": 7230,
         "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-3_titlepage1/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-3_titlepage1/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-3_titlepage1",
@@ -11529,6 +12523,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "format": "image/jpeg",
         "height": 7230,
         "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-4_titlepage1_verso/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-4_titlepage1_verso/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-4_titlepage1_verso",
@@ -11543,6 +12544,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "format": "image/jpeg",
         "height": 7230,
         "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-5_titlepage2/max/full/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-5_titlepage2/max/full/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-5_titlepage2",
@@ -11557,6 +12565,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "format": "image/jpeg",
         "height": 7230,
         "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-6_titlepage2_verso/max/full/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-6_titlepage2_verso/max/full/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/annotation/p0006-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/15f769d62ca9a3a2deca390efed75d73-6_titlepage2_verso",
@@ -11638,6 +12653,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r1",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -11663,6 +12685,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r1",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -11688,6 +12717,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p3",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p3",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r2",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -11713,6 +12749,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r2",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -11738,6 +12781,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p5",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p5",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r3",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -11763,6 +12813,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p6",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p6",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r3",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -11830,6 +12887,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r0",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": undefined,
@@ -11876,6 +12940,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r0",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": undefined,
@@ -11922,6 +12993,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r3",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r3",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r0",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": undefined,
@@ -12367,6 +13445,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0033-choice https://iiif.io/api/co
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0033-choice/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0033-choice/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0033-choice/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12479,6 +13564,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0033-choice https://iiif.io/api/co
       },
       "vault://04f77c53": {
         "id": "vault://04f77c53",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://04f77c53",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0033-choice/annotation/p0001-image",
+            "type": "Choice",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural/full/max/0/default.jpg",
@@ -12652,6 +13744,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12672,6 +13771,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12692,6 +13798,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12712,6 +13825,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12732,6 +13852,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12752,6 +13879,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0006-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0006-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/6/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12772,6 +13906,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0007-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0007-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/7/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12792,6 +13933,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0008-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0008-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/8/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -12812,6 +13960,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0009-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0009-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/9/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -13342,6 +14497,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 4429,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover",
@@ -13356,6 +14518,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 4315,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover",
@@ -13370,6 +14539,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 4278,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded",
@@ -13384,6 +14560,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 1968,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated",
@@ -13398,6 +14581,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 1968,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout",
@@ -13412,6 +14602,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 4315,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0006-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage",
@@ -13426,6 +14623,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 4315,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0007-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto",
@@ -13440,6 +14644,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 4315,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0008-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover",
@@ -13454,6 +14665,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0035-foldouts https://iiif.io/api/
         "format": "image/jpeg",
         "height": 4315,
         "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0035-foldouts/annotation/0009-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover",
@@ -14018,6 +15236,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -14038,6 +15263,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -14126,6 +15358,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
         "format": "image/jpeg",
         "height": 5412,
         "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux",
@@ -14140,6 +15379,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
         "format": "image/jpeg",
         "height": 2414,
         "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/native.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/native.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "label": {
           "fr": [
             "Miniature [Chilpéric Ier tue Galswinthe, se remarie et est assassiné]",
@@ -14317,6 +15563,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0040-image-rotation-service-manife
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/annotation/v0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/annotation/v0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -14399,6 +15652,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0040-image-rotation-service-manife
     "ContentResource": {
       "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/body/sr1": {
         "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/body/sr1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/body/sr1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/annotation/v0001-image",
+            "type": "SpecificResource",
+          },
+        ],
         "source": {
           "format": "image/jpeg",
           "height": 2105,
@@ -14547,6 +15807,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0040-image-rotation-service-manife
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/annotation/v0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/annotation/v0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -14625,6 +15892,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0040-image-rotation-service-manife
     "ContentResource": {
       "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/body/v0001-image": {
         "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/body/v0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/body/v0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/annotation/v0001-image",
+            "type": "SpecificResource",
+          },
+        ],
         "selector": {
           "@context": "http://iiif.io/api/annex/openannotation/context.json",
           "rotation": "90",
@@ -14779,6 +16053,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -14799,6 +16080,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -14819,6 +16107,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -14839,6 +16134,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -14859,6 +16161,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -15162,6 +16471,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
       "https://fixtures.iiif.io/other/UCLA/kabuki_ezukushi_rtl.pdf": {
         "format": "application/pdf",
         "id": "https://fixtures.iiif.io/other/UCLA/kabuki_ezukushi_rtl.pdf",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/other/UCLA/kabuki_ezukushi_rtl.pdf",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/manifest.json",
+            "type": "Text",
+          },
+        ],
         "label": {
           "en": [
             "PDF version",
@@ -15173,6 +16489,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
         "format": "image/jpeg",
         "height": 4823,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001",
@@ -15187,6 +16510,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
         "format": "image/jpeg",
         "height": 4804,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002",
@@ -15201,6 +16531,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
         "format": "image/jpeg",
         "height": 4776,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003",
@@ -15215,6 +16552,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
         "format": "image/jpeg",
         "height": 4751,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004",
@@ -15229,6 +16573,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
         "format": "image/jpeg",
         "height": 4808,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0046-rendering/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005",
@@ -15605,6 +16956,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -15625,6 +16983,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -15645,6 +17010,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -15665,6 +17037,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -15685,6 +17064,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -15988,6 +17374,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
       "https://fixtures.iiif.io/other/UCLA/ezukushi_mods.xml": {
         "format": "text/xml",
         "id": "https://fixtures.iiif.io/other/UCLA/ezukushi_mods.xml",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/other/UCLA/ezukushi_mods.xml",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/manifest.json",
+            "type": "Dataset",
+          },
+        ],
         "label": {
           "en": [
             "MODS metadata",
@@ -16000,6 +17393,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
         "format": "image/jpeg",
         "height": 4823,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001",
@@ -16014,6 +17414,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
         "format": "image/jpeg",
         "height": 4804,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002",
@@ -16028,6 +17435,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
         "format": "image/jpeg",
         "height": 4776,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003",
@@ -16042,6 +17456,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
         "format": "image/jpeg",
         "height": 4751,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004",
@@ -16056,6 +17477,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
         "format": "image/jpeg",
         "height": 4808,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005",
@@ -16433,6 +17861,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -16457,6 +17892,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -16544,6 +17986,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
     "ContentResource": {
       "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png": {
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1",
+            "type": "Image",
+          },
+        ],
         "type": "Image",
       },
       "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4": {
@@ -16551,6 +18000,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "format": "video/mp4",
         "height": 1080,
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/1",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 1920,
       },
@@ -16559,6 +18015,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "format": "video/mp4",
         "height": 1080,
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/2",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 1920,
       },
@@ -16641,6 +18104,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1#t=0,302.05",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1#t=0,302.05",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/3",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -16666,6 +18136,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1#t=302.05,3971.24",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1#t=302.05,3971.24",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/4",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -16691,6 +18168,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1#t=3971.24,7278.422",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1#t=3971.24,7278.422",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/5",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -16754,6 +18238,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/1",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/3",
@@ -16792,6 +18283,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/3",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/3",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/2",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -16833,6 +18331,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/2",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -16874,6 +18379,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0064-opera-one-canvas https://iiif
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/5",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/5",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/1",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -17113,6 +18625,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1/annotation_page/1/annotation/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1/annotation_page/1/annotation/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1/annotation_page/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -17133,6 +18652,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2/annotation_page/1/annotation/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2/annotation_page/1/annotation/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2/annotation_page/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -17277,10 +18803,24 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
     "ContentResource": {
       "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png": {
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1",
+            "type": "Image",
+          },
+        ],
         "type": "Image",
       },
       "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act2-thumbnail.png": {
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act2-thumbnail.png",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act2-thumbnail.png",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2",
+            "type": "Image",
+          },
+        ],
         "type": "Image",
       },
       "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4": {
@@ -17288,6 +18828,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "format": "video/mp4",
         "height": 1080,
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1/annotation_page/1/annotation/1",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 1920,
       },
@@ -17296,6 +18843,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "format": "video/mp4",
         "height": 1080,
         "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2/annotation_page/1/annotation/1",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 1920,
       },
@@ -17382,6 +18936,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1#t=0,302.05",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1#t=0,302.05",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/3",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -17407,6 +18968,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1#t=302.05,3971.24",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1#t=302.05,3971.24",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/4",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -17432,6 +19000,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2#t=0,3307.22",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2#t=0,3307.22",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/5",
+            "type": "Canvas",
+          },
+        ],
         "items": [],
         "label": null,
         "metadata": [],
@@ -17495,6 +19070,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/1",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/3",
@@ -17533,6 +19115,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/3",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/3",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/2",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -17574,6 +19163,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/2",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -17615,6 +19211,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0065-opera-multiple-canvases https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/5",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/5",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/1",
+            "type": "Range",
+          },
+        ],
         "items": [
           {
             "selector": {
@@ -17888,6 +19491,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0074-multiple-language-captions ht
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page/annotation",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -17908,6 +19518,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0074-multiple-language-captions ht
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json/subtitles_captions-files-vtt",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json/subtitles_captions-files-vtt",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json/anno/page/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "supplementing",
         ],
@@ -18012,6 +19629,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0074-multiple-language-captions ht
         "format": "video/mp4",
         "height": 384,
         "id": "https://fixtures.iiif.io/video/europeana/Per_voi_signore_Modelli_francesi.mp4",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://fixtures.iiif.io/video/europeana/Per_voi_signore_Modelli_francesi.mp4",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page/annotation",
+            "type": "Video",
+          },
+        ],
         "type": "Video",
         "width": 288,
       },
@@ -18039,6 +19663,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0074-multiple-language-captions ht
       },
       "vault://30199866": {
         "id": "vault://30199866",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://30199866",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json/subtitles_captions-files-vtt",
+            "type": "Choice",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_en.vtt",
@@ -18241,6 +19872,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/annotation/p0000-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/annotation/p0000-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/page/p0/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -18321,6 +19959,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
         "format": "image/jpeg",
         "height": 300,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/manifest.json",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "extraFormats": [
@@ -18357,6 +20002,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
         "format": "image/jpeg",
         "height": 5312,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/annotation/p0000-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full",
@@ -18550,6 +20202,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
           },
         ],
         "id": "https://example.org/iiif/text-language/canvas1/page1/annotation1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://example.org/iiif/text-language/canvas1/page1/annotation1",
+            "iiif-parser:partOf": "https://example.org/iiif/text-language/canvas1/page1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -18625,6 +20284,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg": {
         "format": "image/jpeg",
         "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg",
+            "iiif-parser:partOf": "https://example.org/iiif/text-language/canvas1/page1/annotation1",
+            "type": "Image",
+          },
+        ],
         "type": "Image",
       },
     },
@@ -18783,6 +20449,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0139-geolocate-canvas-fragment htt
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/content.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/content.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/contentPage.json",
+            "type": "Annotation",
+          },
+        ],
         "label": {
           "en": [
             "Pamphlet Cover",
@@ -18808,6 +20481,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0139-geolocate-canvas-fragment htt
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/geoAnno.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/geoAnno.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/supplementingPage.json",
+            "type": "Annotation",
+          },
+        ],
         "label": {
           "en": [
             "Annotation containing GeoJSON-LD coordinates that place the map depiction onto a Leaflet web map.",
@@ -18945,6 +20625,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0139-geolocate-canvas-fragment htt
           "type": "Polygon",
         },
         "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/geo.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/geo.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/geoAnno.json",
+            "type": "Feature",
+          },
+        ],
         "properties": {
           "label": {
             "en": [
@@ -18958,6 +20645,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0139-geolocate-canvas-fragment htt
         "format": "image/jpeg",
         "height": 7072,
         "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/content.json",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
@@ -19174,6 +20868,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0154-geo-extension https://iiif.io
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/anno/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/anno/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/anno-page/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -19254,6 +20955,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0154-geo-extension https://iiif.io
         "format": "image/jpg",
         "height": 3000,
         "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/anno/1",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
@@ -19454,6 +21162,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -19474,6 +21189,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0002-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0002-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -19494,6 +21216,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -19514,6 +21243,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -19534,6 +21270,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0005-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0005-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p5/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -19703,6 +21446,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
         "height": 4612,
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/manifest.json",
+            "type": "Canvas",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p2/1",
@@ -19838,6 +21588,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
         "format": "image/jpeg",
         "height": 4613,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18",
@@ -19852,6 +21609,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
         "format": "image/jpeg",
         "height": 4612,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0002-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19",
@@ -19866,6 +21630,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
         "format": "image/jpeg",
         "height": 4613,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20",
@@ -19880,6 +21651,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
         "format": "image/jpeg",
         "height": 4578,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21",
@@ -19894,6 +21672,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0202-start-canvas https://iiif.io/
         "format": "image/jpeg",
         "height": 4632,
         "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0005-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22",
@@ -20253,6 +22038,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate_map_1-manifes
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0230-navdate/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -20333,6 +22125,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate_map_1-manifes
         "format": "image/jpeg",
         "height": 7072,
         "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0230-navdate/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/",
@@ -20474,6 +22273,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate_map_2-manifes
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0230-navdate/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -20554,6 +22360,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate_map_2-manifes
         "format": "image/jpeg",
         "height": 1765,
         "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-87691274-1986/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-87691274-1986/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0230-navdate/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-87691274-1986/",
@@ -20752,6 +22565,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate-collection ht
         "format": "image/jpeg",
         "height": 300,
         "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate-collection.json",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
@@ -20905,6 +22725,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
           },
         ],
         "id": "https://id.loc.gov/authorities/n79055331",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://id.loc.gov/authorities/n79055331",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0234-provider/manifest.json",
+            "type": "Agent",
+          },
+        ],
         "label": {
           "en": [
             "UCLA Library",
@@ -20934,6 +22761,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0234-provider/annotation/p0000-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0234-provider/annotation/p0000-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0234-provider/page/p0/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -21013,6 +22847,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
       "https://digital.library.ucla.edu/": {
         "format": "text/html",
         "id": "https://digital.library.ucla.edu/",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://digital.library.ucla.edu/",
+            "iiif-parser:partOf": "https://id.loc.gov/authorities/n79055331",
+            "type": "Text",
+          },
+        ],
         "label": {
           "en": [
             "UCLA Library Digital Collections",
@@ -21026,6 +22867,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
       "https://id.loc.gov/authorities/names/n79055331.madsxml.xml": {
         "format": "application/xml",
         "id": "https://id.loc.gov/authorities/names/n79055331.madsxml.xml",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://id.loc.gov/authorities/names/n79055331.madsxml.xml",
+            "iiif-parser:partOf": "https://id.loc.gov/authorities/n79055331",
+            "type": "Dataset",
+          },
+        ],
         "label": {
           "en": [
             "US Library of Congress data about the UCLA Library",
@@ -21038,6 +22886,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
         "format": "image/jpeg",
         "height": 5312,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0234-provider/annotation/p0000-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full",
@@ -21050,6 +22905,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
       },
       "https://iiif.library.ucla.edu/iiif/2/UCLA-Library-Logo-double-line-2/full/full/0/default.png": {
         "id": "https://iiif.library.ucla.edu/iiif/2/UCLA-Library-Logo-double-line-2/full/full/0/default.png",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.library.ucla.edu/iiif/2/UCLA-Library-Logo-double-line-2/full/full/0/default.png",
+            "iiif-parser:partOf": "https://id.loc.gov/authorities/n79055331",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "height": 502,
@@ -21295,6 +23157,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0258-tagging-external-resource htt
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/anno/p0002-wikidata",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/anno/p0002-wikidata",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "tagging",
         ],
@@ -21319,6 +23188,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0258-tagging-external-resource htt
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -21422,6 +23298,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0258-tagging-external-resource htt
         "format": "image/jpeg",
         "height": 3024,
         "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
@@ -21435,12 +23318,26 @@ exports[`Cookbook > Testing normalize %p (%p) 0258-tagging-external-resource htt
       "vault://0e748e5d": {
         "format": "text/plain",
         "id": "vault://0e748e5d",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://0e748e5d",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/anno/p0002-wikidata",
+            "type": "TextualBody",
+          },
+        ],
         "language": "de",
         "type": "TextualBody",
         "value": "Gänsenliesel-Brunnen",
       },
       "vault://cf7d210d": {
         "id": "vault://cf7d210d",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://cf7d210d",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/anno/p0002-wikidata",
+            "type": "SpecificResource",
+          },
+        ],
         "source": "http://www.wikidata.org/entity/Q18624915",
         "type": "SpecificResource",
       },
@@ -21599,6 +23496,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0261-non-rectangular-commenting ht
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -21619,6 +23523,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0261-non-rectangular-commenting ht
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/annotation/p0002-svg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/annotation/p0002-svg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "tagging",
         ],
@@ -21723,6 +23634,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0261-non-rectangular-commenting ht
         "format": "image/jpeg",
         "height": 3024,
         "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
@@ -21736,6 +23654,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0261-non-rectangular-commenting ht
       "vault://b71e460e": {
         "format": "text/plain",
         "id": "vault://b71e460e",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://b71e460e",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0261-non-rectangular-commenting/annotation/p0002-svg",
+            "type": "TextualBody",
+          },
+        ],
         "language": "de",
         "type": "TextualBody",
         "value": "Gänsenliessel-Brunnen",
@@ -21895,6 +23820,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0266-full-canvas-annotation https:
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-1/anno-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-1/anno-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -21915,6 +23847,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0266-full-canvas-annotation https:
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-2/anno-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-2/anno-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-2",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "commenting",
         ],
@@ -22018,6 +23957,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0266-full-canvas-annotation https:
         "format": "image/jpeg",
         "height": 3024,
         "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-1/anno-1",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
@@ -22031,6 +23977,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0266-full-canvas-annotation https:
       "vault://929e073a": {
         "format": "text/plain",
         "id": "vault://929e073a",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://929e073a",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-2/anno-1",
+            "type": "TextualBody",
+          },
+        ],
         "language": "de",
         "type": "TextualBody",
         "value": "Göttinger Marktplatz mit Gänseliesel Brunnen",
@@ -22183,6 +24136,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0269-embedded-or-referenced-annota
           },
         ],
         "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-1/anno-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-1/anno-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-1",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -22281,6 +24241,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0269-embedded-or-referenced-annota
         "format": "image/jpeg",
         "height": 3024,
         "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-1/anno-1",
+            "type": "Image",
+          },
+        ],
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",

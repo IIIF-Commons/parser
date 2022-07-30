@@ -1,0 +1,310 @@
+// Vitest Snapshot v1
+
+exports[`Has part issues > Example manifest with thumbnail ID the same as the main resource 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 3024,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "en": [
+            "Canvas with a single IIIF image",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "type": "Canvas",
+        "width": 4032,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 3024,
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "@explicit": true,
+            "format": {},
+            "height": {},
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+            "service": {},
+            "type": "Image",
+            "width": {},
+          },
+          {
+            "@explicit": true,
+            "format": {},
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 4032,
+      },
+    },
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "en": [
+            "Picture of Göttingen taken during the 2019 IIIF Conference",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json": "Manifest",
+    "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1": "AnnotationPage",
+    "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json",
+    "type": "Manifest",
+  },
+}
+`;
+
+exports[`Has part issues > Example manifest with thumbnail ID the same as the main resource 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json",
+  "items": [
+    {
+      "height": 3024,
+      "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 3024,
+                "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 4032,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "en": [
+          "Canvas with a single IIIF image",
+        ],
+      },
+      "thumbnail": [
+        {
+          "format": "image/jpeg",
+          "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+          "type": "Image",
+        },
+      ],
+      "type": "Canvas",
+      "width": 4032,
+    },
+  ],
+  "label": {
+    "en": [
+      "Picture of Göttingen taken during the 2019 IIIF Conference",
+    ],
+  },
+  "type": "Manifest",
+}
+`;
+
+exports[`Has part issues > merging 2 entities 1`] = `
+{
+  "format": "image/jpeg",
+  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+  "iiif-parser:hasPart": [
+    {
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-2",
+      "type": "Image",
+    },
+  ],
+  "type": "Image",
+}
+`;
+
+exports[`Has part issues > merging 2 entities 2`] = `
+{
+  "format": "image/jpeg",
+  "height": 3024,
+  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+  "iiif-parser:hasPart": [
+    {
+      "@explicit": true,
+      "format": {},
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-2",
+      "type": "Image",
+    },
+    {
+      "@explicit": true,
+      "format": {},
+      "height": {},
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-1",
+      "service": {},
+      "type": "Image",
+      "width": {},
+    },
+  ],
+  "service": [
+    {
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+      "profile": "level1",
+      "type": "ImageService3",
+    },
+  ],
+  "type": "Image",
+  "width": 4032,
+}
+`;
