@@ -25,7 +25,7 @@ import {
 } from './empty-types';
 import { convertPresentation2 } from '../presentation-2';
 import { NormalizedEntity } from './serialize';
-import { ResourceProvider, ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
+import { ResourceProvider } from '@iiif/presentation-3';
 
 export const defaultEntities = {
   Collection: {},
@@ -103,7 +103,8 @@ function merge(existing: any, incoming: any): any {
     for (const item of incoming) {
       if (item === null || item === undefined) {
         continue;
-      } if (Array.isArray(item)) {
+      }
+      if (Array.isArray(item)) {
         // FIXME: How to handle this properly?
         merged.push(item);
       } else if (typeof item === 'object' && item.id && item.type) {
@@ -293,7 +294,7 @@ export function normalize(unknownEntity: unknown) {
       addToEntities<Range>('Range', 'Canvas'),
     ],
     agent: [
-      ensureDefaultFields<ResourceProvider, ResourceProviderNormalized>(emptyAgent),
+      ensureDefaultFields<ResourceProvider, ResourceProvider>(emptyAgent),
       addToMapping<ResourceProvider>('Agent'),
       addToEntities<ResourceProvider>('Agent'),
     ],

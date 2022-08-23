@@ -16,8 +16,8 @@ import {
   RangeItems,
   Required,
   Service,
+  ResourceProvider,
 } from '@iiif/presentation-3';
-import { ResourceProvider } from '@iiif/presentation-3/resources/provider';
 import { ensureArray } from '../shared/ensure-array';
 
 export const types = [

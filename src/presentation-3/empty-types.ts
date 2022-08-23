@@ -5,8 +5,8 @@ import {
   CollectionNormalized,
   ManifestNormalized,
   RangeNormalized,
+  ResourceProvider,
 } from '@iiif/presentation-3';
-import { ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
 
 export const EMPTY = [];
 // Prevent accidental mutation
@@ -181,7 +181,7 @@ export const emptyRange: RangeNormalized = {
   viewingDirection: 'left-to-right',
 };
 
-export const emptyAgent: ResourceProviderNormalized = {
+export const emptyAgent: ResourceProvider = {
   id: 'https://iiif-parser/empty-agent',
   type: 'Agent',
   label: {},
