@@ -2,6 +2,7 @@ import * as Presentation3 from '@iiif/presentation-3';
 import * as Presentation2 from '@iiif/presentation-2';
 import { imageServiceProfiles, level1Support } from '../shared/image-api-profiles';
 import { Traverse } from './traverse';
+import { ensureArray } from '../shared/ensure-array';
 
 const configuration = {
   attributionLabel: 'Attribution',
@@ -117,13 +118,6 @@ function getTypeFromProfile(inputProfile: string): string | undefined {
   }
 
   return undefined;
-}
-
-function ensureArray<T>(maybeArray: T | T[]): T[] {
-  if (Array.isArray(maybeArray)) {
-    return maybeArray;
-  }
-  return [maybeArray];
 }
 
 function removePrefix(str: string) {

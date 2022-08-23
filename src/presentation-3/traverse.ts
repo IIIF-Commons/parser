@@ -18,6 +18,7 @@ import {
   Service,
 } from '@iiif/presentation-3';
 import { ResourceProvider } from '@iiif/presentation-3/resources/provider';
+import { ensureArray } from '../shared/ensure-array';
 
 export const types = [
   'Collection',
@@ -136,7 +137,9 @@ export class Traverse {
       resource.seeAlso = resource.seeAlso.map((content) => this.traverseType(content, this.traversals.contentResource));
     }
     if (resource.service) {
-      resource.service = resource.service.map((service) => this.traverseType(service, this.traversals.service));
+      resource.service = ensureArray(resource.service).map((service) =>
+        this.traverseType(service, this.traversals.service)
+      );
     }
     if (resource.services) {
       resource.services = resource.services.map((service) => this.traverseType(service, this.traversals.service));
@@ -340,7 +343,7 @@ export class Traverse {
       return contentResourceJson;
     }
     if (contentResourceJson && (contentResourceJson as IIIFExternalWebResource)!.service) {
-      (contentResourceJson as IIIFExternalWebResource).service = (
+      (contentResourceJson as IIIFExternalWebResource).service = ensureArray(
         (contentResourceJson as IIIFExternalWebResource).service || []
       ).map((service) => this.traverseType(service, this.traversals.service));
     }
