@@ -48,8 +48,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@iiif/presentation-2": "^1.0.1",
-    "@iiif/presentation-3": "^1.0.4",
+    "@iiif/presentation-2": "^1.0.2",
+    "@iiif/presentation-3": "^1.1.2",
     "@types/geojson": "^7946.0.8"
   },
   "devDependencies": {
