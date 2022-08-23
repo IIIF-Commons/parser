@@ -11,8 +11,8 @@ import {
   Reference,
   Selector,
   ServiceNormalized,
+  ResourceProviderNormalized
 } from '@iiif/presentation-3';
-import { ResourceProvider, ResourceProviderNormalized } from '@iiif/presentation-3/resources/provider';
 
 export const UNSET = '__$UNSET$__';
 export const UNWRAP = '__$UNWRAP$__';

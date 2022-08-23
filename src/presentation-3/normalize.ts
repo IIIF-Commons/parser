@@ -13,6 +13,8 @@ import {
   Range,
   RangeNormalized,
   Reference,
+  ResourceProvider,
+  ResourceProviderNormalized,
 } from '@iiif/presentation-3';
 import {
   EMPTY,
@@ -25,7 +27,6 @@ import {
 } from './empty-types';
 import { convertPresentation2 } from '../presentation-2';
 import { NormalizedEntity } from './serialize';
-import { ResourceProvider } from '@iiif/presentation-3';
 
 export const defaultEntities = {
   Collection: {},
@@ -294,7 +295,7 @@ export function normalize(unknownEntity: unknown) {
       addToEntities<Range>('Range', 'Canvas'),
     ],
     agent: [
-      ensureDefaultFields<ResourceProvider, ResourceProvider>(emptyAgent),
+      ensureDefaultFields<ResourceProvider, ResourceProviderNormalized>(emptyAgent),
       addToMapping<ResourceProvider>('Agent'),
       addToEntities<ResourceProvider>('Agent'),
     ],

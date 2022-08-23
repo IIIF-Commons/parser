@@ -142,7 +142,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ['id', entity.id],
       ['type', 'Agent'],
       ['label', entity.label],
-      ...(yield* linkingProperties(entity)),
+      ...(yield* linkingProperties(entity as any)),
     ];
   },
 
