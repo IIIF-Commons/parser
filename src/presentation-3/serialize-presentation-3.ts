@@ -66,12 +66,12 @@ function service2compat(service: ImageService3): ImageService2 | ImageService3 {
 }
 
 function filterService2Compat(services?: any[]) {
-  if (!services || services.length === 0) {
-    return undefined;
-  }
-
   if (!Array.isArray(services)) {
     services = [services];
+  }
+
+  if (!services || services.length === 0) {
+    return undefined;
   }
 
   return (services as any[]).map(service2compat);
