@@ -469,7 +469,7 @@ export class Traverse {
   traverseService(service: Service, parent?: any): Service {
     const _service: any = Object.assign({}, service);
     if (_service && _service.service) {
-      _service.service = _service.service.map((innerService: any) => this.traverseService(innerService));
+      _service.service = ensureArray(_service.service).map((innerService: any) => this.traverseService(innerService));
     }
     return this.traverseType<Service>(_service, { parent }, this.traversals.service);
   }
