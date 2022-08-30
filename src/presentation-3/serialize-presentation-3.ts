@@ -70,6 +70,10 @@ function filterService2Compat(services?: any[]) {
     return undefined;
   }
 
+  if (!Array.isArray(services)) {
+    services = [services];
+  }
+
   return (services as any[]).map(service2compat);
 }
 
