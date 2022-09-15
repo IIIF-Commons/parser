@@ -370,10 +370,10 @@
   dependencies:
     ajv "6.12.2"
 
-"@iiif/presentation-2@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@iiif/presentation-2/-/presentation-2-1.0.2.tgz#c712c4a40cc5b7291b8d92646b0ec8b8215b9b3d"
-  integrity sha512-EN/p+td5VrHvUsQXV26VkaDFW0HG2GPRaibPlxJRip8au8ABBrOYPIcBH69Hyk3I0UnW3xzK2VsZ9TcuQEn0Mw==
+"@iiif/presentation-2@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@iiif/presentation-2/-/presentation-2-1.0.3.tgz#dd2af09befcecb8e0d5e1579dd27d0241ab1aaa7"
+  integrity sha512-erIXmedqXmJ0PnEXDaAdmUqwb7a22FPQQ783/vOY3sfoe3Lf4pzK5l2zxUMT6L/roFSgHPhGTT5hbt7pBOVt1g==
 
 "@iiif/presentation-3@^1.1.3":
   version "1.1.3"

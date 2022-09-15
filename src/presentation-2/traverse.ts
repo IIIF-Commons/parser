@@ -24,7 +24,7 @@ export const types: TraversableEntityTypes[] = [
   'sc:Collection',
   'sc:Manifest',
   'sc:Canvas',
-  'oa:AnnotationList',
+  'sc:AnnotationList',
   'oa:Annotation',
   'sc:Range',
   'sc:Layer',
@@ -289,7 +289,7 @@ export class Traverse<
   traverseAnnotationList(annotationList: AnnotationList): T['AnnotationList'] {
     const list =
       typeof annotationList === 'string'
-        ? ({ '@id': annotationList, '@type': 'oa:AnnotationList' } as any)
+        ? ({ '@id': annotationList, '@type': 'sc:AnnotationList' } as any)
         : annotationList;
 
     return this.traverseType(
@@ -385,7 +385,7 @@ export class Traverse<
         return this.traverseRange(item);
       case 'oa:Annotation':
         return this.traverseAnnotation(item);
-      case 'oa:AnnotationList':
+      case 'sc:AnnotationList':
         return this.traverseAnnotationList(item);
       case 'sc:Layer':
         return this.traverseLayer(item);
