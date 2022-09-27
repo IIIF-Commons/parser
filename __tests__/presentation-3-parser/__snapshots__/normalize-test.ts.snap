@@ -1,179 +1,179 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
 
-exports[`normalize normalize 1`] = `
-Object {
-  "Agent": Object {},
-  "Annotation": Object {
-    "https://example.org/iiif/book1/annotation/p0001-image": Object {
-      "body": Array [
-        Object {
+exports[`normalize > normalize 1`] = `
+{
+  "Agent": {},
+  "Annotation": {
+    "https://example.org/iiif/book1/annotation/p0001-image": {
+      "body": [
+        {
           "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
           "type": "ContentResource",
         },
       ],
       "id": "https://example.org/iiif/book1/annotation/p0001-image",
-      "motivation": Array [
+      "motivation": [
         "painting",
       ],
       "target": "https://example.org/iiif/book1/canvas/p1",
       "type": "Annotation",
     },
   },
-  "AnnotationCollection": Object {},
-  "AnnotationPage": Object {
-    "https://example.org/iiif/book1/page/p1/1": Object {
-      "behavior": Array [],
-      "homepage": Array [],
+  "AnnotationCollection": {},
+  "AnnotationPage": {
+    "https://example.org/iiif/book1/page/p1/1": {
+      "behavior": [],
+      "homepage": [],
       "id": "https://example.org/iiif/book1/page/p1/1",
-      "items": Array [
-        Object {
+      "items": [
+        {
           "id": "https://example.org/iiif/book1/annotation/p0001-image",
           "type": "Annotation",
         },
       ],
       "label": null,
-      "logo": Array [],
-      "metadata": Array [],
+      "logo": [],
+      "metadata": [],
       "motivation": null,
-      "provider": Array [],
-      "rendering": Array [],
+      "provider": [],
+      "rendering": [],
       "requiredStatement": null,
       "rights": null,
-      "seeAlso": Array [],
-      "service": Array [],
+      "seeAlso": [],
+      "service": [],
       "summary": null,
-      "thumbnail": Array [],
+      "thumbnail": [],
       "type": "AnnotationPage",
     },
   },
-  "Canvas": Object {
-    "https://example.org/iiif/book1/canvas/p1": Object {
+  "Canvas": {
+    "https://example.org/iiif/book1/canvas/p1": {
       "accompanyingCanvas": null,
-      "annotations": Array [],
-      "behavior": Array [],
+      "annotations": [],
+      "behavior": [],
       "duration": 0,
       "height": 1800,
-      "homepage": Array [],
+      "homepage": [],
       "id": "https://example.org/iiif/book1/canvas/p1",
-      "items": Array [
-        Object {
+      "items": [
+        {
           "id": "https://example.org/iiif/book1/page/p1/1",
           "type": "AnnotationPage",
         },
       ],
       "label": null,
-      "logo": Array [],
-      "metadata": Array [],
+      "logo": [],
+      "metadata": [],
       "motivation": null,
       "navDate": null,
-      "partOf": Array [],
+      "partOf": [],
       "placeholderCanvas": null,
       "posterCanvas": null,
-      "provider": Array [],
-      "rendering": Array [],
+      "provider": [],
+      "rendering": [],
       "requiredStatement": null,
       "rights": null,
-      "seeAlso": Array [],
-      "service": Array [],
+      "seeAlso": [],
+      "service": [],
       "summary": null,
-      "thumbnail": Array [],
+      "thumbnail": [],
       "type": "Canvas",
       "width": 1200,
     },
   },
-  "Collection": Object {},
-  "ContentResource": Object {
-    "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png": Object {
+  "Collection": {},
+  "ContentResource": {
+    "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png": {
       "format": "image/png",
       "height": 1800,
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
       "type": "Image",
       "width": 1200,
     },
-    "http://myhomepage.com": Object {
+    "http://myhomepage.com": {
       "id": "http://myhomepage.com",
       "type": "ContentResource",
     },
   },
-  "Manifest": Object {
-    "https://example.org/iiif/book1/manifest": Object {
-      "@context": Array [
+  "Manifest": {
+    "https://example.org/iiif/book1/manifest": {
+      "@context": [
         "http://www.w3.org/ns/anno.jsonld",
         "http://iiif.io/api/presentation/{{ page.major }}/context.json",
       ],
       "accompanyingCanvas": null,
-      "annotations": Array [],
-      "behavior": Array [],
-      "homepage": Array [
-        Object {
+      "annotations": [],
+      "behavior": [],
+      "homepage": [
+        {
           "id": "http://myhomepage.com",
           "type": "ContentResource",
         },
       ],
       "id": "https://example.org/iiif/book1/manifest",
-      "items": Array [
-        Object {
+      "items": [
+        {
           "id": "https://example.org/iiif/book1/canvas/p1",
           "type": "Canvas",
         },
       ],
-      "label": Object {
-        "en": Array [
+      "label": {
+        "en": [
           "Image 1",
         ],
       },
-      "logo": Array [],
-      "metadata": Array [],
+      "logo": [],
+      "metadata": [],
       "motivation": null,
       "navDate": null,
-      "partOf": Array [],
+      "partOf": [],
       "placeholderCanvas": null,
       "posterCanvas": null,
-      "provider": Array [],
-      "rendering": Array [],
+      "provider": [],
+      "rendering": [],
       "requiredStatement": null,
       "rights": null,
-      "seeAlso": Array [],
-      "service": Array [],
-      "services": Array [],
+      "seeAlso": [],
+      "service": [],
+      "services": [],
       "start": null,
-      "structures": Array [],
+      "structures": [],
       "summary": null,
-      "thumbnail": Array [],
+      "thumbnail": [],
       "type": "Manifest",
       "viewingDirection": "left-to-right",
     },
   },
-  "Range": Object {},
-  "Selector": Object {},
-  "Service": Object {},
+  "Range": {},
+  "Selector": {},
+  "Service": {},
 }
 `;
 
-exports[`normalize normalize full example from specification 1`] = `
-Object {
-  "Agent": Object {
-    "https://example.org/about": Object {
-      "homepage": Array [
-        Object {
+exports[`normalize > normalize full example from specification 1`] = `
+{
+  "Agent": {
+    "https://example.org/about": {
+      "homepage": [
+        {
           "id": "https://example.org/",
           "type": "ContentResource",
         },
       ],
       "id": "https://example.org/about",
-      "label": Object {
-        "en": Array [
+      "label": {
+        "en": [
           "Example Organization",
         ],
       },
-      "logo": Array [
-        Object {
+      "logo": [
+        {
           "id": "https://example.org/service/inst1/full/max/0/default.png",
           "type": "ContentResource",
         },
       ],
-      "seeAlso": Array [
-        Object {
+      "seeAlso": [
+        {
           "id": "https://data.example.org/about/us.jsonld",
           "type": "ContentResource",
         },
@@ -181,128 +181,128 @@ Object {
       "type": "Agent",
     },
   },
-  "Annotation": Object {},
-  "AnnotationCollection": Object {},
-  "AnnotationPage": Object {
-    "https://example.org/iiif/book1/annotations/p1": Object {
-      "behavior": Array [],
-      "homepage": Array [],
+  "Annotation": {},
+  "AnnotationCollection": {},
+  "AnnotationPage": {
+    "https://example.org/iiif/book1/annotations/p1": {
+      "behavior": [],
+      "homepage": [],
       "id": "https://example.org/iiif/book1/annotations/p1",
-      "items": Array [],
+      "items": [],
       "label": null,
-      "logo": Array [],
-      "metadata": Array [],
+      "logo": [],
+      "metadata": [],
       "motivation": null,
-      "provider": Array [],
-      "rendering": Array [],
+      "provider": [],
+      "rendering": [],
       "requiredStatement": null,
       "rights": null,
-      "seeAlso": Array [],
-      "service": Array [],
+      "seeAlso": [],
+      "service": [],
       "summary": null,
-      "thumbnail": Array [],
+      "thumbnail": [],
       "type": "AnnotationPage",
     },
   },
-  "Canvas": Object {
-    "https://example.org/iiif/book1/canvas/p1": Object {
+  "Canvas": {
+    "https://example.org/iiif/book1/canvas/p1": {
       "accompanyingCanvas": null,
-      "annotations": Array [],
-      "behavior": Array [],
+      "annotations": [],
+      "behavior": [],
       "duration": 0,
       "height": 0,
-      "homepage": Array [],
+      "homepage": [],
       "id": "https://example.org/iiif/book1/canvas/p1",
-      "items": Array [],
-      "label": Object {
-        "none": Array [
+      "items": [],
+      "label": {
+        "none": [
           "p. 1",
         ],
       },
-      "logo": Array [],
-      "metadata": Array [],
+      "logo": [],
+      "metadata": [],
       "motivation": null,
       "navDate": null,
-      "partOf": Array [],
+      "partOf": [],
       "placeholderCanvas": null,
       "posterCanvas": null,
-      "provider": Array [],
-      "rendering": Array [],
+      "provider": [],
+      "rendering": [],
       "requiredStatement": null,
       "rights": null,
-      "seeAlso": Array [],
-      "service": Array [],
+      "seeAlso": [],
+      "service": [],
       "summary": null,
-      "thumbnail": Array [],
+      "thumbnail": [],
       "type": "Canvas",
       "width": 0,
     },
-    "https://example.org/iiif/book1/canvas/p2": Object {
+    "https://example.org/iiif/book1/canvas/p2": {
       "accompanyingCanvas": null,
-      "annotations": Array [],
-      "behavior": Array [],
+      "annotations": [],
+      "behavior": [],
       "duration": 0,
       "height": 0,
-      "homepage": Array [],
+      "homepage": [],
       "id": "https://example.org/iiif/book1/canvas/p2",
-      "items": Array [],
+      "items": [],
       "label": null,
-      "logo": Array [],
-      "metadata": Array [],
+      "logo": [],
+      "metadata": [],
       "motivation": null,
       "navDate": null,
-      "partOf": Array [],
+      "partOf": [],
       "placeholderCanvas": null,
       "posterCanvas": null,
-      "provider": Array [],
-      "rendering": Array [],
+      "provider": [],
+      "rendering": [],
       "requiredStatement": null,
       "rights": null,
-      "seeAlso": Array [],
-      "service": Array [],
+      "seeAlso": [],
+      "service": [],
       "summary": null,
-      "thumbnail": Array [],
+      "thumbnail": [],
       "type": "Canvas",
       "width": 0,
     },
   },
-  "Collection": Object {},
-  "ContentResource": Object {
-    "https://data.example.org/about/us.jsonld": Object {
+  "Collection": {},
+  "ContentResource": {
+    "https://data.example.org/about/us.jsonld": {
       "format": "application/ld+json",
       "id": "https://data.example.org/about/us.jsonld",
       "profile": "https://schema.org/",
       "type": "Dataset",
     },
-    "https://example.org/": Object {
+    "https://example.org/": {
       "format": "text/html",
       "id": "https://example.org/",
-      "label": Object {
-        "en": Array [
+      "label": {
+        "en": [
           "Example Organization Homepage",
         ],
       },
       "type": "Text",
     },
-    "https://example.org/collections/books/": Object {
+    "https://example.org/collections/books/": {
       "id": "https://example.org/collections/books/",
       "type": "Collection",
     },
-    "https://example.org/iiif/book1.pdf": Object {
+    "https://example.org/iiif/book1.pdf": {
       "format": "application/pdf",
       "id": "https://example.org/iiif/book1.pdf",
-      "label": Object {
-        "en": Array [
+      "label": {
+        "en": [
           "Download as PDF",
         ],
       },
       "type": "Text",
     },
-    "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg": Object {
+    "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg": {
       "format": "image/jpeg",
       "id": "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg",
-      "service": Array [
-        Object {
+      "service": [
+        {
           "id": "https://example.org/iiif/book1/page1",
           "profile": "level1",
           "type": "ImageService3",
@@ -310,27 +310,27 @@ Object {
       ],
       "type": "Image",
     },
-    "https://example.org/info/book1/": Object {
+    "https://example.org/info/book1/": {
       "format": "text/html",
       "id": "https://example.org/info/book1/",
-      "label": Object {
-        "en": Array [
+      "label": {
+        "en": [
           "Home page for Book 1",
         ],
       },
       "type": "Text",
     },
-    "https://example.org/library/catalog/book1.xml": Object {
+    "https://example.org/library/catalog/book1.xml": {
       "format": "text/xml",
       "id": "https://example.org/library/catalog/book1.xml",
       "profile": "https://example.org/profiles/bibliographic",
       "type": "Dataset",
     },
-    "https://example.org/service/inst1/full/max/0/default.png": Object {
+    "https://example.org/service/inst1/full/max/0/default.png": {
       "format": "image/png",
       "id": "https://example.org/service/inst1/full/max/0/default.png",
-      "service": Array [
-        Object {
+      "service": [
+        {
           "id": "https://example.org/service/inst1",
           "profile": "level2",
           "type": "ImageService3",
@@ -339,87 +339,87 @@ Object {
       "type": "Image",
     },
   },
-  "Manifest": Object {
-    "https://example.org/iiif/book1/manifest": Object {
+  "Manifest": {
+    "https://example.org/iiif/book1/manifest": {
       "@context": "http://iiif.io/api/presentation/3/context.json",
       "accompanyingCanvas": null,
-      "annotations": Array [
-        Object {
+      "annotations": [
+        {
           "id": "https://example.org/iiif/book1/annotations/p1",
           "type": "AnnotationPage",
         },
       ],
-      "behavior": Array [
+      "behavior": [
         "paged",
       ],
-      "homepage": Array [
-        Object {
+      "homepage": [
+        {
           "id": "https://example.org/info/book1/",
           "type": "ContentResource",
         },
       ],
       "id": "https://example.org/iiif/book1/manifest",
-      "items": Array [
-        Object {
+      "items": [
+        {
           "id": "https://example.org/iiif/book1/canvas/p1",
           "type": "Canvas",
         },
       ],
-      "label": Object {
-        "en": Array [
+      "label": {
+        "en": [
           "Book 1",
         ],
       },
-      "logo": Array [],
-      "metadata": Array [
-        Object {
-          "label": Object {
-            "en": Array [
+      "logo": [],
+      "metadata": [
+        {
+          "label": {
+            "en": [
               "Author",
             ],
           },
-          "value": Object {
-            "none": Array [
+          "value": {
+            "none": [
               "Anne Author",
             ],
           },
         },
-        Object {
-          "label": Object {
-            "en": Array [
+        {
+          "label": {
+            "en": [
               "Published",
             ],
           },
-          "value": Object {
-            "en": Array [
+          "value": {
+            "en": [
               "Paris, circa 1400",
             ],
-            "fr": Array [
+            "fr": [
               "Paris, environ 1400",
             ],
           },
         },
-        Object {
-          "label": Object {
-            "en": Array [
+        {
+          "label": {
+            "en": [
               "Notes",
             ],
           },
-          "value": Object {
-            "en": Array [
+          "value": {
+            "en": [
               "Text of note 1",
               "Text of note 2",
             ],
           },
         },
-        Object {
-          "label": Object {
-            "en": Array [
+        {
+          "label": {
+            "en": [
               "Source",
             ],
           },
-          "value": Object {
-            "none": Array [
+          "value": {
+            "none": [
               "<span>From: <a href=\\"https://example.org/db/1.html\\">Some Collection</a></span>",
             ],
           },
@@ -427,60 +427,60 @@ Object {
       ],
       "motivation": null,
       "navDate": "1856-01-01T00:00:00Z",
-      "partOf": Array [
-        Object {
+      "partOf": [
+        {
           "id": "https://example.org/collections/books/",
           "type": "ContentResource",
         },
       ],
       "placeholderCanvas": null,
       "posterCanvas": null,
-      "provider": Array [
-        Object {
+      "provider": [
+        {
           "id": "https://example.org/about",
           "type": "Agent",
         },
       ],
-      "rendering": Array [
-        Object {
+      "rendering": [
+        {
           "id": "https://example.org/iiif/book1.pdf",
           "type": "ContentResource",
         },
       ],
-      "requiredStatement": Object {
-        "label": Object {
-          "en": Array [
+      "requiredStatement": {
+        "label": {
+          "en": [
             "Attribution",
           ],
         },
-        "value": Object {
-          "en": Array [
+        "value": {
+          "en": [
             "Provided by Example Organization",
           ],
         },
       },
       "rights": "http://creativecommons.org/licenses/by/4.0/",
-      "seeAlso": Array [
-        Object {
+      "seeAlso": [
+        {
           "id": "https://example.org/library/catalog/book1.xml",
           "type": "ContentResource",
         },
       ],
-      "service": Array [
-        Object {
+      "service": [
+        {
           "id": "https://example.org/service/example",
           "profile": "https://example.org/docs/example-service.html",
           "type": "ExampleExtensionService",
         },
       ],
-      "services": Array [
-        Object {
+      "services": [
+        {
           "@id": "https://example.org/iiif/auth/login",
           "@type": "AuthCookieService1",
           "label": "Login to Example Institution",
           "profile": "http://iiif.io/api/auth/1/login",
-          "service": Array [
-            Object {
+          "service": [
+            {
               "@id": "https://example.org/iiif/auth/token",
               "@type": "AuthTokenService1",
               "profile": "http://iiif.io/api/auth/1/token",
@@ -488,23 +488,23 @@ Object {
           ],
         },
       ],
-      "start": Object {
+      "start": {
         "id": "https://example.org/iiif/book1/canvas/p2",
         "type": "Canvas",
       },
-      "structures": Array [
-        Object {
+      "structures": [
+        {
           "id": "https://example.org/iiif/book1/range/top",
           "type": "Range",
         },
       ],
-      "summary": Object {
-        "en": Array [
+      "summary": {
+        "en": [
           "Book 1, written by Anne Author, published in Paris around 1400.",
         ],
       },
-      "thumbnail": Array [
-        Object {
+      "thumbnail": [
+        {
           "id": "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg",
           "type": "ContentResource",
         },
@@ -513,37 +513,37 @@ Object {
       "viewingDirection": "right-to-left",
     },
   },
-  "Range": Object {
-    "https://example.org/iiif/book1/range/top": Object {
+  "Range": {
+    "https://example.org/iiif/book1/range/top": {
       "accompanyingCanvas": null,
-      "annotations": Array [],
-      "behavior": Array [],
-      "homepage": Array [],
+      "annotations": [],
+      "behavior": [],
+      "homepage": [],
       "id": "https://example.org/iiif/book1/range/top",
-      "items": Array [],
+      "items": [],
       "label": null,
-      "logo": Array [],
-      "metadata": Array [],
+      "logo": [],
+      "metadata": [],
       "motivation": null,
       "navDate": null,
-      "partOf": Array [],
+      "partOf": [],
       "placeholderCanvas": null,
       "posterCanvas": null,
-      "provider": Array [],
-      "rendering": Array [],
+      "provider": [],
+      "rendering": [],
       "requiredStatement": null,
       "rights": null,
-      "seeAlso": Array [],
-      "service": Array [],
+      "seeAlso": [],
+      "service": [],
       "start": null,
       "summary": null,
       "supplementary": null,
-      "thumbnail": Array [],
+      "thumbnail": [],
       "type": "Range",
       "viewingDirection": "left-to-right",
     },
   },
-  "Selector": Object {},
-  "Service": Object {},
+  "Selector": {},
+  "Service": {},
 }
 `;
