@@ -1,0 +1,85 @@
+{
+  "@context" : "http://iiif.io/api/presentation/2/context.json",
+  "@id" : "https://collections.recolnat.org/annotate-server/iiif/2/annotationList/30/febbe57672bb5eaf097de6c5448c43ad8a82e012/list",
+  "@type" : "sc:AnnotationList",
+  "resources" : [
+    {
+      "@id" : "https://collections.recolnat.org/annotate-server/iiif/2/annotationList/30/febbe57672bb5eaf097de6c5448c43ad8a82e012/list/1",
+      "@type" : "oa:Annotation",
+      "motivation" : ["oa:commenting", "oa:tagging"],
+      "resource" : [
+        {
+          "@type": "dctypes:Text",
+          "chars" : "<p><i>Zone of interest</i><br/><b>Place</b><br/>Cauca of Huila</p>",
+          "format" : "text/html"
+        },
+        {
+          "@type" : "oa:Tag",
+          "chars" : "Colombia"
+        },
+        {
+          "@type" : "oa:Tag",
+          "chars" : "Cauca"
+        }
+      ],
+      "on" : {
+        "@id" : "https://collections.recolnat.org/annotate-server/iiif/2/resource/1",
+        "@type" : "oa:SpecificResource",
+        "full" : "https://collections.recolnat.org/annotate-server/iiif/2/canvases/canvas/1",
+        "selector" : {
+          "@type" : "oa:Choice",
+          "default" : {
+            "@type" : "oa:FragmentSelector",
+            "value" : "xywh=2458.3294117573255,4064.0775928284547,148.5859420675797,52.27032787325061"
+          },
+          "item" : {
+            "@type" : "oa:SvgSelector",
+            "value" : "<svg xmlns='http://www.w3.org/2000/svg'><path .../></svg>"
+          }
+        },
+        "within" : {
+          "@type" : "sc:Manifest",
+          "@id" : "https://collections.recolnat.org/annotate-server/iiif/2/30/manifest"
+        }
+    },
+    "label" : "label-Place",
+    "metadata": [
+      {
+        "label": "Note",
+        "value": "Une note complémentaire à propos de cette annotation"
+      }
+    ]
+  },
+  {
+    "@id" : "https://collections.recolnat.org/annotate-server/iiif/2/annotationList/30/febbe57672bb5eaf097de6c5448c43ad8a82e012/list/3",
+    "@type" : "oa:Annotation",
+    "motivation" : "oa:commenting",
+    "resource" : {
+      "@type" : "dctypes:Text",
+      "chars" : "<p><i>Surface tool</i><br/><b>Feuille</b><br/>70.97 mm²</p>",
+      "format" : "text/html"
+    },
+    "on" : {
+      "@id" : "https://collections.recolnat.org/annotate-server/iiif/2/resource/3",
+      "@type": "oa:SpecificResource",
+      "full": "https://collections.recolnat.org/annotate-server/iiif/2/canvases/canvas/1",
+      "selector": {
+        "@type": "oa:Choice",
+        "default" : {
+          "@type": "oa:FragmentSelector",
+          "value": "xywh=1437.1021112372669,1013.9299384835548,129.10014843443582,234.9981533683548"
+        },
+        "item": {
+          "@type": "oa:SvgSelector",
+          "value": "<svg xmlns='http://www.w3.org/2000/svg'><path .../></svg>"
+        }
+      },
+      "within": {
+        "@type": "sc:Manifest",
+        "@id": "https://collections.recolnat.org/annotate-server/iiif/2/30/manifest"
+      }
+    },
+    "label": "label-Feuille"
+  }
+ ]
+}

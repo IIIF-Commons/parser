@@ -360,7 +360,7 @@ function resolveDecodedURI(uri: string) {
 
 function technicalProperties<T extends Partial<Presentation3.TechnicalProperties>>(
   resource: Presentation3.SomeRequired<Presentation2.TechnicalProperties, '@type'> & {
-    motivation?: string | null;
+    motivation?: string | string[] | null;
     format?: string;
     profile?: any;
     '@context'?: string | string[] | undefined;
@@ -372,6 +372,13 @@ function technicalProperties<T extends Partial<Presentation3.TechnicalProperties
     allBehaviours.push(resource.viewingHint);
   }
 
+  let motivation: string | string[] | undefined;
+  if (Array.isArray(resource.motivation)) {
+    motivation = resource.motivation.map(removePrefix);
+  } else if (resource.motivation) {
+    motivation = removePrefix(resource.motivation);
+  }
+
   return {
     '@context': resource['@context'] ? fixContext(resource['@context']) : undefined,
     id: (resource['@id'] || mintNewIdFromResource(resource)).trim(),
@@ -380,7 +387,7 @@ function technicalProperties<T extends Partial<Presentation3.TechnicalProperties
     // format: This will be an optional async post-process step.
     height: resource.height ? resource.height : undefined,
     width: resource.width ? resource.width : undefined,
-    motivation: resource.motivation ? removePrefix(resource.motivation) : undefined,
+    motivation,
     viewingDirection: resource.viewingDirection,
     profile: resource.profile,
     format: resource.format ? resource.format : undefined,
@@ -469,6 +476,15 @@ function linkingProperties(resource: Presentation2.LinkingProperties & Presentat
     start: resource.startCanvas as any,
     service: resource.service ? ensureArray(resource.service as any) : undefined,
     supplementary: layer ? [layer as any] : undefined,
+  };
+}
+
+// FIXME: Is this function really needed?
+function embeddedContentProperties(resource: Presentation2.CharsEmbeddedContent) {
+  return {
+    chars: resource.chars,
+    format: resource.format ? resource.format : undefined,
+    language: resource.language,
   };
 }
 
@@ -585,12 +601,43 @@ function upgradeSequence(sequence: Presentation2.Sequence): {
 }
 
 function upgradeAnnotation(annotation: Presentation2.Annotation): Presentation3.Annotation {
+  function upgradeTarget(target: typeof annotation.on): Presentation3.AnnotationTarget {
+    if (Array.isArray(target)) {
+      if (target.length > 1) {
+        return { type: 'List', items: target.map(upgradeTarget) as Presentation3.Target[] };
+      }
+      target = target[0];
+    }
+    if (typeof target === 'string') {
+      return encodeURI(target).trim();
+    } else if ('@type' in target) {
+      let source: string | Presentation3.Reference<'Canvas'> | Presentation3.Reference<'Image'>;
+      if (typeof target.full === 'string') {
+        source = target.full;
+      } else if (target.full['@type'] === 'dctypes:Image') {
+        source = { id: target.full['@id'], type: 'Image' };
+      } else if (target.full['@type'] === 'sc:Canvas') {
+        source = { id: target.full['@id'], type: 'Canvas' };
+      } else {
+        throw new Error(`Unsupported source type on annotation: ${target.full['@type']}`);
+      }
+      return {
+        type: 'SpecificResource',
+        source,
+        selector: upgradeSelector(target.selector),
+      };
+    } else {
+      return encodeURI(target['@id']).trim();
+    }
+  }
   return removeUndefinedProperties({
     ...(technicalProperties(annotation) as any),
     ...(descriptiveProperties(annotation) as any),
     ...(linkingProperties(annotation) as any),
-    target: typeof annotation.on === 'string' ? encodeURI(annotation.on).trim() : annotation.on,
-    body: annotation.resource as any,
+    target: upgradeTarget(annotation.on),
+    body: Array.isArray(annotation.resource)
+      ? annotation.resource.map(upgradeContentResource)
+      : upgradeContentResource(annotation.resource),
     // @todo stylesheet upgrade.
   });
 }
@@ -602,6 +649,7 @@ function upgradeContentResource(inputContentResource: Presentation2.ContentResou
     ...(technicalProperties(contentResource) as any),
     ...(descriptiveProperties(contentResource) as any),
     ...(linkingProperties(contentResource as any) as any),
+    ...(embeddedContentProperties(contentResource as any) as any),
   });
 }
 
@@ -713,4 +761,41 @@ export function convertPresentation2(entity: any): Presentation3.Manifest | Pres
     return presentation2to3.traverseUnknown(entity);
   }
   return entity;
+}
+
+function upgradeSelector(
+  selector: Presentation2.ContentResourceSelector
+): Presentation3.Selector | Presentation3.Selector[] {
+  const isSvgSelector =
+    ((Array.isArray(selector['@type']) && selector['@type'].includes('oa:SvgSelector')) ||
+      selector['@type'] == 'oa:SvgSelector') &&
+    ('chars' in selector || 'value' in selector);
+  if (isSvgSelector) {
+    return {
+      type: 'SvgSelector',
+      value: 'chars' in selector ? selector.chars : selector.value,
+    };
+  }
+  if (selector['@type'] === 'oa:FragmentSelector') {
+    return {
+      type: 'FragmentSelector',
+      value: selector.value,
+    };
+  }
+  if (selector['@type'] === 'oa:Choice') {
+    return [
+      upgradeSelector(selector.default) as Presentation3.Selector,
+      ...((Array.isArray(selector.item) ? selector.item : [selector.item]).map(
+        upgradeSelector
+      ) as Presentation3.Selector[]),
+    ];
+  }
+  if (selector['@type'] == 'iiif:ImageApiSelector') {
+    return {
+      type: 'ImageApiSelector',
+      region: 'region' in selector ? selector.region : undefined,
+      rotation: 'rotation' in selector ? selector.rotation : undefined,
+    };
+  }
+  throw new Error(`Unsupported selector type: ${selector['@type']}`);
 }
