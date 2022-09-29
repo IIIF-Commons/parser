@@ -2,27 +2,25 @@
   "name": "@iiif/parser",
   "version": "1.0.14",
   "license": "MIT",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.mjs",
-  "types": "./dist/index.d.ts",
+  "main": "dist/bundle/cjs/index.js",
+  "module": "dist/bundle/esm/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.mjs",
+      "require": "./dist/bundle/cjs/index.js",
+      "import": "./dist/bundle/esm/index.mjs",
       "default": "./dist/index.umd.js"
     },
     "./presentation-2": {
       "require": "./dist/presentation-2/cjs/index.js",
-      "import": "./dist/presentation-2/esm/index.mjs",
-      "default": "./dist/presentation-2/index.umd.js"
+      "import": "./dist/presentation-2/esm/index.mjs"
     },
     "./presentation-3": {
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.mjs",
-      "default": "./dist/index.umd.js"
+      "require": "./dist/bundle/cjs/index.js",
+      "import": "./dist/bundle/esm/index.mjs"
     },
     "./upgrader": "./dist/upgrader/index.umd.js"
   },
@@ -43,9 +41,9 @@
     }
   },
   "scripts": {
-    "build": "tsc -p . --declaration --emitDeclarationOnly && rollup -c",
-    "prepublishOnly": "tsc -p . --declaration --emitDeclarationOnly && rollup -c",
-    "test": "jest"
+    "build": "node scripts/build.mjs",
+    "prepublishOnly": "node scripts/build.mjs && node scripts/validate.mjs",
+    "test": "vitest"
   },
   "dependencies": {
     "@iiif/presentation-2": "^1.0.3",
@@ -54,19 +52,20 @@
   },
   "devDependencies": {
     "@hyperion-framework/validator": "^1.1.0",
-    "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.9.1",
+    "chalk": "^5.0.1",
+    "dts-bundle-generator": "^6.13.0",
     "eslint": "^8.7.0",
     "eslint-plugin-json": "^3.1.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.4.7",
+    "execa": "^6.1.0",
     "prettier": "^2.5.1",
-    "rollup": "^2.63.0",
-    "rollup-library-template": "^1.0.1",
-    "ts-jest": "^27.1.3",
+    "terser": "^5.15.0",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.4",
+    "vite": "^3.1.3",
+    "vitest": "^0.23.4"
   },
   "publishConfig": {
     "access": "public"

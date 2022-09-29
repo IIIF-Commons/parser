@@ -48,29 +48,29 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
 
     expect(result.service).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "@id": "https://api.bl.uk/auth/iiif/login",
           "@type": "AuthCookieService1",
           "description": "Some content may only be available to registered readers or staff. Please log-in to The British Library to continue.",
           "header": "Please Log-In",
           "label": "Login to The British Library",
           "profile": "http://iiif.io/api/auth/0/login",
-          "service": Array [
-            Object {
+          "service": [
+            {
               "@id": "https://api.bl.uk/auth/iiif/token",
               "@type": "AuthTokenService1",
               "profile": "http://iiif.io/api/auth/0/token",
             },
           ],
         },
-        Object {
+        {
           "@id": "https://api.bl.uk/search/iiif/ark:/81055/vdc_100022545251.0x000002",
           "@type": "SearchService1",
           "label": "Search within this item",
           "profile": "http://iiif.io/api/search/0/search",
-          "service": Array [
-            Object {
+          "service": [
+            {
               "@id": "https://api.bl.uk/search/iiif/ark:/81055/vdc_100022545251.0x000002/autocomplete",
               "@type": "AutoCompleteService1",
               "label": "Get suggested words in this item",
@@ -78,19 +78,19 @@ describe('Presentation 2 to 3', () => {
             },
           ],
         },
-        Object {
+        {
           "@context": "http://universalviewer.io/context.json",
           "@id": "http://access.bl.uk/item/share/ark:/81055/vdc_100022545251.0x000002",
           "@type": "Service",
           "profile": "http://universalviewer.io/share-extensions-profile",
         },
-        Object {
+        {
           "@context": "http://universalviewer.io/context.json",
           "@id": "http://access.bl.uk/item/feedback/ark:/81055/vdc_100022545251.0x000002",
           "@type": "Service",
           "profile": "http://universalviewer.io/feedback-extensions-profile",
         },
-        Object {
+        {
           "@context": "http://universalviewer.io/context.json",
           "@id": "http://access.bl.uk/item/print/ark:/81055/vdc_100022545251.0x000002",
           "@type": "Service",
@@ -189,8 +189,8 @@ describe('Presentation 2 to 3', () => {
     expect(result.structures).not.toBeUndefined();
 
     expect(result.items[0].thumbnail).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "height": 113,
           "id": "https://deriv.nls.uk/dcn4/7443/74438561.4.jpg",
           "type": "Image",
@@ -200,16 +200,16 @@ describe('Presentation 2 to 3', () => {
     `);
 
     expect(result.structures![0]).toMatchInlineSnapshot(`
-      Object {
+      {
         "id": "https://view.nls.uk/iiif/7446/74464117/range/r-1",
-        "items": Array [
-          Object {
+        "items": [
+          {
             "id": "https://view.nls.uk/iiif/7446/74464117/canvas/1",
             "type": "Canvas",
           },
         ],
-        "label": Object {
-          "none": Array [
+        "label": {
+          "none": [
             "Imaginative depiction of the completed Forth Rail Bridge",
           ],
         },
@@ -265,8 +265,8 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
 
     expect(result.service).toMatchInlineSnapshot(`
-      Array [
-        Object {
+      [
+        {
           "@context": "http://iiif.io/api/annex/services/physdim/1/context.json",
           "@id": "http://example.org/iiif/manifest/1/dims",
           "@type": "Service",

@@ -8,7 +8,7 @@ describe('normalize', () => {
     const db = normalize(manifestFixture);
 
     expect(db.mapping).toMatchInlineSnapshot(`
-      Object {
+      {
         "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json": "Manifest",
         "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json": "Canvas",
         "http://iiif.io/api/presentation/2.1/example/fixtures/collection.json": "ContentResource",

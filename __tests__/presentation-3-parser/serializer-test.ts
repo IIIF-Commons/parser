@@ -214,24 +214,24 @@ describe('serializer', () => {
     expect(serialized).toEqual(input());
 
     expect(serialized).toMatchInlineSnapshot(`
-      Object {
+      {
         "@context": "http://iiif.io/api/presentation/3/context.json",
-        "annotations": Array [
-          Object {
+        "annotations": [
+          {
             "id": "https://example.org/iiif/book1/annotations/p1",
-            "items": Array [],
+            "items": [],
             "type": "AnnotationPage",
           },
         ],
-        "behavior": Array [
+        "behavior": [
           "paged",
         ],
-        "homepage": Array [
-          Object {
+        "homepage": [
+          {
             "format": "text/html",
             "id": "https://example.org/info/book1/",
-            "label": Object {
-              "en": Array [
+            "label": {
+              "en": [
                 "Home page for Book 1",
               ],
             },
@@ -239,13 +239,13 @@ describe('serializer', () => {
           },
         ],
         "id": "https://example.org/iiif/book1/manifest",
-        "items": Array [
-          Object {
+        "items": [
+          {
             "height": 100,
             "id": "https://example.org/iiif/book1/canvas/p1",
-            "items": Array [],
-            "label": Object {
-              "none": Array [
+            "items": [],
+            "label": {
+              "none": [
                 "p. 1",
               ],
             },
@@ -253,80 +253,80 @@ describe('serializer', () => {
             "width": 100,
           },
         ],
-        "label": Object {
-          "en": Array [
+        "label": {
+          "en": [
             "Book 1",
           ],
         },
-        "metadata": Array [
-          Object {
-            "label": Object {
-              "en": Array [
+        "metadata": [
+          {
+            "label": {
+              "en": [
                 "Author",
               ],
             },
-            "value": Object {
-              "none": Array [
+            "value": {
+              "none": [
                 "Anne Author",
               ],
             },
           },
-          Object {
-            "label": Object {
-              "en": Array [
+          {
+            "label": {
+              "en": [
                 "Published",
               ],
             },
-            "value": Object {
-              "en": Array [
+            "value": {
+              "en": [
                 "Paris, circa 1400",
               ],
-              "fr": Array [
+              "fr": [
                 "Paris, environ 1400",
               ],
             },
           },
-          Object {
-            "label": Object {
-              "en": Array [
+          {
+            "label": {
+              "en": [
                 "Notes",
               ],
             },
-            "value": Object {
-              "en": Array [
+            "value": {
+              "en": [
                 "Text of note 1",
                 "Text of note 2",
               ],
             },
           },
-          Object {
-            "label": Object {
-              "en": Array [
+          {
+            "label": {
+              "en": [
                 "Source",
               ],
             },
-            "value": Object {
-              "none": Array [
+            "value": {
+              "none": [
                 "<span>From: <a href=\\"https://example.org/db/1.html\\">Some Collection</a></span>",
               ],
             },
           },
         ],
         "navDate": "1856-01-01T00:00:00Z",
-        "partOf": Array [
-          Object {
+        "partOf": [
+          {
             "id": "https://example.org/collections/books/",
             "type": "Collection",
           },
         ],
-        "provider": Array [
-          Object {
-            "homepage": Array [
-              Object {
+        "provider": [
+          {
+            "homepage": [
+              {
                 "format": "text/html",
                 "id": "https://example.org/",
-                "label": Object {
-                  "en": Array [
+                "label": {
+                  "en": [
                     "Example Organization Homepage",
                   ],
                 },
@@ -334,17 +334,17 @@ describe('serializer', () => {
               },
             ],
             "id": "https://example.org/about",
-            "label": Object {
-              "en": Array [
+            "label": {
+              "en": [
                 "Example Organization",
               ],
             },
-            "logo": Array [
-              Object {
+            "logo": [
+              {
                 "format": "image/png",
                 "id": "https://example.org/service/inst1/full/max/0/default.png",
-                "service": Array [
-                  Object {
+                "service": [
+                  {
                     "id": "https://example.org/service/inst1",
                     "profile": "level2",
                     "type": "ImageService3",
@@ -353,8 +353,8 @@ describe('serializer', () => {
                 "type": "Image",
               },
             ],
-            "seeAlso": Array [
-              Object {
+            "seeAlso": [
+              {
                 "format": "application/ld+json",
                 "id": "https://data.example.org/about/us.jsonld",
                 "profile": "https://schema.org/",
@@ -364,54 +364,54 @@ describe('serializer', () => {
             "type": "Agent",
           },
         ],
-        "rendering": Array [
-          Object {
+        "rendering": [
+          {
             "format": "application/pdf",
             "id": "https://example.org/iiif/book1.pdf",
-            "label": Object {
-              "en": Array [
+            "label": {
+              "en": [
                 "Download as PDF",
               ],
             },
             "type": "Text",
           },
         ],
-        "requiredStatement": Object {
-          "label": Object {
-            "en": Array [
+        "requiredStatement": {
+          "label": {
+            "en": [
               "Attribution",
             ],
           },
-          "value": Object {
-            "en": Array [
+          "value": {
+            "en": [
               "Provided by Example Organization",
             ],
           },
         },
         "rights": "http://creativecommons.org/licenses/by/4.0/",
-        "seeAlso": Array [
-          Object {
+        "seeAlso": [
+          {
             "format": "text/xml",
             "id": "https://example.org/library/catalog/book1.xml",
             "profile": "https://example.org/profiles/bibliographic",
             "type": "Dataset",
           },
         ],
-        "service": Array [
-          Object {
+        "service": [
+          {
             "id": "https://example.org/service/example",
             "profile": "https://example.org/docs/example-service.html",
             "type": "ExampleExtensionService",
           },
         ],
-        "services": Array [
-          Object {
+        "services": [
+          {
             "@id": "https://example.org/iiif/auth/login",
             "@type": "AuthCookieService1",
             "label": "Login to Example Institution",
             "profile": "http://iiif.io/api/auth/1/login",
-            "service": Array [
-              Object {
+            "service": [
+              {
                 "@id": "https://example.org/iiif/auth/token",
                 "@type": "AuthTokenService1",
                 "profile": "http://iiif.io/api/auth/1/token",
@@ -419,28 +419,28 @@ describe('serializer', () => {
             ],
           },
         ],
-        "start": Object {
+        "start": {
           "id": "https://example.org/iiif/book1/canvas/p2",
           "type": "Canvas",
         },
-        "structures": Array [
-          Object {
+        "structures": [
+          {
             "id": "https://example.org/iiif/book1/range/top",
-            "items": Array [],
+            "items": [],
             "type": "Range",
           },
         ],
-        "summary": Object {
-          "en": Array [
+        "summary": {
+          "en": [
             "Book 1, written by Anne Author, published in Paris around 1400.",
           ],
         },
-        "thumbnail": Array [
-          Object {
+        "thumbnail": [
+          {
             "format": "image/jpeg",
             "id": "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg",
-            "service": Array [
-              Object {
+            "service": [
+              {
                 "id": "https://example.org/iiif/book1/page1",
                 "profile": "level1",
                 "type": "ImageService3",
@@ -465,55 +465,55 @@ describe('serializer', () => {
     );
 
     expect(serialized2).toMatchInlineSnapshot(`
-      Object {
+      {
         "@id": "https://example.org/iiif/book1/manifest",
         "@type": "sc:Manifest",
         "attribution": "Provided by Example Organization",
         "description": "Book 1, written by Anne Author, published in Paris around 1400.",
         "label": "Book 1",
-        "metadata": Array [
-          Object {
+        "metadata": [
+          {
             "label": "Author",
             "value": "Anne Author",
           },
-          Object {
+          {
             "label": "Published",
-            "value": Array [
-              Object {
+            "value": [
+              {
                 "@language": "en",
                 "@value": "Paris, circa 1400",
               },
-              Object {
+              {
                 "@language": "fr",
                 "@value": "Paris, environ 1400",
               },
             ],
           },
-          Object {
+          {
             "label": "Notes",
             "value": "Text of note 1Text of note 2",
           },
-          Object {
+          {
             "label": "Source",
             "value": "<span>From: <a href=\\"https://example.org/db/1.html\\">Some Collection</a></span>",
           },
         ],
         "navDate": "1856-01-01T00:00:00Z",
-        "rendering": Object {
+        "rendering": {
           "@id": "https://example.org/iiif/book1.pdf",
           "format": "application/pdf",
           "label": "Download as PDF",
         },
-        "seeAlso": Object {
+        "seeAlso": {
           "@id": "https://example.org/library/catalog/book1.xml",
           "format": "text/xml",
         },
-        "sequences": Array [
-          Object {
+        "sequences": [
+          {
             "@id": "https://example.org/iiif/book1/manifest/sequence0",
             "@type": "sc:Sequence",
-            "canvases": Array [
-              Object {
+            "canvases": [
+              {
                 "@id": "https://example.org/iiif/book1/canvas/p1",
                 "@type": "sc:Canvas",
                 "height": 100,
@@ -523,24 +523,24 @@ describe('serializer', () => {
             ],
           },
         ],
-        "service": Object {
+        "service": {
           "@context": "http://iiif.io/api/image/2/context.json",
           "@id": "https://example.org/service/example",
           "profile": "http://iiif.io/api/image/2/profiles/https://example.org/docs/example-service.html.json",
         },
         "startCanvas": "https://example.org/iiif/book1/canvas/p2",
-        "structures": Array [
-          Object {
+        "structures": [
+          {
             "@id": "https://example.org/iiif/book1/range/top",
             "@type": "sc:Range",
-            "canvases": Array [],
+            "canvases": [],
           },
         ],
-        "thumbnail": Object {
+        "thumbnail": {
           "@id": "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg",
           "@type": "dctypes:Image",
           "format": "image/jpeg",
-          "service": Object {
+          "service": {
             "@context": "http://iiif.io/api/image/2/context.json",
             "@id": "https://example.org/iiif/book1/page1",
             "profile": "http://iiif.io/api/image/2/profiles/level1.json",
