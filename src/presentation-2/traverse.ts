@@ -315,7 +315,13 @@ export class Traverse<
 
   traverseAnnotationItems(annotation: Annotation): Annotation {
     if (annotation.resource) {
-      annotation.resource = this.traverseContentResource(annotation.resource as CommonContentResource);
+      if (Array.isArray(annotation.resource)) {
+        annotation.resource = annotation.resource.map((res) =>
+          this.traverseContentResource(res as CommonContentResource)
+        );
+      } else {
+        annotation.resource = this.traverseContentResource(annotation.resource as CommonContentResource);
+      }
     }
 
     if (annotation.on) {
