@@ -155,7 +155,7 @@ export class Traverse {
       resource.service = ensureArray(resource.service).map((service) => this.traverseService(service));
     }
     if (resource.services) {
-      resource.services = resource.services.map((service) => this.traverseService(service, resource));
+      resource.services = ensureArray(resource.services).map((service) => this.traverseService(service, resource));
     }
     if (resource.logo) {
       resource.logo = resource.logo.map((content) =>

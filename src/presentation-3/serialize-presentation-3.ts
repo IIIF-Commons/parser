@@ -67,7 +67,7 @@ function service2compat(service: ImageService3): ImageService2 | ImageService3 {
 
 function filterService2Compat(services?: any[]) {
   if (!Array.isArray(services)) {
-    services = [services];
+    services = services ? [services] : [];
   }
 
   if (!services || services.length === 0) {
@@ -103,8 +103,8 @@ function* linkingProperties(
 ): Generator<any, any, Array<[keyof LinkingNormalized, any]>> {
   return [
     ['seeAlso', filterEmpty(yield entity.seeAlso)],
-    ['service', filterService2Compat(entity.service)],
-    ['services', filterService2Compat(entity.services)],
+    ['service', filterEmpty(filterService2Compat(entity.service))],
+    ['services', filterEmpty(filterService2Compat(entity.services))],
     ['rendering', filterEmpty(yield entity.rendering)],
     ['supplementary', filterEmpty(yield entity.supplementary)],
     ['homepage', filterEmpty(yield entity.homepage)],
