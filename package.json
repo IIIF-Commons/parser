@@ -59,7 +59,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@iiif/presentation-2": "^1.0.2",
+    "@iiif/presentation-2": "^1.0.4",
     "@iiif/presentation-3": "^2.0.5",
     "@iiif/presentation-3-normalized": "^0.9.7",
     "@types/geojson": "^7946.0.10"
