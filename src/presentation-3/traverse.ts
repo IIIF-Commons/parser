@@ -19,6 +19,7 @@ import {
   ResourceProvider,
 } from '@iiif/presentation-3';
 import { isSpecificResource } from '../shared/is-specific-resource';
+import { ensureArray } from '../shared/ensure-array';
 
 export const types = [
   'Collection',
@@ -147,7 +148,7 @@ export class Traverse {
       resource.seeAlso = resource.seeAlso.map((content) => this.traverseType(content, this.traversals.contentResource));
     }
     if (resource.service) {
-      resource.service = resource.service.map((service) => this.traverseService(service));
+      resource.service = ensureArray(resource.service).map((service) => this.traverseService(service));
     }
     if (resource.services) {
       resource.services = resource.services.map((service) => this.traverseService(service));
@@ -361,7 +362,7 @@ export class Traverse {
       return contentResourceJson;
     }
     if (contentResourceJson && (contentResourceJson as IIIFExternalWebResource)!.service) {
-      (contentResourceJson as IIIFExternalWebResource).service = (
+      (contentResourceJson as IIIFExternalWebResource).service = ensureArray(
         (contentResourceJson as IIIFExternalWebResource).service || []
       ).map((service) => this.traverseService(service));
     }

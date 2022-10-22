@@ -34,7 +34,7 @@ import { execa } from "execa";
       name: 'index',
       outDir: `${DIST}/presentation-2`,
     })
-  )
+  );
 
   buildMsg('@iiif/parser/strict');
   await build(
@@ -51,7 +51,7 @@ import { execa } from "execa";
       name: 'index',
       outDir: `${DIST}/image-3`,
     })
-  )
+  );
 
   buildMsg('@iiif/parser/upgrader');
   await build(
@@ -68,7 +68,7 @@ import { execa } from "execa";
   listItem('@iiif/parser');
   await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/index.d.ts`, './src/index.ts'])
 
-  listItem('@iiif/parser/presentation-3');
+  listItem('@iiif/parser/presentation-2');
   await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/presentation-2/index.d.ts`, './src/presentation-2/index.ts'])
 
   listItem('@iiif/parser/strict');
@@ -79,6 +79,8 @@ import { execa } from "execa";
 
   listItem('@iiif/parser/image-3');
   await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/image-3/index.d.ts`, './src/image-3/index.ts'])
+
+
 
   function buildMsg(name) {
     console.log(chalk.grey(`\n\nBuilding ${chalk.blue(name)}\n`));

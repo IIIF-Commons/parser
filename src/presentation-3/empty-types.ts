@@ -6,7 +6,6 @@ import {
   ManifestNormalized,
   RangeNormalized,
   ResourceProviderNormalized,
-  ServiceNormalized,
 } from '@iiif/presentation-3-normalized';
 import { _ServiceNormalized } from './serialize';
 

@@ -39,11 +39,23 @@ function filterEmpty<T>(item?: T[] | typeof UNSET): T[] | undefined | typeof UNS
 
 function service2compat(service: ImageService3): ImageService2 | ImageService3 {
   if (service && service.type && service.type === 'ImageService2') {
-    const { id, type, profile, ..._service } = service;
+    const { id, type, profile: _profile, ..._service } = service as any;
+
+    const profile =
+      typeof _profile === 'string'
+        ? _profile
+        : Array.isArray(_profile)
+        ? _profile.find((p) => typeof p === 'string')
+        : '';
+
     return {
       '@id': id,
       '@type': type,
-      profile: profile.startsWith('http') ? profile : `http://iiif.io/api/image/2/${profile}.json`,
+      profile: profile
+        ? profile.startsWith('http')
+          ? profile
+          : `http://iiif.io/api/image/2/${profile}.json`
+        : 'http://iiif.io/api/image/2/level0.json',
       ..._service,
     } as any;
   }
@@ -145,7 +157,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ['id', entity.id],
       ['type', 'Agent'],
       ['label', entity.label],
-      ...(yield* linkingProperties(entity)),
+      ...(yield* linkingProperties(entity as any)),
     ];
   },
 

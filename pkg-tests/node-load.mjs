@@ -4,4 +4,4 @@ import Upgrader from '@iiif/parser/upgrader';
 
 console.log({ Traverse3 });
 console.log({ Traverse2 });
-console.log({ Upgrader });
+console.log(Upgrader);
