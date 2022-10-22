@@ -5,7 +5,6 @@ import { Traverse } from './traverse';
 import { ensureArray } from '../shared/ensure-array';
 import { removeUndefinedProperties } from '../shared/remove-undefined-properties';
 
-
 const configuration = {
   attributionLabel: 'Attribution',
   lang: 'none',
