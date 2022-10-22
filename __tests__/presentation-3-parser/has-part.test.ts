@@ -38,6 +38,74 @@ describe('Has part issues', function () {
     expect(merged).toMatchSnapshot();
   });
 
+
+  test('Merging the same 2 entities', () => {
+    const first = {
+      id: 'https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg',
+      type: 'Image',
+      format: 'image/jpeg',
+    };
+    const second = {
+      id: 'https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg',
+      type: 'Image',
+      format: 'image/jpeg',
+    };
+
+    const initial = mergeEntities(
+      {
+        id: 'https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg',
+        type: 'Image',
+      },
+      first,
+      { parent: { id: 'https://example.org/canvas-2' } }
+    );
+    expect(initial).toMatchSnapshot();
+    const merged = mergeEntities(initial as any, second, { parent: { id: 'https://example.org/canvas-1' } });
+
+    expect(merged).toMatchSnapshot();
+  })
+
+  test('Merging the same 2 entities and then different one', () => {
+    const first = {
+      id: 'https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg',
+      type: 'Image',
+      format: 'image/jpeg',
+    };
+    const second = {
+      id: 'https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg',
+      type: 'Image',
+      format: 'image/jpeg',
+    };
+    const third = {
+      id: 'https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg',
+      type: 'Image',
+      format: 'image/jpeg',
+      height: 3024,
+      width: 4032,
+      service: [
+        {
+          id: 'https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen',
+          profile: 'level1',
+          type: 'ImageService3',
+        },
+      ],
+    };
+
+    const initial = mergeEntities(
+      {
+        id: 'https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg',
+        type: 'Image',
+      },
+      first,
+      { parent: { id: 'https://example.org/canvas-2' } }
+    );
+    expect(initial).toMatchSnapshot();
+    const merged = mergeEntities(initial as any, second, { parent: { id: 'https://example.org/canvas-1' } });
+    const merged2 = mergeEntities(merged as any, third, { parent: { id: 'https://example.org/canvas-3' } });
+
+    expect(merged2).toMatchSnapshot();
+  })
+
   test('Example manifest with thumbnail ID the same as the main resource', () => {
     const original = JSON.parse(JSON.stringify(hasPartManifest));
     const result = normalize(hasPartManifest);

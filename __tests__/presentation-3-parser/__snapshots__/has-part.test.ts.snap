@@ -380,6 +380,99 @@ exports[`Has part issues > Example manifest with thumbnail ID the same as the ma
 }
 `;
 
+exports[`Has part issues > Merging the same 2 entities 1`] = `
+{
+  "format": "image/jpeg",
+  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+  "iiif-parser:hasPart": [
+    {
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-2",
+      "type": "Image",
+    },
+  ],
+  "type": "Image",
+}
+`;
+
+exports[`Has part issues > Merging the same 2 entities 2`] = `
+{
+  "format": "image/jpeg",
+  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+  "iiif-parser:hasPart": [
+    {
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-2",
+      "type": "Image",
+    },
+    {
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-1",
+      "type": "Image",
+    },
+  ],
+  "type": "Image",
+}
+`;
+
+exports[`Has part issues > Merging the same 2 entities and then different one 1`] = `
+{
+  "format": "image/jpeg",
+  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+  "iiif-parser:hasPart": [
+    {
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-2",
+      "type": "Image",
+    },
+  ],
+  "type": "Image",
+}
+`;
+
+exports[`Has part issues > Merging the same 2 entities and then different one 2`] = `
+{
+  "format": "image/jpeg",
+  "height": 3024,
+  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+  "iiif-parser:hasPart": [
+    {
+      "@explicit": true,
+      "format": {},
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-2",
+      "type": "Image",
+    },
+    {
+      "@explicit": true,
+      "format": {},
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-1",
+      "type": "Image",
+    },
+    {
+      "@explicit": true,
+      "format": {},
+      "height": {},
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+      "iiif-parser:partOf": "https://example.org/canvas-3",
+      "service": {},
+      "type": "Image",
+      "width": {},
+    },
+  ],
+  "service": [
+    {
+      "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+      "profile": "level1",
+      "type": "ImageService3",
+    },
+  ],
+  "type": "Image",
+  "width": 4032,
+}
+`;
+
 exports[`Has part issues > merging 2 entities 1`] = `
 {
   "format": "image/jpeg",

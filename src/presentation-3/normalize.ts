@@ -177,38 +177,44 @@ export function merge(existing: any, incoming: any, context?: { parent?: any; is
       }
 
       if (merged[HAS_PART] && merged[HAS_PART].length) {
+        const noExplicit = !merged[HAS_PART].find((r: any) => r['@explicit']);
+        const hasDiverged = added.length > 0 || unchanged.length !== existingKeys.length;
         // We already have one, it may conflict here.
         // 1. Fix the first part.
-        if (merged[HAS_PART].length === 1) {
-          const first = { ...merged[HAS_PART][0] };
-          const changedKeys = Object.keys(previouslyChangedValues);
-          if (first) {
-            first['@explicit'] = true;
-            for (const addedProperty of existingKeys) {
-              if (addedProperty !== HAS_PART) {
-                first[addedProperty] = WILDCARD;
+        if (noExplicit && hasDiverged) {
+          for (const item of merged[HAS_PART]) {
+            const first = { ...item };
+            const changedKeys = Object.keys(previouslyChangedValues);
+            if (first) {
+              first['@explicit'] = true;
+              for (const addedProperty of existingKeys) {
+                if (addedProperty !== HAS_PART) {
+                  first[addedProperty] = WILDCARD;
+                }
+              }
+              for (const changedKey of changedKeys) {
+                first[changedKey] = previouslyChangedValues[changedKey];
               }
             }
-            for (const changedKey of changedKeys) {
-              first[changedKey] = previouslyChangedValues[changedKey];
-            }
+            newHasPart.push(first);
           }
-          newHasPart.push(first);
         } else {
           newHasPart.push(...merged[HAS_PART]);
         }
 
-        // Add the framing.
-        const changedKeys = Object.keys(incomingChangedValues);
-        part['@explicit'] = true;
-        for (const addedProperty of added) {
-          part[addedProperty] = WILDCARD;
-        }
-        for (const unchangedValue of unchanged) {
-          part[unchangedValue] = WILDCARD;
-        }
-        for (const changedKey of changedKeys) {
-          part[changedKey] = incomingChangedValues[changedKey];
+        if (hasDiverged) {
+          // Add the framing.
+          const changedKeys = Object.keys(incomingChangedValues);
+          part['@explicit'] = true;
+          for (const addedProperty of added) {
+            part[addedProperty] = WILDCARD;
+          }
+          for (const unchangedValue of unchanged) {
+            part[unchangedValue] = WILDCARD;
+          }
+          for (const changedKey of changedKeys) {
+            part[changedKey] = incomingChangedValues[changedKey];
+          }
         }
       }
 
