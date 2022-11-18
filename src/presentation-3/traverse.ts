@@ -20,6 +20,7 @@ import {
 } from '@iiif/presentation-3';
 import { isSpecificResource } from '../shared/is-specific-resource';
 import { ensureArray } from '../shared/ensure-array';
+import { compose } from '../shared/compose';
 
 export const types = [
   'Collection',
@@ -240,7 +241,7 @@ export class Traverse {
     if (resource.navPlace) {
       resource.navPlace = this.traverseGeoJson(resource.navPlace, resource);
     }
-    return resource.navPlace;
+    return resource;
   }
 
   traverseManifestItems(manifest: Manifest): Manifest {
@@ -257,18 +258,17 @@ export class Traverse {
     return manifest;
   }
 
+  _traverseManifest = compose<Manifest>(
+    this.traverseManifestItems.bind(this),
+    this.traverseLinking.bind(this),
+    this.traverseDescriptive.bind(this),
+    this.traverseLinkedCanvases.bind(this),
+    this.traverseManifestStructures.bind(this),
+    this.traverseInlineAnnotationPages.bind(this)
+  );
+
   traverseManifest(manifest: Manifest, parent?: any): Manifest {
-    return this.traverseType<Manifest>(
-      this.traverseInlineAnnotationPages(
-        this.traverseManifestStructures(
-          this.traverseLinkedCanvases(
-            this.traverseDescriptive(this.traverseLinking(this.traverseManifestItems(manifest)))
-          )
-        )
-      ),
-      { parent },
-      this.traversals.manifest
-    );
+    return this.traverseType<Manifest>(this._traverseManifest(manifest), { parent }, this.traversals.manifest);
   }
 
   traverseCanvasItems(canvas: Canvas): Canvas {
@@ -292,14 +292,16 @@ export class Traverse {
     return resource;
   }
 
+  _traverseCanvas = compose<Canvas>(
+    this.traverseCanvasItems.bind(this),
+    this.traverseLinking.bind(this),
+    this.traverseDescriptive.bind(this),
+    this.traverseLinkedCanvases.bind(this),
+    this.traverseInlineAnnotationPages.bind(this)
+  );
+
   traverseCanvas(canvas: Canvas, parent?: any): Canvas {
-    return this.traverseType<Canvas>(
-      this.traverseInlineAnnotationPages(
-        this.traverseLinkedCanvases(this.traverseDescriptive(this.traverseLinking(this.traverseCanvasItems(canvas))))
-      ),
-      { parent },
-      this.traversals.canvas
-    );
+    return this.traverseType<Canvas>(this._traverseCanvas(canvas), { parent }, this.traversals.canvas);
   }
 
   traverseAnnotationPageItems(annotationPage: AnnotationPage): AnnotationPage {
@@ -311,9 +313,15 @@ export class Traverse {
     return annotationPage;
   }
 
+  _traverseAnnotationPage = compose<AnnotationPage>(
+    this.traverseAnnotationPageItems.bind(this),
+    this.traverseLinking.bind(this),
+    this.traverseDescriptive.bind(this)
+  );
+
   traverseAnnotationPage(annotationPageJson: AnnotationPage, parent?: any): AnnotationPage {
     return this.traverseType<AnnotationPage>(
-      this.traverseDescriptive(this.traverseLinking(this.traverseAnnotationPageItems(annotationPageJson) as any)),
+      this._traverseAnnotationPage(annotationPageJson),
       { parent },
       this.traversals.annotationPage
     );
@@ -440,12 +448,15 @@ export class Traverse {
     return range;
   }
 
+  _traverseRange = compose<Range>(
+    this.traverseRangeRanges.bind(this),
+    this.traverseLinking.bind(this),
+    this.traverseDescriptive.bind(this),
+    this.traverseLinkedCanvases.bind(this)
+  );
+
   traverseRange(range: Range, parent?: any): Range {
-    return this.traverseType<Range>(
-      this.traverseLinkedCanvases(this.traverseDescriptive(this.traverseLinking(this.traverseRangeRanges(range)))),
-      { parent },
-      this.traversals.range
-    );
+    return this.traverseType<Range>(this._traverseRange(range), { parent }, this.traversals.range);
   }
 
   traverseAgent(agent: ResourceProvider, parent?: any) {

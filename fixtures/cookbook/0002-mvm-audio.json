@@ -27,7 +27,7 @@
                 "format": "audio/mp4",
                 "duration": 1985.024
               },
-              "target": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas/page"
+              "target": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas"
             }
           ]
         }

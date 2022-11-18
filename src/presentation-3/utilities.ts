@@ -1,4 +1,5 @@
 import { CompatibleStore, NormalizedEntity } from './serialize';
+import { toRef } from '../shared/to-ref';
 
 export const WILDCARD = {};
 export const HAS_PART = 'iiif-parser:hasPart';
@@ -23,19 +24,24 @@ export function isWildcard(object: any) {
 
 export function resolveIfExists<T extends NormalizedEntity>(
   state: CompatibleStore,
-  url: string,
+  urlOrResource: any,
   parent?: any
 ): readonly [T | undefined, T | undefined] {
-  const request = state.requests[url];
+  const ref = toRef(urlOrResource);
+  if (!ref) {
+    return [undefined, undefined];
+  }
+
+  const request = state.requests[ref.id];
   // Return the resource.
-  const resourceType = state.mapping[url];
+  const resourceType = state.mapping[ref.id] || ref.type;
   if (!resourceType || (request && request.resourceUri && !state.entities[resourceType][request.resourceUri])) {
     // Continue refetching resource, this is an invalid state.
     return [undefined, undefined];
   }
-  const fullEntity: any = state.entities[resourceType][request ? request.resourceUri : url] as T;
+  const fullEntity: any = state.entities[resourceType][request ? request.resourceUri : ref.id] as T;
 
-  if (fullEntity[HAS_PART]) {
+  if (fullEntity && fullEntity[HAS_PART]) {
     const framing = fullEntity[HAS_PART].find((t: any) => {
       return parent ? t[PART_OF] === parent.id : t[PART_OF] === fullEntity.id;
     });

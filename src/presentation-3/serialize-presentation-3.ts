@@ -211,7 +211,12 @@ export const serializeConfigPresentation3: SerializeConfig = {
 
     const resolvedBody = yield entity.body;
 
-    return [...entries, ['body', resolvedBody.length === 1 ? resolvedBody[0] : resolvedBody]];
+    return [
+      ...entries,
+      ...(yield* descriptiveProperties(entity as any)),
+      ...(yield* linkingProperties(entity)),
+      ['body', resolvedBody.length === 1 ? resolvedBody[0] : resolvedBody],
+    ];
   },
 
   ContentResource: function* (entity: any) {
