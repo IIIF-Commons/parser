@@ -266,7 +266,35 @@ exports[`normalize > normalize full example from specification 1`] = `
       "width": 0,
     },
   },
-  "Collection": {},
+  "Collection": {
+    "https://example.org/collections/books/": {
+      "accompanyingCanvas": null,
+      "annotations": [],
+      "behavior": [],
+      "homepage": [],
+      "id": "https://example.org/collections/books/",
+      "items": [],
+      "label": null,
+      "logo": [],
+      "metadata": [],
+      "motivation": null,
+      "navDate": null,
+      "partOf": [],
+      "placeholderCanvas": null,
+      "posterCanvas": null,
+      "provider": [],
+      "rendering": [],
+      "requiredStatement": null,
+      "rights": null,
+      "seeAlso": [],
+      "service": [],
+      "services": [],
+      "summary": null,
+      "thumbnail": [],
+      "type": "Collection",
+      "viewingDirection": "left-to-right",
+    },
+  },
   "ContentResource": {
     "https://data.example.org/about/us.jsonld": {
       "format": "application/ld+json",
@@ -283,10 +311,6 @@ exports[`normalize > normalize full example from specification 1`] = `
         ],
       },
       "type": "Text",
-    },
-    "https://example.org/collections/books/": {
-      "id": "https://example.org/collections/books/",
-      "type": "Collection",
     },
     "https://example.org/iiif/book1.pdf": {
       "format": "application/pdf",
@@ -430,7 +454,7 @@ exports[`normalize > normalize full example from specification 1`] = `
       "partOf": [
         {
           "id": "https://example.org/collections/books/",
-          "type": "ContentResource",
+          "type": "Collection",
         },
       ],
       "placeholderCanvas": null,

@@ -154,7 +154,7 @@ export class Traverse {
     }
     if (resource.partOf) {
       // Array<ContentResource | Canvas | AnnotationCollection>
-      resource.partOf = resource.partOf.map((partOf) => {
+      (resource as any).partOf = resource.partOf.map((partOf) => {
         if (typeof partOf === 'string' || !partOf.type) {
           return this.traverseType(partOf as ContentResource, this.traversals.contentResource);
         }
@@ -163,6 +163,9 @@ export class Traverse {
         }
         if (partOf.type === 'AnnotationCollection') {
           return this.traverseType(partOf as AnnotationCollection, this.traversals.annotationCollection);
+        }
+        if (partOf.type === 'Collection') {
+          return this.traverseType(partOf as Collection, this.traversals.collection);
         }
         return this.traverseType(partOf as ContentResource, this.traversals.contentResource);
       });

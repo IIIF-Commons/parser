@@ -11,7 +11,7 @@ describe('normalize', () => {
       {
         "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json": "Manifest",
         "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json": "Canvas",
-        "http://iiif.io/api/presentation/2.1/example/fixtures/collection.json": "ContentResource",
+        "http://iiif.io/api/presentation/2.1/example/fixtures/collection.json": "Collection",
         "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png": "ContentResource",
         "https://example.org/uuid/1dad04b3-79c6-4a97-a831-634f2ee50a26": "AnnotationPage",
         "https://example.org/uuid/3644c005-bf7a-48d0-9fa9-1e1757bf8df1": "Annotation",
@@ -271,7 +271,7 @@ describe('normalize', () => {
     expect(result.mapping).toEqual({
       'https://data.example.org/about/us.jsonld': 'ContentResource',
       'https://example.org/': 'ContentResource',
-      'https://example.org/collections/books/': 'ContentResource',
+      'https://example.org/collections/books/': 'Collection',
       'https://example.org/iiif/book1.pdf': 'ContentResource',
       'https://example.org/iiif/book1/annotations/p1': 'AnnotationPage',
       'https://example.org/iiif/book1/canvas/p1': 'Canvas',
