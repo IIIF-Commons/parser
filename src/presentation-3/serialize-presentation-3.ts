@@ -188,6 +188,9 @@ export const serializeConfigPresentation3: SerializeConfig = {
   },
 
   ContentResource: function* (entity: any) {
+    if (entity && entity.type === 'SpecificResource') {
+      return Object.entries(entity);
+    }
     return [
       // Image properties.
       ...technicalProperties(entity),
