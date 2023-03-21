@@ -148,7 +148,7 @@ function merge(existing: any, incoming: any): any {
   return incoming;
 }
 
-function mergeEntities(existing: NormalizedEntity, incoming: any): NormalizedEntity {
+export function mergeEntities(existing: NormalizedEntity, incoming: any): NormalizedEntity {
   if (typeof existing === 'string') {
     return existing;
   }
