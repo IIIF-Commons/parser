@@ -174,13 +174,14 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key, value]) => {
-        return key !== 'items';
+        return key !== 'items' && key !== 'id';
       });
 
     const items = yield entity.items;
 
     return [
       // Any more properties?
+      ['id', !entity.id?.startsWith('vault://') ? entity.id : undefined],
       ...entries,
       ...(yield* linkingProperties(entity)),
       ['items', items.length ? items : UNSET],

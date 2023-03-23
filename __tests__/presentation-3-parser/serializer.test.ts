@@ -465,6 +465,7 @@ describe('serializer', () => {
 
     expect(serialized2).toMatchInlineSnapshot(`
       {
+        "@context": "http://iiif.io/api/presentation/2/context.json",
         "@id": "https://example.org/iiif/book1/manifest",
         "@type": "sc:Manifest",
         "attribution": "Provided by Example Organization",

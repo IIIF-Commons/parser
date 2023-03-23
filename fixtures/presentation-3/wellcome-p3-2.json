@@ -5,7 +5,11 @@
   ],
   "id": "https://iiif.wellcomecollection.org/presentation/b18035723",
   "type": "Manifest",
-  "label": {"en":["Wunder der Vererbung / von Fritz Bolle."]},
+  "label": {
+    "en": [
+      "Wunder der Vererbung / von Fritz Bolle."
+    ]
+  },
   "thumbnail": [
     {
       "id": "https://iiif.wellcomecollection.org/thumbs/b18035723_0004.JP2/full/72,100/0/default.jpg",
@@ -20,10 +24,22 @@
           "width": 732,
           "height": 1024,
           "sizes": [
-            {"width":72,"height":100},
-            {"width":143,"height":200},
-            {"width":286,"height":400},
-            {"width":732,"height":1024}
+            {
+              "width": 72,
+              "height": 100
+            },
+            {
+              "width": 143,
+              "height": 200
+            },
+            {
+              "width": 286,
+              "height": 400
+            },
+            {
+              "width": 732,
+              "height": 1024
+            }
           ]
         }
       ]
@@ -33,34 +49,84 @@
     {
       "id": "https://wellcomecollection.org/works/krqp99r9",
       "type": "Text",
-      "label": {"en":["Wunder der Vererbung / von Fritz Bolle."]},
+      "label": {
+        "en": [
+          "Wunder der Vererbung / von Fritz Bolle."
+        ]
+      },
       "format": "text/html",
-      "language": ["en"]
+      "language": [
+        "en"
+      ]
     }
   ],
   "metadata": [
     {
-      "label": {"en":["Publication/creation"]},
-      "value": {"none":["Murnau ; München : Sebastian Lux, [1951]"]}
+      "label": {
+        "en": [
+          "Publication/creation"
+        ]
+      },
+      "value": {
+        "none": [
+          "Murnau ; München : Sebastian Lux, [1951]"
+        ]
+      }
     },
     {
-      "label": {"en":["Physical description"]},
-      "value": {"en":["31 pages : illustrations ; 15 cm."]}
+      "label": {
+        "en": [
+          "Physical description"
+        ]
+      },
+      "value": {
+        "en": [
+          "31 pages : illustrations ; 15 cm."
+        ]
+      }
     },
     {
-      "label": {"en":["Contributors"]},
-      "value": {"none":["Bolle, Fritz."]}
+      "label": {
+        "en": [
+          "Contributors"
+        ]
+      },
+      "value": {
+        "none": [
+          "Bolle, Fritz."
+        ]
+      }
     },
     {
-      "label": {"en":["Type/technique"]},
-      "value": {"en":["Pamphlets"]}
+      "label": {
+        "en": [
+          "Type/technique"
+        ]
+      },
+      "value": {
+        "en": [
+          "Pamphlets"
+        ]
+      }
     },
     {
-      "label": {"en":["Subjects"]},
-      "value": {"en":["Genetics - history"]}
+      "label": {
+        "en": [
+          "Subjects"
+        ]
+      },
+      "value": {
+        "en": [
+          "Genetics - history"
+        ]
+      }
     },
     {
-      "label": {"en":["Attribution and usage"]},
+      "label": {
+        "en": [
+          "Attribution and usage"
+        ]
+      },
       "value": {
         "en": [
           "Wellcome Collection",
@@ -88,7 +154,11 @@
         {
           "id": "https://wellcomecollection.org/works",
           "type": "Text",
-          "label": {"en":["Explore our collections"]},
+          "label": {
+            "en": [
+              "Explore our collections"
+            ]
+          },
           "format": "text/html"
         }
       ],
@@ -105,13 +175,21 @@
     {
       "id": "https://iiif.wellcomecollection.org/pdf/b18035723",
       "type": "Text",
-      "label": {"en":["View as PDF"]},
+      "label": {
+        "en": [
+          "View as PDF"
+        ]
+      },
       "format": "application/pdf"
     },
     {
       "id": "https://api.wellcomecollection.org/text/v1/b18035723",
       "type": "Text",
-      "label": {"en":["View raw text"]},
+      "label": {
+        "en": [
+          "View raw text"
+        ]
+      },
       "format": "text/plain"
     }
   ],
@@ -120,7 +198,11 @@
       "id": "https://api.wellcomecollection.org/catalogue/v2/works/krqp99r9",
       "type": "Dataset",
       "profile": "https://api.wellcomecollection.org/catalogue/v2/context.json",
-      "label": {"en":["Wellcome Collection Catalogue API"]},
+      "label": {
+        "en": [
+          "Wellcome Collection Catalogue API"
+        ]
+      },
       "format": "application/json"
     }
   ],
@@ -130,15 +212,19 @@
       "@type": "SearchService1",
       "profile": "http://iiif.io/api/search/1/search",
       "label": "Search within this manifest",
-      "service": {
-        "@id": "https://iiif.wellcomecollection.org/search/autocomplete/v1/b18035723",
-        "@type": "AutoCompleteService1",
-        "profile": "http://iiif.io/api/search/1/autocomplete",
-        "label": "Autocomplete words in this manifest"
-      }
+      "service": [
+        {
+          "@id": "https://iiif.wellcomecollection.org/search/autocomplete/v1/b18035723",
+          "@type": "AutoCompleteService1",
+          "profile": "http://iiif.io/api/search/1/autocomplete",
+          "label": "Autocomplete words in this manifest"
+        }
+      ]
     }
   ],
-  "behavior": ["paged"],
+  "behavior": [
+    "paged"
+  ],
   "services": [
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723#tracking",
@@ -154,20 +240,32 @@
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723#timestamp",
       "type": "Text",
       "profile": "https://github.com/wellcomecollection/iiif-builder/build-timestamp",
-      "label": {"none":["2021-04-29T21:58:28.9247406Z"]}
+      "label": {
+        "none": [
+          "2021-04-29T21:58:28.9247406Z"
+        ]
+      }
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723#accesscontrolhints",
       "type": "Text",
       "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
-      "label": {"en":["open"]}
+      "label": {
+        "en": [
+          "open"
+        ]
+      }
     }
   ],
   "items": [
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0001.JP2",
       "type": "Canvas",
-      "label": {"none":["-"]},
+      "label": {
+        "none": [
+          "-"
+        ]
+      },
       "width": 2569,
       "height": 3543,
       "thumbnail": [
@@ -184,10 +282,22 @@
               "width": 742,
               "height": 1024,
               "sizes": [
-                {"width":73,"height":100},
-                {"width":145,"height":200},
-                {"width":290,"height":400},
-                {"width":742,"height":1024}
+                {
+                  "width": 73,
+                  "height": 100
+                },
+                {
+                  "width": 145,
+                  "height": 200
+                },
+                {
+                  "width": 290,
+                  "height": 400
+                },
+                {
+                  "width": 742,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -198,7 +308,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0001.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -236,14 +350,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0001.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page  -"]}
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0003.JP2",
       "type": "Canvas",
-      "label": {"none":["-"]},
+      "label": {
+        "none": [
+          "-"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -260,10 +382,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -274,7 +408,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0003.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -312,14 +450,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0003.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page  -"]}
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0004.JP2",
       "type": "Canvas",
-      "label": {"none":["-"]},
+      "label": {
+        "none": [
+          "-"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -336,10 +482,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -350,7 +508,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0004.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -388,14 +550,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0004.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page  -"]}
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0005.JP2",
       "type": "Canvas",
-      "label": {"none":["2"]},
+      "label": {
+        "none": [
+          "2"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -412,10 +582,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -426,7 +608,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0005.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -464,14 +650,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0005.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 2"]}
+          "label": {
+            "en": [
+              "Text of page 2"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0006.JP2",
       "type": "Canvas",
-      "label": {"none":["3"]},
+      "label": {
+        "none": [
+          "3"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -488,10 +682,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -502,7 +708,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0006.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -540,14 +750,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0006.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 3"]}
+          "label": {
+            "en": [
+              "Text of page 3"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0007.JP2",
       "type": "Canvas",
-      "label": {"none":["4"]},
+      "label": {
+        "none": [
+          "4"
+        ]
+      },
       "width": 2008,
       "height": 2736,
       "thumbnail": [
@@ -564,10 +782,22 @@
               "width": 752,
               "height": 1024,
               "sizes": [
-                {"width":73,"height":100},
-                {"width":147,"height":200},
-                {"width":294,"height":400},
-                {"width":752,"height":1024}
+                {
+                  "width": 73,
+                  "height": 100
+                },
+                {
+                  "width": 147,
+                  "height": 200
+                },
+                {
+                  "width": 294,
+                  "height": 400
+                },
+                {
+                  "width": 752,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -578,7 +808,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0007.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -616,14 +850,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0007.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 4"]}
+          "label": {
+            "en": [
+              "Text of page 4"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0008.JP2",
       "type": "Canvas",
-      "label": {"none":["5"]},
+      "label": {
+        "none": [
+          "5"
+        ]
+      },
       "width": 2008,
       "height": 2740,
       "thumbnail": [
@@ -640,10 +882,22 @@
               "width": 750,
               "height": 1024,
               "sizes": [
-                {"width":73,"height":100},
-                {"width":147,"height":200},
-                {"width":293,"height":400},
-                {"width":750,"height":1024}
+                {
+                  "width": 73,
+                  "height": 100
+                },
+                {
+                  "width": 147,
+                  "height": 200
+                },
+                {
+                  "width": 293,
+                  "height": 400
+                },
+                {
+                  "width": 750,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -654,7 +908,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0008.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -692,14 +950,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0008.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 5"]}
+          "label": {
+            "en": [
+              "Text of page 5"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0009.JP2",
       "type": "Canvas",
-      "label": {"none":["6"]},
+      "label": {
+        "none": [
+          "6"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -716,10 +982,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -730,7 +1008,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0009.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -768,14 +1050,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0009.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 6"]}
+          "label": {
+            "en": [
+              "Text of page 6"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0010.JP2",
       "type": "Canvas",
-      "label": {"none":["7"]},
+      "label": {
+        "none": [
+          "7"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -792,10 +1082,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -806,7 +1108,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0010.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -844,14 +1150,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0010.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 7"]}
+          "label": {
+            "en": [
+              "Text of page 7"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0011.JP2",
       "type": "Canvas",
-      "label": {"none":["8"]},
+      "label": {
+        "none": [
+          "8"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -868,10 +1182,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -882,7 +1208,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0011.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -920,14 +1250,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0011.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 8"]}
+          "label": {
+            "en": [
+              "Text of page 8"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0012.JP2",
       "type": "Canvas",
-      "label": {"none":["9"]},
+      "label": {
+        "none": [
+          "9"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -944,10 +1282,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -958,7 +1308,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0012.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -996,14 +1350,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0012.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 9"]}
+          "label": {
+            "en": [
+              "Text of page 9"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0013.JP2",
       "type": "Canvas",
-      "label": {"none":["10"]},
+      "label": {
+        "none": [
+          "10"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1020,10 +1382,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1034,7 +1408,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0013.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1072,14 +1450,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0013.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 10"]}
+          "label": {
+            "en": [
+              "Text of page 10"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0014.JP2",
       "type": "Canvas",
-      "label": {"none":["11"]},
+      "label": {
+        "none": [
+          "11"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1096,10 +1482,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1110,7 +1508,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0014.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1148,14 +1550,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0014.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 11"]}
+          "label": {
+            "en": [
+              "Text of page 11"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0015.JP2",
       "type": "Canvas",
-      "label": {"none":["12"]},
+      "label": {
+        "none": [
+          "12"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1172,10 +1582,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1186,7 +1608,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0015.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1224,14 +1650,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0015.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 12"]}
+          "label": {
+            "en": [
+              "Text of page 12"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0016.JP2",
       "type": "Canvas",
-      "label": {"none":["13"]},
+      "label": {
+        "none": [
+          "13"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1248,10 +1682,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1262,7 +1708,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0016.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1300,14 +1750,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0016.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 13"]}
+          "label": {
+            "en": [
+              "Text of page 13"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0017.JP2",
       "type": "Canvas",
-      "label": {"none":["14"]},
+      "label": {
+        "none": [
+          "14"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1324,10 +1782,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1338,7 +1808,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0017.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1376,14 +1850,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0017.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 14"]}
+          "label": {
+            "en": [
+              "Text of page 14"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0018.JP2",
       "type": "Canvas",
-      "label": {"none":["15"]},
+      "label": {
+        "none": [
+          "15"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1400,10 +1882,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1414,7 +1908,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0018.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1452,14 +1950,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0018.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 15"]}
+          "label": {
+            "en": [
+              "Text of page 15"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0019.JP2",
       "type": "Canvas",
-      "label": {"none":["16"]},
+      "label": {
+        "none": [
+          "16"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1476,10 +1982,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1490,7 +2008,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0019.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1528,14 +2050,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0019.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 16"]}
+          "label": {
+            "en": [
+              "Text of page 16"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0020.JP2",
       "type": "Canvas",
-      "label": {"none":["17"]},
+      "label": {
+        "none": [
+          "17"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1552,10 +2082,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1566,7 +2108,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0020.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1604,14 +2150,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0020.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 17"]}
+          "label": {
+            "en": [
+              "Text of page 17"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0021.JP2",
       "type": "Canvas",
-      "label": {"none":["18"]},
+      "label": {
+        "none": [
+          "18"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1628,10 +2182,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1642,7 +2208,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0021.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1680,14 +2250,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0021.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 18"]}
+          "label": {
+            "en": [
+              "Text of page 18"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0022.JP2",
       "type": "Canvas",
-      "label": {"none":["19"]},
+      "label": {
+        "none": [
+          "19"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1704,10 +2282,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1718,7 +2308,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0022.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1756,14 +2350,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0022.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 19"]}
+          "label": {
+            "en": [
+              "Text of page 19"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0023.JP2",
       "type": "Canvas",
-      "label": {"none":["20"]},
+      "label": {
+        "none": [
+          "20"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1780,10 +2382,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1794,7 +2408,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0023.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1832,14 +2450,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0023.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 20"]}
+          "label": {
+            "en": [
+              "Text of page 20"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0024.JP2",
       "type": "Canvas",
-      "label": {"none":["21"]},
+      "label": {
+        "none": [
+          "21"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1856,10 +2482,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1870,7 +2508,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0024.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1908,14 +2550,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0024.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 21"]}
+          "label": {
+            "en": [
+              "Text of page 21"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0025.JP2",
       "type": "Canvas",
-      "label": {"none":["22"]},
+      "label": {
+        "none": [
+          "22"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -1932,10 +2582,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -1946,7 +2608,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0025.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -1984,14 +2650,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0025.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 22"]}
+          "label": {
+            "en": [
+              "Text of page 22"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0026.JP2",
       "type": "Canvas",
-      "label": {"none":["23"]},
+      "label": {
+        "none": [
+          "23"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2008,10 +2682,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2022,7 +2708,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0026.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2060,14 +2750,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0026.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 23"]}
+          "label": {
+            "en": [
+              "Text of page 23"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0027.JP2",
       "type": "Canvas",
-      "label": {"none":["24"]},
+      "label": {
+        "none": [
+          "24"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2084,10 +2782,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2098,7 +2808,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0027.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2136,14 +2850,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0027.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 24"]}
+          "label": {
+            "en": [
+              "Text of page 24"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0028.JP2",
       "type": "Canvas",
-      "label": {"none":["25"]},
+      "label": {
+        "none": [
+          "25"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2160,10 +2882,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2174,7 +2908,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0028.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2212,14 +2950,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0028.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 25"]}
+          "label": {
+            "en": [
+              "Text of page 25"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0029.JP2",
       "type": "Canvas",
-      "label": {"none":["26"]},
+      "label": {
+        "none": [
+          "26"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2236,10 +2982,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2250,7 +3008,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0029.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2288,14 +3050,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0029.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 26"]}
+          "label": {
+            "en": [
+              "Text of page 26"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0030.JP2",
       "type": "Canvas",
-      "label": {"none":["27"]},
+      "label": {
+        "none": [
+          "27"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2312,10 +3082,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2326,7 +3108,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0030.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2364,14 +3150,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0030.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 27"]}
+          "label": {
+            "en": [
+              "Text of page 27"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0031.JP2",
       "type": "Canvas",
-      "label": {"none":["28"]},
+      "label": {
+        "none": [
+          "28"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2388,10 +3182,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2402,7 +3208,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0031.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2440,14 +3250,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0031.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 28"]}
+          "label": {
+            "en": [
+              "Text of page 28"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0032.JP2",
       "type": "Canvas",
-      "label": {"none":["29"]},
+      "label": {
+        "none": [
+          "29"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2464,10 +3282,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2478,7 +3308,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0032.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2516,14 +3350,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0032.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 29"]}
+          "label": {
+            "en": [
+              "Text of page 29"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0033.JP2",
       "type": "Canvas",
-      "label": {"none":["30"]},
+      "label": {
+        "none": [
+          "30"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2540,10 +3382,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2554,7 +3408,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0033.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2592,14 +3450,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0033.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 30"]}
+          "label": {
+            "en": [
+              "Text of page 30"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0034.JP2",
       "type": "Canvas",
-      "label": {"none":["31"]},
+      "label": {
+        "none": [
+          "31"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2616,10 +3482,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2630,7 +3508,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0034.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2668,14 +3550,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0034.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page 31"]}
+          "label": {
+            "en": [
+              "Text of page 31"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0035.JP2",
       "type": "Canvas",
-      "label": {"none":["-"]},
+      "label": {
+        "none": [
+          "-"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2692,10 +3582,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2706,7 +3608,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0035.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2744,14 +3650,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0035.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page  -"]}
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0036.JP2",
       "type": "Canvas",
-      "label": {"none":["-"]},
+      "label": {
+        "none": [
+          "-"
+        ]
+      },
       "width": 2411,
       "height": 3372,
       "thumbnail": [
@@ -2768,10 +3682,22 @@
               "width": 732,
               "height": 1024,
               "sizes": [
-                {"width":72,"height":100},
-                {"width":143,"height":200},
-                {"width":286,"height":400},
-                {"width":732,"height":1024}
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 143,
+                  "height": 200
+                },
+                {
+                  "width": 286,
+                  "height": 400
+                },
+                {
+                  "width": 732,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2782,7 +3708,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0036.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2820,14 +3750,22 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0036.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page  -"]}
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0002.JP2",
       "type": "Canvas",
-      "label": {"none":["-"]},
+      "label": {
+        "none": [
+          "-"
+        ]
+      },
       "width": 2231,
       "height": 3040,
       "thumbnail": [
@@ -2844,10 +3782,22 @@
               "width": 751,
               "height": 1024,
               "sizes": [
-                {"width":73,"height":100},
-                {"width":147,"height":200},
-                {"width":294,"height":400},
-                {"width":751,"height":1024}
+                {
+                  "width": 73,
+                  "height": 100
+                },
+                {
+                  "width": 147,
+                  "height": 200
+                },
+                {
+                  "width": 294,
+                  "height": 400
+                },
+                {
+                  "width": 751,
+                  "height": 1024
+                }
               ]
             }
           ]
@@ -2858,7 +3808,11 @@
           "id": "https://api.wellcomecollection.org/text/alto/b18035723/b18035723_0002.JP2",
           "type": "Dataset",
           "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
-          "label": {"none":["METS-ALTO XML"]},
+          "label": {
+            "none": [
+              "METS-ALTO XML"
+            ]
+          },
           "format": "text/xml"
         }
       ],
@@ -2896,7 +3850,11 @@
         {
           "id": "https://iiif.wellcomecollection.org/annotations/v3/b18035723/b18035723_0002.JP2/line",
           "type": "AnnotationPage",
-          "label": {"en":["Text of page  -"]}
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ]
     }
@@ -2905,7 +3863,11 @@
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/ranges/LOG_0001",
       "type": "Range",
-      "label": {"none":["Front Cover"]},
+      "label": {
+        "none": [
+          "Front Cover"
+        ]
+      },
       "items": [
         {
           "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0001.JP2",
@@ -2916,7 +3878,11 @@
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/ranges/LOG_0003",
       "type": "Range",
-      "label": {"none":["Title Page"]},
+      "label": {
+        "none": [
+          "Title Page"
+        ]
+      },
       "items": [
         {
           "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0004.JP2",
@@ -2927,7 +3893,11 @@
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/ranges/LOG_0002",
       "type": "Range",
-      "label": {"none":["Back Cover"]},
+      "label": {
+        "none": [
+          "Back Cover"
+        ]
+      },
       "items": [
         {
           "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0002.JP2",
@@ -2951,17 +3921,29 @@
     {
       "id": "https://iiif.wellcomecollection.org/presentation/collections/contributors/xtwzf3g5",
       "type": "Collection",
-      "label": {"en":["Contributor: Bolle, Fritz."]}
+      "label": {
+        "en": [
+          "Contributor: Bolle, Fritz."
+        ]
+      }
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/hq8gcy73",
       "type": "Collection",
-      "label": {"en":["Subject: Genetics - history"]}
+      "label": {
+        "en": [
+          "Subject: Genetics - history"
+        ]
+      }
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Pamphlets",
       "type": "Collection",
-      "label": {"en":["Genre: Pamphlets"]}
+      "label": {
+        "en": [
+          "Genre: Pamphlets"
+        ]
+      }
     }
   ]
 }

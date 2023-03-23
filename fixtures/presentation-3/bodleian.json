@@ -1,0 +1,465 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.bodleian.ox.ac.uk/iiif/manifest/33c2e37e-957a-4820-83e1-611c987021c9.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Bodleian Library LP 44"
+    ]
+  },
+  "summary": {
+    "en": [
+      "Portrait of a woman, called Mary, Queen of Scots (1542–1587)"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": [
+          "Title"
+        ]
+      },
+      "value": {
+        "en": [
+          "Portrait of a woman, called Mary, Queen of Scots (1542–1587)"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Shelfmark"
+        ]
+      },
+      "value": {
+        "en": [
+          "Bodleian Library LP 44"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Artist"
+        ]
+      },
+      "value": {
+        "en": [
+          "Artist unknown"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Sitter"
+        ]
+      },
+      "value": {
+        "en": [
+          "Mary?, Queen of Scots (1542-1587)"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Language"
+        ]
+      },
+      "value": {
+        "en": [
+          "No linguistic content"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Date Statement"
+        ]
+      },
+      "value": {
+        "en": [
+          "1838"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Description"
+        ]
+      },
+      "value": {
+        "en": [
+          "A copy of the portrait overpainted on LP 46, before it was removed in 1838. Not an authentic portrait, though at one time very popular, it is perhaps an adaptation of a miniature by Nicholas Hilliard (1537‒1619)."
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Materials"
+        ]
+      },
+      "value": {
+        "en": [
+          "oil on canvas"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Dimensions"
+        ]
+      },
+      "value": {
+        "en": [
+          "550 × 454 mm."
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Provenance"
+        ]
+      },
+      "value": {
+        "en": [
+          "Probably commissioned by the Curators of the Bodleian Library, before 1838."
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Accession Date"
+        ]
+      },
+      "value": {
+        "en": [
+          "by 1838"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Accession Source"
+        ]
+      },
+      "value": {
+        "en": [
+          "Bodleian Curators"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Accession Type"
+        ]
+      },
+      "value": {
+        "en": [
+          "commission"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Record Origin"
+        ]
+      },
+      "value": {
+        "en": [
+          "Description by Dana Josephson (2019)."
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Collection"
+        ]
+      },
+      "value": {
+        "en": [
+          "Portraits"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Additional Information Sources"
+        ]
+      },
+      "value": {
+        "en": [
+          "Poole, Rachael. Catalogue of portraits in the possession of the University, colleges, city, and county of Oxford (Oxford, 1912). Garlick, Kenneth, and Rachael Poole. Catalogue of portraits in the Bodleian Library, Oxford (Oxford, 2004)."
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Digitization Project"
+        ]
+      },
+      "value": {
+        "en": [
+          "The Bodleian Libraries’ Portrait Collection: A Samuel H. Kress Foundation Digitization Project"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Record Created"
+        ]
+      },
+      "value": {
+        "en": [
+          "2019-06-17T15:37:01Z"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Holding Institution"
+        ]
+      },
+      "value": {
+        "en": [
+          "Bodleian Libraries, University of Oxford"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Access Rights"
+        ]
+      },
+      "value": {
+        "en": [
+          "Photo: © Bodleian Libraries, University of Oxford"
+        ]
+      }
+    },
+    {
+      "label": {
+        "en": [
+          "Digitization Sponsor"
+        ]
+      },
+      "value": {
+        "en": [
+          "<span>The Samuel H. Kress Foundation</span>"
+        ]
+      }
+    }
+  ],
+  "homepage": [
+    {
+      "id": "https://digital.bodleian.ox.ac.uk/objects/33c2e37e-957a-4820-83e1-611c987021c9/",
+      "type": "Text",
+      "label": {
+        "en": [
+          "View on Digital Bodleian"
+        ]
+      },
+      "format": "text/html",
+      "language": [
+        "en"
+      ]
+    }
+  ],
+  "provider": [
+    {
+      "id": "https://viaf.org/viaf/173632201/",
+      "type": "Agent",
+      "label": {
+        "en": [
+          "Bodleian Libraries, University of Oxford"
+        ]
+      },
+      "homepage": [
+        {
+          "id": "https://www.bodleian.ox.ac.uk/",
+          "type": "Text",
+          "label": {
+            "en": [
+              "Bodleian Libraries, University of Oxford"
+            ]
+          },
+          "format": "text/html"
+        }
+      ]
+    }
+  ],
+  "navDate": "1838-01-01T00:00:00Z",
+  "logo": [
+    {
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71/full/256,/0/default.jpg",
+      "type": "Image",
+      "service": [
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71",
+          "@type": "ImageService2",
+          "profile": "http://iiif.io/api/image/2/level1.json"
+        },
+        {
+          "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71",
+          "type": "ImageService3",
+          "profile": "level1"
+        }
+      ]
+    }
+  ],
+  "thumbnail": [
+    {
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4/full/256,/0/default.jpg",
+      "type": "Image",
+      "service": [
+        {
+          "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
+          "@type": "ImageService2",
+          "profile": "http://iiif.io/api/image/2/level1.json"
+        },
+        {
+          "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
+          "type": "ImageService3",
+          "profile": "level1"
+        }
+      ]
+    }
+  ],
+  "requiredStatement": {
+    "label": {
+      "en": [
+        "Terms of Use"
+      ]
+    },
+    "value": {
+      "en": [
+        "<span>Terms of use: <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\">CC-BY-NC 4.0</a>. For more information, please see <a href=\"https://digital.bodleian.ox.ac.uk/terms/\">https://digital.bodleian.ox.ac.uk/terms/</a></span>"
+      ]
+    }
+  },
+  "partOf": [
+    {
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/portraits",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Portraits"
+        ]
+      }
+    },
+    {
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/bodleian",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Bodleian Libraries"
+        ]
+      }
+    },
+    {
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/portraits-prints-drawings-objects",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Portraits, Prints and Drawings"
+        ]
+      }
+    },
+    {
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/bodleian-portraits",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "The Bodleian Libraries’ Portrait Collection: A Samuel H. Kress Foundation Digitization Project"
+        ]
+      }
+    }
+  ],
+  "behavior": [
+    "paged"
+  ],
+  "items": [
+    {
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "front"
+        ]
+      },
+      "width": 1920,
+      "height": 2326,
+      "items": [
+        {
+          "id": "https://iiif.bodleian.ox.ac.uk/iiif/annotationpage/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/012b1e0f-8c9e-48e7-83d6-5e51a70253b4_image.json",
+              "type": "Annotation",
+              "target": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+              "body": {
+                "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "width": 1920,
+                "height": 2326,
+                "service": [
+                  {
+                    "@id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
+                    "@type": "ImageService2",
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  {
+                    "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
+                    "type": "ImageService3",
+                    "profile": "level1"
+                  }
+                ]
+              },
+              "motivation": "painting"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/range/33c2e37e-957a-4820-83e1-611c987021c9/LOG_0000",
+      "type": "Range",
+      "label": {
+        "en": [
+          "LP 44"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+          "type": "Canvas"
+        }
+      ],
+      "start": {
+        "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+        "type": "Canvas"
+      }
+    }
+  ],
+  "viewingDirection": "left-to-right"
+}

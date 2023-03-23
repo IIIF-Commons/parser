@@ -241,7 +241,18 @@ export function mergeEntities(
     return existing;
   }
   if (incoming.id !== (existing as any).id || incoming.type !== (existing as any).type) {
-    throw new Error('Can only merge entities with identical identifiers and type!');
+    if (incoming.type === 'ImageService3') {
+      return incoming;
+    }
+    if ((existing as any).type === 'ImageService3') {
+      return existing;
+    }
+
+    throw new Error(
+      `Can only merge entities with identical identifiers and type! ${incoming.type}(${incoming.id}) => ${
+        (existing as any).type
+      }(${(existing as any).id})`
+    );
   }
   return merge({ ...existing }, incoming, context);
 }
