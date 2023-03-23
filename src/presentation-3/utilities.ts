@@ -13,13 +13,33 @@ Object.freeze(EMPTY);
 Object.freeze(WILDCARD);
 
 export function isWildcard(object: any) {
-  if (object === WILDCARD) {
+  if (object === WILDCARD || Object.keys(object).length === 0) {
     return true;
   }
   for (const i in object) {
     return false;
   }
   return true;
+}
+
+export function frameResource(resource: any, framing: any) {
+  if (framing && framing['@explicit']) {
+    const newEntity: any = {};
+    const keys = Object.keys(framing);
+    for (const key of keys) {
+      if (key === PART_OF || key === '@explicit') {
+        continue;
+      }
+      if (isWildcard(framing[key])) {
+        newEntity[key] = resource[key];
+      } else {
+        newEntity[key] = framing[key];
+      }
+    }
+    return newEntity;
+  }
+
+  return resource;
 }
 
 export function resolveIfExists<T extends NormalizedEntity>(
@@ -45,21 +65,9 @@ export function resolveIfExists<T extends NormalizedEntity>(
     const framing = fullEntity[HAS_PART].find((t: any) => {
       return parent ? t[PART_OF] === parent.id : t[PART_OF] === fullEntity.id;
     });
-    if (framing && framing['@explicit']) {
-      const newEntity: any = {};
-      const keys = Object.keys(framing);
-      for (const key of keys) {
-        if (key === PART_OF || key === '@explicit') {
-          continue;
-        }
-        if (isWildcard(framing[key])) {
-          newEntity[key] = fullEntity[key];
-        } else {
-          newEntity[key] = framing[key];
-        }
-      }
-      return [newEntity, fullEntity];
-    }
+
+    const newEntity = frameResource(fullEntity, framing);
+    return [newEntity, fullEntity];
   }
 
   return [fullEntity, fullEntity];

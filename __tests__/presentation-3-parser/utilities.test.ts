@@ -1,5 +1,6 @@
 import { compressSpecificResource } from '../../src/shared/compress-specific-resource';
 import { SpecificResource } from '@iiif/presentation-3';
+import { frameResource, WILDCARD } from '../../src';
 
 describe('Misc Utilites', function () {
   test('compressSpecificResource', () => {
@@ -69,5 +70,50 @@ describe('Misc Utilites', function () {
         "type": "SpecificResource",
       }
     `);
+  });
+
+  test('frameResource', () => {
+    const resource = {
+      id: 'test',
+      type: 'test-type',
+      nested: { id: 'something', type: 'something-else' },
+      ignored: 'not included',
+    };
+
+    expect(frameResource(resource, {})).toEqual(resource);
+    expect(
+      frameResource(resource, {
+        '@explicit': true,
+        id: {},
+        type: {},
+      })
+    ).toEqual({
+      id: 'test',
+      type: 'test-type',
+    });
+    expect(
+      frameResource(resource, {
+        '@explicit': true,
+        id: {},
+        type: {},
+        override: 'concrete value',
+      })
+    ).toEqual({
+      id: 'test',
+      type: 'test-type',
+      override: 'concrete value',
+    });
+    expect(
+      frameResource(resource, {
+        '@explicit': true,
+        id: {},
+        type: {},
+        nested: {},
+      })
+    ).toEqual({
+      id: 'test',
+      type: 'test-type',
+      nested: { id: 'something', type: 'something-else' },
+    });
   });
 });

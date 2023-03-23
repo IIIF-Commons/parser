@@ -32,6 +32,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New helpers for resolving framed resources
 - Added `iiif-parser:hasPart` to normalization of some resources containing JSON-LD frame for resources within a particular context (i.e. through partOf)
 - Serialize config now has additional contextual information (parent resource, full resource if framed)
+- New `frameResource` helper
 
 ### Fixed
 - `[presentation-2]` `startCanvas` property on Sequences are now added to the Manifest when converting
