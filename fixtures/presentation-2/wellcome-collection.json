@@ -1,0 +1,27 @@
+{
+  "@id": "https://iiif.wellcomecollection.org/presentation/v2/collections/genres/Abstracts",
+  "@type": "sc:Collection",
+  "label": "Genre: Abstracts",
+  "members": [
+    {
+      "@id": "https://iiif.wellcomecollection.org/presentation/v2/b29011577",
+      "@type": "sc:Manifest",
+      "label": "Titres et travaux scientifiques du Dr F. Lejars."
+    },
+    {
+      "@id": "https://iiif.wellcomecollection.org/presentation/v2/b32183859",
+      "@type": "sc:Manifest",
+      "label": "Annotated bibliography on vital and health statistics."
+    },
+    {
+      "@id": "https://iiif.wellcomecollection.org/presentation/v2/b21782763",
+      "@type": "sc:Manifest",
+      "label": "Notice sur les travaux scientifiques de M. Henri Becquerel."
+    },
+    {
+      "@id": "https://iiif.wellcomecollection.org/presentation/v2/b29011553",
+      "@type": "sc:Manifest",
+      "label": "Notice sur les titres et travaux scientifiques de M. Louis Lapicque."
+    }
+  ]
+}

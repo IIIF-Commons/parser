@@ -4,6 +4,7 @@ import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__
 import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
 import p2ManifestWithStart from '../../fixtures/presentation-2/bl-manifest.json';
 import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
+import manifestExhibition from '../../fixtures/presentation-3/exhibition-1.json';
 import { Manifest } from '@iiif/presentation-3';
 
 describe('normalize', () => {
@@ -14,7 +15,7 @@ describe('normalize', () => {
       {
         "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json": "Manifest",
         "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json": "Canvas",
-        "http://iiif.io/api/presentation/2.1/example/fixtures/collection.json": "ContentResource",
+        "http://iiif.io/api/presentation/2.1/example/fixtures/collection.json": "Collection",
         "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png": "ContentResource",
         "https://example.org/uuid/1dad04b3-79c6-4a97-a831-634f2ee50a26": "AnnotationPage",
         "https://example.org/uuid/3644c005-bf7a-48d0-9fa9-1e1757bf8df1": "Annotation",
@@ -274,7 +275,7 @@ describe('normalize', () => {
     expect(result.mapping).toEqual({
       'https://data.example.org/about/us.jsonld': 'ContentResource',
       'https://example.org/': 'ContentResource',
-      'https://example.org/collections/books/': 'ContentResource',
+      'https://example.org/collections/books/': 'Collection',
       'https://example.org/iiif/book1.pdf': 'ContentResource',
       'https://example.org/iiif/book1/annotations/p1': 'AnnotationPage',
       'https://example.org/iiif/book1/canvas/p1': 'Canvas',
@@ -309,12 +310,12 @@ describe('normalize', () => {
     expect(range.type).toEqual('Range');
     expect(range.items[0].type).toEqual('SpecificResource');
     expect(range.items[0]).toMatchInlineSnapshot(`
-      Object {
-        "selector": Object {
+      {
+        "selector": {
           "type": "FragmentSelector",
           "value": "t=0,1398.84",
         },
-        "source": Object {
+        "source": {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000b",
           "type": "Canvas",
         },
@@ -333,9 +334,9 @@ describe('normalize', () => {
 
     const result = normalize(p3manifest);
     expect(((result.entities.Manifest as any)[p3manifest.id] as Manifest).start).toMatchInlineSnapshot(`
-      Object {
+      {
         "selector": undefined,
-        "source": Object {
+        "source": {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100022545254.0x000002",
           "type": "Canvas",
         },
@@ -356,5 +357,14 @@ describe('normalize', () => {
       width: 3186,
       height: 4612,
     });
+  });
+
+  test('normalize complex manifest', () => {
+    const db = normalize(manifestExhibition) as any;
+
+    // expect(db.entities.Canvas)
+    const canvas =
+      db.entities.Annotation['https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c'];
+    // console.log(canvas);
   });
 });

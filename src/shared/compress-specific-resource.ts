@@ -24,8 +24,16 @@ export function compressSpecificResource(
       (keys.length === 2 && target.type && target.source) ||
       (keys.length === 3 && target.type && target.source && keys.indexOf('selector') !== -1 && !target.selector)
     ) {
+      if (allowString) {
+        return target.source.id;
+      }
+
+      if (target.source.type === 'ContentResource') {
+        return { type: 'SpecificResource', source: target.source.id };
+      }
+
       // If all we have is the wrapped source, just return the ID.
-      return allowString ? target.source.id : target.source;
+      return target.source;
     }
     if (target.selector) {
       if (

@@ -3,6 +3,7 @@ import { ImageService2, ImageService3, ResourceProvider, TechnicalProperties } f
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
 import { HAS_PART, UNSET, UNWRAP } from './utilities';
+import { isSpecificResource } from '../shared/is-specific-resource';
 
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
   return [
@@ -209,7 +210,35 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return key !== 'body' && key !== HAS_PART;
       });
 
-    const resolvedBody = yield entity.body;
+    let resolvedBody: any = undefined;
+
+    if (Array.isArray(entity.body)) {
+      const resolved = [];
+      for (const body of entity.body as any[]) {
+        if (body && isSpecificResource(body)) {
+          const single = {
+            ...(body as any),
+          };
+
+          single.source = yield body.source;
+          resolved.push(compressSpecificResource(single, { allowSourceString: true }));
+        } else {
+          resolved.push(yield body);
+        }
+      }
+      resolvedBody = resolved;
+    } else {
+      if (entity.body && isSpecificResource(entity.body)) {
+        resolvedBody = {
+          ...(entity.body as any),
+        };
+        resolvedBody.source = yield (entity.body as any).source;
+      } else {
+        resolvedBody = yield entity.body;
+      }
+    }
+
+    // const resolvedBody = yield entity.body;
 
     return [
       ...entries,

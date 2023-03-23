@@ -219,7 +219,6 @@ describe('serializer', () => {
         "annotations": [
           {
             "id": "https://example.org/iiif/book1/annotations/p1",
-            "items": [],
             "type": "AnnotationPage",
           },
         ],

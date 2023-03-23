@@ -170,7 +170,7 @@ export class Traverse {
     }
     if (resource.partOf) {
       // Array<ContentResource | Canvas | AnnotationCollection>
-      resource.partOf = resource.partOf.map((partOf) => {
+      (resource as any).partOf = resource.partOf.map((partOf) => {
         if (typeof partOf === 'string' || !partOf.type) {
           return this.traverseType(partOf as ContentResource, { parent: resource }, this.traversals.contentResource);
         }
@@ -183,6 +183,9 @@ export class Traverse {
             { parent: resource },
             this.traversals.annotationCollection
           );
+        }
+        if (partOf.type === 'Collection') {
+          return this.traverseType(partOf as Collection, { parent: resource }, this.traversals.collection);
         }
         return this.traverseType(partOf as ContentResource, { parent: resource }, this.traversals.contentResource);
       });
@@ -341,22 +344,6 @@ export class Traverse {
     return annotation;
   }
 
-  /*
-  traverseAnnotationTarget(annotation: Annotation): Annotation {
-    if (Array.isArray(annotation.target)) {
-      annotation.target = annotation.target.map(
-        (annotationBody: ContentResource): ContentResource => {
-          return this.traverseContentResource(annotationBody);
-        }
-      );
-    } else if (annotation.target) {
-      annotation.target = this.traverseContentResource(annotation.target);
-    }
-
-    return annotation;
-  }
-  */
-
   traverseLinkedCanvases<T extends Collection | Manifest | Canvas | Range>(json: T): T {
     if (json.placeholderCanvas) {
       json.placeholderCanvas = this.traverseCanvas(json.placeholderCanvas);
@@ -372,8 +359,6 @@ export class Traverse {
   // @todo traverseAnnotationSelector
   traverseAnnotation(annotationJson: Annotation, parent?: any): Annotation {
     return this.traverseType<Annotation>(
-      // Disabled these for now.
-      // this.traverseAnnotationTarget(this.traverseLinking(this.traverseAnnotationBody(annotationJson))),
       this.traverseLinking(this.traverseAnnotationBody(annotationJson)),
       { parent },
       this.traversals.annotation
@@ -400,6 +385,10 @@ export class Traverse {
       });
     }
 
+    if (isSpecificResource(contentResourceJson)) {
+      return this.traverseSpecificResource(contentResourceJson, 'ContentResource');
+    }
+
     return this.traverseType<ContentResource>(
       // This needs an `any` because of the scope of W3C annotation bodies (covered by ContentResource).
       // ContentResources are permitted to have a `.annotations` property, so we can pass it as any  for this
@@ -422,7 +411,9 @@ export class Traverse {
         source:
           typeHint === 'Canvas' || source.type === 'Canvas'
             ? this.traverseType(source, { parent }, this.traversals.canvas)
-            : this.traverseUnknown(source, { typeHint, parent }),
+            : typeHint === 'ContentResource'
+            ? this.traverseContentResource(source, { parent })
+            : this.traverseUnknown(source, { parent, typeHint }),
       },
       { parent },
       this.traversals.specificResource

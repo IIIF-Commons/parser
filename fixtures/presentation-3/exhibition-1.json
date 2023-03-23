@@ -1,0 +1,665 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Inventing Creativity"
+    ]
+  },
+  "items": [
+    {
+      "label": {
+        "en": [
+          "Constructing the Creative Personality"
+        ]
+      },
+      "height": 1000,
+      "width": 1000,
+      "type": "Canvas",
+      "items": [
+        {
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "body": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c/specificResource",
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://dlc.services/iiif-img/7/21/bdd5d699-94f9-465c-ae4a-d5d209f3c270/full/full/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg",
+                  "height": 6036,
+                  "width": 8174,
+                  "label": {
+                    "en": [
+                      "-"
+                    ]
+                  },
+                  "service": {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/iiif-img/7/21/bdd5d699-94f9-465c-ae4a-d5d209f3c270",
+                    "protocol": "http://iiif.io/api/image",
+                    "width": 8174,
+                    "height": 6036,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "height": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32
+                        ]
+                      }
+                    ],
+                    "sizes": [
+                      {
+                        "width": 1024,
+                        "height": 756
+                      },
+                      {
+                        "width": 400,
+                        "height": 295
+                      },
+                      {
+                        "width": 200,
+                        "height": 148
+                      },
+                      {
+                        "width": 100,
+                        "height": 74
+                      }
+                    ],
+                    "profile": [
+                      "http://iiif.io/api/image/2/level1.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "native",
+                          "color",
+                          "gray"
+                        ],
+                        "supports": [
+                          "regionByPct",
+                          "sizeByForcedWh",
+                          "sizeByWh",
+                          "sizeAboveFull",
+                          "rotationBy90s",
+                          "mirroring",
+                          "gray"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "selector": {
+                  "@context": "http://iiif.io/api/annex/openannotation/context.json",
+                  "type": "iiif:ImageApiSelector",
+                  "region": "4164,352,3702,5420"
+                }
+              },
+              "thumbnail": [
+                {
+                  "id": "https://dlc.services/thumbs/7/21/bdd5d699-94f9-465c-ae4a-d5d209f3c270/full/full/0/default.jpg",
+                  "type": "Image",
+                  "service": {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/thumbs/7/21/bdd5d699-94f9-465c-ae4a-d5d209f3c270",
+                    "protocol": "http://iiif.io/api/image",
+                    "profile": [
+                      "http://iiif.io/api/image/2/level0.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "color"
+                        ],
+                        "supports": [
+                          "sizeByWhListed"
+                        ]
+                      }
+                    ],
+                    "width": 1024,
+                    "height": 756,
+                    "sizes": [
+                      {
+                        "width": 100,
+                        "height": 74
+                      },
+                      {
+                        "width": 200,
+                        "height": 148
+                      },
+                      {
+                        "width": 400,
+                        "height": 295
+                      },
+                      {
+                        "width": 1024,
+                        "height": 756
+                      }
+                    ]
+                  }
+                }
+              ],
+              "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c",
+              "target": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59#xywh=124,624,205,298",
+              "summary": {
+                "en": [
+                  "Researchers found that people they deemed creative preferred messy and asymmetrical figures, while randomly selected university students tended to prefer simple, linear, and sym­metrical figures. The psychologists concluded creative people had a higher “tolerance for ambiguity,” though the result might also have been because the creative group, which included successful architects and writers, was more likely to have a learned taste for modern art."
+                ]
+              },
+              "label": {
+                "en": [
+                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
+                ]
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "body": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254/specificResource",
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://dlc.services/iiif-img/7/21/9be87962-0977-4b05-9012-c3a0061ced9f/full/full/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg",
+                  "height": 6237,
+                  "width": 8713,
+                  "label": {
+                    "en": [
+                      "-"
+                    ]
+                  },
+                  "service": {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/iiif-img/7/21/9be87962-0977-4b05-9012-c3a0061ced9f",
+                    "protocol": "http://iiif.io/api/image",
+                    "width": 8713,
+                    "height": 6237,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "height": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32,
+                          64
+                        ]
+                      }
+                    ],
+                    "sizes": [
+                      {
+                        "width": 1024,
+                        "height": 733
+                      },
+                      {
+                        "width": 400,
+                        "height": 286
+                      },
+                      {
+                        "width": 200,
+                        "height": 143
+                      },
+                      {
+                        "width": 100,
+                        "height": 72
+                      }
+                    ],
+                    "profile": [
+                      "http://iiif.io/api/image/2/level1.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "native",
+                          "color",
+                          "gray"
+                        ],
+                        "supports": [
+                          "regionByPct",
+                          "sizeByForcedWh",
+                          "sizeByWh",
+                          "sizeAboveFull",
+                          "rotationBy90s",
+                          "mirroring",
+                          "gray"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "selector": {
+                  "@context": "http://iiif.io/api/annex/openannotation/context.json",
+                  "type": "iiif:ImageApiSelector",
+                  "region": "4415,422,3758,5440"
+                }
+              },
+              "thumbnail": [
+                {
+                  "id": "https://dlc.services/thumbs/7/21/9be87962-0977-4b05-9012-c3a0061ced9f/full/full/0/default.jpg",
+                  "type": "Image",
+                  "service": {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/thumbs/7/21/9be87962-0977-4b05-9012-c3a0061ced9f",
+                    "protocol": "http://iiif.io/api/image",
+                    "profile": [
+                      "http://iiif.io/api/image/2/level0.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "color"
+                        ],
+                        "supports": [
+                          "sizeByWhListed"
+                        ]
+                      }
+                    ],
+                    "width": 1024,
+                    "height": 733,
+                    "sizes": [
+                      {
+                        "width": 100,
+                        "height": 72
+                      },
+                      {
+                        "width": 200,
+                        "height": 143
+                      },
+                      {
+                        "width": 400,
+                        "height": 286
+                      },
+                      {
+                        "width": 1024,
+                        "height": 733
+                      }
+                    ]
+                  }
+                }
+              ],
+              "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254",
+              "target": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59#xywh=365,622,205,296",
+              "label": {
+                "en": [
+                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
+                ]
+              },
+              "summary": {
+                "en": [
+                  "Traditionally, psychologists used ink blot tests to peer into peoples’ subconscious. Creativity researchers were interested not in the underlying meaning of what their subjects saw in the random shapes but rather their originality, which researchers quantified to calculate a measure of creative ability."
+                ]
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "body": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee/specificResource",
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://dlc.services/iiif-img/7/21/4ae24fbb-cc11-4dbd-ae68-2a2951380b04/full/full/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg",
+                  "height": 6452,
+                  "width": 8840,
+                  "label": {
+                    "en": [
+                      "-"
+                    ]
+                  },
+                  "service": {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/iiif-img/7/21/4ae24fbb-cc11-4dbd-ae68-2a2951380b04",
+                    "protocol": "http://iiif.io/api/image",
+                    "width": 8840,
+                    "height": 6452,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "height": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32,
+                          64
+                        ]
+                      }
+                    ],
+                    "sizes": [
+                      {
+                        "width": 1024,
+                        "height": 747
+                      },
+                      {
+                        "width": 400,
+                        "height": 292
+                      },
+                      {
+                        "width": 200,
+                        "height": 146
+                      },
+                      {
+                        "width": 100,
+                        "height": 73
+                      }
+                    ],
+                    "profile": [
+                      "http://iiif.io/api/image/2/level1.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "native",
+                          "color",
+                          "gray"
+                        ],
+                        "supports": [
+                          "regionByPct",
+                          "sizeByForcedWh",
+                          "sizeByWh",
+                          "sizeAboveFull",
+                          "rotationBy90s",
+                          "mirroring",
+                          "gray"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "selector": {
+                  "@context": "http://iiif.io/api/annex/openannotation/context.json",
+                  "type": "iiif:ImageApiSelector",
+                  "region": "4479,548,3718,5404"
+                }
+              },
+              "thumbnail": [
+                {
+                  "id": "https://dlc.services/thumbs/7/21/4ae24fbb-cc11-4dbd-ae68-2a2951380b04/full/full/0/default.jpg",
+                  "type": "Image",
+                  "service": {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/thumbs/7/21/4ae24fbb-cc11-4dbd-ae68-2a2951380b04",
+                    "protocol": "http://iiif.io/api/image",
+                    "profile": [
+                      "http://iiif.io/api/image/2/level0.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "color"
+                        ],
+                        "supports": [
+                          "sizeByWhListed"
+                        ]
+                      }
+                    ],
+                    "width": 1024,
+                    "height": 747,
+                    "sizes": [
+                      {
+                        "width": 100,
+                        "height": 73
+                      },
+                      {
+                        "width": 200,
+                        "height": 146
+                      },
+                      {
+                        "width": 400,
+                        "height": 292
+                      },
+                      {
+                        "width": 1024,
+                        "height": 747
+                      }
+                    ]
+                  }
+                }
+              ],
+              "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee",
+              "target": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59#xywh=603,622,203,293",
+              "label": {
+                "en": [
+                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
+                ]
+              },
+              "summary": {
+                "en": [
+                  "Drawing completion tests were commonly used in creativity studies. Although creativity and art were closely associated, these tests were scored not on the test-taker’s artistic ability, but rather on the originality and elaborateness of their responses."
+                ]
+              }
+            },
+            {
+              "motivation": "painting",
+              "type": "Annotation",
+              "body": {
+                "id": "https://dlc.services/iiif-img/7/21/00298292-8c7a-4939-b153-bef45c24160a/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 6423,
+                "width": 8722,
+                "label": {
+                  "en": [
+                    "-"
+                  ]
+                },
+                "service": [
+                  {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/iiif-img/7/21/00298292-8c7a-4939-b153-bef45c24160a",
+                    "protocol": "http://iiif.io/api/image",
+                    "width": 8722,
+                    "height": 6423,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "height": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32,
+                          64
+                        ]
+                      }
+                    ],
+                    "sizes": [
+                      {
+                        "width": 1024,
+                        "height": 754
+                      },
+                      {
+                        "width": 400,
+                        "height": 295
+                      },
+                      {
+                        "width": 200,
+                        "height": 147
+                      },
+                      {
+                        "width": 100,
+                        "height": 74
+                      }
+                    ],
+                    "profile": [
+                      "http://iiif.io/api/image/2/level1.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "native",
+                          "color",
+                          "gray"
+                        ],
+                        "supports": [
+                          "regionByPct",
+                          "sizeByForcedWh",
+                          "sizeByWh",
+                          "sizeAboveFull",
+                          "rotationBy90s",
+                          "mirroring",
+                          "gray"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              "thumbnail": [
+                {
+                  "id": "https://dlc.services/thumbs/7/21/00298292-8c7a-4939-b153-bef45c24160a/full/full/0/default.jpg",
+                  "type": "Image",
+                  "service": {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/thumbs/7/21/00298292-8c7a-4939-b153-bef45c24160a",
+                    "protocol": "http://iiif.io/api/image",
+                    "profile": [
+                      "http://iiif.io/api/image/2/level0.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "color"
+                        ],
+                        "supports": [
+                          "sizeByWhListed"
+                        ]
+                      }
+                    ],
+                    "width": 1024,
+                    "height": 754,
+                    "sizes": [
+                      {
+                        "width": 100,
+                        "height": 74
+                      },
+                      {
+                        "width": 200,
+                        "height": 147
+                      },
+                      {
+                        "width": 400,
+                        "height": 295
+                      },
+                      {
+                        "width": 1024,
+                        "height": 754
+                      }
+                    ]
+                  }
+                }
+              ],
+              "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/742f09f4-1005-6fb1-0a56-7b2967a9c627",
+              "target": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59#xywh=77,21,787,577",
+              "summary": {
+                "en": [
+                  "Researchers at Berkeley’s IPAR asked subjects to create mosaics with colored tiles. The examples on the left were produced by the “non-creative” control group of randomly selected students, while those on the right were produced by prominent figures rated highly creative by their peers. The researchers concluded that creative people naturally prefer asymmetrical figures."
+                ]
+              },
+              "label": {
+                "en": [
+                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
+                ]
+              }
+            }
+          ],
+          "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/list/a9af9f68-5adb-0db6-3826-40b3c8e3ffaf"
+        }
+      ],
+      "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
+      "behavior": [
+        "w-6",
+        "h-6"
+      ],
+      "annotations": [
+        {
+          "type": "AnnotationPage",
+          "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations",
+          "items": [
+            {
+              "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/35",
+              "type": "Annotation",
+              "motivation": "describing",
+              "target": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c",
+                "type": "Annotation"
+              }
+            },
+            {
+              "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/36",
+              "type": "Annotation",
+              "motivation": "describing",
+              "target": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254",
+                "type": "Annotation"
+              }
+            },
+            {
+              "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/37",
+              "type": "Annotation",
+              "motivation": "describing",
+              "target": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee",
+                "type": "Annotation"
+              }
+            },
+            {
+              "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/38",
+              "type": "Annotation",
+              "motivation": "describing",
+              "target": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/742f09f4-1005-6fb1-0a56-7b2967a9c627",
+                "type": "Annotation"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/manifest",
+  "homepage": [
+    {
+      "id": "https://heritage.tudelft.nl/nl/exhibitions/inventing-creativity",
+      "type": "Text",
+      "format": "text/html",
+      "language": [
+        "nl"
+      ]
+    },
+    {
+      "id": "https://heritage.tudelft.nl/en/exhibitions/inventing-creativity",
+      "type": "Text",
+      "format": "text/html",
+      "language": [
+        "en"
+      ]
+    }
+  ]
+}
