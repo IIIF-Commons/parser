@@ -51,4 +51,23 @@ describe('Misc Utilites', function () {
       }
     `);
   });
+
+  test('compressSpecificResource (single content resource)', () => {
+    const state: SpecificResource = {
+      type: 'SpecificResource',
+      source: {
+        id: 'https://exameple.org/link-to-something',
+        type: 'ContentResource',
+      },
+    };
+
+    const compressed = compressSpecificResource(state, { allowSourceString: true, allowString: false });
+
+    expect(compressed).toMatchInlineSnapshot(`
+      {
+        "source": "https://exameple.org/link-to-something",
+        "type": "SpecificResource",
+      }
+    `);
+  });
 });

@@ -322,22 +322,6 @@ export class Traverse {
     return annotation;
   }
 
-  /*
-  traverseAnnotationTarget(annotation: Annotation): Annotation {
-    if (Array.isArray(annotation.target)) {
-      annotation.target = annotation.target.map(
-        (annotationBody: ContentResource): ContentResource => {
-          return this.traverseContentResource(annotationBody);
-        }
-      );
-    } else if (annotation.target) {
-      annotation.target = this.traverseContentResource(annotation.target);
-    }
-
-    return annotation;
-  }
-  */
-
   traverseLinkedCanvases<T extends Collection | Manifest | Canvas | Range>(json: T): T {
     if (json.placeholderCanvas) {
       json.placeholderCanvas = this.traverseCanvas(json.placeholderCanvas);
@@ -353,8 +337,6 @@ export class Traverse {
   // @todo traverseAnnotationSelector
   traverseAnnotation(annotationJson: Annotation): Annotation {
     return this.traverseType<Annotation>(
-      // Disabled these for now.
-      // this.traverseAnnotationTarget(this.traverseLinking(this.traverseAnnotationBody(annotationJson))),
       this.traverseLinking(this.traverseAnnotationBody(annotationJson)),
       this.traversals.annotation
     );
@@ -380,6 +362,10 @@ export class Traverse {
       });
     }
 
+    if (isSpecificResource(contentResourceJson)) {
+      return this.traverseSpecificResource(contentResourceJson, 'ContentResource');
+    }
+
     return this.traverseType<ContentResource>(
       // This needs an `any` because of the scope of W3C annotation bodies (covered by ContentResource).
       // ContentResources are permitted to have a `.annotations` property, so we can pass it as any  for this
@@ -401,6 +387,8 @@ export class Traverse {
         source:
           typeHint === 'Canvas' || source.type === 'Canvas'
             ? this.traverseType(source, this.traversals.canvas)
+            : typeHint === 'ContentResource'
+            ? this.traverseContentResource(source)
             : this.traverseUnknown(source, typeHint),
       },
       this.traversals.specificResource

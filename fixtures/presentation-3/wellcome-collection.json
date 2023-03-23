@@ -1,0 +1,187 @@
+{
+  "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Abstracts",
+  "type": "Collection",
+  "label": {
+    "none": [
+      "Genre: Abstracts"
+    ]
+  },
+  "items": [
+    {
+      "id": "https://iiif.wellcomecollection.org/presentation/b29011577",
+      "type": "Manifest",
+      "label": {
+        "none": [
+          "Titres et travaux scientifiques du Dr F. Lejars."
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.wellcomecollection.org/thumbs/b29011577_0003.jp2/full/79,100/0/default.jpg",
+          "type": "Image",
+          "width": 79,
+          "height": 100,
+          "service": [
+            {
+              "@id": "https://iiif.wellcomecollection.org/thumbs/b29011577_0003.jp2",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level0.json",
+              "width": 805,
+              "height": 1024,
+              "sizes": [
+                {
+                  "width": 79,
+                  "height": 100
+                },
+                {
+                  "width": 157,
+                  "height": 200
+                },
+                {
+                  "width": 314,
+                  "height": 400
+                },
+                {
+                  "width": 805,
+                  "height": 1024
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.wellcomecollection.org/presentation/b32183859",
+      "type": "Manifest",
+      "label": {
+        "none": [
+          "Annotated bibliography on vital and health statistics."
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.wellcomecollection.org/thumbs/b32183859_0007.jp2/full/67,100/0/default.jpg",
+          "type": "Image",
+          "width": 67,
+          "height": 100,
+          "service": [
+            {
+              "@id": "https://iiif.wellcomecollection.org/thumbs/b32183859_0007.jp2",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level0.json",
+              "width": 685,
+              "height": 1024,
+              "sizes": [
+                {
+                  "width": 67,
+                  "height": 100
+                },
+                {
+                  "width": 134,
+                  "height": 200
+                },
+                {
+                  "width": 268,
+                  "height": 400
+                },
+                {
+                  "width": 685,
+                  "height": 1024
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.wellcomecollection.org/presentation/b21782763",
+      "type": "Manifest",
+      "label": {
+        "none": [
+          "Notice sur les travaux scientifiques de M. Henri Becquerel."
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.wellcomecollection.org/thumbs/b21782763_0005.jp2/full/72,100/0/default.jpg",
+          "type": "Image",
+          "width": 72,
+          "height": 100,
+          "service": [
+            {
+              "@id": "https://iiif.wellcomecollection.org/thumbs/b21782763_0005.jp2",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level0.json",
+              "width": 741,
+              "height": 1024,
+              "sizes": [
+                {
+                  "width": 72,
+                  "height": 100
+                },
+                {
+                  "width": 145,
+                  "height": 200
+                },
+                {
+                  "width": 289,
+                  "height": 400
+                },
+                {
+                  "width": 741,
+                  "height": 1024
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://iiif.wellcomecollection.org/presentation/b29011553",
+      "type": "Manifest",
+      "label": {
+        "none": [
+          "Notice sur les titres et travaux scientifiques de M. Louis Lapicque."
+        ]
+      },
+      "thumbnail": [
+        {
+          "id": "https://iiif.wellcomecollection.org/thumbs/b29011553_0003.jp2/full/80,100/0/default.jpg",
+          "type": "Image",
+          "width": 80,
+          "height": 100,
+          "service": [
+            {
+              "@id": "https://iiif.wellcomecollection.org/thumbs/b29011553_0003.jp2",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level0.json",
+              "width": 817,
+              "height": 1024,
+              "sizes": [
+                {
+                  "width": 80,
+                  "height": 100
+                },
+                {
+                  "width": 160,
+                  "height": 200
+                },
+                {
+                  "width": 319,
+                  "height": 400
+                },
+                {
+                  "width": 817,
+                  "height": 1024
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

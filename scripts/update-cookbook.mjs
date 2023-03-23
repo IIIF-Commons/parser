@@ -66,7 +66,7 @@ async function main() {
             const fileNameWithExtension = filenameParts[filenameParts.length - 1];
             if (fileNameWithExtension.endsWith('.json')) {
               const fileName = fileNameWithExtension.slice(0, -5);
-              await writeFile(join(cwd(), `fixtures/cookbook`, `${key}-${fileName}`),
+              await writeFile(join(cwd(), `fixtures/cookbook`, `${key}-${fileName}.json`),
                 await (await fetch(`https://iiif.io/api/cookbook/recipe/${key}/${href}`)).text()
               );
 

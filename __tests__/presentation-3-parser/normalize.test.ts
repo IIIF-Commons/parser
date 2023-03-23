@@ -4,6 +4,7 @@ import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__
 import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
 import p2ManifestWithStart from '../../fixtures/presentation-2/bl-manifest.json';
 import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
+import manifestExhibition from '../../fixtures/presentation-3/exhibition-1.json';
 import { Manifest } from '@iiif/presentation-3';
 
 describe('normalize', () => {
@@ -309,12 +310,12 @@ describe('normalize', () => {
     expect(range.type).toEqual('Range');
     expect(range.items[0].type).toEqual('SpecificResource');
     expect(range.items[0]).toMatchInlineSnapshot(`
-      Object {
-        "selector": Object {
+      {
+        "selector": {
           "type": "FragmentSelector",
           "value": "t=0,1398.84",
         },
-        "source": Object {
+        "source": {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000b",
           "type": "Canvas",
         },
@@ -333,9 +334,9 @@ describe('normalize', () => {
 
     const result = normalize(p3manifest);
     expect(((result.entities.Manifest as any)[p3manifest.id] as Manifest).start).toMatchInlineSnapshot(`
-      Object {
+      {
         "selector": undefined,
-        "source": Object {
+        "source": {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100022545254.0x000002",
           "type": "Canvas",
         },
@@ -356,5 +357,14 @@ describe('normalize', () => {
       width: 3186,
       height: 4612,
     });
+  });
+
+  test('normalize complex manifest', () => {
+    const db = normalize(manifestExhibition) as any;
+
+    // expect(db.entities.Canvas)
+    const canvas =
+      db.entities.Annotation['https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c'];
+    // console.log(canvas);
   });
 });

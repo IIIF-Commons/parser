@@ -1,6 +1,6 @@
 {
   "@context": "http://iiif.io/api/presentation/3/context.json",
-  "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/manifest.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/manifest.json",
   "type": "Manifest",
   "label": {
     "en": [
@@ -9,17 +9,17 @@
   },
   "items": [
     {
-      "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1",
+      "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1",
       "type": "Canvas",
       "height": 3024,
       "width": 4032,
       "items": [
         {
-          "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/page/p1/1",
+          "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1/annopage-1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/p0001-image",
+              "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1/annopage-1/anno-1",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
@@ -36,33 +36,27 @@
                   }
                 ]
               },
-              "target": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1"
+              "target": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1"
             }
           ]
         }
       ],
       "annotations": [
         {
-          "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/page/p2/1",
+          "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1/annopage-2",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/anno/p0002-wikidata",
+              "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1/annopage-2/anno-1",
               "type": "Annotation",
-              "motivation": "tagging",
-              "body": [
-                {
-                  "type": "SpecificResource",
-                  "source": "http://www.wikidata.org/entity/Q18624915"
-                },
-                {
-                  "type": "TextualBody",
-                  "value": "Gänseliesel-Brunnen",
-                  "format": "text/plain",
-                  "language": "de"
-                }
-              ],
-              "target": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1#xywh=749,1054,338,460"
+              "motivation": "commenting",
+              "body": {
+                "type": "TextualBody",
+                "language": "de",
+                "format": "text/html",
+                "value": "<p>Göttinger Marktplatz mit <a href='https://de.wikipedia.org/wiki/G%C3%A4nseliesel-Brunnen_(G%C3%B6ttingen)'>Gänseliesel Brunnen <img src='https://en.wikipedia.org/static/images/project-logos/enwiki.png' alt='Wikipedia logo'></a></p>"
+              },
+              "target": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1"
             }
           ]
         }

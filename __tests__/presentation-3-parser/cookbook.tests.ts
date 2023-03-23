@@ -5,8 +5,8 @@ import { join } from 'path';
 const { readFile } = promises;
 import { normalize, serialize, serializeConfigPresentation3 } from '../../src/presentation-3';
 
-const prWaitingForMerge = [
-  '0219-using-caption-file', // https://github.com/IIIF/cookbook-recipes/pull/340
+const prWaitingForMerge: string[] = [
+  // '0219-using-caption-file', // https://github.com/IIIF/cookbook-recipes/pull/340
 ];
 
 describe('Cookbook', function () {
@@ -31,18 +31,11 @@ describe('Cookbook', function () {
       result.resource,
       serializeConfigPresentation3
     );
-    expect(
-      serialize(
-        {
-          mapping: result.mapping,
-          entities: result.entities,
-          requests: {},
-        },
-        result.resource,
-        serializeConfigPresentation3
-      )
-    ).toMatchSnapshot();
+    expect(reserialized).toMatchSnapshot();
 
     expect(reserialized).toEqual(original);
+
+    // Immutability:
+    // expect(manifest).toEqual(original);
   });
 });
