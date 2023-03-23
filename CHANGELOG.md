@@ -52,6 +52,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - `range.items[]` is now normalised to either `Reference<'Range'>`[^1] or `SpecificResource<Reference<'Canvas'>>`[^2]
 - `manifest.start` is now normalised to a `SpecificResource<Reference<'Canvas'>>`
+- `annotation.target` is now normalized to `SpecificResource`
+- `annotation.body` now will correctly handle `SpecificResource` type
 - `ContentResource` now has a `iiif-parser:hasPart` when normalized
 - `AnnotationPage` now has a `iiif-parser:hasPart` when normalized
 - `Manifest` now has a `iiif-parser:hasPart` when normalized
