@@ -12,6 +12,13 @@ exports[`normalize > normalize 1`] = `
         },
       ],
       "id": "https://example.org/iiif/book1/annotation/p0001-image",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/iiif/book1/annotation/p0001-image",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/page/p1/1",
+          "type": "Annotation",
+        },
+      ],
       "motivation": [
         "painting",
       ],
@@ -88,11 +95,25 @@ exports[`normalize > normalize 1`] = `
       "format": "image/png",
       "height": 1800,
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+      "iiif-parser:hasPart": [
+        {
+          "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/annotation/p0001-image",
+          "type": "Image",
+        },
+      ],
       "type": "Image",
       "width": 1200,
     },
     "http://myhomepage.com": {
       "id": "http://myhomepage.com",
+      "iiif-parser:hasPart": [
+        {
+          "id": "http://myhomepage.com",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "ContentResource",
+        },
+      ],
       "type": "ContentResource",
     },
   },
@@ -112,6 +133,13 @@ exports[`normalize > normalize 1`] = `
         },
       ],
       "id": "https://example.org/iiif/book1/manifest",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/iiif/book1/manifest",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Manifest",
+        },
+      ],
       "items": [
         {
           "id": "https://example.org/iiif/book1/canvas/p1",
@@ -159,6 +187,13 @@ exports[`normalize > normalize full example from specification 1`] = `
         },
       ],
       "id": "https://example.org/about",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/about",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Agent",
+        },
+      ],
       "label": {
         "en": [
           "Example Organization",
@@ -238,6 +273,13 @@ exports[`normalize > normalize full example from specification 1`] = `
       "height": 0,
       "homepage": [],
       "id": "https://example.org/iiif/book1/canvas/p2",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/iiif/book1/canvas/p2",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Canvas",
+        },
+      ],
       "items": [],
       "label": null,
       "metadata": [],
@@ -263,6 +305,13 @@ exports[`normalize > normalize full example from specification 1`] = `
       "behavior": [],
       "homepage": [],
       "id": "https://example.org/collections/books/",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/collections/books/",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Collection",
+        },
+      ],
       "items": [],
       "label": null,
       "metadata": [],
@@ -286,12 +335,26 @@ exports[`normalize > normalize full example from specification 1`] = `
     "https://data.example.org/about/us.jsonld": {
       "format": "application/ld+json",
       "id": "https://data.example.org/about/us.jsonld",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://data.example.org/about/us.jsonld",
+          "iiif-parser:partOf": "https://example.org/about",
+          "type": "Dataset",
+        },
+      ],
       "profile": "https://schema.org/",
       "type": "Dataset",
     },
     "https://example.org/": {
       "format": "text/html",
       "id": "https://example.org/",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/",
+          "iiif-parser:partOf": "https://example.org/about",
+          "type": "Text",
+        },
+      ],
       "label": {
         "en": [
           "Example Organization Homepage",
@@ -302,6 +365,13 @@ exports[`normalize > normalize full example from specification 1`] = `
     "https://example.org/iiif/book1.pdf": {
       "format": "application/pdf",
       "id": "https://example.org/iiif/book1.pdf",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/iiif/book1.pdf",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Text",
+        },
+      ],
       "label": {
         "en": [
           "Download as PDF",
@@ -312,6 +382,13 @@ exports[`normalize > normalize full example from specification 1`] = `
     "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg": {
       "format": "image/jpeg",
       "id": "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/iiif/book1/page1/full/80,100/0/default.jpg",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Image",
+        },
+      ],
       "service": [
         {
           "id": "https://example.org/iiif/book1/page1",
@@ -324,6 +401,13 @@ exports[`normalize > normalize full example from specification 1`] = `
     "https://example.org/info/book1/": {
       "format": "text/html",
       "id": "https://example.org/info/book1/",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/info/book1/",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Text",
+        },
+      ],
       "label": {
         "en": [
           "Home page for Book 1",
@@ -334,12 +418,26 @@ exports[`normalize > normalize full example from specification 1`] = `
     "https://example.org/library/catalog/book1.xml": {
       "format": "text/xml",
       "id": "https://example.org/library/catalog/book1.xml",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/library/catalog/book1.xml",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Dataset",
+        },
+      ],
       "profile": "https://example.org/profiles/bibliographic",
       "type": "Dataset",
     },
     "https://example.org/service/inst1/full/max/0/default.png": {
       "format": "image/png",
       "id": "https://example.org/service/inst1/full/max/0/default.png",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/service/inst1/full/max/0/default.png",
+          "iiif-parser:partOf": "https://example.org/about",
+          "type": "Image",
+        },
+      ],
       "service": [
         {
           "id": "https://example.org/service/inst1",
@@ -370,6 +468,13 @@ exports[`normalize > normalize full example from specification 1`] = `
         },
       ],
       "id": "https://example.org/iiif/book1/manifest",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/iiif/book1/manifest",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "Manifest",
+        },
+      ],
       "items": [
         {
           "id": "https://example.org/iiif/book1/canvas/p1",

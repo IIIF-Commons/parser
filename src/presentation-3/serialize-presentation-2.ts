@@ -111,6 +111,9 @@ function technicalProperties(props: Partial<TechnicalProperties>, type?: string)
     ['height', props.height],
     ['width', props.width],
     ['viewingDirection', props.viewingDirection !== 'left-to-right' ? props.viewingDirection : undefined],
+
+    // Non-standard property.
+    ['license', (props as any).license ? (props as any).license : undefined],
     // @todo Viewing hint is merged with behavior
     // ['viewingHint', props.]
   ];
@@ -183,8 +186,9 @@ function specificResourceToString(resource: Reference<any> | SpecificResource) {
 }
 
 export const serializeConfigPresentation2: SerializeConfig = {
-  Manifest: function* (entity) {
+  Manifest: function* (entity, state, { isTopLevel }) {
     return [
+      ...(isTopLevel ? [['@context', 'http://iiif.io/api/presentation/2/context.json']] : []),
       ...technicalProperties(entity, 'sc:Manifest'),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
@@ -214,6 +218,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
       ...(yield* linkingProperties(entity)),
       ['images', resources ? [resources.resources] : undefined],
       [
+        // @todo use otherContent if they are inlined
         'annotations',
         entity.annotations && entity.annotations.length ? unNestArray(yield entity.annotations) : undefined,
       ],

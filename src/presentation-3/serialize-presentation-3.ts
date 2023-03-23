@@ -1,7 +1,8 @@
-import { SerializeConfig, UNSET, UNWRAP } from './serialize';
+import { SerializeConfig } from './serialize';
 import { ImageService2, ImageService3, ResourceProvider, TechnicalProperties } from '@iiif/presentation-3';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
+import { HAS_PART, UNSET, UNWRAP } from './utilities';
 import { isSpecificResource } from '../shared/is-specific-resource';
 
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
@@ -18,6 +19,7 @@ function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof
     ['behavior', entity.behavior && entity.behavior.length ? entity.behavior : undefined],
     ['timeMode', entity.timeMode],
     ['motivation', Array.isArray(entity.motivation) ? entity.motivation[0] : entity.motivation],
+    ['iiif-parser:hasPart' as any, UNSET],
   ];
 }
 
@@ -65,6 +67,10 @@ function service2compat(service: ImageService3): ImageService2 | ImageService3 {
 }
 
 function filterService2Compat(services?: any[]) {
+  if (!Array.isArray(services)) {
+    services = services ? [services] : [];
+  }
+
   if (!services || services.length === 0) {
     return undefined;
   }
@@ -98,8 +104,8 @@ function* linkingProperties(
 ): Generator<any, any, Array<[keyof LinkingNormalized, any]>> {
   return [
     ['seeAlso', filterEmpty(yield entity.seeAlso)],
-    ['service', filterService2Compat(entity.service)],
-    ['services', filterService2Compat(entity.services)],
+    ['service', filterEmpty(filterService2Compat(entity.service))],
+    ['services', filterEmpty(filterService2Compat(entity.services))],
     ['rendering', filterEmpty(yield entity.rendering)],
     ['supplementary', filterEmpty(yield entity.supplementary)],
     ['homepage', filterEmpty(yield entity.homepage)],
@@ -168,13 +174,14 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key, value]) => {
-        return key !== 'items';
+        return key !== 'items' && key !== 'id';
       });
 
     const items = yield entity.items;
 
     return [
       // Any more properties?
+      ['id', !entity.id?.startsWith('vault://') ? entity.id : undefined],
       ...entries,
       ...(yield* linkingProperties(entity)),
       ['items', items.length ? items : UNSET],
@@ -201,7 +208,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key]) => {
-        return key !== 'body';
+        return key !== 'body' && key !== HAS_PART;
       });
 
     let resolvedBody: any = undefined;
@@ -234,7 +241,12 @@ export const serializeConfigPresentation3: SerializeConfig = {
 
     // const resolvedBody = yield entity.body;
 
-    return [...entries, ['body', resolvedBody.length === 1 ? resolvedBody[0] : resolvedBody]];
+    return [
+      ...entries,
+      ...(yield* descriptiveProperties(entity as any)),
+      ...(yield* linkingProperties(entity)),
+      ['body', resolvedBody.length === 1 ? resolvedBody[0] : resolvedBody],
+    ];
   },
 
   ContentResource: function* (entity: any) {
@@ -308,6 +320,9 @@ function mergeRemainingProperties(entries: [string, any][], object: any): [strin
   const alreadyParsed = entries.map(([a]) => a);
 
   for (const key of keys) {
+    if (key === HAS_PART) {
+      continue;
+    }
     if (alreadyParsed.indexOf(key) === -1 && typeof object[key] !== 'undefined') {
       entries.push([key, object[key]]);
     }

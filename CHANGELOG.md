@@ -27,6 +27,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - New traversal option for `SpecificResource`
 - New traversal option for `GeoJson` (e.g. from the `navPlace` extension)
 - New storing of `Services` when normalizing [^4]
+- Added second parameter to Presentation 3 Traversal to access parent of current resource
+- Added JSON-LD framing to serialization
+- New helpers for resolving framed resources
+- Added `iiif-parser:hasPart` to normalization of some resources containing JSON-LD frame for resources within a particular context (i.e. through partOf)
+- Serialize config now has additional contextual information (parent resource, full resource if framed)
 
 ### Fixed
 - `[presentation-2]` `startCanvas` property on Sequences are now added to the Manifest when converting
@@ -42,12 +47,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `logo` on non-provider resources - hangover from pre-3.0, these will be ignored[^3]
 - `motivation` field on non-Annotation resources (bug)
 - `Traverse.traversePosterCanvas()` is removed (now `Traverse.traverseLinkedCanvases()`)
-- 
+ 
 
 ### Changed
 - `range.items[]` is now normalised to either `Reference<'Range'>`[^1] or `SpecificResource<Reference<'Canvas'>>`[^2]
 - `manifest.start` is now normalised to a `SpecificResource<Reference<'Canvas'>>`
-
+- `annotation.target` is now normalized to `SpecificResource`
+- `annotation.body` now will correctly handle `SpecificResource` type
+- `ContentResource` now has a `iiif-parser:hasPart` when normalized
+- `AnnotationPage` now has a `iiif-parser:hasPart` when normalized
+- `Manifest` now has a `iiif-parser:hasPart` when normalized
+- `Collection` now has a `iiif-parser:hasPart` when normalized
 
 
 [^1]: A `Reference<T>` has the shape: `{ id: string, type: T }` and is usually narrowed to one or more types

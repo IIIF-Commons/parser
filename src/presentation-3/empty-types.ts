@@ -8,10 +8,7 @@ import {
   ResourceProviderNormalized,
 } from '@iiif/presentation-3-normalized';
 import { _ServiceNormalized } from './serialize';
-
-export const EMPTY = [];
-// Prevent accidental mutation
-Object.freeze(EMPTY);
+import { EMPTY } from './utilities';
 
 export const emptyAnnotation: AnnotationNormalized = {
   id: 'https://iiif-parser/annotation',
