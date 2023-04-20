@@ -359,7 +359,7 @@ export class Traverse {
   // @todo traverseAnnotationSelector
   traverseAnnotation(annotationJson: Annotation, parent?: any): Annotation {
     return this.traverseType<Annotation>(
-      this.traverseLinking(this.traverseAnnotationBody(annotationJson)),
+      this.traverseLinking(this.traverseAnnotationBody(this.traverseDescriptive(annotationJson as any))),
       { parent },
       this.traversals.annotation
     );
