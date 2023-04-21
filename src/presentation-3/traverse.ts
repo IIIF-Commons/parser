@@ -276,7 +276,7 @@ export class Traverse {
 
   traverseCanvasItems(canvas: Canvas): Canvas {
     canvas.items = (canvas.items || []).map((annotationPage: AnnotationPage): AnnotationPage => {
-      return this.traverseAnnotationPage(annotationPage);
+      return this.traverseAnnotationPage(annotationPage, canvas);
     });
 
     return canvas;
@@ -288,7 +288,7 @@ export class Traverse {
     }
     if (resource.annotations) {
       resource.annotations = resource.annotations.map((annotationPage: AnnotationPage): AnnotationPage => {
-        return this.traverseAnnotationPage(annotationPage);
+        return this.traverseAnnotationPage(annotationPage, resource);
       });
     }
 

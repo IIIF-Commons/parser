@@ -38,6 +38,13 @@ exports[`normalize > normalize 1`] = `
       "behavior": [],
       "homepage": [],
       "id": "https://example.org/iiif/book1/page/p1/1",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/iiif/book1/page/p1/1",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/canvas/p1",
+          "type": "AnnotationPage",
+        },
+      ],
       "items": [
         {
           "id": "https://example.org/iiif/book1/annotation/p0001-image",
@@ -221,6 +228,13 @@ exports[`normalize > normalize full example from specification 1`] = `
       "behavior": [],
       "homepage": [],
       "id": "https://example.org/iiif/book1/annotations/p1",
+      "iiif-parser:hasPart": [
+        {
+          "id": "https://example.org/iiif/book1/annotations/p1",
+          "iiif-parser:partOf": "https://example.org/iiif/book1/manifest",
+          "type": "AnnotationPage",
+        },
+      ],
       "items": [],
       "label": null,
       "metadata": [],

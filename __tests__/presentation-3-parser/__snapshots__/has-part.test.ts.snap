@@ -154,6 +154,13 @@ exports[`Has part issues > Example manifest with thumbnail ID the same as the ma
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+            "type": "AnnotationPage",
+          },
+        ],
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/annotation/p0001-image",

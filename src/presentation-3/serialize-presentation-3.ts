@@ -2,7 +2,7 @@ import { SerializeConfig } from './serialize';
 import { ImageService2, ImageService3, ResourceProvider, TechnicalProperties } from '@iiif/presentation-3';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
-import { HAS_PART, UNSET, UNWRAP } from './utilities';
+import { HAS_PART, PART_OF, UNSET, UNWRAP } from "./utilities";
 import { isSpecificResource } from '../shared/is-specific-resource';
 
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
@@ -86,7 +86,7 @@ function* descriptiveProperties(
     ['metadata', filterEmpty(entity.metadata)],
     ['summary', entity.summary],
     ['requiredStatement', entity.requiredStatement],
-    ['rights', entity.rights],
+    ['rights', Array.isArray(entity.rights) ? (entity.rights[0] || undefined) : (entity.rights || undefined)],
     ['navDate', entity.navDate],
     ['language', entity.language],
     // We yield these fully as they are embedded in here.
@@ -174,7 +174,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
       })
       .filter(([key, value]) => {
-        return key !== 'items' && key !== 'id';
+        return key !== 'items' && key !== 'id' && key !== HAS_PART && key !== PART_OF;
       });
 
     const items = yield entity.items;

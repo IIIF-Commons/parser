@@ -34,7 +34,7 @@ export const emptyAnnotation: AnnotationNormalized = {
   generator: EMPTY,
   modified: null,
   motivation: EMPTY,
-  rights: EMPTY,
+  rights: null as any, // @todo bug? should not be array of strings.
   stylesheet: null,
   target: EMPTY,
   timeMode: undefined, // @todo bug? should be null.
