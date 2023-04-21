@@ -12,7 +12,6 @@ const skipThese: string[] = [
   // @todo
   //   - Bad service array
   //   - Strange Image service behaviour (id/type vs @id/@type)
-  //   - BUG - annotation.target should have type if it's an annotation.
   'exhibition-1.json',
 
   // @todo

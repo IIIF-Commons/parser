@@ -202,7 +202,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         }
 
         if (key === 'target') {
-          return [key, compressSpecificResource(item, { allowString: true, allowSourceString: true })];
+          return [key, compressSpecificResource(item, { allowString: true, allowSourceString: true, allowedStringType: 'Canvas' })];
         }
 
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];

@@ -2,7 +2,7 @@ import { SpecificResource } from '@iiif/presentation-3';
 
 export function compressSpecificResource(
   target: undefined | SpecificResource,
-  { allowSourceString = true, allowString = false }: { allowString?: boolean; allowSourceString?: boolean } = {}
+  { allowSourceString = true, allowString = false, allowedStringType }: { allowString?: boolean; allowSourceString?: boolean; allowedStringType?: string } = {}
 ): any {
   const fixSource = (resource: any) => {
     if (allowSourceString && resource && resource.source && typeof resource.source !== 'string') {
@@ -24,7 +24,7 @@ export function compressSpecificResource(
       (keys.length === 2 && target.type && target.source) ||
       (keys.length === 3 && target.type && target.source && keys.indexOf('selector') !== -1 && !target.selector)
     ) {
-      if (allowString) {
+      if (allowString && (!allowedStringType || allowedStringType === target.source.type)) {
         return target.source.id;
       }
 
