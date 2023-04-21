@@ -34,7 +34,7 @@ import {
   ResourceProviderNormalized,
 } from '@iiif/presentation-3-normalized';
 import { isSpecificResource } from '../shared/is-specific-resource';
-import { EMPTY, HAS_PART, PART_OF, WILDCARD } from './utilities';
+import { EMPTY, HAS_PART, IS_EXTERNAL, PART_OF, WILDCARD } from "./utilities";
 
 export const defaultEntities = {
   Collection: {},
@@ -177,7 +177,7 @@ export function merge(existing: any, incoming: any, context?: { parent?: any; is
       }
 
       if (merged[HAS_PART] && merged[HAS_PART].length) {
-        const noExplicit = !merged[HAS_PART].find((r: any) => r['@explicit']);
+        const noExplicit = !(merged[HAS_PART] || []).find((r: any) => r['@explicit']);
         const hasDiverged = added.length > 0 || unchanged.length !== existingKeys.length;
         // We already have one, it may conflict here.
         // 1. Fix the first part.
@@ -474,6 +474,13 @@ export function traverseSpecificResource(specificResource: SpecificResource): Sp
   return specificResource;
 }
 
+export function addFlagForExternalResource<T extends AnnotationPage | Manifest | Collection>(resource: T): T {
+  if (typeof resource.items === 'undefined') {
+    (resource as any)[IS_EXTERNAL] = true;
+  }
+  return resource;
+}
+
 export function normalize(unknownEntity: unknown) {
   const entity = convertPresentation2(unknownEntity);
   const entities = getDefaultEntities();
@@ -483,11 +490,13 @@ export function normalize(unknownEntity: unknown) {
 
   const traversal = new Traverse({
     collection: [
+      addFlagForExternalResource,
       ensureDefaultFields<Collection, CollectionNormalized>(emptyCollection),
       addToMapping<Collection>('Collection'),
       addToEntities<Collection>('Collection'),
     ],
     manifest: [
+      addFlagForExternalResource,
       ensureDefaultFields<Manifest, ManifestNormalized>(emptyManifest),
       startCanvasToSpecificResource,
       addToMapping<Manifest>('Manifest'),
@@ -499,6 +508,7 @@ export function normalize(unknownEntity: unknown) {
       addToEntities<Canvas>('Canvas'),
     ],
     annotationPage: [
+      addFlagForExternalResource,
       addMissingIdToContentResource('AnnotationPage'),
       ensureDefaultFields<AnnotationPage, AnnotationPageNormalized>(emptyAnnotationPage),
       addToMapping<AnnotationPage>('AnnotationPage'),

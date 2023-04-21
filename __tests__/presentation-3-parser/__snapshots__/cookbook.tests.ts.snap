@@ -10883,6 +10883,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-collection https
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json",
+            "iiif-parser:isExternal": true,
             "label": {
               "jp": [
                 "巻 1 [Vol. 1]",
@@ -10892,6 +10893,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-collection https
           },
           {
             "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v2.json",
+            "iiif-parser:isExternal": true,
             "label": {
               "jp": [
                 "巻 2 [Vol. 2]",
@@ -10930,6 +10932,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-collection https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json",
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "jp": [
@@ -10960,6 +10963,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0030-multi-volume-collection https
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v2.json",
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "jp": [
@@ -24493,6 +24497,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate-collection ht
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json",
+            "iiif-parser:isExternal": true,
             "label": {
               "en": [
                 "1986 Chesapeake and Ohio Canal, Washington, D.C., Maryland, West Virginia, official map and guide",
@@ -24503,6 +24508,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate-collection ht
           },
           {
             "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_1-manifest.json",
+            "iiif-parser:isExternal": true,
             "label": {
               "en": [
                 "1987 Chesapeake and Ohio Canal, Washington, D.C., Maryland, West Virginia, official map and guide",
@@ -24569,6 +24575,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate-collection ht
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_1-manifest.json",
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -24599,6 +24606,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0230-navdate-navdate-collection ht
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json",
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -26739,6 +26747,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0269-embedded-or-referenced-annota
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": null,
         "metadata": [],

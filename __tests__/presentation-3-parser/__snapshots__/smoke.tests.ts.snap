@@ -8906,6 +8906,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-collection
         "items": [
           {
             "id": "https://iiif.wellcomecollection.org/presentation/b29011577",
+            "iiif-parser:isExternal": true,
             "label": {
               "none": [
                 "Titres et travaux scientifiques du Dr F. Lejars.",
@@ -8921,6 +8922,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-collection
           },
           {
             "id": "https://iiif.wellcomecollection.org/presentation/b32183859",
+            "iiif-parser:isExternal": true,
             "label": {
               "none": [
                 "Annotated bibliography on vital and health statistics.",
@@ -8936,6 +8938,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-collection
           },
           {
             "id": "https://iiif.wellcomecollection.org/presentation/b21782763",
+            "iiif-parser:isExternal": true,
             "label": {
               "none": [
                 "Notice sur les travaux scientifiques de M. Henri Becquerel.",
@@ -8951,6 +8954,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-collection
           },
           {
             "id": "https://iiif.wellcomecollection.org/presentation/b29011553",
+            "iiif-parser:isExternal": true,
             "label": {
               "none": [
                 "Notice sur les titres et travaux scientifiques de M. Louis Lapicque.",
@@ -9156,6 +9160,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-collection
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.wellcomecollection.org/presentation/b21782763",
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "none": [
@@ -9191,6 +9196,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-collection
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.wellcomecollection.org/presentation/b29011553",
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "none": [
@@ -9226,6 +9232,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-collection
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.wellcomecollection.org/presentation/b29011577",
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "none": [
@@ -9261,6 +9268,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-collection
         "behavior": [],
         "homepage": [],
         "id": "https://iiif.wellcomecollection.org/presentation/b32183859",
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "none": [
@@ -9637,6 +9645,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9665,6 +9674,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9693,6 +9703,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9721,6 +9732,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9749,6 +9761,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9777,6 +9790,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9805,6 +9819,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9833,6 +9848,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9861,6 +9877,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9889,6 +9906,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9917,6 +9935,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -9945,6 +9964,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -10759,6 +10779,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -10794,6 +10815,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -10829,6 +10851,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -10864,6 +10887,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -10899,6 +10923,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -10934,6 +10959,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -10969,6 +10995,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -11004,6 +11031,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -11039,6 +11067,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -11074,6 +11103,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13771,6 +13801,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13799,6 +13830,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13827,6 +13859,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13855,6 +13888,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13883,6 +13917,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13911,6 +13946,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13939,6 +13975,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13967,6 +14004,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -13995,6 +14033,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14023,6 +14062,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14051,6 +14091,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14079,6 +14120,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14107,6 +14149,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14135,6 +14178,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14163,6 +14207,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14191,6 +14236,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14219,6 +14265,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14247,6 +14294,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14275,6 +14323,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14303,6 +14352,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14331,6 +14381,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14359,6 +14410,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14387,6 +14439,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14415,6 +14468,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14443,6 +14497,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14471,6 +14526,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14499,6 +14555,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14527,6 +14584,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14555,6 +14613,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14583,6 +14642,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14611,6 +14671,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14639,6 +14700,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14667,6 +14729,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14695,6 +14758,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14723,6 +14787,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14751,6 +14816,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -14779,6 +14845,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "AnnotationPage",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -17621,6 +17688,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -17656,6 +17724,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [
@@ -17691,6 +17760,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "type": "Collection",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [],
         "label": {
           "en": [

@@ -4,6 +4,7 @@ import { toRef } from '../shared/to-ref';
 export const WILDCARD = {};
 export const HAS_PART = 'iiif-parser:hasPart';
 export const PART_OF = 'iiif-parser:partOf';
+export const IS_EXTERNAL = 'iiif-parser:isExternal';
 export const UNSET = '__$UNSET$__';
 export const UNWRAP = '__$UNWRAP$__';
 export const EMPTY = [];

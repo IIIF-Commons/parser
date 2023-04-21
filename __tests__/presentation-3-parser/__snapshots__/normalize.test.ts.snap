@@ -326,6 +326,7 @@ exports[`normalize > normalize full example from specification 1`] = `
           "type": "Collection",
         },
       ],
+      "iiif-parser:isExternal": true,
       "items": [],
       "label": null,
       "metadata": [],
