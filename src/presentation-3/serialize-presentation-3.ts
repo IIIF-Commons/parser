@@ -184,7 +184,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ['id', !entity.id?.startsWith('vault://') ? entity.id : undefined],
       ...entries,
       ...(yield* linkingProperties(entity)),
-      ['items', items.length ? items : UNSET],
+      ['items', items.length || (entity as any)[IS_EXTERNAL] === false ? items : UNSET],
     ];
   },
 
