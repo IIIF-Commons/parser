@@ -38,6 +38,37 @@ describe('Has part issues', function () {
     expect(merged).toMatchSnapshot();
   });
 
+  test('Merging 2 services', () => {
+    const item1 = {
+      service: [
+        {
+          '@id': 'https://iiif.wellcomecollection.org/image/b1465782x_0001.jp2',
+          '@type': 'ImageService2',
+          profile: 'http://iiif.io/api/image/2/level1.json',
+          width: 6036,
+          height: 7161,
+          id: 'https://iiif.wellcomecollection.org/image/b1465782x_0001.jp2',
+        },
+      ],
+    };
+
+    const item2 = {
+      service: [
+        {
+          '@id': 'https://iiif.wellcomecollection.org/image/b1465782x_0001.jp2',
+          '@type': 'ImageService2',
+          profile: 'http://iiif.io/api/image/2/level1.json',
+          width: 6036,
+          height: 7161,
+        },
+      ],
+    };
+
+    const merged = mergeEntities(item1 as any, item2, { parent: { id: 'https://example.org/canvas-1' } });
+
+    expect(merged).toMatchSnapshot();
+
+  });
 
   test('Merging the same 2 entities', () => {
     const first = {
@@ -63,7 +94,7 @@ describe('Has part issues', function () {
     const merged = mergeEntities(initial as any, second, { parent: { id: 'https://example.org/canvas-1' } });
 
     expect(merged).toMatchSnapshot();
-  })
+  });
 
   test('Merging the same 2 entities and then different one', () => {
     const first = {
@@ -104,7 +135,7 @@ describe('Has part issues', function () {
     const merged2 = mergeEntities(merged as any, third, { parent: { id: 'https://example.org/canvas-3' } });
 
     expect(merged2).toMatchSnapshot();
-  })
+  });
 
   test('Example manifest with thumbnail ID the same as the main resource', () => {
     const original = JSON.parse(JSON.stringify(hasPartManifest));

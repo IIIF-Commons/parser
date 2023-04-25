@@ -19,7 +19,7 @@ function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof
     ['behavior', entity.behavior && entity.behavior.length ? entity.behavior : undefined],
     ['timeMode', entity.timeMode],
     ['motivation', Array.isArray(entity.motivation) ? entity.motivation[0] : entity.motivation],
-    ['iiif-parser:hasPart' as any, UNSET],
+    [HAS_PART as any, UNSET],
   ];
 }
 

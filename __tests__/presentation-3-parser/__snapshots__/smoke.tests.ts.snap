@@ -11442,6 +11442,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
                 "@id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2",
                 "@type": "ImageService2",
                 "height": 1024,
+                "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2",
                 "profile": "http://iiif.io/api/image/2/level0.json",
                 "sizes": [
                   {
@@ -11461,6 +11462,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
                     "width": 620,
                   },
                 ],
+                "type": "ImageService2",
                 "width": 620,
               },
             ],
@@ -11469,31 +11471,6 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
           },
         ],
         "service": [
-          {
-            "@id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2",
-            "@type": "ImageService2",
-            "height": 1024,
-            "profile": "http://iiif.io/api/image/2/level0.json",
-            "sizes": [
-              {
-                "height": 100,
-                "width": 61,
-              },
-              {
-                "height": 200,
-                "width": 121,
-              },
-              {
-                "height": 400,
-                "width": 242,
-              },
-              {
-                "height": 1024,
-                "width": 620,
-              },
-            ],
-            "width": 620,
-          },
           {
             "@id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2",
             "@type": "ImageService2",
@@ -19494,6 +19471,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
                 "@id": "https://iiif.wellcomecollection.org/thumbs/b18035723_0004.JP2",
                 "@type": "ImageService2",
                 "height": 1024,
+                "id": "https://iiif.wellcomecollection.org/thumbs/b18035723_0004.JP2",
                 "profile": "http://iiif.io/api/image/2/level0.json",
                 "sizes": [
                   {
@@ -19513,6 +19491,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
                     "width": 732,
                   },
                 ],
+                "type": "ImageService2",
                 "width": 732,
               },
             ],
@@ -19521,31 +19500,6 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
           },
         ],
         "service": [
-          {
-            "@id": "https://iiif.wellcomecollection.org/thumbs/b18035723_0004.JP2",
-            "@type": "ImageService2",
-            "height": 1024,
-            "profile": "http://iiif.io/api/image/2/level0.json",
-            "sizes": [
-              {
-                "height": 100,
-                "width": 72,
-              },
-              {
-                "height": 200,
-                "width": 143,
-              },
-              {
-                "height": 400,
-                "width": 286,
-              },
-              {
-                "height": 1024,
-                "width": 732,
-              },
-            ],
-            "width": 732,
-          },
           {
             "@id": "https://iiif.wellcomecollection.org/thumbs/b18035723_0004.JP2",
             "@type": "ImageService2",

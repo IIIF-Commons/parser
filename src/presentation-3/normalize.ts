@@ -116,6 +116,12 @@ export function merge(existing: any, incoming: any, context?: { parent?: any; is
     // merged with the existing value.
     const merged = [...existing];
     for (const item of incoming) {
+      if (item['@id'] && !item.id) {
+        item.id = item['@id'];
+      }
+      if (item['@type'] && !item.type) {
+        item.type = item['@type'];
+      }
       if (item === null || item === undefined) {
         continue;
       }
@@ -240,6 +246,7 @@ export function mergeEntities(
   if (typeof existing === 'string') {
     return existing;
   }
+
   if (incoming.id !== (existing as any).id || incoming.type !== (existing as any).type) {
     if (incoming.type === 'ImageService3') {
       return incoming;
