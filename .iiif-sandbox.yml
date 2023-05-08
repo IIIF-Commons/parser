@@ -3,6 +3,10 @@ stores:
     type: iiif-manifests
     label: Presentation 3 manifests
     path: fixtures/presentation-3
+  p2-manifests:
+    type: iiif-manifests
+    label: Presentation 2 manifests
+    path: fixtures/presentation-2
   p3-converted:
     type: iiif-manifests
     label: Presentation 2 converted
