@@ -408,8 +408,24 @@ function descriptiveProperties<T extends Partial<Presentation3.DescriptiveProper
       : undefined,
     navDate: resource.navDate,
     summary: resource.description ? convertLanguageMapping(resource.description) : undefined,
-    thumbnail: resource.thumbnail as any,
+    thumbnail: compatThumbnail(resource.thumbnail as any),
   } as T;
+}
+
+function compatThumbnail(thumb: any) {
+  if (thumb) {
+    const arrayOfThumbs = Array.isArray(thumb) ? thumb : [thumb];
+    return arrayOfThumbs.map((t) => {
+      if (typeof t === 'string') {
+        return { id: t, type: 'Image' };
+      }
+      if (t.type === 'unknown') {
+        t.type = 'Image';
+      }
+      return t;
+    });
+  }
+  return thumb;
 }
 
 function parseWithin(resource: Presentation2.AbstractResource): undefined | Presentation3.LinkingProperties['partOf'] {
