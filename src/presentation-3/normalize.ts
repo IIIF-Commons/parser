@@ -403,7 +403,7 @@ function ensureArrayOnAnnotation(annotation: Annotation): Annotation {
 }
 
 function toSpecificResource(
-  target: string | Reference<any> | SpecificResource,
+  target: string | Reference<any> | SpecificResource | Partial<Canvas>,
   { typeHint, partOfTypeHint }: { typeHint?: string; partOfTypeHint?: string } = {}
 ): SpecificResource {
   if (typeof target === 'string') {
@@ -428,8 +428,8 @@ function toSpecificResource(
   }
 
   let selector: Selector | undefined;
-  if (target.id.indexOf('#') !== -1) {
-    const [id, fragment] = target.id.split('#');
+  if ((target.id || '').indexOf('#') !== -1) {
+    const [id, fragment] = (target.id || '').split('#');
     target.id = id;
     if (fragment) {
       selector = {

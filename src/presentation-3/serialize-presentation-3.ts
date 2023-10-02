@@ -1,8 +1,14 @@
 import { SerializeConfig } from './serialize';
-import { ImageService2, ImageService3, ResourceProvider, TechnicalProperties } from '@iiif/presentation-3';
+import {
+  ImageService,
+  ImageService2,
+  ImageService3,
+  ResourceProvider,
+  TechnicalProperties,
+} from '@iiif/presentation-3';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
-import { HAS_PART, IS_EXTERNAL, PART_OF, UNSET, UNWRAP } from "./utilities";
+import { HAS_PART, IS_EXTERNAL, PART_OF, UNSET, UNWRAP } from './utilities';
 import { isSpecificResource } from '../shared/is-specific-resource';
 
 function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof TechnicalProperties, any]> {
@@ -40,7 +46,7 @@ function filterEmpty<T>(item?: T[] | typeof UNSET): T[] | undefined | typeof UNS
   return filtered;
 }
 
-function service2compat(service: ImageService3): ImageService2 | ImageService3 {
+function service2compat(service: ImageService3 | ImageService): ImageService2 | ImageService3 {
   if (service && service.type && service.type === 'ImageService2') {
     const { id, type, profile: _profile, ..._service } = service as any;
 
@@ -63,7 +69,7 @@ function service2compat(service: ImageService3): ImageService2 | ImageService3 {
     } as any;
   }
 
-  return service;
+  return service as ImageService3;
 }
 
 function filterService2Compat(services?: any[]) {
@@ -86,7 +92,7 @@ function* descriptiveProperties(
     ['metadata', filterEmpty(entity.metadata)],
     ['summary', entity.summary],
     ['requiredStatement', entity.requiredStatement],
-    ['rights', Array.isArray(entity.rights) ? (entity.rights[0] || undefined) : (entity.rights || undefined)],
+    ['rights', Array.isArray(entity.rights) ? entity.rights[0] || undefined : entity.rights || undefined],
     ['navDate', entity.navDate],
     ['language', entity.language],
     // We yield these fully as they are embedded in here.
@@ -202,7 +208,10 @@ export const serializeConfigPresentation3: SerializeConfig = {
         }
 
         if (key === 'target') {
-          return [key, compressSpecificResource(item, { allowString: true, allowSourceString: true, allowedStringType: 'Canvas' })];
+          return [
+            key,
+            compressSpecificResource(item, { allowString: true, allowSourceString: true, allowedStringType: 'Canvas' }),
+          ];
         }
 
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];

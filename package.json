@@ -73,6 +73,9 @@
     "prepublishOnly": "node ./scripts/build.mjs && node scripts/validate.mjs",
     "test": "vitest"
   },
+  "resolutions": {
+    "@iiif/presentation-3": "^2.1.2"
+  },
   "dependencies": {
     "@iiif/presentation-2": "^1.0.4",
     "@iiif/presentation-3": "^2.1.2",

@@ -17,6 +17,7 @@ import {
   Service,
   SpecificResource,
   ResourceProvider,
+  StructuralProperties,
 } from '@iiif/presentation-3';
 import { isSpecificResource } from '../shared/is-specific-resource';
 import { ensureArray } from '../shared/ensure-array';
@@ -134,7 +135,7 @@ export class Traverse {
     });
   }
 
-  traverseDescriptive<T extends Partial<DescriptiveProperties>>(resource: T) {
+  traverseDescriptive<T extends Partial<DescriptiveProperties>>(resource: T): T {
     if (resource.thumbnail) {
       resource.thumbnail = resource.thumbnail.map((thumbnail) =>
         this.traverseType(thumbnail, { parent: resource }, this.traversals.contentResource)
@@ -146,7 +147,7 @@ export class Traverse {
     return resource;
   }
 
-  traverseLinking<T extends Partial<LinkingProperties>>(resource: T) {
+  traverseLinking<T extends Partial<LinkingProperties>>(resource: T): T {
     if (resource.seeAlso) {
       resource.seeAlso = resource.seeAlso.map((content) =>
         this.traverseType(content, { parent: resource }, this.traversals.contentResource)
@@ -194,7 +195,8 @@ export class Traverse {
       if (isSpecificResource(resource.start)) {
         resource.start = this.traverseSpecificResource(resource.start, 'Canvas', resource) as any;
       } else {
-        resource.start = this.traverseType(resource.start, { parent: resource }, this.traversals.canvas);
+        // The spec says this can be a "partial canvas" causing errors with the types.
+        resource.start = this.traverseType(resource.start as any, { parent: resource }, this.traversals.canvas);
       }
     }
     if (resource.rendering) {
@@ -211,7 +213,7 @@ export class Traverse {
     return resource;
   }
 
-  traverseCollectionItems(collection: Collection): Collection {
+  traverseCollectionItems<T extends StructuralProperties<any>>(collection: T): T {
     if (collection.items) {
       collection.items.map((collectionOrManifest: Manifest | Collection) => {
         if (collectionOrManifest.type === 'Collection') {
@@ -228,7 +230,7 @@ export class Traverse {
     return this.traverseType<Collection>(
       this.traverseDescriptive(
         this.traverseInlineAnnotationPages(
-          this.traverseLinking(this.traverseLinkedCanvases(this.traverseCollectionItems(collection)))
+          this.traverseLinking(this.traverseLinkedCanvases(this.traverseCollectionItems(collection as any)))
         )
       ),
       { parent },
@@ -344,7 +346,7 @@ export class Traverse {
     return annotation;
   }
 
-  traverseLinkedCanvases<T extends Collection | Manifest | Canvas | Range>(json: T): T {
+  traverseLinkedCanvases<T extends { placeholderCanvas?: any; accompanyingCanvas?: any }>(json: T): T {
     if (json.placeholderCanvas) {
       json.placeholderCanvas = this.traverseCanvas(json.placeholderCanvas);
     }
@@ -429,8 +431,9 @@ export class Traverse {
         if (isSpecificResource(rangeOrManifest)) {
           return this.traverseSpecificResource(rangeOrManifest, 'Canvas', range);
         }
-        if (rangeOrManifest.type === 'Manifest') {
-          return this.traverseManifest(rangeOrManifest as Manifest, range);
+        // This is a non-standard case.
+        if ((rangeOrManifest as any).type === 'Manifest') {
+          return this.traverseManifest(rangeOrManifest as any, range) as any as RangeItems;
         }
         return this.traverseRange(rangeOrManifest as Range, range);
       });
