@@ -92,10 +92,10 @@
   dependencies:
     "@iiif/presentation-3" "^2.0.5"
 
-"@iiif/presentation-3@^2.0.5", "@iiif/presentation-3@^2.1.2":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@iiif/presentation-3/-/presentation-3-2.1.2.tgz#c1130bdbbaa15a86614ecfd578a61ee94a54a267"
-  integrity sha512-2xqqFVcUYm8hQ62Hg66oJux7lAtFBXa6zFwQOmufBF8YEJJ4jIGdtLG72Y5HYNzBLWaS4JdhLfKGybl4QyNkDQ==
+"@iiif/presentation-3@^2.0.5", "@iiif/presentation-3@^2.1.3":
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@iiif/presentation-3/-/presentation-3-2.1.3.tgz#745cf3ec1f8d828b1e3aba88c3f15e6dc8e80710"
+  integrity sha512-0V9LL+UPGknn4vdEJuJnuK0BsOL93dmr4PrdXg9fSE9HUq/2P0jkp4yGJR13f7N9OpmcRsEQjqWqVceWHB8Bow==
   dependencies:
     "@types/geojson" "^7946.0.10"
 

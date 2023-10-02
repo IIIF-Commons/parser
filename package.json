@@ -74,11 +74,11 @@
     "test": "vitest"
   },
   "resolutions": {
-    "@iiif/presentation-3": "^2.1.2"
+    "@iiif/presentation-3": "^2.1.3"
   },
   "dependencies": {
     "@iiif/presentation-2": "^1.0.4",
-    "@iiif/presentation-3": "^2.1.2",
+    "@iiif/presentation-3": "^2.1.3",
     "@iiif/presentation-3-normalized": "^0.9.7",
     "@types/geojson": "^7946.0.10"
   },
