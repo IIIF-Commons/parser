@@ -29,7 +29,22 @@
       "require": "./dist/image-3/cjs/index.js",
       "import": "./dist/image-3/esm/index.mjs"
     },
-    "./upgrader": "./dist/upgrader/index.umd.js"
+    "./upgrader": "./dist/upgrader/index.umd.js",
+    "./dist/presentation-2/index.d.ts":  {
+      "import": "./dist/presentation-2/index.d.ts"
+    },
+    "./dist/index.d.ts": {
+      "import": "./dist/index.d.ts"
+    },
+    "./dist/upgrader/index.d.ts":  {
+      "import": "./dist/upgrader/index.d.ts"
+    },
+    "./dist/strict/index.d.ts": {
+      "import": "./dist/strict/index.d.ts"
+    },
+    "./dist/image-3/index.d.ts": {
+      "import": "./dist/image-3/index.d.ts"
+    }
   },
   "typesVersions": {
     "*": {
@@ -60,7 +75,7 @@
   },
   "dependencies": {
     "@iiif/presentation-2": "^1.0.4",
-    "@iiif/presentation-3": "^2.0.5",
+    "@iiif/presentation-3": "^2.1.2",
     "@iiif/presentation-3-normalized": "^0.9.7",
     "@types/geojson": "^7946.0.10"
   },
