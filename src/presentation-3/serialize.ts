@@ -42,7 +42,8 @@ export type NormalizedEntity =
   | RangeNormalized
   | _ServiceNormalized
   | Selector
-  | ResourceProviderNormalized;
+  | ResourceProviderNormalized
+  | { id?: string; '@id'?: string; type?: string; '@type'?: string; [key: string]: any };
 
 type SerializerContext = {
   isTopLevel?: boolean;
