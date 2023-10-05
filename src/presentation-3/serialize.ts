@@ -95,13 +95,15 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
     throw new Error(`Serializer not found for ${subject.type}`);
   }
 
-  function flatten(sub: Reference, parent?: any) {
+  function flatten(sub: Reference, parent?: any, depth = 0) {
     const generator = config[sub.type as keyof SerializeConfig];
     if (!generator) {
       return UNSET;
     }
-
-    const [resource, fullResource] = resolveIfExists(state, sub.id, parent) || (sub.id && sub.type ? sub : null);
+    if (depth > 20) {
+      throw new Error('Circular reference: ' + sub.id + ' ' + sub.type);
+    }
+    const [resource, fullResource] = resolveIfExists(state, sub.type ? sub : sub.id, parent) || (sub.id && sub.type ? sub : null);
     if (!resource) {
       return UNSET;
     }
@@ -119,11 +121,11 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
         if (Array.isArray(requestToHydrate)) {
           const nextList: any[] = [];
           for (const req of requestToHydrate) {
-            nextList.push(flatten(req, sub));
+            nextList.push(flatten(req, sub, depth + 1));
           }
           next = nextList;
         } else {
-          next = flatten(requestToHydrate, sub);
+          next = flatten(requestToHydrate, sub, depth + 1);
         }
       }
       current = iterator.next(next);

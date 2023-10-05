@@ -55,12 +55,16 @@ export function resolveIfExists<T extends NormalizedEntity>(
 
   const request = state.requests[ref.id];
   // Return the resource.
-  const resourceType = state.mapping[ref.id] || ref.type;
+  const resourceType = ref.type || state.mapping[ref.id];
   if (!resourceType || (request && request.resourceUri && !state.entities[resourceType][request.resourceUri])) {
     // Continue refetching resource, this is an invalid state.
     return [undefined, undefined];
   }
   const fullEntity: any = state.entities[resourceType][request ? request.resourceUri : ref.id] as T;
+
+  if (ref.type && !fullEntity) {
+    return resolveIfExists(state, { id: ref.id }, parent);
+  }
 
   if (fullEntity && fullEntity[HAS_PART]) {
     const framing = fullEntity[HAS_PART].find((t: any) => {
