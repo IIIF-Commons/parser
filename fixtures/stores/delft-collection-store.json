@@ -1,0 +1,93 @@
+{
+  "iiif": {
+    "mapping": {
+      "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis": "Collection"
+    },
+    "entities": {
+      "Collection": {
+        "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis": {
+          "id": "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis",
+          "type": "Collection",
+          "label": {
+            "en": [
+              "History of the university"
+            ],
+            "nl": [
+              "Universiteitsgeschiedenis"
+            ]
+          },
+          "viewingDirection": "left-to-right",
+          "behavior": [],
+          "thumbnail": [],
+          "accompanyingCanvas": null,
+          "placeholderCanvas": null,
+          "summary": {
+            "en": [
+              "Digitised books about the history of Delft University of Technology, from TU Delft Library's Special Collections"
+            ],
+            "nl": [
+              "Gedigitaliseerde boeken over de geschiedenis van de TU Delft, afkomstig uit de Bijzondere Collecties van de TU Delft Library"
+            ]
+          },
+          "requiredStatement": null,
+          "metadata": [
+            {
+              "label": {
+                "none": [
+                  ""
+                ]
+              },
+              "value": {
+                "none": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "rights": null,
+          "navDate": null,
+          "provider": [],
+          "items": [],
+          "annotations": [],
+          "seeAlso": [],
+          "homepage": [],
+          "partOf": [],
+          "rendering": [],
+          "service": [],
+          "services": [],
+          "@context": [
+            "http://www.w3.org/ns/anno.jsonld",
+            "http://iiif.io/api/presentation/3/context.json"
+          ],
+          "iiif-parser:isExternal": true,
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis",
+              "id": "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis",
+              "type": "Collection"
+            }
+          ]
+        }
+      },
+      "Manifest": {},
+      "Canvas": {},
+      "AnnotationPage": {},
+      "AnnotationCollection": {},
+      "Annotation": {},
+      "ContentResource": {},
+      "Range": {},
+      "Service": {},
+      "Selector": {},
+      "Agent": {}
+    },
+    "requests": {
+      "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis": {
+        "requestUri": "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis",
+        "loadingState": "RESOURCE_READY",
+        "uriMismatch": false,
+        "resourceUri": "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis"
+      }
+    },
+    "meta": {}
+  }
+}

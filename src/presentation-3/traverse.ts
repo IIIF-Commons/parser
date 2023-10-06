@@ -137,7 +137,7 @@ export class Traverse {
 
   traverseDescriptive<T extends Partial<DescriptiveProperties>>(resource: T): T {
     if (resource.thumbnail) {
-      resource.thumbnail = resource.thumbnail.map((thumbnail) =>
+      resource.thumbnail = ensureArray(resource.thumbnail).map((thumbnail) =>
         this.traverseType(thumbnail, { parent: resource }, this.traversals.contentResource)
       );
     }
