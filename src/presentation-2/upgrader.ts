@@ -3,6 +3,7 @@ import * as Presentation2 from '@iiif/presentation-2';
 import { imageServiceProfiles, level1Support } from '../shared/image-api-profiles';
 import { Traverse } from './traverse';
 import { ensureArray } from '../shared/ensure-array';
+import { removeUndefinedProperties } from '../shared/remove-undefined-properties';
 
 const configuration = {
   attributionLabel: 'Attribution',
@@ -322,15 +323,6 @@ function convertMetadata(
   });
 }
 
-function removeUndefinedProperties(obj: any) {
-  for (const prop in obj) {
-    if (typeof obj[prop] === 'undefined' || obj[prop] === null) {
-      delete obj[prop];
-    }
-  }
-  return obj;
-}
-
 let mintedIdCounter = 0;
 
 function mintNewIdFromResource(
@@ -416,8 +408,24 @@ function descriptiveProperties<T extends Partial<Presentation3.DescriptiveProper
       : undefined,
     navDate: resource.navDate,
     summary: resource.description ? convertLanguageMapping(resource.description) : undefined,
-    thumbnail: resource.thumbnail as any,
+    thumbnail: compatThumbnail(resource.thumbnail as any),
   } as T;
+}
+
+function compatThumbnail(thumb: any) {
+  if (thumb) {
+    const arrayOfThumbs = Array.isArray(thumb) ? thumb : [thumb];
+    return arrayOfThumbs.map((t) => {
+      if (typeof t === 'string') {
+        return { id: t, type: 'Image' };
+      }
+      if (t.type === 'unknown') {
+        t.type = 'Image';
+      }
+      return t;
+    });
+  }
+  return thumb;
 }
 
 function parseWithin(resource: Presentation2.AbstractResource): undefined | Presentation3.LinkingProperties['partOf'] {
@@ -508,12 +516,16 @@ function flattenArray<T>(array: T[][]): T[] {
 function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manifest {
   const allCanvases = [];
   const behavior = [];
+  let start = undefined;
   for (const sequence of manifest.sequences || []) {
     if (sequence.canvases.length) {
       allCanvases.push(...sequence.canvases);
     }
     if (sequence.behavior) {
       behavior.push(...sequence.behavior);
+    }
+    if (sequence.startCanvas) {
+      start = sequence.startCanvas;
     }
   }
 
@@ -531,6 +543,7 @@ function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manife
     ...technical,
     ...descriptiveProperties(manifest),
     ...linkingProperties(manifest),
+    start: start,
     items: allCanvases,
     structures: manifest.structures as any,
   });
@@ -567,6 +580,7 @@ function upgradeAnnotationList(annotationPage: Presentation2.AnnotationList): Pr
 function upgradeSequence(sequence: Presentation2.Sequence): {
   canvases: Presentation3.Canvas[];
   behavior?: string[];
+  startCanvas?: Presentation3.Reference<'Canvas'> | undefined;
 } {
   /*
     rng = {"id": s.get('@id', self.mint_uri()), "type": "Range"}
@@ -592,11 +606,11 @@ function upgradeSequence(sequence: Presentation2.Sequence): {
       behavior: [],
     };
   }
-
   // @todo possibly return some ranges too.
   return {
     canvases: sequence.canvases as any[],
     behavior: sequence.viewingHint ? [sequence.viewingHint] : [],
+    startCanvas: sequence.startCanvas as any,
   };
 }
 

@@ -6,11 +6,9 @@ import {
   ManifestNormalized,
   RangeNormalized,
   ResourceProviderNormalized,
-} from '@iiif/presentation-3';
-
-export const EMPTY = [];
-// Prevent accidental mutation
-Object.freeze(EMPTY);
+} from '@iiif/presentation-3-normalized';
+import { _ServiceNormalized } from './serialize';
+import { EMPTY } from './utilities';
 
 export const emptyAnnotation: AnnotationNormalized = {
   id: 'https://iiif-parser/annotation',
@@ -23,7 +21,6 @@ export const emptyAnnotation: AnnotationNormalized = {
   metadata: EMPTY,
   seeAlso: EMPTY,
   homepage: EMPTY,
-  logo: EMPTY,
   rendering: EMPTY,
   service: EMPTY,
   accessibility: EMPTY,
@@ -37,7 +34,7 @@ export const emptyAnnotation: AnnotationNormalized = {
   generator: EMPTY,
   modified: null,
   motivation: EMPTY,
-  rights: EMPTY,
+  rights: null as any, // @todo bug? should not be array of strings.
   stylesheet: null,
   target: EMPTY,
   timeMode: undefined, // @todo bug? should be null.
@@ -49,7 +46,6 @@ export const emptyAnnotationPage: AnnotationPageNormalized = {
   id: 'https://iiif-parser/annotation-page',
   type: 'AnnotationPage',
   behavior: EMPTY,
-  motivation: null,
   label: null,
   thumbnail: EMPTY,
   summary: null,
@@ -60,7 +56,6 @@ export const emptyAnnotationPage: AnnotationPageNormalized = {
   items: EMPTY,
   seeAlso: EMPTY,
   homepage: EMPTY,
-  logo: EMPTY,
   rendering: EMPTY,
   service: EMPTY,
 };
@@ -70,9 +65,7 @@ export const emptyCanvas: CanvasNormalized = {
   type: 'Canvas',
   label: null,
   behavior: EMPTY,
-  motivation: null,
   thumbnail: EMPTY,
-  posterCanvas: null,
   accompanyingCanvas: null,
   placeholderCanvas: null,
   summary: null,
@@ -85,7 +78,6 @@ export const emptyCanvas: CanvasNormalized = {
   annotations: EMPTY,
   seeAlso: EMPTY,
   homepage: EMPTY,
-  logo: EMPTY,
   partOf: EMPTY,
   rendering: EMPTY,
   service: EMPTY,
@@ -100,9 +92,7 @@ export const emptyCollection: CollectionNormalized = {
   label: null,
   viewingDirection: 'left-to-right',
   behavior: EMPTY,
-  motivation: null,
   thumbnail: EMPTY,
-  posterCanvas: null,
   accompanyingCanvas: null,
   placeholderCanvas: null,
   summary: null,
@@ -115,7 +105,6 @@ export const emptyCollection: CollectionNormalized = {
   annotations: EMPTY,
   seeAlso: EMPTY,
   homepage: EMPTY,
-  logo: EMPTY,
   partOf: EMPTY,
   rendering: EMPTY,
   service: EMPTY,
@@ -130,13 +119,10 @@ export const emptyManifest: ManifestNormalized = {
   homepage: EMPTY,
   items: EMPTY,
   label: null,
-  logo: EMPTY,
   metadata: EMPTY,
-  motivation: null,
   navDate: null,
   provider: EMPTY,
   partOf: EMPTY,
-  posterCanvas: null,
   accompanyingCanvas: null,
   placeholderCanvas: null,
   rendering: EMPTY,
@@ -157,9 +143,7 @@ export const emptyRange: RangeNormalized = {
   type: 'Range',
   label: null,
   behavior: EMPTY,
-  motivation: null,
   thumbnail: EMPTY,
-  posterCanvas: null,
   accompanyingCanvas: null,
   placeholderCanvas: null,
   summary: null,
@@ -172,7 +156,6 @@ export const emptyRange: RangeNormalized = {
   annotations: EMPTY,
   seeAlso: EMPTY,
   homepage: EMPTY,
-  logo: EMPTY,
   partOf: EMPTY,
   rendering: EMPTY,
   service: EMPTY,
@@ -189,3 +172,8 @@ export const emptyAgent: ResourceProviderNormalized = {
   seeAlso: EMPTY,
   homepage: EMPTY,
 };
+
+export const emptyService: _ServiceNormalized = {
+  id: 'https://iiif-parser/empty-service',
+  type: 'UnknownService',
+} as any;

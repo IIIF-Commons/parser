@@ -191,9 +191,9 @@ describe('serializer', () => {
           {
             id: 'https://example.org/iiif/book1/annotations/p1',
             type: 'AnnotationPage',
-            items: [
-              // Annotations about the Manifest are included here
-            ],
+            // items: [
+            //   // Annotations about the Manifest are included here
+            // ],
           },
         ],
       } as const);
@@ -219,7 +219,6 @@ describe('serializer', () => {
         "annotations": [
           {
             "id": "https://example.org/iiif/book1/annotations/p1",
-            "items": [],
             "type": "AnnotationPage",
           },
         ],
@@ -466,6 +465,7 @@ describe('serializer', () => {
 
     expect(serialized2).toMatchInlineSnapshot(`
       {
+        "@context": "http://iiif.io/api/presentation/2/context.json",
         "@id": "https://example.org/iiif/book1/manifest",
         "@type": "sc:Manifest",
         "attribution": "Provided by Example Organization",

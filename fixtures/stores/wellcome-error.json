@@ -1,0 +1,863 @@
+{
+  "iiif": {
+    "mapping": {
+      "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2/full/1024,912/0/default.jpg": "ContentResource",
+      "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting/anno": "Annotation",
+      "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting": "AnnotationPage",
+      "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2/full/100,89/0/default.jpg": "ContentResource",
+      "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2": "Canvas",
+      "https://api.wellcomecollection.org/catalogue/v2/works/kqy8b2yh": "ContentResource",
+      "https://wellcomecollection.org/works/kqy8b2yh": "ContentResource",
+      "https://iiif.wellcomecollection.org/presentation/collections/contributors/ze6kf2ag": "Collection",
+      "https://iiif.wellcomecollection.org/presentation/collections/subjects/fxk455dn": "Collection",
+      "https://iiif.wellcomecollection.org/presentation/collections/subjects/gjsmun8u": "Collection",
+      "https://iiif.wellcomecollection.org/presentation/collections/genres/Oil_paintings": "Collection",
+      "https://iiif.wellcomecollection.org/presentation/collections/genres/Paintings": "Collection",
+      "https://iiif.wellcomecollection.org/pdf/b12024673": "ContentResource",
+      "https://iiif.wellcomecollection.org/logos/wellcome-collection-black.png": "ContentResource",
+      "https://wellcomecollection.org": "Agent",
+      "https://iiif.wellcomecollection.org/presentation/b12024673": "Manifest"
+    },
+    "entities": {
+      "Collection": {
+        "https://iiif.wellcomecollection.org/presentation/collections/contributors/ze6kf2ag": {
+          "id": "https://iiif.wellcomecollection.org/presentation/collections/contributors/ze6kf2ag",
+          "type": "Collection",
+          "label": {
+            "en": [
+              "Contributor: Shepherd, George Sidney, 1784-1862."
+            ]
+          },
+          "viewingDirection": "left-to-right",
+          "behavior": [],
+          "thumbnail": [],
+          "accompanyingCanvas": null,
+          "placeholderCanvas": null,
+          "summary": null,
+          "requiredStatement": null,
+          "metadata": [],
+          "rights": null,
+          "navDate": null,
+          "provider": [],
+          "items": [],
+          "annotations": [],
+          "seeAlso": [],
+          "homepage": [],
+          "partOf": [],
+          "rendering": [],
+          "service": [],
+          "services": [],
+          "iiif-parser:isExternal": true,
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/contributors/ze6kf2ag",
+              "type": "Collection"
+            }
+          ]
+        },
+        "https://iiif.wellcomecollection.org/presentation/collections/subjects/fxk455dn": {
+          "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/fxk455dn",
+          "type": "Collection",
+          "label": {
+            "en": [
+              "Subject: King's Cross (London, England)"
+            ]
+          },
+          "viewingDirection": "left-to-right",
+          "behavior": [],
+          "thumbnail": [],
+          "accompanyingCanvas": null,
+          "placeholderCanvas": null,
+          "summary": null,
+          "requiredStatement": null,
+          "metadata": [],
+          "rights": null,
+          "navDate": null,
+          "provider": [],
+          "items": [],
+          "annotations": [],
+          "seeAlso": [],
+          "homepage": [],
+          "partOf": [],
+          "rendering": [],
+          "service": [],
+          "services": [],
+          "iiif-parser:isExternal": true,
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/fxk455dn",
+              "type": "Collection"
+            }
+          ]
+        },
+        "https://iiif.wellcomecollection.org/presentation/collections/subjects/gjsmun8u": {
+          "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/gjsmun8u",
+          "type": "Collection",
+          "label": {
+            "en": [
+              "Subject: Hospitals for the Small-pox and Inoculation (London, England)"
+            ]
+          },
+          "viewingDirection": "left-to-right",
+          "behavior": [],
+          "thumbnail": [],
+          "accompanyingCanvas": null,
+          "placeholderCanvas": null,
+          "summary": null,
+          "requiredStatement": null,
+          "metadata": [],
+          "rights": null,
+          "navDate": null,
+          "provider": [],
+          "items": [],
+          "annotations": [],
+          "seeAlso": [],
+          "homepage": [],
+          "partOf": [],
+          "rendering": [],
+          "service": [],
+          "services": [],
+          "iiif-parser:isExternal": true,
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/gjsmun8u",
+              "type": "Collection"
+            }
+          ]
+        },
+        "https://iiif.wellcomecollection.org/presentation/collections/genres/Oil_paintings": {
+          "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Oil_paintings",
+          "type": "Collection",
+          "label": {
+            "en": [
+              "Genre: Oil paintings"
+            ]
+          },
+          "viewingDirection": "left-to-right",
+          "behavior": [],
+          "thumbnail": [],
+          "accompanyingCanvas": null,
+          "placeholderCanvas": null,
+          "summary": null,
+          "requiredStatement": null,
+          "metadata": [],
+          "rights": null,
+          "navDate": null,
+          "provider": [],
+          "items": [],
+          "annotations": [],
+          "seeAlso": [],
+          "homepage": [],
+          "partOf": [],
+          "rendering": [],
+          "service": [],
+          "services": [],
+          "iiif-parser:isExternal": true,
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Oil_paintings",
+              "type": "Collection"
+            }
+          ]
+        },
+        "https://iiif.wellcomecollection.org/presentation/collections/genres/Paintings": {
+          "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Paintings",
+          "type": "Collection",
+          "label": {
+            "en": [
+              "Genre: Paintings"
+            ]
+          },
+          "viewingDirection": "left-to-right",
+          "behavior": [],
+          "thumbnail": [],
+          "accompanyingCanvas": null,
+          "placeholderCanvas": null,
+          "summary": null,
+          "requiredStatement": null,
+          "metadata": [],
+          "rights": null,
+          "navDate": null,
+          "provider": [],
+          "items": [],
+          "annotations": [],
+          "seeAlso": [],
+          "homepage": [],
+          "partOf": [],
+          "rendering": [],
+          "service": [],
+          "services": [],
+          "iiif-parser:isExternal": true,
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Paintings",
+              "type": "Collection"
+            }
+          ]
+        }
+      },
+      "Manifest": {
+        "https://iiif.wellcomecollection.org/presentation/b12024673": {
+          "id": "https://iiif.wellcomecollection.org/presentation/b12024673",
+          "type": "Manifest",
+          "annotations": [],
+          "behavior": [],
+          "homepage": [
+            {
+              "id": "https://wellcomecollection.org/works/kqy8b2yh",
+              "type": "ContentResource"
+            }
+          ],
+          "items": [
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2",
+              "type": "Canvas"
+            }
+          ],
+          "label": {
+            "en": [
+              "Saint Pancras smallpox hospital, London. Oil painting after G.S. Shepherd, 1806."
+            ]
+          },
+          "metadata": [
+            {
+              "label": {
+                "en": [
+                  "Reference"
+                ]
+              },
+              "value": {
+                "none": [
+                  "44655i"
+                ]
+              }
+            },
+            {
+              "label": {
+                "en": [
+                  "Physical description"
+                ]
+              },
+              "value": {
+                "en": [
+                  "1 painting : oil on wood ; wood 35 x 40 cm"
+                ]
+              }
+            },
+            {
+              "label": {
+                "en": [
+                  "Contributors"
+                ]
+              },
+              "value": {
+                "none": [
+                  "Shepherd, George Sidney, 1784-1862."
+                ]
+              }
+            },
+            {
+              "label": {
+                "en": [
+                  "Creator/production credits"
+                ]
+              },
+              "value": {
+                "en": [
+                  "After an engraving by Woolnoth after a design by G.S. Shepherd"
+                ]
+              }
+            },
+            {
+              "label": {
+                "en": [
+                  "Type/technique"
+                ]
+              },
+              "value": {
+                "en": [
+                  "Oil paintings",
+                  "Paintings"
+                ]
+              }
+            },
+            {
+              "label": {
+                "en": [
+                  "Subjects"
+                ]
+              },
+              "value": {
+                "en": [
+                  "King's Cross (London, England)",
+                  "Hospitals for the Small-pox and Inoculation (London, England)"
+                ]
+              }
+            },
+            {
+              "label": {
+                "en": [
+                  "Reference"
+                ]
+              },
+              "value": {
+                "en": [
+                  "Wellcome Collection 44655i"
+                ]
+              }
+            },
+            {
+              "label": {
+                "en": [
+                  "Attribution and usage"
+                ]
+              },
+              "value": {
+                "en": [
+                  "Wellcome Collection",
+                  "<span>This work has been identified as being free of known restrictions under copyright law, including all related and neighbouring rights and is being made available under the <a target=\"_top\" href=\"http://creativecommons.org/publicdomain/mark/1.0/\">Creative Commons, Public Domain Mark</a>.<br/><br/>You can copy, modify, distribute and perform the work, even for commercial purposes, without asking permission.</span>"
+                ]
+              }
+            }
+          ],
+          "navDate": null,
+          "provider": [
+            {
+              "id": "https://wellcomecollection.org",
+              "type": "Agent"
+            }
+          ],
+          "partOf": [
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/contributors/ze6kf2ag",
+              "type": "Collection"
+            },
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/fxk455dn",
+              "type": "Collection"
+            },
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/gjsmun8u",
+              "type": "Collection"
+            },
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Oil_paintings",
+              "type": "Collection"
+            },
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Paintings",
+              "type": "Collection"
+            }
+          ],
+          "accompanyingCanvas": null,
+          "placeholderCanvas": null,
+          "rendering": [
+            {
+              "id": "https://iiif.wellcomecollection.org/pdf/b12024673",
+              "type": "ContentResource"
+            }
+          ],
+          "requiredStatement": null,
+          "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+          "seeAlso": [
+            {
+              "id": "https://api.wellcomecollection.org/catalogue/v2/works/kqy8b2yh",
+              "type": "ContentResource"
+            }
+          ],
+          "service": [],
+          "services": [
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673#tracking",
+              "type": "Text",
+              "profile": "http://universalviewer.io/tracking-extensions-profile",
+              "label": {
+                "en": [
+                  "Format: Artwork, Institution: n/a, Identifier: b12024673, Digicode: digpaintings, Collection code: 44655i"
+                ]
+              }
+            },
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673#timestamp",
+              "type": "Text",
+              "profile": "https://github.com/wellcomecollection/iiif-builder/build-timestamp",
+              "label": {
+                "none": [
+                  "2023-09-28T12:35:10.1608874Z"
+                ]
+              }
+            },
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673#accesscontrolhints",
+              "type": "Text",
+              "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+              "label": {
+                "en": [
+                  "open"
+                ]
+              },
+              "metadata": [
+                {
+                  "label": {
+                    "en": [
+                      "Open"
+                    ]
+                  },
+                  "value": {
+                    "none": [
+                      "1"
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "start": null,
+          "structures": [],
+          "summary": null,
+          "thumbnail": [
+            {
+              "id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2/full/100,89/0/default.jpg",
+              "type": "ContentResource"
+            }
+          ],
+          "viewingDirection": "left-to-right",
+          "@context": "http://iiif.io/api/presentation/3/context.json",
+          "_cached": true,
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "type": "Manifest"
+            }
+          ]
+        }
+      },
+      "Canvas": {
+        "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2": {
+          "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2",
+          "type": "Canvas",
+          "label": {
+            "none": [
+              "-"
+            ]
+          },
+          "behavior": [],
+          "thumbnail": [
+            {
+              "id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2/full/100,89/0/default.jpg",
+              "type": "ContentResource"
+            }
+          ],
+          "accompanyingCanvas": null,
+          "placeholderCanvas": null,
+          "summary": null,
+          "requiredStatement": null,
+          "metadata": [],
+          "rights": null,
+          "navDate": null,
+          "provider": [],
+          "items": [
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting",
+              "type": "AnnotationPage"
+            }
+          ],
+          "annotations": [],
+          "seeAlso": [],
+          "homepage": [],
+          "partOf": [],
+          "rendering": [],
+          "service": [],
+          "duration": 0,
+          "height": 2522,
+          "width": 2833
+        }
+      },
+      "AnnotationPage": {
+        "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting": {
+          "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting",
+          "type": "AnnotationPage",
+          "behavior": [],
+          "label": null,
+          "thumbnail": [],
+          "summary": null,
+          "requiredStatement": null,
+          "metadata": [],
+          "rights": null,
+          "provider": [],
+          "items": [
+            {
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting/anno",
+              "type": "Annotation"
+            }
+          ],
+          "seeAlso": [],
+          "homepage": [],
+          "rendering": [],
+          "service": [],
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2",
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting",
+              "type": "AnnotationPage"
+            }
+          ]
+        }
+      },
+      "AnnotationCollection": {},
+      "Annotation": {
+        "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting/anno": {
+          "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting/anno",
+          "type": "Annotation",
+          "motivation": [
+            "painting"
+          ],
+          "body": [
+            {
+              "id": "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2/full/1024,912/0/default.jpg",
+              "type": "ContentResource"
+            }
+          ],
+          "target": {
+            "type": "SpecificResource",
+            "source": {
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2",
+              "type": "Canvas"
+            }
+          },
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting",
+              "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting/anno",
+              "type": "Annotation"
+            }
+          ]
+        }
+      },
+      "ContentResource": {
+        "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2/full/1024,912/0/default.jpg": {
+          "id": "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2/full/1024,912/0/default.jpg",
+          "type": "Image",
+          "width": 1024,
+          "height": 912,
+          "format": "image/jpeg",
+          "service": [
+            {
+              "@id": "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level1.json",
+              "width": 2833,
+              "height": 2522
+            }
+          ],
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting/anno",
+              "id": "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2/full/1024,912/0/default.jpg",
+              "type": "Image"
+            }
+          ]
+        },
+        "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2/full/100,89/0/default.jpg": {
+          "id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2/full/100,89/0/default.jpg",
+          "type": "Image",
+          "width": 100,
+          "height": 89,
+          "service": [
+            {
+              "@id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2",
+              "@type": "ImageService2",
+              "profile": "http://iiif.io/api/image/2/level0.json",
+              "width": 1024,
+              "height": 912,
+              "sizes": [
+                {
+                  "width": 100,
+                  "height": 89
+                },
+                {
+                  "width": 200,
+                  "height": 178
+                },
+                {
+                  "width": 400,
+                  "height": 356
+                },
+                {
+                  "width": 1024,
+                  "height": 912
+                }
+              ]
+            }
+          ],
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2",
+              "id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2/full/100,89/0/default.jpg",
+              "type": "Image",
+              "@explicit": true,
+              "width": {},
+              "height": {},
+              "service": [
+                {
+                  "@id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2",
+                  "@type": "ImageService2",
+                  "profile": "http://iiif.io/api/image/2/level0.json",
+                  "width": 1024,
+                  "height": 912,
+                  "sizes": [
+                    {
+                      "width": 100,
+                      "height": 89
+                    },
+                    {
+                      "width": 200,
+                      "height": 178
+                    },
+                    {
+                      "width": 400,
+                      "height": 356
+                    },
+                    {
+                      "width": 1024,
+                      "height": 912
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "@explicit": true,
+              "width": {},
+              "height": {},
+              "service": [
+                {
+                  "@id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2",
+                  "@type": "ImageService2",
+                  "profile": "http://iiif.io/api/image/2/level0.json",
+                  "width": 1024,
+                  "height": 912,
+                  "sizes": [
+                    {
+                      "width": 100,
+                      "height": 89
+                    },
+                    {
+                      "width": 200,
+                      "height": 178
+                    },
+                    {
+                      "width": 400,
+                      "height": 356
+                    },
+                    {
+                      "width": 1024,
+                      "height": 912
+                    }
+                  ],
+                  "id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2",
+                  "type": "ImageService2"
+                }
+              ],
+              "id": "https://iiif.wellcomecollection.org/thumbs/b12024673_0001.jp2/full/100,89/0/default.jpg",
+              "type": "Image"
+            }
+          ]
+        },
+        "https://api.wellcomecollection.org/catalogue/v2/works/kqy8b2yh": {
+          "id": "https://api.wellcomecollection.org/catalogue/v2/works/kqy8b2yh",
+          "type": "Dataset",
+          "profile": "https://api.wellcomecollection.org/catalogue/v2/context.json",
+          "label": {
+            "en": [
+              "Wellcome Collection Catalogue API"
+            ]
+          },
+          "format": "application/json",
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://api.wellcomecollection.org/catalogue/v2/works/kqy8b2yh",
+              "type": "Dataset"
+            }
+          ]
+        },
+        "https://wellcomecollection.org/works/kqy8b2yh": {
+          "id": "https://wellcomecollection.org/works/kqy8b2yh",
+          "type": "Text",
+          "label": {
+            "en": [
+              "Saint Pancras smallpox hospital, London. Oil painting after G.S. Shepherd, 1806."
+            ]
+          },
+          "format": "text/html",
+          "language": [
+            "en"
+          ],
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://wellcomecollection.org/works/kqy8b2yh",
+              "type": "Text"
+            }
+          ]
+        },
+        "https://iiif.wellcomecollection.org/pdf/b12024673": {
+          "id": "https://iiif.wellcomecollection.org/pdf/b12024673",
+          "type": "Text",
+          "label": {
+            "en": [
+              "View as PDF"
+            ]
+          },
+          "format": "application/pdf",
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://iiif.wellcomecollection.org/pdf/b12024673",
+              "type": "Text"
+            }
+          ]
+        },
+        "https://iiif.wellcomecollection.org/logos/wellcome-collection-black.png": {
+          "id": "https://iiif.wellcomecollection.org/logos/wellcome-collection-black.png",
+          "type": "Image",
+          "format": "image/png",
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://wellcomecollection.org",
+              "id": "https://iiif.wellcomecollection.org/logos/wellcome-collection-black.png",
+              "type": "Image"
+            }
+          ]
+        },
+        "https://wellcomecollection.org": {
+          "id": "https://wellcomecollection.org",
+          "type": "Text",
+          "label": {
+            "en": [
+              "Wellcome Collection"
+            ]
+          },
+          "format": "text/html",
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://wellcomecollection.org",
+              "id": "https://wellcomecollection.org",
+              "type": "Text"
+            }
+          ]
+        }
+      },
+      "Range": {},
+      "Service": {
+        "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2": {
+          "id": "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2",
+          "type": "ImageService2",
+          "@id": "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2",
+          "@type": "ImageService2",
+          "profile": "http://iiif.io/api/image/2/level1.json",
+          "width": 2833,
+          "height": 2522
+        },
+        "https://iiif.wellcomecollection.org/presentation/b12024673#tracking": {
+          "id": "https://iiif.wellcomecollection.org/presentation/b12024673#tracking",
+          "type": "Text",
+          "profile": "http://universalviewer.io/tracking-extensions-profile",
+          "label": {
+            "en": [
+              "Format: Artwork, Institution: n/a, Identifier: b12024673, Digicode: digpaintings, Collection code: 44655i"
+            ]
+          }
+        },
+        "https://iiif.wellcomecollection.org/presentation/b12024673#timestamp": {
+          "id": "https://iiif.wellcomecollection.org/presentation/b12024673#timestamp",
+          "type": "Text",
+          "profile": "https://github.com/wellcomecollection/iiif-builder/build-timestamp",
+          "label": {
+            "none": [
+              "2023-09-28T12:35:10.1608874Z"
+            ]
+          }
+        },
+        "https://iiif.wellcomecollection.org/presentation/b12024673#accesscontrolhints": {
+          "id": "https://iiif.wellcomecollection.org/presentation/b12024673#accesscontrolhints",
+          "type": "Text",
+          "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+          "label": {
+            "en": [
+              "open"
+            ]
+          },
+          "metadata": [
+            {
+              "label": {
+                "en": [
+                  "Open"
+                ]
+              },
+              "value": {
+                "none": [
+                  "1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "Selector": {},
+      "Agent": {
+        "https://wellcomecollection.org": {
+          "id": "https://wellcomecollection.org",
+          "type": "Agent",
+          "label": {
+            "en": [
+              "Wellcome Collection",
+              "183 Euston Road",
+              "London NW1 2BE UK",
+              "T +44 (0)20 7611 8722",
+              "E library@wellcomecollection.org",
+              "https://wellcomecollection.org"
+            ]
+          },
+          "logo": [
+            {
+              "id": "https://iiif.wellcomecollection.org/logos/wellcome-collection-black.png",
+              "type": "ContentResource"
+            }
+          ],
+          "seeAlso": [],
+          "homepage": [
+            {
+              "id": "https://wellcomecollection.org",
+              "type": "ContentResource"
+            }
+          ],
+          "iiif-parser:hasPart": [
+            {
+              "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
+              "id": "https://wellcomecollection.org",
+              "type": "Agent"
+            }
+          ]
+        }
+      }
+    },
+    "requests": {
+      "https://iiif.wellcomecollection.org/presentation/b12024673": {
+        "requestUri": "https://iiif.wellcomecollection.org/presentation/b12024673",
+        "loadingState": "RESOURCE_READY",
+        "uriMismatch": false,
+        "resourceUri": "https://iiif.wellcomecollection.org/presentation/b12024673"
+      }
+    },
+    "meta": {}
+  }
+}

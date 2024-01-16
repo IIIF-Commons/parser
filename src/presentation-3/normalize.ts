@@ -1,32 +1,40 @@
-import { Traverse } from './traverse';
+import { TraversalContext, Traverse } from './traverse';
 import {
   Annotation,
   AnnotationPage,
-  AnnotationPageNormalized,
   Canvas,
-  CanvasNormalized,
   Collection,
-  CollectionNormalized,
   Manifest,
-  ManifestNormalized,
   PolyEntity,
   Range,
-  RangeNormalized,
   Reference,
+  Selector,
+  SpecificResource,
   ResourceProvider,
-  ResourceProviderNormalized,
+  Service,
 } from '@iiif/presentation-3';
 import {
-  EMPTY,
   emptyAgent,
   emptyAnnotationPage,
   emptyCanvas,
   emptyCollection,
   emptyManifest,
   emptyRange,
+  emptyService,
 } from './empty-types';
 import { convertPresentation2 } from '../presentation-2';
-import { NormalizedEntity } from './serialize';
+import { CompatibleStore, NormalizedEntity } from './serialize';
+import { expandTargetToSpecificResource } from '../shared/expand-target';
+import {
+  AnnotationPageNormalized,
+  CanvasNormalized,
+  CollectionNormalized,
+  ManifestNormalized,
+  RangeNormalized,
+  ResourceProviderNormalized,
+} from '@iiif/presentation-3-normalized';
+import { isSpecificResource } from '../shared/is-specific-resource';
+import { EMPTY, HAS_PART, IS_EXTERNAL, PART_OF, WILDCARD } from "./utilities";
 
 export const defaultEntities = {
   Collection: {},
@@ -63,20 +71,26 @@ function getResource(entityOrString: PolyEntity, type: string): Reference {
     return { id: entityOrString, type };
   }
   if (!entityOrString.id) {
-    throw new Error(`Invalid resource does not have an ID (${type})`);
+    throw new Error(`Invalid resource does not have an ID (${JSON.stringify(entityOrString)}, ${type})`);
   }
   return entityOrString as Reference;
 }
 
-function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>>) {
+function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>>, topLevel: any) {
   return <T extends Reference | string>(type: string, defaultStringType?: string) => {
     const storeType = entities[type] ? entities[type] : {};
-    return (r: T): T => {
+    return (r: T, context: TraversalContext): T => {
       const resource = getResource(r, defaultStringType || type);
       if (resource && resource.id && type) {
         storeType[resource.id] = storeType[resource.id]
-          ? (mergeEntities(storeType[resource.id], resource) as any)
-          : Object.assign({}, resource);
+          ? (mergeEntities(storeType[resource.id], resource, {
+              parent: context.parent,
+              isTopLevel: topLevel.id === resource.id,
+            }) as any)
+          : mergeEntities({ id: resource.id, type: resource.type } as any, resource, {
+              parent: context.parent,
+              isTopLevel: topLevel.id === resource.id,
+            });
         return {
           id: resource.id,
           type: type === 'ContentResource' ? type : resource.type,
@@ -87,7 +101,7 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
   };
 }
 
-function merge(existing: any, incoming: any): any {
+export function merge(existing: any, incoming: any, context?: { parent?: any; isTopLevel?: boolean }): any {
   if (!incoming) {
     // Falsy values are ignored
     return existing;
@@ -102,6 +116,12 @@ function merge(existing: any, incoming: any): any {
     // merged with the existing value.
     const merged = [...existing];
     for (const item of incoming) {
+      if (item['@id'] && !item.id) {
+        item.id = item['@id'];
+      }
+      if (item['@type'] && !item.type) {
+        item.type = item['@type'];
+      }
       if (item === null || item === undefined) {
         continue;
       }
@@ -125,14 +145,92 @@ function merge(existing: any, incoming: any): any {
     // For objects, we check the existing object for non-existing or "empty"
     // properties and use the value from the incoming object for them
     const merged = { ...existing };
+    const added: string[] = [];
+    const unchanged: string[] = [];
+    const existingKeys = Object.keys(existing).filter((key) => key !== HAS_PART && key !== 'id' && key !== 'type');
+    const previouslyChangedValues: any = {};
+    const incomingChangedValues: any = {};
     for (const [key, val] of Object.entries(incoming)) {
+      if (key === HAS_PART || key === 'id' || key === 'type') {
+        continue;
+      }
       const currentVal = merged[key];
-      if (currentVal === EMPTY || !currentVal) {
+      if (currentVal === val) {
+        unchanged.push(key);
+      } else if (currentVal === EMPTY || !currentVal) {
+        added.push(key);
         merged[key] = val;
       } else {
+        if (currentVal && val) {
+          previouslyChangedValues[key] = currentVal;
+          incomingChangedValues[key] = val;
+        }
         merged[key] = merge(currentVal, val);
+        if (merged[key] === previouslyChangedValues[key]) {
+          unchanged.push(key);
+          delete previouslyChangedValues[key];
+        }
       }
     }
+
+    if (context && ((context.parent && context.parent.id) || context.isTopLevel)) {
+      const newHasPart: any[] = [];
+      const part: any = {};
+      if (context.parent) {
+        part[PART_OF] = context.parent.id;
+      } else if (context.isTopLevel) {
+        part[PART_OF] = existing.id;
+      }
+
+      if (merged[HAS_PART] && merged[HAS_PART].length) {
+        const noExplicit = !(merged[HAS_PART] || []).find((r: any) => r['@explicit']);
+        const hasDiverged = added.length > 0 || unchanged.length !== existingKeys.length;
+        // We already have one, it may conflict here.
+        // 1. Fix the first part.
+        if (noExplicit && hasDiverged) {
+          for (const item of merged[HAS_PART]) {
+            const first = { ...item };
+            const changedKeys = Object.keys(previouslyChangedValues);
+            if (first) {
+              first['@explicit'] = true;
+              for (const addedProperty of existingKeys) {
+                if (addedProperty !== HAS_PART) {
+                  first[addedProperty] = WILDCARD;
+                }
+              }
+              for (const changedKey of changedKeys) {
+                first[changedKey] = previouslyChangedValues[changedKey];
+              }
+            }
+            newHasPart.push(first);
+          }
+        } else {
+          newHasPart.push(...merged[HAS_PART]);
+        }
+
+        if (hasDiverged) {
+          // Add the framing.
+          const changedKeys = Object.keys(incomingChangedValues);
+          part['@explicit'] = true;
+          for (const addedProperty of added) {
+            part[addedProperty] = WILDCARD;
+          }
+          for (const unchangedValue of unchanged) {
+            part[unchangedValue] = WILDCARD;
+          }
+          for (const changedKey of changedKeys) {
+            part[changedKey] = incomingChangedValues[changedKey];
+          }
+        }
+      }
+
+      part.id = merged.id;
+      part.type = merged.type;
+      newHasPart.push(part);
+
+      merged[HAS_PART] = newHasPart;
+    }
+
     return merged;
   } else if (existing) {
     return existing;
@@ -140,14 +238,30 @@ function merge(existing: any, incoming: any): any {
   return incoming;
 }
 
-export function mergeEntities(existing: NormalizedEntity, incoming: any): NormalizedEntity {
+export function mergeEntities(
+  existing: NormalizedEntity,
+  incoming: any,
+  context?: { parent?: any; isTopLevel?: boolean }
+): NormalizedEntity {
   if (typeof existing === 'string') {
     return existing;
   }
+
   if (incoming.id !== (existing as any).id || incoming.type !== (existing as any).type) {
-    throw new Error('Can only merge entities with identical identifiers and type!');
+    if (incoming.type === 'ImageService3') {
+      return incoming;
+    }
+    if ((existing as any).type === 'ImageService3') {
+      return existing;
+    }
+
+    throw new Error(
+      `Can only merge entities with identical identifiers and type! ${incoming.type}(${incoming.id}) => ${
+        (existing as any).type
+      }(${(existing as any).id})`
+    );
   }
-  return merge({ ...existing }, incoming);
+  return merge({ ...existing }, incoming, context);
 }
 
 function recordTypeInMapping(mapping: Record<string, string>) {
@@ -157,13 +271,60 @@ function recordTypeInMapping(mapping: Record<string, string>) {
       if (typeof id === 'undefined') {
         throw new Error('Found invalid entity without an ID.');
       }
-      if (type === 'ContentResource') {
+      if (type === 'ContentResource' || type === 'Service') {
         mapping[id] = type;
       } else {
         mapping[id] = foundType as any;
       }
       return r;
     };
+  };
+}
+
+function normalizeService(_service: any): any {
+  const service = Object.assign({}, _service);
+  if (service['@id']) {
+    service.id = service['@id'];
+  }
+
+  if (service['@type']) {
+    service.type = service['@type'];
+  }
+
+  if (service.service) {
+    const serviceReferences = [];
+    service.service = Array.isArray(service.service) ? service.service : [service.service];
+    for (const innerService of service.service) {
+      serviceReferences.push({
+        id: innerService['@id'] || innerService.id,
+        type: innerService['@type'] || innerService.type,
+      });
+    }
+    service.service = serviceReferences;
+  }
+
+  return Object.assign({}, emptyService, service);
+}
+
+function recordServiceForLoading(store: CompatibleStore['entities']) {
+  return (resource: Service) => {
+    store.Service = store.Service ? store.Service : {};
+    const id: string = (resource as any).id || (resource as any)['@id'];
+    const normalizedResource = normalizeService(resource);
+
+    // @todo add loading status for image services.
+
+    if (normalizedResource && normalizedResource.id) {
+      if (store.Service[normalizedResource.id]) {
+        // We need to merge.
+        store.Service[id] = mergeEntities(store.Service[id], normalizedResource);
+      } else {
+        store.Service[id] = normalizedResource as any;
+      }
+    }
+
+    // Keep original on resource - this is a parallel copy for READING
+    return resource;
   };
 }
 
@@ -228,9 +389,6 @@ function ensureArrayOnAnnotation(annotation: Annotation): Annotation {
   if (annotation.seeAlso) {
     annotation.seeAlso = ensureArray(annotation.seeAlso);
   }
-  if (annotation.body) {
-    annotation.body = ensureArray(annotation.body);
-  }
   if (annotation.audience) {
     annotation.audience = ensureArray(annotation.audience);
   }
@@ -244,21 +402,110 @@ function ensureArrayOnAnnotation(annotation: Annotation): Annotation {
   return annotation;
 }
 
+function toSpecificResource(
+  target: string | Reference<any> | SpecificResource | Partial<Canvas>,
+  { typeHint, partOfTypeHint }: { typeHint?: string; partOfTypeHint?: string } = {}
+): SpecificResource {
+  if (typeof target === 'string') {
+    target = { id: target, type: typeHint || 'unknown' };
+  }
+
+  if (isSpecificResource(target)) {
+    if (typeof target.source === 'string') {
+      target.source = { id: target.source, type: typeHint || 'unknown' };
+    }
+
+    if (target.source.type === 'Canvas' && target.source.partOf && typeof target.source.partOf === 'string') {
+      target.source.partOf = [
+        {
+          id: target.source.partOf,
+          type: partOfTypeHint || 'Manifest', // Most common is manifest.
+        },
+      ];
+    }
+
+    return target;
+  }
+
+  let selector: Selector | undefined;
+  if ((target.id || '').indexOf('#') !== -1) {
+    const [id, fragment] = (target.id || '').split('#');
+    target.id = id;
+    if (fragment) {
+      selector = {
+        type: 'FragmentSelector',
+        value: fragment,
+      };
+    }
+  }
+
+  return {
+    type: 'SpecificResource',
+    source: target,
+    selector,
+  };
+}
+
+function rangeItemToSpecificResource(range: Range): Range {
+  const _range = Object.assign({}, range);
+  if (range && range.items) {
+    _range.items = range.items.map((rangeItem) => {
+      if (typeof rangeItem === 'string' || rangeItem.type === 'Canvas') {
+        return toSpecificResource(rangeItem);
+      }
+      return rangeItem;
+    });
+  }
+  return _range;
+}
+
+function startCanvasToSpecificResource(manifest: Manifest): Manifest {
+  const _manifest = Object.assign({}, manifest);
+  if (_manifest.start) {
+    _manifest.start = toSpecificResource(_manifest.start, { typeHint: 'Canvas' }) as any;
+    return _manifest;
+  }
+  return manifest;
+}
+
+function annotationTargetToSpecificResource(annotation: Annotation): Annotation {
+  const _annotation = Object.assign({}, annotation);
+  if (_annotation.target) {
+    _annotation.target = expandTargetToSpecificResource(_annotation.target as any, { typeHint: 'Canvas' }) as any;
+    return _annotation;
+  }
+  return annotation;
+}
+
+export function traverseSpecificResource(specificResource: SpecificResource): SpecificResource {
+  return specificResource;
+}
+
+export function addFlagForExternalResource<T extends AnnotationPage | Manifest | Collection>(resource: T): T {
+  if (typeof resource.items === 'undefined') {
+    (resource as any)[IS_EXTERNAL] = true;
+  }
+  return resource;
+}
+
 export function normalize(unknownEntity: unknown) {
   const entity = convertPresentation2(unknownEntity);
   const entities = getDefaultEntities();
   const mapping = {};
-  const addToEntities = mapToEntities(entities);
+  const addToEntities = mapToEntities(entities, entity);
   const addToMapping = recordTypeInMapping(mapping);
 
   const traversal = new Traverse({
     collection: [
+      addFlagForExternalResource,
       ensureDefaultFields<Collection, CollectionNormalized>(emptyCollection),
       addToMapping<Collection>('Collection'),
       addToEntities<Collection>('Collection'),
     ],
     manifest: [
+      addFlagForExternalResource,
       ensureDefaultFields<Manifest, ManifestNormalized>(emptyManifest),
+      startCanvasToSpecificResource,
       addToMapping<Manifest>('Manifest'),
       addToEntities<Manifest>('Manifest'),
     ],
@@ -268,6 +515,7 @@ export function normalize(unknownEntity: unknown) {
       addToEntities<Canvas>('Canvas'),
     ],
     annotationPage: [
+      addFlagForExternalResource,
       addMissingIdToContentResource('AnnotationPage'),
       ensureDefaultFields<AnnotationPage, AnnotationPageNormalized>(emptyAnnotationPage),
       addToMapping<AnnotationPage>('AnnotationPage'),
@@ -278,6 +526,7 @@ export function normalize(unknownEntity: unknown) {
       // It will be normalized through selectors and pattern matching.
       addMissingIdToContentResource('Annotation'),
       ensureArrayOnAnnotation,
+      annotationTargetToSpecificResource,
       addToMapping<Annotation>('Annotation'),
       addToEntities<Annotation>('Annotation'),
     ],
@@ -291,6 +540,7 @@ export function normalize(unknownEntity: unknown) {
     range: [
       // This will add a LOT to the state, maybe this will be configurable down the line.
       ensureDefaultFields<Range, RangeNormalized>(emptyRange),
+      rangeItemToSpecificResource,
       addToMapping<Range>('Range', 'Canvas'),
       addToEntities<Range>('Range', 'Canvas'),
     ],
@@ -299,14 +549,14 @@ export function normalize(unknownEntity: unknown) {
       addToMapping<ResourceProvider>('Agent'),
       addToEntities<ResourceProvider>('Agent'),
     ],
-    // Remove this, content resources are NOT usually processed by this library.
-    // They need to be available in full when they get passed down the chain.
-    // There may be a better way to preserve annotations and content resources.
-    // service: [
-    //   ensureDefaultFields<Service, ServiceNormalized>(emptyService),
-    //   addToMapping<Service>('Service'),
-    //   addToEntities<Service>('Service'),
-    // ],
+    specificResource: [
+      // Special-case changes to this type of resource.
+      traverseSpecificResource,
+    ],
+    service: [
+      // Only record, don't replace.
+      recordServiceForLoading(entities),
+    ],
   });
   const resource = traversal.traverseUnknown(entity) as Reference;
 

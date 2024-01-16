@@ -1,21 +1,16 @@
+import { AnnotationCollection, ContentResource, Reference, Selector } from '@iiif/presentation-3';
 import {
-  AnnotationCollection,
   AnnotationCollectionNormalized,
   AnnotationNormalized,
   AnnotationPageNormalized,
   CanvasNormalized,
   CollectionNormalized,
-  ContentResource,
   ManifestNormalized,
   RangeNormalized,
-  Reference,
-  Selector,
+  ResourceProviderNormalized,
   ServiceNormalized,
-  ResourceProviderNormalized
-} from '@iiif/presentation-3';
-
-export const UNSET = '__$UNSET$__';
-export const UNWRAP = '__$UNWRAP$__';
+} from '@iiif/presentation-3-normalized';
+import { resolveIfExists, UNSET, UNWRAP } from './utilities';
 
 export type Field = any[];
 
@@ -33,6 +28,8 @@ export type CompatibleStore<T extends string = string> = {
   };
 };
 
+export type _ServiceNormalized = ServiceNormalized & { id: string; type: string };
+
 export type NormalizedEntity =
   | CollectionNormalized
   | ManifestNormalized
@@ -43,12 +40,15 @@ export type NormalizedEntity =
   | AnnotationNormalized
   | ContentResource
   | RangeNormalized
-  | ServiceNormalized
+  | _ServiceNormalized
   | Selector
-  | ResourceProviderNormalized;
+  | ResourceProviderNormalized
+  | { id?: string; '@id'?: string; type?: string; '@type'?: string; [key: string]: any };
 
 type SerializerContext = {
   isTopLevel?: boolean;
+  parent?: any;
+  fullResource?: any;
 };
 
 export type Serializer<Type extends NormalizedEntity> = (
@@ -66,21 +66,10 @@ export type SerializeConfig = {
   Annotation?: Serializer<AnnotationNormalized>;
   ContentResource?: Serializer<ContentResource>;
   Range?: Serializer<RangeNormalized>;
-  Service?: Serializer<ServiceNormalized>;
+  Service?: Serializer<_ServiceNormalized>;
   Selector?: Serializer<Selector>;
   Agent?: Serializer<ResourceProviderNormalized>;
 };
-
-function resolveIfExists<T extends NormalizedEntity>(state: CompatibleStore, url: string): T | undefined {
-  const request = state.requests[url];
-  // Return the resource.
-  const resourceType = state.mapping[url];
-  if (!resourceType || (request && request.resourceUri && !state.entities[resourceType][request.resourceUri])) {
-    // Continue refetching resource, this is an invalid state.
-    return undefined;
-  }
-  return state.entities[resourceType][request ? request.resourceUri : url] as T;
-}
 
 export function serializedFieldsToObject<T>(fields: Field[] | [string]): T {
   const object: any = {};
@@ -106,17 +95,23 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
     throw new Error(`Serializer not found for ${subject.type}`);
   }
 
-  function flatten(sub: Reference) {
+  function flatten(sub: Reference, parent?: any, depth = 0) {
     const generator = config[sub.type as keyof SerializeConfig];
     if (!generator) {
       return UNSET;
     }
-
-    const resource = resolveIfExists(state, sub.id) || (sub.id && sub.type ? sub : null);
+    if (depth > 20) {
+      throw new Error('Circular reference: ' + sub.id + ' ' + sub.type);
+    }
+    const [resource, fullResource] = resolveIfExists(state, sub.type ? sub : sub.id, parent) || (sub.id && sub.type ? sub : null);
     if (!resource) {
       return UNSET;
     }
-    const iterator = generator(resource as any, state, { isTopLevel: subject.id === sub.id });
+    const iterator = generator(resource as any, state, {
+      parent,
+      isTopLevel: subject.id === sub.id,
+      fullResource,
+    });
     let current = iterator.next();
     while (!current.done) {
       const requestToHydrate: Reference | Reference[] = current.value as any;
@@ -126,11 +121,11 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
         if (Array.isArray(requestToHydrate)) {
           const nextList: any[] = [];
           for (const req of requestToHydrate) {
-            nextList.push(flatten(req));
+            nextList.push(flatten(req, sub, depth + 1));
           }
           next = nextList;
         } else {
-          next = flatten(requestToHydrate);
+          next = flatten(requestToHydrate, sub, depth + 1);
         }
       }
       current = iterator.next(next);

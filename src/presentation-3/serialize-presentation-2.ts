@@ -1,11 +1,15 @@
 import { SerializeConfig } from './serialize';
 import {
-  DescriptiveNormalized,
+  FragmentSelector,
   InternationalString,
-  LinkingNormalized,
+  Reference,
+  Selector,
+  SpecificResource,
   TechnicalProperties,
 } from '@iiif/presentation-3';
+import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
 import * as Presentation2 from '@iiif/presentation-2';
+import { compressSpecificResource } from '../shared/compress-specific-resource';
 
 export function languageString2to3(
   value: InternationalString | null | undefined
@@ -107,6 +111,9 @@ function technicalProperties(props: Partial<TechnicalProperties>, type?: string)
     ['height', props.height],
     ['width', props.width],
     ['viewingDirection', props.viewingDirection !== 'left-to-right' ? props.viewingDirection : undefined],
+
+    // Non-standard property.
+    ['license', (props as any).license ? (props as any).license : undefined],
     // @todo Viewing hint is merged with behavior
     // ['viewingHint', props.]
   ];
@@ -137,6 +144,11 @@ function* descriptiveProperties(prop: Partial<DescriptiveNormalized>): Generator
 }
 
 function* linkingProperties(prop: Partial<LinkingNormalized>) {
+  const startProp =
+    prop.start && prop.start.type && (prop.start as any).type === 'SpecificResource'
+      ? compressSpecificResource(prop.start as any)
+      : prop.start;
+
   return [
     ['seeAlso', unNestArray(yield prop.seeAlso)],
     // @todo support more services (like auth)
@@ -145,13 +157,38 @@ function* linkingProperties(prop: Partial<LinkingNormalized>) {
     // @todo part of to within
     // ['within', unNestArray(yield prop.partOf)],
     // @todo this may not work completely.
-    ['startCanvas', prop.start ? prop.start.id : undefined],
+    ['startCanvas', startProp ? startProp.id : undefined],
   ];
 }
 
+function isSpecificResource(resource: unknown): resource is SpecificResource {
+  return (resource as any).type === 'SpecificResource';
+}
+function isFragmentSelector(resource: unknown): resource is FragmentSelector {
+  return (resource as any) && (resource as any).type === 'FragmentSelector';
+}
+
+function specificResourceToString(resource: Reference<any> | SpecificResource) {
+  if (resource && isSpecificResource(resource)) {
+    let id = resource.id;
+    const selector: Selector | undefined = resource.selector
+      ? Array.isArray(resource.selector)
+        ? resource.selector[0]
+        : resource.selector
+      : undefined;
+
+    if (isFragmentSelector(selector)) {
+      id += '#' + selector.value;
+    }
+    return id;
+  }
+  return resource?.id;
+}
+
 export const serializeConfigPresentation2: SerializeConfig = {
-  Manifest: function* (entity) {
+  Manifest: function* (entity, state, { isTopLevel }) {
     return [
+      ...(isTopLevel ? [['@context', 'http://iiif.io/api/presentation/2/context.json']] : []),
       ...technicalProperties(entity, 'sc:Manifest'),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
@@ -181,6 +218,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
       ...(yield* linkingProperties(entity)),
       ['images', resources ? [resources.resources] : undefined],
       [
+        // @todo use otherContent if they are inlined
         'annotations',
         entity.annotations && entity.annotations.length ? unNestArray(yield entity.annotations) : undefined,
       ],
@@ -245,16 +283,19 @@ export const serializeConfigPresentation2: SerializeConfig = {
     const canvases = [];
 
     if (entity.items) {
-      for (const item of entity.items) {
-        const canvas = yield item;
-        members.push({
-          '@id': item.id,
-          '@type': item.type,
-          label: canvas ? canvas.label : undefined,
-          within: entity.id,
-        });
-        if (item.type === 'Canvas') {
-          canvases.push(item.id);
+      for (const _item of entity.items) {
+        const item = _item.type === 'SpecificResource' ? _item.source : _item;
+        if (item) {
+          const canvas = yield item;
+          members.push({
+            '@id': specificResourceToString(_item),
+            '@type': item.type,
+            label: canvas ? canvas.label : undefined,
+            within: entity.id,
+          });
+          if (item.type === 'Canvas') {
+            canvases.push(item.id);
+          }
         }
       }
     }

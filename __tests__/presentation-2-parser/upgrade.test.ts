@@ -21,6 +21,7 @@ import { presentation2to3 } from '../../src/presentation-2';
 import { Validator } from '@hyperion-framework/validator';
 import annoList from '../../fixtures/presentation-2/iiif-fixture-annotation-list.json';
 import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
+import loc from '../../fixtures/presentation-2/loc.json';
 
 describe('Presentation 2 to 3', () => {
   const validator = new Validator();
@@ -257,6 +258,19 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
+  test('LOC manifest', () => {
+    const result = presentation2to3.traverseManifest(loc as any);
+
+    expect(result.type).toEqual('Manifest');
+
+    expect(result.thumbnail![0].type).toEqual('Image');
+
+    const isValid = validator.validateManifest(result);
+
+    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(isValid).toEqual(true);
+  });
+
   test('IIIF Fixture with dimensions', () => {
     const result = presentation2to3.traverseManifest(withDimensions as any);
     expect(result.type).toEqual('Manifest');
@@ -302,10 +316,10 @@ describe('Presentation 2 to 3', () => {
           {
             "body": {
               "chars": "Top of First Page to Display",
-              "id": "http://example.org/cnt:ContentAsText/363",
+              "id": "http://example.org/cnt:ContentAsText/418",
               "type": "TextualBody",
             },
-            "id": "http://example.org/oa:Annotation/364",
+            "id": "http://example.org/oa:Annotation/419",
             "motivation": "painting",
             "target": {
               "selector": {
@@ -324,18 +338,18 @@ describe('Presentation 2 to 3', () => {
             "body": [
               {
                 "chars": "character",
-                "id": "http://example.org/oa:Tag/365",
+                "id": "http://example.org/oa:Tag/420",
                 "type": "Tag",
               },
               {
                 "chars": "<p>万</p>
       <p><audio style=\\"display: none;\\" controls=\\"controls\\"></audio></p>",
                 "format": "text/html",
-                "id": "http://example.org/dctypes:Text/366",
+                "id": "http://example.org/dctypes:Text/421",
                 "type": "Text",
               },
             ],
-            "id": "http://example.org/oa:Annotation/367",
+            "id": "http://example.org/oa:Annotation/422",
             "motivation": [
               "tagging",
               "commenting",
@@ -379,17 +393,17 @@ describe('Presentation 2 to 3', () => {
               {
                 "chars": "<p><i>Zone of interest</i><br/><b>Place</b><br/>Cauca of Huila</p>",
                 "format": "text/html",
-                "id": "http://example.org/dctypes:Text/368",
+                "id": "http://example.org/dctypes:Text/423",
                 "type": "Text",
               },
               {
                 "chars": "Colombia",
-                "id": "http://example.org/oa:Tag/369",
+                "id": "http://example.org/oa:Tag/424",
                 "type": "Tag",
               },
               {
                 "chars": "Cauca",
-                "id": "http://example.org/oa:Tag/370",
+                "id": "http://example.org/oa:Tag/425",
                 "type": "Tag",
               },
             ],
@@ -437,7 +451,7 @@ describe('Presentation 2 to 3', () => {
             "body": {
               "chars": "<p><i>Surface tool</i><br/><b>Feuille</b><br/>70.97 mm²</p>",
               "format": "text/html",
-              "id": "http://example.org/dctypes:Text/371",
+              "id": "http://example.org/dctypes:Text/426",
               "type": "Text",
             },
             "id": "https://collections.recolnat.org/annotate-server/iiif/2/annotationList/30/febbe57672bb5eaf097de6c5448c43ad8a82e012/list/3",
