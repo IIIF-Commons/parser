@@ -41,6 +41,7 @@
     },
     "./upgrader": {
       "require": "./dist/upgrader/index.umd.js",
+      "import": "./dist/upgrader/index.umd.js",
       "types": "./dist/upgrader/index.d.ts"
     }
   },
