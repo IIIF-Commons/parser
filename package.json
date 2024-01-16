@@ -2,6 +2,11 @@
   "name": "@iiif/parser",
   "version": "1.1.2",
   "license": "MIT",
+  "description": "IIIF Presentation 2 and 3 parsing utilities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iiif-commons/parser"
+  },
   "main": "dist/bundle/cjs/index.js",
   "module": "dist/bundle/esm/index.mjs",
   "types": "dist/index.d.ts",
@@ -11,60 +16,40 @@
   "exports": {
     ".": {
       "require": "./dist/bundle/cjs/index.js",
-      "import": "./dist/bundle/esm/index.mjs"
+      "import": "./dist/bundle/esm/index.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./presentation-2": {
       "require": "./dist/presentation-2/cjs/index.js",
-      "import": "./dist/presentation-2/esm/index.mjs"
+      "import": "./dist/presentation-2/esm/index.mjs",
+      "types": "./dist/presentation-2/index.d.ts"
     },
     "./presentation-3": {
       "require": "./dist/bundle/cjs/index.js",
-      "import": "./dist/bundle/esm/index.mjs"
+      "import": "./dist/bundle/esm/index.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./strict": {
       "require": "./dist/strict/cjs/index.js",
-      "import": "./dist/strict/esm/index.mjs"
+      "import": "./dist/strict/esm/index.mjs",
+      "types": "./dist/strict/index.d.ts"
     },
     "./image-3": {
       "require": "./dist/image-3/cjs/index.js",
-      "import": "./dist/image-3/esm/index.mjs"
+      "import": "./dist/image-3/esm/index.mjs",
+      "types": "./dist/image-3/index.d.ts"
     },
-    "./upgrader": "./dist/upgrader/index.umd.js",
-    "./dist/presentation-2/index.d.ts":  {
-      "import": "./dist/presentation-2/index.d.ts"
-    },
-    "./dist/index.d.ts": {
-      "import": "./dist/index.d.ts"
-    },
-    "./dist/upgrader/index.d.ts":  {
-      "import": "./dist/upgrader/index.d.ts"
-    },
-    "./dist/strict/index.d.ts": {
-      "import": "./dist/strict/index.d.ts"
-    },
-    "./dist/image-3/index.d.ts": {
-      "import": "./dist/image-3/index.d.ts"
+    "./upgrader": {
+      "require": "./dist/upgrader/index.umd.js",
+      "import": "./dist/upgrader/index.umd.js",
+      "types": "./dist/upgrader/index.d.ts"
     }
   },
   "typesVersions": {
     "*": {
       "*": [
-        "dist/index.d.ts"
-      ],
-      "presentation-2": [
-        "dist/presentation-2/index.d.ts"
-      ],
-      "presentation-3": [
-        "dist/index.d.ts"
-      ],
-      "upgrader": [
-        "dist/upgrader/index.d.ts"
-      ],
-      "strict": [
-        "dist/strict/index.d.ts"
-      ],
-      "image-3": [
-        "dist/image-3/index.d.ts"
+        "./dist/*",
+        "./*"
       ]
     }
   },

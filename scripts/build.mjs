@@ -1,10 +1,9 @@
 import { defineConfig } from './base-config.mjs';
 import { build } from 'vite';
 import chalk from 'chalk';
-import { execa } from "execa";
+import { execa } from 'execa';
 
 (async () => {
-
   const DIST = 'dist';
 
   // Main UMD build.
@@ -43,7 +42,7 @@ import { execa } from "execa";
       name: 'index',
       outDir: `${DIST}/strict`,
     })
-  )
+  );
   buildMsg('@iiif/parser/image-3');
   await build(
     defineConfig({
@@ -66,21 +65,31 @@ import { execa } from "execa";
   buildMsg('Types');
 
   listItem('@iiif/parser');
-  await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/index.d.ts`, './src/index.ts'])
+  await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/index.d.ts`, './src/index.ts']);
 
   listItem('@iiif/parser/presentation-2');
-  await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/presentation-2/index.d.ts`, './src/presentation-2/index.ts'])
+  await execa('./node_modules/.bin/dts-bundle-generator', [
+    `--out-file=${DIST}/presentation-2/index.d.ts`,
+    './src/presentation-2/index.ts',
+  ]);
 
   listItem('@iiif/parser/strict');
-  await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/strict/index.d.ts`, './src/presentation-3/strict-upgrade.ts'])
+  await execa('./node_modules/.bin/dts-bundle-generator', [
+    `--out-file=${DIST}/strict/index.d.ts`,
+    './src/presentation-3/strict-upgrade.ts',
+  ]);
 
   listItem('@iiif/parser/upgrader');
-  await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/upgrader/index.d.ts`, './src/upgrader.ts'])
+  await execa('./node_modules/.bin/dts-bundle-generator', [
+    `--out-file=${DIST}/upgrader/index.d.ts`,
+    './src/upgrader.ts',
+  ]);
 
   listItem('@iiif/parser/image-3');
-  await execa('./node_modules/.bin/dts-bundle-generator', [`--out-file=${DIST}/image-3/index.d.ts`, './src/image-3/index.ts'])
-
-
+  await execa('./node_modules/.bin/dts-bundle-generator', [
+    `--out-file=${DIST}/image-3/index.d.ts`,
+    './src/image-3/index.ts',
+  ]);
 
   function buildMsg(name) {
     console.log(chalk.grey(`\n\nBuilding ${chalk.blue(name)}\n`));
