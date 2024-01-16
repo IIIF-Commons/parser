@@ -2,6 +2,11 @@
   "name": "@iiif/parser",
   "version": "1.1.2",
   "license": "MIT",
+  "description": "IIIF Presentation 2 and 3 parsing utilities",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iiif-commons/parser"
+  },
   "main": "dist/bundle/cjs/index.js",
   "module": "dist/bundle/esm/index.mjs",
   "types": "dist/index.d.ts",
@@ -42,22 +47,8 @@
   "typesVersions": {
     "*": {
       "*": [
-        "dist/index.d.ts"
-      ],
-      "presentation-2": [
-        "dist/presentation-2/index.d.ts"
-      ],
-      "presentation-3": [
-        "dist/index.d.ts"
-      ],
-      "upgrader": [
-        "dist/upgrader/index.d.ts"
-      ],
-      "strict": [
-        "dist/strict/index.d.ts"
-      ],
-      "image-3": [
-        "dist/image-3/index.d.ts"
+        "./dist/*",
+        "./*"
       ]
     }
   },
