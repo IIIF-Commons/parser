@@ -34,21 +34,9 @@
       "import": "./dist/image-3/esm/index.mjs",
       "types": "./dist/image-3/index.d.ts"
     },
-    "./upgrader": "./dist/upgrader/index.umd.js",
-    "./dist/presentation-2/index.d.ts": {
-      "import": "./dist/presentation-2/index.d.ts"
-    },
-    "./dist/index.d.ts": {
-      "import": "./dist/index.d.ts"
-    },
-    "./dist/upgrader/index.d.ts": {
-      "import": "./dist/upgrader/index.d.ts"
-    },
-    "./dist/strict/index.d.ts": {
-      "import": "./dist/strict/index.d.ts"
-    },
-    "./dist/image-3/index.d.ts": {
-      "import": "./dist/image-3/index.d.ts"
+    "./upgrader": {
+      "require": "./dist/upgrader/index.umd.js",
+      "types": "./dist/upgrader/index.d.ts"
     }
   },
   "typesVersions": {
