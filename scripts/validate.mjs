@@ -77,4 +77,4 @@ dedent();
 // }
 // dedent();
 
-console.log(chalk.greenBright(`\n\n ✓ package.json is valid`));
+console.log(chalk.greenBright(`\n\n ✓ package.json is valid `));
