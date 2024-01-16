@@ -57,24 +57,24 @@ for (const exportKey of exportKeys) {
 }
 dedent();
 
-// const typesVersionKeys = Object.keys(pkg.typesVersions);
-// logWithIndent(`"typesVersions": {`);
-// indent();
-// for (const typesVersionKey of typesVersionKeys) {
-//   const variations = Object.keys(pkg.typesVersions[typesVersionKey]);
-//   logWithIndent(`"${typesVersionKey}": {`);
-//   indent();
-//   for (const variation of variations) {
-//     const listOfTypes = pkg.typesVersions[typesVersionKey][variation];
-//     logWithIndent(`"${variation}": [`);
-//     indent();
-//     for (const pathToTypescriptFile of listOfTypes) {
-//       await checkFile(pathToTypescriptFile);
-//     }
-//     dedent(true);
-//   }
-//   dedent();
-// }
-// dedent();
+const typesVersionKeys = Object.keys(pkg.typesVersions);
+logWithIndent(`"typesVersions": {`);
+indent();
+for (const typesVersionKey of typesVersionKeys) {
+  const variations = Object.keys(pkg.typesVersions[typesVersionKey]);
+  logWithIndent(`"${typesVersionKey}": {`);
+  indent();
+  for (const variation of variations) {
+    const listOfTypes = pkg.typesVersions[typesVersionKey][variation];
+    logWithIndent(`"${variation}": [`);
+    indent();
+    for (const pathToTypescriptFile of listOfTypes) {
+      await checkFile(pathToTypescriptFile);
+    }
+    dedent(true);
+  }
+  dedent();
+}
+dedent();
 
 console.log(chalk.greenBright(`\n\n ✓ package.json is valid `));
