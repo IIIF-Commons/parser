@@ -22,6 +22,8 @@ import { Validator } from '@hyperion-framework/validator';
 import annoList from '../../fixtures/presentation-2/iiif-fixture-annotation-list.json';
 import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
 import loc from '../../fixtures/presentation-2/loc.json';
+import artic from '../../fixtures/presentation-2/artic-manifest.json';
+import { expect } from 'vitest';
 
 describe('Presentation 2 to 3', () => {
   const validator = new Validator();
@@ -271,6 +273,86 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
+  test('Art Institute of Chicago manifest', () => {
+    const result = presentation2to3.traverseManifest(artic as any);
+    expect(result.type).toEqual('Manifest');
+
+    expect(result.metadata).toMatchInlineSnapshot(`
+      [
+        {
+          "label": {
+            "none": [
+              "Artist / Maker",
+            ],
+          },
+          "value": {
+            "none": [
+              "Georges Seurat
+      French, 1859-1891",
+            ],
+          },
+        },
+        {
+          "label": {
+            "none": [
+              "Medium",
+            ],
+          },
+          "value": {
+            "none": [
+              "Oil on canvas",
+            ],
+          },
+        },
+        {
+          "label": {
+            "none": [
+              "Dimensions",
+            ],
+          },
+          "value": {
+            "none": [
+              "207.5 × 308.1 cm (81 3/4 × 121 1/4 in.)",
+            ],
+          },
+        },
+        {
+          "label": {
+            "none": [
+              "Object Number",
+            ],
+          },
+          "value": {
+            "none": [
+              "1926.224",
+            ],
+          },
+        },
+        {
+          "label": {
+            "none": [
+              "Collection",
+            ],
+          },
+          "value": {
+            "none": [
+              "<a href='http://www.artic.edu/collection' target='_blank'>Art Institute of Chicago</a>",
+            ],
+          },
+        },
+      ]
+    `);
+    expect(result.summary).toMatchInlineSnapshot(`
+      {
+        "en": [
+          "In his best-known and largest painting, Georges Seurat depicted people from different social classes strolling and relaxing in a park just west of Paris on La Grande Jatte, an island in the Seine River. Although he took his subject from modern life, Seurat sought to evoke the sense of timelessness associated with ancient art, especially Egyptian and Greek sculpture. He once wrote, “I want to make modern people, in their essential traits, move about as they do on those friezes, and place them on canvases organized by harmonies of color.”
+      Seurat painted A Sunday on La Grande Jatte—1884 using pointillism, a highly systematic and scientific technique based on the hypothesis that closely positioned points of pure color mix together in the viewer’s eye. He began work on the canvas in 1884 (and included this date in the title) with a layer of small, horizontal brushstrokes in complementary colors. He next added a series of dots that coalesce into solid and luminous forms when seen from a distance. Sometime before 1889 Seurat added a border of blue, orange, and red dots that provide a visual transition between the painting’s interior and the specially designed white frame, which has been re-created at the Art Institute.
+      ",
+        ],
+      }
+    `);
+  });
+
   test('IIIF Fixture with dimensions', () => {
     const result = presentation2to3.traverseManifest(withDimensions as any);
     expect(result.type).toEqual('Manifest');
@@ -316,10 +398,10 @@ describe('Presentation 2 to 3', () => {
           {
             "body": {
               "chars": "Top of First Page to Display",
-              "id": "http://example.org/cnt:ContentAsText/418",
+              "id": "http://example.org/cnt:ContentAsText/420",
               "type": "TextualBody",
             },
-            "id": "http://example.org/oa:Annotation/419",
+            "id": "http://example.org/oa:Annotation/421",
             "motivation": "painting",
             "target": {
               "selector": {
@@ -338,18 +420,18 @@ describe('Presentation 2 to 3', () => {
             "body": [
               {
                 "chars": "character",
-                "id": "http://example.org/oa:Tag/420",
+                "id": "http://example.org/oa:Tag/422",
                 "type": "Tag",
               },
               {
                 "chars": "<p>万</p>
       <p><audio style=\\"display: none;\\" controls=\\"controls\\"></audio></p>",
                 "format": "text/html",
-                "id": "http://example.org/dctypes:Text/421",
+                "id": "http://example.org/dctypes:Text/423",
                 "type": "Text",
               },
             ],
-            "id": "http://example.org/oa:Annotation/422",
+            "id": "http://example.org/oa:Annotation/424",
             "motivation": [
               "tagging",
               "commenting",
@@ -393,17 +475,17 @@ describe('Presentation 2 to 3', () => {
               {
                 "chars": "<p><i>Zone of interest</i><br/><b>Place</b><br/>Cauca of Huila</p>",
                 "format": "text/html",
-                "id": "http://example.org/dctypes:Text/423",
+                "id": "http://example.org/dctypes:Text/425",
                 "type": "Text",
               },
               {
                 "chars": "Colombia",
-                "id": "http://example.org/oa:Tag/424",
+                "id": "http://example.org/oa:Tag/426",
                 "type": "Tag",
               },
               {
                 "chars": "Cauca",
-                "id": "http://example.org/oa:Tag/425",
+                "id": "http://example.org/oa:Tag/427",
                 "type": "Tag",
               },
             ],
@@ -451,7 +533,7 @@ describe('Presentation 2 to 3', () => {
             "body": {
               "chars": "<p><i>Surface tool</i><br/><b>Feuille</b><br/>70.97 mm²</p>",
               "format": "text/html",
-              "id": "http://example.org/dctypes:Text/426",
+              "id": "http://example.org/dctypes:Text/428",
               "type": "Text",
             },
             "id": "https://collections.recolnat.org/annotate-server/iiif/2/annotationList/30/febbe57672bb5eaf097de6c5448c43ad8a82e012/list/3",

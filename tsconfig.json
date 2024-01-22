@@ -8,10 +8,7 @@
     "importHelpers": true,
     "skipLibCheck": true,
     "noEmitHelpers": true,
-    "lib": [
-      "dom",
-      "es2019"
-    ],
+    "lib": ["dom", "es2019"],
     "jsx": "react",
     "target": "esnext",
     "module": "esnext",
@@ -25,12 +22,6 @@
     "rootDir": "./src",
     "types": ["vitest/globals"]
   },
-  "include": [
-    "./src/**/*",
-    "./src/*",
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-  ]
+  "include": ["./src/**/*", "./src/*"],
+  "exclude": ["node_modules", "dist"]
 }

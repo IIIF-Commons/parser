@@ -12,6 +12,29 @@ const configuration = {
   providerName: 'Unknown',
 };
 
+function compatLanguageMap(inputLangProperty?: unknown): Array<Presentation2.LanguageProperty> {
+  if (typeof inputLangProperty === 'string') {
+    return [inputLangProperty];
+  }
+  if (!inputLangProperty) {
+    return [];
+  }
+  const arrayOfValues = Array.isArray(inputLangProperty) ? inputLangProperty : [inputLangProperty];
+
+  const languageArray: Presentation2.LanguageProperty[] = [];
+  for (const language of arrayOfValues) {
+    if (typeof language === 'string') {
+      languageArray.push(language);
+      continue;
+    }
+    languageArray.push({
+      '@language': language['@language'] || language.language,
+      '@value': language['@value'] || language.value,
+    });
+  }
+  return languageArray;
+}
+
 export function convertLanguageMapping(
   inputLangProperty?: Presentation2.OneOrMany<Presentation2.LanguageProperty>,
   defaultLang = 'none'
@@ -20,7 +43,7 @@ export function convertLanguageMapping(
     return {};
   }
 
-  const arrayOfValues = Array.isArray(inputLangProperty) ? inputLangProperty : [inputLangProperty];
+  const arrayOfValues = compatLanguageMap(inputLangProperty);
 
   const languageMap: Presentation3.InternationalString = {};
 
