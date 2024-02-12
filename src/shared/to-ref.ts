@@ -19,7 +19,7 @@ export function toRef<T extends string = any>(reference: any, _typeHint?: T): Re
   let _type = type && type !== 'unknown' ? type : (reference as any).type || (reference as any)['@type'];
   const _id = (reference as any).id || (reference as any)['@id'];
 
-  if (_type.indexOf(':') !== -1) {
+  if (_type && _type.indexOf(':') !== -1) {
     _type = _type.split(':').pop();
   }
 
