@@ -7844,7 +7844,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">Garden lounge</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><img class=\\"annotatedzoom-annotation-detail__image\\" src=\\"https://media.vam.ac.uk/feature/annotatedzoom/O1023003/2017KE6202-Aquitania-Garden-Lounge-cropped.jpg\\" width=300 height=250/><p>“As cool, as restful, as any terrace overlooking a rose-garden.” (<i>The New Art of Going Abroad</i>, 1929). Overlooking the sea and decorated with palms, the garden lounge was a fashionable place to have tea and was sometimes used for dancing.</p><p class=\\"annotatedzoom-annotation-detail__credit\\">Photograph from <em>The New Art of Going Abroad</em>, 1929, US. National Art Library: 38041986015030. © Victoria and Albert Museum, London</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">Garden lounge</h2><div class="annotatedzoom-annotation-detail__content"><img class="annotatedzoom-annotation-detail__image" src="https://media.vam.ac.uk/feature/annotatedzoom/O1023003/2017KE6202-Aquitania-Garden-Lounge-cropped.jpg" width=300 height=250/><p>“As cool, as restful, as any terrace overlooking a rose-garden.” (<i>The New Art of Going Abroad</i>, 1929). Overlooking the sea and decorated with palms, the garden lounge was a fashionable place to have tea and was sometimes used for dancing.</p><p class="annotatedzoom-annotation-detail__credit">Photograph from <em>The New Art of Going Abroad</em>, 1929, US. National Art Library: 38041986015030. © Victoria and Albert Museum, London</p></div>",
       },
       "vault://457d03bf": {
         "format": "text/html",
@@ -7857,7 +7857,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">Stores</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><p>Ocean liners required huge quantities of food, enough for all crew and passengers – the equivalent to feeding a floating city. Cunard catered for varied tastes. Provisions for one trip included 500 sheep kidneys, 400 ox tails, 800 tongues and large quantities of frogs’ legs, as well as geese, turkey, duck, game and “75 heads of cattle and calfs”.</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">Stores</h2><div class="annotatedzoom-annotation-detail__content"><p>Ocean liners required huge quantities of food, enough for all crew and passengers – the equivalent to feeding a floating city. Cunard catered for varied tastes. Provisions for one trip included 500 sheep kidneys, 400 ox tails, 800 tongues and large quantities of frogs’ legs, as well as geese, turkey, duck, game and “75 heads of cattle and calfs”.</p></div>",
       },
       "vault://49c80c4f": {
         "format": "text/html",
@@ -7870,7 +7870,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">Third-class dining saloon</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><p>While extravagant dishes and refined delicacies were served in first class, third-class meals were less sophisticated. A third-class lunch on a Cunard ship in the 1920s could include rice soup, boiled haddock or braised beef with cabbage, boiled potatoes, bread and ‘cabin biscuits’, followed by bread and butter pudding. To save space, passengers sat at long communal tables on chairs bolted to the floor, in case of bad weather.</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">Third-class dining saloon</h2><div class="annotatedzoom-annotation-detail__content"><p>While extravagant dishes and refined delicacies were served in first class, third-class meals were less sophisticated. A third-class lunch on a Cunard ship in the 1920s could include rice soup, boiled haddock or braised beef with cabbage, boiled potatoes, bread and ‘cabin biscuits’, followed by bread and butter pudding. To save space, passengers sat at long communal tables on chairs bolted to the floor, in case of bad weather.</p></div>",
       },
       "vault://7ef24143": {
         "format": "text/html",
@@ -7883,7 +7883,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">First-class restaurant</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><img class=\\"annotatedzoom-annotation-detail__image\\" src=\\"https://media.vam.ac.uk/feature/annotatedzoom/O1023003/2017KE6204-Aquitania-restaurant-cropped.jpg\\" width=300 height=250/><p>Dining on ocean liners was a radically different experience depending on the class of travel. In first class, the <i>Aquitania</i>’s Louis XVI-style dining room offered seating in small isolated groups, echoing elegant restaurants on land. The ship’s architect, Arthur Davis, explained that a “cheerful room with comfortable surroundings” was a necessary distraction from “the often very unpleasant conditions” at sea. </p><p class=\\"annotatedzoom-annotation-detail__credit\\">Photograph from <em>The New Art of Going Abroad</em>, 1929, US. National Art Library: 38041986015030. © Victoria and Albert Museum, London</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">First-class restaurant</h2><div class="annotatedzoom-annotation-detail__content"><img class="annotatedzoom-annotation-detail__image" src="https://media.vam.ac.uk/feature/annotatedzoom/O1023003/2017KE6204-Aquitania-restaurant-cropped.jpg" width=300 height=250/><p>Dining on ocean liners was a radically different experience depending on the class of travel. In first class, the <i>Aquitania</i>’s Louis XVI-style dining room offered seating in small isolated groups, echoing elegant restaurants on land. The ship’s architect, Arthur Davis, explained that a “cheerful room with comfortable surroundings” was a necessary distraction from “the often very unpleasant conditions” at sea. </p><p class="annotatedzoom-annotation-detail__credit">Photograph from <em>The New Art of Going Abroad</em>, 1929, US. National Art Library: 38041986015030. © Victoria and Albert Museum, London</p></div>",
       },
       "vault://9a81c074": {
         "format": "text/html",
@@ -7896,7 +7896,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">Boiler room</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><p>In 1919 the <i>Aquitania</i> was refitted and converted from coal-burning to oil-burning engines, which meant fewer crew were required to labour in the engine room.</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">Boiler room</h2><div class="annotatedzoom-annotation-detail__content"><p>In 1919 the <i>Aquitania</i> was refitted and converted from coal-burning to oil-burning engines, which meant fewer crew were required to labour in the engine room.</p></div>",
       },
       "vault://9db702ac": {
         "format": "text/html",
@@ -7909,7 +7909,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">First-class lounge</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><img class=\\"annotatedzoom-annotation-detail__image\\" src=\\"https://media.vam.ac.uk/feature/annotatedzoom/O1023003/Aquitania-lounge-drawing-room-cropped.jpg\\" width=300 height=250/><p>First-class public rooms were located in the centre of the ship – the most stable and comfortable areas on board. The <i>Aquitania</i>'s opulent interiors were inspired by classical architecture &ndash; spot the Ionic columns in the lounge. Architect Arthur Davis recommended the use of plaster and papier-mâché for ceilings, domes, and other decorative moulding, but advised against using marble and brickwork, as these would make the ship top-heavy.</p><p class=\\"annotatedzoom-annotation-detail__credit\\">Photograph from <em>The New Art of Going Abroad</em>, 1929, US. National Art Library: 38041986015030. © Victoria and Albert Museum, London</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">First-class lounge</h2><div class="annotatedzoom-annotation-detail__content"><img class="annotatedzoom-annotation-detail__image" src="https://media.vam.ac.uk/feature/annotatedzoom/O1023003/Aquitania-lounge-drawing-room-cropped.jpg" width=300 height=250/><p>First-class public rooms were located in the centre of the ship – the most stable and comfortable areas on board. The <i>Aquitania</i>'s opulent interiors were inspired by classical architecture &ndash; spot the Ionic columns in the lounge. Architect Arthur Davis recommended the use of plaster and papier-mâché for ceilings, domes, and other decorative moulding, but advised against using marble and brickwork, as these would make the ship top-heavy.</p><p class="annotatedzoom-annotation-detail__credit">Photograph from <em>The New Art of Going Abroad</em>, 1929, US. National Art Library: 38041986015030. © Victoria and Albert Museum, London</p></div>",
       },
       "vault://c83a324b": {
         "format": "text/html",
@@ -7922,7 +7922,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">Baggage</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><p>Passengers travelling for weeks or months would bring a huge number of trunks, most of which were kept in the baggage store deep in the hull of the ship. Cabins could only accommodate smaller trunks. Louis Vuitton designed the ‘steamer trunk’ specifically to fit under a first-class cabin bed. The baggage store was opened daily so that maids or stewards could collect personal items that were needed during the voyage.</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">Baggage</h2><div class="annotatedzoom-annotation-detail__content"><p>Passengers travelling for weeks or months would bring a huge number of trunks, most of which were kept in the baggage store deep in the hull of the ship. Cabins could only accommodate smaller trunks. Louis Vuitton designed the ‘steamer trunk’ specifically to fit under a first-class cabin bed. The baggage store was opened daily so that maids or stewards could collect personal items that were needed during the voyage.</p></div>",
       },
       "vault://cd5ac71c": {
         "format": "text/html",
@@ -7935,7 +7935,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">Second-class dining saloon</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><p>The second-class spaces, like first class, were decorated in a neo-classical style. “The second-class accommodation on the vessel, though not so sumptuous as the first-class, is still very elaborate and comfortable”, explained the architect. “The dining-room, no less than 104 ft in length and extending across the whole width of the ship, is decorated with paintings adapted from panels by Pergolesi”– the 18th-century decorative artist. (Arthur Davis, <i>The Architectural Review</i>, April 1914)</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">Second-class dining saloon</h2><div class="annotatedzoom-annotation-detail__content"><p>The second-class spaces, like first class, were decorated in a neo-classical style. “The second-class accommodation on the vessel, though not so sumptuous as the first-class, is still very elaborate and comfortable”, explained the architect. “The dining-room, no less than 104 ft in length and extending across the whole width of the ship, is decorated with paintings adapted from panels by Pergolesi”– the 18th-century decorative artist. (Arthur Davis, <i>The Architectural Review</i>, April 1914)</p></div>",
       },
       "vault://eb28a21a": {
         "format": "text/html",
@@ -7948,7 +7948,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">First-class state room</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><img class=\\"annotatedzoom-annotation-detail__image\\" src=\\"https://media.vam.ac.uk/feature/annotatedzoom/O1023003/2017KE6205-state-rooms-on-B-deck-+-D-deck-cropped.jpg\\" width=300 height=250/><p>The <i>Aquitania</i>’s first-class cabins were designed by architect Arthur Davis, whose firm, Mewès and Davis Architects, had decorated the famously opulent Ritz hotels in Paris and London. The cabins were “as spacious as a bedroom at the Ritz or the Barclay. The walls are panelled in grey silk. The carpets are vibrant blue and yellow, as are also the striped silk chair coverings. Note the bath – just off-stage, and the electric heater”. (<i>The New Art of Going Abroad</i>, 1929).</p><p class=\\"annotatedzoom-annotation-detail__credit\\">Photograph from <em>The New Art of Going Abroad</em>, 1929, US. National Art Library: 38041986015030. © Victoria and Albert Museum, London</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">First-class state room</h2><div class="annotatedzoom-annotation-detail__content"><img class="annotatedzoom-annotation-detail__image" src="https://media.vam.ac.uk/feature/annotatedzoom/O1023003/2017KE6205-state-rooms-on-B-deck-+-D-deck-cropped.jpg" width=300 height=250/><p>The <i>Aquitania</i>’s first-class cabins were designed by architect Arthur Davis, whose firm, Mewès and Davis Architects, had decorated the famously opulent Ritz hotels in Paris and London. The cabins were “as spacious as a bedroom at the Ritz or the Barclay. The walls are panelled in grey silk. The carpets are vibrant blue and yellow, as are also the striped silk chair coverings. Note the bath – just off-stage, and the electric heater”. (<i>The New Art of Going Abroad</i>, 1929).</p><p class="annotatedzoom-annotation-detail__credit">Photograph from <em>The New Art of Going Abroad</em>, 1929, US. National Art Library: 38041986015030. © Victoria and Albert Museum, London</p></div>",
       },
       "vault://f2184d89": {
         "format": "text/html",
@@ -7961,7 +7961,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "type": "TextualBody",
-        "value": "<h2 class=\\"annotatedzoom-annotation-detail__label\\">Third-class four berth room</h2><div class=\\"annotatedzoom-annotation-detail__content\\"><p>Liners were strictly organised spaces which reflected social hierarchies. Although people travelling in third class could account for 60% of the total number of passengers, they were segregated into a relatively small space in the lower decks of the ship, close to the noisy engine room. These four-berth rooms had none of the luxurious furnishings or fabrics found in first class, but they were an improvement on the communal sleeping quarters provided for steerage-class passengers on earlier liners.</p></div>",
+        "value": "<h2 class="annotatedzoom-annotation-detail__label">Third-class four berth room</h2><div class="annotatedzoom-annotation-detail__content"><p>Liners were strictly organised spaces which reflected social hierarchies. Although people travelling in third class could account for 60% of the total number of passengers, they were segregated into a relatively small space in the lower decks of the ship, close to the noisy engine room. These four-berth rooms had none of the luxurious furnishings or fabrics found in first class, but they were an improvement on the communal sleeping quarters provided for steerage-class passengers on earlier liners.</p></div>",
       },
     },
     "Manifest": {
@@ -8028,7 +8028,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
             },
             "value": {
               "en": [
-                "Chromolithograph travel poster for \\"Cunard Line - to all parts of the world\\", depicting a cross section of the Aquitania at sea, printed by Thos. Forman & Sons, Nottingham, ca. 1920.",
+                "Chromolithograph travel poster for "Cunard Line - to all parts of the world", depicting a cross section of the Aquitania at sea, printed by Thos. Forman & Sons, Nottingham, ca. 1920.",
               ],
             },
           },
@@ -8100,7 +8100,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
             },
             "value": {
               "en": [
-                "Chromolithograph travel poster for \\"Cunard Line - to all parts of the world\\", depicting a cross section of the Aquitania at sea, printed by Thos. Forman & Sons, Nottingham, ca. 1920.",
+                "Chromolithograph travel poster for "Cunard Line - to all parts of the world", depicting a cross section of the Aquitania at sea, printed by Thos. Forman & Sons, Nottingham, ca. 1920.",
               ],
             },
           },
@@ -12314,7 +12314,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3.json 1`
           "value": {
             "en": [
               "Wellcome Collection",
-              "<span>You have permission to make copies of this work under a <a target=\\"_top\\" href=\\"http://creativecommons.org/licenses/by/4.0/\\">Creative Commons, Attribution license</a>.<br/><br/>This licence permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See the <a target=\\"_top\\" href=\\"http://creativecommons.org/licenses/by/4.0/legalcode\\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library.</span>",
+              "<span>You have permission to make copies of this work under a <a target="_top" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons, Attribution license</a>.<br/><br/>This licence permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. See the <a target="_top" href="http://creativecommons.org/licenses/by/4.0/legalcode">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Library.</span>",
             ],
           },
         },
@@ -21098,7 +21098,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/wellcome-p3-2.json 
             "value": {
               "en": [
                 "Wellcome Collection",
-                "<span>You have permission to make copies of this work under a <a target=\\"_top\\" href=\\"http://creativecommons.org/licenses/by-nc/4.0/\\">Creative Commons, Attribution, Non-commercial license</a>.<br/><br/>Non-commercial use includes private study, academic research, teaching, and other activities that are not primarily intended for, or directed towards, commercial advantage or private monetary compensation. See the <a target=\\"_top\\" href=\\"http://creativecommons.org/licenses/by-nc/4.0/legalcode\\">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Collection.</span>",
+                "<span>You have permission to make copies of this work under a <a target="_top" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons, Attribution, Non-commercial license</a>.<br/><br/>Non-commercial use includes private study, academic research, teaching, and other activities that are not primarily intended for, or directed towards, commercial advantage or private monetary compensation. See the <a target="_top" href="http://creativecommons.org/licenses/by-nc/4.0/legalcode">Legal Code</a> for further information.<br/><br/>Image source should be attributed as specified in the full catalogue record. If no source is given the image should be attributed to Wellcome Collection.</span>",
               ],
             },
           },

@@ -425,7 +425,7 @@ describe('Presentation 2 to 3', () => {
               },
               {
                 "chars": "<p>万</p>
-      <p><audio style=\\"display: none;\\" controls=\\"controls\\"></audio></p>",
+      <p><audio style="display: none;" controls="controls"></audio></p>",
                 "format": "text/html",
                 "id": "http://example.org/dctypes:Text/423",
                 "type": "Text",
@@ -444,7 +444,7 @@ describe('Presentation 2 to 3', () => {
                 },
                 {
                   "type": "SvgSelector",
-                  "value": "<svg xmlns='http://www.w3.org/2000/svg'><path xmlns=\\"http://www.w3.org/2000/svg\\" d=\\"M3111.52264,1062.87895h259.04821v0h259.04821v327.86107v327.86107h-259.04821h-259.04821v-327.86107z\\" data-paper-data=\\"{&quot;strokeWidth&quot;:1,&quot;rotation&quot;:0,&quot;deleteIcon&quot;:null,&quot;rotationIcon&quot;:null,&quot;group&quot;:null,&quot;editable&quot;:true,&quot;annotation&quot;:null}\\" id=\\"rectangle_023df9bc-ab63-4d9b-9426-ddbf468fa0c6\\" fill-opacity=\\"0\\" fill=\\"#00bfff\\" fill-rule=\\"nonzero\\" stroke=\\"#00bfff\\" stroke-width=\\"1\\" stroke-linecap=\\"butt\\" stroke-linejoin=\\"miter\\" stroke-miterlimit=\\"10\\" stroke-dasharray=\\"\\" stroke-dashoffset=\\"0\\" font-family=\\"none\\" font-weight=\\"none\\" font-size=\\"none\\" text-anchor=\\"none\\" style=\\"mix-blend-mode: normal\\"/></svg>",
+                  "value": "<svg xmlns='http://www.w3.org/2000/svg'><path xmlns="http://www.w3.org/2000/svg" d="M3111.52264,1062.87895h259.04821v0h259.04821v327.86107v327.86107h-259.04821h-259.04821v-327.86107z" data-paper-data="{&quot;strokeWidth&quot;:1,&quot;rotation&quot;:0,&quot;deleteIcon&quot;:null,&quot;rotationIcon&quot;:null,&quot;group&quot;:null,&quot;editable&quot;:true,&quot;annotation&quot;:null}" id="rectangle_023df9bc-ab63-4d9b-9426-ddbf468fa0c6" fill-opacity="0" fill="#00bfff" fill-rule="nonzero" stroke="#00bfff" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"/></svg>",
                 },
               ],
               "source": "https://purl.stanford.edu/ch264fq0568/iiif/canvas/ch264fq0568_1",
