@@ -15,6 +15,10 @@ These include:
 - [Open Annotations](https://iiif.io/api/annex/openannotation/)
 
 
+> [!NOTE]  
+> A new version of the IIIF Presentation API is being developed (v4) which handles 3D content. This parser will
+> support this version soon. You can read about the additions [here](https://github.com/IIIF/3d/blob/main/temp-draft-4.md)
+
 ### Features
 The features of this library are focussed on encoding the structure of all types of IIIF and providing utilities for extracting data from the IIIF or converting it into another format that is easier to develop with. The aim of the parser is to maximize the IIIF compatibility of other tools built on top of it.
 
