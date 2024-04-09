@@ -11,7 +11,7 @@ export function parseImageServerFromId(url: string): string {
 
   // Strip off the path.
   if (id.indexOf('/') !== -1) {
-    return id.split('/')[0];
+    return id.split('/')[0]!;
   }
 
   // Return the id.

@@ -14,6 +14,7 @@ export * from './profiles/supports-custom-sizes';
 export * from './profiles/image-service-supports-format';
 export * from './profiles/image-service-supports-request';
 export * from './serialize/image-service-request-to-string';
+export * from './serialize/image-service-request-info';
 export * from './serialize/region-parameter-to-string';
 export * from './serialize/rotation-parameter-to-string';
 export * from './serialize/size-parameter-to-string';

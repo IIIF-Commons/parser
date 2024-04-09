@@ -55,7 +55,7 @@ export function identifyResource(resource: any): TraversableEntityTypes {
   if (typeof resource['@type'] === 'string') {
     const hasType = types.indexOf(resource['@type'] as any);
     if (hasType !== -1) {
-      return types[hasType];
+      return types[hasType]!;
     }
   }
 

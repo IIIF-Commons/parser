@@ -78,12 +78,12 @@ function getResource(entityOrString: PolyEntity, type: string): Reference {
 
 function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>>, topLevel: any) {
   return <T extends Reference | string>(type: string, defaultStringType?: string) => {
-    const storeType = entities[type] ? entities[type] : {};
+    const storeType = entities[type] ? entities[type]! : {};
     return (r: T, context: TraversalContext): T => {
       const resource = getResource(r, defaultStringType || type);
       if (resource && resource.id && type) {
         storeType[resource.id] = storeType[resource.id]
-          ? (mergeEntities(storeType[resource.id], resource, {
+          ? (mergeEntities(storeType[resource.id]!, resource, {
               parent: context.parent,
               isTopLevel: topLevel.id === resource.id,
             }) as any)
@@ -317,7 +317,7 @@ function recordServiceForLoading(store: CompatibleStore['entities']) {
     if (normalizedResource && normalizedResource.id) {
       if (store.Service[normalizedResource.id]) {
         // We need to merge.
-        store.Service[id] = mergeEntities(store.Service[id], normalizedResource);
+        store.Service[id] = mergeEntities(store.Service[id]!, normalizedResource);
       } else {
         store.Service[id] = normalizedResource as any;
       }

@@ -306,7 +306,7 @@ describe('serializer', () => {
             },
             "value": {
               "none": [
-                "<span>From: <a href=\\"https://example.org/db/1.html\\">Some Collection</a></span>",
+                "<span>From: <a href="https://example.org/db/1.html">Some Collection</a></span>",
               ],
             },
           },
@@ -495,7 +495,7 @@ describe('serializer', () => {
           },
           {
             "label": "Source",
-            "value": "<span>From: <a href=\\"https://example.org/db/1.html\\">Some Collection</a></span>",
+            "value": "<span>From: <a href="https://example.org/db/1.html">Some Collection</a></span>",
           },
         ],
         "navDate": "1856-01-01T00:00:00Z",

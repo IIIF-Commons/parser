@@ -28,7 +28,19 @@ export function parseImageServiceRequest(input: string, _prefix = ''): ImageServ
     };
   }
 
-  const filenameParts = fileName.split('.');
+  if (
+    typeof scheme === 'undefined' ||
+    typeof server === 'undefined' ||
+    typeof path === 'undefined' ||
+    typeof region === 'undefined' ||
+    typeof size === 'undefined' ||
+    typeof rotation === 'undefined' ||
+    typeof fileName === 'undefined'
+  ) {
+    throw new Error('Invalid image service URL');
+  }
+
+  const [quality = '', format = ''] = fileName.split('.');
 
   return {
     type: 'image',
@@ -40,7 +52,7 @@ export function parseImageServiceRequest(input: string, _prefix = ''): ImageServ
     region: parseRegionParameter(region),
     size: parseSizeParameter(size),
     rotation: parseRotationParameter(rotation),
-    quality: filenameParts[0],
-    format: filenameParts[1],
+    quality,
+    format,
   };
 }

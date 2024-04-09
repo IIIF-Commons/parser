@@ -78,7 +78,7 @@ export function identifyResource(resource: any, typeHint?: string): string {
   if (typeof resource!.type === 'string') {
     const hasType = types.indexOf(resource.type);
     if (hasType !== -1) {
-      return types[hasType];
+      return types[hasType]!;
     }
   }
 
@@ -263,7 +263,7 @@ export class Traverse {
     return manifest;
   }
 
-  _traverseManifest = compose<Manifest>(
+  _traverseManifest: (manifest: Manifest) => Manifest = compose<Manifest>(
     this.traverseManifestItems.bind(this),
     this.traverseLinking.bind(this),
     this.traverseDescriptive.bind(this),
@@ -297,7 +297,7 @@ export class Traverse {
     return resource;
   }
 
-  _traverseCanvas = compose<Canvas>(
+  _traverseCanvas: (canvas: Canvas) => Canvas = compose<Canvas>(
     this.traverseCanvasItems.bind(this),
     this.traverseLinking.bind(this),
     this.traverseDescriptive.bind(this),
@@ -318,7 +318,7 @@ export class Traverse {
     return annotationPage;
   }
 
-  _traverseAnnotationPage = compose<AnnotationPage>(
+  _traverseAnnotationPage: (page: AnnotationPage) => AnnotationPage = compose<AnnotationPage>(
     this.traverseAnnotationPageItems.bind(this),
     this.traverseLinking.bind(this),
     this.traverseDescriptive.bind(this)
@@ -442,7 +442,7 @@ export class Traverse {
     return range;
   }
 
-  _traverseRange = compose<Range>(
+  _traverseRange: (range: Range) => Range = compose<Range>(
     this.traverseRangeRanges.bind(this),
     this.traverseLinking.bind(this),
     this.traverseDescriptive.bind(this),
@@ -479,7 +479,19 @@ export class Traverse {
     return this.traverseType<Service>(_service, { parent }, this.traversals.service);
   }
 
-  traverseUnknown(resource: any, { parent, typeHint }: { typeHint?: string; parent?: any } = {}) {
+  traverseUnknown(
+    resource: any,
+    { parent, typeHint }: { typeHint?: string; parent?: any } = {}
+  ):
+    | Collection
+    | Manifest
+    | Canvas
+    | AnnotationPage
+    | Annotation
+    | ContentResource
+    | Range
+    | Service
+    | ResourceProvider {
     const type = identifyResource(resource, typeHint);
 
     switch (type) {
@@ -502,9 +514,6 @@ export class Traverse {
       case 'Agent':
         return this.traverseAgent(resource as ResourceProvider, parent);
       default: {
-        if (typeHint) {
-          return typeHint;
-        }
         throw new Error(`Unknown or unsupported resource type of ${type}`);
       }
     }

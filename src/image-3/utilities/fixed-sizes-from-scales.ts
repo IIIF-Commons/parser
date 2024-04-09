@@ -15,6 +15,7 @@ export function fixedSizesFromScales(width: number, height: number, scales: numb
   const sizes: ImageSize[] = [];
   for (let i = 0; i < len; i++) {
     const scale = scales[i];
+    if (!scale) continue;
     sizes.push({
       width: Math.floor(width / scale),
       height: Math.floor(height / scale),

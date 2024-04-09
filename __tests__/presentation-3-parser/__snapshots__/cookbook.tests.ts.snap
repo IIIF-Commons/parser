@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`Cookbook > Testing normalize %p (%p) 0001-mvm-image https://iiif.io/api/cookbook/recipe/0001-mvm-image/manifest.json 1`] = `
 {
@@ -1656,7 +1656,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0007-string-formats https://iiif.i
           },
           "value": {
             "en": [
-              "<span>Glen Robson, IIIF Technical Coordinator. <a href=\\"https://creativecommons.org/licenses/by-sa/3.0\\">CC BY-SA 3.0</a> <img src=\\"https://licensebuttons.net/l/by-sa/3.0/88x31.png\\"/></span>",
+              "<span>Glen Robson, IIIF Technical Coordinator. <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> <img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"/></span>",
             ],
           },
         },
@@ -1668,7 +1668,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0007-string-formats https://iiif.i
         "structures": [],
         "summary": {
           "en": [
-            "<p>Picture taken by the <a href=\\"https://github.com/glenrobson\\">IIIF Technical Coordinator</a></p>",
+            "<p>Picture taken by the <a href="https://github.com/glenrobson">IIIF Technical Coordinator</a></p>",
           ],
         },
         "thumbnail": [],
@@ -1767,14 +1767,14 @@ exports[`Cookbook > Testing normalize %p (%p) 0007-string-formats https://iiif.i
     },
     "value": {
       "en": [
-        "<span>Glen Robson, IIIF Technical Coordinator. <a href=\\"https://creativecommons.org/licenses/by-sa/3.0\\">CC BY-SA 3.0</a> <img src=\\"https://licensebuttons.net/l/by-sa/3.0/88x31.png\\"/></span>",
+        "<span>Glen Robson, IIIF Technical Coordinator. <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> <img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"/></span>",
       ],
     },
   },
   "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
   "summary": {
     "en": [
-      "<p>Picture taken by the <a href=\\"https://github.com/glenrobson\\">IIIF Technical Coordinator</a></p>",
+      "<p>Picture taken by the <a href="https://github.com/glenrobson">IIIF Technical Coordinator</a></p>",
     ],
   },
   "type": "Manifest",
@@ -1942,7 +1942,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
           },
           "value": {
             "en": [
-              "<span>Glen Robson, IIIF Technical Coordinator. <a href=\\"https://creativecommons.org/licenses/by-sa/3.0\\">CC BY-SA 3.0</a> <a href=\\"https://creativecommons.org/licenses/by-sa/3.0\\" title\\"CC BY-SA 3.0\\"><img src=\\"https://licensebuttons.net/l/by-sa/3.0/88x31.png\\"/></a></span>",
+              "<span>Glen Robson, IIIF Technical Coordinator. <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> <a href="https://creativecommons.org/licenses/by-sa/3.0" title"CC BY-SA 3.0"><img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"/></a></span>",
             ],
           },
         },
@@ -1954,7 +1954,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
         "structures": [],
         "summary": {
           "en": [
-            "<p>Picture taken by the <a href=\\"https://github.com/glenrobson\\">IIIF Technical Coordinator</a></p>",
+            "<p>Picture taken by the <a href="https://github.com/glenrobson">IIIF Technical Coordinator</a></p>",
           ],
         },
         "thumbnail": [],
@@ -2039,14 +2039,14 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
     },
     "value": {
       "en": [
-        "<span>Glen Robson, IIIF Technical Coordinator. <a href=\\"https://creativecommons.org/licenses/by-sa/3.0\\">CC BY-SA 3.0</a> <a href=\\"https://creativecommons.org/licenses/by-sa/3.0\\" title\\"CC BY-SA 3.0\\"><img src=\\"https://licensebuttons.net/l/by-sa/3.0/88x31.png\\"/></a></span>",
+        "<span>Glen Robson, IIIF Technical Coordinator. <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> <a href="https://creativecommons.org/licenses/by-sa/3.0" title"CC BY-SA 3.0"><img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"/></a></span>",
       ],
     },
   },
   "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
   "summary": {
     "en": [
-      "<p>Picture taken by the <a href=\\"https://github.com/glenrobson\\">IIIF Technical Coordinator</a></p>",
+      "<p>Picture taken by the <a href="https://github.com/glenrobson">IIIF Technical Coordinator</a></p>",
     ],
   },
   "type": "Manifest",
@@ -3584,7 +3584,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
         "structures": [],
         "summary": {
           "en": [
-            "Playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+            "Playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
           ],
         },
         "thumbnail": [],
@@ -3860,7 +3860,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0010-book-2-viewing-direction-mani
   },
   "summary": {
     "en": [
-      "Playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+      "Playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
     ],
   },
   "type": "Manifest",
@@ -17771,7 +17771,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
         "structures": [],
         "summary": {
           "en": [
-            "Playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+            "Playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
           ],
         },
         "thumbnail": [],
@@ -18060,7 +18060,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0046-rendering https://iiif.io/api
   ],
   "summary": {
     "en": [
-      "Playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+      "Playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
     ],
   },
   "type": "Manifest",
@@ -19008,7 +19008,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
         "structures": [],
         "summary": {
           "en": [
-            "Playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+            "Playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
           ],
         },
         "thumbnail": [],
@@ -19298,7 +19298,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0053-seeAlso https://iiif.io/api/c
   ],
   "summary": {
     "en": [
-      "Playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+      "Playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
     ],
   },
   "type": "Manifest",
@@ -21582,7 +21582,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
         "structures": [],
         "summary": {
           "en": [
-            "Cover of playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+            "Cover of playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
           ],
         },
         "thumbnail": [
@@ -21672,7 +21672,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
   },
   "summary": {
     "en": [
-      "Cover of playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+      "Cover of playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
     ],
   },
   "thumbnail": [
@@ -24978,7 +24978,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
         "structures": [],
         "summary": {
           "en": [
-            "Cover of playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV, and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+            "Cover of playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV, and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
           ],
         },
         "thumbnail": [],
@@ -25134,7 +25134,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0234-provider https://iiif.io/api/
   ],
   "summary": {
     "en": [
-      "Cover of playbill for \\"Akiba gongen kaisen-banashi,\\" \\"Futatsu chōchō kuruwa nikki\\" and \\"Godairiki koi no fūjime\\" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV, and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
+      "Cover of playbill for "Akiba gongen kaisen-banashi," "Futatsu chōchō kuruwa nikki" and "Godairiki koi no fūjime" performed at the Chikugo Theater in Osaka from the fifth month of Kaei 2 (May, 1849); main actors: Gadō Kataoka II, Ebizō Ichikawa VI, Kitō Sawamura II, Daigorō Mimasu IV, and Karoku Nakamura I; on front cover: producer Mominosuke Ichikawa's crest.",
     ],
   },
   "type": "Manifest",

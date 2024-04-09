@@ -9,7 +9,7 @@ export function expandTargetToSpecificResource(
 ): SpecificResource {
   if (Array.isArray(target)) {
     // Don't support multiple targets for now.
-    return expandTargetToSpecificResource(target[0]);
+    return expandTargetToSpecificResource(target[0]!);
   }
 
   if (typeof target === 'string') {
@@ -19,7 +19,7 @@ export function expandTargetToSpecificResource(
       // This is an unknown selector.
       return {
         type: 'SpecificResource',
-        source: { id, type: (options.typeMap && (options.typeMap[id] as any)) || options.typeHint || 'Unknown' },
+        source: { id, type: (options.typeMap && (options.typeMap[id!] as any)) || options.typeHint || 'Unknown' },
       };
     }
 
@@ -41,7 +41,7 @@ export function expandTargetToSpecificResource(
     target.type === 'Independents'
   ) {
     // we also don't support these, just choose the first.
-    return expandTargetToSpecificResource(target.items[0]);
+    return expandTargetToSpecificResource(target.items[0]!);
   }
 
   if (target.type === 'SpecificResource') {
