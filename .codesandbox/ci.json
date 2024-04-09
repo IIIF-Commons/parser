@@ -3,6 +3,5 @@
     "new",
     "simple-parser-2xxljf"
   ],
-  "buildCommand": "prepublishOnly",
-  "node": "16"
+  "node": "18"
 }
