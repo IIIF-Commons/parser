@@ -32,7 +32,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(iiifManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -40,7 +40,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(iiifManifest2 as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -49,7 +49,7 @@ describe('Presentation 2 to 3', () => {
 
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
 
     expect(result.service).toMatchInlineSnapshot(`
@@ -109,7 +109,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(nlwManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -122,7 +122,7 @@ describe('Presentation 2 to 3', () => {
     //   'https://adore.ugent.be/IIIF/manifests/archive.ugent.be:DEED7A64-2798-11E3-B8DE-18E597481370'
     // );
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -130,7 +130,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(bodleianManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -138,7 +138,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(stanfordManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -146,7 +146,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(folgerManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -154,7 +154,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(villanovaManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -162,7 +162,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(ngaManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -183,7 +183,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(nlsCollection as any);
     const isValid = validator.validateCollection(result);
 
-    expect(validator.validators.collection.errors).toEqual(null);
+    expect(validator.validators.collection!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -193,7 +193,7 @@ describe('Presentation 2 to 3', () => {
 
     expect(result.structures).not.toBeUndefined();
 
-    expect(result.items[0].thumbnail).toMatchInlineSnapshot(`
+    expect(result.items[0]!.thumbnail).toMatchInlineSnapshot(`
       [
         {
           "height": 113,
@@ -222,14 +222,14 @@ describe('Presentation 2 to 3', () => {
       }
     `);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
   test('NLS Manifest 2', () => {
     const result = presentation2to3.traverseManifest(nlsManifest2 as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -237,7 +237,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(sbbManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -245,7 +245,7 @@ describe('Presentation 2 to 3', () => {
     const result = presentation2to3.traverseManifest(codexManifest as any);
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -256,7 +256,7 @@ describe('Presentation 2 to 3', () => {
 
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -265,11 +265,11 @@ describe('Presentation 2 to 3', () => {
 
     expect(result.type).toEqual('Manifest');
 
-    expect(result.thumbnail![0].type).toEqual('Image');
+    expect(result.thumbnail![0]!.type).toEqual('Image');
 
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
@@ -359,7 +359,7 @@ describe('Presentation 2 to 3', () => {
 
     const isValid = validator.validateManifest(result);
 
-    expect(validator.validators.manifest.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
 
     expect(result.service).toMatchInlineSnapshot(`

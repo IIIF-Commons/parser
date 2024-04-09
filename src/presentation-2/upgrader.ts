@@ -185,7 +185,7 @@ function getNewType(resource: any): string {
         return 'TextualBody';
       }
       // Nothing we can do?
-      oldType = oldType[0];
+      oldType = oldType[0]!;
     }
 
     for (const prefix of ['sc', 'oa', 'dcterms', 'dctypes', 'iiif']) {
@@ -350,12 +350,12 @@ let mintedIdCounter = 0;
 
 function mintNewIdFromResource(
   resource: Presentation3.SomeRequired<Presentation2.TechnicalProperties, '@type'>,
-  subresource?: string
+  subResource?: string
 ) {
   const origId = encodeURI((resource as { id?: string }).id || resource['@id'] || '').trim();
 
-  if (origId && subresource) {
-    return `${origId}/${subresource}`;
+  if (origId && subResource) {
+    return `${origId}/${subResource}`;
   }
 
   if (origId) {
@@ -365,7 +365,7 @@ function mintNewIdFromResource(
   mintedIdCounter++;
 
   // @todo.
-  return `http://example.org/${resource['@type']}${subresource ? `/${subresource}` : ''}/${mintedIdCounter}`;
+  return `http://example.org/${resource['@type']}${subResource ? `/${subResource}` : ''}/${mintedIdCounter}`;
 }
 
 // @todo this was removed due to identifiers not being able to be used externally after upgrading.
@@ -381,10 +381,10 @@ function technicalProperties<T extends Partial<Presentation3.TechnicalProperties
     '@context'?: string | string[] | undefined;
   }
 ) {
-  const allBehaviours = [...(resource.behavior || [])];
+  const allBehaviors = [...(resource.behavior || [])];
 
   if (resource.viewingHint) {
-    allBehaviours.push(resource.viewingHint);
+    allBehaviors.push(resource.viewingHint);
   }
 
   let motivation: string | string[] | undefined;
@@ -398,7 +398,7 @@ function technicalProperties<T extends Partial<Presentation3.TechnicalProperties
     '@context': resource['@context'] ? fixContext(resource['@context']) : undefined,
     id: (resource['@id'] || mintNewIdFromResource(resource)).trim(),
     type: getNewType(resource) as any,
-    behavior: allBehaviours.length ? allBehaviours : undefined,
+    behavior: allBehaviors.length ? allBehaviors : undefined,
     // format: This will be an optional async post-process step.
     height: resource.height ? resource.height : undefined,
     width: resource.width ? resource.width : undefined,
@@ -643,7 +643,7 @@ function upgradeAnnotation(annotation: Presentation2.Annotation): Presentation3.
       if (target.length > 1) {
         return { type: 'List', items: target.map(upgradeTarget) as Presentation3.Target[] };
       }
-      target = target[0];
+      target = target[0]!;
     }
     if (typeof target === 'string') {
       return encodeURI(target).trim();

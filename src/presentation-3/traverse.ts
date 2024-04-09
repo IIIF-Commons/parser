@@ -78,7 +78,7 @@ export function identifyResource(resource: any, typeHint?: string): string {
   if (typeof resource!.type === 'string') {
     const hasType = types.indexOf(resource.type);
     if (hasType !== -1) {
-      return types[hasType];
+      return types[hasType]!;
     }
   }
 

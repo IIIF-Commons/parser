@@ -222,7 +222,7 @@ function descriptiveProperties(
   if (item.metadata) {
     if (Array.isArray(item.metadata)) {
       for (let i = 0; i < item.metadata.length; i++) {
-        item.metadata[i] = validMetadataValue(item.metadata[i], `metadata.${i}`, '', logging);
+        item.metadata[i] = validMetadataValue(item.metadata[i]!, `metadata.${i}`, '', logging);
       }
     } else {
       logging.warnings.push(`"metadata" should be an array of {label, value} Language maps`);

@@ -31,11 +31,11 @@ export function parseSizeParameter(pathPart: string): SizeParameter {
   const wh = pathPart.split(',').map((t) => t.trim());
   if (wh.length) {
     if (wh[0] !== '') {
-      size.width = parseInt(wh[0], 10);
+      size.width = parseInt(wh[0]!, 10);
     }
 
     if (wh[1] !== '') {
-      size.height = parseInt(wh[1], 10);
+      size.height = parseInt(wh[1]!, 10);
     }
   }
 

@@ -19,7 +19,7 @@ export function createImageServiceRequest(imageService: ImageService): ImageServ
     prefix: parsed.prefix,
     scheme: parsed.scheme,
     type: 'image',
-    quality: features.extraQualities.indexOf('default') === -1 ? features.extraQualities[0] : 'default',
+    quality: features.extraQualities.indexOf('default') === -1 ? features.extraQualities[0]! : 'default',
     region: {
       full: true,
     },
