@@ -354,7 +354,7 @@ describe('Strict upgrade', () => {
     expect(upgraded.rights).toEqual('http://creativecommons.org/licenses/by/4.0/');
     expect(state.warnings).toMatchInlineSnapshot(`
       [
-        "\\"rights\\" is an informative property and should contain the http variation of the rights statement",
+        ""rights" is an informative property and should contain the http variation of the rights statement",
       ]
     `);
   });
@@ -371,8 +371,8 @@ describe('Strict upgrade', () => {
     expect(upgraded.rights).toEqual('http://creativecommons.org/licenses/by/4.0/');
     expect(state.warnings).toMatchInlineSnapshot(`
       [
-        "\\"rights\\" should only contain a single string",
-        "\\"rights\\" is an informative property and should contain the http variation of the rights statement",
+        ""rights" should only contain a single string",
+        ""rights" is an informative property and should contain the http variation of the rights statement",
       ]
     `);
   });
@@ -389,7 +389,7 @@ describe('Strict upgrade', () => {
     expect(upgraded.rights).toEqual('This is not valid');
     expect(state.warnings).toMatchInlineSnapshot(`
       [
-        "\\"rights\\" should be a valid URI",
+        ""rights" should be a valid URI",
       ]
     `);
   });
@@ -406,7 +406,7 @@ describe('Strict upgrade', () => {
     expect(upgraded.navDate).toBeUndefined();
     expect(state.warnings).toMatchInlineSnapshot(`
       [
-        "\\"navDate\\" should be a valid XSD dateTime literal",
+        ""navDate" should be a valid XSD dateTime literal",
       ]
     `);
   });
@@ -436,7 +436,7 @@ describe('Strict upgrade', () => {
     expect(upgraded.navDate).toEqual('2010-01-01T00:00:00Z');
     expect(state.warnings).toMatchInlineSnapshot(`
       [
-        "\\"navDate\\" should not contain extra whitespace",
+        ""navDate" should not contain extra whitespace",
       ]
     `);
   });
@@ -453,7 +453,7 @@ describe('Strict upgrade', () => {
     expect(manifest.language).toEqual(['en']);
     expect(state.warnings).toMatchInlineSnapshot(`
       [
-        "\\"language\\" should be Array of values",
+        ""language" should be Array of values",
       ]
     `);
   });
@@ -470,8 +470,8 @@ describe('Strict upgrade', () => {
     expect(upgraded.language).toEqual([]);
     expect(state.warnings).toMatchInlineSnapshot(`
       [
-        "\\"language\\" should be Array of values",
-        "'\\"language\\" expected array of strings",
+        ""language" should be Array of values",
+        "'"language" expected array of strings",
       ]
     `);
   });
@@ -591,7 +591,7 @@ describe('Strict upgrade', () => {
       expect(upgraded.items[0].accompanyingCanvas).toEqual(manifestCorrect.items[0].accompanyingCanvas);
       expect(state.warnings).toMatchInlineSnapshot(`
         [
-          "\\"accompanyingCanvas\\" should only contain a single value",
+          ""accompanyingCanvas" should only contain a single value",
         ]
       `);
     });
@@ -607,7 +607,7 @@ describe('Strict upgrade', () => {
       // @ts-ignore
       expect(state.warnings).toMatchInlineSnapshot(`
         [
-          "\\"accompanyingCanvas\\" should be a Canvas",
+          ""accompanyingCanvas" should be a Canvas",
         ]
       `);
     });

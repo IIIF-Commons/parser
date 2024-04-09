@@ -1,4 +1,4 @@
-// Vitest Snapshot v1
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`normalize > normalize 1`] = `
 {
@@ -550,7 +550,7 @@ exports[`normalize > normalize full example from specification 1`] = `
           },
           "value": {
             "none": [
-              "<span>From: <a href=\\"https://example.org/db/1.html\\">Some Collection</a></span>",
+              "<span>From: <a href="https://example.org/db/1.html">Some Collection</a></span>",
             ],
           },
         },
