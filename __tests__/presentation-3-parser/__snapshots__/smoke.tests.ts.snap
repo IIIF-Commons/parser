@@ -8176,6 +8176,584 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
 }
 `;
 
+exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/specific-resource-infer.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page/annotation": {
+        "body": [
+          {
+            "id": "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page/annotation",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170": {
+        "body": [
+          {
+            "id": "vault://d00b0833",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://f61fc7a9",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://7ff64de8",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://49b211a7",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://e8387a4d",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://0c54fde5",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://ae132539",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://6da5db29",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://9f9088c1",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://a7447dbf",
+            "type": "ContentResource",
+          },
+        ],
+        "created": "2024-01-14T23:24:15.000000Z",
+        "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13",
+            "type": "Annotation",
+          },
+        ],
+        "modified": "2024-01-14T23:24:15.000000Z",
+        "motivation": [
+          "commenting",
+        ],
+        "target": {
+          "source": {
+            "selector": {
+              "type": "SvgSelector",
+              "value": "<svg><polygon points="3730.109619140625,3295.589599609375 3725.39697265625,3311.298583984375 3717.2724609375,3298.7314453125 3690.56689453125,3250.033203125 3673.286865234375,3204.476806640625 3671.716064453125,3155.778564453125 3688.99609375,3094.51318359375 3717.2724609375,3041.102294921875 3734.822509765625,3015.9677734375 3776.967041015625,2981.40771484375 3803.67236328125,2964.127685546875 3817.810546875,2956.273193359375 3813.097900390625,2923.2841796875 3811.527099609375,2899.720458984375 3833.519775390625,2846.3095703125 3846.0869140625,2835.313232421875 3872.79248046875,2807.036865234375 3901.3388671875,2786.614990234375 3934.057861328125,2763.05126953125 3989.039794921875,2748.9130859375 4012.603271484375,2748.9130859375 4061.301513671875,2753.6259765625 4073.868896484375,2758.338623046875 4114.71240234375,2785.0439453125 4133.5634765625,2799.18212890625 4158.69775390625,2832.17138671875 4182.26171875,2863.589599609375 4188.54541015625,2902.8623046875 4194.82861328125,2938.9931640625 4196.39990234375,2960.98583984375 4223.10498046875,2982.978515625 4254.5234375,3008.11328125 4300.07958984375,3061.524169921875 4322.072265625,3094.51318359375 4339.3525390625,3138.49853515625 4351.919921875,3177.771240234375 4350.3486328125,3202.906005859375 4344.0654296875,3259.458740234375 4328.35595703125,3281.451416015625 4307.93408203125,3306.5859375 4290.654296875,3319.153076171875 4281.22900390625,3322.294921875 4238.814453125,3257.8876953125 4205.8251953125,3232.753173828125 4182.26171875,3206.047607421875 4119.42529296875,3184.054931640625 4055.017822265625,3184.054931640625 4012.603271484375,3185.6259765625 3970.188720703125,3174.629638671875 3946.625244140625,3165.2041015625 3908.92333984375,3171.48779296875 3842.945068359375,3177.771240234375 3814.668701171875,3191.909423828125 3776.967041015625,3209.189453125 3740.836181640625,3245.320556640625 3732.9814453125,3272.02587890625 3729.62890625,3295.9638671875 3728.7197265625,3297.781982421875 3728.7197265625,3294.145751953125 3729.62890625,3292.327392578125 3728.7197265625,3295.0546875 3728.7197265625,3297.781982421875 3729.62890625,3293.236572265625 3729.78515625,3292.327392578125"></polygon></svg>",
+            },
+            "source": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page/annotation",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+      "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "Annotation",
+          },
+        ],
+        "label": {
+          "none": [
+            "Annotations",
+          ],
+        },
+        "metadata": [
+          {
+            "label": {
+              "none": [
+                "Identifier",
+              ],
+            },
+            "value": {
+              "none": [
+                13,
+              ],
+            },
+          },
+          {
+            "label": {
+              "none": [
+                "Creator",
+              ],
+            },
+            "value": {
+              "none": [
+                "Ian David McCrabb",
+              ],
+            },
+          },
+          {
+            "label": {
+              "none": [
+                "Date Created",
+              ],
+            },
+            "value": {
+              "none": [
+                "2024-01-14T23:24:01.000000Z",
+              ],
+            },
+          },
+          {
+            "label": {
+              "none": [
+                "Date Modified",
+              ],
+            },
+            "value": {
+              "none": [
+                "2024-01-15T00:45:10.000000Z",
+              ],
+            },
+          },
+          {
+            "label": {
+              "none": [
+                "Date Published",
+              ],
+            },
+            "value": {
+              "none": [
+                "2024-01-15T00:45:10.000000Z",
+              ],
+            },
+          },
+        ],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38": {
+        "accompanyingCanvas": null,
+        "annotations": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13",
+            "type": "AnnotationPage",
+          },
+        ],
+        "behavior": [],
+        "duration": 0,
+        "height": 9856,
+        "homepage": [],
+        "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38",
+        "items": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "none": [
+            "Year 5 Buddha Triad",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": {
+          "none": [
+            "Year 5 Buddha Triad",
+          ],
+        },
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 8058,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 9856,
+        "id": "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page/annotation",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D",
+            "profile": "level2",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 8058,
+      },
+      "vault://0c54fde5": {
+        "format": "text/plain",
+        "id": "vault://0c54fde5",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://0c54fde5",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "commenting",
+        "type": "TextualBody",
+        "value": "Note: (Mitterwallner 1987, 217) “rendered in a systematized manner in the form of semi-circles… bound by a band”",
+      },
+      "vault://49b211a7": {
+        "format": "text/plain",
+        "id": "vault://49b211a7",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://49b211a7",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "tagging",
+        "type": "TextualBody",
+        "value": "Tag: [hair parted in middle with lateral continuous waves; separate uṣṇīṣa](https://w3id.org/diga/terms/1940192311)
+Vocabulary: [DiGA - The Digitization of Gandharan Artefacts Thesaurus](https://diga.skosmos.ub.rub.de/thesaurus/en/)
+Data: {"trace":[{"key":"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311","label":"figures"},{"key":"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311","label":"literay persons"},{"key":"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311","label":"buddha"},{"key":"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311","label":"buddha: general features"},{"key":"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311","label":"hair of buddha"}]}",
+      },
+      "vault://6da5db29": {
+        "format": "text/plain",
+        "id": "vault://6da5db29",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://6da5db29",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "commenting",
+        "type": "TextualBody",
+        "value": "Attribution: Allon 2022",
+      },
+      "vault://7ff64de8": {
+        "format": "text/plain",
+        "id": "vault://7ff64de8",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://7ff64de8",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "describing",
+        "type": "TextualBody",
+        "value": "Description: Buddha's hair, with an uṣṇīṣa.",
+      },
+      "vault://9f9088c1": {
+        "format": "text/plain",
+        "id": "vault://9f9088c1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://9f9088c1",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "commenting",
+        "type": "TextualBody",
+        "value": "Date: 1970-01-01",
+      },
+      "vault://a7447dbf": {
+        "format": "text/plain",
+        "id": "vault://a7447dbf",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://a7447dbf",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "classifying",
+        "type": "TextualBody",
+        "value": "Line Color: Medium",
+      },
+      "vault://ae132539": {
+        "format": "text/plain",
+        "id": "vault://ae132539",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://ae132539",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "commenting",
+        "type": "TextualBody",
+        "value": "Note: (Guy 2022, 97) “his uncut hair is drawn back in prominent waves and tied up to form a large chignon-ushnisha”",
+      },
+      "vault://d00b0833": {
+        "format": "text/plain",
+        "id": "vault://d00b0833",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://d00b0833",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "describing",
+        "type": "TextualBody",
+        "value": "Title: Hair",
+      },
+      "vault://e8387a4d": {
+        "format": "text/plain",
+        "id": "vault://e8387a4d",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://e8387a4d",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "purpose": "commenting",
+        "type": "TextualBody",
+        "value": "Note: (Harle 1974, 132) “wavy, rolling up and inwards from the hairline on either side of a central little almond-shaped dividing point”",
+      },
+      "vault://f61fc7a9": {
+        "format": "text/plain",
+        "id": "vault://f61fc7a9",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://f61fc7a9",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "it",
+        "purpose": "describing",
+        "type": "TextualBody",
+        "value": "Title: Capelli",
+      },
+    },
+    "Manifest": {
+      "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest",
+            "iiif-parser:partOf": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "none": [
+            "Schist Buddha Triad (year 5)",
+          ],
+        },
+        "metadata": [
+          {
+            "label": {
+              "none": [
+                "Creator",
+              ],
+            },
+            "value": {
+              "none": [
+                "Ian David McCrabb",
+              ],
+            },
+          },
+          {
+            "label": {
+              "none": [
+                "Date Created",
+              ],
+            },
+            "value": {
+              "none": [
+                "2024-01-14T23:24:01.000000Z",
+              ],
+            },
+          },
+          {
+            "label": {
+              "none": [
+                "Date Modified",
+              ],
+            },
+            "value": {
+              "none": [
+                "2024-01-14T23:24:01.000000Z",
+              ],
+            },
+          },
+          {
+            "label": {
+              "none": [
+                "Date Published",
+              ],
+            },
+            "value": {
+              "none": [
+                "2024-01-15T00:45:19.000000Z",
+              ],
+            },
+          },
+        ],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D": {
+        "id": "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D",
+        "profile": "level2",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest": "Manifest",
+    "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38": "Canvas",
+    "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page": "AnnotationPage",
+    "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page/annotation": "Annotation",
+    "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13": "AnnotationPage",
+    "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170": "Annotation",
+    "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D/full/max/0/default.jpg": "ContentResource",
+    "vault://0c54fde5": "ContentResource",
+    "vault://49b211a7": "ContentResource",
+    "vault://6da5db29": "ContentResource",
+    "vault://7ff64de8": "ContentResource",
+    "vault://9f9088c1": "ContentResource",
+    "vault://a7447dbf": "ContentResource",
+    "vault://ae132539": "ContentResource",
+    "vault://d00b0833": "ContentResource",
+    "vault://e8387a4d": "ContentResource",
+    "vault://f61fc7a9": "ContentResource",
+  },
+  "resource": {
+    "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest",
+    "type": "Manifest",
+  },
+}
+`;
+
 exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/start-canvas.json 1`] = `
 {
   "entities": {

@@ -673,14 +673,24 @@ function upgradeAnnotation(annotation: Presentation2.Annotation): Presentation3.
     ...(linkingProperties(annotation) as any),
     target: upgradeTarget(annotation.on),
     body: Array.isArray(annotation.resource)
-      ? annotation.resource.map(upgradeContentResource)
-      : upgradeContentResource(annotation.resource),
+      ? annotation.resource.map(upgradeContentResourceOrChoice)
+      : upgradeContentResourceOrChoice(annotation.resource),
     // @todo stylesheet upgrade.
   });
 }
 
+function upgradeContentResourceOrChoice(
+  resource: Presentation2.ContentResource | Presentation2.ChoiceEmbeddedContent
+): Presentation3.ContentResource | Presentation3.ChoiceBody {
+  if ((resource as any).type === 'Choice') {
+    return resource as any;
+  }
+  return upgradeContentResource(resource);
+}
+
 function upgradeContentResource(inputContentResource: Presentation2.ContentResource): Presentation3.ContentResource {
   const contentResource = inputContentResource as Presentation2.CommonContentResource;
+
   // @todo there might be some field dropped here.
   return removeUndefinedProperties({
     ...(technicalProperties(contentResource) as any),
@@ -701,11 +711,11 @@ function upgradeChoice(choice: Presentation2.ChoiceEmbeddedContent): Presentatio
     items.push(...choice.item);
   }
 
-  return {
+  return removeUndefinedProperties({
     ...technicalProperties(choice),
     ...descriptiveProperties(choice),
     items: items as any,
-  };
+  });
 }
 
 function upgradeRange(range: Presentation2.Range): Presentation3.Range {

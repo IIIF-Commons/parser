@@ -100,7 +100,7 @@ export class Traverse<
     Range: Range;
     Service: Service;
     Layer: Layer;
-  }
+  },
 > {
   private traversals: Required<TraversalMap>;
   private options: TraverseOptions;

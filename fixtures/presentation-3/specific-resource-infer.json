@@ -1,0 +1,267 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest",
+  "type": "Manifest",
+  "label": {
+      "none": [
+          "Schist Buddha Triad (year 5)"
+      ]
+  },
+  "metadata": [
+      {
+          "label": {
+              "none": [
+                  "Creator"
+              ]
+          },
+          "value": {
+              "none": [
+                  "Ian David McCrabb"
+              ]
+          }
+      },
+      {
+          "label": {
+              "none": [
+                  "Date Created"
+              ]
+          },
+          "value": {
+              "none": [
+                  "2024-01-14T23:24:01.000000Z"
+              ]
+          }
+      },
+      {
+          "label": {
+              "none": [
+                  "Date Modified"
+              ]
+          },
+          "value": {
+              "none": [
+                  "2024-01-14T23:24:01.000000Z"
+              ]
+          }
+      },
+      {
+          "label": {
+              "none": [
+                  "Date Published"
+              ]
+          },
+          "value": {
+              "none": [
+                  "2024-01-15T00:45:19.000000Z"
+              ]
+          }
+      }
+  ],
+  "items": [
+      {
+          "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38",
+          "type": "Canvas",
+          "label": {
+              "none": [
+                  "Year 5 Buddha Triad"
+              ]
+          },
+          "summary": {
+              "none": [
+                  "Year 5 Buddha Triad"
+              ]
+          },
+          "width": 8058,
+          "height": 9856,
+          "items": [
+              {
+                  "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page",
+                  "type": "AnnotationPage",
+                  "items": [
+                      {
+                          "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38/page/annotation",
+                          "type": "Annotation",
+                          "motivation": "painting",
+                          "body": {
+                              "id": "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D/full/max/0/default.jpg",
+                              "type": "Image",
+                              "format": "image/jpeg",
+                              "width": 8058,
+                              "height": 9856,
+                              "service": [
+                                  {
+                                      "id": "https://w3id.org/iaw/images/iiif/01HM54MGYC39W9MZ32YD4GJ59D",
+                                      "type": "ImageService3",
+                                      "profile": "level2"
+                                  }
+                              ]
+                          },
+                          "target": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38"
+                      }
+                  ]
+              }
+          ],
+          "annotations": [
+              {
+                  "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13",
+                  "type": "AnnotationPage",
+                  "label": {
+                      "none": [
+                          "Annotations"
+                      ]
+                  },
+                  "metadata": [
+                      {
+                          "label": {
+                              "none": [
+                                  "Identifier"
+                              ]
+                          },
+                          "value": {
+                              "none": [
+                                  13
+                              ]
+                          }
+                      },
+                      {
+                          "label": {
+                              "none": [
+                                  "Creator"
+                              ]
+                          },
+                          "value": {
+                              "none": [
+                                  "Ian David McCrabb"
+                              ]
+                          }
+                      },
+                      {
+                          "label": {
+                              "none": [
+                                  "Date Created"
+                              ]
+                          },
+                          "value": {
+                              "none": [
+                                  "2024-01-14T23:24:01.000000Z"
+                              ]
+                          }
+                      },
+                      {
+                          "label": {
+                              "none": [
+                                  "Date Modified"
+                              ]
+                          },
+                          "value": {
+                              "none": [
+                                  "2024-01-15T00:45:10.000000Z"
+                              ]
+                          }
+                      },
+                      {
+                          "label": {
+                              "none": [
+                                  "Date Published"
+                              ]
+                          },
+                          "value": {
+                              "none": [
+                                  "2024-01-15T00:45:10.000000Z"
+                              ]
+                          }
+                      }
+                  ],
+                  "items": [
+                      {
+                          "id": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170",
+                          "type": "Annotation",
+                          "motivation": "commenting",
+                          "created": "2024-01-14T23:24:15.000000Z",
+                          "modified": "2024-01-14T23:24:15.000000Z",
+                          "target": {
+                              "source": "https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/canvases/38",
+                              "selector": {
+                                  "type": "SvgSelector",
+                                  "value": "<svg><polygon points=\"3730.109619140625,3295.589599609375 3725.39697265625,3311.298583984375 3717.2724609375,3298.7314453125 3690.56689453125,3250.033203125 3673.286865234375,3204.476806640625 3671.716064453125,3155.778564453125 3688.99609375,3094.51318359375 3717.2724609375,3041.102294921875 3734.822509765625,3015.9677734375 3776.967041015625,2981.40771484375 3803.67236328125,2964.127685546875 3817.810546875,2956.273193359375 3813.097900390625,2923.2841796875 3811.527099609375,2899.720458984375 3833.519775390625,2846.3095703125 3846.0869140625,2835.313232421875 3872.79248046875,2807.036865234375 3901.3388671875,2786.614990234375 3934.057861328125,2763.05126953125 3989.039794921875,2748.9130859375 4012.603271484375,2748.9130859375 4061.301513671875,2753.6259765625 4073.868896484375,2758.338623046875 4114.71240234375,2785.0439453125 4133.5634765625,2799.18212890625 4158.69775390625,2832.17138671875 4182.26171875,2863.589599609375 4188.54541015625,2902.8623046875 4194.82861328125,2938.9931640625 4196.39990234375,2960.98583984375 4223.10498046875,2982.978515625 4254.5234375,3008.11328125 4300.07958984375,3061.524169921875 4322.072265625,3094.51318359375 4339.3525390625,3138.49853515625 4351.919921875,3177.771240234375 4350.3486328125,3202.906005859375 4344.0654296875,3259.458740234375 4328.35595703125,3281.451416015625 4307.93408203125,3306.5859375 4290.654296875,3319.153076171875 4281.22900390625,3322.294921875 4238.814453125,3257.8876953125 4205.8251953125,3232.753173828125 4182.26171875,3206.047607421875 4119.42529296875,3184.054931640625 4055.017822265625,3184.054931640625 4012.603271484375,3185.6259765625 3970.188720703125,3174.629638671875 3946.625244140625,3165.2041015625 3908.92333984375,3171.48779296875 3842.945068359375,3177.771240234375 3814.668701171875,3191.909423828125 3776.967041015625,3209.189453125 3740.836181640625,3245.320556640625 3732.9814453125,3272.02587890625 3729.62890625,3295.9638671875 3728.7197265625,3297.781982421875 3728.7197265625,3294.145751953125 3729.62890625,3292.327392578125 3728.7197265625,3295.0546875 3728.7197265625,3297.781982421875 3729.62890625,3293.236572265625 3729.78515625,3292.327392578125\"></polygon></svg>"
+                              }
+                          },
+                          "body": [
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "describing",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Title: Hair"
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "describing",
+                                  "language": "it",
+                                  "format": "text/plain",
+                                  "value": "Title: Capelli"
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "describing",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Description: Buddha's hair, with an uṣṇīṣa."
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "tagging",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Tag: [hair parted in middle with lateral continuous waves; separate uṣṇīṣa](https://w3id.org/diga/terms/1940192311)\nVocabulary: [DiGA - The Digitization of Gandharan Artefacts Thesaurus](https://diga.skosmos.ub.rub.de/thesaurus/en/)\nData: {\"trace\":[{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"figures\"},{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"literay persons\"},{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"buddha\"},{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"buddha: general features\"},{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"hair of buddha\"}]}"
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "commenting",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Note: (Harle 1974, 132) “wavy, rolling up and inwards from the hairline on either side of a central little almond-shaped dividing point”"
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "commenting",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Note: (Mitterwallner 1987, 217) “rendered in a systematized manner in the form of semi-circles… bound by a band”"
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "commenting",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Note: (Guy 2022, 97) “his uncut hair is drawn back in prominent waves and tied up to form a large chignon-ushnisha”"
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "commenting",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Attribution: Allon 2022"
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "commenting",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Date: 1970-01-01"
+                              },
+                              {
+                                  "type": "TextualBody",
+                                  "purpose": "classifying",
+                                  "language": "en",
+                                  "format": "text/plain",
+                                  "value": "Line Color: Medium"
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}
