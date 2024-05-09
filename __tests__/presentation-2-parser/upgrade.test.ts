@@ -23,6 +23,8 @@ import annoList from '../../fixtures/presentation-2/iiif-fixture-annotation-list
 import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
 import loc from '../../fixtures/presentation-2/loc.json';
 import artic from '../../fixtures/presentation-2/artic-manifest.json';
+import bodyChoice from '../../fixtures/presentation-2/body-choice.json';
+
 import { expect } from 'vitest';
 
 describe('Presentation 2 to 3', () => {
@@ -153,6 +155,21 @@ describe('Presentation 2 to 3', () => {
   test('Villanova manifest', () => {
     const result = presentation2to3.traverseManifest(villanovaManifest as any);
     const isValid = validator.validateManifest(result);
+
+    expect(validator.validators.manifest!.errors).toEqual(null);
+    expect(isValid).toEqual(true);
+  });
+
+  test('Choices body', () => {
+    const results = presentation2to3.traverseManifest(bodyChoice as any);
+    const isValid = validator.validateManifest(results);
+
+    // @ts-ignore
+    const body = results.items[0]!.items[0]!.items[0].body as any;
+
+    expect(body.type).toEqual('Choice');
+    expect(body.id).toEqual('http://example.org/oa:Choice/335');
+    expect(body.items.length).toEqual(4);
 
     expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
@@ -398,10 +415,10 @@ describe('Presentation 2 to 3', () => {
           {
             "body": {
               "chars": "Top of First Page to Display",
-              "id": "http://example.org/cnt:ContentAsText/420",
+              "id": "http://example.org/cnt:ContentAsText/438",
               "type": "TextualBody",
             },
-            "id": "http://example.org/oa:Annotation/421",
+            "id": "http://example.org/oa:Annotation/439",
             "motivation": "painting",
             "target": {
               "selector": {
@@ -420,18 +437,18 @@ describe('Presentation 2 to 3', () => {
             "body": [
               {
                 "chars": "character",
-                "id": "http://example.org/oa:Tag/422",
+                "id": "http://example.org/oa:Tag/440",
                 "type": "Tag",
               },
               {
                 "chars": "<p>万</p>
       <p><audio style="display: none;" controls="controls"></audio></p>",
                 "format": "text/html",
-                "id": "http://example.org/dctypes:Text/423",
+                "id": "http://example.org/dctypes:Text/441",
                 "type": "Text",
               },
             ],
-            "id": "http://example.org/oa:Annotation/424",
+            "id": "http://example.org/oa:Annotation/442",
             "motivation": [
               "tagging",
               "commenting",
@@ -475,17 +492,17 @@ describe('Presentation 2 to 3', () => {
               {
                 "chars": "<p><i>Zone of interest</i><br/><b>Place</b><br/>Cauca of Huila</p>",
                 "format": "text/html",
-                "id": "http://example.org/dctypes:Text/425",
+                "id": "http://example.org/dctypes:Text/443",
                 "type": "Text",
               },
               {
                 "chars": "Colombia",
-                "id": "http://example.org/oa:Tag/426",
+                "id": "http://example.org/oa:Tag/444",
                 "type": "Tag",
               },
               {
                 "chars": "Cauca",
-                "id": "http://example.org/oa:Tag/427",
+                "id": "http://example.org/oa:Tag/445",
                 "type": "Tag",
               },
             ],
@@ -533,7 +550,7 @@ describe('Presentation 2 to 3', () => {
             "body": {
               "chars": "<p><i>Surface tool</i><br/><b>Feuille</b><br/>70.97 mm²</p>",
               "format": "text/html",
-              "id": "http://example.org/dctypes:Text/428",
+              "id": "http://example.org/dctypes:Text/446",
               "type": "Text",
             },
             "id": "https://collections.recolnat.org/annotate-server/iiif/2/annotationList/30/febbe57672bb5eaf097de6c5448c43ad8a82e012/list/3",

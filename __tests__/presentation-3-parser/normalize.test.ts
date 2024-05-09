@@ -5,6 +5,7 @@ import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
 import p2ManifestWithStart from '../../fixtures/presentation-2/bl-manifest.json';
 import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
 import manifestExhibition from '../../fixtures/presentation-3/exhibition-1.json';
+import manifestSpecificResource from '../../fixtures/presentation-3/specific-resource-infer.json';
 import { Manifest } from '@iiif/presentation-3';
 
 describe('normalize', () => {
@@ -364,7 +365,22 @@ describe('normalize', () => {
 
     // expect(db.entities.Canvas)
     const canvas =
-      db.entities.Annotation['https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c'];
+      db.entities.Annotation[
+        'https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c'
+      ];
     // console.log(canvas);
+  });
+
+  test('normalize implied specific resource', () => {
+    const db = normalize(manifestSpecificResource) as any;
+
+    const annotation =
+      db.entities.Annotation[
+        'https://w3id.org/iaw/data/publications/image-sets/01hm598yb6hc3s7btmqth813mg/manifest/images/38/annotation-sets/13/annotations/170'
+      ];
+
+    expect(annotation.target.type).toEqual('SpecificResource');
+
+    expect(db).to.exist;
   });
 });

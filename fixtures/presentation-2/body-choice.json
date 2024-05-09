@@ -1,0 +1,2087 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://dlc.services/iiif-resource/22/item/2/VIS",
+  "@type": "sc:Manifest",
+  "metadata": [
+    {
+      "label": "Title",
+      "value": "Created by DLCS"
+    }
+  ],
+  "sequences": [
+    {
+      "@id": "https://dlc.services/iiif-query/22/?sequence=n1&manifest=s1&canvas=n2&s1=&n1=",
+      "@type": "sc:Sequence",
+      "label": "Sequence 0",
+      "canvases": [
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=3",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.010r_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.010r_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 840,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 840
+                },
+                {
+                  "width": 400,
+                  "height": 328
+                },
+                {
+                  "width": 200,
+                  "height": 164
+                },
+                {
+                  "width": 100,
+                  "height": 82
+                }
+              ]
+            }
+          },
+          "height": 4981,
+          "width": 6072,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.010r_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.010r_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 4981,
+                  "width": 6072,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.010r_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 4981,
+                    "width": 6072,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.010r_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 4981,
+                    "width": 6072,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.010r_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 4981,
+                      "width": 6072,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.010r_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 4981,
+                    "width": 6072,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.010r_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 4981,
+                      "width": 6072,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.010r_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 4981,
+                    "width": 6072,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.010r_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 4981,
+                      "width": 6072,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=3"
+            }
+          ],
+          "label": "X.010r_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=7",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.010v_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.010v_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 880,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 880
+                },
+                {
+                  "width": 400,
+                  "height": 344
+                },
+                {
+                  "width": 200,
+                  "height": 172
+                },
+                {
+                  "width": 100,
+                  "height": 86
+                }
+              ]
+            }
+          },
+          "height": 5221,
+          "width": 6076,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.010v_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.010v_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 5221,
+                  "width": 6076,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.010v_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 5221,
+                    "width": 6076,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.010v_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5221,
+                    "width": 6076,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.010v_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5221,
+                      "width": 6076,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.010v_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5221,
+                    "width": 6076,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.010v_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5221,
+                      "width": 6076,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.010v_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5221,
+                    "width": 6076,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.010v_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5221,
+                      "width": 6076,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=7"
+            }
+          ],
+          "label": "X.010v_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=11",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.011r_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.011r_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 615,
+              "height": 1024,
+              "sizes": [
+                {
+                  "width": 615,
+                  "height": 1024
+                },
+                {
+                  "width": 240,
+                  "height": 400
+                },
+                {
+                  "width": 120,
+                  "height": 200
+                },
+                {
+                  "width": 60,
+                  "height": 100
+                }
+              ]
+            }
+          },
+          "height": 5082,
+          "width": 3053,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.011r_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.011r_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 5082,
+                  "width": 3053,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.011r_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 5082,
+                    "width": 3053,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.011r_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5082,
+                    "width": 3053,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.011r_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5082,
+                      "width": 3053,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.011r_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5082,
+                    "width": 3053,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.011r_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5082,
+                      "width": 3053,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.011r_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5082,
+                    "width": 3053,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.011r_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5082,
+                      "width": 3053,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=11"
+            }
+          ],
+          "label": "X.011r_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=15",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.011v_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.011v_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 567,
+              "height": 1024,
+              "sizes": [
+                {
+                  "width": 567,
+                  "height": 1024
+                },
+                {
+                  "width": 221,
+                  "height": 400
+                },
+                {
+                  "width": 111,
+                  "height": 200
+                },
+                {
+                  "width": 55,
+                  "height": 100
+                }
+              ]
+            }
+          },
+          "height": 4979,
+          "width": 2757,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.011v_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.011v_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 4979,
+                  "width": 2757,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.011v_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 4979,
+                    "width": 2757,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.011v_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 4979,
+                    "width": 2757,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.011v_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 4979,
+                      "width": 2757,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.011v_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 4979,
+                    "width": 2757,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.011v_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 4979,
+                      "width": 2757,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.011v_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 4979,
+                    "width": 2757,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.011v_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 4979,
+                      "width": 2757,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=15"
+            }
+          ],
+          "label": "X.011v_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=19",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.012r_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.012r_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 723,
+              "height": 1024,
+              "sizes": [
+                {
+                  "width": 723,
+                  "height": 1024
+                },
+                {
+                  "width": 282,
+                  "height": 400
+                },
+                {
+                  "width": 141,
+                  "height": 200
+                },
+                {
+                  "width": 71,
+                  "height": 100
+                }
+              ]
+            }
+          },
+          "height": 5199,
+          "width": 3669,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.012r_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.012r_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 5199,
+                  "width": 3669,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.012r_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 5199,
+                    "width": 3669,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.012r_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5199,
+                    "width": 3669,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.012r_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5199,
+                      "width": 3669,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.012r_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5199,
+                    "width": 3669,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.012r_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5199,
+                      "width": 3669,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.012r_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5199,
+                    "width": 3669,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.012r_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5199,
+                      "width": 3669,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=19"
+            }
+          ],
+          "label": "X.012r_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=23",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.012v_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.012v_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 741,
+              "height": 1024,
+              "sizes": [
+                {
+                  "width": 741,
+                  "height": 1024
+                },
+                {
+                  "width": 289,
+                  "height": 400
+                },
+                {
+                  "width": 145,
+                  "height": 200
+                },
+                {
+                  "width": 72,
+                  "height": 100
+                }
+              ]
+            }
+          },
+          "height": 5106,
+          "width": 3694,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.012v_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.012v_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 5106,
+                  "width": 3694,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.012v_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 5106,
+                    "width": 3694,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.012v_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5106,
+                    "width": 3694,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.012v_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5106,
+                      "width": 3694,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.012v_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5106,
+                    "width": 3694,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.012v_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5106,
+                      "width": 3694,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.012v_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 5106,
+                    "width": 3694,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.012v_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 5106,
+                      "width": 3694,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=23"
+            }
+          ],
+          "label": "X.012v_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=27",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.013_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.013_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 885,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 885
+                },
+                {
+                  "width": 400,
+                  "height": 346
+                },
+                {
+                  "width": 200,
+                  "height": 173
+                },
+                {
+                  "width": 100,
+                  "height": 86
+                }
+              ]
+            }
+          },
+          "height": 3239,
+          "width": 3746,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.013_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.013_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 3239,
+                  "width": 3746,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.013_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 3239,
+                    "width": 3746,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.013_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 3239,
+                    "width": 3746,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.013_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 3239,
+                      "width": 3746,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.013_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 3239,
+                    "width": 3746,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.013_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 3239,
+                      "width": 3746,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.013_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 3239,
+                    "width": 3746,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.013_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 3239,
+                      "width": 3746,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=27"
+            }
+          ],
+          "label": "X.013_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=31",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.020r_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.020r_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 938,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 938
+                },
+                {
+                  "width": 400,
+                  "height": 366
+                },
+                {
+                  "width": 200,
+                  "height": 183
+                },
+                {
+                  "width": 100,
+                  "height": 92
+                }
+              ]
+            }
+          },
+          "height": 7457,
+          "width": 8141,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.020r_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.020r_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7457,
+                  "width": 8141,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.020r_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7457,
+                    "width": 8141,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.020r_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7457,
+                    "width": 8141,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.020r_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7457,
+                      "width": 8141,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.020r_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7457,
+                    "width": 8141,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.020r_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7457,
+                      "width": 8141,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.020r_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7457,
+                    "width": 8141,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.020r_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7457,
+                      "width": 8141,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=31"
+            }
+          ],
+          "label": "X.020r_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=32",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.020v_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.020v_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 935,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 935
+                },
+                {
+                  "width": 400,
+                  "height": 365
+                },
+                {
+                  "width": 200,
+                  "height": 183
+                },
+                {
+                  "width": 100,
+                  "height": 91
+                }
+              ]
+            }
+          },
+          "height": 7936,
+          "width": 8692,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.020v_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@id": "https://dlc.services/iiif-img/22/2/X.020v_VIS/full/!2000,2000/0/default.jpg",
+                "@type": "dctypes:Image",
+                "height": 7936,
+                "width": 8692,
+                "service": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.020v_VIS",
+                  "protocol": "http://iiif.io/api/image",
+                  "height": 7936,
+                  "width": 8692,
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=32"
+            }
+          ],
+          "label": "X.020v_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=36",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.030_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.030_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 936,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 936
+                },
+                {
+                  "width": 400,
+                  "height": 366
+                },
+                {
+                  "width": 200,
+                  "height": 183
+                },
+                {
+                  "width": 100,
+                  "height": 91
+                }
+              ]
+            }
+          },
+          "height": 7561,
+          "width": 8272,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.030_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.030_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7561,
+                  "width": 8272,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.030_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7561,
+                    "width": 8272,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.030_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7561,
+                    "width": 8272,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.030_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7561,
+                      "width": 8272,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.030_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7561,
+                    "width": 8272,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.030_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7561,
+                      "width": 8272,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.030_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7561,
+                    "width": 8272,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.030_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7561,
+                      "width": 8272,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=36"
+            }
+          ],
+          "label": "X.030_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=40",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.030v_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.030v_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 902,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 902
+                },
+                {
+                  "width": 400,
+                  "height": 352
+                },
+                {
+                  "width": 200,
+                  "height": 176
+                },
+                {
+                  "width": 100,
+                  "height": 88
+                }
+              ]
+            }
+          },
+          "height": 8446,
+          "width": 9588,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.030v_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.030v_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 8446,
+                  "width": 9588,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.030v_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 8446,
+                    "width": 9588,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.030v_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 8446,
+                    "width": 9588,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.030v_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 8446,
+                      "width": 9588,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.030v_IRF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 8446,
+                    "width": 9588,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.030v_IRF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 8446,
+                      "width": 9588,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IRF"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=40"
+            }
+          ],
+          "label": "X.030v_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=43",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.040_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.040_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 918,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 918
+                },
+                {
+                  "width": 400,
+                  "height": 359
+                },
+                {
+                  "width": 200,
+                  "height": 179
+                },
+                {
+                  "width": 100,
+                  "height": 90
+                }
+              ]
+            }
+          },
+          "height": 7532,
+          "width": 8399,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.040_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.040_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7532,
+                  "width": 8399,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.040_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7532,
+                    "width": 8399,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.040_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7532,
+                    "width": 8399,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.040_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7532,
+                      "width": 8399,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.040_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7532,
+                    "width": 8399,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.040_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7532,
+                      "width": 8399,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.040_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7532,
+                    "width": 8399,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.040_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7532,
+                      "width": 8399,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=43"
+            }
+          ],
+          "label": "X.040_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=47",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.050_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.050_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 863,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 863
+                },
+                {
+                  "width": 400,
+                  "height": 337
+                },
+                {
+                  "width": 200,
+                  "height": 169
+                },
+                {
+                  "width": 100,
+                  "height": 84
+                }
+              ]
+            }
+          },
+          "height": 7704,
+          "width": 9139,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.050_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.050_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7704,
+                  "width": 9139,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.050_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7704,
+                    "width": 9139,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.050_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7704,
+                    "width": 9139,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.050_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7704,
+                      "width": 9139,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.050_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7704,
+                    "width": 9139,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.050_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7704,
+                      "width": 9139,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.050_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7704,
+                    "width": 9139,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.050_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7704,
+                      "width": 9139,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=47"
+            }
+          ],
+          "label": "X.050_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=51",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.060_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.060_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 855,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 855
+                },
+                {
+                  "width": 400,
+                  "height": 334
+                },
+                {
+                  "width": 200,
+                  "height": 167
+                },
+                {
+                  "width": 100,
+                  "height": 84
+                }
+              ]
+            }
+          },
+          "height": 7496,
+          "width": 8976,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.060_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.060_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7496,
+                  "width": 8976,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.060_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7496,
+                    "width": 8976,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.060_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7496,
+                    "width": 8976,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.060_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7496,
+                      "width": 8976,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.060_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7496,
+                    "width": 8976,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.060_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7496,
+                      "width": 8976,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.060_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7496,
+                    "width": 8976,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.060_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7496,
+                      "width": 8976,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=51"
+            }
+          ],
+          "label": "X.060_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=55",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.070_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.070_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 814,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 814
+                },
+                {
+                  "width": 400,
+                  "height": 318
+                },
+                {
+                  "width": 200,
+                  "height": 159
+                },
+                {
+                  "width": 100,
+                  "height": 80
+                }
+              ]
+            }
+          },
+          "height": 7677,
+          "width": 9656,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.070_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.070_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7677,
+                  "width": 9656,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.070_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7677,
+                    "width": 9656,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.070_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7677,
+                    "width": 9656,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.070_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7677,
+                      "width": 9656,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.070_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7677,
+                    "width": 9656,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.070_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7677,
+                      "width": 9656,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.070_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7677,
+                    "width": 9656,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.070_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7677,
+                      "width": 9656,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=55"
+            }
+          ],
+          "label": "X.070_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=59",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.080_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.080_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 836,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 836
+                },
+                {
+                  "width": 400,
+                  "height": 326
+                },
+                {
+                  "width": 200,
+                  "height": 163
+                },
+                {
+                  "width": 100,
+                  "height": 82
+                }
+              ]
+            }
+          },
+          "height": 7443,
+          "width": 9119,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.080_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.080_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7443,
+                  "width": 9119,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.080_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7443,
+                    "width": 9119,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.080_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7443,
+                    "width": 9119,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.080_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7443,
+                      "width": 9119,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.080_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7443,
+                    "width": 9119,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.080_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7443,
+                      "width": 9119,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.080_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7443,
+                    "width": 9119,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.080_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7443,
+                      "width": 9119,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=59"
+            }
+          ],
+          "label": "X.080_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=63",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.090_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.090_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 776,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 776
+                },
+                {
+                  "width": 400,
+                  "height": 303
+                },
+                {
+                  "width": 200,
+                  "height": 152
+                },
+                {
+                  "width": 100,
+                  "height": 76
+                }
+              ]
+            }
+          },
+          "height": 7044,
+          "width": 9299,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.090_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.090_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7044,
+                  "width": 9299,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.090_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7044,
+                    "width": 9299,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.090_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7044,
+                    "width": 9299,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.090_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7044,
+                      "width": 9299,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.090_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7044,
+                    "width": 9299,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.090_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7044,
+                      "width": 9299,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.090_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7044,
+                    "width": 9299,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.090_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7044,
+                      "width": 9299,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=63"
+            }
+          ],
+          "label": "X.090_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=67",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.100r_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.100r_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 806,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 806
+                },
+                {
+                  "width": 400,
+                  "height": 315
+                },
+                {
+                  "width": 200,
+                  "height": 157
+                },
+                {
+                  "width": 100,
+                  "height": 79
+                }
+              ]
+            }
+          },
+          "height": 7619,
+          "width": 9678,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.100r_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.100r_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7619,
+                  "width": 9678,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.100r_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7619,
+                    "width": 9678,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.100r_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7619,
+                    "width": 9678,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.100r_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7619,
+                      "width": 9678,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.100r_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7619,
+                    "width": 9678,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.100r_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7619,
+                      "width": 9678,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.100r_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7619,
+                    "width": 9678,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.100r_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7619,
+                      "width": 9678,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=67"
+            }
+          ],
+          "label": "X.100r_VIS"
+        },
+        {
+          "@id": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=71",
+          "@type": "sc:Canvas",
+          "thumbnail": {
+            "@id": "https://dlc.services/thumbs/22/2/X.100v_VIS/full/full/0/default.jpg",
+            "@type": "dctypes:Image",
+            "service": {
+              "@context": "http://iiif.io/api/image/2/context.json",
+              "@id": "https://apex.dlc.services/thumbs/22/2/X.100v_VIS",
+              "profile": [
+                "http://iiif.io/api/image/2/level0.json",
+                {
+                  "formats": ["jpg"],
+                  "qualities": ["color"],
+                  "supports": ["sizeByWhListed"]
+                }
+              ],
+              "width": 1024,
+              "height": 923,
+              "sizes": [
+                {
+                  "width": 1024,
+                  "height": 923
+                },
+                {
+                  "width": 400,
+                  "height": 360
+                },
+                {
+                  "width": 200,
+                  "height": 180
+                },
+                {
+                  "width": 100,
+                  "height": 90
+                }
+              ]
+            }
+          },
+          "height": 7625,
+          "width": 8462,
+          "images": [
+            {
+              "@id": "https://dlc.services/iiif-img/22/2/X.100v_VIS/anno",
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "oa:Choice",
+                "default": {
+                  "@id": "https://dlc.services/iiif-img/22/2/X.100v_VIS/full/!2000,2000/0/default.jpg",
+                  "@type": "dctypes:Image",
+                  "height": 7625,
+                  "width": 8462,
+                  "service": {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.100v_VIS",
+                    "protocol": "http://iiif.io/api/image",
+                    "height": 7625,
+                    "width": 8462,
+                    "profile": "http://iiif.io/api/image/2/level1.json"
+                  },
+                  "label": "Visible"
+                },
+                "item": [
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.100v_IR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7625,
+                    "width": 8462,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.100v_IR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7625,
+                      "width": 8462,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "IR"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.100v_UVF/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7625,
+                    "width": 8462,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.100v_UVF",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7625,
+                      "width": 8462,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVF"
+                  },
+                  {
+                    "@id": "https://dlc.services/iiif-img/22/2/X.100v_UVR/full/!2000,2000/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    "height": 7625,
+                    "width": 8462,
+                    "service": {
+                      "@id": "https://dlc.services/iiif-img/22/2/X.100v_UVR",
+                      "protocol": "http://iiif.io/api/image",
+                      "height": 7625,
+                      "width": 8462,
+                      "profile": "http://iiif.io/api/image/2/level1.json"
+                    },
+                    "label": "UVR"
+                  }
+                ]
+              },
+              "on": "https://dlc.services/iiif-query/22/?canvas=n2&manifest=s1&sequence=n1&s1=&n1=&n2=71"
+            }
+          ],
+          "label": "X.100v_VIS"
+        }
+      ]
+    }
+  ],
+  "label": "Codex Xolotl"
+}
