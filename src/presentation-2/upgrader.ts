@@ -4,6 +4,7 @@ import { imageServiceProfiles, level1Support } from '../shared/image-api-profile
 import { Traverse } from './traverse';
 import { ensureArray } from '../shared/ensure-array';
 import { removeUndefinedProperties } from '../shared/remove-undefined-properties';
+import { level0Support, level2Support } from '../image-3/profiles/profiles';
 
 const configuration = {
   attributionLabel: 'Attribution',
@@ -75,12 +76,16 @@ export function getProfile(profile: any | any[]): string | undefined {
     return getProfile(profile.find((s) => typeof s === 'string'));
   }
 
-  if (imageServiceProfiles.indexOf(profile) !== -1) {
+  if (level2Support.indexOf(profile) !== -1) {
     return 'level2';
   }
 
   if (level1Support.indexOf(profile) !== -1) {
     return 'level1';
+  }
+
+  if (level0Support.indexOf(profile) !== -1) {
+    return 'level0';
   }
 
   if (typeof profile !== 'string') {
