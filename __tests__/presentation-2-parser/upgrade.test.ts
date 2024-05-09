@@ -22,6 +22,7 @@ import { Validator } from '@hyperion-framework/validator';
 import annoList from '../../fixtures/presentation-2/iiif-fixture-annotation-list.json';
 import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
 import loc from '../../fixtures/presentation-2/loc.json';
+import level0manifest from '../../fixtures/presentation-2/manifest-l0.json';
 import artic from '../../fixtures/presentation-2/artic-manifest.json';
 import bodyChoice from '../../fixtures/presentation-2/body-choice.json';
 
@@ -256,10 +257,34 @@ describe('Presentation 2 to 3', () => {
 
     expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
+
+    // Check profile matches.
+    const firstCanvas = result.items[0]; // first canvas
+    const page = firstCanvas!.items![0]; // first page
+    const annotation = page!.items![0]; // first annotation
+    const service = (annotation!.body as any)!.service;
+
+    expect(service).toMatchInlineSnapshot(`
+      [
+        {
+          "@id": "https://content.staatsbibliothek-berlin.de/dc/840973497-0001",
+          "@type": "ImageService2",
+          "profile": "level1",
+        },
+      ]
+    `);
   });
 
   test('Codex manifest', () => {
     const result = presentation2to3.traverseManifest(codexManifest as any);
+    const isValid = validator.validateManifest(result);
+
+    expect(validator.validators.manifest!.errors).toEqual(null);
+    expect(isValid).toEqual(true);
+  });
+
+  test('presentation 2 with level 0', () => {
+    const result = presentation2to3.traverseManifest(level0manifest as any);
     const isValid = validator.validateManifest(result);
 
     expect(validator.validators.manifest!.errors).toEqual(null);
