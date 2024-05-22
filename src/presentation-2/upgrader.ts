@@ -573,8 +573,39 @@ function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manife
     ...linkingProperties(manifest),
     start: start,
     items: allCanvases,
-    structures: manifest.structures as any,
+    structures: flattenStructures(manifest.structures as any),
   });
+}
+
+function flattenStructures(structures: Presentation3.Range[]): Presentation3.Range[] {
+  if (!structures) {
+    return structures;
+  }
+  const ranges = new Map<string, Presentation3.Range>();
+  for (const range of structures) {
+    ranges.set(range.id, range);
+  }
+
+  let found: string[] = [];
+
+  for (const range of structures) {
+    if (range.items) {
+      const items = range.items.map((item) => {
+        if (typeof item === 'string') {
+          found.push(item);
+          return ranges.get(item) || item;
+        }
+        if (item && item.id) {
+          found.push(item.id);
+          return ranges.get(item.id) || item;
+        }
+        return item;
+      });
+      range.items = items;
+    }
+  }
+
+  return structures.filter((range) => found.indexOf(range.id) === -1);
 }
 
 function upgradeCanvas(canvas: Presentation2.Canvas): Presentation3.Canvas {

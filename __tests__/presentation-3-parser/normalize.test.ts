@@ -1,11 +1,12 @@
 import { normalize } from '../../src/presentation-3';
-import { convertPresentation2 } from '../../src/presentation-2';
+import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
 import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__api__presentation__2.1__example__fixtures__1__manifest.json';
 import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
 import p2ManifestWithStart from '../../fixtures/presentation-2/bl-manifest.json';
 import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
 import manifestExhibition from '../../fixtures/presentation-3/exhibition-1.json';
 import manifestSpecificResource from '../../fixtures/presentation-3/specific-resource-infer.json';
+import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
 import { Manifest } from '@iiif/presentation-3';
 
 describe('normalize', () => {
@@ -382,5 +383,15 @@ describe('normalize', () => {
     expect(annotation.target.type).toEqual('SpecificResource');
 
     expect(db).to.exist;
+  });
+
+  test('normalize nested ranges', () => {
+    const upgraded = presentation2to3.traverseManifest(nestedRanges as any);
+    const db = normalize(upgraded) as any;
+
+    const range =
+      db.entities.Range['https://iiif.bodleian.ox.ac.uk/iiif/range/390fd0e8-9eae-475d-9564-ed916ab9035c/LOG_0281'];
+
+    expect(range.items).toHaveLength(1);
   });
 });

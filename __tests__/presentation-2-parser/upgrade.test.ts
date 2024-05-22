@@ -25,6 +25,7 @@ import loc from '../../fixtures/presentation-2/loc.json';
 import level0manifest from '../../fixtures/presentation-2/manifest-l0.json';
 import artic from '../../fixtures/presentation-2/artic-manifest.json';
 import bodyChoice from '../../fixtures/presentation-2/body-choice.json';
+import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
 
 import { expect } from 'vitest';
 
@@ -605,5 +606,14 @@ describe('Presentation 2 to 3', () => {
         "type": "AnnotationPage",
       }
     `);
+  });
+
+  test('nested ranges', () => {
+    const result = presentation2to3.traverseManifest(nestedRanges as any);
+    const found = result.structures!.find(
+      (r) => r.id === 'https://iiif.bodleian.ox.ac.uk/iiif/range/390fd0e8-9eae-475d-9564-ed916ab9035c/LOG_0281'
+    );
+
+    expect(result).toMatchSnapshot();
   });
 });
