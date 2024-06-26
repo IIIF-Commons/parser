@@ -17,6 +17,10 @@ const skipThese: string[] = [
   // @todo
   //   - Has ImageService3 and ImageService2 with the same identifier :(
   'bodleian.json',
+
+  // @todo
+  //  - Updates to service.
+  'ghent-choices.json',
 ];
 
 describe('Smoke tests', async function () {

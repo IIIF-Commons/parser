@@ -165,7 +165,7 @@ export class Traverse {
       );
     }
     if (resource.homepage) {
-      resource.homepage = resource.homepage.map((homepage) =>
+      resource.homepage = ensureArray(resource.homepage).map((homepage) =>
         this.traverseType(homepage, { parent: resource }, this.traversals.contentResource)
       );
     }
@@ -414,8 +414,8 @@ export class Traverse {
           typeHint === 'Canvas' || source.type === 'Canvas'
             ? this.traverseType(source, { parent }, this.traversals.canvas)
             : typeHint === 'ContentResource'
-            ? this.traverseContentResource(source, { parent })
-            : this.traverseUnknown(source, { parent, typeHint }),
+              ? this.traverseContentResource(source, { parent })
+              : this.traverseUnknown(source, { parent, typeHint }),
       },
       { parent },
       this.traversals.specificResource

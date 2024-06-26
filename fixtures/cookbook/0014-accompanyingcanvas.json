@@ -71,7 +71,7 @@
                 "duration": 1985.024,
                 "format": "video/mp4"
               },
-              "target": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/p1"
+              "target": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/p1"
             }
           ]
         }

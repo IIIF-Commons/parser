@@ -529,7 +529,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0003-mvm-video https://iiif.io/api
         "summary": null,
         "thumbnail": [],
         "type": "Canvas",
-        "width": 640,
+        "width": 480,
       },
     },
     "Collection": {},
@@ -645,7 +645,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0003-mvm-video https://iiif.io/api
         },
       ],
       "type": "Canvas",
-      "width": 640,
+      "width": 480,
     },
   ],
   "label": {
@@ -1942,7 +1942,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
           },
           "value": {
             "en": [
-              "<span>Glen Robson, IIIF Technical Coordinator. <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> <a href="https://creativecommons.org/licenses/by-sa/3.0" title"CC BY-SA 3.0"><img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"/></a></span>",
+              "<span>Glen Robson, IIIF Technical Coordinator. <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> <a href="https://creativecommons.org/licenses/by-sa/3.0" title="CC BY-SA 3.0"><img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"/></a></span>",
             ],
           },
         },
@@ -2039,7 +2039,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0008-rights https://iiif.io/api/co
     },
     "value": {
       "en": [
-        "<span>Glen Robson, IIIF Technical Coordinator. <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> <a href="https://creativecommons.org/licenses/by-sa/3.0" title"CC BY-SA 3.0"><img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"/></a></span>",
+        "<span>Glen Robson, IIIF Technical Coordinator. <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a> <a href="https://creativecommons.org/licenses/by-sa/3.0" title="CC BY-SA 3.0"><img src="https://licensebuttons.net/l/by-sa/3.0/88x31.png"/></a></span>",
       ],
     },
   },
@@ -6507,7 +6507,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0014-accompanyingcanvas https://ii
         ],
         "target": {
           "source": {
-            "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/p1",
+            "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/p1",
             "type": "Canvas",
           },
           "type": "SpecificResource",
@@ -6819,7 +6819,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0014-accompanyingcanvas https://ii
               },
               "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/annotation/segment1-audio",
               "motivation": "painting",
-              "target": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/p1",
+              "target": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/p1",
               "type": "Annotation",
             },
           ],
@@ -7230,7 +7230,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0017-transcription-av https://iiif
         "width": 1920,
       },
       "https://fixtures.iiif.io/video/indiana/volleyball/volleyball.txt": {
-        "format": "text/txt",
+        "format": "text/plain",
         "id": "https://fixtures.iiif.io/video/indiana/volleyball/volleyball.txt",
         "iiif-parser:hasPart": [
           {
@@ -7344,7 +7344,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0017-transcription-av https://iiif
       ],
       "rendering": [
         {
-          "format": "text/txt",
+          "format": "text/plain",
           "id": "https://fixtures.iiif.io/video/indiana/volleyball/volleyball.txt",
           "label": {
             "en": [
@@ -14389,6 +14389,767 @@ exports[`Cookbook > Testing normalize %p (%p) 0031-bound-multivolume https://iii
 }
 `;
 
+exports[`Cookbook > Testing normalize %p (%p) 0032-collection-collection https://iiif.io/api/cookbook/recipe/0032-collection/collection.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {},
+    "AnnotationCollection": {},
+    "AnnotationPage": {},
+    "Canvas": {},
+    "Collection": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/collection.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/collection.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/collection.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/collection.json",
+            "type": "Collection",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json",
+            "iiif-parser:isExternal": true,
+            "label": {
+              "en": [
+                "The Gulf Stream",
+              ],
+            },
+            "type": "Manifest",
+          },
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
+            "iiif-parser:isExternal": true,
+            "label": {
+              "en": [
+                "Northeaster",
+              ],
+            },
+            "type": "Manifest",
+          },
+        ],
+        "label": {
+          "en": [
+            "Simple Collection Example",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Collection",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "ContentResource": {},
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json",
+        "iiif-parser:isExternal": true,
+        "items": [],
+        "label": {
+          "en": [
+            "The Gulf Stream",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
+        "iiif-parser:isExternal": true,
+        "items": [],
+        "label": {
+          "en": [
+            "Northeaster",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {},
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0032-collection/collection.json": "Collection",
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json": "Manifest",
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json": "Manifest",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0032-collection/collection.json",
+    "type": "Collection",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0032-collection-collection https://iiif.io/api/cookbook/recipe/0032-collection/collection.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0032-collection/collection.json",
+  "items": [
+    {
+      "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json",
+      "label": {
+        "en": [
+          "The Gulf Stream",
+        ],
+      },
+      "type": "Manifest",
+    },
+    {
+      "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
+      "label": {
+        "en": [
+          "Northeaster",
+        ],
+      },
+      "type": "Manifest",
+    },
+  ],
+  "label": {
+    "en": [
+      "Simple Collection Example",
+    ],
+  },
+  "type": "Collection",
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0032-collection-manifest-01 https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/annotation/p0001-image": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/canvas/p1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/page/p1/1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/page/p1/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/page/p1/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/canvas/p1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/annotation/p0001-image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/canvas/p1": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 3540,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/canvas/p1",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/page/p1/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 5886,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 3540,
+        "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 5886,
+      },
+    },
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/canvas/p1",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "en": [
+            "The Gulf Stream",
+          ],
+        },
+        "metadata": [
+          {
+            "label": {
+              "en": [
+                "Artist",
+              ],
+            },
+            "value": {
+              "en": [
+                "Winslow Homer (1836–1910)",
+              ],
+            },
+          },
+          {
+            "label": {
+              "en": [
+                "Date",
+              ],
+            },
+            "value": {
+              "en": [
+                "1899",
+              ],
+            },
+          },
+        ],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json": "Manifest",
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/annotation/p0001-image": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/canvas/p1": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/page/p1/1": "AnnotationPage",
+    "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art/full/max/0/default.jpg": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json",
+    "type": "Manifest",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0032-collection-manifest-01 https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json",
+  "items": [
+    {
+      "height": 3540,
+      "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/canvas/p1",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/page/p1/1",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 3540,
+                "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Winslow_Homer_-_The_Gulf_Stream_-_Metropolitan_Museum_of_Art",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 5886,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/annotation/p0001-image",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/1/canvas/p1",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "type": "Canvas",
+      "width": 5886,
+    },
+  ],
+  "label": {
+    "en": [
+      "The Gulf Stream",
+    ],
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": [
+          "Artist",
+        ],
+      },
+      "value": {
+        "en": [
+          "Winslow Homer (1836–1910)",
+        ],
+      },
+    },
+    {
+      "label": {
+        "en": [
+          "Date",
+        ],
+      },
+      "value": {
+        "en": [
+          "1899",
+        ],
+      },
+    },
+  ],
+  "type": "Manifest",
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0032-collection-manifest-02 https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/annotation/p0001-image": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/canvas/p1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/page/p1/1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/page/p1/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/page/p1/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/canvas/p1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/annotation/p0001-image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/canvas/p1": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 2572,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/canvas/p1",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/page/p1/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 3764,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 2572,
+        "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 3764,
+      },
+    },
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/canvas/p1",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "en": [
+            "Northeaster",
+          ],
+        },
+        "metadata": [
+          {
+            "label": {
+              "en": [
+                "Artist",
+              ],
+            },
+            "value": {
+              "en": [
+                "Winslow Homer (1836–1910)",
+              ],
+            },
+          },
+          {
+            "label": {
+              "en": [
+                "Date",
+              ],
+            },
+            "value": {
+              "en": [
+                "1895",
+              ],
+            },
+          },
+        ],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json": "Manifest",
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/annotation/p0001-image": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/canvas/p1": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/page/p1/1": "AnnotationPage",
+    "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895/full/max/0/default.jpg": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
+    "type": "Manifest",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0032-collection-manifest-02 https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
+  "items": [
+    {
+      "height": 2572,
+      "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/canvas/p1",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/page/p1/1",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 2572,
+                "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/329817fc8a251a01c393f517d8a17d87-Northeaster_by_Winslow_Homer_1895",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 3764,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/annotation/p0001-image",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest/2/canvas/p1",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "type": "Canvas",
+      "width": 3764,
+    },
+  ],
+  "label": {
+    "en": [
+      "Northeaster",
+    ],
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": [
+          "Artist",
+        ],
+      },
+      "value": {
+        "en": [
+          "Winslow Homer (1836–1910)",
+        ],
+      },
+    },
+    {
+      "label": {
+        "en": [
+          "Date",
+        ],
+      },
+      "value": {
+        "en": [
+          "1895",
+        ],
+      },
+    },
+  ],
+  "type": "Manifest",
+}
+`;
+
 exports[`Cookbook > Testing normalize %p (%p) 0033-choice https://iiif.io/api/cookbook/recipe/0033-choice/manifest.json 1`] = `
 {
   "entities": {
@@ -16299,7 +17060,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
       "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0002-image": {
         "body": [
           {
-            "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/native.jpg",
+            "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/default.jpg",
             "type": "ContentResource",
           },
         ],
@@ -16423,13 +17184,13 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
         "type": "Image",
         "width": 7216,
       },
-      "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/native.jpg": {
+      "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/default.jpg": {
         "format": "image/jpeg",
         "height": 2414,
-        "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/native.jpg",
+        "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/default.jpg",
         "iiif-parser:hasPart": [
           {
-            "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/native.jpg",
+            "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/default.jpg",
             "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0002-image",
             "type": "Image",
           },
@@ -16442,8 +17203,8 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
         "service": [
           {
             "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature",
-            "profile": "level2",
-            "type": "ImageService1",
+            "profile": "level1",
+            "type": "ImageService3",
           },
         ],
         "type": "Image",
@@ -16505,8 +17266,8 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
       },
       "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature": {
         "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature",
-        "profile": "level2",
-        "type": "ImageService1",
+        "profile": "level1",
+        "type": "ImageService3",
       },
     },
   },
@@ -16517,7 +17278,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
     "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/manifest.json": "Manifest",
     "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/page/p1/1": "AnnotationPage",
     "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux/full/max/0/default.jpg": "ContentResource",
-    "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/native.jpg": "ContentResource",
+    "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/default.jpg": "ContentResource",
   },
   "resource": {
     "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/manifest.json",
@@ -16562,7 +17323,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
               "body": {
                 "format": "image/jpeg",
                 "height": 2414,
-                "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/native.jpg",
+                "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/default.jpg",
                 "label": {
                   "fr": [
                     "Miniature [Chilpéric Ier tue Galswinthe, se remarie et est assassiné]",
@@ -16571,8 +17332,8 @@ exports[`Cookbook > Testing normalize %p (%p) 0036-composition-from-multiple-ima
                 "service": [
                   {
                     "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature",
-                    "profile": "level2",
-                    "type": "ImageService1",
+                    "profile": "level1",
+                    "type": "ImageService3",
                   },
                 ],
                 "type": "Image",
@@ -18184,9 +18945,9 @@ exports[`Cookbook > Testing normalize %p (%p) 0047-homepage https://iiif.io/api/
         ],
         "service": [
           {
-            "@id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
-            "@type": "ImageService3",
-            "profile": "http://iiif.io/api/image/2/level1.json",
+            "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
+            "profile": "level1",
+            "type": "ImageService3",
           },
         ],
         "type": "Image",
@@ -18267,10 +19028,8 @@ exports[`Cookbook > Testing normalize %p (%p) 0047-homepage https://iiif.io/api/
     "Selector": {},
     "Service": {
       "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon": {
-        "@id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
-        "@type": "ImageService3",
         "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
-        "profile": "http://iiif.io/api/image/2/level1.json",
+        "profile": "level1",
         "type": "ImageService3",
       },
     },
@@ -18324,9 +19083,9 @@ exports[`Cookbook > Testing normalize %p (%p) 0047-homepage https://iiif.io/api/
                 "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/!500,500/0/default.jpg",
                 "service": [
                   {
-                    "@id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
-                    "@type": "ImageService3",
-                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
+                    "profile": "level1",
+                    "type": "ImageService3",
                   },
                 ],
                 "type": "Image",
@@ -21478,7 +22237,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
     "ContentResource": {
       "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg": {
         "format": "image/jpeg",
-        "height": 300,
+        "height": 4823,
         "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
         "iiif-parser:hasPart": [
           {
@@ -21490,7 +22249,6 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
         "service": [
           {
             "extraFormats": [
-              "jpg",
               "png",
             ],
             "extraQualities": [
@@ -21498,6 +22256,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
               "color",
               "gray",
             ],
+            "height": 4823,
             "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001",
             "profile": "level1",
             "protocol": "http://iiif.io/api/image",
@@ -21514,10 +22273,11 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
               },
             ],
             "type": "ImageService3",
+            "width": 3497,
           },
         ],
         "type": "Image",
-        "width": 219,
+        "width": 3497,
       },
       "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full/full/max/0/default.jpg": {
         "format": "image/jpeg",
@@ -21678,12 +22438,11 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
   "thumbnail": [
     {
       "format": "image/jpeg",
-      "height": 300,
+      "height": 4823,
       "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001/full/max/0/default.jpg",
       "service": [
         {
           "extraFormats": [
-            "jpg",
             "png",
           ],
           "extraQualities": [
@@ -21691,6 +22450,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
             "color",
             "gray",
           ],
+          "height": 4823,
           "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001",
           "profile": "level1",
           "protocol": "http://iiif.io/api/image",
@@ -21707,33 +22467,34 @@ exports[`Cookbook > Testing normalize %p (%p) 0117-add-image-thumbnail https://i
             },
           ],
           "type": "ImageService3",
+          "width": 3497,
         },
       ],
       "type": "Image",
-      "width": 219,
+      "width": 3497,
     },
   ],
   "type": "Manifest",
 }
 `;
 
-exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json 1`] = `
+exports[`Cookbook > Testing normalize %p (%p) 0118-multivalue https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json 1`] = `
 {
   "entities": {
     "Agent": {},
     "Annotation": {
-      "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1/annotation/1": {
+      "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1/annotation/1": {
         "body": [
           {
             "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg",
             "type": "ContentResource",
           },
         ],
-        "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1/annotation/1",
+        "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1/annotation/1",
         "iiif-parser:hasPart": [
           {
-            "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1/annotation/1",
-            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1",
+            "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1/annotation/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1",
             "type": "Annotation",
           },
         ],
@@ -21742,7 +22503,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
         ],
         "target": {
           "source": {
-            "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1",
+            "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1",
             "type": "Canvas",
           },
           "type": "SpecificResource",
@@ -21752,20 +22513,20 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
     },
     "AnnotationCollection": {},
     "AnnotationPage": {
-      "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1": {
+      "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1": {
         "behavior": [],
         "homepage": [],
-        "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1",
+        "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1",
         "iiif-parser:hasPart": [
           {
-            "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1",
-            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1",
+            "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1",
             "type": "AnnotationPage",
           },
         ],
         "items": [
           {
-            "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1/annotation/1",
+            "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1/annotation/1",
             "type": "Annotation",
           },
         ],
@@ -21783,17 +22544,17 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
       },
     },
     "Canvas": {
-      "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1": {
+      "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1": {
         "accompanyingCanvas": null,
         "annotations": [],
         "behavior": [],
         "duration": 0,
         "height": 991,
         "homepage": [],
-        "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1",
+        "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1",
         "items": [
           {
-            "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1",
+            "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1",
             "type": "AnnotationPage",
           },
         ],
@@ -21822,7 +22583,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
         "iiif-parser:hasPart": [
           {
             "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg",
-            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1/annotation/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1/annotation/1",
             "type": "Image",
           },
         ],
@@ -21830,23 +22591,23 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
       },
     },
     "Manifest": {
-      "https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json": {
+      "https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json": {
         "@context": "http://iiif.io/api/presentation/3/context.json",
         "accompanyingCanvas": null,
         "annotations": [],
         "behavior": [],
         "homepage": [],
-        "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json",
+        "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json",
         "iiif-parser:hasPart": [
           {
-            "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json",
-            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json",
+            "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json",
             "type": "Manifest",
           },
         ],
         "items": [
           {
-            "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1",
+            "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1",
             "type": "Canvas",
           },
         ],
@@ -21901,30 +22662,30 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
     "Service": {},
   },
   "mapping": {
-    "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1": "Canvas",
-    "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1": "AnnotationPage",
-    "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1/annotation/1": "Annotation",
-    "https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json": "Manifest",
+    "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1/annotation/1": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json": "Manifest",
     "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg": "ContentResource",
   },
   "resource": {
-    "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json",
+    "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json",
     "type": "Manifest",
   },
 }
 `;
 
-exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json 2`] = `
+exports[`Cookbook > Testing normalize %p (%p) 0118-multivalue https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json 2`] = `
 {
   "@context": "http://iiif.io/api/presentation/3/context.json",
-  "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json",
   "items": [
     {
       "height": 991,
-      "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1",
+      "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1",
       "items": [
         {
-          "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1",
+          "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1",
           "items": [
             {
               "body": {
@@ -21932,9 +22693,9 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
                 "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg",
                 "type": "Image",
               },
-              "id": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1/page/1/annotation/1",
+              "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1/page/1/annotation/1",
               "motivation": "painting",
-              "target": "https://iiif.io/api/cookbook/recipe/0118_multivalue/canvas/1",
+              "target": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1",
               "type": "Annotation",
             },
           ],
@@ -21972,6 +22733,381 @@ exports[`Cookbook > Testing normalize %p (%p) 0118_multivalue https://iiif.io/ap
   "summary": {
     "en": [
       "A painting in oil on canvas created by the American-born painter James McNeill Whistler, in 1871.",
+    ],
+  },
+  "type": "Manifest",
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0135-annotating-point-in-canvas https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag": {
+        "body": [
+          {
+            "id": "vault://5332a945",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1",
+            "type": "Annotation",
+          },
+        ],
+        "label": {
+          "en": [
+            "Annotation containing the name of the place annotated using the PointSelector.",
+          ],
+        },
+        "motivation": [
+          "tagging",
+        ],
+        "target": {
+          "selector": {
+            "type": "PointSelector",
+            "x": 3385,
+            "y": 1464,
+          },
+          "source": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/content.json": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/content.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/content.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/contentPage.json",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/contentPage.json": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/contentPage.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/contentPage.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/content.json",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+      "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json": {
+        "accompanyingCanvas": null,
+        "annotations": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "behavior": [],
+        "duration": 0,
+        "height": 7072,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/contentPage.json",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "en": [
+            "Chesapeake and Ohio Canal Pamphlet",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 5212,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 7072,
+        "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/content.json",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 5212,
+      },
+      "vault://5332a945": {
+        "format": "text/plain",
+        "id": "vault://5332a945",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://5332a945",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "type": "TextualBody",
+        "value": "Town Creek Aqueduct",
+      },
+    },
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "en": [
+            "Using a point selector for annotating a location on a map.",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": {
+          "en": [
+            "A map containing an point with an annotation of the location.",
+          ],
+        },
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/content.json": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/contentPage.json": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json": "Manifest",
+    "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1": "AnnotationPage",
+    "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg": "ContentResource",
+    "vault://5332a945": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json",
+    "type": "Manifest",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0135-annotating-point-in-canvas https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json",
+  "items": [
+    {
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1",
+          "items": [
+            {
+              "body": {
+                "format": "text/plain",
+                "language": "en",
+                "type": "TextualBody",
+                "value": "Town Creek Aqueduct",
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag",
+              "label": {
+                "en": [
+                  "Annotation containing the name of the place annotated using the PointSelector.",
+                ],
+              },
+              "motivation": "tagging",
+              "target": {
+                "selector": {
+                  "type": "PointSelector",
+                  "x": 3385,
+                  "y": 1464,
+                },
+                "source": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+                "type": "SpecificResource",
+              },
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "height": 7072,
+      "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/contentPage.json",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 7072,
+                "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 5212,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/content.json",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "en": [
+          "Chesapeake and Ohio Canal Pamphlet",
+        ],
+      },
+      "type": "Canvas",
+      "width": 5212,
+    },
+  ],
+  "label": {
+    "en": [
+      "Using a point selector for annotating a location on a map.",
+    ],
+  },
+  "summary": {
+    "en": [
+      "A map containing an point with an annotation of the location.",
     ],
   },
   "type": "Manifest",
@@ -22161,20 +23297,20 @@ exports[`Cookbook > Testing normalize %p (%p) 0139-geolocate-canvas-fragment htt
           "coordinates": [
             [
               [
-                -77.097847,
-                38.901359,
+                -77.019853,
+                38.913101,
               ],
               [
-                -77.02694,
-                38.901359,
+                -77.110013,
+                38.843254,
               ],
               [
-                -77.02694,
-                39.03404,
+                -77.284698,
+                38.997574,
               ],
               [
-                -77.097847,
-                39.03404,
+                -77.188911,
+                39.062648,
               ],
             ],
           ],
@@ -22317,20 +23453,20 @@ exports[`Cookbook > Testing normalize %p (%p) 0139-geolocate-canvas-fragment htt
                   "coordinates": [
                     [
                       [
-                        -77.097847,
-                        38.901359,
+                        -77.019853,
+                        38.913101,
                       ],
                       [
-                        -77.02694,
-                        38.901359,
+                        -77.110013,
+                        38.843254,
                       ],
                       [
-                        -77.02694,
-                        39.03404,
+                        -77.284698,
+                        38.997574,
                       ],
                       [
-                        -77.097847,
-                        39.03404,
+                        -77.188911,
+                        39.062648,
                       ],
                     ],
                   ],
@@ -22522,7 +23658,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0154-geo-extension https://iiif.io
     "Collection": {},
     "ContentResource": {
       "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/max/0/default.jpg": {
-        "format": "image/jpg",
+        "format": "image/jpeg",
         "height": 3000,
         "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/max/0/default.jpg",
         "iiif-parser:hasPart": [
@@ -22659,7 +23795,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0154-geo-extension https://iiif.io
           "items": [
             {
               "body": {
-                "format": "image/jpg",
+                "format": "image/jpeg",
                 "height": 3000,
                 "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/max/0/default.jpg",
                 "service": [
@@ -25386,7 +26522,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0240-navPlace-on-canvases https://
     "Collection": {},
     "ContentResource": {
       "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/max/0/default.jpg": {
-        "format": "image/jpg",
+        "format": "image/jpeg",
         "height": 3000,
         "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/max/0/default.jpg",
         "iiif-parser:hasPart": [
@@ -25407,7 +26543,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0240-navPlace-on-canvases https://
         "width": 2315,
       },
       "https://iiif.io/api/image/3.0/example/reference/58763298b61c2a99f78ff94d8364c639-laocoon_1946_18_1/full/max/0/default.jpg": {
-        "format": "image/jpg",
+        "format": "image/jpeg",
         "height": 3259,
         "id": "https://iiif.io/api/image/3.0/example/reference/58763298b61c2a99f78ff94d8364c639-laocoon_1946_18_1/full/max/0/default.jpg",
         "iiif-parser:hasPart": [
@@ -25530,7 +26666,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0240-navPlace-on-canvases https://
           "items": [
             {
               "body": {
-                "format": "image/jpg",
+                "format": "image/jpeg",
                 "height": 3000,
                 "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/max/0/default.jpg",
                 "service": [
@@ -25596,7 +26732,7 @@ exports[`Cookbook > Testing normalize %p (%p) 0240-navPlace-on-canvases https://
           "items": [
             {
               "body": {
-                "format": "image/jpg",
+                "format": "image/jpeg",
                 "height": 3259,
                 "id": "https://iiif.io/api/image/3.0/example/reference/58763298b61c2a99f78ff94d8364c639-laocoon_1946_18_1/full/max/0/default.jpg",
                 "service": [
@@ -26977,6 +28113,776 @@ exports[`Cookbook > Testing normalize %p (%p) 0269-embedded-or-referenced-annota
 }
 `;
 
+exports[`Cookbook > Testing normalize %p (%p) 0269-embedded-or-referenced-annotations-annotationpage https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-2/anno-1": {
+        "body": [
+          {
+            "id": "vault://929e073a",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-2/anno-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-2/anno-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "commenting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-2/anno-1",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {},
+    "Collection": {},
+    "ContentResource": {
+      "vault://929e073a": {
+        "format": "text/plain",
+        "id": "vault://929e073a",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://929e073a",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-2/anno-1",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "de",
+        "type": "TextualBody",
+        "value": "Göttinger Marktplatz mit Gänseliesel Brunnen",
+      },
+    },
+    "Manifest": {},
+    "Range": {},
+    "Selector": {},
+    "Service": {},
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-2/anno-1": "Annotation",
+    "vault://929e073a": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json",
+    "type": "AnnotationPage",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0269-embedded-or-referenced-annotations-annotationpage https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json",
+  "items": [
+    {
+      "body": {
+        "format": "text/plain",
+        "language": "de",
+        "type": "TextualBody",
+        "value": "Göttinger Marktplatz mit Gänseliesel Brunnen",
+      },
+      "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-2/anno-1",
+      "motivation": "commenting",
+      "target": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1",
+      "type": "Annotation",
+    },
+  ],
+  "type": "AnnotationPage",
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0283-missing-image https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0001-image": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0001-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0001-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p1/1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0003-image": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0003-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0003-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p3/1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0004-image": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0004-image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0004-image",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p4/1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p1/1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p1/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p1/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0001-image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p3/1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p3/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p3/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0003-image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p4/1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p4/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p4/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0004-image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 2504,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p1/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "en": [
+            "f. 1r",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 1768,
+      },
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p2": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 2504,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p2",
+        "items": [],
+        "label": {
+          "en": [
+            "f. 1v — MISSING",
+          ],
+        },
+        "metadata": [
+          {
+            "label": {
+              "en": [
+                "Description",
+              ],
+            },
+            "value": {
+              "en": [
+                "Image unavailable or does not exist",
+              ],
+            },
+          },
+        ],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 1768,
+      },
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 2456,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p3/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "en": [
+            "f. 2r",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 1792,
+      },
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 2440,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p4/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "en": [
+            "f. 2v",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 1760,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 2504,
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0001-image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 1768,
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 2456,
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0003-image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 1792,
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 2440,
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0004-image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 1760,
+      },
+    },
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1",
+            "type": "Canvas",
+          },
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p2",
+            "type": "Canvas",
+          },
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3",
+            "type": "Canvas",
+          },
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "en": [
+            "Ethiopic Ms 10",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0001-image": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0003-image": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0004-image": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p2": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json": "Manifest",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p1/1": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p3/1": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p4/1": "AnnotationPage",
+    "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master/full/max/0/default.jpg": "ContentResource",
+    "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master/full/max/0/default.jpg": "ContentResource",
+    "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master/full/max/0/default.jpg": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json",
+    "type": "Manifest",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0283-missing-image https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json",
+  "items": [
+    {
+      "height": 2504,
+      "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p1/1",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 2504,
+                "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-1-21198-zz001d8m41_774608_master",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 1768,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0001-image",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "en": [
+          "f. 1r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 1768,
+    },
+    {
+      "height": 2504,
+      "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p2",
+      "items": [],
+      "label": {
+        "en": [
+          "f. 1v — MISSING",
+        ],
+      },
+      "metadata": [
+        {
+          "label": {
+            "en": [
+              "Description",
+            ],
+          },
+          "value": {
+            "en": [
+              "Image unavailable or does not exist",
+            ],
+          },
+        },
+      ],
+      "type": "Canvas",
+      "width": 1768,
+    },
+    {
+      "height": 2456,
+      "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p3/1",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 2456,
+                "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-3-21198-zz001d8tm5_775004_master",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 1792,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0003-image",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "en": [
+          "f. 2r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 1792,
+    },
+    {
+      "height": 2440,
+      "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/page/p4/1",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 2440,
+                "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/d3bbf5397c6df6b894c5991195c912ab-4-21198-zz001d8tnp_775007_master",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 1760,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/annotation/p0004-image",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "en": [
+          "f. 2v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 1760,
+    },
+  ],
+  "label": {
+    "en": [
+      "Ethiopic Ms 10",
+    ],
+  },
+  "type": "Manifest",
+}
+`;
+
 exports[`Cookbook > Testing normalize %p (%p) 0299-region https://iiif.io/api/cookbook/recipe/0299-region/manifest.json 1`] = `
 {
   "entities": {
@@ -27224,6 +29130,433 @@ exports[`Cookbook > Testing normalize %p (%p) 0299-region https://iiif.io/api/co
     ],
   },
   "type": "Manifest",
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0306-linking-annotations-to-manifests https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1/anno-1": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1/anno-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1/anno-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "iiif-parser:isExternal": true,
+        "items": [],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+      "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1/anno-1",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1": {
+        "accompanyingCanvas": null,
+        "annotations": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+            "type": "AnnotationPage",
+          },
+        ],
+        "behavior": [],
+        "duration": 0,
+        "height": 3024,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 4032,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 3024,
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1/anno-1",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 4032,
+      },
+    },
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "en": [
+            "Picture of Göttingen taken during the 2019 IIIF Conference",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1/anno-1": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json": "Manifest",
+    "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json",
+    "type": "Manifest",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0306-linking-annotations-to-manifests https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json",
+  "items": [
+    {
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+          "type": "AnnotationPage",
+        },
+      ],
+      "height": 3024,
+      "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 3024,
+                "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 4032,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1/anno-1",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "type": "Canvas",
+      "width": 4032,
+    },
+  ],
+  "label": {
+    "en": [
+      "Picture of Göttingen taken during the 2019 IIIF Conference",
+    ],
+  },
+  "type": "Manifest",
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0306-linking-annotations-to-manifests-annotationpage https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-2/anno-1": {
+        "body": [
+          {
+            "id": "vault://2876d220",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-2/anno-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-2/anno-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "commenting",
+        ],
+        "target": {
+          "selector": {
+            "conformsTo": "http://www.w3.org/TR/media-frags/",
+            "type": "FragmentSelector",
+            "value": "xywh=300,800,1200,1200",
+          },
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+            "partOf": [
+              {
+                "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json",
+                "type": "Manifest",
+              },
+            ],
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-2/anno-1",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {},
+    "Collection": {},
+    "ContentResource": {
+      "vault://2876d220": {
+        "format": "text/plain",
+        "id": "vault://2876d220",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://2876d220",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-2/anno-1",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "de",
+        "type": "TextualBody",
+        "value": "Der Gänseliesel-Brunnen",
+      },
+    },
+    "Manifest": {},
+    "Range": {},
+    "Selector": {},
+    "Service": {},
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-2/anno-1": "Annotation",
+    "vault://2876d220": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+    "type": "AnnotationPage",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0306-linking-annotations-to-manifests-annotationpage https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+  "items": [
+    {
+      "body": {
+        "format": "text/plain",
+        "language": "de",
+        "type": "TextualBody",
+        "value": "Der Gänseliesel-Brunnen",
+      },
+      "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-2/anno-1",
+      "motivation": "commenting",
+      "target": {
+        "selector": {
+          "conformsTo": "http://www.w3.org/TR/media-frags/",
+          "type": "FragmentSelector",
+          "value": "xywh=300,800,1200,1200",
+        },
+        "source": {
+          "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+          "partOf": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json",
+              "type": "Manifest",
+            },
+          ],
+          "type": "Canvas",
+        },
+        "type": "SpecificResource",
+      },
+      "type": "Annotation",
+    },
+  ],
+  "type": "AnnotationPage",
 }
 `;
 
@@ -27643,6 +29976,756 @@ exports[`Cookbook > Testing normalize %p (%p) 0326-annotating-image-layer https:
   "label": {
     "en": [
       "Choice Example with layer specific annotation",
+    ],
+  },
+  "type": "Manifest",
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0377-image-in-annotation https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1/anno-1": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1/anno-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1/anno-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1": {
+        "body": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-fountain/full/300,/0/default.jpg",
+            "type": "ContentResource",
+          },
+          {
+            "id": "vault://69cc99ce",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "commenting",
+        ],
+        "target": {
+          "selector": {
+            "type": "FragmentSelector",
+            "value": "xywh=138,550,1477,1710",
+          },
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1/anno-1",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+      "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1": {
+        "accompanyingCanvas": null,
+        "annotations": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2",
+            "type": "AnnotationPage",
+          },
+        ],
+        "behavior": [],
+        "duration": 0,
+        "height": 3024,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 4032,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-fountain/full/300,/0/default.jpg": {
+        "format": "image/jpeg",
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-fountain/full/300,/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-fountain/full/300,/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1",
+            "type": "Image",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg": {
+        "format": "image/jpeg",
+        "height": 3024,
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1/anno-1",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+            "profile": "level1",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+        "width": 4032,
+      },
+      "vault://69cc99ce": {
+        "id": "vault://69cc99ce",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://69cc99ce",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1",
+            "type": "TextualBody",
+          },
+        ],
+        "language": "en",
+        "type": "TextualBody",
+        "value": "Night picture of the Gänseliesel fountain in Göttingen taken during the 2019 IIIF Conference",
+      },
+    },
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "en": [
+            "Picture of Göttingen taken during the 2019 IIIF Conference",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen": {
+        "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+        "profile": "level1",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1/anno-1": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json": "Manifest",
+    "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-fountain/full/300,/0/default.jpg": "ContentResource",
+    "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg": "ContentResource",
+    "vault://69cc99ce": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json",
+    "type": "Manifest",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0377-image-in-annotation https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json",
+  "items": [
+    {
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2",
+          "items": [
+            {
+              "body": [
+                {
+                  "format": "image/jpeg",
+                  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-fountain/full/300,/0/default.jpg",
+                  "type": "Image",
+                },
+                {
+                  "language": "en",
+                  "type": "TextualBody",
+                  "value": "Night picture of the Gänseliesel fountain in Göttingen taken during the 2019 IIIF Conference",
+                },
+              ],
+              "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1",
+              "motivation": "commenting",
+              "target": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1#xywh=138,550,1477,1710",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "height": 3024,
+      "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1",
+          "items": [
+            {
+              "body": {
+                "format": "image/jpeg",
+                "height": 3024,
+                "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+                    "profile": "level1",
+                    "type": "ImageService3",
+                  },
+                ],
+                "type": "Image",
+                "width": 4032,
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1/anno-1",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "type": "Canvas",
+      "width": 4032,
+    },
+  ],
+  "label": {
+    "en": [
+      "Picture of Göttingen taken during the 2019 IIIF Conference",
+    ],
+  },
+  "type": "Manifest",
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0434-choice-av https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json 1`] = `
+{
+  "entities": {
+    "Agent": {},
+    "Annotation": {
+      "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1/annotation/1": {
+        "body": [
+          {
+            "id": "vault://adac293e",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1/annotation/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1/annotation/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1": {
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1/annotation/1",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+      },
+    },
+    "Canvas": {
+      "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 16,
+        "height": 0,
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 0,
+      },
+    },
+    "Collection": {},
+    "ContentResource": {
+      "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.flac": {
+        "duration": 16,
+        "format": "audio/flac",
+        "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.flac",
+        "label": {
+          "en": [
+            "FLAC",
+          ],
+        },
+        "type": "Sound",
+      },
+      "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.m4a": {
+        "duration": 16,
+        "format": "audio/alac",
+        "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.m4a",
+        "label": {
+          "en": [
+            "ALAC",
+          ],
+        },
+        "type": "Sound",
+      },
+      "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mp3": {
+        "duration": 16,
+        "format": "audio/mp3",
+        "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mp3",
+        "label": {
+          "en": [
+            "MP3",
+          ],
+        },
+        "type": "Sound",
+      },
+      "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mpeg": {
+        "duration": 16,
+        "format": "audio/mpeg",
+        "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mpeg",
+        "label": {
+          "en": [
+            "MPEG2",
+          ],
+        },
+        "type": "Sound",
+      },
+      "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.ogg": {
+        "duration": 16,
+        "format": "audio/ogg",
+        "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.ogg",
+        "label": {
+          "en": [
+            "OGG Vorbis OGG",
+          ],
+        },
+        "type": "Sound",
+      },
+      "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.wav": {
+        "duration": 16,
+        "format": "audio/wav",
+        "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.wav",
+        "label": {
+          "en": [
+            "WAV",
+          ],
+        },
+        "type": "Sound",
+      },
+      "vault://adac293e": {
+        "id": "vault://adac293e",
+        "iiif-parser:hasPart": [
+          {
+            "id": "vault://adac293e",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1/annotation/1",
+            "type": "Choice",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.m4a",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mp3",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.flac",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.ogg",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mpeg",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.wav",
+            "type": "ContentResource",
+          },
+        ],
+        "type": "Choice",
+      },
+    },
+    "Manifest": {
+      "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json": {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json",
+            "iiif-parser:partOf": "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "en": [
+            "Excerpt from Egbe Iyawo",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": {
+          "en": [
+            "Excerpt from a performance of Egbe Iyawo recorded in Kabba Division, Kwara State. ",
+          ],
+        },
+        "thumbnail": [],
+        "type": "Manifest",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {},
+  },
+  "mapping": {
+    "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.flac": "ContentResource",
+    "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.m4a": "ContentResource",
+    "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mp3": "ContentResource",
+    "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mpeg": "ContentResource",
+    "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.ogg": "ContentResource",
+    "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.wav": "ContentResource",
+    "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1": "Canvas",
+    "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1": "AnnotationPage",
+    "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1/annotation/1": "Annotation",
+    "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json": "Manifest",
+    "vault://adac293e": "ContentResource",
+  },
+  "resource": {
+    "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json",
+    "type": "Manifest",
+  },
+}
+`;
+
+exports[`Cookbook > Testing normalize %p (%p) 0434-choice-av https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json 2`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json",
+  "items": [
+    {
+      "duration": 16,
+      "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1",
+          "items": [
+            {
+              "body": {
+                "items": [
+                  {
+                    "duration": 16,
+                    "format": "audio/alac",
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.m4a",
+                    "label": {
+                      "en": [
+                        "ALAC",
+                      ],
+                    },
+                    "type": "Sound",
+                  },
+                  {
+                    "duration": 16,
+                    "format": "audio/mp3",
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mp3",
+                    "label": {
+                      "en": [
+                        "MP3",
+                      ],
+                    },
+                    "type": "Sound",
+                  },
+                  {
+                    "duration": 16,
+                    "format": "audio/flac",
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.flac",
+                    "label": {
+                      "en": [
+                        "FLAC",
+                      ],
+                    },
+                    "type": "Sound",
+                  },
+                  {
+                    "duration": 16,
+                    "format": "audio/ogg",
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.ogg",
+                    "label": {
+                      "en": [
+                        "OGG Vorbis OGG",
+                      ],
+                    },
+                    "type": "Sound",
+                  },
+                  {
+                    "duration": 16,
+                    "format": "audio/mpeg",
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mpeg",
+                    "label": {
+                      "en": [
+                        "MPEG2",
+                      ],
+                    },
+                    "type": "Sound",
+                  },
+                  {
+                    "duration": 16,
+                    "format": "audio/wav",
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.wav",
+                    "label": {
+                      "en": [
+                        "WAV",
+                      ],
+                    },
+                    "type": "Sound",
+                  },
+                ],
+                "type": "Choice",
+              },
+              "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1/annotation_page/1/annotation/1",
+              "motivation": "painting",
+              "target": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "type": "Canvas",
+    },
+  ],
+  "label": {
+    "en": [
+      "Excerpt from Egbe Iyawo",
+    ],
+  },
+  "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "summary": {
+    "en": [
+      "Excerpt from a performance of Egbe Iyawo recorded in Kabba Division, Kwara State. ",
     ],
   },
   "type": "Manifest",

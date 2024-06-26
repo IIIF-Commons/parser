@@ -27,9 +27,33 @@
     "id": "0019-html-in-annotations",
     "url": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/manifest.json"
   },
+  "0032-collection-collection": {
+    "id": "0032-collection-collection",
+    "url": "https://iiif.io/api/cookbook/recipe/0032-collection/collection.json"
+  },
+  "0032-collection-manifest-01": {
+    "id": "0032-collection-manifest-01",
+    "url": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-01.json"
+  },
+  "0032-collection-manifest-02": {
+    "id": "0032-collection-manifest-02",
+    "url": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json"
+  },
+  "0283-missing-image": {
+    "id": "0283-missing-image",
+    "url": "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json"
+  },
   "0299-region": {
     "id": "0299-region",
     "url": "https://iiif.io/api/cookbook/recipe/0299-region/manifest.json"
+  },
+  "0377-image-in-annotation": {
+    "id": "0377-image-in-annotation",
+    "url": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json"
+  },
+  "0434-choice-av": {
+    "id": "0434-choice-av",
+    "url": "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json"
   },
   "0007-string-formats": {
     "id": "0007-string-formats",
@@ -38,6 +62,22 @@
   "0008-rights": {
     "id": "0008-rights",
     "url": "https://iiif.io/api/cookbook/recipe/0008-rights/manifest.json"
+  },
+  "0010-book-2-viewing-direction-manifest-rtl": {
+    "id": "0010-book-2-viewing-direction-manifest-rtl",
+    "url": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-rtl.json"
+  },
+  "0010-book-2-viewing-direction-manifest-ttb": {
+    "id": "0010-book-2-viewing-direction-manifest-ttb",
+    "url": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-ttb.json"
+  },
+  "0011-book-3-behavior-manifest-continuous": {
+    "id": "0011-book-3-behavior-manifest-continuous",
+    "url": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-continuous.json"
+  },
+  "0011-book-3-behavior-manifest-individuals": {
+    "id": "0011-book-3-behavior-manifest-individuals",
+    "url": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-individuals.json"
   },
   "0013-placeholderCanvas": {
     "id": "0013-placeholderCanvas",
@@ -71,13 +111,25 @@
     "id": "0117-add-image-thumbnail",
     "url": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/manifest.json"
   },
-  "0118_multivalue": {
-    "id": "0118_multivalue",
-    "url": "https://iiif.io/api/cookbook/recipe/0118_multivalue/manifest.json"
+  "0118-multivalue": {
+    "id": "0118-multivalue",
+    "url": "https://iiif.io/api/cookbook/recipe/0118-multivalue/manifest.json"
   },
   "0202-start-canvas": {
     "id": "0202-start-canvas",
     "url": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/manifest.json"
+  },
+  "0230-navdate-navdate-collection": {
+    "id": "0230-navdate-navdate-collection",
+    "url": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate-collection.json"
+  },
+  "0230-navdate-navdate_map_2-manifest": {
+    "id": "0230-navdate-navdate_map_2-manifest",
+    "url": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json"
+  },
+  "0230-navdate-navdate_map_1-manifest": {
+    "id": "0230-navdate-navdate_map_1-manifest",
+    "url": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_1-manifest.json"
   },
   "0234-provider": {
     "id": "0234-provider",
@@ -90,6 +142,18 @@
   "0026-toc-opera": {
     "id": "0026-toc-opera",
     "url": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/manifest.json"
+  },
+  "0030-multi-volume-collection": {
+    "id": "0030-multi-volume-collection",
+    "url": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/collection.json"
+  },
+  "0030-multi-volume-manifest_v1": {
+    "id": "0030-multi-volume-manifest_v1",
+    "url": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json"
+  },
+  "0030-multi-volume-manifest_v2": {
+    "id": "0030-multi-volume-manifest_v2",
+    "url": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v2.json"
   },
   "0031-bound-multivolume": {
     "id": "0031-bound-multivolume",
@@ -111,6 +175,14 @@
     "id": "0004-canvas-size",
     "url": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/manifest.json"
   },
+  "0040-image-rotation-service-manifest-service": {
+    "id": "0040-image-rotation-service-manifest-service",
+    "url": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-service.json"
+  },
+  "0040-image-rotation-service-manifest-css": {
+    "id": "0040-image-rotation-service-manifest-css",
+    "url": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-css.json"
+  },
   "0017-transcription-av": {
     "id": "0017-transcription-av",
     "url": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/manifest.json"
@@ -131,9 +203,17 @@
     "id": "0219-using-caption-file",
     "url": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/manifest.json"
   },
+  "0135-annotating-point-in-canvas": {
+    "id": "0135-annotating-point-in-canvas",
+    "url": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json"
+  },
   "0021-tagging": {
     "id": "0021-tagging",
     "url": "https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json"
+  },
+  "0022-linking-with-a-hotspot": {
+    "id": "0022-linking-with-a-hotspot",
+    "url": "https://iiif.io/api/cookbook/recipe/0022-linking-with-a-hotspot/manifest.json"
   },
   "0258-tagging-external-resource": {
     "id": "0258-tagging-external-resource",
@@ -151,6 +231,18 @@
     "id": "0269-embedded-or-referenced-annotations",
     "url": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/manifest.json"
   },
+  "0269-embedded-or-referenced-annotations-annotationpage": {
+    "id": "0269-embedded-or-referenced-annotations-annotationpage",
+    "url": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json"
+  },
+  "0306-linking-annotations-to-manifests-annotationpage": {
+    "id": "0306-linking-annotations-to-manifests-annotationpage",
+    "url": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json"
+  },
+  "0306-linking-annotations-to-manifests": {
+    "id": "0306-linking-annotations-to-manifests",
+    "url": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/manifest.json"
+  },
   "0326-annotating-image-layer": {
     "id": "0326-annotating-image-layer",
     "url": "https://iiif.io/api/cookbook/recipe/0326-annotating-image-layer/manifest.json"
@@ -166,53 +258,5 @@
   "0240-navPlace-on-canvases": {
     "id": "0240-navPlace-on-canvases",
     "url": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/manifest.json"
-  },
-  "0230-navdate-navdate-collection": {
-    "id": "0230-navdate-navdate-collection",
-    "url": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate-collection.json"
-  },
-  "0230-navdate-navdate_map_2-manifest": {
-    "id": "0230-navdate-navdate_map_2-manifest",
-    "url": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json"
-  },
-  "0011-book-3-behavior-manifest-continuous": {
-    "id": "0011-book-3-behavior-manifest-continuous",
-    "url": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-continuous.json"
-  },
-  "0030-multi-volume-collection": {
-    "id": "0030-multi-volume-collection",
-    "url": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/collection.json"
-  },
-  "0010-book-2-viewing-direction-manifest-rtl": {
-    "id": "0010-book-2-viewing-direction-manifest-rtl",
-    "url": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-rtl.json"
-  },
-  "0040-image-rotation-service-manifest-service": {
-    "id": "0040-image-rotation-service-manifest-service",
-    "url": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-service.json"
-  },
-  "0030-multi-volume-manifest_v1": {
-    "id": "0030-multi-volume-manifest_v1",
-    "url": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json"
-  },
-  "0011-book-3-behavior-manifest-individuals": {
-    "id": "0011-book-3-behavior-manifest-individuals",
-    "url": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/manifest-individuals.json"
-  },
-  "0010-book-2-viewing-direction-manifest-ttb": {
-    "id": "0010-book-2-viewing-direction-manifest-ttb",
-    "url": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-ttb.json"
-  },
-  "0230-navdate-navdate_map_1-manifest": {
-    "id": "0230-navdate-navdate_map_1-manifest",
-    "url": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_1-manifest.json"
-  },
-  "0040-image-rotation-service-manifest-css": {
-    "id": "0040-image-rotation-service-manifest-css",
-    "url": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-css.json"
-  },
-  "0030-multi-volume-manifest_v2": {
-    "id": "0030-multi-volume-manifest_v2",
-    "url": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v2.json"
   }
 }
