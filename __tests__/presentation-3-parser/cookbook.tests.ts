@@ -7,7 +7,7 @@ import { normalize, serialize, serializeConfigPresentation3 } from '../../src';
 
 const prWaitingForMerge: string[] = [
   // '0219-using-caption-file', // https://github.com/IIIF/cookbook-recipes/pull/340
-  '0022-linking-with-a-hotspot-manifest',
+  '0022-linking-with-a-hotspot',
 ];
 
 describe('Cookbook', function () {

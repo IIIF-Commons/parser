@@ -26,13 +26,12 @@ async function main() {
     const link = el.getAttribute('href');
     const matches = matcher.exec(link);
     if (matches && matches[1]) {
-      const id = matches[1];
-
+      let id = matches[1];
       index[id] = {
         id: id,
         url: getManifest(id),
       };
-      console.log(getManifest(id));
+      console.log(id, getManifest(id));
     }
   }
 
@@ -45,7 +44,6 @@ async function main() {
 
         if (false && jsonHopefully.trim().startsWith('{')) {
           await writeFile(join(cwd(), `fixtures/cookbook`, `${key}.json`), jsonHopefully);
-          console.log(index[key].url);
         } else {
           if (index[key]) {
             delete index[key];
@@ -65,13 +63,15 @@ async function main() {
               if (fileNameWithExtension.endsWith('.json')) {
                 const fileName = fileNameWithExtension.slice(0, -5);
                 const data = await (await fetch(`https://iiif.io/api/cookbook/recipe/${key}/${href}`)).text();
+                const realKey = fileName === 'manifest' ? `${key}` : `${key}-${fileName}`;
+
                 await writeFile(
-                  join(cwd(), `fixtures/cookbook`, `${key}-${fileName}.json`),
+                  join(cwd(), `fixtures/cookbook`, `${realKey}.json`),
                   await (await fetch(`https://iiif.io/api/cookbook/recipe/${key}/${href}`)).text()
                 );
 
-                index[`${key}-${fileName}`] = {
-                  id: `${key}-${fileName}`,
+                index[realKey] = {
+                  id: realKey,
                   url: `https://iiif.io/api/cookbook/recipe/${key}/${href}`,
                 };
                 const heading = headingEl ? headingEl.innerHTML : 'Untitled';
