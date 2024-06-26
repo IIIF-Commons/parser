@@ -54,8 +54,8 @@ function service2compat(service: ImageService3 | ImageService): ImageService2 | 
       typeof _profile === 'string'
         ? _profile
         : Array.isArray(_profile)
-        ? _profile.find((p) => typeof p === 'string')
-        : '';
+          ? _profile.find((p) => typeof p === 'string')
+          : '';
 
     return {
       '@id': id,

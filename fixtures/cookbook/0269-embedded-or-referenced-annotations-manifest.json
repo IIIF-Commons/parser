@@ -1,43 +1,25 @@
 {
   "@context": "http://iiif.io/api/presentation/3/context.json",
-  "id": "https://iiif.io/api/cookbook/recipe/0008-rights/manifest.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/manifest.json",
   "type": "Manifest",
   "label": {
     "en": [
       "Picture of Göttingen taken during the 2019 IIIF Conference"
     ]
   },
-  "summary": {
-    "en": [
-      "<p>Picture taken by the <a href=\"https://github.com/glenrobson\">IIIF Technical Coordinator</a></p>"
-    ]
-  },
-  "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "requiredStatement": {
-    "label": {
-      "en": [
-        "Attribution"
-      ]
-    },
-    "value": {
-      "en": [
-        "<span>Glen Robson, IIIF Technical Coordinator. <a href=\"https://creativecommons.org/licenses/by-sa/3.0\">CC BY-SA 3.0</a> <a href=\"https://creativecommons.org/licenses/by-sa/3.0\" title=\"CC BY-SA 3.0\"><img src=\"https://licensebuttons.net/l/by-sa/3.0/88x31.png\"/></a></span>"
-      ]
-    }
-  },
   "items": [
     {
-      "id": "https://iiif.io/api/cookbook/recipe/0008-rights/canvas/p1",
+      "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1",
       "type": "Canvas",
       "height": 3024,
       "width": 4032,
       "items": [
         {
-          "id": "https://iiif.io/api/cookbook/recipe/0008-rights/page/p1/1",
+          "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-1",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://iiif.io/api/cookbook/recipe/0008-rights/annotation/p0001-image",
+              "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1/annopage-1/anno-1",
               "type": "Annotation",
               "motivation": "painting",
               "body": {
@@ -54,9 +36,15 @@
                   }
                 ]
               },
-              "target": "https://iiif.io/api/cookbook/recipe/0008-rights/canvas/p1"
+              "target": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/canvas-1"
             }
           ]
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0269-embedded-or-referenced-annotations/annotationpage.json",
+          "type": "AnnotationPage"
         }
       ]
     }
