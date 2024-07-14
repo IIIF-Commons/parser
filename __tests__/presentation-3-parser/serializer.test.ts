@@ -1,5 +1,6 @@
 import { normalize, serialize, serializeConfigPresentation2, serializeConfigPresentation3 } from '../../src';
-import { Collection } from '@iiif/presentation-3';
+import { Collection, Manifest } from '@iiif/presentation-3';
+import hotspot from '../../fixtures/cookbook/0022-linking-with-a-hotspot.json';
 
 describe('serializer', () => {
   test('parse, then serialize', () => {
@@ -196,7 +197,7 @@ describe('serializer', () => {
             // ],
           },
         ],
-      } as const);
+      }) as const;
     const result = normalize(input());
 
     expect(result.resource).toBeDefined();
@@ -686,5 +687,25 @@ describe('serializer', () => {
     expect(serialized).toEqual(input());
 
     expect(serialized.items).toHaveLength(3);
+  });
+
+  test('it can serialize circular reference', () => {
+    const result = normalize(JSON.parse(JSON.stringify(hotspot)));
+
+    expect(result.resource).toBeDefined();
+
+    const serialized = serialize<Manifest>(
+      {
+        mapping: result.mapping,
+        entities: result.entities,
+        requests: {},
+      },
+      result.resource,
+      serializeConfigPresentation3
+    );
+
+    // expect(serialized).toEqual(hotspot);
+
+    expect(serialized.items).toHaveLength(2);
   });
 });

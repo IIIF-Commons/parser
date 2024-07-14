@@ -1,6 +1,7 @@
 import { Traverse } from '../../src/presentation-3';
 import { Canvas, Manifest } from '@iiif/presentation-3';
 import accompanying from '../../fixtures/presentation-3/accompanying-canvas.json';
+import hotspot from '../../fixtures/cookbook/0022-linking-with-a-hotspot.json';
 
 describe('utility/iiif-traverse', () => {
   const manifest = (): Manifest => ({
@@ -206,5 +207,27 @@ describe('utility/iiif-traverse', () => {
     expect(annotationIds).toContain(
       'https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying/annotation/image'
     );
+  });
+
+  test('it can traverse hotspot canvas', () => {
+    const canvasIds: string[] = [];
+    const traversal = new Traverse({
+      canvas: [
+        (canvas) => {
+          canvasIds.push(canvas.id);
+          return canvas;
+        },
+      ],
+    });
+
+    traversal.traverseManifest(hotspot as any);
+
+    expect(canvasIds).toMatchInlineSnapshot(`
+      [
+        "https://iiif.io/api/cookbook/recipe/0022-linking-with-a-hotspot/canvas/p2",
+        "https://iiif.io/api/cookbook/recipe/0022-linking-with-a-hotspot/canvas/p1",
+        "https://iiif.io/api/cookbook/recipe/0022-linking-with-a-hotspot/canvas/p2",
+      ]
+    `);
   });
 });

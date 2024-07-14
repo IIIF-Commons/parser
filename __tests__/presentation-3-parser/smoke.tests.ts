@@ -21,6 +21,9 @@ const skipThese: string[] = [
   // @todo
   //  - Updates to service.
   'ghent-choices.json',
+
+  // This is because the test is designed to infer the type of the resource.
+  'specific-resource-infer.json',
 ];
 
 describe('Smoke tests', async function () {
