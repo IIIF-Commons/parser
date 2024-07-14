@@ -44,6 +44,10 @@ export function expandTargetToSpecificResource(
     return expandTargetToSpecificResource(target.items[0]!);
   }
 
+  if (!target.type && 'source' in target) {
+    (target as any).type = 'SpecificResource';
+  }
+
   if (target.type === 'SpecificResource') {
     if (target.source.type === 'Canvas' && target.source.partOf && typeof target.source.partOf === 'string') {
       target.source.partOf = [

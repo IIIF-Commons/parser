@@ -103,7 +103,8 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
     if (depth > 20) {
       throw new Error('Circular reference: ' + sub.id + ' ' + sub.type);
     }
-    const [resource, fullResource] = resolveIfExists(state, sub.type ? sub : sub.id, parent) || (sub.id && sub.type ? sub : null);
+    const [resource, fullResource] =
+      resolveIfExists(state, sub.type ? sub : sub.id, parent) || (sub.id && sub.type ? sub : null);
     if (!resource) {
       return UNSET;
     }

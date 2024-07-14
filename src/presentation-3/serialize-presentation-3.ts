@@ -106,8 +106,15 @@ function* descriptiveProperties(
 }
 
 function* linkingProperties(
-  entity: Partial<LinkingNormalized>
+  entity: Partial<LinkingNormalized>,
+  parent?: any
 ): Generator<any, any, Array<[keyof LinkingNormalized, any]>> {
+  let filteredPartOf = [];
+  for (let partOf of entity.partOf || []) {
+    if (partOf.type === 'Manifest' && parent.type === 'Manifest') continue;
+    filteredPartOf.push(yield partOf);
+  }
+
   return [
     ['seeAlso', filterEmpty(yield entity.seeAlso)],
     ['service', filterEmpty(filterService2Compat(entity.service))],
@@ -118,7 +125,7 @@ function* linkingProperties(
     ['logo', filterEmpty(yield (entity as ResourceProvider).logo)],
 
     // Don't yield these, they are references.
-    ['partOf', filterEmpty(yield entity.partOf)],
+    ['partOf', filterEmpty(filteredPartOf)],
     [
       'start',
       // @todo remove once types updated.
@@ -152,12 +159,16 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  Canvas: function* (entity) {
+  Canvas: function* (entity, state, { parent }) {
+    if (parent && parent.type !== 'Manifest' && parent.type !== 'Canvas') {
+      return [['id', entity.id]];
+    }
+
     return [
       // Items.
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
-      ...(yield* linkingProperties(entity)),
+      ...(yield* linkingProperties(entity, parent)),
       ['items', yield entity.items],
       ['annotations', filterEmpty(yield entity.annotations)],
       ['navPlace', (entity as any).navPlace], // @todo remove when types are updated
@@ -230,7 +241,12 @@ export const serializeConfigPresentation3: SerializeConfig = {
             ...(body as any),
           };
 
-          single.source = yield body.source;
+          if (body.source.type !== 'Canvas') {
+            single.source = yield body.source;
+          } else {
+            single.source = body.source;
+          }
+
           resolved.push(compressSpecificResource(single, { allowSourceString: true }));
         } else {
           resolved.push(yield body);
