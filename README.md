@@ -15,7 +15,7 @@ These include:
 - [Open Annotations](https://iiif.io/api/annex/openannotation/)
 
 
-> [!NOTE]  
+> [!NOTE]
 > A new version of the IIIF Presentation API is being developed (v4) which handles 3D content. This parser will
 > support this version soon. You can read about the additions [here](https://github.com/IIIF/3d/blob/main/temp-draft-4.md)
 
@@ -33,18 +33,18 @@ The features of this library are focussed on encoding the structure of all types
 - **Serializers** which take normalized data and output it again
   - **Presentation v3 serializer**- outputs well-formed Presentation 3 JSON
   - **Presentation v2 serializer** - outputs good-enough Presentation 2 JSON (missing features).
-- **Strict Upgrader** utility which can automatically fix Presentation 3 JSON that has issues. 
+- **Strict Upgrader** utility which can automatically fix Presentation 3 JSON that has issues.
 
 
 ```js
 import { Traverse } from '@iiif/parser';
 
 // Or for presentation 2 resources
-// import { Traverse } from '@iiif/parser/presentation-2'; 
+// import { Traverse } from '@iiif/parser/presentation-2';
 
 const ids = [];
 const extractCanvasLabels = new Traverse({
-  Canvas: [(canvas) => {
+  canvas: [(canvas) => {
     ids.push(canvas.id); // string
   }],
 });
@@ -58,7 +58,7 @@ console.log(ids); // all canvas ids.
 - **Traverse** utility for walking through IIIF v2 documents and running code at different "types"
 - **Upgrader** utility built on-top of the Traverse utility for upgrading IIIF v2 to IIIF v3.
 
-The intention for IIIF Presentation 2 is to upgrade it to 3 and then work with that. The tooling will always offer and upgrade to the latest version and tools on top of that. 
+The intention for IIIF Presentation 2 is to upgrade it to 3 and then work with that. The tooling will always offer and upgrade to the latest version and tools on top of that.
 
 ```ts
 import { Traverse, convertPresentation2  } from '@iiif/parser/presentation-2';
@@ -67,7 +67,7 @@ convertPresentation2(p2); // to latest IIIF version
 
 const logAnnotations = new Traverse({
   // Every type is a key on this record, with an array of functions to call
-  Annotation: [
+  annotation: [
     anno => {
       console.log(anno['@id']);
 
@@ -85,6 +85,24 @@ logAllIds.traverseUnknown(someInput);
 
 ```
 
+The available types to traverse (v3) are:
+```ts
+export type TraversalMap = {
+  collection?: Array<Traversal<Collection>>;
+  manifest?: Array<Traversal<Manifest>>;
+  canvas?: Array<Traversal<Canvas>>;
+  annotationCollection?: Array<Traversal<AnnotationCollection>>;
+  annotationPage?: Array<Traversal<AnnotationPage>>;
+  annotation?: Array<Traversal<Annotation>>;
+  contentResource?: Array<Traversal<ContentResource>>;
+  choice?: Array<Traversal<ChoiceTarget | ChoiceBody>>;
+  range?: Array<Traversal<Range>>;
+  service?: Array<Traversal<Service>>;
+  agent?: Array<Traversal<ResourceProvider>>;
+  specificResource?: Array<Traversal<SpecificResource>>;
+  geoJson?: Array<Traversal<import('geojson').GeoJSON>>;
+};
+```
 
 #### Image 3
 
