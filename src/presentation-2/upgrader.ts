@@ -41,7 +41,7 @@ export function convertLanguageMapping(
   defaultLang = 'none'
 ): Presentation3.InternationalString {
   if (!inputLangProperty) {
-    return {};
+    return { none: [''] };
   }
 
   const arrayOfValues = compatLanguageMap(inputLangProperty);
@@ -68,6 +68,11 @@ export function convertLanguageMapping(
     languageMap[lang] = languageMap[lang] ? languageMap[lang] : [];
     (languageMap[lang] as string[]).push(language['@value'] || '');
   }
+
+  if (Object.keys(languageMap).length === 0) {
+    return { none: [''] };
+  }
+
   return languageMap;
 }
 
