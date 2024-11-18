@@ -1,5 +1,58 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Presentation 2 to 3 > Invalid Language map 1`] = `
+[
+  {
+    "label": {
+      "none": [
+        "Test 1",
+      ],
+    },
+    "value": {
+      "none": [
+        "",
+      ],
+    },
+  },
+  {
+    "label": {
+      "none": [
+        "Test 2",
+      ],
+    },
+    "value": {
+      "none": [
+        "",
+      ],
+    },
+  },
+  {
+    "label": {
+      "none": [
+        "",
+      ],
+    },
+    "value": {
+      "none": [
+        "Test 3",
+      ],
+    },
+  },
+  {
+    "label": {
+      "none": [
+        "",
+      ],
+    },
+    "value": {
+      "none": [
+        "Test 4",
+      ],
+    },
+  },
+]
+`;
+
 exports[`Presentation 2 to 3 > nested ranges 1`] = `
 {
   "@context": "http://iiif.io/api/presentation/3/context.json",

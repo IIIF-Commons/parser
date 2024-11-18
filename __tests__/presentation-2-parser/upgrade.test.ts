@@ -1,4 +1,5 @@
 import iiifManifest from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
+import iiifManifestInvalid from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
 import iiifManifest2 from '../../fixtures/presentation-2/biblissima-manifest.json';
 import blManifest from '../../fixtures/presentation-2/bl-manifest.json';
 import nlwManifest from '../../fixtures/presentation-2/nlw-manifest.json';
@@ -616,4 +617,20 @@ describe('Presentation 2 to 3', () => {
 
     expect(result).toMatchSnapshot();
   });
+
+  test('Invalid Language map', () => {
+    const invalid = {
+      ...(JSON.parse(JSON.stringify(iiifManifestInvalid))),
+      metadata: [
+        {label: 'Test 1', value: ''},
+        {label: 'Test 2'},
+        {label: '', value: 'Test 3'},
+        {value: 'Test 4'},
+      ]
+    };
+    const result = presentation2to3.traverseManifest(invalid as any)
+
+    expect(result.metadata).toMatchSnapshot();
+
+  })
 });
