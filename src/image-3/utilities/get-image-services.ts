@@ -6,7 +6,7 @@ import { isImageService } from './is-image-service';
  *
  * @param resource
  */
-export function getImageServices(resource: { service: Array<Service> }): ImageService[] {
+export function getImageServices(resource: { service?: Array<Service> }): ImageService[] {
   const services = resource.service ? (Array.isArray(resource.service) ? resource.service : [resource.service]) : [];
   const totalServices = services.length;
   const imageServices = [];
