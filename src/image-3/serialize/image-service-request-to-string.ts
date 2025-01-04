@@ -5,7 +5,7 @@ import { rotationParameterToString } from './rotation-parameter-to-string';
 import { ImageService } from '@iiif/presentation-3';
 
 export function imageServiceRequestToString(req: ImageServiceImageRequest, service?: ImageService): string {
-  const prefix = req.prefix.startsWith('/') ? req.prefix.substr(1) : req.prefix;
+  const prefix = req.prefix.startsWith('/') ? req.prefix.substring(1) : req.prefix;
   const baseUrl = `${req.scheme}://${req.server}/${prefix ? `${prefix}/` : ''}${req.identifier}`;
 
   if (req.type === 'base') {
@@ -46,6 +46,8 @@ export function imageServiceRequestToString(req: ImageServiceImageRequest, servi
       if (!size.max && size.width && size.height) {
         size = { ...size, height: undefined };
       }
+
+      size = { ...size, version: 2 };
     }
     if (is3) {
       if (size.max && size.serialiseAsFull) {
@@ -57,6 +59,8 @@ export function imageServiceRequestToString(req: ImageServiceImageRequest, servi
         const ratio = service.height / service.width;
         size = { ...size, height: Math.ceil(size.width * ratio) };
       }
+
+      size = { ...size, version: 3 };
     }
 
     // @todo FUTURE - possibly passing in a correct=true option

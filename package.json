@@ -94,11 +94,11 @@
   "devDependencies": {
     "@types/node": "^18",
     "@hyperion-framework/validator": "^1.1.0",
-    "@happy-dom/global-registrator": "^6.0.4",
+    "@happy-dom/global-registrator": "^16.3.0",
     "prettier": "^3.2.5",
     "tslib": "^2.6.2",
     "typescript": "^5.4.4",
-    "vitest": "^1.4.0",
+    "vitest": "^2.1.8",
     "publint": "^0.2.7",
     "tsup": "^8.0.2"
   },

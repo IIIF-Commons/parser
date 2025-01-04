@@ -13,6 +13,7 @@ export type SizeParameter = {
   upscaled: boolean;
   confined: boolean;
   percentScale?: number;
+  version?: 2 | 3;
 };
 
 /**
