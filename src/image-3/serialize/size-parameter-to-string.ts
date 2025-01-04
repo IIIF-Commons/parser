@@ -8,6 +8,7 @@ export function sizeParameterToString({
   width,
   height,
   serialiseAsFull,
+  version,
 }: SizeParameter): string {
   const sb: string[] = [];
 
@@ -34,7 +35,7 @@ export function sizeParameterToString({
 
   sb.push(',');
 
-  if (height) {
+  if (height && version === 3) {
     sb.push(`${height}`);
   }
 

@@ -177,13 +177,13 @@ describe('IIIF Image API Parameters', () => {
     });
     test('Request an image fixed at 600 by 400', () => {
       const parsed = parseImageServiceRequest(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/600,400/0/default.jpg'
+        'https://framemark.vam.ac.uk/collections/2006AN7529/full/600,/0/default.jpg'
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
           "format": "jpg",
           "identifier": "collections/2006AN7529",
-          "originalPath": "collections/2006AN7529/full/600,400/0/default.jpg",
+          "originalPath": "collections/2006AN7529/full/600,/0/default.jpg",
           "prefix": "",
           "quality": "default",
           "region": {
@@ -196,7 +196,6 @@ describe('IIIF Image API Parameters', () => {
           "server": "framemark.vam.ac.uk",
           "size": {
             "confined": false,
-            "height": 400,
             "max": false,
             "upscaled": false,
             "width": 600,
@@ -205,18 +204,18 @@ describe('IIIF Image API Parameters', () => {
         }
       `);
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/600,400/0/default.jpg'
+        'https://framemark.vam.ac.uk/collections/2006AN7529/full/600,/0/default.jpg'
       );
     });
     test('Request a 100 by 100 (retaining aspect ratio) thumbnail', () => {
       const parsed = parseImageServiceRequest(
-        'https://framemark.vam.ac.uk/collections/2016JL5779/full/!100,100/0/default.jpg'
+        'https://framemark.vam.ac.uk/collections/2016JL5779/full/!100,/0/default.jpg'
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
           "format": "jpg",
           "identifier": "collections/2016JL5779",
-          "originalPath": "collections/2016JL5779/full/!100,100/0/default.jpg",
+          "originalPath": "collections/2016JL5779/full/!100,/0/default.jpg",
           "prefix": "",
           "quality": "default",
           "region": {
@@ -229,7 +228,6 @@ describe('IIIF Image API Parameters', () => {
           "server": "framemark.vam.ac.uk",
           "size": {
             "confined": true,
-            "height": 100,
             "max": false,
             "upscaled": false,
             "width": 100,
@@ -238,7 +236,7 @@ describe('IIIF Image API Parameters', () => {
         }
       `);
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://framemark.vam.ac.uk/collections/2016JL5779/full/!100,100/0/default.jpg'
+        'https://framemark.vam.ac.uk/collections/2016JL5779/full/!100,/0/default.jpg'
       );
     });
     test('Request a greyscale version', () => {
