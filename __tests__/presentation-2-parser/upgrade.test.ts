@@ -27,6 +27,7 @@ import level0manifest from '../../fixtures/presentation-2/manifest-l0.json';
 import artic from '../../fixtures/presentation-2/artic-manifest.json';
 import bodyChoice from '../../fixtures/presentation-2/body-choice.json';
 import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
+import scroll from '../../fixtures/presentation-2/scroll.json';
 
 import { expect } from 'vitest';
 
@@ -622,15 +623,22 @@ describe('Presentation 2 to 3', () => {
     const invalid = {
       ...(JSON.parse(JSON.stringify(iiifManifestInvalid))),
       metadata: [
-        {label: 'Test 1', value: ''},
-        {label: 'Test 2'},
-        {label: '', value: 'Test 3'},
-        {value: 'Test 4'},
+        { label: 'Test 1', value: '' },
+        { label: 'Test 2' },
+        { label: '', value: 'Test 3' },
+        { value: 'Test 4' },
       ]
     };
     const result = presentation2to3.traverseManifest(invalid as any)
 
     expect(result.metadata).toMatchSnapshot();
+  });
+
+  test('scroll', () => {
+
+    const result = presentation2to3.traverseManifest(scroll as any);
+
+    expect(result.viewingDirection).toEqual('top-to-bottom');
 
   })
 });

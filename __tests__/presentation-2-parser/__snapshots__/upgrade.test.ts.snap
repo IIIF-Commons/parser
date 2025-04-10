@@ -60430,6 +60430,5 @@ exports[`Presentation 2 to 3 > nested ranges 1`] = `
     },
   ],
   "type": "Manifest",
-  "viewingDirection": "left-to-right",
 }
 `;

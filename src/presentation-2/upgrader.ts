@@ -435,9 +435,9 @@ function descriptiveProperties<T extends Partial<Presentation3.DescriptiveProper
     label: resource.label ? convertLanguageMapping(resource.label) : undefined,
     requiredStatement: resource.attribution
       ? {
-          label: convertLanguageMapping(configuration.attributionLabel),
-          value: convertLanguageMapping(resource.attribution),
-        }
+        label: convertLanguageMapping(configuration.attributionLabel),
+        value: convertLanguageMapping(resource.attribution),
+      }
       : undefined,
     navDate: resource.navDate,
     summary: resource.description ? convertLanguageMapping(resource.description) : undefined,
@@ -502,14 +502,14 @@ function linkingProperties(resource: Presentation2.LinkingProperties & Presentat
     provider:
       resource.logo || related.length
         ? [
-            {
-              id: configuration.providerId,
-              type: 'Agent' as const,
-              homepage: related.length ? [related[0] as any] : undefined,
-              logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
-              label: convertLanguageMapping(configuration.providerName),
-            },
-          ]
+          {
+            id: configuration.providerId,
+            type: 'Agent' as const,
+            homepage: related.length ? [related[0] as any] : undefined,
+            logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
+            label: convertLanguageMapping(configuration.providerName),
+          },
+        ]
         : undefined,
     partOf: parseWithin(resource),
     rendering: resource.rendering,
@@ -550,12 +550,18 @@ function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manife
   const allCanvases = [];
   const behavior = [];
   let start = undefined;
+  let viewingDirection = undefined;
   for (const sequence of manifest.sequences || []) {
+    console.log(sequence);
+
     if (sequence.canvases.length) {
       allCanvases.push(...sequence.canvases);
     }
     if (sequence.behavior) {
       behavior.push(...sequence.behavior);
+    }
+    if (sequence.viewingDirection) {
+      viewingDirection = sequence.viewingDirection;
     }
     if (sequence.startCanvas) {
       start = sequence.startCanvas;
@@ -576,6 +582,7 @@ function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manife
     ...technical,
     ...descriptiveProperties(manifest),
     ...linkingProperties(manifest),
+    viewingDirection,
     start: start,
     items: allCanvases,
     structures: flattenStructures(manifest.structures as any),
@@ -622,12 +629,12 @@ function upgradeCanvas(canvas: Presentation2.Canvas): Presentation3.Canvas {
     items:
       canvas.images && canvas.images.length
         ? [
-            {
-              id: mintNewIdFromResource(canvas, 'annotation-page'),
-              type: 'AnnotationPage',
-              items: canvas.images as any,
-            },
-          ]
+          {
+            id: mintNewIdFromResource(canvas, 'annotation-page'),
+            type: 'AnnotationPage',
+            items: canvas.images as any,
+          },
+        ]
         : undefined,
   });
 }
@@ -645,6 +652,7 @@ function upgradeSequence(sequence: Presentation2.Sequence): {
   canvases: Presentation3.Canvas[];
   behavior?: string[];
   startCanvas?: Presentation3.Reference<'Canvas'> | undefined;
+  viewingDirection?: 'left-to-right' | 'right-to-left' | 'top-to-bottom' | 'bottom-to-top';
 } {
   /*
     rng = {"id": s.get('@id', self.mint_uri()), "type": "Range"}
@@ -674,6 +682,7 @@ function upgradeSequence(sequence: Presentation2.Sequence): {
   return {
     canvases: sequence.canvases as any[],
     behavior: sequence.viewingHint ? [sequence.viewingHint] : [],
+    viewingDirection: sequence.viewingDirection,
     startCanvas: sequence.startCanvas as any,
   };
 }

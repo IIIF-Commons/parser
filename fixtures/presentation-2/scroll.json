@@ -1,0 +1,5102 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "attribution": "Mahabharata Scroll",
+  "sequences": [
+    {
+      "viewingDirection": "top-to-bottom",
+      "viewingHint": "continuous",
+      "canvases": [
+        {
+          "description": "",
+          "height": 49069,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~318~206599/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~318~206599"
+                },
+                "format": "image/jpeg",
+                "height": 49069,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~318~206599/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 1",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~318~206599/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-001.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-001</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 1</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 1</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>001</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 1</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 1</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 55252,
+          "width": 3815,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~319~206598/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~319~206598"
+                },
+                "format": "image/jpeg",
+                "height": 55252,
+                "width": 3815,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~319~206598/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 2",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~319~206598/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-002.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-002</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 2</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 2</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>002</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 2</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 2</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 65353,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~320~206600/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~320~206600"
+                },
+                "format": "image/jpeg",
+                "height": 65353,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~320~206600/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 3",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~320~206600/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-003.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-003</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 3</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 3</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>003</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 3</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 3</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 63669,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~321~206601/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~321~206601"
+                },
+                "format": "image/jpeg",
+                "height": 63669,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~321~206601/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 4",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~321~206601/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-004.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-004</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 4</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 4</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>004</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 4</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 4</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 58456,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~322~206602/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~322~206602"
+                },
+                "format": "image/jpeg",
+                "height": 58456,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~322~206602/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 5",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~322~206602/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-005.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-005</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 5</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 5</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>005</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 5</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 5</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 60508,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~323~206603/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~323~206603"
+                },
+                "format": "image/jpeg",
+                "height": 60508,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~323~206603/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 6",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~323~206603/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-006.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-006</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 6</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 6</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>006</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 6</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 6</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 61309,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~324~206604/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~324~206604"
+                },
+                "format": "image/jpeg",
+                "height": 61309,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~324~206604/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 7",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~324~206604/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-007.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-007</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 7</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 7</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>007</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 7</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 7</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 33572,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~325~206630/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~325~206630"
+                },
+                "format": "image/jpeg",
+                "height": 33572,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~325~206630/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 8",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~325~206630/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-008.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-008</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 8</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 8</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>008</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 8</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 8</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 36660,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~345~206631/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~345~206631"
+                },
+                "format": "image/jpeg",
+                "height": 36660,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~345~206631/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 9",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~345~206631/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-009.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-009</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 9</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 9</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>009</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 9</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 9</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 65129,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~327~206632/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~327~206632"
+                },
+                "format": "image/jpeg",
+                "height": 65129,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~327~206632/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 10",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~327~206632/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-010.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-010</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 10</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 10</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>010</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 10</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 10</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 31160,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~346~206633/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~346~206633"
+                },
+                "format": "image/jpeg",
+                "height": 31160,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~346~206633/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 11",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~346~206633/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-011.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-011</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 11</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 11</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>011</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 11</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 11</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 38291,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~347~206634/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~347~206634"
+                },
+                "format": "image/jpeg",
+                "height": 38291,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~347~206634/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 12",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~347~206634/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-012.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-012</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 12</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 12</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>012</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 12</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 12</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 64234,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~348~206635/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~348~206635"
+                },
+                "format": "image/jpeg",
+                "height": 64234,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~348~206635/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 13",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~348~206635/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-013.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-013</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 13</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 13</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>013</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 13</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 13</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 58198,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~331~206636/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~331~206636"
+                },
+                "format": "image/jpeg",
+                "height": 58198,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~331~206636/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 14",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~331~206636/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-014.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-014</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 14</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 14</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>014</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 14</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 14</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 64721,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~332~206637/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~332~206637"
+                },
+                "format": "image/jpeg",
+                "height": 64721,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~332~206637/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 15",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~332~206637/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-015.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-015</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 15</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 15</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>015</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 15</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 15</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 32957,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~333~206638/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~333~206638"
+                },
+                "format": "image/jpeg",
+                "height": 32957,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~333~206638/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 16",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~333~206638/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-016.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-016</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 16</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 16</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>016</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 16</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 16</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 37351,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~334~206639/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~334~206639"
+                },
+                "format": "image/jpeg",
+                "height": 37351,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~334~206639/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 17",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~334~206639/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-017.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-017</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 17</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 17</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>017</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 17</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 17</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 34508,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~335~206640/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~335~206640"
+                },
+                "format": "image/jpeg",
+                "height": 34508,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~335~206640/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 18",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~335~206640/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-018.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-018</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 18</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 18</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>018</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 18</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 18</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 32509,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~336~206641/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~336~206641"
+                },
+                "format": "image/jpeg",
+                "height": 32509,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~336~206641/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 19",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~336~206641/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-019.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-019</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 19</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 19</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>019</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 19</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 19</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 34650,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~337~206642/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~337~206642"
+                },
+                "format": "image/jpeg",
+                "height": 34650,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~337~206642/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 20",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~337~206642/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-020.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-020</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 20</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 20</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>020</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 20</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 20</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 33518,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~338~206643/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~338~206643"
+                },
+                "format": "image/jpeg",
+                "height": 33518,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~338~206643/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 21",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~338~206643/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-021.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-021</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 21</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 21</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>021</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 21</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 21</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 34097,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~339~206644/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~339~206644"
+                },
+                "format": "image/jpeg",
+                "height": 34097,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~339~206644/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 22",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~339~206644/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-022.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-022</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 22</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 22</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>022</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 22</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 22</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 37896,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~340~206645/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~340~206645"
+                },
+                "format": "image/jpeg",
+                "height": 37896,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~340~206645/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 23",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~340~206645/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-023.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-023</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 23</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 23</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>023</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 23</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 23</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 37052,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~341~206646/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~341~206646"
+                },
+                "format": "image/jpeg",
+                "height": 37052,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~341~206646/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 24",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~341~206646/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-024.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-024</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 24</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 24</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>024</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 24</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 24</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 38918,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~342~206647/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~342~206647"
+                },
+                "format": "image/jpeg",
+                "height": 38918,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~342~206647/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 25",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~342~206647/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-025.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-025</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 25</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 25</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>025</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 25</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 25</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 61544,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~343~206648/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~343~206648"
+                },
+                "format": "image/jpeg",
+                "height": 61544,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~343~206648/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 26",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~343~206648/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-026.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-026</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 26</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 26</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>026</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 26</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 26</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 38099,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~344~206649/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~344~206649"
+                },
+                "format": "image/jpeg",
+                "height": 38099,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~344~206649/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 27",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~344~206649/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-027.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-027</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 27</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 27</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>027</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 27</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 27</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 43098,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~349~206650/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~349~206650"
+                },
+                "format": "image/jpeg",
+                "height": 43098,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~349~206650/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 28",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~349~206650/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-028.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-028</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 28</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 28</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>028</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 28</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 28</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 38514,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~350~206651/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~350~206651"
+                },
+                "format": "image/jpeg",
+                "height": 38514,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~350~206651/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 29",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~350~206651/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-029.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-029</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 29</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 29</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>029</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 29</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 29</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 38513,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~351~206652/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~351~206652"
+                },
+                "format": "image/jpeg",
+                "height": 38513,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~351~206652/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 30",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~351~206652/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-030.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-030</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 30</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 30</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>030</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 30</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 30</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 31270,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~352~206653/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~352~206653"
+                },
+                "format": "image/jpeg",
+                "height": 31270,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~352~206653/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 31",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~352~206653/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-031.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-031</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 31</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 31</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>031</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 31</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 31</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 39363,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~353~206654/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~353~206654"
+                },
+                "format": "image/jpeg",
+                "height": 39363,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~353~206654/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 32",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~353~206654/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-032.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-032</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 32</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 32</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>032</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 32</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 32</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 34099,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~354~206655/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~354~206655"
+                },
+                "format": "image/jpeg",
+                "height": 34099,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~354~206655/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 33",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~354~206655/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-033.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-033</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 33</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 33</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>033</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 33</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 33</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 37398,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~355~206656/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~355~206656"
+                },
+                "format": "image/jpeg",
+                "height": 37398,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~355~206656/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 34",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~355~206656/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-034.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-034</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 34</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 34</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>034</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 34</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 34</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 34489,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~356~206657/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~356~206657"
+                },
+                "format": "image/jpeg",
+                "height": 34489,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~356~206657/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 35",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~356~206657/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-035.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-035</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 35</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 35</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>035</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 35</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 35</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 36689,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~357~206658/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~357~206658"
+                },
+                "format": "image/jpeg",
+                "height": 36689,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~357~206658/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 36",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~357~206658/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-036.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-036</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 36</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 36</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>036</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 36</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 36</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 36253,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~358~206659/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~358~206659"
+                },
+                "format": "image/jpeg",
+                "height": 36253,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~358~206659/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 37",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~358~206659/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-037.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-037</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 37</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 37</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>037</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 37</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 37</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 40348,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~359~206660/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~359~206660"
+                },
+                "format": "image/jpeg",
+                "height": 40348,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~359~206660/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 38",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~359~206660/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-038.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-038</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 38</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 38</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>038</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 38</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 38</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 34983,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~360~206661/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~360~206661"
+                },
+                "format": "image/jpeg",
+                "height": 34983,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~360~206661/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 39",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~360~206661/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-039.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-039</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 39</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 39</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>039</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 39</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 39</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 38282,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~361~206662/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~361~206662"
+                },
+                "format": "image/jpeg",
+                "height": 38282,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~361~206662/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 40",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~361~206662/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-040.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-040</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 40</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 40</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>040</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 40</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 40</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        },
+        {
+          "description": "",
+          "height": 32741,
+          "width": 3816,
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "on": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~362~206663/canvas/c1",
+              "motivation": "sc:painting",
+              "resource": {
+                "service": {
+                  "profile": "http://iiif.io/api/image/2/level2.json",
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~362~206663"
+                },
+                "format": "image/jpeg",
+                "height": 32741,
+                "width": 3816,
+                "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/UoE~3~3~362~206663/full/!1024,1024/0/default.jpg",
+                "@type": "dctypes:Image"
+              },
+              "@type": "oa:Annotation"
+            }
+          ],
+          "label": "Section 41",
+          "@id": "https://images.is.ed.ac.uk/luna/servlet/iiif/m/UoE~3~3~362~206663/canvas/c1",
+          "thumbnail": {
+            "@id": "https://images.is.ed.ac.uk/MediaManager/srvr?mediafile=/Size0/UoE~3~3/493/Mahab-041.jpg"
+          },
+          "metadata": [
+            {
+              "value": "<span>Mahab-041</span>",
+              "label": "Work Record ID"
+            },
+            {
+              "value": "<span><a href = \"https://creativecommons.org/licenses/by/3.0/\" target=\"_blank\"><img src = \"http://lac-luna-live4.is.ed.ac.uk:8181/graphics/by.jpg\"/></a></span>",
+              "label": "Licence"
+            },
+            {
+              "value": "<span>Or.Ms 510</span>",
+              "label": "Shelfmark"
+            },
+            {
+              "value": "<span>University of Edinburgh</span>",
+              "label": "Holding Institution"
+            },
+            {
+              "value": "<span>N/A</span>",
+              "label": "Catalogue Number"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 41</span>",
+              "label": "Title"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 41</span>",
+              "label": "Subset"
+            },
+            {
+              "value": "<span>041</span>",
+              "label": "Sequence"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Unknown</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Creator Name"
+            },
+            {
+              "value": "<span>Vyasa</span>",
+              "label": "Summary Creator"
+            },
+            {
+              "value": "<span>1795</span>",
+              "label": "Date"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repository"
+            },
+            {
+              "value": "<span>Hindiuism</span>",
+              "label": "Subject Category"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 41</span>",
+              "label": "Related Work Title"
+            },
+            {
+              "value": "<span>Cropped TIFF</span>",
+              "label": "Repro File Type"
+            },
+            {
+              "value": "<span>Mahabharata Scroll Stitched Large Section 41</span>",
+              "label": "Repro Title"
+            },
+            {
+              "value": "<span>Digital Imaging Unit</span>",
+              "label": "Repro Creator Name"
+            },
+            {
+              "value": "<span>Oriental Manuscripts</span>",
+              "label": "Repro Repository"
+            },
+            {
+              "value": "<span>Copyright The University of Edinburgh.</span>",
+              "label": "Repro Rights Statement"
+            }
+          ]
+        }
+      ],
+      "@type": "sc:Sequence"
+    }
+  ],
+  "logo": "https://images.is.ed.ac.uk/luna/images/LUNAIIIF80.png",
+  "@id": "https://librarylabs.ed.ac.uk/mahabharataScroll.json",
+  "@type": "sc:Manifest",
+  "related": "https://images.is.ed.ac.uk/luna/servlet/detail/UoE~3~3~319~206598",
+  "label": "Mahabharata Scroll"
+}
