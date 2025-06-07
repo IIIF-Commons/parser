@@ -169,9 +169,18 @@ export class Traverse<
         ...(collection.members || []),
       ];
 
+      const seenIds: string[] = [];
+      const filteredMembers = members.filter(resource => {
+        if (seenIds.includes(resource['@id'])) {
+          return false;
+        }
+        seenIds.push(resource['@id']);
+        return true;
+      });
+
       delete collection.collections;
       delete collection.manifests;
-      collection.members = members;
+      collection.members = filteredMembers;
     }
 
     if (collection.manifests) {
@@ -198,6 +207,12 @@ export class Traverse<
       collection.members = collection.members.map((member) => {
         if (typeof member === 'string') {
           return member;
+        }
+        if (member['@type'] === 'sc:Collection') {
+          return this.traverseCollection(member);
+        }
+        if (member['@type'] === 'sc:Manifest') {
+          return this.traverseManifest(member as any);
         }
         return this.traverseUnknown(member);
       });
