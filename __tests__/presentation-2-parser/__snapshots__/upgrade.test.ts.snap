@@ -36604,7 +36604,7 @@ exports[`Presentation 2 to 3 > nested ranges 1`] = `
       "id": "http://example.org/provider",
       "label": {
         "none": [
-          "Unknown",
+          "",
         ],
       },
       "logo": [
