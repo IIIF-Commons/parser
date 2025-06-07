@@ -1,0 +1,21 @@
+{
+    "@context": "http://iiif.io/api/presentation/2/context.json",
+    "@id": "https://iiif.harvardartmuseums.org/collections/",
+    "@type": "sc:Collection",
+    "collections": [
+        {
+            "@id": "https://iiif.harvardartmuseums.org/collections/object",
+            "@type": "sc:Collection",
+            "label": "Objects"
+        }
+    ],
+    "label": "Harvard Art Museums Collections",
+    "members": [
+        {
+            "@id": "https://iiif.harvardartmuseums.org/collections/object",
+            "@type": "sc:Collection",
+            "label": "Objects",
+            "viewingHint": "individuals"
+        }
+    ]
+}

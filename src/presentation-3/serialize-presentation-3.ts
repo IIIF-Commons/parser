@@ -141,13 +141,23 @@ export const serializeConfigPresentation3: SerializeConfig = {
         // Only a snippet.
         ...technicalProperties(entity),
         ...(yield* descriptiveProperties(entity)),
+        ['navPlace', (entity as any).navPlace],
+      ];
+    }
+
+    let context: any = 'http://iiif.io/api/presentation/3/context.json';
+
+    if (entity.navPlace || itemsHaveNavPlace(entity)) {
+      context = [
+        'http://iiif.io/api/presentation/3/context.json',
+        'http://iiif.io/api/extension/navplace/context.json',
       ];
     }
 
     return [
       [
         '@context',
-        (entity as any)['@context'] ? (entity as any)['@context'] : 'http://iiif.io/api/presentation/3/context.json',
+        (entity as any)['@context'] ? (entity as any)['@context'] : context,
       ],
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
@@ -299,8 +309,17 @@ export const serializeConfigPresentation3: SerializeConfig = {
 
   Collection: function* (entity, state, { isTopLevel }) {
     if (isTopLevel) {
+      let context: any = 'http://iiif.io/api/presentation/3/context.json';
+
+      if (entity.navPlace || itemsHaveNavPlace(entity)) {
+        context = [
+          'http://iiif.io/api/extension/navplace/context.json',
+          'http://iiif.io/api/presentation/3/context.json',
+        ];
+      }
+
       return [
-        ['@context', 'http://iiif.io/api/presentation/3/context.json'],
+        ['@context', context],
         ...technicalProperties(entity),
         ...(yield* descriptiveProperties(entity)),
         ...(yield* linkingProperties(entity)),
@@ -308,7 +327,11 @@ export const serializeConfigPresentation3: SerializeConfig = {
         ['navPlace', (entity as any).navPlace], // @todo remove when types are updated
       ];
     }
-    return [...technicalProperties(entity), ...(yield* descriptiveProperties(entity))];
+    return [
+      ...technicalProperties(entity),
+      ...(yield* descriptiveProperties(entity)),
+      ['navPlace', (entity as any).navPlace],
+    ];
   },
 
   Range: function* (entity) {
@@ -353,4 +376,19 @@ function mergeRemainingProperties(entries: [string, any][], object: any): [strin
     }
   }
   return entries;
+}
+
+
+function itemsHaveNavPlace(item: any) {
+  if (!item.items || !Array.isArray(item.items)) {
+    return false;
+  }
+
+  for (const singleItem of item.items) {
+    if (singleItem.navPlace) {
+      return true;
+    }
+  }
+
+  return false;
 }

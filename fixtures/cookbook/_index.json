@@ -47,6 +47,10 @@
     "id": "0299-region",
     "url": "https://iiif.io/api/cookbook/recipe/0299-region/manifest.json"
   },
+  "0309-annotation-collection": {
+    "id": "0309-annotation-collection",
+    "url": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/manifest.json"
+  },
   "0377-image-in-annotation": {
     "id": "0377-image-in-annotation",
     "url": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/manifest.json"
@@ -171,6 +175,10 @@
     "id": "0036-composition-from-multiple-images",
     "url": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/manifest.json"
   },
+  "0229-behavior-ranges": {
+    "id": "0229-behavior-ranges",
+    "url": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/manifest.json"
+  },
   "0004-canvas-size": {
     "id": "0004-canvas-size",
     "url": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/manifest.json"
@@ -247,6 +255,22 @@
     "id": "0326-annotating-image-layer",
     "url": "https://iiif.io/api/cookbook/recipe/0326-annotating-image-layer/manifest.json"
   },
+  "0346-multilingual-annotation-body": {
+    "id": "0346-multilingual-annotation-body",
+    "url": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/manifest.json"
+  },
+  "0489-multimedia-canvas": {
+    "id": "0489-multimedia-canvas",
+    "url": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/manifest.json"
+  },
+  "0485-contentstate-canvas-region-annotation": {
+    "id": "0485-contentstate-canvas-region-annotation",
+    "url": "https://iiif.io/api/cookbook/recipe/0485-contentstate-canvas-region/annotation.json"
+  },
+  "0540-link-for-opening-multiple-canvases-annotation": {
+    "id": "0540-link-for-opening-multiple-canvases-annotation",
+    "url": "https://iiif.io/api/cookbook/recipe/0540-link-for-opening-multiple-canvases/annotation.json"
+  },
   "0139-geolocate-canvas-fragment": {
     "id": "0139-geolocate-canvas-fragment",
     "url": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/manifest.json"
@@ -258,5 +282,9 @@
   "0240-navPlace-on-canvases": {
     "id": "0240-navPlace-on-canvases",
     "url": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/manifest.json"
+  },
+  "0318-navPlace-navDate-collection": {
+    "id": "0318-navPlace-navDate-collection",
+    "url": "https://iiif.io/api/cookbook/recipe/0318-navPlace-navDate/collection.json"
   }
 }

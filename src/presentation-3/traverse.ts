@@ -229,8 +229,10 @@ export class Traverse {
   traverseCollection(collection: Collection, parent?: any): Collection {
     return this.traverseType<Collection>(
       this.traverseDescriptive(
-        this.traverseInlineAnnotationPages(
-          this.traverseLinking(this.traverseLinkedCanvases(this.traverseCollectionItems(collection as any)))
+        this.traverseNavPlace(
+          this.traverseInlineAnnotationPages(
+            this.traverseLinking(this.traverseLinkedCanvases(this.traverseCollectionItems(collection as any)))
+          )
         )
       ),
       { parent },
@@ -265,11 +267,12 @@ export class Traverse {
 
   _traverseManifest: (manifest: Manifest) => Manifest = compose<Manifest>(
     this.traverseManifestItems.bind(this),
+    this.traverseNavPlace.bind(this),
     this.traverseLinking.bind(this),
     this.traverseDescriptive.bind(this),
     this.traverseLinkedCanvases.bind(this),
     this.traverseManifestStructures.bind(this),
-    this.traverseInlineAnnotationPages.bind(this)
+    this.traverseInlineAnnotationPages.bind(this),
   );
 
   traverseManifest(manifest: Manifest, parent?: any): Manifest {

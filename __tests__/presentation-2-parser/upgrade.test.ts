@@ -18,7 +18,7 @@ import codexManifest from '../../fixtures/presentation-2/codex.json';
 import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
 import withDimensions from '../../fixtures/presentation-2/iiif-fixture-manifest-with-dimensions.json';
 import europeana from '../../fixtures/presentation-2/europeana.json';
-import { presentation2to3 } from '../../src/presentation-2';
+import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
 import { Validator } from '@hyperion-framework/validator';
 import annoList from '../../fixtures/presentation-2/iiif-fixture-annotation-list.json';
 import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
@@ -28,6 +28,10 @@ import artic from '../../fixtures/presentation-2/artic-manifest.json';
 import bodyChoice from '../../fixtures/presentation-2/body-choice.json';
 import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
 import scroll from '../../fixtures/presentation-2/scroll.json';
+import paginatedCollection from '../../fixtures/presentation-2/paginated-collection.json';
+import paginatedCollectionPage from '../../fixtures/presentation-2/paginated-collection-page.json';
+import duplicateMemberCollection from '../../fixtures/presentation-2/duplicate-member-collection.json';
+import sctaCollection from '../../fixtures/presentation-2/collection-scta.json';
 
 import { expect } from 'vitest';
 
@@ -636,9 +640,1978 @@ describe('Presentation 2 to 3', () => {
 
   test('scroll', () => {
 
-    const result = presentation2to3.traverseManifest(scroll as any);
+    const result = convertPresentation2(scroll as any);
 
     expect(result.viewingDirection).toEqual('top-to-bottom');
 
   })
+
+  test('paginated collection', () => {
+
+    const result = convertPresentation2(paginatedCollection as any);
+
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "behavior": [
+          "top",
+        ],
+        "first": {
+          "id": "https://api.digitale-sammlungen.de/iiif/presentation/v2/collection/top?cursor=initial",
+          "type": "Collection",
+        },
+        "id": "https://api.digitale-sammlungen.de/iiif/presentation/v2/collection/top",
+        "items": [],
+        "label": {
+          "none": [
+            "Top Level Collection for BSB Digital Collections",
+          ],
+        },
+        "requiredStatement": {
+          "label": {
+            "none": [
+              "Attribution",
+            ],
+          },
+          "value": {
+            "none": [
+              "Bayerische Staatsbibliothek",
+            ],
+          },
+        },
+        "total": 3074231,
+        "type": "Collection",
+      }
+    `);
+  });
+
+  test('paginated collection page', () => {
+    const result = convertPresentation2(paginatedCollectionPage as any);
+
+    result.items = [];
+
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "id": "https://api.digitale-sammlungen.de/iiif/presentation/v2/collection/top?cursor=initial",
+        "items": [],
+        "label": {
+          "none": [
+            "Top Level Collection for BSB Digital Collections",
+          ],
+        },
+        "next": {
+          "id": "https://api.digitale-sammlungen.de/iiif/presentation/v2/collection/top?cursor=AoIIP4AAACtic2IxMjAxODY5NA==",
+          "type": "Collection",
+        },
+        "requiredStatement": {
+          "label": {
+            "none": [
+              "Attribution",
+            ],
+          },
+          "value": {
+            "none": [
+              "Bayerische Staatsbibliothek",
+            ],
+          },
+        },
+        "total": 3074231,
+        "type": "Collection",
+      }
+    `);
+  });
+
+  test('duplicate member collection', () => {
+    const result = convertPresentation2(duplicateMemberCollection as any);
+
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "id": "https://iiif.harvardartmuseums.org/collections/",
+        "items": [
+          {
+            "id": "https://iiif.harvardartmuseums.org/collections/object",
+            "label": {
+              "none": [
+                "Objects",
+              ],
+            },
+            "type": "Collection",
+          },
+        ],
+        "label": {
+          "none": [
+            "Harvard Art Museums Collections",
+          ],
+        },
+        "type": "Collection",
+      }
+    `);
+  });
+
+  test('scta collection', () => {
+    const result = convertPresentation2(sctaCollection as any);
+
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        "id": "https://scta.info/iiif/authors/collection",
+        "items": [
+          {
+            "id": "https://scta.info/iiif/Wodeham/collection",
+            "label": {
+              "none": [
+                "Adam Wodeham",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Albert/collection",
+            "label": {
+              "none": [
+                "Albert the Great",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AlbertusDeSaxonia/collection",
+            "label": {
+              "none": [
+                "Albertus De Saxonia",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AlexanderIII/collection",
+            "label": {
+              "none": [
+                "Alexander III",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AlexanderOfHales/collection",
+            "label": {
+              "none": [
+                "Alexander of Hales",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AlfonsoPenafiel/collection",
+            "label": {
+              "none": [
+                "Alfonso Penafiel",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AlphonsusVargas/collection",
+            "label": {
+              "none": [
+                "Alphonso Vargas of Toledo",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-jjska2/collection",
+            "label": {
+              "none": [
+                "Amandus Polanus von Polansdorf",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Ambrose/collection",
+            "label": {
+              "none": [
+                "Ambrose of Milan",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AndreaDeLangenstein/collection",
+            "label": {
+              "none": [
+                "Andrea de Langenstein",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AndreasDeNovoCastro/collection",
+            "label": {
+              "none": [
+                "Andreas de Novo Castro",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Anonymous/collection",
+            "label": {
+              "none": [
+                "Anonymous",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AnonymusRise/collection",
+            "label": {
+              "none": [
+                "Anonymous",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-Ca13fj/collection",
+            "label": {
+              "none": [
+                "Anonymous",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Anselm/collection",
+            "label": {
+              "none": [
+                "Anselm",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-vqn2ad/collection",
+            "label": {
+              "none": [
+                "Anselm of Lucca",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AntoineDeChandieu/collection",
+            "label": {
+              "none": [
+                "Antoine de Chandieu",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AntoniusAndreas/collection",
+            "label": {
+              "none": [
+                "Antonius Andreas",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AntoniusPerez/collection",
+            "label": {
+              "none": [
+                "Antonoius Perez",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Arcadius/collection",
+            "label": {
+              "none": [
+                "Arcadius",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Aristotle/collection",
+            "label": {
+              "none": [
+                "Aristotle",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Athanasius/collection",
+            "label": {
+              "none": [
+                "Athanasius of Alexandria",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Augustine/collection",
+            "label": {
+              "none": [
+                "Augustine",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/AugustinusDeAncona/collection",
+            "label": {
+              "none": [
+                "Augustinus de Ancona",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Averroes/collection",
+            "label": {
+              "none": [
+                "Averroes",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Avicenna/collection",
+            "label": {
+              "none": [
+                "Avicenna",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Bandinus/collection",
+            "label": {
+              "none": [
+                "Bandinus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-29vsnv/collection",
+            "label": {
+              "none": [
+                "Bartholomeus Brixiensis",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/BartolomeoMastri/collection",
+            "label": {
+              "none": [
+                "Bartolomeo Mastri",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-bdlcbd/collection",
+            "label": {
+              "none": [
+                "Bartolomé de las Casas",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Bede/collection",
+            "label": {
+              "none": [
+                "Bede",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Bernard/collection",
+            "label": {
+              "none": [
+                "Bernard of Clairvaux",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-bdp8db/collection",
+            "label": {
+              "none": [
+                "Bernard of Parma",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Boethius/collection",
+            "label": {
+              "none": [
+                "Boethius",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Bonaventure/collection",
+            "label": {
+              "none": [
+                "Bonaventure",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/BonifaceVIII/collection",
+            "label": {
+              "none": [
+                "Boniface VIII",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/ClementV/collection",
+            "label": {
+              "none": [
+                "Clement V",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/ClementOfAlexandria/collection",
+            "label": {
+              "none": [
+                "Clement of Alexandria",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/DionysiusDeBruges/collection",
+            "label": {
+              "none": [
+                "Dionysius de Bruges",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/DionysiusdeMontina/collection",
+            "label": {
+              "none": [
+                "Dionysius de Montina",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/DominicusGundissalinus/collection",
+            "label": {
+              "none": [
+                "Dominicus Gundissalinus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-dOcdOc/collection",
+            "label": {
+              "none": [
+                "Durand of Champagne",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Durandus/collection",
+            "label": {
+              "none": [
+                "Durandus of St. Pourcain",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Euclid/collection",
+            "label": {
+              "none": [
+                "Euclid",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-U89ddd/collection",
+            "label": {
+              "none": [
+                "Facinus de Ast",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/FranciscoSuarez/collection",
+            "label": {
+              "none": [
+                "Fracisco Suárez",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-ferq7p/collection",
+            "label": {
+              "none": [
+                "Francesco Silvestri",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/FrancisofMeyronnes/collection",
+            "label": {
+              "none": [
+                "Francis of Meyronnes",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/FranciscoDeHerrera/collection",
+            "label": {
+              "none": [
+                "Francisco de Herrera",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-FLBca3/collection",
+            "label": {
+              "none": [
+                "Franciscus Lychetus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/FranciscusTotiDePerusia/collection",
+            "label": {
+              "none": [
+                "Franciscus Toti de Perusia",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/FranciscusTurrettinus/collection",
+            "label": {
+              "none": [
+                "Franciscus Turrettinus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-Gav9di/collection",
+            "label": {
+              "none": [
+                "Frederico Niccolo Gavardi",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-c8ahhx/collection",
+            "label": {
+              "none": [
+                "Frontinus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-Fulcq4/collection",
+            "label": {
+              "none": [
+                "Fulgentius of Ruspe",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GabrielBiel/collection",
+            "label": {
+              "none": [
+                "Gabriel Biel",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-g8a8b8/collection",
+            "label": {
+              "none": [
+                "Gabriel Vazquez",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GeoffreyOfTrani/collection",
+            "label": {
+              "none": [
+                "Geoffrey of Trani",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GerardusDeSiena/collection",
+            "label": {
+              "none": [
+                "Gerard of Siena",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-c7y65a/collection",
+            "label": {
+              "none": [
+                "Geremia da Montagnone",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GerhardusVischpekchDeOsnabruck/collection",
+            "label": {
+              "none": [
+                "Gerhardus Vischpekch de Osnabrück",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GilesOfRome/collection",
+            "label": {
+              "none": [
+                "Giles of Rome",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GodfreyOfFontaines/collection",
+            "label": {
+              "none": [
+                "Godfrey of Fontaines",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GonsalvoOfSpain/collection",
+            "label": {
+              "none": [
+                "GonsalvoOfSpain",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Gratian/collection",
+            "label": {
+              "none": [
+                "Gratian",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/BasilOfCasarea/collection",
+            "label": {
+              "none": [
+                "Gregory of Nazianzus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Rimini/collection",
+            "label": {
+              "none": [
+                "Gregory of Rimini",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GregoryGreat/collection",
+            "label": {
+              "none": [
+                "Gregory the Great",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/WillemHesselsVanEst/collection",
+            "label": {
+              "none": [
+                "Guillelmus Estius",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/GuillelmusHedonensis/collection",
+            "label": {
+              "none": [
+                "Guillelmus Hedonensis",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HeinrichBullinger/collection",
+            "label": {
+              "none": [
+                "Heinrich Bullinger",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HenningusBoltenhagen/collection",
+            "label": {
+              "none": [
+                "Henningus Boltenhagen",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HenriBohic/collection",
+            "label": {
+              "none": [
+                "Henri Bohic",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HenricusDeWerl/collection",
+            "label": {
+              "none": [
+                "Henricus de Werl",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Oyta/collection",
+            "label": {
+              "none": [
+                "Henry Totting de Oyta",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HenryOfGhent/collection",
+            "label": {
+              "none": [
+                "Henry of Ghent",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Langenstein/collection",
+            "label": {
+              "none": [
+                "Henry of Langenstein",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HerveusNatalis/collection",
+            "label": {
+              "none": [
+                "Herveus Natalis",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HimbertOfGarda/collection",
+            "label": {
+              "none": [
+                "Himbert of Garda",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Hostiensis/collection",
+            "label": {
+              "none": [
+                "Hostiensis",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HughOfStVictor/collection",
+            "label": {
+              "none": [
+                "Hugh of St. Victor",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/HugolinoOfOrvieto/collection",
+            "label": {
+              "none": [
+                "Hugolino of Orvieto",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-igzigz/collection",
+            "label": {
+              "none": [
+                "Inokentii Gizel",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/IohannesBerwardus/collection",
+            "label": {
+              "none": [
+                "Iohannes Berwardus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/IsidoreOfSeville/collection",
+            "label": {
+              "none": [
+                "Isidore of Seville",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JacobusDeAltavilla/collection",
+            "label": {
+              "none": [
+                "Jacobus de Altavilla",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JacquesAlmain/collection",
+            "label": {
+              "none": [
+                "Jacques Almain",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JamesViterbo/collection",
+            "label": {
+              "none": [
+                "James of Viterbo",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JanHus/collection",
+            "label": {
+              "none": [
+                "Jan Hus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JeanBuridan/collection",
+            "label": {
+              "none": [
+                "Jean Buridan",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JeanLalemandet/collection",
+            "label": {
+              "none": [
+                "Jean Lalemandet",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Jerome/collection",
+            "label": {
+              "none": [
+                "Jerome",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohannGerhard/collection",
+            "label": {
+              "none": [
+                "Johann Gerhard",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohannesDeFonte/collection",
+            "label": {
+              "none": [
+                "Johannes De Fonte",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohannesMonachus/collection",
+            "label": {
+              "none": [
+                "Johannes Monachus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-jpdw2a/collection",
+            "label": {
+              "none": [
+                "Johannes Pfeffer de Weidenberg",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohannesRuesbach/collection",
+            "label": {
+              "none": [
+                "Johannes Ruesbach",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-jdwJDW/collection",
+            "label": {
+              "none": [
+                "Johannes de Wesalia",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnAltenstaig/collection",
+            "label": {
+              "none": [
+                "John Altenstaig",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnBaconthorpe/collection",
+            "label": {
+              "none": [
+                "John Baconthorpe",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnBassolis/collection",
+            "label": {
+              "none": [
+                "John Bassolis",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnBelethus/collection",
+            "label": {
+              "none": [
+                "John Belethus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnDinsdale/collection",
+            "label": {
+              "none": [
+                "John Dinsdale",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Scotus/collection",
+            "label": {
+              "none": [
+                "John Duns Scotus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnEck/collection",
+            "label": {
+              "none": [
+                "John Eck",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnHiltalingenBasel/collection",
+            "label": {
+              "none": [
+                "John Hiltalingen of Basel",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnKlenkok/collection",
+            "label": {
+              "none": [
+                "John Klenkok",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnMair/collection",
+            "label": {
+              "none": [
+                "John Mair",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnMirecourt/collection",
+            "label": {
+              "none": [
+                "John Mirecourt",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnPeckham/collection",
+            "label": {
+              "none": [
+                "John Peckham",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnOfJandun/collection",
+            "label": {
+              "none": [
+                "John of Jandun",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Ripa/collection",
+            "label": {
+              "none": [
+                "John of Ripa",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnOfRodington/collection",
+            "label": {
+              "none": [
+                "John of Rodington",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnOfSalisbury/collection",
+            "label": {
+              "none": [
+                "John of Salisbury",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnOfWales/collection",
+            "label": {
+              "none": [
+                "John of Wales",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JohnDamascenus/collection",
+            "label": {
+              "none": [
+                "John the Damascene",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/JustinianI/collection",
+            "label": {
+              "none": [
+                "Justinian I",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-kSkSkS/collection",
+            "label": {
+              "none": [
+                "Kilianus Stetzing",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Lactantius/collection",
+            "label": {
+              "none": [
+                "Lactantius",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/LambertusDaneau/collection",
+            "label": {
+              "none": [
+                "Lambertus Daneau",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/LambertusDeMonte/collection",
+            "label": {
+              "none": [
+                "Lambertus de Monte",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/LeonardusPenafiel/collection",
+            "label": {
+              "none": [
+                "Leonardus Penafiel",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Lionhardus/collection",
+            "label": {
+              "none": [
+                "Lionhardus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-sdv3av/collection",
+            "label": {
+              "none": [
+                "Marcantonio Zimara",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Cicero/collection",
+            "label": {
+              "none": [
+                "Marcus Tulius Cicero",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/MartinChemnitz/collection",
+            "label": {
+              "none": [
+                "Martin Chemnitz",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/MartinLuther/collection",
+            "label": {
+              "none": [
+                "Martin Luther",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/MelchiorCano/collection",
+            "label": {
+              "none": [
+                "Melchior Cano",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-nc88aa/collection",
+            "label": {
+              "none": [
+                "Niccolo Cabeo",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/NicholasTrivet/collection",
+            "label": {
+              "none": [
+                "Nicholas Trivet",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-nt88nt/collection",
+            "label": {
+              "none": [
+                "Nicholas Trivet",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/NicolasDeAnaskilch/collection",
+            "label": {
+              "none": [
+                "Nicolas de Anaskilch",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/NicolasDeDinkelsbuhl/collection",
+            "label": {
+              "none": [
+                "Nicolas de Dinkelsbuhl",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-nbd2d8/collection",
+            "label": {
+              "none": [
+                "Nicolaus Bonetus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-ndtndt/collection",
+            "label": {
+              "none": [
+                "Nicolo de Tudeschi",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/OsbertPickingham/collection",
+            "label": {
+              "none": [
+                "Osbert Pickingham",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-b3aq1a/collection",
+            "label": {
+              "none": [
+                "Paolo Cortese",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PaulusDeGelria/collection",
+            "label": {
+              "none": [
+                "Paulus de Gelria",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PedroGarcia/collection",
+            "label": {
+              "none": [
+                "Pedro Garcia",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-a28anv/collection",
+            "label": {
+              "none": [
+                "Pelbartus de Themeswar",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-dsPeAb/collection",
+            "label": {
+              "none": [
+                "Peter Abelard",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Aureoli/collection",
+            "label": {
+              "none": [
+                "Peter Aureoli",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Candia/collection",
+            "label": {
+              "none": [
+                "Peter Candia",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PeterJeanOlivi/collection",
+            "label": {
+              "none": [
+                "Peter Jean Olivi",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Lombard/collection",
+            "label": {
+              "none": [
+                "Peter Lombard",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/peter-plaoul/collection",
+            "label": {
+              "none": [
+                "Peter Plaoul",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PeterDeAquila/collection",
+            "label": {
+              "none": [
+                "Peter de Aquila",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PetrusDePalude/collection",
+            "label": {
+              "none": [
+                "Peter of Palude",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PetrusGracilis/collection",
+            "label": {
+              "none": [
+                "Petrus Gracilis",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PetrusHispanus/collection",
+            "label": {
+              "none": [
+                "Petrus Hispanus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-PePeMa/collection",
+            "label": {
+              "none": [
+                "Petrus Peregrinus de Maricourt",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PetrusScad/collection",
+            "label": {
+              "none": [
+                "Petrus Scad",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PetrusDeAilly/collection",
+            "label": {
+              "none": [
+                "Petrus de Ailly",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PetrusDeTarantasia/collection",
+            "label": {
+              "none": [
+                "Petrus de Tarantasia",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PetrusDeTreisa/collection",
+            "label": {
+              "none": [
+                "Petrus de Treisa",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PetrusDeWalse/collection",
+            "label": {
+              "none": [
+                "Petrus de Walse",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PhilipMelanchthon/collection",
+            "label": {
+              "none": [
+                "Philip Melanchthon",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-nbhytr/collection",
+            "label": {
+              "none": [
+                "Philippus Probus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PicoDellaMirandola/collection",
+            "label": {
+              "none": [
+                "Pico Della Mirandola",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PlacidusAegidiusMelander/collection",
+            "label": {
+              "none": [
+                "Placidus Aegidius Melander",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-HDmDvD/collection",
+            "label": {
+              "none": [
+                "Pliny the Elder",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-ZEvn3a/collection",
+            "label": {
+              "none": [
+                "Pope Innocent II",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PopeInnocentIII/collection",
+            "label": {
+              "none": [
+                "Pope Innocent III",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Porphyry/collection",
+            "label": {
+              "none": [
+                "Porphyry of Tyre",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PsBonaventure/collection",
+            "label": {
+              "none": [
+                "Ps-Bonaventure",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/PsAugustine/collection",
+            "label": {
+              "none": [
+                "Pseudo-Augustinus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Dionysius/collection",
+            "label": {
+              "none": [
+                "Pseudo-Dionysius",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RadulphusBrito/collection",
+            "label": {
+              "none": [
+                "Radulphus Brito",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RaymondOfPenyafort/collection",
+            "label": {
+              "none": [
+                "Raymond Of Penyafort",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-RDeDRD/collection",
+            "label": {
+              "none": [
+                "René Descartes",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RicardusDeMediavilla/collection",
+            "label": {
+              "none": [
+                "Ricardus de Mediavilla",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RichardFishacre/collection",
+            "label": {
+              "none": [
+                "Richard Fishacre",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RichardFitzRalph/collection",
+            "label": {
+              "none": [
+                "Richard FitzRalph",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RichardKilvington/collection",
+            "label": {
+              "none": [
+                "Richard of Kilvington",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RichardOfStVictor/collection",
+            "label": {
+              "none": [
+                "Richard of St. Victor",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-x7hda7/collection",
+            "label": {
+              "none": [
+                "Robert Baron",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Holcot/collection",
+            "label": {
+              "none": [
+                "Robert Holcot",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RobertKilwardby/collection",
+            "label": {
+              "none": [
+                "Robert Kilwardby",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RobertOfCricklade/collection",
+            "label": {
+              "none": [
+                "Robert of Cricklade",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/RogerBacon/collection",
+            "label": {
+              "none": [
+                "Roger Bacon",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/SimonMagister/collection",
+            "label": {
+              "none": [
+                "Simon Magister",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/SimonFaversham/collection",
+            "label": {
+              "none": [
+                "Simon of Faversham",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-sykisy/collection",
+            "label": {
+              "none": [
+                "Stefan Yavorskyi",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/StephansuDeEntzendorf/collection",
+            "label": {
+              "none": [
+                "Stephanus de Entzendorf",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-x84nST/collection",
+            "label": {
+              "none": [
+                "Stephen Tempier",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Aquinas/collection",
+            "label": {
+              "none": [
+                "Thomas Aquinas",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Bradwardine/collection",
+            "label": {
+              "none": [
+                "Thomas Bradwardine",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/ThomasCajetan/collection",
+            "label": {
+              "none": [
+                "Thomas Cajetan",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/ThomasOfIreland/collection",
+            "label": {
+              "none": [
+                "Thomas Of Ireland",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/ThomasDeClivis/collection",
+            "label": {
+              "none": [
+                "Thomas de Clivis",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/ThomasStrasbourg/collection",
+            "label": {
+              "none": [
+                "Thomas of Strasbourg",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/ThomasOfSutton/collection",
+            "label": {
+              "none": [
+                "Thomas of Sutton",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Ulpianus/collection",
+            "label": {
+              "none": [
+                "Ulpianus",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Virgil/collection",
+            "label": {
+              "none": [
+                "Virgil",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Chatton/collection",
+            "label": {
+              "none": [
+                "Walter Chatton",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/WilliamCrathorn/collection",
+            "label": {
+              "none": [
+                "William Crathorn",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-cnuv73/collection",
+            "label": {
+              "none": [
+                "William St. Amour",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/per-uyt678/collection",
+            "label": {
+              "none": [
+                "William Whitaker",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/WilliamDeRothwell/collection",
+            "label": {
+              "none": [
+                "William de Rothwell",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/WilliamDeVaurouillon/collection",
+            "label": {
+              "none": [
+                "William de Vaurouillon",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/WilliamOfAuxerre/collection",
+            "label": {
+              "none": [
+                "William of Auxerre",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/WilliamOfMelitona/collection",
+            "label": {
+              "none": [
+                "William of Melitona",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/Ockham/collection",
+            "label": {
+              "none": [
+                "William of Ockham",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/WilliamOfParis/collection",
+            "label": {
+              "none": [
+                "William of Paris",
+              ],
+            },
+            "type": "Collection",
+          },
+          {
+            "id": "https://scta.info/iiif/WilliamofRubio/collection",
+            "label": {
+              "none": [
+                "William of Rubio",
+              ],
+            },
+            "type": "Collection",
+          },
+        ],
+        "label": {
+          "none": [
+            "SCTA Authors",
+          ],
+        },
+        "type": "Collection",
+      }
+    `);
+  });
+
 });

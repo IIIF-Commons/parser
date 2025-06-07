@@ -5,6 +5,8 @@ import { join } from 'node:path';
 
 const { writeFile } = promises;
 
+const fetch = global.fetch;
+
 GlobalRegistrator.register();
 
 const matcher = /https:\/\/iiif\.io\/api\/cookbook\/recipe\/([^\/.]*)\//;
