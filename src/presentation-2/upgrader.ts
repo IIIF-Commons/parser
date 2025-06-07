@@ -498,6 +498,7 @@ function linkingProperties(resource: Presentation2.LinkingProperties & Presentat
   const related = resource.related ? (Array.isArray(resource.related) ? resource.related : [resource.related]) : [];
   const layer = resource.contentLayer as Presentation2.Layer;
 
+
   return {
     provider:
       resource.logo || related.length
@@ -529,12 +530,90 @@ function embeddedContentProperties(resource: Presentation2.CharsEmbeddedContent)
   };
 }
 
+function stringOrRefToRef(object: any, type: string) {
+  if (!object) return null;
+  if (typeof object === 'string') {
+    return {
+      id: object,
+      type,
+    };
+  }
+
+  if (typeof object?.['@id'] === 'string') {
+    return {
+      id: object['@id'],
+      type,
+    };
+  }
+
+  if (typeof object.id === 'string') {
+    return {
+      id: object.id,
+      type,
+    };
+  }
+
+  return null;
+}
+
+function paginationProperties(collection: Presentation2.Collection) {
+  // This is a sort of "IIIF Presentation 3.1" upgrade before 4.0 adds Collections and CollectionPages.
+  // v2 supports paged Collections, so this is a stop-gap solution. Strict implementations can ignore it.
+  // Properties:
+  //  - first
+  //  - total
+  //  - prev
+  //  - next
+  const additionalProperties: any = {};
+
+  if ((collection as any).first) {
+    // Note: This is a stop-gap solution for "v3.1", which does not have CollectionPages.
+    const ref = stringOrRefToRef((collection as any).first, 'Collection');
+    if (ref) {
+      additionalProperties.first = ref;
+    }
+  }
+
+  if ((collection as any).total || (collection as any).total === 0) {
+    additionalProperties.total = (collection as any).total;
+  }
+
+  if ((collection as any).prev) {
+    const ref = stringOrRefToRef((collection as any).prev, 'Collection');
+    if (ref) {
+      additionalProperties.prev = ref;
+    }
+  }
+
+  if ((collection as any).next) {
+    const ref = stringOrRefToRef((collection as any).next, 'Collection');
+    if (ref) {
+      additionalProperties.next = ref;
+    }
+  }
+
+  return additionalProperties as any;
+}
+
+function removeEmptyItems(resources: any[]) {
+  const toReturn = [];
+  for (const originalResource of resources) {
+    const resource = {...originalResource};
+    if (resource.items && resource.items.length === 0) {
+      delete resource.items;
+    }
+    toReturn.push(resource);
+  }
+  return toReturn;
+}
+
 function upgradeCollection(collection: Presentation2.Collection): Presentation3.Collection {
   return removeUndefinedProperties({
     ...technicalProperties(collection),
     ...descriptiveProperties<Presentation3.SomeRequired<Presentation3.CollectionDescriptive, 'label'>>(collection),
     ...linkingProperties(collection),
-    items: collection.members as any,
+    ...paginationProperties(collection),
+    items: removeEmptyItems(collection.members as any),
   });
 }
 
@@ -851,8 +930,14 @@ export function convertPresentation2(entity: any): Presentation3.Manifest | Pres
         entity['@context'].indexOf('http://iiif.io/api/presentation/2/context.json') !== -1 ||
         // Yale context.
         entity['@context'] === 'http://www.shared-canvas.org/ns/context.json')) ||
-    entity['@context'] === 'http://iiif.io/api/image/2/context.json'
+    entity['@context'] === 'http://iiif.io/api/image/2/context.json' ||
+    // No-context is possible.
+    (entity['@id'] && entity['@type'] === 'sc:Collection') ||
+    (entity['@id'] && entity['@type'] === 'sc:Manifest')
   ) {
+    if (!entity['@context']) {
+      entity['@context'] = 'http://iiif.io/api/presentation/2/context.json';
+    }
     return presentation2to3.traverseUnknown(entity);
   }
   return entity;
