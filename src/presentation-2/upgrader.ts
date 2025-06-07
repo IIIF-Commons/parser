@@ -552,8 +552,6 @@ function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manife
   let start = undefined;
   let viewingDirection = undefined;
   for (const sequence of manifest.sequences || []) {
-    console.log(sequence);
-
     if (sequence.canvases.length) {
       allCanvases.push(...sequence.canvases);
     }
