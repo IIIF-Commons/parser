@@ -10,7 +10,7 @@ const configuration = {
   attributionLabel: 'Attribution',
   lang: 'none',
   providerId: 'http://example.org/provider',
-  providerName: 'Unknown',
+  providerName: '',
 };
 
 function compatLanguageMap(inputLangProperty?: unknown): Array<Presentation2.LanguageProperty> {
