@@ -149,7 +149,7 @@ export class Traverse {
 
   traverseLinking<T extends Partial<LinkingProperties>>(resource: T): T {
     if (resource.seeAlso) {
-      resource.seeAlso = resource.seeAlso.map((content) =>
+      resource.seeAlso = ensureArray(resource.seeAlso).map((content) =>
         this.traverseType(content, { parent: resource }, this.traversals.contentResource)
       );
     }
@@ -160,7 +160,7 @@ export class Traverse {
       resource.services = ensureArray(resource.services).map((service) => this.traverseService(service, resource));
     }
     if (resource.logo) {
-      resource.logo = resource.logo.map((content) =>
+      resource.logo = ensureArray(resource.logo).map((content) =>
         this.traverseType(content, { parent: resource }, this.traversals.contentResource)
       );
     }
