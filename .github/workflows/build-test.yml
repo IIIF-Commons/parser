@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['18', '20']
+        node: ['18', '22']
 
     name: Node ${{ matrix.node }} build
     steps:
@@ -30,3 +30,4 @@ jobs:
       - run: pnpm run typecheck
       - run: node pkg-tests/node-load.cjs
       - run: node pkg-tests/node-load.mjs
+      - run: node pkg-tests/node-umd.mjs
