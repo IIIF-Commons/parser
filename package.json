@@ -78,11 +78,11 @@
     }
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
-    "prepack": "tsup",
+    "prepack": "tsdown && tsdown --config tsdown.umd.ts",
     "lint": "publint"
   },
   "dependencies": {
@@ -100,7 +100,7 @@
     "typescript": "^5.4.4",
     "vitest": "^2.1.8",
     "publint": "^0.2.7",
-    "tsup": "^8.0.2"
+    "tsdown": "^0.14.1"
   },
   "sideEffects": false,
   "publishConfig": {
