@@ -78,7 +78,7 @@
     }
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && tsdown --config tsdown.umd.ts",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
