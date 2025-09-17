@@ -7,6 +7,7 @@ import {
   supports,
   imageServiceSupportsRequest,
   imageServiceSupportsFormat,
+  getImageServiceLevel,
 } from '../../src/image-3';
 
 describe('supports', function () {
@@ -175,6 +176,17 @@ describe('supports', function () {
   });
 
   describe('imageServiceSupportsRequest', () => {
+    test('bfn image service level', () => {
+      const service = {
+        profile: 'http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2',
+        width: 4564,
+        height: 6174,
+        '@context': 'http://library.stanford.edu/iiif/image-api/1.1/context.json',
+        '@id': 'https://gallica.bnf.fr/iiif/ark:/12148/bpt6k11620688/f1',
+      } as ImageService;
+
+      expect(getImageServiceLevel(service)).toEqual(2);
+    });
     test('sample image service (v2)', () => {
       const u = parseImageServiceRequest;
       const service2: ImageService = {
