@@ -6,14 +6,14 @@ export function getImageServiceLevel(service: ImageService): null | number {
   if (!isImageService(service)) {
     return null;
   }
-  if (isImageServiceLevel(0, service)) {
-    return 0;
+  if (isImageServiceLevel(2, service)) {
+    return 2;
   }
   if (isImageServiceLevel(1, service)) {
     return 1;
   }
-  if (isImageServiceLevel(2, service)) {
-    return 2;
+  if (isImageServiceLevel(0, service)) {
+    return 0;
   }
   return null;
 }
