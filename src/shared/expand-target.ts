@@ -71,12 +71,14 @@ export function expandTargetToSpecificResource(
 
     if (target.selector) {
       return {
+        ...target,
         type: 'SpecificResource',
         source: target.source,
         selector: target.selector,
       };
     }
     return {
+      ...target,
       type: 'SpecificResource',
       source: target.source,
     };
