@@ -1,10 +1,12 @@
-import cookbookIndex from '../../fixtures/cookbook/_index.json';
 import { promises } from 'node:fs';
 import { cwd } from 'node:process';
 import { join } from 'path';
+import cookbookIndex from '../../fixtures/cookbook/_index.json';
+
 const { readFile, readdir } = promises;
-import { normalize, serialize, serializeConfigPresentation2, serializeConfigPresentation3 } from '../../src';
+
 import { expect } from 'vitest';
+import { normalize, serialize, serializeConfigPresentation2, serializeConfigPresentation3 } from '../../src';
 
 const skipThese: string[] = [
   // '0219-using-caption-file', // https://github.com/IIIF/cookbook-recipes/pull/340
@@ -24,9 +26,12 @@ const skipThese: string[] = [
 
   // This is because the test is designed to infer the type of the resource.
   'specific-resource-infer.json',
+
+  // Specific resource is not in a canonical format.
+  'css.json',
 ];
 
-describe('Smoke tests', async function () {
+describe('Smoke tests', async () => {
   const files = await readdir(join(cwd(), 'fixtures/presentation-3'));
   const twoThreeConverted = await readdir(join(cwd(), 'fixtures/2-to-3-converted'));
   const presentation2 = await readdir(join(cwd(), 'fixtures/presentation-2'));

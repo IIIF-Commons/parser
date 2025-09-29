@@ -1,13 +1,14 @@
-import { normalize } from '../../src/presentation-3';
-import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
+import type { Manifest } from '@iiif/presentation-3';
 import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__api__presentation__2.1__example__fixtures__1__manifest.json';
-import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
 import p2ManifestWithStart from '../../fixtures/presentation-2/bl-manifest.json';
-import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
+import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
+import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
+import manifestWithSpecificResource from '../../fixtures/presentation-3/css.json';
 import manifestExhibition from '../../fixtures/presentation-3/exhibition-1.json';
 import manifestSpecificResource from '../../fixtures/presentation-3/specific-resource-infer.json';
-import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
-import { Manifest } from '@iiif/presentation-3';
+import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
+import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
+import { normalize } from '../../src/presentation-3';
 
 describe('normalize', () => {
   test('normalize simple manifest', () => {
@@ -111,10 +112,14 @@ describe('normalize', () => {
         },
         {
           label: { en: ['Source'] },
-          value: { none: ['<span>From: <a href="https://example.org/db/1.html">Some Collection</a></span>'] },
+          value: {
+            none: ['<span>From: <a href="https://example.org/db/1.html">Some Collection</a></span>'],
+          },
         },
       ],
-      summary: { en: ['Book 1, written by Anne Author, published in Paris around 1400.'] },
+      summary: {
+        en: ['Book 1, written by Anne Author, published in Paris around 1400.'],
+      },
 
       thumbnail: [
         {
@@ -393,5 +398,26 @@ describe('normalize', () => {
       db.entities.Range['https://iiif.bodleian.ox.ac.uk/iiif/range/390fd0e8-9eae-475d-9564-ed916ab9035c/LOG_0281'];
 
     expect(range.items).toHaveLength(1);
+  });
+
+  test('normalize specific resource with source', () => {
+    const db = normalize(JSON.parse(JSON.stringify(manifestWithSpecificResource)));
+
+    expect(
+      (db.entities.Annotation as any)['https://preview.iiif.io/cookbook/0045-css/recipe/0045-css/page/p2/anno-1']!
+        .target
+    ).toMatchInlineSnapshot(`
+      {
+        "selector": {
+          "type": "FragmentSelector",
+          "value": "xywh=700,1250,1850,1150",
+        },
+        "source": {
+          "id": "https://preview.iiif.io/cookbook/0045-css/recipe/0045-css/canvas/p1",
+          "type": "Canvas",
+        },
+        "type": "SpecificResource",
+      }
+    `);
   });
 });

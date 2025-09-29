@@ -1,4 +1,4 @@
-import { ExternalWebResource, SpecificResource, W3CAnnotationTarget } from '@iiif/presentation-3';
+import type { ExternalWebResource, SpecificResource, W3CAnnotationTarget } from '@iiif/presentation-3';
 
 export function expandTargetToSpecificResource(
   target: W3CAnnotationTarget | W3CAnnotationTarget[],
@@ -19,7 +19,10 @@ export function expandTargetToSpecificResource(
       // This is an unknown selector.
       return {
         type: 'SpecificResource',
-        source: { id, type: (options.typeMap && (options.typeMap[id!] as any)) || options.typeHint || 'Unknown' },
+        source: {
+          id,
+          type: (options.typeMap && (options.typeMap[id!] as any)) || options.typeHint || 'Unknown',
+        },
       };
     }
 
@@ -56,6 +59,14 @@ export function expandTargetToSpecificResource(
           type: 'Manifest',
         },
       ];
+    }
+    const targetId = typeof target.source === 'string' ? target.source : target.source.id;
+    if (targetId?.includes('#')) {
+      const parsed = expandTargetToSpecificResource(targetId, options);
+      if (parsed) {
+        target.selector = parsed.selector;
+        target.source = parsed.source;
+      }
     }
 
     if (target.selector) {

@@ -1,5 +1,4 @@
-import { TraversalContext, Traverse } from './traverse';
-import {
+import type {
   Annotation,
   AnnotationPage,
   Canvas,
@@ -8,11 +7,22 @@ import {
   PolyEntity,
   Range,
   Reference,
-  Selector,
-  SpecificResource,
   ResourceProvider,
+  Selector,
   Service,
+  SpecificResource,
 } from '@iiif/presentation-3';
+import type {
+  AnnotationPageNormalized,
+  CanvasNormalized,
+  CollectionNormalized,
+  ManifestNormalized,
+  RangeNormalized,
+  ResourceProviderNormalized,
+} from '@iiif/presentation-3-normalized';
+import { convertPresentation2 } from '../presentation-2';
+import { expandTargetToSpecificResource } from '../shared/expand-target';
+import { isSpecificResource } from '../shared/is-specific-resource';
 import {
   emptyAgent,
   emptyAnnotationPage,
@@ -22,19 +32,9 @@ import {
   emptyRange,
   emptyService,
 } from './empty-types';
-import { convertPresentation2 } from '../presentation-2';
-import { CompatibleStore, NormalizedEntity } from './serialize';
-import { expandTargetToSpecificResource } from '../shared/expand-target';
-import {
-  AnnotationPageNormalized,
-  CanvasNormalized,
-  CollectionNormalized,
-  ManifestNormalized,
-  RangeNormalized,
-  ResourceProviderNormalized,
-} from '@iiif/presentation-3-normalized';
-import { isSpecificResource } from '../shared/is-specific-resource';
-import { EMPTY, HAS_PART, IS_EXTERNAL, PART_OF, WILDCARD } from "./utilities";
+import type { CompatibleStore, NormalizedEntity } from './serialize';
+import { type TraversalContext, Traverse } from './traverse';
+import { EMPTY, HAS_PART, IS_EXTERNAL, PART_OF, WILDCARD } from './utilities';
 
 export const defaultEntities = {
   Collection: {},
@@ -462,7 +462,9 @@ function rangeItemToSpecificResource(range: Range): Range {
 function startCanvasToSpecificResource(manifest: Manifest): Manifest {
   const _manifest = Object.assign({}, manifest);
   if (_manifest.start) {
-    _manifest.start = toSpecificResource(_manifest.start, { typeHint: 'Canvas' }) as any;
+    _manifest.start = toSpecificResource(_manifest.start, {
+      typeHint: 'Canvas',
+    }) as any;
     return _manifest;
   }
   return manifest;
