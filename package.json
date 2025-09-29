@@ -1,6 +1,6 @@
 {
   "name": "@iiif/parser",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "license": "MIT",
   "type": "module",
   "description": "IIIF Presentation 2 and 3 parsing utilities",
