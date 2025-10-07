@@ -614,7 +614,7 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test.only('goettingen manifest', () => {
+  test('goettingen manifest', () => {
     const result = presentation2to3.traverseManifest(goettingen as any);
     expect(result).toMatchSnapshot();
   });
