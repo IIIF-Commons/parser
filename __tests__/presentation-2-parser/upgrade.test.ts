@@ -1,39 +1,39 @@
-import iiifManifest from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
-import iiifManifestInvalid from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
+import { Validator } from '@hyperion-framework/validator';
+import { expect } from 'vitest';
+import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
+import artic from '../../fixtures/presentation-2/artic-manifest.json';
 import iiifManifest2 from '../../fixtures/presentation-2/biblissima-manifest.json';
 import blManifest from '../../fixtures/presentation-2/bl-manifest.json';
-import nlwManifest from '../../fixtures/presentation-2/nlw-manifest.json';
 import bodleianManifest from '../../fixtures/presentation-2/bodleian-manifest.json';
-import stanfordManifest from '../../fixtures/presentation-2/stanford-manifest.json';
+import bodyChoice from '../../fixtures/presentation-2/body-choice.json';
+import codexManifest from '../../fixtures/presentation-2/codex.json';
+import sctaCollection from '../../fixtures/presentation-2/collection-scta.json';
+import duplicateMemberCollection from '../../fixtures/presentation-2/duplicate-member-collection.json';
+import europeana from '../../fixtures/presentation-2/europeana.json';
 import folgerManifest from '../../fixtures/presentation-2/folger-manifest.json';
-import villanovaManifest from '../../fixtures/presentation-2/villanova-manifest.json';
+import ghent from '../../fixtures/presentation-2/ghent.json';
+import annoList from '../../fixtures/presentation-2/iiif-fixture-annotation-list.json';
+import iiifManifest from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
+import iiifManifestInvalid from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
+import withDimensions from '../../fixtures/presentation-2/iiif-fixture-manifest-with-dimensions.json';
+import loc from '../../fixtures/presentation-2/loc.json';
+import level0manifest from '../../fixtures/presentation-2/manifest-l0.json';
+import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
 import ngaManifest from '../../fixtures/presentation-2/nga-manifest.json';
-import quatarManifest from '../../fixtures/presentation-2/quatar-manifest.json';
 import nlsCollection from '../../fixtures/presentation-2/nls-collection.json';
 import nlsManifest from '../../fixtures/presentation-2/nls-manifest.json';
 import nlsManifest2 from '../../fixtures/presentation-2/nls-manifest-2.json';
-import ghent from '../../fixtures/presentation-2/ghent.json';
-import sbbManifest from '../../fixtures/presentation-2/sbb-test.json';
-import codexManifest from '../../fixtures/presentation-2/codex.json';
-import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
-import withDimensions from '../../fixtures/presentation-2/iiif-fixture-manifest-with-dimensions.json';
-import europeana from '../../fixtures/presentation-2/europeana.json';
-import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
-import { Validator } from '@hyperion-framework/validator';
-import annoList from '../../fixtures/presentation-2/iiif-fixture-annotation-list.json';
-import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
-import loc from '../../fixtures/presentation-2/loc.json';
-import level0manifest from '../../fixtures/presentation-2/manifest-l0.json';
-import artic from '../../fixtures/presentation-2/artic-manifest.json';
-import bodyChoice from '../../fixtures/presentation-2/body-choice.json';
-import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
-import scroll from '../../fixtures/presentation-2/scroll.json';
+import nlwManifest from '../../fixtures/presentation-2/nlw-manifest.json';
 import paginatedCollection from '../../fixtures/presentation-2/paginated-collection.json';
 import paginatedCollectionPage from '../../fixtures/presentation-2/paginated-collection-page.json';
-import duplicateMemberCollection from '../../fixtures/presentation-2/duplicate-member-collection.json';
-import sctaCollection from '../../fixtures/presentation-2/collection-scta.json';
-
-import { expect } from 'vitest';
+import quatarManifest from '../../fixtures/presentation-2/quatar-manifest.json';
+import sbbManifest from '../../fixtures/presentation-2/sbb-test.json';
+import scroll from '../../fixtures/presentation-2/scroll.json';
+import stanfordManifest from '../../fixtures/presentation-2/stanford-manifest.json';
+import goettingen from '../../fixtures/presentation-2/uni-goettingen.json';
+import villanovaManifest from '../../fixtures/presentation-2/villanova-manifest.json';
+import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
+import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
 
 describe('Presentation 2 to 3', () => {
   const validator = new Validator();
@@ -172,7 +172,7 @@ describe('Presentation 2 to 3', () => {
     const results = presentation2to3.traverseManifest(bodyChoice as any);
     const isValid = validator.validateManifest(results);
 
-    // @ts-ignore
+    // @ts-expect-error
     const body = results.items[0]!.items[0]!.items[0].body as any;
 
     expect(body.type).toEqual('Choice');
@@ -614,6 +614,11 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
+  test.only('goettingen manifest', () => {
+    const result = presentation2to3.traverseManifest(goettingen as any);
+    expect(result).toMatchSnapshot();
+  });
+
   test('nested ranges', () => {
     const result = presentation2to3.traverseManifest(nestedRanges as any);
     const found = result.structures!.find(
@@ -625,29 +630,26 @@ describe('Presentation 2 to 3', () => {
 
   test('Invalid Language map', () => {
     const invalid = {
-      ...(JSON.parse(JSON.stringify(iiifManifestInvalid))),
+      ...JSON.parse(JSON.stringify(iiifManifestInvalid)),
       metadata: [
         { label: 'Test 1', value: '' },
         { label: 'Test 2' },
         { label: '', value: 'Test 3' },
         { value: 'Test 4' },
-      ]
+      ],
     };
-    const result = presentation2to3.traverseManifest(invalid as any)
+    const result = presentation2to3.traverseManifest(invalid as any);
 
     expect(result.metadata).toMatchSnapshot();
   });
 
   test('scroll', () => {
-
     const result = convertPresentation2(scroll as any);
 
     expect(result.viewingDirection).toEqual('top-to-bottom');
-
-  })
+  });
 
   test('paginated collection', () => {
-
     const result = convertPresentation2(paginatedCollection as any);
 
     expect(result).toMatchInlineSnapshot(`
@@ -2613,5 +2615,4 @@ describe('Presentation 2 to 3', () => {
       }
     `);
   });
-
 });

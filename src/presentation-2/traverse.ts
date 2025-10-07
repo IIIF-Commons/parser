@@ -1,4 +1,4 @@
-import {
+import type {
   Annotation,
   AnnotationList,
   Canvas,
@@ -170,7 +170,7 @@ export class Traverse<
       ];
 
       const seenIds: string[] = [];
-      const filteredMembers = members.filter(resource => {
+      const filteredMembers = members.filter((resource) => {
         if (seenIds.includes(resource['@id'])) {
           return false;
         }
@@ -270,6 +270,9 @@ export class Traverse<
   }
 
   traverseRange(range: Range): T['Range'] {
+    if (range['@type'] !== 'sc:Range') {
+      range['@type'] = 'sc:Range';
+    }
     return this.traverseType(
       this.traverseDescriptive(this.traverseLinking(this.traverseRangeItems(range))),
       this.traversals.range
@@ -296,7 +299,22 @@ export class Traverse<
 
       delete range.ranges;
       delete range.canvases;
-      range.members = members.length ? members.map((member) => this.traverseUnknown(member)) : undefined;
+      range.members = members.length
+        ? members.map((member) => {
+            // Enable if seen.
+            // if (
+            //   member.type === 'sc:Canvas' &&
+            //   (('canvases' in member && member.canvases?.length) ||
+            //     ('ranges' in member && member.ranges?.length) ||
+            //     ('members' in member && member.members?.length))
+            // ) {
+            //   // This is likely a Range, not a canvas.
+            //   member['@type'] = 'sc:Range';
+            // }
+
+            return this.traverseUnknown(member);
+          })
+        : undefined;
     }
     return range;
   }

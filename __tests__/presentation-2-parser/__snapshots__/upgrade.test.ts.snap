@@ -53,6 +53,3752 @@ exports[`Presentation 2 to 3 > Invalid Language map 1`] = `
 ]
 `;
 
+exports[`Presentation 2 to 3 > goettingen manifest 1`] = `
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "behavior": [
+    "paged",
+    "paged",
+  ],
+  "id": "https://manifests.sub.uni-goettingen.de/id/DE-611-HS-3216958",
+  "items": [
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000001",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000001/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000001",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000001",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000001",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000001",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000002",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000002/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000002",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000002",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000002",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000002",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000003",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000003/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000003",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000003",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000003",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000003",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "1r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000004",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000004/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000004",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000004",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000004",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000004",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "1v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000005",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000005/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000005",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000005",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000005",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000005",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "2r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000006",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000006/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000006",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000006",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000006",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000006",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "2v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000007",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000007/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000007",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000007",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000007",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000007",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "3r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000008",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000008/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000008",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000008",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000008",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000008",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "3v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000009",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000009/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000009",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000009",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000009",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000009",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "4r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000010",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000010/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000010",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000010",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000010",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000010",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "4v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000011",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000011/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000011",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000011",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000011",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000011",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "5r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000012",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000012/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000012",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000012",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000012",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000012",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "5v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000013",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000013/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000013",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000013",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000013",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000013",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "6r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000014",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000014/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000014",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000014",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000014",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000014",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "6v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000015",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000015/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000015",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000015",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000015",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000015",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "7r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000016",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000016/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000016",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000016",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000016",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000016",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "7v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000017",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000017/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000017",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000017",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000017",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000017",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "8r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000018",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000018/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000018",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000018",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000018",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000018",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "8v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000019",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000019/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000019",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000019",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000019",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000019",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "9r",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000020",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000020/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000020",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000020",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000020",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000020",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          "9v",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000021",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000021/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000021",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000021",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000021",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000021",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000022",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000022/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000022",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000022",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000022",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000022",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000023",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000023/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000023",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000023",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000023",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000023",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000024",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000024/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000024",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000024",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000024",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000024",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000025",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000025/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000025",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000025",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000025",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000025",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000026",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000026/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000026",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000026",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000026",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000026",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000027",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000027/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000027",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000027",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000027",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000027",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000028",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000028/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000028",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000028",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000028",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000028",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000029",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000029/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000029",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000029",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000029",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000029",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000030",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000030/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000030",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000030",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000030",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000030",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000031",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000031/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000031",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000031",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000031",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000031",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000032",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000032/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000032",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000032",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000032",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000032",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000033",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000033/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000033",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000033",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000033",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000033",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000034",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000034/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000034",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000034",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000034",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000034",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000035",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000035/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000035",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000035",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000035",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000035",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000036",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000036/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000036",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000036",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000036",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000036",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000037",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000037/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000037",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000037",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000037",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000037",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000038",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000038/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000038",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000038",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000038",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000038",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000039",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000039/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000039",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000039",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000039",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000039",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000040",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000040/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000040",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000040",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000040",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000040",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000041",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000041/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000041",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000041",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000041",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000041",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000042",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000042/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000042",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000042",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000042",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000042",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000043",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000043/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000043",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000043",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000043",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000043",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000044",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000044/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000044",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000044",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000044",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000044",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000045",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000045/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000045",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000045",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000045",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000045",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000046",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000046/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000046",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000046",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000046",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000046",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000047",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000047/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000047",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000047",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000047",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000047",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000048",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000048/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000048",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000048",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000048",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000048",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000049",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000049/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000049",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000049",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000049",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000049",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000050",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000050/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000050",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000050",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000050",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000050",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000051",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000051/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000051",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000051",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000051",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000051",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000052",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000052/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000052",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000052",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000052",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000052",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000053",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000053/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000053",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000053",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000053",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000053",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000054",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000054/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000054",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000054",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000054",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000054",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000055",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000055/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000055",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000055",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000055",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000055",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000056",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000056/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000056",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000056",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000056",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000056",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000057",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000057/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000057",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000057",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000057",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000057",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000058",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000058/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000058",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000058",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000058",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000058",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000059",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000059/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000059",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000059",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000059",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000059",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000060",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000060/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000060",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000060",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000060",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000060",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000061",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000061/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000061",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000061",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000061",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000061",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000062",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000062/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000062",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000062",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000062",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000062",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000063",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000063/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000063",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000063",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000063",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000063",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000064",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000064/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000064",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000064",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000064",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000064",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000065",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000065/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000065",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000065",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000065",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000065",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000066",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000066/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000066",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000066",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000066",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000066",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000067",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000067/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000067",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000067",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000067",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000067",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000068",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000068/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000068",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000068",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000068",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000068",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+    {
+      "height": 400,
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000069",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000069/annotation-page",
+          "items": [
+            {
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "body": {
+                "format": "image/jpeg",
+                "height": 400,
+                "id": "https://manifests.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000069",
+                "service": [
+                  {
+                    "@id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000069",
+                    "@type": "ImageService2",
+                    "profile": "level1",
+                  },
+                ],
+                "type": "Image",
+                "width": 300,
+              },
+              "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/annotation/gdz:DE-611-HS-3216958:00000069",
+              "motivation": "painting",
+              "target": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000069",
+              "type": "Annotation",
+            },
+          ],
+          "type": "AnnotationPage",
+        },
+      ],
+      "label": {
+        "none": [
+          " - ",
+        ],
+      },
+      "type": "Canvas",
+      "width": 300,
+    },
+  ],
+  "label": {
+    "none": [
+      "Algebra : Vorlesungsmanuskript",
+    ],
+  },
+  "metadata": [
+    {
+      "label": {
+        "none": [
+          "Zusammenfassung",
+        ],
+      },
+      "value": {
+        "none": [
+          "<br />
+         <br />
+         <br />
+         Algebra <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+     <br />
+         <br />
+             1.  Informationen zum<br />
+                    Werk <br />
+             Vorlesung von  Georg Cantor <br />
+             veranstaltet im  Sommersemester 1902 <br />
+             in  [Halle] <br />
+             Handschriftliche Notizen von  Georg Cantor <br />
+             Diese Zusammenfassung wurde  im Jahre 2016  erstellt von<br />
+                     Gerrit Grenzebach . <br />
+         <br />
+             2.  Informationen zur<br />
+                    Archivierung <br />
+             Signatur im Archiv: Cod.Ms.G.Cantor 22:5 <br />
+             Link zum Eintrag in der HANS-Datenbank  <br />
+         <br />
+             3.  Schlagworte <br />
+             Auflösung von Gleichungen dritten und vierten Grades, Symmetrische Funktionen  <br />
+         <br />
+             4.  Zusammenfassung <br />
+             Dieses Heft enthält fragmentarische Notizen von Georg Cantor zu Themen aus der<br />
+                Algebra. Im ersten Kapitel über Gleichungen 3. und 4. Grades werden die Cardanschen<br />
+                Formeln zur Auflösung von Gleichungen 3. Grades hergeleitet sowie die<br />
+                Ferrari-Methode zur Auflösung von Gleichungen 4. Grades vorgestellt. Ein zweites<br />
+                Kapitel handelt von den symmetrischen Funktionen. Im wesentlichen werden für diese<br />
+                Rekursionsformeln hergeleitet sowie die Beweismethode von Waring für den Kernsatz<br />
+                der Theorie der symmetrischen Funktionen gezeigt.  <br />
+             Die Notizen sind eher skizzenhaft ohne weitere Erläuterungen außer einigen<br />
+                Stichworten und mögen einem Experten genügen. Als ausgearbeitete Vorlesung lassen<br />
+                sich diese Notizen dagegen nicht bezeichnen.  <br />
+         <br />
+    <br />
+",
+        ],
+      },
+    },
+    {
+      "label": {
+        "none": [
+          "Ort",
+        ],
+      },
+      "value": {
+        "none": [
+          "o.O. [Halle]",
+        ],
+      },
+    },
+    {
+      "label": {
+        "none": [
+          "Jahr",
+        ],
+      },
+      "value": {
+        "none": [
+          "1902",
+        ],
+      },
+    },
+    {
+      "label": {
+        "none": [
+          "Digitalisierungsdatum",
+        ],
+      },
+      "value": {
+        "none": [
+          "2016",
+        ],
+      },
+    },
+    {
+      "label": {
+        "none": [
+          "Sprache",
+        ],
+      },
+      "value": {
+        "none": [
+          "Deutsch",
+        ],
+      },
+    },
+    {
+      "label": {
+        "none": [
+          "Signatur",
+        ],
+      },
+      "value": {
+        "none": [
+          "Cod. Ms. G. Cantor 22 : 5",
+        ],
+      },
+    },
+    {
+      "label": {
+        "none": [
+          "PURL",
+        ],
+      },
+      "value": {
+        "none": [
+          "http://resolver.sub.uni-goettingen.de/purl?DE-611-HS-3216958",
+        ],
+      },
+    },
+  ],
+  "navDate": "1902-01-01T00:00:00+01:00",
+  "provider": [
+    {
+      "homepage": [
+        {
+          "format": "text/html",
+          "id": "http://kalliope-verbund.info/DE-611-HS-3216958",
+          "label": {
+            "none": [
+              "Kalliope",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "id": "http://example.org/provider",
+      "label": {
+        "none": [
+          "",
+        ],
+      },
+      "logo": [
+        {
+          "id": "https://gdz.sub.uni-goettingen.de/images/sub-blue.svg",
+          "service": [
+            {
+              "@id": "https://gdz.sub.uni-goettingen.de/",
+              "@type": "ImageService2",
+              "profile": "level1",
+            },
+          ],
+          "type": "unknown",
+        },
+      ],
+      "type": "Agent",
+    },
+  ],
+  "rendering": [
+    {
+      "format": "application/pdf",
+      "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/DE-611-HS-3216958.pdf",
+      "label": {
+        "none": [
+          "PDF download",
+        ],
+      },
+      "type": "Text",
+    },
+    {
+      "format": "text/html",
+      "id": "https://dfg-viewer.de/show/?set[mets]=https://gdz.sub.uni-goettingen.de/mets/DE-611-HS-3216958.mets.xml",
+      "label": {
+        "none": [
+          "DFG-Viewer",
+        ],
+      },
+      "type": "Text",
+    },
+  ],
+  "requiredStatement": {
+    "label": {
+      "none": [
+        "Attribution",
+      ],
+    },
+    "value": {
+      "none": [
+        "Niedersächsische Staats- und Universitätsbibliothek Göttingen",
+      ],
+    },
+  },
+  "seeAlso": [
+    {
+      "format": "application/x-bibtex",
+      "id": "https://gdz.sub.uni-goettingen.de/download/DE-611-HS-3216958.bib",
+      "profile": "https://www.bibtex.org/Format/",
+      "type": "Dataset",
+    },
+    {
+      "format": "application/x-research-info-systems",
+      "id": "https://gdz.sub.uni-goettingen.de/download/DE-611-HS-3216958.ris",
+      "profile": "https://referencemanager.com/sites/rm/files/m/direct_export_ris.pdf",
+      "type": "Dataset",
+    },
+    {
+      "format": "application/x-endnote-refer",
+      "id": "https://gdz.sub.uni-goettingen.de/download/DE-611-HS-3216958.enw",
+      "profile": "https://endnote.com/",
+      "type": "Dataset",
+    },
+    {
+      "format": "text/xml",
+      "id": "https://gdz.sub.uni-goettingen.de/mets/DE-611-HS-3216958.mets.xml",
+      "profile": "https://www.loc.gov/standards/mets/profile_docs/mets.profile.v2-0.xsd",
+      "type": "Text",
+    },
+  ],
+  "start": {
+    "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000001",
+    "type": "Canvas",
+  },
+  "structures": [
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0001",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000001",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Titelseite",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0001.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0002",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000001",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000002",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Einband",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0002.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0003",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000003",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000004",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000005",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000006",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000007",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000008",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000009",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000010",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Cap. I. Gleichungen 3ten und 4ten Grades mit einer Unbekannten",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0003.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0004",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000003",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000004",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000005",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000006",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000007",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Auflösung von Gleichungen 3ten Grades",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0004.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0005",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000003",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000004",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Huddesche Methode",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0005.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0006",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000005",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000006",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000007",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Cardansche Formel",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0006.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0007",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000007",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Discriminante R",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0007.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0008",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000008",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000009",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000010",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Gleichungen vierten Grades",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0008.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0009",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000008",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000009",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000010",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Ferrarische Methode (Louis Ferrari)",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0009.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0010",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000011",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000012",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000013",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000014",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000015",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000016",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000017",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000018",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000019",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Cap.II. Die symmetrischen Functionen",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0010.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0011",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000012",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000013",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000014",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000015",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Recursionsformeln",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0011.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0012",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000016",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "George Hepburn – Stuart – Valois",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0012.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0013",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000017",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000018",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000019",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Waring's Beweismethode für den Kernsatz der Theorie der symmetrischen Functionen",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0013.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0014",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000020",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000021",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000022",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000023",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000024",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000025",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000026",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000027",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000028",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000029",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000030",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000031",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000032",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000033",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000034",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000035",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000036",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000037",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000038",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000039",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000040",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000041",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000042",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000043",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000044",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000045",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000046",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000047",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000048",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000049",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000050",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000051",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000052",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000053",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000054",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000055",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000056",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000057",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000058",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000059",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000060",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000061",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000062",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000063",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000064",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000065",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000066",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "[leere Seiten]",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0014.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+    {
+      "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/range/LOG_0015",
+      "items": [
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000067",
+          "type": "Canvas",
+        },
+        {
+          "id": "https://manifests.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/canvas/gdz:DE-611-HS-3216958:00000068",
+          "type": "Canvas",
+        },
+      ],
+      "label": {
+        "none": [
+          "Einband",
+        ],
+      },
+      "rendering": [
+        {
+          "format": "application/pdf",
+          "id": "https://gdz.sub.uni-goettingen.de/download/pdf/DE-611-HS-3216958/LOG_0015.pdf",
+          "label": {
+            "none": [
+              "PDF download",
+            ],
+          },
+          "type": "Text",
+        },
+      ],
+      "type": "Range",
+    },
+  ],
+  "thumbnail": [
+    {
+      "id": "https://images.sub.uni-goettingen.de/iiif/image/gdz:DE-611-HS-3216958:00000001/full/96,/0/default.jpg",
+      "service": [
+        {
+          "@id": "https://images.sub.uni-goettingen.de/iiif/presentation/DE-611-HS-3216958/manifest",
+          "@type": "ImageService2",
+          "profile": "level1",
+        },
+      ],
+      "type": "Image",
+    },
+  ],
+  "type": "Manifest",
+  "viewingDirection": "left-to-right",
+}
+`;
+
 exports[`Presentation 2 to 3 > nested ranges 1`] = `
 {
   "@context": "http://iiif.io/api/presentation/3/context.json",
