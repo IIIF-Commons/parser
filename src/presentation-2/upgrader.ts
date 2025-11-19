@@ -247,7 +247,7 @@ function getNewType(resource: any): string {
   return oldType as string;
 }
 
-const licenseRegex = /http(s)?:\/\/(creativecommons.org|rightsstatements.org)[^"'\\<\n]+/gm;
+const licenseRegex = /^|["'\\>]http(s)?:\/\/(creativecommons.org|rightsstatements.org)\/[^"'\\<\n]+/gm;
 
 function extractLicense(license: string) {
   const matches = license.match(licenseRegex);
