@@ -1,4 +1,5 @@
 import type { ExternalWebResource, SpecificResource, W3CAnnotationTarget } from '@iiif/presentation-3';
+import { splitCanvasFragment } from './canvas-fragments';
 
 export function expandTargetToSpecificResource(
   target: W3CAnnotationTarget | W3CAnnotationTarget[],
@@ -13,7 +14,7 @@ export function expandTargetToSpecificResource(
   }
 
   if (typeof target === 'string') {
-    const [id, fragment] = target.split('#');
+    const [id, fragment] = splitCanvasFragment(target);
 
     if (!fragment) {
       // This is an unknown selector.
@@ -61,7 +62,8 @@ export function expandTargetToSpecificResource(
       ];
     }
     const targetId = typeof target.source === 'string' ? target.source : target.source.id;
-    if (targetId?.includes('#')) {
+    const [, sourceFragment] = splitCanvasFragment(targetId);
+    if (sourceFragment) {
       const parsed = expandTargetToSpecificResource(targetId, options);
       if (parsed) {
         target.selector = parsed.selector;
@@ -94,7 +96,7 @@ export function expandTargetToSpecificResource(
       ];
     }
 
-    const [id, fragment] = target.id.split('#');
+    const [id, fragment] = splitCanvasFragment(target.id);
     if (!fragment) {
       // This is an unknown selector.
       return {

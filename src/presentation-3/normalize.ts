@@ -35,6 +35,7 @@ import {
 import type { CompatibleStore, NormalizedEntity } from './serialize';
 import { type TraversalContext, Traverse } from './traverse';
 import { EMPTY, HAS_PART, IS_EXTERNAL, PART_OF, WILDCARD } from './utilities';
+import { splitCanvasFragment } from '../shared/canvas-fragments';
 
 export const defaultEntities = {
   Collection: {},
@@ -428,13 +429,13 @@ function toSpecificResource(
   }
 
   let selector: Selector | undefined;
-  if ((target.id || '').indexOf('#') !== -1) {
-    const [id, fragment] = (target.id || '').split('#');
-    target.id = id;
-    if (fragment) {
+  const [targetId, targetFragment] = splitCanvasFragment(target.id);
+  target.id = targetId;
+  if (targetFragment) {
+    if (targetFragment) {
       selector = {
         type: 'FragmentSelector',
-        value: fragment,
+        value: targetFragment,
       };
     }
   }

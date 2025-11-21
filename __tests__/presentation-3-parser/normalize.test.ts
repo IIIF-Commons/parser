@@ -5,6 +5,7 @@ import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
 import blManifestWithRanges from '../../fixtures/presentation-3/bl-ranges.json';
 import manifestWithSpecificResource from '../../fixtures/presentation-3/css.json';
 import manifestExhibition from '../../fixtures/presentation-3/exhibition-1.json';
+import ldmax from '../../fixtures/presentation-3/ldmax.json';
 import manifestSpecificResource from '../../fixtures/presentation-3/specific-resource-infer.json';
 import manifestWithStartFixture from '../../fixtures/presentation-3/start-canvas.json';
 import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
@@ -419,6 +420,21 @@ describe('normalize', () => {
         "styleClass": "author1",
         "type": "SpecificResource",
       }
+    `);
+  });
+
+  test('normalize ldmax manifest', () => {
+    const db = normalize(JSON.parse(JSON.stringify(ldmax)));
+
+    expect(Object.keys(db.entities.Canvas)).toMatchInlineSnapshot(`
+      [
+        "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
+        "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
+        "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
+        "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
+        "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
+        "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
+      ]
     `);
   });
 });

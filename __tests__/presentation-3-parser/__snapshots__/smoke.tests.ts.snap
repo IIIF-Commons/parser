@@ -7324,6 +7324,1219 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/has-part.json 1`] =
 }
 `;
 
+exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ldmax.json 1`] = `
+{
+  "entities": {
+    "Agent": {
+      "http://www.museumkranenburgh.nl": {
+        "homepage": [],
+        "id": "http://www.museumkranenburgh.nl",
+        "iiif-parser:hasPart": [
+          {
+            "id": "http://www.museumkranenburgh.nl",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Agent",
+          },
+        ],
+        "label": {
+          "none": [
+            "Museum Kranenburgh",
+          ],
+        },
+        "logo": [],
+        "seeAlso": [
+          {
+            "id": "https://www.ldmax.nl/organisaties/q4350196.jsonld",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://www.ldmax.nl/organisaties/q4350196.ttl",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://www.ldmax.nl/organisaties/q4350196.nt",
+            "type": "ContentResource",
+          },
+        ],
+        "type": "Agent",
+      },
+    },
+    "Annotation": {
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation/image": {
+        "body": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/body",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation/image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation/image",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation/image": {
+        "body": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/body",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation/image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation/image",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation/image": {
+        "body": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/body",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation/image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation/image",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation/image": {
+        "body": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/body",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation/image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation/image",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation/image": {
+        "body": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/body",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation/image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation/image",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation/image": {
+        "body": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/body",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation/image",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation/image",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation",
+            "type": "Annotation",
+          },
+        ],
+        "motivation": [
+          "painting",
+        ],
+        "target": {
+          "source": {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
+            "type": "Canvas",
+          },
+          "type": "SpecificResource",
+        },
+        "type": "Annotation",
+      },
+    },
+    "AnnotationCollection": {},
+    "AnnotationPage": {
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation": {
+        "behavior": [],
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation/image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation": {
+        "behavior": [],
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation/image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation": {
+        "behavior": [],
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation/image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation": {
+        "behavior": [],
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation/image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation": {
+        "behavior": [],
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation/image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation": {
+        "behavior": [],
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
+            "type": "AnnotationPage",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation/image",
+            "type": "Annotation",
+          },
+        ],
+        "label": null,
+        "metadata": [],
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "AnnotationPage",
+        "width": 750,
+      },
+    },
+    "Canvas": {
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "none": [
+            "p. 1",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "none": [
+            "p. 2",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "none": [
+            "p. 3",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "none": [
+            "p. 4",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "none": [
+            "p. 5",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 750,
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "duration": 0,
+        "height": 1000,
+        "homepage": [],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation",
+            "type": "AnnotationPage",
+          },
+        ],
+        "label": {
+          "none": [
+            "p. 6",
+          ],
+        },
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Canvas",
+        "width": 750,
+      },
+    },
+    "Collection": {
+      "https://www.ldmax.nl/datasets/q4350196.jsonld": {
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [],
+        "homepage": [],
+        "id": "https://www.ldmax.nl/datasets/q4350196.jsonld",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://www.ldmax.nl/datasets/q4350196.jsonld",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Collection",
+          },
+        ],
+        "iiif-parser:isExternal": true,
+        "items": [],
+        "label": null,
+        "metadata": [],
+        "navDate": null,
+        "partOf": [],
+        "placeholderCanvas": null,
+        "provider": [],
+        "rendering": [],
+        "requiredStatement": null,
+        "rights": null,
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "summary": null,
+        "thumbnail": [],
+        "type": "Collection",
+        "viewingDirection": "left-to-right",
+      },
+    },
+    "ContentResource": {
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/body": {
+        "format": "image/jpeg",
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/body",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/body",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation/image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/body": {
+        "format": "image/jpeg",
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/body",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/body",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation/image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/body": {
+        "format": "image/jpeg",
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/body",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/body",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation/image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/body": {
+        "format": "image/jpeg",
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/body",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/body",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation/image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/body": {
+        "format": "image/jpeg",
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/body",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/body",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation/image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/body": {
+        "format": "image/jpeg",
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/body",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/body",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation/image",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370/full/!250,250/0/default.jpg": {
+        "format": "image/jpeg",
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370/full/!250,250/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370/full/!250,250/0/default.jpg",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370/full/!250,250/0/default.jpg",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178/full/!250,250/0/default.jpg": {
+        "format": "image/jpeg",
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178/full/!250,250/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178/full/!250,250/0/default.jpg",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178/full/!250,250/0/default.jpg",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179/full/!250,250/0/default.jpg": {
+        "format": "image/jpeg",
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179/full/!250,250/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179/full/!250,250/0/default.jpg",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179/full/!250,250/0/default.jpg",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180/full/!250,250/0/default.jpg": {
+        "format": "image/jpeg",
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180/full/!250,250/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180/full/!250,250/0/default.jpg",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180/full/!250,250/0/default.jpg",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182/full/!250,250/0/default.jpg": {
+        "format": "image/jpeg",
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182/full/!250,250/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182/full/!250,250/0/default.jpg",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182/full/!250,250/0/default.jpg",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183/full/!250,250/0/default.jpg": {
+        "format": "image/jpeg",
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183/full/!250,250/0/default.jpg",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183/full/!250,250/0/default.jpg",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Image",
+          },
+        ],
+        "service": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183/full/!250,250/0/default.jpg",
+            "profile": "level3",
+            "type": "ImageService3",
+          },
+        ],
+        "type": "Image",
+      },
+      "https://www.ldmax.nl/datasets/q4350196/triples?subject=https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71": {
+        "format": "text/html",
+        "id": "https://www.ldmax.nl/datasets/q4350196/triples?subject=https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://www.ldmax.nl/datasets/q4350196/triples?subject=https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Text",
+          },
+        ],
+        "label": {
+          "nl": [
+            "Detailpagina",
+          ],
+        },
+        "type": "Text",
+      },
+      "https://www.ldmax.nl/organisaties/q4350196.jsonld": {
+        "format": "application/ld+json",
+        "id": "https://www.ldmax.nl/organisaties/q4350196.jsonld",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://www.ldmax.nl/organisaties/q4350196.jsonld",
+            "iiif-parser:partOf": "http://www.museumkranenburgh.nl",
+            "type": "Dataset",
+          },
+        ],
+        "profile": "https://schema.org/",
+        "type": "Dataset",
+      },
+      "https://www.ldmax.nl/organisaties/q4350196.nt": {
+        "format": "application/n-triples",
+        "id": "https://www.ldmax.nl/organisaties/q4350196.nt",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://www.ldmax.nl/organisaties/q4350196.nt",
+            "iiif-parser:partOf": "http://www.museumkranenburgh.nl",
+            "type": "Dataset",
+          },
+        ],
+        "profile": "https://schema.org/",
+        "type": "Dataset",
+      },
+      "https://www.ldmax.nl/organisaties/q4350196.ttl": {
+        "format": "text/turtle",
+        "id": "https://www.ldmax.nl/organisaties/q4350196.ttl",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://www.ldmax.nl/organisaties/q4350196.ttl",
+            "iiif-parser:partOf": "http://www.museumkranenburgh.nl",
+            "type": "Dataset",
+          },
+        ],
+        "profile": "https://schema.org/",
+        "type": "Dataset",
+      },
+    },
+    "Manifest": {
+      "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json": {
+        "@context": [
+          "http://iiif.io/api/presentation/3/context.json",
+          "https://schema.org/",
+        ],
+        "accompanyingCanvas": null,
+        "annotations": [],
+        "behavior": [
+          "paged",
+        ],
+        "homepage": [
+          {
+            "id": "https://www.ldmax.nl/datasets/q4350196/triples?subject=https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71",
+            "type": "ContentResource",
+          },
+        ],
+        "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "iiif-parser:partOf": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+            "type": "Manifest",
+          },
+        ],
+        "items": [
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
+            "type": "Canvas",
+          },
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
+            "type": "Canvas",
+          },
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
+            "type": "Canvas",
+          },
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
+            "type": "Canvas",
+          },
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
+            "type": "Canvas",
+          },
+          {
+            "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
+            "type": "Canvas",
+          },
+        ],
+        "label": {
+          "nl": [
+            "De familie van Grenthe, het kippenvrouwtje",
+          ],
+        },
+        "metadata": [
+          {
+            "label": {
+              "nl": [
+                "Datum gemaakt",
+              ],
+            },
+            "value": {
+              "nl": [
+                "2025-06-05T15:01:51",
+              ],
+            },
+          },
+          {
+            "label": {
+              "nl": [
+                "Datum gewijzigd",
+              ],
+            },
+            "value": {
+              "nl": [
+                "2025-06-05T15:14:31",
+              ],
+            },
+          },
+          {
+            "label": {
+              "nl": [
+                "dateCreated",
+              ],
+            },
+            "value": {
+              "nl": [
+                "1938",
+              ],
+            },
+          },
+          {
+            "label": {
+              "nl": [
+                "beschrijving",
+              ],
+            },
+            "value": {
+              "nl": [
+                "De kunstenares maakte zes illustraties voor het sprookje 'Grethe het kippenvrouwtje' van H.C. Andersen.",
+              ],
+            },
+          },
+          {
+            "label": {
+              "nl": [
+                "identificatie",
+              ],
+            },
+            "value": {
+              "nl": [
+                "00002",
+              ],
+            },
+          },
+          {
+            "label": {
+              "nl": [
+                "itemLocatie",
+              ],
+            },
+            "value": {
+              "nl": [
+                "KO.rek06.40",
+              ],
+            },
+          },
+          {
+            "label": {
+              "nl": [
+                "naam",
+              ],
+            },
+            "value": {
+              "nl": [
+                "De familie van Grenthe, het kippenvrouwtje",
+              ],
+            },
+          },
+        ],
+        "navDate": null,
+        "partOf": [
+          {
+            "id": "https://www.ldmax.nl/datasets/q4350196.jsonld",
+            "type": "Collection",
+          },
+        ],
+        "placeholderCanvas": null,
+        "provider": [
+          {
+            "id": "http://www.museumkranenburgh.nl",
+            "type": "Agent",
+          },
+        ],
+        "rendering": [],
+        "requiredStatement": {
+          "label": {
+            "en": [
+              "Attribution",
+            ],
+            "nl": [
+              "Naamsvermelding",
+            ],
+          },
+          "value": {
+            "en": [
+              "Provided by Museum Kranenburgh",
+            ],
+            "nl": [
+              "Aangeboden door Museum Kranenburgh",
+            ],
+          },
+        },
+        "rights": "http://creativecommons.org/licenses/by/4.0",
+        "seeAlso": [],
+        "service": [],
+        "services": [],
+        "start": null,
+        "structures": [],
+        "summary": {
+          "nl": [
+            "De kunstenares maakte zes illustraties voor het sprookje 'Grethe het kippenvrouwtje' van H.C. Andersen.",
+          ],
+        },
+        "thumbnail": [
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180/full/!250,250/0/default.jpg",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178/full/!250,250/0/default.jpg",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179/full/!250,250/0/default.jpg",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370/full/!250,250/0/default.jpg",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182/full/!250,250/0/default.jpg",
+            "type": "ContentResource",
+          },
+          {
+            "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183/full/!250,250/0/default.jpg",
+            "type": "ContentResource",
+          },
+        ],
+        "type": "Manifest",
+        "viewingDirection": "right-to-left",
+      },
+    },
+    "Range": {},
+    "Selector": {},
+    "Service": {
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370": {
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370",
+        "profile": "level3",
+        "type": "ImageService3",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178": {
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178",
+        "profile": "level3",
+        "type": "ImageService3",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179": {
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179",
+        "profile": "level3",
+        "type": "ImageService3",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180": {
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180",
+        "profile": "level3",
+        "type": "ImageService3",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182": {
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182",
+        "profile": "level3",
+        "type": "ImageService3",
+      },
+      "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183": {
+        "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183",
+        "profile": "level3",
+        "type": "ImageService3",
+      },
+    },
+  },
+  "mapping": {
+    "http://www.museumkranenburgh.nl": "Agent",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json": "Manifest",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1": "Canvas",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation": "AnnotationPage",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation/image": "Annotation",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/body": "ContentResource",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2": "Canvas",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation": "AnnotationPage",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation/image": "Annotation",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/body": "ContentResource",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3": "Canvas",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation": "AnnotationPage",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation/image": "Annotation",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/body": "ContentResource",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4": "Canvas",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation": "AnnotationPage",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation/image": "Annotation",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/body": "ContentResource",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5": "Canvas",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation": "AnnotationPage",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation/image": "Annotation",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/body": "ContentResource",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6": "Canvas",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation": "AnnotationPage",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation/image": "Annotation",
+    "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/body": "ContentResource",
+    "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.15370/full/!250,250/0/default.jpg": "ContentResource",
+    "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.178/full/!250,250/0/default.jpg": "ContentResource",
+    "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.179/full/!250,250/0/default.jpg": "ContentResource",
+    "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180/full/!250,250/0/default.jpg": "ContentResource",
+    "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.182/full/!250,250/0/default.jpg": "ContentResource",
+    "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.183/full/!250,250/0/default.jpg": "ContentResource",
+    "https://www.ldmax.nl/datasets/q4350196.jsonld": "Collection",
+    "https://www.ldmax.nl/datasets/q4350196/triples?subject=https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71": "ContentResource",
+    "https://www.ldmax.nl/organisaties/q4350196.jsonld": "ContentResource",
+    "https://www.ldmax.nl/organisaties/q4350196.nt": "ContentResource",
+    "https://www.ldmax.nl/organisaties/q4350196.ttl": "ContentResource",
+  },
+  "resource": {
+    "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
+    "type": "Manifest",
+  },
+}
+`;
+
 exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1`] = `
 {
   "entities": {
