@@ -435,9 +435,9 @@ function descriptiveProperties<T extends Partial<Presentation3.DescriptiveProper
     label: resource.label ? convertLanguageMapping(resource.label) : undefined,
     requiredStatement: resource.attribution
       ? {
-        label: convertLanguageMapping(configuration.attributionLabel),
-        value: convertLanguageMapping(resource.attribution),
-      }
+          label: convertLanguageMapping(configuration.attributionLabel),
+          value: convertLanguageMapping(resource.attribution),
+        }
       : undefined,
     navDate: resource.navDate,
     summary: resource.description ? convertLanguageMapping(resource.description) : undefined,
@@ -498,19 +498,18 @@ function linkingProperties(resource: Presentation2.LinkingProperties & Presentat
   const related = resource.related ? (Array.isArray(resource.related) ? resource.related : [resource.related]) : [];
   const layer = resource.contentLayer as Presentation2.Layer;
 
-
   return {
     provider:
       resource.logo || related.length
         ? [
-          {
-            id: configuration.providerId,
-            type: 'Agent' as const,
-            homepage: related.length ? [related[0] as any] : undefined,
-            logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
-            label: convertLanguageMapping(configuration.providerName),
-          },
-        ]
+            {
+              id: configuration.providerId,
+              type: 'Agent' as const,
+              homepage: related.length ? [related[0] as any] : undefined,
+              logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
+              label: convertLanguageMapping(configuration.providerName),
+            },
+          ]
         : undefined,
     partOf: parseWithin(resource),
     rendering: resource.rendering,
@@ -598,7 +597,7 @@ function paginationProperties(collection: Presentation2.Collection) {
 function removeEmptyItems(resources: any[]) {
   const toReturn = [];
   for (const originalResource of resources) {
-    const resource = {...originalResource};
+    const resource = { ...originalResource };
     if (resource.items && resource.items.length === 0) {
       delete resource.items;
     }
@@ -706,12 +705,12 @@ function upgradeCanvas(canvas: Presentation2.Canvas): Presentation3.Canvas {
     items:
       canvas.images && canvas.images.length
         ? [
-          {
-            id: mintNewIdFromResource(canvas, 'annotation-page'),
-            type: 'AnnotationPage',
-            items: canvas.images as any,
-          },
-        ]
+            {
+              id: mintNewIdFromResource(canvas, 'annotation-page'),
+              type: 'AnnotationPage',
+              items: canvas.images as any,
+            },
+          ]
         : undefined,
   });
 }
@@ -927,7 +926,8 @@ export function convertPresentation2(entity: any): Presentation3.Manifest | Pres
     (entity &&
       entity['@context'] &&
       (entity['@context'] === 'http://iiif.io/api/presentation/2/context.json' ||
-        entity['@context'].indexOf('http://iiif.io/api/presentation/2/context.json') !== -1 ||
+        (Array.isArray(entity['@context']) &&
+          entity['@context'].indexOf('http://iiif.io/api/presentation/2/context.json') !== -1) ||
         // Yale context.
         entity['@context'] === 'http://www.shared-canvas.org/ns/context.json')) ||
     entity['@context'] === 'http://iiif.io/api/image/2/context.json' ||
