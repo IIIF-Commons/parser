@@ -1,0 +1,39 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@type": "sc:Manifest",
+  "@id": "https://example.org/manifest",
+  "label": "Test manifest with malformed annotation @type",
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "https://example.org/canvas/1",
+          "label": "Canvas 1",
+          "width": 1000,
+          "height": 800,
+          "images": [
+            {
+              "@type": "dctypes:Image",
+              "motivation": "sc:painting",
+              "on": "https://example.org/canvas/1",
+              "resource": {
+                "@type": "dctypes:Image",
+                "@id": "https://example.org/image/1/full/full/0/default.jpg",
+                "format": "image/jpeg",
+                "width": 1000,
+                "height": 800,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://example.org/image/1",
+                  "profile": "http://iiif.io/api/image/2/level1.json"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
