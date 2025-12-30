@@ -261,7 +261,14 @@ export class Traverse<
 
   traverseCanvasItems(canvas: Canvas): Canvas {
     if (canvas.images) {
-      canvas.images = canvas.images.map((image) => this.traverseAnnotation(image));
+      canvas.images = canvas.images.map((image) => {
+        // Fix malformed annotations where @type is missing or incorrect (e.g., "dctypes:Image" instead of "oa:Annotation").
+        // Detect by presence of "on" property which is unique to annotations.
+        if (image.on && image['@type'] !== 'oa:Annotation' && image['@type'] !== 'Annotation') {
+          image['@type'] = 'oa:Annotation';
+        }
+        return this.traverseAnnotation(image);
+      });
     }
     if (canvas.otherContent) {
       canvas.otherContent = canvas.otherContent.map((annotationList) => this.traverseAnnotationList(annotationList));

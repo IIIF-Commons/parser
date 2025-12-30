@@ -33,6 +33,7 @@ import stanfordManifest from '../../fixtures/presentation-2/stanford-manifest.js
 import goettingen from '../../fixtures/presentation-2/uni-goettingen.json';
 import villanovaManifest from '../../fixtures/presentation-2/villanova-manifest.json';
 import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
+import malformedImageAnnotation from '../../fixtures/presentation-2/malformed-image-annotation.json';
 import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
 
 describe('Presentation 2 to 3', () => {
@@ -2614,5 +2615,25 @@ describe('Presentation 2 to 3', () => {
         "type": "Collection",
       }
     `);
+  });
+
+  test('Malformed annotation with dctypes:Image instead of oa:Annotation', () => {
+    // Some manifests (e.g., St. Andrews) have @type: "dctypes:Image" on annotations
+    // instead of the correct @type: "oa:Annotation". The converter should fix this.
+    const result = presentation2to3.traverseManifest(malformedImageAnnotation as any);
+    const isValid = validator.validateManifest(result);
+
+    expect(validator.validators.manifest!.errors).toEqual(null);
+    expect(isValid).toEqual(true);
+
+    // Verify the annotation was correctly converted
+    const canvas = result.items?.[0];
+    const annotationPage = canvas?.items?.[0];
+    const annotation = annotationPage?.items?.[0];
+
+    expect(annotation).toBeDefined();
+    expect(annotation?.type).toEqual('Annotation');
+    expect(annotation?.motivation).toEqual('painting');
+    expect(annotation?.body).toBeDefined();
   });
 });
