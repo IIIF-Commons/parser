@@ -1,0 +1,62 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@type": "sc:Manifest",
+  "@id": "https://collections.st-andrews.ac.uk/762345/manifest",
+  "label": "Dura Den Fossil Fish",
+  "description": "Slab containing two fossilised Holopychius flemingi fish, which lived during the Devonian period, around 400 million years ago. The unusual bone structure of the fish, with fins attached to stumps, attracted the attention of prominent scientists including Charles Lyell. This fueled the debate on evolution as they could be interpreted as examples of Darwin's 'Transitional Forms' between fish with fins and animals with legs.<br/> <br/>The fossil is unusual as the fish are perfectly formed. Normally as they are subjected to lots of heat and pressure, flattened and often scavenged before found, you do not get a full skeleton. The fish appear clustered together as they were buried during a sandstorm whilst they were forced together as the rivers were drying up.",
+  "attribution": "© The University of St Andrews",
+  "logo": "https://collections.st-andrews.ac.uk/uv/logo.png",
+  "metadata": [
+    { "label": "Identifier", "value": "GE1049" },
+    { "label": "Title", "value": "Dura Den Fossil Fish" },
+    {
+      "label": "Record URL",
+      "value": "<a href='https://collections.st-andrews.ac.uk/item/dura-den-fossil-fish/762345'>https://collections.st-andrews.ac.uk/item/dura-den-fossil-fish/762345</a>"
+    },
+    {
+      "label": "Subjects",
+      "value": " <a href='https://collections.st-andrews.ac.uk/search/?query=Subject:\"geology\"&form=grid&mode=query'>geology</a>,<a href='https://collections.st-andrews.ac.uk/search/?query=Subject:\"fossil\"&form=grid&mode=query'>fossil</a>,<a href='https://collections.st-andrews.ac.uk/search/?query=Subject:\"fish\"&form=grid&mode=query'>fish</a>,<a href='https://collections.st-andrews.ac.uk/search/?query=Subject:\"dura%20den\"&form=grid&mode=query'>dura den</a>"
+    },
+    { "label": "Department", "value": "Museums" },
+    {
+      "label": "Collection",
+      "value": "<a href='https://collections.st-andrews.ac.uk/collection/geology-collection/1004098'>Geology Collection</a>"
+    },
+    { "label": "Record level", "value": "Item" },
+    {
+      "label": "Conditions of use",
+      "value": "CC BY-NC Creative Commons Attribution-NonCommercial 4.0 International Public License"
+    },
+    { "label": "Credit line", "value": "Image Courtesy of the University of St Andrews Library, ID GE1049" },
+    { "label": "IRN", "value": "762345" },
+    {
+      "label": "Image delivery",
+      "value": "Working in partnership with <a href='https://kakadusoftware.com/'>Kakadu</a> to deliver high quality image reproductions via IIIF."
+    }
+  ],
+  "items": [
+    {
+      "id": "https://collections.st-andrews.ac.uk/762345/manifest/canvas/406403",
+      "type": "Canvas",
+      "items": [
+        {
+          "id": "https://collections.st-andrews.ac.uk/762345/manifest/canvas/406403/annotationpage/0",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://collections.st-andrews.ac.uk/762345/manifest/canvas/406403/annotation/0",
+              "type": "Annotation",
+              "motivation": "painting",
+              "body": {
+                "id": "https://collections.st-andrews.ac.uk/media/406403/406403.glb",
+                "type": "Model",
+                "format": "model/gltf-binary"
+              },
+              "target": "https://collections.st-andrews.ac.uk/762345/manifest/canvas/406403"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
