@@ -2666,8 +2666,9 @@ describe('Presentation 2 to 3', () => {
     expect(annotation?.motivation).toEqual('painting');
 
     // Verify the body (3D model) was correctly converted
-    expect(annotation?.body).toBeDefined();
-    expect(annotation?.body?.id).toEqual('https://collections.st-andrews.ac.uk/media/406403/406403.glb');
-    expect(annotation?.body?.format).toEqual('model/gltf-binary');
+    const body = annotation?.body as any;
+    expect(body).toBeDefined();
+    expect(body?.id).toEqual('https://collections.st-andrews.ac.uk/media/406403/406403.glb');
+    expect(body?.format).toEqual('model/gltf-binary');
   });
 });
