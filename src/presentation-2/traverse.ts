@@ -229,6 +229,18 @@ export class Traverse<
   }
 
   traverseManifestItems(manifest: Manifest): Manifest {
+    // Handle malformed manifests that have v2 @context but use v3 structure (items instead of sequences).
+    // Convert v3 items structure to v2 sequences structure before traversal.
+    if (!manifest.sequences && (manifest as any).items && Array.isArray((manifest as any).items)) {
+      manifest.sequences = [
+        {
+          '@id': `${manifest['@id']}/sequence/0`,
+          '@type': 'sc:Sequence',
+          canvases: (manifest as any).items.map((item: any) => this.convertV3CanvasToV2(item)),
+        } as any,
+      ];
+      delete (manifest as any).items;
+    }
     if (manifest.sequences) {
       manifest.sequences = manifest.sequences.map((sequence) => this.traverseSequence(sequence));
     }
@@ -236,6 +248,68 @@ export class Traverse<
       manifest.structures = manifest.structures.map((structure) => this.traverseRange(structure));
     }
     return manifest;
+  }
+
+  /**
+   * Convert a v3-style Canvas to v2-style Canvas structure.
+   * Handles manifests with v2 context but v3 structure.
+   */
+  convertV3CanvasToV2(canvas: any): any {
+    // If it's already v2 style, return as-is
+    if (canvas['@type'] || canvas['@id']) {
+      return canvas;
+    }
+
+    const v2Canvas: any = {
+      '@id': canvas.id,
+      '@type': 'sc:Canvas',
+      label: canvas.label,
+      height: canvas.height,
+      width: canvas.width,
+    };
+
+    // Convert v3 items (AnnotationPages) to v2 images array
+    if (canvas.items && Array.isArray(canvas.items)) {
+      v2Canvas.images = [];
+      for (const annotationPage of canvas.items) {
+        if (annotationPage.items && Array.isArray(annotationPage.items)) {
+          for (const annotation of annotationPage.items) {
+            v2Canvas.images.push(this.convertV3AnnotationToV2(annotation, canvas.id));
+          }
+        }
+      }
+    }
+
+    return v2Canvas;
+  }
+
+  /**
+   * Convert a v3-style Annotation to v2-style Annotation structure.
+   */
+  convertV3AnnotationToV2(annotation: any, canvasId: string): any {
+    return {
+      '@id': annotation.id,
+      '@type': 'oa:Annotation',
+      motivation: annotation.motivation === 'painting' ? 'sc:painting' : annotation.motivation,
+      on: annotation.target || canvasId,
+      resource: this.convertV3BodyToV2Resource(annotation.body),
+    };
+  }
+
+  /**
+   * Convert a v3-style body to v2-style resource.
+   */
+  convertV3BodyToV2Resource(body: any): any {
+    if (!body) return undefined;
+
+    return {
+      '@id': body.id,
+      '@type': body.type === 'Image' ? 'dctypes:Image' : `dctypes:${body.type}`,
+      format: body.format,
+      height: body.height,
+      width: body.width,
+      service: body.service,
+    };
   }
 
   traverseSequence(sequence: Sequence): T['Sequence'] {

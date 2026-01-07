@@ -34,6 +34,7 @@ import goettingen from '../../fixtures/presentation-2/uni-goettingen.json';
 import villanovaManifest from '../../fixtures/presentation-2/villanova-manifest.json';
 import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
 import malformedImageAnnotation from '../../fixtures/presentation-2/malformed-image-annotation.json';
+import stAndrewsMalformed from '../../fixtures/presentation-2/st-andrews-malformed.json';
 import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
 
 describe('Presentation 2 to 3', () => {
@@ -2635,5 +2636,39 @@ describe('Presentation 2 to 3', () => {
     expect(annotation?.type).toEqual('Annotation');
     expect(annotation?.motivation).toEqual('painting');
     expect(annotation?.body).toBeDefined();
+  });
+
+  test('V2 context manifest with V3 structure (items instead of sequences)', () => {
+    // Some manifests (e.g., St. Andrews) have @context: "http://iiif.io/api/presentation/2/context.json"
+    // but use v3-style structure with items array instead of v2 sequences[0].canvases.
+    // The converter should detect this and handle it appropriately.
+    // Note: We don't validate strictly here because the source manifest may be missing
+    // required properties like canvas width/height - we just verify the structure converts.
+    const result = presentation2to3.traverseManifest(stAndrewsMalformed as any);
+
+    // Verify the canvas was correctly converted
+    expect(result.items).toBeDefined();
+    expect(result.items?.length).toBeGreaterThan(0);
+
+    const canvas = result.items?.[0];
+    expect(canvas).toBeDefined();
+    expect(canvas?.id).toEqual('https://collections.st-andrews.ac.uk/762345/manifest/canvas/406403');
+    expect(canvas?.type).toEqual('Canvas');
+
+    // Verify the annotation page and annotation were correctly converted
+    const annotationPage = canvas?.items?.[0];
+    expect(annotationPage).toBeDefined();
+    expect(annotationPage?.type).toEqual('AnnotationPage');
+
+    const annotation = annotationPage?.items?.[0];
+    expect(annotation).toBeDefined();
+    expect(annotation?.type).toEqual('Annotation');
+    expect(annotation?.motivation).toEqual('painting');
+
+    // Verify the body (3D model) was correctly converted
+    const body = annotation?.body as any;
+    expect(body).toBeDefined();
+    expect(body?.id).toEqual('https://collections.st-andrews.ac.uk/media/406403/406403.glb');
+    expect(body?.format).toEqual('model/gltf-binary');
   });
 });
