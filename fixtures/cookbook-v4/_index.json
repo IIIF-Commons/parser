@@ -1,0 +1,22 @@
+{
+  "0001-mvm-image": {
+    "id": "0001-mvm-image",
+    "url": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/manifest.json",
+    "recipeUrl": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/"
+  },
+  "0002-mvm-audio": {
+    "id": "0002-mvm-audio",
+    "url": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/manifest.json",
+    "recipeUrl": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/"
+  },
+  "0003-mvm-video": {
+    "id": "0003-mvm-video",
+    "url": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/manifest.json",
+    "recipeUrl": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/"
+  },
+  "0608-mvm-3d": {
+    "id": "0608-mvm-3d",
+    "url": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/manifest.json",
+    "recipeUrl": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/"
+  }
+}

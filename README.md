@@ -7,6 +7,7 @@ npm i @iiif/parser
 This is a parser and set of low-level utilities for the following IIIF Specifications:
 
 - [IIIF Presentation 3](https://iiif.io/api/presentation/3.0/) (current)
+- [IIIF Presentation 4](https://preview.iiif.io/api/prezi-4/presentation/4.0/) (preview support via `/presentation-4`)
 - [IIIF Image 3](https://iiif.io/api/image/3.0/) (current)
 - [IIIF Presentation 2](https://iiif.io/api/presentation/2.1/)
 
@@ -16,8 +17,7 @@ These include:
 
 
 > [!NOTE]
-> A new version of the IIIF Presentation API is being developed (v4) which handles 3D content. This parser will
-> support this version soon. You can read about the additions [here](https://github.com/IIIF/3d/blob/main/temp-draft-4.md)
+> Presentation API v4 support is available from `@iiif/parser/presentation-4` and is designed for mixed v2.1/v3.0/v4.0 ingestion with a v4 normalization pipeline.
 
 ### Features
 The features of this library are focussed on encoding the structure of all types of IIIF and providing utilities for extracting data from the IIIF or converting it into another format that is easier to develop with. The aim of the parser is to maximize the IIIF compatibility of other tools built on top of it.
@@ -102,6 +102,35 @@ export type TraversalMap = {
   specificResource?: Array<Traversal<SpecificResource>>;
   geoJson?: Array<Traversal<import('geojson').GeoJSON>>;
 };
+```
+
+#### IIIF Presentation 4
+
+- `upgradeToPresentation4()` to ingest v2.1, v3.0 or v4.0 into a v4-compatible shape
+- `Traverse` with v4 container support (`Timeline`, `Canvas`, `Scene`)
+- `normalize()` with deterministic ID minting for missing IDs
+- `validatePresentation4()` with traversal-first diagnostics (`tolerant` or `strict`)
+- `serializeConfigPresentation4` for native v4 output
+- `serializeConfigPresentation3` for strict v4→v3 downgrade (fails on unsupported v4-only constructs)
+- `pnpm run update-cookbook-v4` to refresh local `fixtures/cookbook-v4` from [preview cookbook v4](https://preview.iiif.io/cookbook/v4/)
+
+```ts
+import {
+  upgradeToPresentation4,
+  normalize,
+  validatePresentation4,
+  serialize,
+  serializeConfigPresentation4
+} from '@iiif/parser/presentation-4';
+
+const upgraded = upgradeToPresentation4(loadSomeManifest());
+const report = validatePresentation4(upgraded);
+const normalized = normalize(upgraded);
+const serialized = serialize(
+  { entities: normalized.entities, mapping: normalized.mapping, requests: {} },
+  normalized.resource,
+  serializeConfigPresentation4
+);
 ```
 
 #### Image 3

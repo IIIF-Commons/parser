@@ -1,57 +1,246 @@
-/**
- * Presentation API 4.0 Utilities
- *
- * This file contains utility functions and constants specific to the IIIF Presentation API 4.0 implementation.
- * Utilities here should be v4-specific or generic helpers that are not tightly coupled to v3 logic.
- *
- * As the implementation matures, consider extracting shared utilities to a common location if they are
- * useful for both v3 and v4.
- */
+export const EMPTY_ARRAY = Object.freeze([]) as readonly never[];
+export const EMPTY_OBJECT = Object.freeze({}) as Readonly<Record<string, never>>;
+export const PRESENTATION_4_CONTEXT = 'http://iiif.io/api/presentation/4/context.json';
+export const PRESENTATION_3_CONTEXT = 'http://iiif.io/api/presentation/3/context.json';
 
-// Constants for v4 (add more as needed)
-export const EMPTY_ARRAY: any[] = Object.freeze([]);
-export const EMPTY_OBJECT: object = Object.freeze({});
+export type ValidationSeverity = 'error' | 'warning' | 'info';
 
-// Utility: Check if an object is a plain object (not an array, function, etc.)
-export function isPlainObject(obj: any): obj is Record<string, any> {
-  return Object.prototype.toString.call(obj) === '[object Object]';
+export type ValidationIssue = {
+  code: string;
+  severity: ValidationSeverity;
+  message: string;
+  path: string;
+  resourceType?: string;
+  resourceId?: string;
+  specRef?: string;
+};
+
+export type ValidationReport = {
+  valid: boolean;
+  issues: ValidationIssue[];
+  stats: {
+    errors: number;
+    warnings: number;
+    info: number;
+  };
+};
+
+export function createValidationReport(issues: ValidationIssue[]): ValidationReport {
+  const stats = {
+    errors: issues.filter((issue) => issue.severity === 'error').length,
+    warnings: issues.filter((issue) => issue.severity === 'warning').length,
+    info: issues.filter((issue) => issue.severity === 'info').length,
+  };
+
+  return {
+    valid: stats.errors === 0,
+    issues,
+    stats,
+  };
 }
 
-// Utility: Deep freeze an object (for immutability)
-export function deepFreeze<T>(obj: T): T {
-  Object.freeze(obj);
-  Object.getOwnPropertyNames(obj).forEach((prop) => {
-    // @ts-ignore
-    if (
-      obj[prop] !== null &&
-      (typeof obj[prop] === 'object' || typeof obj[prop] === 'function') &&
-      !Object.isFrozen(obj[prop])
-    ) {
-      // @ts-ignore
-      deepFreeze(obj[prop]);
-    }
-  });
-  return obj;
+export function isPlainObject(value: unknown): value is Record<string, any> {
+  return !!value && Object.prototype.toString.call(value) === '[object Object]';
 }
 
-// Utility: Shallow clone (for safe mutation)
-export function shallowClone<T>(obj: T): T {
-  if (Array.isArray(obj)) {
-    return obj.slice() as any;
+export function deepClone<T>(value: T): T {
+  if (typeof structuredClone !== 'undefined') {
+    return structuredClone(value);
   }
-  if (isPlainObject(obj)) {
-    return { ...obj };
-  }
-  return obj;
+  return JSON.parse(JSON.stringify(value)) as T;
 }
 
-// Utility: Ensure value is an array
 export function ensureArray<T>(value: T | T[] | undefined | null): T[] {
-  if (value == null) return [];
+  if (value === null || typeof value === 'undefined') {
+    return [];
+  }
   return Array.isArray(value) ? value : [value];
 }
 
-// Utility: No-op placeholder for future expansion
-export function noop(..._args: any[]): void {}
+export function ensureStringArray(value: unknown): string[] {
+  if (Array.isArray(value)) {
+    return value.filter((v): v is string => typeof v === 'string');
+  }
+  if (typeof value === 'string') {
+    return [value];
+  }
+  return [];
+}
 
-// Add more v4-specific utilities as the implementation progresses.
+export function getId(resource: any): string | undefined {
+  if (!resource || typeof resource !== 'object') {
+    return undefined;
+  }
+  if (typeof resource.id === 'string') {
+    return resource.id;
+  }
+  if (typeof resource['@id'] === 'string') {
+    return resource['@id'];
+  }
+  return undefined;
+}
+
+export function getType(resource: any): string | undefined {
+  if (!resource || typeof resource !== 'object') {
+    return undefined;
+  }
+  if (typeof resource.type === 'string') {
+    return resource.type;
+  }
+  if (typeof resource['@type'] === 'string') {
+    return resource['@type'];
+  }
+  if (Array.isArray(resource['@type'])) {
+    return resource['@type'].find((type: unknown) => typeof type === 'string');
+  }
+  return undefined;
+}
+
+export function setId(resource: Record<string, any>, id: string) {
+  resource.id = id;
+  delete resource['@id'];
+}
+
+export function setType(resource: Record<string, any>, type: string) {
+  resource.type = type;
+  delete resource['@type'];
+}
+
+export function isSpecificResource(resource: any): boolean {
+  return getType(resource) === 'SpecificResource';
+}
+
+export function isSelector(resource: any): boolean {
+  const type = getType(resource);
+  return !!type && type.endsWith('Selector');
+}
+
+export function isQuantity(resource: any): boolean {
+  return getType(resource) === 'Quantity';
+}
+
+export function isServiceLike(resource: any): boolean {
+  if (!resource || typeof resource !== 'object') {
+    return false;
+  }
+  const type = getType(resource);
+  if (type && type.includes('Service')) {
+    return true;
+  }
+  return typeof resource.profile === 'string' || Array.isArray(resource.service);
+}
+
+export function hashString(input: string): string {
+  let hash = 5381;
+  let index = input.length;
+  while (index) {
+    hash = (hash * 33) ^ input.charCodeAt(--index);
+  }
+  const hex = (hash >>> 0).toString(16);
+  return hex.length % 2 === 1 ? `0${hex}` : hex;
+}
+
+export function stableStringify(value: unknown): string {
+  if (Array.isArray(value)) {
+    return `[${value.map((item) => stableStringify(item)).join(',')}]`;
+  }
+  if (value && typeof value === 'object') {
+    const object = value as Record<string, unknown>;
+    const keys = Object.keys(object).sort();
+    return `{${keys.map((key) => `${JSON.stringify(key)}:${stableStringify(object[key])}`).join(',')}}`;
+  }
+  return JSON.stringify(value);
+}
+
+export function mintDeterministicId(resource: unknown, type: string, path = '$'): string {
+  const fingerprint = stableStringify({ type, path, resource });
+  return `vault://iiif-parser/v4/${type}/${hashString(fingerprint)}`;
+}
+
+export const containerTypes = new Set(['Timeline', 'Canvas', 'Scene']);
+export const structuralTypes = new Set(['Collection', 'Manifest', 'Range']);
+export const annotationTypes = new Set(['Annotation', 'AnnotationPage', 'AnnotationCollection']);
+export const sceneComponentTypes = new Set([
+  'PerspectiveCamera',
+  'OrthographicCamera',
+  'AmbientLight',
+  'DirectionalLight',
+  'PointLight',
+  'SpotLight',
+  'AmbientAudio',
+  'PointAudio',
+  'SpotAudio',
+]);
+export const transformTypes = new Set(['RotateTransform', 'ScaleTransform', 'TranslateTransform']);
+export const contentTypes = new Set([
+  'Image',
+  'Audio',
+  'Sound',
+  'Video',
+  'Model',
+  'Text',
+  'TextualBody',
+  'Dataset',
+  'Choice',
+]);
+
+export function identifyResourceType(resource: any, typeHint?: string): string {
+  if (Array.isArray(resource)) {
+    if (typeHint) {
+      return typeHint;
+    }
+    throw new Error('Resource type is not known');
+  }
+
+  if (!resource || typeof resource !== 'object') {
+    if (typeHint) {
+      return typeHint;
+    }
+    throw new Error('Resource must be an object');
+  }
+
+  const type = getType(resource);
+  if (type) {
+    if (containerTypes.has(type)) {
+      return type;
+    }
+    if (structuralTypes.has(type)) {
+      return type;
+    }
+    if (annotationTypes.has(type)) {
+      return type;
+    }
+    if (type === 'SpecificResource') {
+      return 'SpecificResource';
+    }
+    if (type === 'Agent') {
+      return 'Agent';
+    }
+    if (type === 'Quantity') {
+      return 'Quantity';
+    }
+    if (type.endsWith('Selector')) {
+      return 'Selector';
+    }
+    if (transformTypes.has(type)) {
+      return 'Transform';
+    }
+    if (type.includes('Service') || type === 'Service') {
+      return 'Service';
+    }
+    if (sceneComponentTypes.has(type) || contentTypes.has(type)) {
+      return 'ContentResource';
+    }
+    return 'ContentResource';
+  }
+
+  if (isServiceLike(resource)) {
+    return 'Service';
+  }
+
+  if (typeHint) {
+    return typeHint;
+  }
+
+  throw new Error('Resource type is not known');
+}

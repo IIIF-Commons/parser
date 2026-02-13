@@ -1,13 +1,7 @@
-/**
- * Presentation API 4.0 - Serialization Utilities
- *
- * This module will provide the core serialization logic for IIIF Presentation 4.0 resources.
- * It will be used by both the native v4 serializer and the v4→v3 downgrade serializer.
- *
- * For now, this is a stub to scaffold the implementation.
- */
+export const UNSET = '__$UNSET$__';
+export const UNWRAP = '__$UNWRAP$__';
 
-export type Field = any[];
+export type Field = [string, any];
 
 export type CompatibleStore<T extends string = string> = {
   requests: {
@@ -15,7 +9,7 @@ export type CompatibleStore<T extends string = string> = {
   };
   entities: {
     [type in T]: {
-      [id: string]: any;
+      [id: string]: NormalizedEntity;
     };
   };
   mapping: {
@@ -23,47 +17,127 @@ export type CompatibleStore<T extends string = string> = {
   };
 };
 
-export type NormalizedEntity = { id?: string; type?: string; [key: string]: any };
+export type NormalizedEntity = {
+  id?: string;
+  type?: string;
+  '@id'?: string;
+  '@type'?: string;
+  [key: string]: any;
+};
 
-export type SerializerContext = {
+type SerializerContext = {
   isTopLevel?: boolean;
   parent?: any;
   fullResource?: any;
 };
 
-export type Serializer<Type extends NormalizedEntity> = (
+export type Serializer<Type extends NormalizedEntity = NormalizedEntity> = (
   entity: Type,
-  state: any,
+  state: CompatibleStore,
   context: SerializerContext
 ) => Generator<any, any, any>;
 
 export type SerializeConfig = {
-  [type: string]: Serializer<any> | undefined;
+  [type: string]: Serializer | undefined;
 };
 
-/**
- * Converts a list of serialized fields to a plain JS object.
- * This is a stub for now and will be expanded for v4-specific logic.
- */
-export function serializedFieldsToObject<T>(fields: Field[] | [string]): T {
+function resolveResource(state: CompatibleStore, value: any): [NormalizedEntity | undefined, NormalizedEntity | undefined] {
+  if (!value) {
+    return [undefined, undefined];
+  }
+  if (typeof value === 'string') {
+    const type = state.mapping[value];
+    const store = type ? state.entities[type] : undefined;
+    if (!type || !store) {
+      return [undefined, undefined];
+    }
+    const entity = store[value];
+    return [entity, entity];
+  }
+
+  const id = value.id || value['@id'];
+  const type = value.type || value['@type'] || state.mapping[id];
+  const store = type ? state.entities[type] : undefined;
+  if (!id || !type || !store) {
+    return [undefined, undefined];
+  }
+
+  const request = state.requests[id];
+  const full = store[request?.resourceUri || id];
+  return [full, full];
+}
+
+export function serializedFieldsToObject<T>(fields: Field[] | [typeof UNWRAP, any]): T {
+  if (Array.isArray(fields) && fields[0] === UNWRAP) {
+    return fields[1] as T;
+  }
+
   const object: any = {};
-  for (const [key, value] of fields) {
-    if (typeof key !== "undefined" && typeof value !== "undefined" && value !== null) {
+  for (const [key, value] of fields as Field[]) {
+    if (value !== UNSET && typeof value !== 'undefined' && value !== null) {
       object[key] = value;
     }
   }
   return object as T;
 }
 
-/**
- * Main serialization entrypoint for Presentation 4.0.
- * This is a stub and will be implemented with v4 logic.
- */
-export function serialize<Return>(
-  state: CompatibleStore,
-  subject: { id: string; type: string },
-  config: SerializeConfig
-): Return {
-  // TODO: Implement v4 serialization logic
-  throw new Error("serialize() not yet implemented for Presentation 4.0");
+export function serialize<Return>(state: CompatibleStore, subject: { id: string; type: string }, config: SerializeConfig): Return {
+  if (!subject.type || !subject.id) {
+    throw new Error('Unknown entity');
+  }
+
+  if (!config[subject.type]) {
+    throw new Error(`Serializer not found for ${subject.type}`);
+  }
+
+  function flatten(sub: { id: string; type: string }, parent?: any, depth = 0): any {
+    if (depth > 40) {
+      throw new Error(`Circular reference at ${sub.type}(${sub.id})`);
+    }
+
+    const generator = config[sub.type];
+    if (!generator) {
+      return UNSET;
+    }
+
+    const [resource, full] = resolveResource(state, sub);
+    if (!resource) {
+      return UNSET;
+    }
+
+    const iterator = generator(resource, state, {
+      parent,
+      fullResource: full,
+      isTopLevel: subject.id === sub.id && subject.type === sub.type,
+    });
+
+    let current = iterator.next();
+    while (!current.done) {
+      const request = current.value;
+      let next: any = UNSET;
+
+      if (Array.isArray(request)) {
+        next = request.map((item) => {
+          if (!item || typeof item !== 'object') {
+            return item;
+          }
+          return flatten(item, sub, depth + 1);
+        });
+      } else if (request && typeof request === 'object') {
+        next = flatten(request, sub, depth + 1);
+      } else if (request && request !== UNSET) {
+        next = request;
+      }
+
+      current = iterator.next(next);
+    }
+
+    if (current.value === UNSET) {
+      return UNSET;
+    }
+
+    return serializedFieldsToObject(current.value as any);
+  }
+
+  return flatten(subject) as Return;
 }
