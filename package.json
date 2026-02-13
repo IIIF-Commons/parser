@@ -3,7 +3,7 @@
   "version": "2.2.9",
   "license": "MIT",
   "type": "module",
-  "description": "IIIF Presentation 2 and 3 parsing utilities",
+  "description": "IIIF Presentation 2, 3 and 4 parsing utilities",
   "bugs": "https://github.com/iiif-commons/parser/issues",
   "repository": {
     "type": "git",
@@ -46,6 +46,16 @@
         "default": "./dist/presentation-3.js"
       }
     },
+    "./presentation-4": {
+      "require": {
+        "types": "./dist/presentation-4.d.cts",
+        "default": "./dist/presentation-4.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-4.d.ts",
+        "default": "./dist/presentation-4.js"
+      }
+    },
     "./strict": {
       "require": {
         "types": "./dist/strict.d.cts",
@@ -82,6 +92,7 @@
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
+    "update-cookbook-v4": "node scripts/update-cookbook-v4.mjs",
     "prepack": "tsdown && tsdown --config tsdown.umd.ts",
     "lint": "publint"
   },

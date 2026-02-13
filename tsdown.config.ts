@@ -10,6 +10,7 @@ export default defineConfig({
     'image-3': 'src/image-3/index.ts',
     'presentation-2': 'src/presentation-2/index.ts',
     'presentation-3': 'src/presentation-3/index.ts',
+    'presentation-4': 'src/presentation-4/index.ts',
     upgrader: 'src/upgrader.ts',
     strict: 'src/presentation-3/strict-upgrade.ts',
   },

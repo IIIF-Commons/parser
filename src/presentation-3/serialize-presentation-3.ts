@@ -34,6 +34,10 @@ function filterEmpty<T>(item?: T[] | typeof UNSET): T[] | undefined | typeof UNS
     return undefined;
   }
 
+  if (!Array.isArray(item)) {
+    return item;
+  }
+
   if (!item || item.length === 0) {
     return undefined;
   }
@@ -97,8 +101,8 @@ function* descriptiveProperties(
     ['language', entity.language],
     // We yield these fully as they are embedded in here.
     ['thumbnail', filterEmpty(yield entity.thumbnail)],
-    ['placeholderCanvas', yield entity.placeholderCanvas],
-    ['accompanyingCanvas', yield entity.accompanyingCanvas],
+    ['placeholderCanvas', filterEmpty(yield entity.placeholderCanvas)],
+    ['accompanyingCanvas', filterEmpty(yield entity.accompanyingCanvas)],
 
     // @todo need to test this one.
     ['provider', filterEmpty(yield entity.provider)],
@@ -155,10 +159,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     }
 
     return [
-      [
-        '@context',
-        (entity as any)['@context'] ? (entity as any)['@context'] : context,
-      ],
+      ['@context', (entity as any)['@context'] ? (entity as any)['@context'] : context],
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
@@ -377,7 +378,6 @@ function mergeRemainingProperties(entries: [string, any][], object: any): [strin
   }
   return entries;
 }
-
 
 function itemsHaveNavPlace(item: any) {
   if (!item.items || !Array.isArray(item.items)) {
