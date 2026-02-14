@@ -7,6 +7,7 @@ export * from './serialize-presentation-3';
 export * from './upgrade';
 export * from './validator';
 export * from './utilities';
+export * from './types';
 
 export * from '../shared/to-ref';
 export * from '../shared/compress-specific-resource';

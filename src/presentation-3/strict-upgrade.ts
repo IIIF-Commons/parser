@@ -1,4 +1,4 @@
-import * as Presentation3 from '@iiif/presentation-3';
+import type * as Presentation3 from './types';
 import { Traverse } from './traverse';
 import { removeUndefinedProperties } from '../shared/remove-undefined-properties';
 

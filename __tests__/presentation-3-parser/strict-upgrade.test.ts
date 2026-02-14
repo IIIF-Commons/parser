@@ -1,5 +1,5 @@
 import { presentation3StrictUpgrade } from '../../src/presentation-3/strict-upgrade';
-import { Manifest } from '@iiif/presentation-3';
+import { Manifest } from '../../src/presentation-3/types';
 
 function getBaseManifest(): Manifest {
   return {

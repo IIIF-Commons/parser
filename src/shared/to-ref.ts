@@ -1,4 +1,4 @@
-import { Reference } from '@iiif/presentation-3';
+import type { Reference } from '../presentation-3/types';
 import { isSpecificResource } from './is-specific-resource';
 
 export function toRef<T extends string = any>(reference: any, _typeHint?: T): Reference<T> | undefined {

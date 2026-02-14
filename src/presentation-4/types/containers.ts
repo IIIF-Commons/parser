@@ -1,148 +1,124 @@
-/**
- * IIIF Presentation API 4.0 - Container Types
- *
- * This file defines TypeScript interfaces for the core container types
- * introduced or updated in Presentation API 4.0: Timeline, Canvas, Scene.
- * These types are experimental and will be expanded as the implementation matures.
- */
+import type {
+  ContentResourceLike,
+  LanguageMap,
+  MetadataItem,
+  Quantity,
+  ResourceReference,
+  ServiceReference,
+  SpecificResource,
+} from './content-resources';
+import type { ActivatingAnnotation, ContentStateAnnotation } from './extended-properties';
 
-export interface Timeline {
+export interface Annotation {
   id: string;
-  type: 'Timeline';
-  label?: InternationalString;
-  duration: number;
-  items?: Array<string | AnnotationPage | TimelineItem>;
-  metadata?: MetadataItem[];
-  summary?: InternationalString;
-  provider?: Agent[];
-  thumbnail?: ContentResource[];
-  requiredStatement?: MetadataItem;
-  rights?: string | null;
-  navDate?: string | null;
-  navPlace?: any; // GeoJSON or reference
-  placeholderContainer?: Canvas | Scene | Timeline | null;
-  accompanyingContainer?: Canvas | Scene | Timeline | null;
-  behavior?: string[];
-  seeAlso?: ContentResource[];
-  service?: Service[];
-  homepage?: ContentResource[];
-  rendering?: ContentResource[];
-  partOf?: Array<Collection | Manifest>;
-  structures?: Range[];
-  annotations?: AnnotationPage[];
+  type: 'Annotation';
+  motivation?: string[];
+  body?: Array<ContentResourceLike | ResourceReference | string>;
+  target: Array<SpecificResource | ResourceReference | string>;
+  bodyValue?: string;
+  language?: string;
+  [key: string]: unknown;
 }
 
-export interface Canvas {
+export interface AnnotationPage {
   id: string;
-  type: 'Canvas';
-  label?: InternationalString;
-  width: number;
-  height: number;
-  duration?: number;
-  items?: Array<string | AnnotationPage | CanvasItem>;
-  metadata?: MetadataItem[];
-  summary?: InternationalString;
-  provider?: Agent[];
-  thumbnail?: ContentResource[];
-  requiredStatement?: MetadataItem;
-  rights?: string | null;
-  navDate?: string | null;
-  navPlace?: any; // GeoJSON or reference
-  placeholderContainer?: Canvas | Scene | Timeline | null;
-  accompanyingContainer?: Canvas | Scene | Timeline | null;
-  behavior?: string[];
-  seeAlso?: ContentResource[];
-  service?: Service[];
-  homepage?: ContentResource[];
-  rendering?: ContentResource[];
-  partOf?: Array<Collection | Manifest>;
-  structures?: Range[];
-  annotations?: AnnotationPage[];
-  spatialScale?: UnitValue | null;
-  timeMode?: string | null;
-  viewingDirection?: string;
-  backgroundColor?: string | null;
+  type: 'AnnotationPage';
+  items: Annotation[];
+  label?: LanguageMap;
+  [key: string]: unknown;
 }
 
-export interface Scene {
+export interface AnnotationCollection {
   id: string;
-  type: 'Scene';
-  label?: InternationalString;
-  items?: Array<string | AnnotationPage | SceneItem>;
-  metadata?: MetadataItem[];
-  summary?: InternationalString;
-  provider?: Agent[];
-  thumbnail?: ContentResource[];
-  requiredStatement?: MetadataItem;
-  rights?: string | null;
-  navDate?: string | null;
-  navPlace?: any; // GeoJSON or reference
-  placeholderContainer?: Canvas | Scene | Timeline | null;
-  accompanyingContainer?: Canvas | Scene | Timeline | null;
-  behavior?: string[];
-  seeAlso?: ContentResource[];
-  service?: Service[];
-  homepage?: ContentResource[];
-  rendering?: ContentResource[];
-  partOf?: Array<Collection | Manifest>;
-  structures?: Range[];
-  annotations?: AnnotationPage[];
-  duration?: number;
-  spatialScale?: UnitValue | null;
-  backgroundColor?: string | null;
-}
-
-// --- Supporting Types (stubs, to be expanded) ---
-
-export type InternationalString = { [lang: string]: string[] };
-
-export interface MetadataItem {
-  label: InternationalString;
-  value: InternationalString;
+  type: 'AnnotationCollection';
+  items: Annotation[];
+  label?: LanguageMap;
+  [key: string]: unknown;
 }
 
 export interface Agent {
   id: string;
   type: 'Agent';
-  label?: InternationalString;
-  logo?: ContentResource[];
-  seeAlso?: ContentResource[];
-  homepage?: ContentResource[];
-  summary?: InternationalString;
+  label?: LanguageMap;
+  logo?: Array<ContentResourceLike | ResourceReference>;
+  seeAlso?: Array<ContentResourceLike | ResourceReference>;
+  homepage?: Array<ContentResourceLike | ResourceReference>;
+  summary?: LanguageMap;
+  [key: string]: unknown;
 }
 
-export interface ContentResource {
+export interface Range {
+  id: string;
+  type: 'Range';
+  label?: LanguageMap;
+  items?: Array<ResourceReference<'Range' | 'Canvas' | 'Scene' | 'Timeline'> | SpecificResource>;
+  behavior?: string[];
+  [key: string]: unknown;
+}
+
+interface ContainerBase {
   id: string;
   type: string;
-  format?: string;
-  height?: number;
-  width?: number;
+  label?: LanguageMap;
+  metadata?: MetadataItem[];
+  summary?: LanguageMap;
+  provider?: Agent[];
+  thumbnail?: Array<ContentResourceLike | ResourceReference>;
+  requiredStatement?: MetadataItem;
+  rights?: string | null;
+  navDate?: string | null;
+  navPlace?: Record<string, unknown>;
+  behavior?: string[];
+  seeAlso?: Array<ContentResourceLike | ResourceReference>;
+  service?: ServiceReference[];
+  services?: ServiceReference[];
+  homepage?: Array<ContentResourceLike | ResourceReference>;
+  rendering?: Array<ContentResourceLike | ResourceReference>;
+  partOf?: Array<ResourceReference<'Collection' | 'Manifest'>>;
+  structures?: Range[];
+  annotations?: AnnotationPage[];
+  placeholderContainer?: ResourceReference<'Timeline' | 'Canvas' | 'Scene'> | null;
+  accompanyingContainer?: ResourceReference<'Timeline' | 'Canvas' | 'Scene'> | null;
+  [key: string]: unknown;
+}
+
+export interface Timeline extends ContainerBase {
+  type: 'Timeline';
+  duration: number;
+  items?: Array<AnnotationPage | ResourceReference<'AnnotationPage' | 'Canvas' | 'Scene' | 'Timeline'>>;
+}
+
+export interface Canvas extends ContainerBase {
+  type: 'Canvas';
+  width: number;
+  height: number;
   duration?: number;
-  label?: InternationalString;
-  thumbnail?: ContentResource[];
-  // ...etc
+  items?: Array<AnnotationPage | ResourceReference<'AnnotationPage' | 'Canvas' | 'Scene' | 'Timeline'>>;
+  spatialScale?: Quantity | null;
+  timeMode?: string | null;
+  viewingDirection?: string;
+  backgroundColor?: string | null;
 }
 
-export interface Service {
-  id: string;
-  type: string;
-  profile?: string;
-  service?: Service[];
+export interface Scene extends ContainerBase {
+  type: 'Scene';
+  duration?: number;
+  items?: Array<AnnotationPage | ResourceReference<'AnnotationPage' | 'Canvas' | 'Scene' | 'Timeline'>>;
+  spatialScale?: Quantity | null;
+  backgroundColor?: string | null;
 }
 
-export interface UnitValue {
-  id?: string;
-  type: 'UnitValue';
-  value: number;
-  unit: string;
-  label?: InternationalString;
+export interface Collection extends ContainerBase {
+  type: 'Collection';
+  items?: Array<ResourceReference<'Collection' | 'Manifest'>>;
 }
 
-// Placeholders for other IIIF types
-export type AnnotationPage = any;
-export type TimelineItem = any;
-export type CanvasItem = any;
-export type SceneItem = any;
-export type Collection = any;
-export type Manifest = any;
-export type Range = any;
+export interface Manifest extends ContainerBase {
+  type: 'Manifest';
+  items: Array<Canvas | Scene | Timeline | ResourceReference<'Canvas' | 'Scene' | 'Timeline'>>;
+  start?: SpecificResource | ResourceReference<'Canvas' | 'Scene' | 'Timeline'> | null;
+  viewingDirection?: string;
+}
+
+export type Presentation4Annotation = Annotation | ActivatingAnnotation | ContentStateAnnotation;
+export type Container = Collection | Manifest | Timeline | Canvas | Scene;

@@ -1,116 +1,125 @@
-/**
- * IIIF Presentation API 4.0 - Content Resource Types
- *
- * This file defines TypeScript interfaces and type aliases for content resources
- * in Presentation 4.0. Content resources include images, audio, video, models,
- * text, datasets, and other external or embedded resources that can be associated
- * with containers via annotations.
- *
- * Extend these interfaces as the implementation matures.
- */
+import type { Selector } from './selectors';
+import type { Transform } from './transforms';
+import type { SceneComponent } from './scene-components';
 
-// Base Content Resource
-export interface ContentResource {
+export type LanguageMap = Record<string, string[]>;
+
+export interface MetadataItem {
+  label: LanguageMap;
+  value: LanguageMap;
+}
+
+export interface ResourceReference<TType extends string = string> {
+  id: string;
+  type: TType;
+}
+
+export interface ServiceReference {
   id: string;
   type: string;
-  label?: InternationalString;
+  profile?: string | string[];
+  service?: ServiceReference[];
+  [key: string]: unknown;
+}
+
+export interface Quantity {
+  id?: string;
+  type: 'Quantity';
+  value: number;
+  unit?: string;
+  label?: LanguageMap;
+  [key: string]: unknown;
+}
+
+export interface ContentResourceBase {
+  id: string;
+  type: string;
+  label?: LanguageMap;
   format?: string;
-  profile?: string;
+  profile?: string | string[];
   height?: number;
   width?: number;
   duration?: number;
-  language?: string[]; // BCP 47 codes
-  thumbnail?: ContentResource[];
+  language?: string[];
+  thumbnail?: Array<ContentResourceLike | ResourceReference>;
   metadata?: MetadataItem[];
-  summary?: InternationalString;
+  summary?: LanguageMap;
   requiredStatement?: MetadataItem;
   rights?: string | null;
-  seeAlso?: ContentResource[];
-  service?: Service[];
-  homepage?: ContentResource[];
-  rendering?: ContentResource[];
-  partOf?: any[];
-  annotations?: any[];
-  // v4 additions
-  spatialScale?: UnitValue;
-  temporalScale?: UnitValue;
+  seeAlso?: Array<ContentResourceLike | ResourceReference>;
+  service?: ServiceReference[];
+  homepage?: Array<ContentResourceLike | ResourceReference>;
+  rendering?: Array<ContentResourceLike | ResourceReference>;
+  partOf?: Array<ResourceReference | ContentResourceLike>;
+  spatialScale?: Quantity | null;
+  temporalScale?: Quantity | null;
   provides?: string[];
   fileSize?: number;
+  [key: string]: unknown;
 }
 
-// Image Resource
-export interface ImageResource extends ContentResource {
+export interface ImageResource extends ContentResourceBase {
   type: 'Image';
   height: number;
   width: number;
 }
 
-// Audio Resource
-export interface AudioResource extends ContentResource {
+export interface AudioResource extends ContentResourceBase {
   type: 'Audio' | 'Sound';
   duration: number;
 }
 
-// Video Resource
-export interface VideoResource extends ContentResource {
+export interface VideoResource extends ContentResourceBase {
   type: 'Video';
   duration: number;
   height: number;
   width: number;
 }
 
-// Model Resource (3D)
-export interface ModelResource extends ContentResource {
+export interface ModelResource extends ContentResourceBase {
   type: 'Model';
-  // format: e.g. 'model/gltf-binary'
 }
 
-// Text Resource
-export interface TextResource extends ContentResource {
+export interface TextResource extends ContentResourceBase {
   type: 'Text';
 }
 
-// Dataset Resource
-export interface DatasetResource extends ContentResource {
+export interface DatasetResource extends ContentResourceBase {
   type: 'Dataset';
 }
 
-// UnitValue (for spatialScale, temporalScale, etc.)
-export interface UnitValue {
+export interface TextualBodyResource extends ContentResourceBase {
+  type: 'TextualBody';
+  value: string;
+  purpose?: string | string[];
+}
+
+export interface ChoiceResource extends ContentResourceBase {
+  type: 'Choice';
+  items?: ContentResourceLike[];
+  default?: ContentResourceLike;
+}
+
+export interface SpecificResource {
   id?: string;
-  type: 'UnitValue';
-  value: number;
-  unit: string; // e.g. 'm', 's', 'relative'
-  label?: InternationalString;
+  type: 'SpecificResource';
+  source: ContentResourceLike | ResourceReference | string;
+  selector?: Selector | Selector[];
+  transform?: Transform | Transform[];
+  action?: Array<ContentResourceLike | ResourceReference | string>;
+  purpose?: string | string[];
+  scope?: ResourceReference | string;
+  [key: string]: unknown;
 }
 
-// Service (stub, to be expanded)
-export interface Service {
-  id: string;
-  type: string;
-  profile?: string;
-  service?: Service[];
-}
-
-// InternationalString (language map)
-export interface InternationalString {
-  [lang: string]: string[];
-}
-
-// MetadataItem (label/value pairs)
-export interface MetadataItem {
-  label: InternationalString;
-  value: InternationalString;
-}
-
-// Union type for all content resources
-export type AnyContentResource =
+export type ContentResourceLike =
   | ImageResource
   | AudioResource
   | VideoResource
   | ModelResource
   | TextResource
   | DatasetResource
-  | ContentResource;
-
-// Add more as Presentation 4 content resource types expand.
+  | TextualBodyResource
+  | ChoiceResource
+  | ContentResourceBase
+  | SceneComponent;

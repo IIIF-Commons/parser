@@ -1,48 +1,32 @@
-/**
- * IIIF Presentation API 4.0 - Selector Types
- *
- * This file defines TypeScript interfaces for all selector types introduced or updated in Presentation 4.
- * These selectors are used to identify parts of resources (spatial, temporal, 3D, etc.) for annotation targets,
- * positioning, and advanced referencing.
- *
- * Extend these interfaces as the implementation matures.
- */
-
-// Base selector interface
-export interface Selector {
-  type: string;
+export interface SelectorBase {
   id?: string;
+  type: string;
 }
 
-// PointSelector: 3D spatial and/or temporal point
-export interface PointSelector extends Selector {
+export interface PointSelector extends SelectorBase {
   type: 'PointSelector';
   x?: number;
   y?: number;
   z?: number;
-  instant?: number; // Time in seconds
+  t?: number;
 }
 
-// WktSelector: Well-known text geometry selector (2D/3D polygons, lines, etc.)
-export interface WktSelector extends Selector {
+export interface WktSelector extends SelectorBase {
   type: 'WktSelector';
-  value: string; // WKT string
+  value: string;
 }
 
-// FragmentSelector: Media fragment (xywh, t, etc.)
-export interface FragmentSelector extends Selector {
+export interface FragmentSelector extends SelectorBase {
   type: 'FragmentSelector';
   value: string;
 }
 
-// AnimationSelector: Selects a named animation in a model
-export interface AnimationSelector extends Selector {
+export interface AnimationSelector extends SelectorBase {
   type: 'AnimationSelector';
-  value: string; // Animation name or identifier
+  value: string;
 }
 
-// ImageApiSelector: IIIF Image API region/size/rotation/quality/format
-export interface ImageApiSelector extends Selector {
+export interface ImageApiSelector extends SelectorBase {
   type: 'ImageApiSelector';
   region?: string;
   size?: string;
@@ -51,24 +35,20 @@ export interface ImageApiSelector extends Selector {
   format?: string;
 }
 
-// AudioContentSelector: Selects the audio content of an AV resource
-export interface AudioContentSelector extends Selector {
+export interface AudioContentSelector extends SelectorBase {
   type: 'AudioContentSelector';
 }
 
-// VisualContentSelector: Selects the visual content of an AV resource
-export interface VisualContentSelector extends Selector {
+export interface VisualContentSelector extends SelectorBase {
   type: 'VisualContentSelector';
 }
 
-// CompositeSelector: For selectors that refine or combine others (e.g., refinedBy)
-export interface CompositeSelector extends Selector {
-  type: string; // e.g., 'CompositeSelector'
+export interface CompositeSelector extends SelectorBase {
+  type: 'CompositeSelector' | 'ChoiceSelector';
   selectors: Selector[];
 }
 
-// Union type for all selectors
-export type AnySelector =
+export type Selector =
   | PointSelector
   | WktSelector
   | FragmentSelector
@@ -77,5 +57,3 @@ export type AnySelector =
   | AudioContentSelector
   | VisualContentSelector
   | CompositeSelector;
-
-// Add more selector types as Presentation 4 evolves.

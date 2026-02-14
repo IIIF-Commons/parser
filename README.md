@@ -22,6 +22,36 @@ These include:
 ### Features
 The features of this library are focussed on encoding the structure of all types of IIIF and providing utilities for extracting data from the IIIF or converting it into another format that is easier to develop with. The aim of the parser is to maximize the IIIF compatibility of other tools built on top of it.
 
+#### Type Modules and DX Helpers
+
+Type surfaces are available directly from parser subpaths:
+
+- `@iiif/parser/presentation-2/types`
+- `@iiif/parser/presentation-3/types`
+- `@iiif/parser/presentation-3-normalized/types`
+- `@iiif/parser/presentation-4/types`
+- `@iiif/parser/presentation-4-normalized/types`
+
+The versioned parser entrypoints also re-export `infer`, `cast` and `narrow` helpers:
+
+```ts
+import { infer, cast, narrow, type Manifest } from '@iiif/parser/presentation-3';
+
+const manifest = {
+  id: 'https://example.org/manifest',
+  type: 'Manifest',
+  label: { en: ['Example'] },
+  items: [],
+} satisfies Manifest;
+
+const typed = infer.Manifest(manifest);
+const checked = cast.Manifest(manifest);
+
+if (narrow.isImage({ id: 'https://example.org/image.jpg', type: 'Image' })) {
+  // narrowed image resource
+}
+```
+
 #### IIIF Presentation 3
 
 - **Empty types** for each resource (e.g. Manifest, Canvas) which can be used as starting points for creating IIIF
@@ -157,7 +187,7 @@ The Image 3 parser is adapted from an Image Server implementation, and supports:
 
 ```ts
 import { parseImageServiceRequest, imageServiceRequestInfo } from '@iiif/parser/image-3';
-import {  ImageService } from '@iiif/presentation-3';
+import { ImageService } from '@iiif/parser/presentation-3/types';
 
 const parsed = parseImageServiceRequest(
   'https://munch.emuseum.com/apis/iiif/image/v2/17261/full/max/0/default.jpg',

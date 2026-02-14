@@ -1,23 +1,17 @@
-/**
- * IIIF Presentation API 4.0 - Scene Components Types
- *
- * This file defines TypeScript interfaces for 3D scene components introduced in Presentation 4:
- * - Cameras (PerspectiveCamera, OrthographicCamera)
- * - Lights (AmbientLight, DirectionalLight, PointLight, SpotLight)
- * - Audio Emitters (AmbientAudio, PointAudio, SpotAudio)
- * - UnitValue (for intensity, volume, etc.)
- *
- * These types are experimental and may evolve as the specification matures.
- */
+import type { AudioResource, LanguageMap, Quantity } from './content-resources';
+import type { PointSelector, WktSelector } from './selectors';
 
-// =====================
-// Camera Types
-// =====================
+export type LookAtTarget = PointSelector | WktSelector | { id: string; type: string };
 
-export interface PerspectiveCamera {
+export interface SceneComponentBase {
   id: string;
-  type: 'PerspectiveCamera';
+  type: string;
   label?: LanguageMap;
+  [key: string]: unknown;
+}
+
+export interface PerspectiveCamera extends SceneComponentBase {
+  type: 'PerspectiveCamera';
   near?: number;
   far?: number;
   fieldOfView?: number;
@@ -25,10 +19,8 @@ export interface PerspectiveCamera {
   interactionMode?: string[];
 }
 
-export interface OrthographicCamera {
-  id: string;
+export interface OrthographicCamera extends SceneComponentBase {
   type: 'OrthographicCamera';
-  label?: LanguageMap;
   near?: number;
   far?: number;
   viewHeight?: number;
@@ -36,129 +28,54 @@ export interface OrthographicCamera {
   interactionMode?: string[];
 }
 
-// =====================
-// Light Types
-// =====================
-
-export interface AmbientLight {
-  id: string;
+export interface AmbientLight extends SceneComponentBase {
   type: 'AmbientLight';
   color?: string;
-  intensity?: UnitValue;
-  label?: LanguageMap;
+  intensity?: Quantity;
 }
 
-export interface DirectionalLight {
-  id: string;
+export interface DirectionalLight extends SceneComponentBase {
   type: 'DirectionalLight';
   color?: string;
-  intensity?: UnitValue;
+  intensity?: Quantity;
   lookAt?: LookAtTarget;
-  label?: LanguageMap;
 }
 
-export interface PointLight {
-  id: string;
+export interface PointLight extends SceneComponentBase {
   type: 'PointLight';
   color?: string;
-  intensity?: UnitValue;
-  label?: LanguageMap;
+  intensity?: Quantity;
 }
 
-export interface SpotLight {
-  id: string;
+export interface SpotLight extends SceneComponentBase {
   type: 'SpotLight';
   color?: string;
-  intensity?: UnitValue;
+  intensity?: Quantity;
   angle?: number;
   lookAt?: LookAtTarget;
-  label?: LanguageMap;
 }
 
-// =====================
-// Audio Emitter Types
-// =====================
-
-export interface AmbientAudio {
-  id: string;
+export interface AmbientAudio extends SceneComponentBase {
   type: 'AmbientAudio';
-  source: AudioSource;
-  volume?: UnitValue;
-  label?: LanguageMap;
+  source: AudioResource | { id: string; type: 'Audio' | 'Sound' };
+  volume?: Quantity;
 }
 
-export interface PointAudio {
-  id: string;
+export interface PointAudio extends SceneComponentBase {
   type: 'PointAudio';
-  source: AudioSource;
-  volume?: UnitValue;
-  label?: LanguageMap;
+  source: AudioResource | { id: string; type: 'Audio' | 'Sound' };
+  volume?: Quantity;
 }
 
-export interface SpotAudio {
-  id: string;
+export interface SpotAudio extends SceneComponentBase {
   type: 'SpotAudio';
-  source: AudioSource;
-  volume?: UnitValue;
+  source: AudioResource | { id: string; type: 'Audio' | 'Sound' };
+  volume?: Quantity;
   angle?: number;
   lookAt?: LookAtTarget;
-  label?: LanguageMap;
 }
 
-// =====================
-// Supporting Types
-// =====================
-
-/**
- * A UnitValue expresses a quantity with a value and a unit (e.g., intensity, volume, scale).
- */
-export interface UnitValue {
-  id?: string;
-  type: 'UnitValue';
-  value: number;
-  unit: string; // e.g., 'relative', 'm', 's'
-  label?: LanguageMap;
-}
-
-/**
- * LanguageMap for internationalized strings.
- */
-export interface LanguageMap {
-  [lang: string]: string[];
-}
-
-/**
- * LookAtTarget can be a PointSelector, WktSelector, Annotation reference, or SpecificResource.
- * For now, we use a generic type.
- */
-export type LookAtTarget = any;
-
-/**
- * AudioSource is a minimal representation of an audio content resource.
- */
-export interface AudioSource {
-  id: string;
-  type: string; // e.g., 'Audio'
-  format?: string;
-  duration?: number;
-  label?: LanguageMap;
-}
-
-// =====================
-// Union Types for Convenience
-// =====================
-
-export type Camera =
-  | PerspectiveCamera
-  | OrthographicCamera;
-
-export type Light =
-  | AmbientLight
-  | DirectionalLight
-  | PointLight
-  | SpotLight;
-
-export type AudioEmitter =
-  | AmbientAudio
-  | PointAudio
-  | SpotAudio;
+export type Camera = PerspectiveCamera | OrthographicCamera;
+export type Light = AmbientLight | DirectionalLight | PointLight | SpotLight;
+export type AudioEmitter = AmbientAudio | PointAudio | SpotAudio;
+export type SceneComponent = Camera | Light | AudioEmitter;

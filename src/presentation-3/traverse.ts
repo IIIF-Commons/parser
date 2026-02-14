@@ -1,4 +1,4 @@
-import {
+import type {
   Annotation,
   AnnotationCollection,
   AnnotationPage,
@@ -18,7 +18,7 @@ import {
   SpecificResource,
   ResourceProvider,
   StructuralProperties,
-} from '@iiif/presentation-3';
+} from './types';
 import { isSpecificResource } from '../shared/is-specific-resource';
 import { ensureArray } from '../shared/ensure-array';
 import { compose } from '../shared/compose';

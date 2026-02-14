@@ -10,38 +10,13 @@ import {
   PRESENTATION_4_CONTEXT,
 } from './utilities';
 import { upgradeToPresentation4 } from './upgrade';
+import type {
+  NormalizedEntityV4,
+  Presentation4Entities,
+  Presentation4NormalizeResult,
+} from '../presentation-4-normalized/types';
 
-export type NormalizedEntityV4 = {
-  id?: string;
-  type?: string;
-  [key: string]: any;
-};
-
-export type Presentation4Entities = {
-  Collection: Record<string, NormalizedEntityV4>;
-  Manifest: Record<string, NormalizedEntityV4>;
-  Timeline: Record<string, NormalizedEntityV4>;
-  Canvas: Record<string, NormalizedEntityV4>;
-  Scene: Record<string, NormalizedEntityV4>;
-  AnnotationPage: Record<string, NormalizedEntityV4>;
-  AnnotationCollection: Record<string, NormalizedEntityV4>;
-  Annotation: Record<string, NormalizedEntityV4>;
-  ContentResource: Record<string, NormalizedEntityV4>;
-  Range: Record<string, NormalizedEntityV4>;
-  Service: Record<string, NormalizedEntityV4>;
-  Selector: Record<string, NormalizedEntityV4>;
-  Agent: Record<string, NormalizedEntityV4>;
-  Quantity: Record<string, NormalizedEntityV4>;
-  Transform: Record<string, NormalizedEntityV4>;
-};
-
-export type NormalizeResult = {
-  entities: Presentation4Entities;
-  resource: { id: string; type: string };
-  mapping: Record<string, keyof Presentation4Entities | string>;
-  diagnostics: ValidationIssue[];
-  sourceVersion: 2 | 3 | 4 | 'unknown';
-};
+export type NormalizeResult = Presentation4NormalizeResult;
 
 export const defaultEntities: Presentation4Entities = {
   Collection: {},
@@ -81,7 +56,10 @@ export function getDefaultEntities(): Presentation4Entities {
   };
 }
 
-function mergeEntity(existing: NormalizedEntityV4, incoming: NormalizedEntityV4): NormalizedEntityV4 {
+function mergeEntity(
+  existing: NormalizedEntityV4 | Record<string, unknown> | undefined,
+  incoming: Record<string, unknown>
+): NormalizedEntityV4 {
   if (!existing) {
     return incoming;
   }
@@ -110,7 +88,7 @@ function mergeEntity(existing: NormalizedEntityV4, incoming: NormalizedEntityV4)
     }
 
     if (current && typeof current === 'object' && value && typeof value === 'object' && !Array.isArray(current) && !Array.isArray(value)) {
-      merged[key] = mergeEntity(current, value);
+      merged[key] = mergeEntity(current as Record<string, unknown>, value as Record<string, unknown>);
       continue;
     }
 

@@ -1,5 +1,5 @@
-import * as Presentation3 from '@iiif/presentation-3';
-import * as Presentation2 from '@iiif/presentation-2';
+import type * as Presentation3 from '../presentation-3/types';
+import type * as Presentation2 from './types';
 import { imageServiceProfiles, level1Support } from '../shared/image-api-profiles';
 import { Traverse } from './traverse';
 import { ensureArray } from '../shared/ensure-array';
