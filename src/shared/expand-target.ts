@@ -1,4 +1,4 @@
-import type { ExternalWebResource, SpecificResource, W3CAnnotationTarget } from '@iiif/presentation-3';
+import type { ExternalWebResource, SpecificResource, W3CAnnotationTarget } from '../presentation-3/types';
 import { splitCanvasFragment } from './canvas-fragments';
 
 export function expandTargetToSpecificResource(

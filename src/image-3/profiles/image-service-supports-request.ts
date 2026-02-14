@@ -1,4 +1,4 @@
-import { ImageService } from '@iiif/presentation-3';
+import type { ImageService } from '../../presentation-3/types';
 import { ImageServiceImageRequest } from '../types';
 import { supports } from './supports';
 import { ExtraFeature } from './profiles';

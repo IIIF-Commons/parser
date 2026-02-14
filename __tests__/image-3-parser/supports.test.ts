@@ -1,6 +1,6 @@
 // noinspection DuplicatedCode
 
-import { ImageService } from '@iiif/presentation-3';
+import { ImageService } from '../../src/presentation-3/types';
 import {
   imageServiceRequestToString,
   parseImageServiceRequest,

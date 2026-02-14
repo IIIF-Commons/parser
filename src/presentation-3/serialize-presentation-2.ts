@@ -1,14 +1,14 @@
 import { SerializeConfig } from './serialize';
-import {
+import type {
   FragmentSelector,
   InternationalString,
   Reference,
   Selector,
   SpecificResource,
   TechnicalProperties,
-} from '@iiif/presentation-3';
-import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
-import * as Presentation2 from '@iiif/presentation-2';
+} from './types';
+import type { DescriptiveNormalized, LinkingNormalized } from '../presentation-3-normalized/types';
+import type * as Presentation2 from '../presentation-2/types';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
 
 export function languageString2to3(

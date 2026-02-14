@@ -36,6 +36,16 @@
         "default": "./dist/presentation-2.js"
       }
     },
+    "./presentation-2/types": {
+      "require": {
+        "types": "./dist/presentation-2/types.d.cts",
+        "default": "./dist/presentation-2/types.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-2/types.d.ts",
+        "default": "./dist/presentation-2/types.js"
+      }
+    },
     "./presentation-3": {
       "require": {
         "types": "./dist/presentation-3.d.cts",
@@ -46,6 +56,36 @@
         "default": "./dist/presentation-3.js"
       }
     },
+    "./presentation-3/types": {
+      "require": {
+        "types": "./dist/presentation-3/types.d.cts",
+        "default": "./dist/presentation-3/types.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-3/types.d.ts",
+        "default": "./dist/presentation-3/types.js"
+      }
+    },
+    "./presentation-3-normalized": {
+      "require": {
+        "types": "./dist/presentation-3-normalized.d.cts",
+        "default": "./dist/presentation-3-normalized.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-3-normalized.d.ts",
+        "default": "./dist/presentation-3-normalized.js"
+      }
+    },
+    "./presentation-3-normalized/types": {
+      "require": {
+        "types": "./dist/presentation-3-normalized/types.d.cts",
+        "default": "./dist/presentation-3-normalized/types.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-3-normalized/types.d.ts",
+        "default": "./dist/presentation-3-normalized/types.js"
+      }
+    },
     "./presentation-4": {
       "require": {
         "types": "./dist/presentation-4.d.cts",
@@ -54,6 +94,36 @@
       "import": {
         "types": "./dist/presentation-4.d.ts",
         "default": "./dist/presentation-4.js"
+      }
+    },
+    "./presentation-4/types": {
+      "require": {
+        "types": "./dist/presentation-4/types.d.cts",
+        "default": "./dist/presentation-4/types.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-4/types.d.ts",
+        "default": "./dist/presentation-4/types.js"
+      }
+    },
+    "./presentation-4-normalized": {
+      "require": {
+        "types": "./dist/presentation-4-normalized.d.cts",
+        "default": "./dist/presentation-4-normalized.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-4-normalized.d.ts",
+        "default": "./dist/presentation-4-normalized.js"
+      }
+    },
+    "./presentation-4-normalized/types": {
+      "require": {
+        "types": "./dist/presentation-4-normalized/types.d.cts",
+        "default": "./dist/presentation-4-normalized/types.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-4-normalized/types.d.ts",
+        "default": "./dist/presentation-4-normalized/types.js"
       }
     },
     "./strict": {
@@ -97,9 +167,6 @@
     "lint": "publint"
   },
   "dependencies": {
-    "@iiif/presentation-2": "^1.0.4",
-    "@iiif/presentation-3": "^2.2.2",
-    "@iiif/presentation-3-normalized": "^0.9.7",
     "@types/geojson": "^7946.0.10"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
-import { AnnotationCollection, ContentResource, Reference, Selector } from '@iiif/presentation-3';
-import {
+import type { AnnotationCollection, ContentResource, Reference, Selector } from './types';
+import type {
   AnnotationCollectionNormalized,
   AnnotationNormalized,
   AnnotationPageNormalized,
@@ -9,7 +9,7 @@ import {
   RangeNormalized,
   ResourceProviderNormalized,
   ServiceNormalized,
-} from '@iiif/presentation-3-normalized';
+} from '../presentation-3-normalized/types';
 import { resolveIfExists, UNSET, UNWRAP } from './utilities';
 
 export type Field = any[];

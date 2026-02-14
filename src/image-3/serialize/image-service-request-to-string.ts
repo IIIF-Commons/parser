@@ -2,7 +2,7 @@ import { ImageServiceImageRequest } from '../types';
 import { regionParameterToString } from './region-parameter-to-string';
 import { sizeParameterToString } from './size-parameter-to-string';
 import { rotationParameterToString } from './rotation-parameter-to-string';
-import { ImageService } from '@iiif/presentation-3';
+import type { ImageService } from '../../presentation-3/types';
 
 export function imageServiceRequestToString(req: ImageServiceImageRequest, service?: ImageService): string {
   const prefix = req.prefix.startsWith('/') ? req.prefix.substring(1) : req.prefix;

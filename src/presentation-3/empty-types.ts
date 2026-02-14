@@ -1,4 +1,4 @@
-import {
+import type {
   AnnotationNormalized,
   AnnotationPageNormalized,
   CanvasNormalized,
@@ -6,7 +6,7 @@ import {
   ManifestNormalized,
   RangeNormalized,
   ResourceProviderNormalized,
-} from '@iiif/presentation-3-normalized';
+} from '../presentation-3-normalized/types';
 import { _ServiceNormalized } from './serialize';
 import { EMPTY } from './utilities';
 

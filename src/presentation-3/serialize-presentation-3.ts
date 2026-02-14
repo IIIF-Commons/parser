@@ -1,13 +1,13 @@
 import { SerializeConfig } from './serialize';
-import {
+import type {
   ImageService,
   ImageService2,
   ImageService3,
   ResourceProvider,
   TechnicalProperties,
-} from '@iiif/presentation-3';
+} from './types';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
-import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
+import type { DescriptiveNormalized, LinkingNormalized } from '../presentation-3-normalized/types';
 import { HAS_PART, IS_EXTERNAL, PART_OF, UNSET, UNWRAP } from './utilities';
 import { isSpecificResource } from '../shared/is-specific-resource';
 

@@ -1,4 +1,4 @@
-import { ImageService } from '@iiif/presentation-3';
+import type { ImageService } from '../../presentation-3/types';
 import { level1Support, level2Support, onlyLevel0 } from '../profiles/profiles';
 
 export function isImageServiceLevel(level: 0 | 1 | 2, imageService?: ImageService) {

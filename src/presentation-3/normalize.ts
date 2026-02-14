@@ -11,7 +11,7 @@ import type {
   Selector,
   Service,
   SpecificResource,
-} from '@iiif/presentation-3';
+} from './types';
 import type {
   AnnotationPageNormalized,
   CanvasNormalized,
@@ -19,7 +19,7 @@ import type {
   ManifestNormalized,
   RangeNormalized,
   ResourceProviderNormalized,
-} from '@iiif/presentation-3-normalized';
+} from '../presentation-3-normalized/types';
 import { convertPresentation2 } from '../presentation-2';
 import { expandTargetToSpecificResource } from '../shared/expand-target';
 import { isSpecificResource } from '../shared/is-specific-resource';

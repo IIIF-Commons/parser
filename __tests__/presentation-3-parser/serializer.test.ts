@@ -1,5 +1,5 @@
 import { normalize, serialize, serializeConfigPresentation2, serializeConfigPresentation3 } from '../../src';
-import { Collection, Manifest } from '@iiif/presentation-3';
+import { Collection, Manifest } from '../../src/presentation-3/types';
 import hotspot from '../../fixtures/cookbook/0022-linking-with-a-hotspot.json';
 
 describe('serializer', () => {

@@ -1,5 +1,5 @@
 import { Traverse } from '../../src/presentation-3';
-import { Canvas, Manifest } from '@iiif/presentation-3';
+import { Canvas, Manifest } from '../../src/presentation-3/types';
 import accompanying from '../../fixtures/presentation-3/accompanying-canvas.json';
 import hotspot from '../../fixtures/cookbook/0022-linking-with-a-hotspot.json';
 

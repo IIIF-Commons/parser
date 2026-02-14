@@ -1,5 +1,5 @@
 import { imageServiceProfiles } from '../profiles/profiles';
-import { ImageService } from '@iiif/presentation-3';
+import type { ImageService } from '../../presentation-3/types';
 import { getId } from './get-id';
 
 export function isImageService(service: any): service is ImageService {
