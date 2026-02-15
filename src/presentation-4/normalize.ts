@@ -3,6 +3,24 @@ import type {
   Presentation4Entities,
   Presentation4NormalizeResult,
 } from "../presentation-4-normalized/types";
+import {
+  emptyAgent,
+  emptyAnnotation,
+  emptyAnnotationCollection,
+  emptyAnnotationPage,
+  emptyCanvas,
+  emptyCollection,
+  emptyContentResource,
+  emptyManifest,
+  emptyQuantity,
+  emptyRange,
+  emptyScene,
+  emptySelector,
+  emptyService,
+  emptySpecificResource,
+  emptyTimeline,
+  emptyTransform,
+} from "./empty-types";
 import { type TraversalContext, Traverse } from "./traverse";
 import { upgradeToPresentation4 } from "./upgrade";
 import {
@@ -311,6 +329,15 @@ function withId(
   };
 }
 
+function ensureDefaultFields<T, R>(defaultResource: R) {
+  return (resource: T): R => {
+    return {
+      ...defaultResource,
+      ...resource,
+    };
+  };
+}
+
 function recordType(mapping: NormalizeResult["mapping"]) {
   return (forcedType?: string) => (resource: any, _context: TraversalContext) => {
     if (!resource || typeof resource !== "object") {
@@ -370,9 +397,11 @@ function recordSelectorForLoading(entities: Presentation4Entities, mapping: Norm
       parent: context.parent,
       isTopLevel: context.path === "$",
     };
-    entities.Selector[id] = current
-      ? mergeEntities(current as any, resource, mergeContext)
-      : mergeEntities({ id, type: getType(resource) || "Selector" } as any, resource, mergeContext);
+    entities.Selector[id] = (
+      current
+        ? mergeEntities(current as any, resource, mergeContext)
+        : mergeEntities({ id, type: getType(resource) || "Selector" } as any, resource, mergeContext)
+    ) as any;
 
     return resource;
   };
@@ -396,26 +425,71 @@ export function normalize(input: unknown): NormalizeResult {
 
   const traversal = new Traverse(
     {
-      collection: [withId("Collection", diagnostics), map("Collection"), record("Collection")],
-      manifest: [withId("Manifest", diagnostics), map("Manifest"), record("Manifest")],
-      timeline: [withId("Timeline", diagnostics), map("Timeline"), record("Timeline")],
-      canvas: [withId("Canvas", diagnostics), map("Canvas"), record("Canvas")],
-      scene: [withId("Scene", diagnostics), map("Scene"), record("Scene")],
+      collection: [
+        withId("Collection", diagnostics),
+        ensureDefaultFields(emptyCollection),
+        map("Collection"),
+        record("Collection"),
+      ],
+      manifest: [
+        withId("Manifest", diagnostics),
+        ensureDefaultFields(emptyManifest),
+        map("Manifest"),
+        record("Manifest"),
+      ],
+      timeline: [
+        withId("Timeline", diagnostics),
+        ensureDefaultFields(emptyTimeline),
+        map("Timeline"),
+        record("Timeline"),
+      ],
+      canvas: [withId("Canvas", diagnostics), ensureDefaultFields(emptyCanvas), map("Canvas"), record("Canvas")],
+      scene: [withId("Scene", diagnostics), ensureDefaultFields(emptyScene), map("Scene"), record("Scene")],
       annotationCollection: [
         withId("AnnotationCollection", diagnostics),
+        ensureDefaultFields(emptyAnnotationCollection),
         map("AnnotationCollection"),
         record("AnnotationCollection"),
       ],
-      annotationPage: [withId("AnnotationPage", diagnostics), map("AnnotationPage"), record("AnnotationPage")],
-      annotation: [withId("Annotation", diagnostics), map("Annotation"), record("Annotation")],
-      contentResource: [withId("ContentResource", diagnostics), map("ContentResource"), record("ContentResource")],
-      range: [withId("Range", diagnostics), map("Range"), record("Range")],
-      service: [withId("Service", diagnostics), map("Service"), record("Service")],
-      selector: [withId("Selector", diagnostics), recordSelectorForLoading(entities, mapping)],
-      quantity: [withId("Quantity", diagnostics), map("Quantity"), record("Quantity")],
-      transform: [withId("Transform", diagnostics), map("Transform"), record("Transform")],
-      agent: [withId("Agent", diagnostics), map("Agent"), record("Agent")],
-      specificResource: [withId("SpecificResource", diagnostics)],
+      annotationPage: [
+        withId("AnnotationPage", diagnostics),
+        ensureDefaultFields(emptyAnnotationPage),
+        map("AnnotationPage"),
+        record("AnnotationPage"),
+      ],
+      annotation: [
+        withId("Annotation", diagnostics),
+        ensureDefaultFields(emptyAnnotation),
+        map("Annotation"),
+        record("Annotation"),
+      ],
+      contentResource: [
+        withId("ContentResource", diagnostics),
+        ensureDefaultFields(emptyContentResource),
+        map("ContentResource"),
+        record("ContentResource"),
+      ],
+      range: [withId("Range", diagnostics), ensureDefaultFields(emptyRange), map("Range"), record("Range")],
+      service: [withId("Service", diagnostics), ensureDefaultFields(emptyService), map("Service"), record("Service")],
+      selector: [
+        withId("Selector", diagnostics),
+        ensureDefaultFields(emptySelector),
+        recordSelectorForLoading(entities, mapping),
+      ],
+      quantity: [
+        withId("Quantity", diagnostics),
+        ensureDefaultFields(emptyQuantity),
+        map("Quantity"),
+        record("Quantity"),
+      ],
+      transform: [
+        withId("Transform", diagnostics),
+        ensureDefaultFields(emptyTransform),
+        map("Transform"),
+        record("Transform"),
+      ],
+      agent: [withId("Agent", diagnostics), ensureDefaultFields(emptyAgent), map("Agent"), record("Agent")],
+      specificResource: [withId("SpecificResource", diagnostics), ensureDefaultFields(emptySpecificResource)],
     },
     {
       coerceContainerTargetsToSpecificResources: shouldCoerceContainerTargets,
