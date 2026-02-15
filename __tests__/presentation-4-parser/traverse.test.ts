@@ -43,4 +43,36 @@ describe("presentation-4 traverse", () => {
     expect(seen.selector).toBeGreaterThan(0);
     expect(seen.contentResource).toBeGreaterThan(0);
   });
+
+  test("traverses selector on implicit specific resource annotation target", () => {
+    let selectorCount = 0;
+    const traverse = new Traverse({
+      selector: [() => void (selectorCount += 1)],
+    });
+
+    const annotation = {
+      id: "https://example.org/anno/1",
+      type: "Annotation",
+      motivation: ["painting"],
+      target: [
+        {
+          source: {
+            id: "https://example.org/canvas/1",
+            type: "Canvas",
+          },
+          selector: {
+            type: "FragmentSelector",
+            value: "xywh=10,20,30,40",
+          },
+        },
+      ],
+    };
+
+    const traversed = traverse.traverseAnnotation(annotation, undefined, "$.annotation");
+    const target = traversed.target[0];
+
+    expect(target.type).toBe("SpecificResource");
+    expect(target.selector[0].type).toBe("FragmentSelector");
+    expect(selectorCount).toBe(1);
+  });
 });

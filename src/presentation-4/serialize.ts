@@ -1,5 +1,5 @@
-export const UNSET = '__$UNSET$__';
-export const UNWRAP = '__$UNWRAP$__';
+export const UNSET = "__$UNSET$__";
+export const UNWRAP = "__$UNWRAP$__";
 
 export type Field = [string, any];
 
@@ -20,8 +20,8 @@ export type CompatibleStore<T extends string = string> = {
 export type NormalizedEntity = {
   id?: string;
   type?: string;
-  '@id'?: string;
-  '@type'?: string;
+  "@id"?: string;
+  "@type"?: string;
   [key: string]: any;
 };
 
@@ -41,11 +41,14 @@ export type SerializeConfig = {
   [type: string]: Serializer | undefined;
 };
 
-function resolveResource(state: CompatibleStore, value: any): [NormalizedEntity | undefined, NormalizedEntity | undefined] {
+function resolveResource(
+  state: CompatibleStore,
+  value: any
+): [NormalizedEntity | undefined, NormalizedEntity | undefined] {
   if (!value) {
     return [undefined, undefined];
   }
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     const type = state.mapping[value];
     const store = type ? state.entities[type] : undefined;
     if (!type || !store) {
@@ -55,8 +58,10 @@ function resolveResource(state: CompatibleStore, value: any): [NormalizedEntity 
     return [entity, entity];
   }
 
-  const id = value.id || value['@id'];
-  const type = value.type || value['@type'] || state.mapping[id];
+  const id = value.id || value["@id"];
+  const explicitType = value.type || value["@type"];
+  const mappedType = id ? state.mapping[id] : undefined;
+  const type = explicitType && state.entities[explicitType] ? explicitType : mappedType || explicitType;
   const store = type ? state.entities[type] : undefined;
   if (!id || !type || !store) {
     return [undefined, undefined];
@@ -74,16 +79,20 @@ export function serializedFieldsToObject<T>(fields: Field[] | [typeof UNWRAP, an
 
   const object: any = {};
   for (const [key, value] of fields as Field[]) {
-    if (value !== UNSET && typeof value !== 'undefined' && value !== null) {
+    if (value !== UNSET && typeof value !== "undefined" && value !== null) {
       object[key] = value;
     }
   }
   return object as T;
 }
 
-export function serialize<Return>(state: CompatibleStore, subject: { id: string; type: string }, config: SerializeConfig): Return {
+export function serialize<Return>(
+  state: CompatibleStore,
+  subject: { id: string; type: string },
+  config: SerializeConfig
+): Return {
   if (!subject.type || !subject.id) {
-    throw new Error('Unknown entity');
+    throw new Error("Unknown entity");
   }
 
   if (!config[subject.type]) {
@@ -95,12 +104,17 @@ export function serialize<Return>(state: CompatibleStore, subject: { id: string;
       throw new Error(`Circular reference at ${sub.type}(${sub.id})`);
     }
 
-    const generator = config[sub.type];
+    const mappedType = sub.id ? state.mapping[sub.id] : undefined;
+    const serializerType = config[sub.type] ? sub.type : mappedType && config[mappedType] ? mappedType : sub.type;
+    const generator = config[serializerType];
     if (!generator) {
       return UNSET;
     }
 
-    const [resource, full] = resolveResource(state, sub);
+    const [resource, full] = resolveResource(
+      state,
+      serializerType === sub.type ? sub : { ...sub, type: serializerType }
+    );
     if (!resource) {
       return UNSET;
     }
@@ -118,12 +132,12 @@ export function serialize<Return>(state: CompatibleStore, subject: { id: string;
 
       if (Array.isArray(request)) {
         next = request.map((item) => {
-          if (!item || typeof item !== 'object') {
+          if (!item || typeof item !== "object") {
             return item;
           }
           return flatten(item, sub, depth + 1);
         });
-      } else if (request && typeof request === 'object') {
+      } else if (request && typeof request === "object") {
         next = flatten(request, sub, depth + 1);
       } else if (request && request !== UNSET) {
         next = request;
