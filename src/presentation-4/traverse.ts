@@ -1,8 +1,10 @@
+import { splitCanvasFragment } from "../shared/canvas-fragments";
 import { compose } from "../shared/compose";
 import { ensureArray } from "../shared/ensure-array";
 import {
   annotationTypes,
   containerTypes,
+  getId,
   getType,
   identifyResourceType,
   isQuantity,
@@ -41,6 +43,7 @@ export type TraversalMap = {
 
 export type TraverseOptions = {
   allowUndefinedReturn: boolean;
+  coerceContainerTargetsToSpecificResources: boolean;
 };
 
 type UnknownTraversalArgs = {
@@ -92,6 +95,7 @@ export class Traverse {
     };
     this.options = {
       allowUndefinedReturn: false,
+      coerceContainerTargetsToSpecificResources: false,
       ...options,
     };
   }
@@ -152,12 +156,22 @@ export class Traverse {
       resource.partOf = ensureArray(resource.partOf).map((item: any, index: number) =>
         typeof item === "string"
           ? item
-          : this.traverseUnknown(item, { parent: resource, path: `${path}.partOf[${index}]` })
+          : this.traverseUnknown(item, {
+              parent: resource,
+              path: `${path}.partOf[${index}]`,
+            })
       );
     }
 
     for (const key of linkedObjectKeys) {
       if (resource[key]) {
+        if (key === "start" && this.options.coerceContainerTargetsToSpecificResources) {
+          const specificResource = this.toSpecificResource(resource[key], "Canvas");
+          if (specificResource) {
+            resource[key] = this.traverseSpecificResource(specificResource, "Canvas", resource, `${path}.${key}`);
+            continue;
+          }
+        }
         resource[key] = this.traverseUnknown(resource[key], {
           parent: resource,
           path: `${path}.${key}`,
@@ -316,6 +330,17 @@ export class Traverse {
         if (isSpecificResource(target)) {
           return this.traverseSpecificResource(target, undefined, annotation, `${path}.target[${index}]`);
         }
+        if (this.options.coerceContainerTargetsToSpecificResources) {
+          const specificResource = this.toSpecificResource(target, this.getContainerTypeHint(target, "Canvas"));
+          if (specificResource) {
+            return this.traverseSpecificResource(
+              specificResource,
+              this.getContainerTypeHint(target, "Canvas"),
+              annotation,
+              `${path}.target[${index}]`
+            );
+          }
+        }
         if (typeof target === "string") {
           return target;
         }
@@ -369,14 +394,14 @@ export class Traverse {
         typeof sourceItem === "string"
           ? sourceItem
           : this.traverseUnknown(sourceItem, {
-              parent: specificResource,
+              parent,
               path: `${path}.source[${index}]`,
               typeHint: typeHint || "ContentResource",
             })
       );
     } else if (source && typeof source === "object") {
       nextSource = this.traverseUnknown(source, {
-        parent: specificResource,
+        parent,
         path: `${path}.source`,
         typeHint: typeHint || "ContentResource",
       });
@@ -464,6 +489,13 @@ export class Traverse {
         if (isSpecificResource(item)) {
           return this.traverseSpecificResource(item, "Canvas", range, `${path}.items[${index}]`);
         }
+        if (this.options.coerceContainerTargetsToSpecificResources) {
+          const typeHint = this.getContainerTypeHint(item, "Canvas");
+          const specificResource = this.toSpecificResource(item, typeHint);
+          if (specificResource) {
+            return this.traverseSpecificResource(specificResource, typeHint, range, `${path}.items[${index}]`);
+          }
+        }
         return this.traverseUnknown(item, {
           parent: range,
           path: `${path}.items[${index}]`,
@@ -494,6 +526,113 @@ export class Traverse {
       }
       return returnValue;
     }, object);
+  }
+
+  private getContainerTypeHint(resource: any, fallbackType = "Canvas"): string {
+    const type = getType(resource);
+    if (type && containerTypes.has(type)) {
+      return type;
+    }
+    return fallbackType;
+  }
+
+  private toSpecificResource(target: any, typeHint = "Canvas"): any | undefined {
+    if (Array.isArray(target) || target === null || typeof target === "undefined") {
+      return undefined;
+    }
+
+    if (typeof target === "string") {
+      const [id, fragment] = splitCanvasFragment(target);
+      return {
+        type: "SpecificResource",
+        source: {
+          id,
+          type: typeHint,
+        },
+        selector: fragment
+          ? {
+              type: "FragmentSelector",
+              value: fragment,
+            }
+          : undefined,
+      };
+    }
+
+    if (typeof target !== "object") {
+      return undefined;
+    }
+
+    if (isSpecificResource(target)) {
+      const normalized = { ...target };
+      if (typeof normalized.source === "string") {
+        normalized.source = {
+          id: normalized.source,
+          type: typeHint,
+        };
+      } else if (normalized.source && typeof normalized.source === "object" && !Array.isArray(normalized.source)) {
+        if (!getType(normalized.source)) {
+          normalized.source = {
+            ...normalized.source,
+            type: typeHint,
+          };
+        }
+      } else if (getId(normalized)) {
+        normalized.source = {
+          id: getId(normalized),
+          type: typeHint,
+        };
+      }
+
+      if (
+        normalized.source &&
+        typeof normalized.source === "object" &&
+        !Array.isArray(normalized.source) &&
+        typeof normalized.source.id === "string"
+      ) {
+        const [id, fragment] = splitCanvasFragment(normalized.source.id);
+        normalized.source = {
+          ...normalized.source,
+          id,
+        };
+        if (!normalized.selector && fragment) {
+          normalized.selector = {
+            type: "FragmentSelector",
+            value: fragment,
+          };
+        }
+      }
+
+      return normalized;
+    }
+
+    const targetType = getType(target);
+    if (targetType && !containerTypes.has(targetType)) {
+      return undefined;
+    }
+
+    const targetId = getId(target);
+    if (!targetId) {
+      return undefined;
+    }
+
+    const source: any = {
+      ...target,
+      id: targetId,
+      type: targetType || typeHint,
+    };
+    const [id, fragment] = splitCanvasFragment(source.id);
+    source.id = id;
+
+    return {
+      type: "SpecificResource",
+      source,
+      selector: fragment
+        ? {
+            type: "FragmentSelector",
+            value: fragment,
+          }
+        : undefined,
+    };
   }
 
   traverseUnknown(resource: any, { parent, path, typeHint }: UnknownTraversalArgs): any {

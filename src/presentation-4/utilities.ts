@@ -2,6 +2,10 @@ export const EMPTY_ARRAY = Object.freeze([]) as readonly never[];
 export const EMPTY_OBJECT = Object.freeze({}) as Readonly<Record<string, never>>;
 export const PRESENTATION_4_CONTEXT = "http://iiif.io/api/presentation/4/context.json";
 export const PRESENTATION_3_CONTEXT = "http://iiif.io/api/presentation/3/context.json";
+export const WILDCARD = Object.freeze({});
+export const HAS_PART = "iiif-parser:hasPart";
+export const PART_OF = "iiif-parser:partOf";
+export const EMPTY = Object.freeze([]);
 
 export type ValidationSeverity = "error" | "warning" | "info";
 
@@ -37,6 +41,16 @@ export function createValidationReport(issues: ValidationIssue[]): ValidationRep
     issues,
     stats,
   };
+}
+
+export function isWildcard(object: any) {
+  if (object === WILDCARD || (object && typeof object === "object" && Object.keys(object).length === 0)) {
+    return true;
+  }
+  for (const i in object) {
+    return false;
+  }
+  return true;
 }
 
 export function isPlainObject(value: unknown): value is Record<string, any> {
