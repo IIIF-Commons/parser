@@ -1,4 +1,5 @@
 import { Prettify } from '../utility';
+import type { GeoJSON } from '../../../../../shared/geojson';
 
 /**
  * Nav place
@@ -15,5 +16,5 @@ export interface NavPlaceExtension {
    *
    * See: https://iiif.io/api/extension/navplace/
    */
-  navPlace?: Prettify<import('geojson').GeoJSON>;
+  navPlace?: Prettify<GeoJSON>;
 }

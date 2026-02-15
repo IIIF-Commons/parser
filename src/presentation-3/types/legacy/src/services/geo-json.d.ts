@@ -1,5 +1,5 @@
 import { Prettify } from '../utility';
-
+import type { GeoJSON } from '../../../../../shared/geojson';
 export type GeoJsonService = Prettify<
   {
     '@context': 'http://geojson.org/geojson-ld/geojson-context.jsonld';
@@ -12,5 +12,5 @@ export type GeoJsonService = Prettify<
         id: string;
       }
   ) &
-    Partial<import('geojson').GeoJSON>
+    Partial<GeoJSON>
 >;

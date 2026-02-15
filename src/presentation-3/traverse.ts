@@ -19,6 +19,7 @@ import type {
   ResourceProvider,
   StructuralProperties,
 } from './types';
+import type { GeoJSON } from '../shared/geojson';
 import { isSpecificResource } from '../shared/is-specific-resource';
 import { ensureArray } from '../shared/ensure-array';
 import { compose } from '../shared/compose';
@@ -54,7 +55,7 @@ export type TraversalMap = {
   service?: Array<Traversal<Service>>;
   agent?: Array<Traversal<ResourceProvider>>;
   specificResource?: Array<Traversal<SpecificResource>>;
-  geoJson?: Array<Traversal<import('geojson').GeoJSON>>;
+  geoJson?: Array<Traversal<GeoJSON>>;
 };
 
 export type TraverseOptions = {
@@ -240,8 +241,8 @@ export class Traverse {
     );
   }
 
-  traverseGeoJson(geoJson: import('geojson').GeoJSON, parent?: any): import('geojson').GeoJSON {
-    return this.traverseType<import('geojson').GeoJSON>(geoJson, { parent }, this.traversals.geoJson);
+  traverseGeoJson(geoJson: GeoJSON, parent?: any): GeoJSON {
+    return this.traverseType<GeoJSON>(geoJson, { parent }, this.traversals.geoJson);
   }
 
   traverseNavPlace(resource: any /*NavPlaceExtension*/) {
@@ -272,7 +273,7 @@ export class Traverse {
     this.traverseDescriptive.bind(this),
     this.traverseLinkedCanvases.bind(this),
     this.traverseManifestStructures.bind(this),
-    this.traverseInlineAnnotationPages.bind(this),
+    this.traverseInlineAnnotationPages.bind(this)
   );
 
   traverseManifest(manifest: Manifest, parent?: any): Manifest {

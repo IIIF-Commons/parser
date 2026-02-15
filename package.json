@@ -162,16 +162,13 @@
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
     "test": "vitest",
+    "test:types": "vitest run --typecheck --typecheck.only",
     "update-cookbook-v4": "node scripts/update-cookbook-v4.mjs",
     "prepack": "tsdown && tsdown --config tsdown.umd.ts",
     "lint": "publint"
   },
-  "dependencies": {
-    "@types/geojson": "^7946.0.10"
-  },
   "devDependencies": {
     "@types/node": "^18",
-    "@hyperion-framework/validator": "^1.1.0",
     "@happy-dom/global-registrator": "^16.3.0",
     "prettier": "^3.2.5",
     "tslib": "^2.6.2",
