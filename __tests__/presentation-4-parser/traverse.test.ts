@@ -1,16 +1,16 @@
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
-import { cwd } from 'node:process';
-import { describe, expect, test } from 'vitest';
-import { Traverse } from '../../src/presentation-4';
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { cwd } from "node:process";
+import { describe, expect, test } from "vitest";
+import { Traverse } from "../../src/presentation-4";
 
-describe('presentation-4 traverse', () => {
-  test('dispatches callbacks across mixed resource types', () => {
+describe("presentation-4 traverse", () => {
+  test("dispatches callbacks across mixed resource types", () => {
     const fixture = JSON.parse(
-      readFileSync(join(cwd(), 'fixtures/presentation-4/21-scene-within-canvas.json'), 'utf8')
+      readFileSync(join(cwd(), "fixtures/presentation-4/21-scene-within-canvas.json"), "utf8")
     );
 
-    const seen: Record<string, number> = {
+    const seen = {
       manifest: 0,
       scene: 0,
       canvas: 0,
@@ -32,7 +32,7 @@ describe('presentation-4 traverse', () => {
       contentResource: [() => void (seen.contentResource += 1)],
     });
 
-    traverse.traverseUnknown(fixture, { path: '$' });
+    traverse.traverseUnknown(fixture, { path: "$" });
 
     expect(seen.manifest).toBeGreaterThan(0);
     expect(seen.scene).toBeGreaterThan(0);
