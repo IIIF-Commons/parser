@@ -1,4 +1,4 @@
-import type { TechnicalProperties } from "@iiif/presentation-3";
+import type { TechnicalProperties } from "../types";
 
 const required = {
   Collection: ["id", "type"],

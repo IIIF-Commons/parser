@@ -1,12 +1,12 @@
-import { CompatibleStore, NormalizedEntity } from './serialize';
-import { toRef } from '../shared/to-ref';
+import { CompatibleStore, NormalizedEntity } from "./serialize";
+import { toRef } from "../shared/to-ref";
 
 export const WILDCARD = {};
-export const HAS_PART = 'iiif-parser:hasPart';
-export const PART_OF = 'iiif-parser:partOf';
-export const IS_EXTERNAL = 'iiif-parser:isExternal';
-export const UNSET = '__$UNSET$__';
-export const UNWRAP = '__$UNWRAP$__';
+export const HAS_PART = "iiif-parser:hasPart";
+export const PART_OF = "iiif-parser:partOf";
+export const IS_EXTERNAL = "iiif-parser:isExternal";
+export const UNSET = "__$UNSET$__";
+export const UNWRAP = "__$UNWRAP$__";
 export const EMPTY = [];
 
 // Prevent accidental mutation
@@ -24,11 +24,11 @@ export function isWildcard(object: any) {
 }
 
 export function frameResource(resource: any, framing: any) {
-  if (framing && framing['@explicit']) {
+  if (framing && framing["@explicit"]) {
     const newEntity: any = {};
     const keys = Object.keys(framing);
     for (const key of keys) {
-      if (key === PART_OF || key === '@explicit') {
+      if (key === PART_OF || key === "@explicit") {
         continue;
       }
       if (isWildcard(framing[key])) {
@@ -56,7 +56,12 @@ export function resolveIfExists<T extends NormalizedEntity>(
   const request = state.requests[ref.id];
   // Return the resource.
   const resourceType = ref.type || state.mapping[ref.id];
-  if (!resourceType || (request && request.resourceUri && (!state.entities[resourceType] || !state.entities[resourceType]![request.resourceUri]))) {
+  if (
+    !resourceType ||
+    (request &&
+      request.resourceUri &&
+      (!state.entities[resourceType] || !state.entities[resourceType]![request.resourceUri]))
+  ) {
     // Continue refetching resource, this is an invalid state.
     return [undefined, undefined];
   }

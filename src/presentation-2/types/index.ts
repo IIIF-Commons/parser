@@ -1,6 +1,6 @@
-export type * from './legacy/index';
+export type * from "./legacy/index";
 
-import { createPresentationHelpers, type ResourceSpecs } from '../../presentation-shared/helpers/create-helpers';
+import { createPresentationHelpers, type ResourceSpecs } from "../../presentation-shared/helpers/create-helpers";
 import type {
   Annotation,
   AnnotationList,
@@ -12,9 +12,9 @@ import type {
   Manifest,
   Range,
   Sequence,
-} from './legacy/index';
+} from "./legacy/index";
 
-export type P2ImageResourceLike = Extract<ContentResource, { '@type': 'dctypes:Image' }>;
+export type P2ImageResourceLike = Extract<ContentResource, { "@type": "dctypes:Image" }>;
 
 export type Presentation2HelperTypes = {
   Collection: Collection;
@@ -31,20 +31,20 @@ export type Presentation2HelperTypes = {
 };
 
 const presentation2Specs: ResourceSpecs<Presentation2HelperTypes> = {
-  Collection: { type: 'sc:Collection', aliases: ['Collection'] },
-  Manifest: { type: 'sc:Manifest', aliases: ['Manifest'] },
-  Canvas: { type: 'sc:Canvas', aliases: ['Canvas'] },
-  AnnotationList: { type: 'sc:AnnotationList', aliases: ['AnnotationPage'] },
-  Annotation: { type: 'oa:Annotation', aliases: ['Annotation'] },
-  Range: { type: 'sc:Range', aliases: ['Range'] },
-  Layer: { type: 'sc:Layer', aliases: ['AnnotationCollection'] },
-  Sequence: { type: 'sc:Sequence' },
-  Choice: { type: 'oa:Choice', aliases: ['Choice'] },
+  Collection: { type: "sc:Collection", aliases: ["Collection"] },
+  Manifest: { type: "sc:Manifest", aliases: ["Manifest"] },
+  Canvas: { type: "sc:Canvas", aliases: ["Canvas"] },
+  AnnotationList: { type: "sc:AnnotationList", aliases: ["AnnotationPage"] },
+  Annotation: { type: "oa:Annotation", aliases: ["Annotation"] },
+  Range: { type: "sc:Range", aliases: ["Range"] },
+  Layer: { type: "sc:Layer", aliases: ["AnnotationCollection"] },
+  Sequence: { type: "sc:Sequence" },
+  Choice: { type: "oa:Choice", aliases: ["Choice"] },
   ContentResource: {
-    type: 'ContentResource',
-    aliases: ['dctypes:Image', 'dctypes:Text', 'dctypes:Sound', 'cnt:ContentAsText', 'oa:SpecificResource'],
+    type: "ContentResource",
+    aliases: ["dctypes:Image", "dctypes:Text", "dctypes:Sound", "cnt:ContentAsText", "oa:SpecificResource"],
   },
-  Image: { type: 'dctypes:Image', aliases: ['Image'] },
+  Image: { type: "dctypes:Image", aliases: ["Image"] },
 };
 
 const presentation2Helpers = createPresentationHelpers(presentation2Specs);

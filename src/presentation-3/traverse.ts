@@ -18,24 +18,24 @@ import type {
   SpecificResource,
   ResourceProvider,
   StructuralProperties,
-} from './types';
-import type { GeoJSON } from '../shared/geojson';
-import { isSpecificResource } from '../shared/is-specific-resource';
-import { ensureArray } from '../shared/ensure-array';
-import { compose } from '../shared/compose';
+} from "./types";
+import type { GeoJSON } from "../shared/geojson";
+import { isSpecificResource } from "../shared/is-specific-resource";
+import { ensureArray } from "../shared/ensure-array";
+import { compose } from "../shared/compose";
 
 export const types = [
-  'Collection',
-  'Manifest',
-  'Canvas',
-  'AnnotationPage',
-  'AnnotationCollection',
-  'Annotation',
-  'ContentResource',
-  'Range',
-  'Service',
-  'Selector',
-  'Agent',
+  "Collection",
+  "Manifest",
+  "Canvas",
+  "AnnotationPage",
+  "AnnotationCollection",
+  "Annotation",
+  "ContentResource",
+  "Range",
+  "Service",
+  "Selector",
+  "Agent",
 ];
 
 export type TraversalContext = { parent?: any };
@@ -63,20 +63,20 @@ export type TraverseOptions = {
 };
 
 export function identifyResource(resource: any, typeHint?: string): string {
-  if (typeof resource === 'undefined' || resource === null) {
-    throw new Error('Null or undefined is not a valid entity.');
+  if (typeof resource === "undefined" || resource === null) {
+    throw new Error("Null or undefined is not a valid entity.");
   }
   if (Array.isArray(resource)) {
-    throw new Error('Array is not a valid entity');
+    throw new Error("Array is not a valid entity");
   }
-  if (typeof resource !== 'object') {
+  if (typeof resource !== "object") {
     if (typeHint) {
       return typeHint;
     }
     throw new Error(`${typeof resource} is not a valid entity`);
   }
 
-  if (typeof resource!.type === 'string') {
+  if (typeof resource!.type === "string") {
     const hasType = types.indexOf(resource.type);
     if (hasType !== -1) {
       return types[hasType]!;
@@ -84,10 +84,10 @@ export function identifyResource(resource: any, typeHint?: string): string {
   }
 
   if (resource!.profile) {
-    return 'Service';
+    return "Service";
   }
 
-  throw new Error('Resource type is not known');
+  throw new Error("Resource type is not known");
 }
 
 export class Traverse {
@@ -173,20 +173,20 @@ export class Traverse {
     if (resource.partOf) {
       // Array<ContentResource | Canvas | AnnotationCollection>
       (resource as any).partOf = resource.partOf.map((partOf) => {
-        if (typeof partOf === 'string' || !partOf.type) {
+        if (typeof partOf === "string" || !partOf.type) {
           return this.traverseType(partOf as ContentResource, { parent: resource }, this.traversals.contentResource);
         }
-        if (partOf.type === 'Canvas') {
+        if (partOf.type === "Canvas") {
           return this.traverseType(partOf as Canvas, { parent: resource }, this.traversals.canvas);
         }
-        if (partOf.type === 'AnnotationCollection') {
+        if (partOf.type === "AnnotationCollection") {
           return this.traverseType(
             partOf as AnnotationCollection,
             { parent: resource },
             this.traversals.annotationCollection
           );
         }
-        if (partOf.type === 'Collection') {
+        if (partOf.type === "Collection") {
           return this.traverseType(partOf as Collection, { parent: resource }, this.traversals.collection);
         }
         return this.traverseType(partOf as ContentResource, { parent: resource }, this.traversals.contentResource);
@@ -194,7 +194,7 @@ export class Traverse {
     }
     if (resource.start) {
       if (isSpecificResource(resource.start)) {
-        resource.start = this.traverseSpecificResource(resource.start, 'Canvas', resource) as any;
+        resource.start = this.traverseSpecificResource(resource.start, "Canvas", resource) as any;
       } else {
         // The spec says this can be a "partial canvas" causing errors with the types.
         resource.start = this.traverseType(resource.start as any, { parent: resource }, this.traversals.canvas);
@@ -217,7 +217,7 @@ export class Traverse {
   traverseCollectionItems<T extends StructuralProperties<any>>(collection: T): T {
     if (collection.items) {
       collection.items.map((collectionOrManifest: Manifest | Collection) => {
-        if (collectionOrManifest.type === 'Collection') {
+        if (collectionOrManifest.type === "Collection") {
           return this.traverseCollection(collectionOrManifest as Collection);
         }
         return this.traverseManifest(collectionOrManifest as Manifest);
@@ -289,7 +289,7 @@ export class Traverse {
   }
 
   traverseInlineAnnotationPages<T extends Manifest | Canvas | Range | string>(resource: T): T {
-    if (typeof resource === 'string' || !resource) {
+    if (typeof resource === "string" || !resource) {
       return resource;
     }
     if (resource.annotations) {
@@ -372,7 +372,7 @@ export class Traverse {
   }
 
   traverseContentResourceLinking(contentResourceJson: ContentResource): ContentResource {
-    if (typeof contentResourceJson === 'string' || !contentResourceJson) {
+    if (typeof contentResourceJson === "string" || !contentResourceJson) {
       return contentResourceJson;
     }
     if (contentResourceJson && (contentResourceJson as IIIFExternalWebResource)!.service) {
@@ -385,14 +385,14 @@ export class Traverse {
   }
 
   traverseContentResource(contentResourceJson: ContentResource, parent?: any): ContentResource {
-    if ((contentResourceJson as any).type === 'Choice') {
+    if ((contentResourceJson as any).type === "Choice") {
       (contentResourceJson as any).items = (contentResourceJson as any).items.map((choiceItem: ContentResource) => {
         return this.traverseContentResource(choiceItem, contentResourceJson);
       });
     }
 
     if (isSpecificResource(contentResourceJson)) {
-      return this.traverseSpecificResource(contentResourceJson, 'ContentResource');
+      return this.traverseSpecificResource(contentResourceJson, "ContentResource");
     }
 
     return this.traverseType<ContentResource>(
@@ -407,17 +407,17 @@ export class Traverse {
 
   traverseSpecificResource(specificResource: SpecificResource, typeHint?: string, parent?: any): SpecificResource {
     let source = specificResource.source;
-    if (typeof specificResource.source === 'string') {
-      source = { id: specificResource.source, type: typeHint || 'unknown' };
+    if (typeof specificResource.source === "string") {
+      source = { id: specificResource.source, type: typeHint || "unknown" };
     }
 
     return this.traverseType<SpecificResource>(
       {
         ...specificResource,
         source:
-          typeHint === 'Canvas' || source.type === 'Canvas'
+          typeHint === "Canvas" || source.type === "Canvas"
             ? this.traverseType(source, { parent }, this.traversals.canvas)
-            : typeHint === 'ContentResource'
+            : typeHint === "ContentResource"
               ? this.traverseContentResource(source, { parent })
               : this.traverseUnknown(source, { parent, typeHint }),
       },
@@ -429,14 +429,14 @@ export class Traverse {
   traverseRangeRanges(range: Range): Range {
     if (range.items) {
       range.items = range.items.map((rangeOrManifest: RangeItems) => {
-        if (typeof rangeOrManifest === 'string') {
-          return this.traverseCanvas({ id: rangeOrManifest, type: 'Canvas' }, range);
+        if (typeof rangeOrManifest === "string") {
+          return this.traverseCanvas({ id: rangeOrManifest, type: "Canvas" }, range);
         }
         if (isSpecificResource(rangeOrManifest)) {
-          return this.traverseSpecificResource(rangeOrManifest, 'Canvas', range);
+          return this.traverseSpecificResource(rangeOrManifest, "Canvas", range);
         }
         // This is a non-standard case.
-        if ((rangeOrManifest as any).type === 'Manifest') {
+        if ((rangeOrManifest as any).type === "Manifest") {
           return this.traverseManifest(rangeOrManifest as any, range) as any as RangeItems;
         }
         return this.traverseRange(rangeOrManifest as Range, range);
@@ -468,7 +468,7 @@ export class Traverse {
   traverseType<T>(object: T, context: TraversalContext, traversals: Array<Traversal<T>>): T {
     return traversals.reduce((acc: T, traversal: Traversal<T>): T => {
       const returnValue = traversal(acc, context);
-      if (typeof returnValue === 'undefined' && !this.options.allowUndefinedReturn) {
+      if (typeof returnValue === "undefined" && !this.options.allowUndefinedReturn) {
         return acc;
       }
       return returnValue;
@@ -499,23 +499,23 @@ export class Traverse {
     const type = identifyResource(resource, typeHint);
 
     switch (type) {
-      case 'Collection':
+      case "Collection":
         return this.traverseCollection(resource as Collection, parent);
-      case 'Manifest':
+      case "Manifest":
         return this.traverseManifest(resource as Manifest, parent);
-      case 'Canvas':
+      case "Canvas":
         return this.traverseCanvas(resource as Canvas, parent);
-      case 'AnnotationPage':
+      case "AnnotationPage":
         return this.traverseAnnotationPage(resource as AnnotationPage, parent);
-      case 'Annotation':
+      case "Annotation":
         return this.traverseAnnotation(resource as Annotation, parent);
-      case 'ContentResource':
+      case "ContentResource":
         return this.traverseContentResource(resource as ContentResource, parent);
-      case 'Range':
+      case "Range":
         return this.traverseRange(resource as Range, parent);
-      case 'Service':
+      case "Service":
         return this.traverseService(resource as Service, parent);
-      case 'Agent':
+      case "Agent":
         return this.traverseAgent(resource as ResourceProvider, parent);
       default: {
         throw new Error(`Unknown or unsupported resource type of ${type}`);

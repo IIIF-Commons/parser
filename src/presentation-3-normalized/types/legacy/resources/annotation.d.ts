@@ -11,9 +11,9 @@ import {
   TechnicalProperties,
   OmitProperties,
   SomeRequired,
-} from '../../../../presentation-3/types';
-import { DescriptiveNormalized } from '../iiif/descriptive';
-import { LinkingNormalized } from '../iiif/linking';
+} from "../../../../presentation-3/types";
+import { DescriptiveNormalized } from "../iiif/descriptive";
+import { LinkingNormalized } from "../iiif/linking";
 
 export declare type CreatorNormalized = string[] | Agent[];
 
@@ -37,16 +37,17 @@ export declare type OtherPropertiesNormalized = {
 
 export declare type AnnotationW3cNormalised = JsonLDContext &
   Partial<OtherPropertiesNormalized> & {
-    body: Array<Reference<'ContentResource'>>;
+    body: Array<Reference<"ContentResource">>;
     bodyValue?: string | null;
-    target: Array<Reference<'ContentResource'>>;
+    target: Array<Reference<"ContentResource">>;
     stylesheet?: Stylesheet | null;
   };
 
 export interface AnnotationNormalized
-  extends SomeRequired<OmitProperties<TechnicalProperties, AnnotationOmittedTechnical>, 'id' | 'type'>,
+  extends
+    SomeRequired<OmitProperties<TechnicalProperties, AnnotationOmittedTechnical>, "id" | "type">,
     Partial<OmitProperties<DescriptiveNormalized, AnnotationOmittedDescriptive>>,
     Partial<OmitProperties<LinkingNormalized, AnnotationOmittedLinking>>,
     AnnotationW3cNormalised {
-  type: 'Annotation';
+  type: "Annotation";
 }

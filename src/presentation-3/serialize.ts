@@ -1,4 +1,4 @@
-import type { AnnotationCollection, ContentResource, Reference, Selector } from './types';
+import type { AnnotationCollection, ContentResource, Reference, Selector } from "./types";
 import type {
   AnnotationCollectionNormalized,
   AnnotationNormalized,
@@ -9,8 +9,8 @@ import type {
   RangeNormalized,
   ResourceProviderNormalized,
   ServiceNormalized,
-} from '../presentation-3-normalized/types';
-import { resolveIfExists, UNSET, UNWRAP } from './utilities';
+} from "../presentation-3-normalized/types";
+import { resolveIfExists, UNSET, UNWRAP } from "./utilities";
 
 export type Field = any[];
 
@@ -43,7 +43,7 @@ export type NormalizedEntity =
   | _ServiceNormalized
   | Selector
   | ResourceProviderNormalized
-  | { id?: string; '@id'?: string; type?: string; '@type'?: string; [key: string]: any };
+  | { id?: string; "@id"?: string; type?: string; "@type"?: string; [key: string]: any };
 
 type SerializerContext = {
   isTopLevel?: boolean;
@@ -78,7 +78,7 @@ export function serializedFieldsToObject<T>(fields: Field[] | [string]): T {
     if (key === UNWRAP && value !== UNSET) {
       return value as T;
     }
-    if (value !== UNSET && typeof value !== 'undefined' && value !== null) {
+    if (value !== UNSET && typeof value !== "undefined" && value !== null) {
       object[key] = value;
     }
   }
@@ -88,7 +88,7 @@ export function serializedFieldsToObject<T>(fields: Field[] | [string]): T {
 
 export function serialize<Return>(state: CompatibleStore, subject: Reference, config: SerializeConfig): Return {
   if (!subject.type || !subject.id) {
-    throw new Error('Unknown entity');
+    throw new Error("Unknown entity");
   }
 
   if (!config[subject.type as keyof SerializeConfig]) {
@@ -101,7 +101,7 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
       return UNSET;
     }
     if (depth > 20) {
-      throw new Error('Circular reference: ' + sub.id + ' ' + sub.type);
+      throw new Error("Circular reference: " + sub.id + " " + sub.type);
     }
     const [resource, fullResource] =
       resolveIfExists(state, sub.type ? sub : sub.id, parent) || (sub.id && sub.type ? sub : null);

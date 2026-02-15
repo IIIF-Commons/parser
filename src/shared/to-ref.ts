@@ -1,14 +1,14 @@
-import type { Reference } from '../presentation-3/types';
-import { isSpecificResource } from './is-specific-resource';
+import type { Reference } from "../presentation-3/types";
+import { isSpecificResource } from "./is-specific-resource";
 
 export function toRef<T extends string = any>(reference: any, _typeHint?: T): Reference<T> | undefined {
-  const type = (_typeHint || 'unknown') as T;
+  const type = (_typeHint || "unknown") as T;
 
   if (!reference) {
     return undefined;
   }
 
-  if (typeof reference === 'string') {
+  if (typeof reference === "string") {
     return { id: reference, type };
   }
 
@@ -16,11 +16,11 @@ export function toRef<T extends string = any>(reference: any, _typeHint?: T): Re
     return toRef(reference.source, _typeHint);
   }
 
-  let _type = type && type !== 'unknown' ? type : (reference as any).type || (reference as any)['@type'];
-  const _id = (reference as any).id || (reference as any)['@id'];
+  let _type = type && type !== "unknown" ? type : (reference as any).type || (reference as any)["@type"];
+  const _id = (reference as any).id || (reference as any)["@id"];
 
-  if (_type && _type.indexOf(':') !== -1) {
-    _type = _type.split(':').pop();
+  if (_type && _type.indexOf(":") !== -1) {
+    _type = _type.split(":").pop();
   }
 
   if (_id && _type) {

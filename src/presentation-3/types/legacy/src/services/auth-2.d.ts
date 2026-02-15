@@ -1,28 +1,28 @@
 // Based on IIIF Auth v2.0
 // https://iiif.io/api/auth/2.0/
 
-import { InternationalString } from '../iiif/descriptive';
+import { InternationalString } from "../iiif/descriptive";
 
 /**
  * The user will be required to visit the user interface of an external authentication system
  */
-type Active = 'active';
+type Active = "active";
 
 /**
  * The user will not be required to interact with an authentication system, the client is expected to use the access service automatically.
  */
-type Kiosk = 'kiosk';
+type Kiosk = "kiosk";
 
 /**
  * The user is expected to have already acquired the authorizing aspect, and no access service will be used.
  */
-type External = 'external';
+type External = "external";
 
 export type AuthAccessService2 = AuthAccessService2_Active | AuthAccessService2_Kiosk | AuthAccessService2_External;
 
 interface AuthAccessService2_Common {
   id: string;
-  type: 'AuthAccessService2';
+  type: "AuthAccessService2";
 
   // This wasn't clear in the spec. It looked like only `active` was allow to have a logout service.
   service:
@@ -44,7 +44,7 @@ interface AuthAccessService2_Common {
  *
  */
 export interface AuthAccessService2_Active extends AuthAccessService2_Common {
-  profile: 'active';
+  profile: "active";
   /** The name of the access service */
   label: InternationalString;
   /** Heading text to be shown with the user interface element that opens the access service. */
@@ -77,7 +77,7 @@ export interface AuthAccessService2_Active extends AuthAccessService2_Common {
  * Non-user-driven clients simply access the URI from id to obtain any access cookie, and then use the related access token service, as described below.
  */
 export interface AuthAccessService2_Kiosk extends AuthAccessService2_Common {
-  profile: 'kiosk';
+  profile: "kiosk";
   // See note above.
   // service: [AuthAccessTokenService2];
 
@@ -86,7 +86,7 @@ export interface AuthAccessService2_Kiosk extends AuthAccessService2_Common {
 }
 
 export interface AuthAccessService2_External extends AuthAccessService2_Common {
-  profile: 'external';
+  profile: "external";
   /** The name of the access service */
   label: InternationalString;
 
@@ -96,7 +96,7 @@ export interface AuthAccessService2_External extends AuthAccessService2_Common {
 
 export interface AuthAccessTokenService2 {
   id: string;
-  type: 'AuthAccessTokenService2';
+  type: "AuthAccessTokenService2";
   /** Default heading text to render if an error occurs. If the access token service returns an error object, the heading property of the error object must be used instead if supplied */
   errorHeading?: InternationalString;
   /** Default additional text to render if an error occurs. If the access token service returns an error object, the note property of the error object must be used instead if supplied. If present, errorHeading must also be present */
@@ -104,8 +104,8 @@ export interface AuthAccessTokenService2 {
 }
 
 export interface AuthAccessToken2 {
-  '@context': 'http://iiif.io/api/auth/2/context.json';
-  type: 'AuthAccessToken2';
+  "@context": "http://iiif.io/api/auth/2/context.json";
+  type: "AuthAccessToken2";
   /** The message identifier supplied by the client. */
   messageId: string;
   /** The access token to be sent to the probe service. */
@@ -115,9 +115,9 @@ export interface AuthAccessToken2 {
 }
 
 export interface AuthAccessTokenError2 {
-  '@context': 'http://iiif.io/api/auth/2/context.json';
-  type: 'AuthAccessTokenError2';
-  profile: 'invalidRequest' | 'invalidOrigin' | 'missingAspect' | 'expiredAspect' | 'unavailable';
+  "@context": "http://iiif.io/api/auth/2/context.json";
+  type: "AuthAccessTokenError2";
+  profile: "invalidRequest" | "invalidOrigin" | "missingAspect" | "expiredAspect" | "unavailable";
   /** The message identifier supplied by the client. */
   messageId: string;
   heading?: InternationalString;
@@ -126,7 +126,7 @@ export interface AuthAccessTokenError2 {
 
 export interface AuthProbeService2 {
   id: string;
-  type: 'AuthProbeService2';
+  type: "AuthProbeService2";
   profile?: string; // For compatibility with other services
   service: AuthAccessService2[];
   errorHeading?: InternationalString;
@@ -147,9 +147,9 @@ export interface Auth2SubstituteResource {
 }
 
 export interface AuthProbeResult2 {
-  '@context': 'http://iiif.io/api/auth/2/context.json';
+  "@context": "http://iiif.io/api/auth/2/context.json";
 
-  type: 'AuthProbeResult2';
+  type: "AuthProbeResult2";
   status: number;
   substitute: Auth2SubstituteResource;
   location: Auth2LocationResource;
@@ -159,10 +159,10 @@ export interface AuthProbeResult2 {
 
 export interface AuthLogoutService2 {
   id: string;
-  type: 'AuthLogoutService2';
+  type: "AuthLogoutService2";
   label: InternationalString;
 }
 
 export type AccessTokenServiceRequest<S extends AuthAccessTokenService2, Origin extends string> =
-  | `${S['id']}?origin=${Origin}&messageId=${string}`
-  | `${S['id']}?&messageId=${string}&origin=${Origin}`;
+  | `${S["id"]}?origin=${Origin}&messageId=${string}`
+  | `${S["id"]}?&messageId=${string}&origin=${Origin}`;

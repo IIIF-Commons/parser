@@ -1,4 +1,4 @@
-import { Prettify } from './utility';
+import { Prettify } from "./utility";
 
 export type Reference<T = string> = Prettify<{
   type: T;

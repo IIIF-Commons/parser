@@ -1,5 +1,5 @@
-import { LanguageProperty, OneOrMany } from '../utility';
-import { ImageResourceSegment, ImageResourceSegmentWithService } from '../resources/content-resource';
+import { LanguageProperty, OneOrMany } from "../utility";
+import { ImageResourceSegment, ImageResourceSegmentWithService } from "../resources/content-resource";
 
 /**
  * The following properties ensure that the interests of the owning or publishing institutions are conveyed regardless

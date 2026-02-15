@@ -1,48 +1,48 @@
-import type { ImageService } from '../../presentation-3/types';
-import { ImageServiceImageRequest } from '../types';
-import { supports } from './supports';
-import { ExtraFeature } from './profiles';
+import type { ImageService } from "../../presentation-3/types";
+import { ImageServiceImageRequest } from "../types";
+import { supports } from "./supports";
+import { ExtraFeature } from "./profiles";
 
 export function imageServiceSupportsRequest(imageService: ImageService, request: ImageServiceImageRequest) {
-  if (request.type !== 'image') {
+  if (request.type !== "image") {
     return [true];
   }
 
   const extraFeatures: ExtraFeature[] = [];
 
   if (request.rotation.mirror) {
-    extraFeatures.push('mirroring');
+    extraFeatures.push("mirroring");
   }
 
   if (request.region.percent) {
-    extraFeatures.push('regionByPct');
+    extraFeatures.push("regionByPct");
   }
 
   if (request.region.square) {
-    extraFeatures.push('regionSquare');
+    extraFeatures.push("regionSquare");
   } else if (!request.region.full) {
-    extraFeatures.push('regionByPx');
+    extraFeatures.push("regionByPx");
   }
 
   if (request.rotation.angle) {
     const remainder = request.rotation.angle % 90;
     if (remainder) {
-      extraFeatures.push('rotationArbitrary');
+      extraFeatures.push("rotationArbitrary");
     } else {
-      extraFeatures.push('rotationBy90s');
+      extraFeatures.push("rotationBy90s");
     }
   }
 
   if (request.size.confined) {
-    extraFeatures.push('sizeByConfinedWh');
+    extraFeatures.push("sizeByConfinedWh");
   }
 
   if (!request.size.width && request.size.height) {
-    extraFeatures.push('sizeByH');
+    extraFeatures.push("sizeByH");
   }
 
   if (request.size.percentScale) {
-    extraFeatures.push('sizeByPct');
+    extraFeatures.push("sizeByPct");
   }
 
   // Could we bail, and check sizes instead?
@@ -53,19 +53,19 @@ export function imageServiceSupportsRequest(imageService: ImageService, request:
       (size.height === request.size.height && size.width === request.size.width)
   );
   if (fixedSize) {
-    extraFeatures.push('sizeByWhListed');
+    extraFeatures.push("sizeByWhListed");
   } else {
     if (request.size.width && !request.size.height) {
-      extraFeatures.push('sizeByW');
+      extraFeatures.push("sizeByW");
     }
 
     if (request.size.width && request.size.height) {
-      extraFeatures.push('sizeByWh');
+      extraFeatures.push("sizeByWh");
     }
   }
 
   if (request.size.upscaled) {
-    extraFeatures.push('sizeUpscaling');
+    extraFeatures.push("sizeUpscaling");
   }
 
   const [doesSupport, reason] = supports(imageService, {

@@ -1,15 +1,15 @@
 // Based on: https://iiif.io/api/search/2.0/
 
-import { InternationalString } from '../iiif/descriptive';
-import { Annotation, TextQuoteSelector } from '../resources/annotation';
-import { AnnotationCollection } from '../resources/annotationCollection';
-import { AnnotationPage } from '../resources/annotationPage';
-import { Prettify } from '../utility';
+import { InternationalString } from "../iiif/descriptive";
+import { Annotation, TextQuoteSelector } from "../resources/annotation";
+import { AnnotationCollection } from "../resources/annotationCollection";
+import { AnnotationPage } from "../resources/annotationPage";
+import { Prettify } from "../utility";
 
 // https://iiif.io/api/registry/motivations/
 export interface Search2QueryParams {
   q?: string;
-  motivation?: 'contextualizing' | 'highlighting' | 'commenting' | 'tagging';
+  motivation?: "contextualizing" | "highlighting" | "commenting" | "tagging";
   date?: string;
   user?: string;
 }
@@ -24,16 +24,16 @@ export type Search2AnnotationPage = Prettify<
     partOf: Prettify<
       AnnotationCollection & {
         total?: number;
-        first: { id: string; type: 'AnnotationPage' };
-        last?: { id: string; type: 'AnnotationPage' };
+        first: { id: string; type: "AnnotationPage" };
+        last?: { id: string; type: "AnnotationPage" };
       }
     >;
     /**
      * The Annotation Page may have a startIndex property, which is the position of the first Annotation in this page’s items list, relative to the overall ordering of Annotations across all pages within the Annotation Collection. The value is a zero-based integer.
      */
     startIndex?: number;
-    next?: { id: string; type: 'AnnotationPage' };
-    prev?: { id: string; type: 'AnnotationPage' };
+    next?: { id: string; type: "AnnotationPage" };
+    prev?: { id: string; type: "AnnotationPage" };
     /** If the server has ignored any of the parameters in the request, then an ignored property must be present, and must contain a list of the ignored parameters. Servers may omit ignored query parameters from the id of the Annotation Page. */
     ignored?: string[];
     /**
@@ -49,9 +49,9 @@ export type Search2AnnotationPage = Prettify<
 
 export type Search2ContextualizingAnnotation = Prettify<
   Annotation & {
-    motivation: 'contextualizing';
+    motivation: "contextualizing";
     target: {
-      type: 'SpecificResource';
+      type: "SpecificResource";
       source: string;
       selector: TextQuoteSelector[];
     };
@@ -59,8 +59,8 @@ export type Search2ContextualizingAnnotation = Prettify<
 >;
 
 export interface TermPage {
-  '@context': 'http://iiif.io/api/search/2/context.json';
-  type: 'TermPage';
+  "@context": "http://iiif.io/api/search/2/context.json";
+  type: "TermPage";
   ignored?: string[];
   items: Term;
 }
@@ -77,7 +77,7 @@ service - The Term may have a service property. The value is an array of JSON ob
 */
 export interface Term {
   /** The Term may have a type property. If present, the value must be Term. The use of the property is not recommended to keep the response shorter. */
-  type: 'Term';
+  type: "Term";
   /** The Term must have a value property. The value is a the string form of the term. */
   value: string;
   /** The Term may have a total property. The value is an integer, which is the number of times the term occurs in the index. */
@@ -95,13 +95,13 @@ export type Search2AutocompleteResponse = TermPage;
 
 export interface AutoCompleteService2 {
   id: string;
-  type: 'AutoCompleteService2';
+  type: "AutoCompleteService2";
   label?: InternationalString;
 }
 
 export interface Search2Service {
   id: string;
-  type: 'SearchService2';
+  type: "SearchService2";
   profile?: string; // For compatibility with other services
   label?: InternationalString;
   service?: [AutoCompleteService2];

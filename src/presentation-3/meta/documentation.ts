@@ -15,12 +15,7 @@
  * Copyright © 2012-2023 Editors and contributors. Published by the IIIF Consortium under the CC-BY license.
  */
 
-import {
-  DescriptiveProperties,
-  LinkingProperties,
-  StructuralProperties,
-  TechnicalProperties,
-} from "@iiif/presentation-3";
+import { DescriptiveProperties, LinkingProperties, StructuralProperties, TechnicalProperties } from "../types";
 
 type DocDefinition = {
   link: string;

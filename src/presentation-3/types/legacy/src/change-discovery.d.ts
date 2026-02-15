@@ -1,8 +1,8 @@
 // Based on: https://iiif.io/api/discovery/1.0/
 
-import { InternationalString } from './iiif/descriptive';
-import { Manifest } from './resources/manifest';
-import { Prettify } from './utility';
+import { InternationalString } from "./iiif/descriptive";
+import { Manifest } from "./resources/manifest";
+import { Prettify } from "./utility";
 
 export type ChangeDiscoveryActivityRequest = {
   startTime?: string; // xsd:dateTime
@@ -22,11 +22,11 @@ export type ChangeDiscoveryActivity = Prettify<
     target?: ChangeDiscoveryBaseObject;
   } & (
     | {
-        type: Exclude<ChangeDiscoveryActivityType, 'Move'>;
+        type: Exclude<ChangeDiscoveryActivityType, "Move">;
         object: ChangeDiscoveryBaseObject;
       }
     | {
-        type: 'Move';
+        type: "Move";
         object: ChangeDiscoveryBaseObject;
         target: ChangeDiscoveryBaseObject;
       }
@@ -37,14 +37,14 @@ export type ChangeDiscoveryBaseObject = {
   id: string;
   canonical?: string;
   name?: string; // Non-standard.
-  type: 'Collection' | 'Manifest' | 'Canvas'; // Technically also: Range, Canvas etc.
+  type: "Collection" | "Manifest" | "Canvas"; // Technically also: Range, Canvas etc.
   seeAlso?: ChangeDiscoverySeeAlso[];
-  provider?: Manifest['provider'];
+  provider?: Manifest["provider"];
 };
 
 type ChangeDiscoveryActor = {
   id: string;
-  type: 'Person' | 'Application' | 'Organization';
+  type: "Person" | "Application" | "Organization";
 };
 
 export type ChangeDiscoveryGenesisRequest = {
@@ -72,33 +72,33 @@ export type ActivityPageProcessor = (
   state: ChangeDiscoveryImplementationState
 ) => ChangeDiscoveryImplementationState;
 
-export type ChangeDiscoveryActivityType = 'Create' | 'Update' | 'Delete' | 'Move' | 'Add' | 'Remove';
+export type ChangeDiscoveryActivityType = "Create" | "Update" | "Delete" | "Move" | "Add" | "Remove";
 
 export type ChangeDiscoverySeeAlso = {
   id: string;
-  type: 'Dataset';
+  type: "Dataset";
   format: string;
   label: InternationalString;
   profile: string;
 };
 
 export type ActivityOrderedCollection = {
-  '@context': 'http://iiif.io/api/discovery/1/context.json' | string[];
+  "@context": "http://iiif.io/api/discovery/1/context.json" | string[];
   id: string;
-  type: 'OrderedCollection';
+  type: "OrderedCollection";
   first?: {
     id: string;
-    type: 'OrderedCollectionPage';
+    type: "OrderedCollectionPage";
   };
   last: {
     id: string;
-    type: 'OrderedCollectionPage';
+    type: "OrderedCollectionPage";
   };
   totalItems?: number;
   seeAlso?: ChangeDiscoverySeeAlso[];
   partOf?: Array<{
     id: string;
-    type: 'OrderedCollection';
+    type: "OrderedCollection";
   }>;
   rights: string;
   // Non-standard
@@ -106,21 +106,21 @@ export type ActivityOrderedCollection = {
 };
 
 export type ActivityOrderedCollectionPage = {
-  '@context': 'http://iiif.io/api/discovery/1/context.json' | string[];
+  "@context": "http://iiif.io/api/discovery/1/context.json" | string[];
   id: string;
-  type: 'OrderedCollectionPage';
+  type: "OrderedCollectionPage";
   partOf?: {
     id: string;
-    type: 'OrderedCollection';
+    type: "OrderedCollection";
   };
   startIndex?: number;
   next?: {
     id: string;
-    type: 'OrderedCollectionPage';
+    type: "OrderedCollectionPage";
   };
   prev?: {
     id: string;
-    type: 'OrderedCollectionPage';
+    type: "OrderedCollectionPage";
   };
   orderedItems: ChangeDiscoveryActivity[];
 };

@@ -1,5 +1,5 @@
-import { AnnotationPage } from '../resources/annotationPage';
-import { Range } from '../resources/range';
+import { AnnotationPage } from "../resources/annotationPage";
+import { Range } from "../resources/range";
 
 /**
  * These properties define the structure of the object being represented in IIIF by allowing the inclusion of child

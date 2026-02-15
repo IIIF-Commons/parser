@@ -1,20 +1,20 @@
-import type * as Presentation3 from '../presentation-3/types';
-import type * as Presentation2 from './types';
-import { imageServiceProfiles, level1Support } from '../shared/image-api-profiles';
-import { Traverse } from './traverse';
-import { ensureArray } from '../shared/ensure-array';
-import { removeUndefinedProperties } from '../shared/remove-undefined-properties';
-import { level0Support, level2Support } from '../image-3/profiles/profiles';
+import type * as Presentation3 from "../presentation-3/types";
+import type * as Presentation2 from "./types";
+import { imageServiceProfiles, level1Support } from "../shared/image-api-profiles";
+import { Traverse } from "./traverse";
+import { ensureArray } from "../shared/ensure-array";
+import { removeUndefinedProperties } from "../shared/remove-undefined-properties";
+import { level0Support, level2Support } from "../image-3/profiles/profiles";
 
 const configuration = {
-  attributionLabel: 'Attribution',
-  lang: 'none',
-  providerId: 'http://example.org/provider',
-  providerName: '',
+  attributionLabel: "Attribution",
+  lang: "none",
+  providerId: "http://example.org/provider",
+  providerName: "",
 };
 
 function compatLanguageMap(inputLangProperty?: unknown): Array<Presentation2.LanguageProperty> {
-  if (typeof inputLangProperty === 'string') {
+  if (typeof inputLangProperty === "string") {
     return [inputLangProperty];
   }
   if (!inputLangProperty) {
@@ -24,13 +24,13 @@ function compatLanguageMap(inputLangProperty?: unknown): Array<Presentation2.Lan
 
   const languageArray: Presentation2.LanguageProperty[] = [];
   for (const language of arrayOfValues) {
-    if (typeof language === 'string') {
+    if (typeof language === "string") {
       languageArray.push(language);
       continue;
     }
     languageArray.push({
-      '@language': language['@language'] || language.language,
-      '@value': language['@value'] || language.value,
+      "@language": language["@language"] || language.language,
+      "@value": language["@value"] || language.value,
     });
   }
   return languageArray;
@@ -38,10 +38,10 @@ function compatLanguageMap(inputLangProperty?: unknown): Array<Presentation2.Lan
 
 export function convertLanguageMapping(
   inputLangProperty?: Presentation2.OneOrMany<Presentation2.LanguageProperty>,
-  defaultLang = 'none'
+  defaultLang = "none"
 ): Presentation3.InternationalString {
   if (!inputLangProperty) {
-    return { none: [''] };
+    return { none: [""] };
   }
 
   const arrayOfValues = compatLanguageMap(inputLangProperty);
@@ -50,27 +50,27 @@ export function convertLanguageMapping(
 
   for (const language of arrayOfValues) {
     // For strings "label": ["a value"]
-    if (typeof language === 'string') {
+    if (typeof language === "string") {
       languageMap[defaultLang] = languageMap[defaultLang] ? languageMap[defaultLang] : [];
-      (languageMap[defaultLang] as string[]).push(language || '');
+      (languageMap[defaultLang] as string[]).push(language || "");
       continue;
     }
 
     // For maps without a language
-    if (!language['@language']) {
+    if (!language["@language"]) {
       languageMap[defaultLang] = languageMap[defaultLang] ? languageMap[defaultLang] : [];
-      (languageMap[defaultLang] as string[]).push(language['@value'] || '');
+      (languageMap[defaultLang] as string[]).push(language["@value"] || "");
       continue;
     }
 
     // Default case with language.
-    const lang = language['@language'];
+    const lang = language["@language"];
     languageMap[lang] = languageMap[lang] ? languageMap[lang] : [];
-    (languageMap[lang] as string[]).push(language['@value'] || '');
+    (languageMap[lang] as string[]).push(language["@value"] || "");
   }
 
   if (Object.keys(languageMap).length === 0) {
-    return { none: [''] };
+    return { none: [""] };
   }
 
   return languageMap;
@@ -78,22 +78,22 @@ export function convertLanguageMapping(
 
 export function getProfile(profile: any | any[]): string | undefined {
   if (Array.isArray(profile)) {
-    return getProfile(profile.find((s) => typeof s === 'string'));
+    return getProfile(profile.find((s) => typeof s === "string"));
   }
 
   if (level2Support.indexOf(profile) !== -1) {
-    return 'level2';
+    return "level2";
   }
 
   if (level1Support.indexOf(profile) !== -1) {
-    return 'level1';
+    return "level1";
   }
 
   if (level0Support.indexOf(profile) !== -1) {
-    return 'level0';
+    return "level0";
   }
 
-  if (typeof profile !== 'string') {
+  if (typeof profile !== "string") {
     return undefined;
   }
 
@@ -105,14 +105,14 @@ export function getTypeFromContext(inputContexts: string | string[]): string | u
 
   for (const context of contexts) {
     switch (context) {
-      case 'http://iiif.io/api/image/2/context.json':
-      case 'http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2':
-        return 'ImageService2';
-      case 'http://iiif.io/api/image/1/context.json':
-      case 'http://library.stanford.edu/iiif/image-api/1.1/context.json':
-        return 'ImageService1';
-      case 'http://iiif.io/api/annex/openannotation/context.json':
-        return 'ImageApiSelector';
+      case "http://iiif.io/api/image/2/context.json":
+      case "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2":
+        return "ImageService2";
+      case "http://iiif.io/api/image/1/context.json":
+      case "http://library.stanford.edu/iiif/image-api/1.1/context.json":
+        return "ImageService1";
+      case "http://iiif.io/api/annex/openannotation/context.json":
+        return "ImageApiSelector";
     }
   }
 
@@ -121,41 +121,41 @@ export function getTypeFromContext(inputContexts: string | string[]): string | u
 
 function getTypeFromProfile(inputProfile: string): string | undefined {
   switch (inputProfile) {
-    case 'http://iiif.io/api/image/2/level0.json':
-    case 'http://iiif.io/api/image/2/level1.json':
-    case 'http://iiif.io/api/image/2/level2.json':
-      return 'ImageService2';
+    case "http://iiif.io/api/image/2/level0.json":
+    case "http://iiif.io/api/image/2/level1.json":
+    case "http://iiif.io/api/image/2/level2.json":
+      return "ImageService2";
 
-    case 'http://iiif.io/api/auth/1/kiosk':
-    case 'http://iiif.io/api/auth/1/login':
-    case 'http://iiif.io/api/auth/1/clickthrough':
-    case 'http://iiif.io/api/auth/1/external':
-    case 'http://iiif.io/api/auth/0/kiosk':
-    case 'http://iiif.io/api/auth/0/login':
-    case 'http://iiif.io/api/auth/0/clickthrough':
-    case 'http://iiif.io/api/auth/0/external':
-      return 'AuthCookieService1';
+    case "http://iiif.io/api/auth/1/kiosk":
+    case "http://iiif.io/api/auth/1/login":
+    case "http://iiif.io/api/auth/1/clickthrough":
+    case "http://iiif.io/api/auth/1/external":
+    case "http://iiif.io/api/auth/0/kiosk":
+    case "http://iiif.io/api/auth/0/login":
+    case "http://iiif.io/api/auth/0/clickthrough":
+    case "http://iiif.io/api/auth/0/external":
+      return "AuthCookieService1";
 
-    case 'http://iiif.io/api/auth/1/token':
-    case 'http://iiif.io/api/auth/0/token':
-      return 'AuthTokenService1';
-    case 'http://iiif.io/api/auth/1/logout':
-    case 'http://iiif.io/api/auth/0/logout':
-      return 'AuthLogoutService1';
+    case "http://iiif.io/api/auth/1/token":
+    case "http://iiif.io/api/auth/0/token":
+      return "AuthTokenService1";
+    case "http://iiif.io/api/auth/1/logout":
+    case "http://iiif.io/api/auth/0/logout":
+      return "AuthLogoutService1";
 
-    case 'http://iiif.io/api/search/1/search':
-    case 'http://iiif.io/api/search/0/search':
-      return 'SearchService1';
-    case 'http://iiif.io/api/search/1/autocomplete':
-    case 'http://iiif.io/api/search/0/autocomplete':
-      return 'AutoCompleteService1';
+    case "http://iiif.io/api/search/1/search":
+    case "http://iiif.io/api/search/0/search":
+      return "SearchService1";
+    case "http://iiif.io/api/search/1/autocomplete":
+    case "http://iiif.io/api/search/0/autocomplete":
+      return "AutoCompleteService1";
   }
 
   return undefined;
 }
 
 function removePrefix(str: string) {
-  for (const prefix of ['sc', 'oa', 'dcterms', 'dctypes', 'iiif']) {
+  for (const prefix of ["sc", "oa", "dcterms", "dctypes", "iiif"]) {
     if (str.startsWith(`${prefix}:`)) {
       return str.slice(prefix.length + 1);
     }
@@ -164,13 +164,13 @@ function removePrefix(str: string) {
   return str;
 }
 
-const knownTypes = ['Collection', 'Manifest', 'Annotation', 'AnnotationPage', 'Range', 'Service'];
+const knownTypes = ["Collection", "Manifest", "Annotation", "AnnotationPage", "Range", "Service"];
 
 function getNewType(resource: any): string {
-  const id = resource['@id'] || resource.id;
-  let oldType: string | string[] = resource['@type'] || resource.type;
+  const id = resource["@id"] || resource.id;
+  let oldType: string | string[] = resource["@type"] || resource.type;
   const profile: any = resource.profile || undefined;
-  const context: any = resource['@context'] || undefined;
+  const context: any = resource["@context"] || undefined;
 
   if (profile) {
     const possibleType = getTypeFromProfile(profile);
@@ -188,17 +188,17 @@ function getNewType(resource: any): string {
 
   if (oldType) {
     if (Array.isArray(oldType)) {
-      if (oldType.indexOf('oa:CssStylesheet') !== -1) {
-        return 'CssStylesheet';
+      if (oldType.indexOf("oa:CssStylesheet") !== -1) {
+        return "CssStylesheet";
       }
-      if (oldType.indexOf('cnt:ContentAsText') !== -1) {
-        return 'TextualBody';
+      if (oldType.indexOf("cnt:ContentAsText") !== -1) {
+        return "TextualBody";
       }
       // Nothing we can do?
       oldType = oldType[0]!;
     }
 
-    for (const prefix of ['sc', 'oa', 'dcterms', 'dctypes', 'iiif']) {
+    for (const prefix of ["sc", "oa", "dcterms", "dctypes", "iiif"]) {
       if (oldType.startsWith(`${prefix}:`)) {
         oldType = oldType.slice(prefix.length + 1);
         break;
@@ -206,12 +206,12 @@ function getNewType(resource: any): string {
     }
 
     switch (oldType) {
-      case 'Layer':
-        return 'AnnotationCollection';
-      case 'AnnotationList':
-        return 'AnnotationPage';
-      case 'cnt:ContentAsText':
-        return 'TextualBody';
+      case "Layer":
+        return "AnnotationCollection";
+      case "AnnotationList":
+        return "AnnotationPage";
+      case "cnt:ContentAsText":
+        return "TextualBody";
       // @todo There are definitely some missing annotation types here.
     }
   }
@@ -221,26 +221,26 @@ function getNewType(resource: any): string {
   }
 
   if (resource.format) {
-    if (resource.format.startsWith('image/')) {
-      return 'Image';
+    if (resource.format.startsWith("image/")) {
+      return "Image";
     }
-    if (resource.format.startsWith('text/')) {
-      return 'Text';
+    if (resource.format.startsWith("text/")) {
+      return "Text";
     }
-    if (resource.format === 'application/pdf') {
-      return 'Text';
+    if (resource.format === "application/pdf") {
+      return "Text";
     }
-    if (resource.format.startsWith('application/')) {
-      return 'Dataset';
+    if (resource.format.startsWith("application/")) {
+      return "Dataset";
     }
   }
 
-  if (id && (id.endsWith('.jpg') || id.endsWith('.png') || id.endsWith('.jpeg'))) {
-    return 'Image';
+  if (id && (id.endsWith(".jpg") || id.endsWith(".png") || id.endsWith(".jpeg"))) {
+    return "Image";
   }
 
   if (!oldType) {
-    return 'unknown';
+    return "unknown";
   }
 
   // Again, nothing we can do.
@@ -260,10 +260,10 @@ function extractLicense(license: string) {
 
 async function getContentTypeOfRemoteResource(resourceId: string): Promise<string | undefined> {
   try {
-    const response = await fetch(resourceId, { method: 'HEAD' });
+    const response = await fetch(resourceId, { method: "HEAD" });
     const headers = response.headers;
 
-    return headers.get('content-type') || undefined;
+    return headers.get("content-type") || undefined;
   } catch (e) {
     // do nothing.
   }
@@ -272,12 +272,12 @@ async function getContentTypeOfRemoteResource(resourceId: string): Promise<strin
 }
 
 function fixLicense(
-  license: Presentation2.RightsProperties['license'],
-  licenseLabel = 'Rights/License',
-  lang = 'none'
-): [Presentation3.DescriptiveProperties['rights'], Presentation3.DescriptiveProperties['metadata']] {
-  let rights: Presentation3.DescriptiveProperties['rights'] = null;
-  const metadata: Presentation3.DescriptiveProperties['metadata'] = [];
+  license: Presentation2.RightsProperties["license"],
+  licenseLabel = "Rights/License",
+  lang = "none"
+): [Presentation3.DescriptiveProperties["rights"], Presentation3.DescriptiveProperties["metadata"]] {
+  let rights: Presentation3.DescriptiveProperties["rights"] = null;
+  const metadata: Presentation3.DescriptiveProperties["metadata"] = [];
 
   const licenseList = Array.isArray(license) ? license : [license];
 
@@ -286,9 +286,9 @@ function fixLicense(
 
     if (
       singleLicense &&
-      (singleLicense.indexOf('creativecommons.org') !== -1 || singleLicense.indexOf('rightsstatements.org') !== -1)
+      (singleLicense.indexOf("creativecommons.org") !== -1 || singleLicense.indexOf("rightsstatements.org") !== -1)
     ) {
-      if (singleLicense.startsWith('https://')) {
+      if (singleLicense.startsWith("https://")) {
         rights = `http://${singleLicense.slice(8)}`;
       } else {
         rights = singleLicense;
@@ -307,15 +307,15 @@ function fixLicense(
 }
 
 const removeContexts = [
-  'http://iiif.io/api/presentation/2/context.json',
-  'http://iiif.io/api/image/2/context.json',
-  'http://iiif.io/api/image/1/context.json',
-  'http://library.stanford.edu/iiif/image-api/1.1/context.json',
-  'http://iiif.io/api/search/1/context.json',
-  'http://iiif.io/api/search/0/context.json',
-  'http://iiif.io/api/auth/1/context.json',
-  'http://iiif.io/api/auth/0/context.json',
-  'http://iiif.io/api/annex/openannotation/context.json',
+  "http://iiif.io/api/presentation/2/context.json",
+  "http://iiif.io/api/image/2/context.json",
+  "http://iiif.io/api/image/1/context.json",
+  "http://library.stanford.edu/iiif/image-api/1.1/context.json",
+  "http://iiif.io/api/search/1/context.json",
+  "http://iiif.io/api/search/0/context.json",
+  "http://iiif.io/api/auth/1/context.json",
+  "http://iiif.io/api/auth/0/context.json",
+  "http://iiif.io/api/annex/openannotation/context.json",
 ];
 
 function fixContext(inputContext: string | string[] | undefined): string | string[] | undefined {
@@ -324,8 +324,8 @@ function fixContext(inputContext: string | string[] | undefined): string | strin
 
     const newContexts = [];
     for (const context of contexts) {
-      if (context === 'http://iiif.io/api/presentation/2/context.json') {
-        newContexts.push('http://iiif.io/api/presentation/3/context.json');
+      if (context === "http://iiif.io/api/presentation/2/context.json") {
+        newContexts.push("http://iiif.io/api/presentation/3/context.json");
       }
       if (removeContexts.indexOf(context) !== -1) {
         continue;
@@ -342,8 +342,8 @@ function fixContext(inputContext: string | string[] | undefined): string | strin
 }
 
 function convertMetadata(
-  metadata: Presentation2.DescriptiveProperties['metadata']
-): Presentation3.DescriptiveProperties['metadata'] {
+  metadata: Presentation2.DescriptiveProperties["metadata"]
+): Presentation3.DescriptiveProperties["metadata"] {
   if (!metadata) {
     return [];
   }
@@ -359,10 +359,10 @@ function convertMetadata(
 let mintedIdCounter = 0;
 
 function mintNewIdFromResource(
-  resource: Presentation3.SomeRequired<Presentation2.TechnicalProperties, '@type'>,
+  resource: Presentation3.SomeRequired<Presentation2.TechnicalProperties, "@type">,
   subResource?: string
 ) {
-  const origId = encodeURI((resource as { id?: string }).id || resource['@id'] || '').trim();
+  const origId = encodeURI((resource as { id?: string }).id || resource["@id"] || "").trim();
 
   if (origId && subResource) {
     return `${origId}/${subResource}`;
@@ -375,7 +375,7 @@ function mintNewIdFromResource(
   mintedIdCounter++;
 
   // @todo.
-  return `http://example.org/${resource['@type']}${subResource ? `/${subResource}` : ''}/${mintedIdCounter}`;
+  return `http://example.org/${resource["@type"]}${subResource ? `/${subResource}` : ""}/${mintedIdCounter}`;
 }
 
 // @todo this was removed due to identifiers not being able to be used externally after upgrading.
@@ -384,11 +384,11 @@ function resolveDecodedURI(uri: string) {
 }
 
 function technicalProperties<T extends Partial<Presentation3.TechnicalProperties>>(
-  resource: Presentation3.SomeRequired<Presentation2.TechnicalProperties, '@type'> & {
+  resource: Presentation3.SomeRequired<Presentation2.TechnicalProperties, "@type"> & {
     motivation?: string | string[] | null;
     format?: string;
     profile?: any;
-    '@context'?: string | string[] | undefined;
+    "@context"?: string | string[] | undefined;
   }
 ) {
   const allBehaviors = [...(resource.behavior || [])];
@@ -405,8 +405,8 @@ function technicalProperties<T extends Partial<Presentation3.TechnicalProperties
   }
 
   return {
-    '@context': resource['@context'] ? fixContext(resource['@context']) : undefined,
-    id: (resource['@id'] || mintNewIdFromResource(resource)).trim(),
+    "@context": resource["@context"] ? fixContext(resource["@context"]) : undefined,
+    id: (resource["@id"] || mintNewIdFromResource(resource)).trim(),
     type: getNewType(resource) as any,
     behavior: allBehaviors.length ? allBehaviors : undefined,
     // format: This will be an optional async post-process step.
@@ -449,11 +449,11 @@ function compatThumbnail(thumb: any) {
   if (thumb) {
     const arrayOfThumbs = Array.isArray(thumb) ? thumb : [thumb];
     return arrayOfThumbs.map((t) => {
-      if (typeof t === 'string') {
-        return { id: t, type: 'Image' };
+      if (typeof t === "string") {
+        return { id: t, type: "Image" };
       }
-      if (t.type === 'unknown') {
-        t.type = 'Image';
+      if (t.type === "unknown") {
+        t.type = "Image";
       }
       return t;
     });
@@ -461,27 +461,27 @@ function compatThumbnail(thumb: any) {
   return thumb;
 }
 
-function parseWithin(resource: Presentation2.AbstractResource): undefined | Presentation3.LinkingProperties['partOf'] {
+function parseWithin(resource: Presentation2.AbstractResource): undefined | Presentation3.LinkingProperties["partOf"] {
   if (!resource.within) {
     return undefined;
   }
 
   const withinProperties = Array.isArray(resource.within) ? resource.within : [resource.within];
-  const returnPartOf: Presentation3.LinkingProperties['partOf'] = [];
+  const returnPartOf: Presentation3.LinkingProperties["partOf"] = [];
 
   for (const within of withinProperties) {
-    if (typeof within === 'string') {
+    if (typeof within === "string") {
       if (within) {
-        switch (resource['@type']) {
-          case 'sc:Manifest':
-            returnPartOf.push({ id: within, type: 'Collection' });
+        switch (resource["@type"]) {
+          case "sc:Manifest":
+            returnPartOf.push({ id: within, type: "Collection" });
             break;
           // @todo are there more cases?
         }
       }
-    } else if ((within as any)['@id']) {
+    } else if ((within as any)["@id"]) {
       returnPartOf.push({
-        id: (within as any)['@id'], // as any since content resources don't require an `@id`
+        id: (within as any)["@id"], // as any since content resources don't require an `@id`
         type: getNewType(within) as any,
       });
     } else {
@@ -504,7 +504,7 @@ function linkingProperties(resource: Presentation2.LinkingProperties & Presentat
         ? [
             {
               id: configuration.providerId,
-              type: 'Agent' as const,
+              type: "Agent" as const,
               homepage: related.length ? [related[0] as any] : undefined,
               logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
               label: convertLanguageMapping(configuration.providerName),
@@ -531,21 +531,21 @@ function embeddedContentProperties(resource: Presentation2.CharsEmbeddedContent)
 
 function stringOrRefToRef(object: any, type: string) {
   if (!object) return null;
-  if (typeof object === 'string') {
+  if (typeof object === "string") {
     return {
       id: object,
       type,
     };
   }
 
-  if (typeof object?.['@id'] === 'string') {
+  if (typeof object?.["@id"] === "string") {
     return {
-      id: object['@id'],
+      id: object["@id"],
       type,
     };
   }
 
-  if (typeof object.id === 'string') {
+  if (typeof object.id === "string") {
     return {
       id: object.id,
       type,
@@ -567,7 +567,7 @@ function paginationProperties(collection: Presentation2.Collection) {
 
   if ((collection as any).first) {
     // Note: This is a stop-gap solution for "v3.1", which does not have CollectionPages.
-    const ref = stringOrRefToRef((collection as any).first, 'Collection');
+    const ref = stringOrRefToRef((collection as any).first, "Collection");
     if (ref) {
       additionalProperties.first = ref;
     }
@@ -578,14 +578,14 @@ function paginationProperties(collection: Presentation2.Collection) {
   }
 
   if ((collection as any).prev) {
-    const ref = stringOrRefToRef((collection as any).prev, 'Collection');
+    const ref = stringOrRefToRef((collection as any).prev, "Collection");
     if (ref) {
       additionalProperties.prev = ref;
     }
   }
 
   if ((collection as any).next) {
-    const ref = stringOrRefToRef((collection as any).next, 'Collection');
+    const ref = stringOrRefToRef((collection as any).next, "Collection");
     if (ref) {
       additionalProperties.next = ref;
     }
@@ -609,7 +609,7 @@ function removeEmptyItems(resources: any[]) {
 function upgradeCollection(collection: Presentation2.Collection): Presentation3.Collection {
   return removeUndefinedProperties({
     ...technicalProperties(collection),
-    ...descriptiveProperties<Presentation3.SomeRequired<Presentation3.CollectionDescriptive, 'label'>>(collection),
+    ...descriptiveProperties<Presentation3.SomeRequired<Presentation3.CollectionDescriptive, "label">>(collection),
     ...linkingProperties(collection),
     ...paginationProperties(collection),
     items: removeEmptyItems(collection.members as any),
@@ -679,7 +679,7 @@ function flattenStructures(structures: Presentation3.Range[]): Presentation3.Ran
   for (const range of structures) {
     if (range.items) {
       const items = range.items.map((item) => {
-        if (typeof item === 'string') {
+        if (typeof item === "string") {
           found.push(item);
           return ranges.get(item) || item;
         }
@@ -706,8 +706,8 @@ function upgradeCanvas(canvas: Presentation2.Canvas): Presentation3.Canvas {
       canvas.images && canvas.images.length
         ? [
             {
-              id: mintNewIdFromResource(canvas, 'annotation-page'),
-              type: 'AnnotationPage',
+              id: mintNewIdFromResource(canvas, "annotation-page"),
+              type: "AnnotationPage",
               items: canvas.images as any,
             },
           ]
@@ -727,8 +727,8 @@ function upgradeAnnotationList(annotationPage: Presentation2.AnnotationList): Pr
 function upgradeSequence(sequence: Presentation2.Sequence): {
   canvases: Presentation3.Canvas[];
   behavior?: string[];
-  startCanvas?: Presentation3.Reference<'Canvas'> | undefined;
-  viewingDirection?: 'left-to-right' | 'right-to-left' | 'top-to-bottom' | 'bottom-to-top';
+  startCanvas?: Presentation3.Reference<"Canvas"> | undefined;
+  viewingDirection?: "left-to-right" | "right-to-left" | "top-to-bottom" | "bottom-to-top";
 } {
   /*
     rng = {"id": s.get('@id', self.mint_uri()), "type": "Range"}
@@ -767,30 +767,30 @@ function upgradeAnnotation(annotation: Presentation2.Annotation): Presentation3.
   function upgradeTarget(target: typeof annotation.on): Presentation3.AnnotationTarget {
     if (Array.isArray(target)) {
       if (target.length > 1) {
-        return { type: 'List', items: target.map(upgradeTarget) as Presentation3.Target[] };
+        return { type: "List", items: target.map(upgradeTarget) as Presentation3.Target[] };
       }
       target = target[0]!;
     }
-    if (typeof target === 'string') {
+    if (typeof target === "string") {
       return encodeURI(target).trim();
-    } else if ('@type' in target) {
-      let source: string | Presentation3.Reference<'Canvas'> | Presentation3.Reference<'Image'>;
-      if (typeof target.full === 'string') {
+    } else if ("@type" in target) {
+      let source: string | Presentation3.Reference<"Canvas"> | Presentation3.Reference<"Image">;
+      if (typeof target.full === "string") {
         source = target.full;
-      } else if (target.full['@type'] === 'dctypes:Image') {
-        source = { id: target.full['@id'], type: 'Image' };
-      } else if (target.full['@type'] === 'sc:Canvas') {
-        source = { id: target.full['@id'], type: 'Canvas' };
+      } else if (target.full["@type"] === "dctypes:Image") {
+        source = { id: target.full["@id"], type: "Image" };
+      } else if (target.full["@type"] === "sc:Canvas") {
+        source = { id: target.full["@id"], type: "Canvas" };
       } else {
-        throw new Error(`Unsupported source type on annotation: ${target.full['@type']}`);
+        throw new Error(`Unsupported source type on annotation: ${target.full["@type"]}`);
       }
       return {
-        type: 'SpecificResource',
+        type: "SpecificResource",
         source,
         selector: upgradeSelector(target.selector),
       };
     } else {
-      return encodeURI(target['@id']).trim();
+      return encodeURI(target["@id"]).trim();
     }
   }
   return removeUndefinedProperties({
@@ -808,7 +808,7 @@ function upgradeAnnotation(annotation: Presentation2.Annotation): Presentation3.
 function upgradeContentResourceOrChoice(
   resource: Presentation2.ContentResource | Presentation2.ChoiceEmbeddedContent
 ): Presentation3.ContentResource | Presentation3.ChoiceBody {
-  if ((resource as any).type === 'Choice') {
+  if ((resource as any).type === "Choice") {
     return resource as any;
   }
   return upgradeContentResource(resource);
@@ -829,11 +829,11 @@ function upgradeContentResource(inputContentResource: Presentation2.ContentResou
 function upgradeChoice(choice: Presentation2.ChoiceEmbeddedContent): Presentation3.ChoiceBody {
   const items = [];
 
-  if (choice.default && choice.default !== 'rdf:nil') {
+  if (choice.default && choice.default !== "rdf:nil") {
     items.push(choice.default);
   }
 
-  if (choice.item && choice.item !== 'rdf:nil') {
+  if (choice.item && choice.item !== "rdf:nil") {
     items.push(...choice.item);
   }
 
@@ -859,22 +859,22 @@ function upgradeRange(range: Presentation2.Range): Presentation3.Range {
 }
 
 function upgradeService(service: Presentation2.Service): Presentation3.Service {
-  const { '@id': id, '@type': type, '@context': context, profile, ...additionalProps } = service as any;
+  const { "@id": id, "@type": type, "@context": context, profile, ...additionalProps } = service as any;
 
   const newService: any = {};
 
   if (id) {
-    newService['@id'] = id;
+    newService["@id"] = id;
   }
 
-  newService['@type'] = getNewType(service);
+  newService["@type"] = getNewType(service);
 
-  if (newService['@type'] === 'unknown') {
+  if (newService["@type"] === "unknown") {
     // @todo handle case where there might be multiple contexts.
     if (context && context.length) {
-      newService['@context'] = context;
+      newService["@context"] = context;
     }
-    newService['@type'] = 'Service'; // optional on services.
+    newService["@type"] = "Service"; // optional on services.
   }
 
   if (profile) {
@@ -924,19 +924,19 @@ export const presentation2to3 = new Traverse<{
 export function convertPresentation2(entity: any): Presentation3.Manifest | Presentation3.Collection {
   if (
     (entity &&
-      entity['@context'] &&
-      (entity['@context'] === 'http://iiif.io/api/presentation/2/context.json' ||
-        (Array.isArray(entity['@context']) &&
-          entity['@context'].indexOf('http://iiif.io/api/presentation/2/context.json') !== -1) ||
+      entity["@context"] &&
+      (entity["@context"] === "http://iiif.io/api/presentation/2/context.json" ||
+        (Array.isArray(entity["@context"]) &&
+          entity["@context"].indexOf("http://iiif.io/api/presentation/2/context.json") !== -1) ||
         // Yale context.
-        entity['@context'] === 'http://www.shared-canvas.org/ns/context.json')) ||
-    entity['@context'] === 'http://iiif.io/api/image/2/context.json' ||
+        entity["@context"] === "http://www.shared-canvas.org/ns/context.json")) ||
+    entity["@context"] === "http://iiif.io/api/image/2/context.json" ||
     // No-context is possible.
-    (entity['@id'] && entity['@type'] === 'sc:Collection') ||
-    (entity['@id'] && entity['@type'] === 'sc:Manifest')
+    (entity["@id"] && entity["@type"] === "sc:Collection") ||
+    (entity["@id"] && entity["@type"] === "sc:Manifest")
   ) {
-    if (!entity['@context']) {
-      entity['@context'] = 'http://iiif.io/api/presentation/2/context.json';
+    if (!entity["@context"]) {
+      entity["@context"] = "http://iiif.io/api/presentation/2/context.json";
     }
     return presentation2to3.traverseUnknown(entity);
   }
@@ -947,22 +947,22 @@ function upgradeSelector(
   selector: Presentation2.ContentResourceSelector
 ): Presentation3.Selector | Presentation3.Selector[] {
   const isSvgSelector =
-    ((Array.isArray(selector['@type']) && selector['@type'].includes('oa:SvgSelector')) ||
-      selector['@type'] == 'oa:SvgSelector') &&
-    ('chars' in selector || 'value' in selector);
+    ((Array.isArray(selector["@type"]) && selector["@type"].includes("oa:SvgSelector")) ||
+      selector["@type"] == "oa:SvgSelector") &&
+    ("chars" in selector || "value" in selector);
   if (isSvgSelector) {
     return {
-      type: 'SvgSelector',
-      value: 'chars' in selector ? selector.chars : selector.value,
+      type: "SvgSelector",
+      value: "chars" in selector ? selector.chars : selector.value,
     };
   }
-  if (selector['@type'] === 'oa:FragmentSelector') {
+  if (selector["@type"] === "oa:FragmentSelector") {
     return {
-      type: 'FragmentSelector',
+      type: "FragmentSelector",
       value: selector.value,
     };
   }
-  if (selector['@type'] === 'oa:Choice') {
+  if (selector["@type"] === "oa:Choice") {
     return [
       upgradeSelector(selector.default) as Presentation3.Selector,
       ...((Array.isArray(selector.item) ? selector.item : [selector.item]).map(
@@ -970,12 +970,12 @@ function upgradeSelector(
       ) as Presentation3.Selector[]),
     ];
   }
-  if (selector['@type'] == 'iiif:ImageApiSelector') {
+  if (selector["@type"] == "iiif:ImageApiSelector") {
     return {
-      type: 'ImageApiSelector',
-      region: 'region' in selector ? selector.region : undefined,
-      rotation: 'rotation' in selector ? selector.rotation : undefined,
+      type: "ImageApiSelector",
+      region: "region" in selector ? selector.region : undefined,
+      rotation: "rotation" in selector ? selector.rotation : undefined,
     };
   }
-  throw new Error(`Unsupported selector type: ${selector['@type']}`);
+  throw new Error(`Unsupported selector type: ${selector["@type"]}`);
 }

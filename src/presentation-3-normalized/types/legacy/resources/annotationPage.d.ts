@@ -6,14 +6,14 @@ import {
   OmitProperties,
   Reference,
   TechnicalProperties,
-} from '../../../../presentation-3/types';
-import { LinkingNormalized } from '../iiif/linking';
-import { StructuralNormalized } from '../iiif/structural';
-import { DescriptiveNormalized } from '../iiif/descriptive';
+} from "../../../../presentation-3/types";
+import { LinkingNormalized } from "../iiif/linking";
+import { StructuralNormalized } from "../iiif/structural";
+import { DescriptiveNormalized } from "../iiif/descriptive";
 
 export declare type AnnotationPageNormalized = OmitProperties<TechnicalProperties, AnnotationPageOmittedTechnical> &
   OmitProperties<DescriptiveNormalized, AnnotationPageOmittedDescriptive> &
-  OmitProperties<StructuralNormalized<Reference<'Annotation'>>, AnnotationPageOmittedStructural> &
+  OmitProperties<StructuralNormalized<Reference<"Annotation">>, AnnotationPageOmittedStructural> &
   OmitProperties<LinkingNormalized, AnnotationPageOmittedLinking> & {
-    type: 'AnnotationPage';
+    type: "AnnotationPage";
   };

@@ -1,5 +1,5 @@
-import type { AudioResource, LanguageMap, Quantity } from './content-resources';
-import type { PointSelector, WktSelector } from './selectors';
+import type { AudioResource, LanguageMap, Quantity } from "./content-resources";
+import type { PointSelector, WktSelector } from "./selectors";
 
 export type LookAtTarget = PointSelector | WktSelector | { id: string; type: string };
 
@@ -11,7 +11,7 @@ export interface SceneComponentBase {
 }
 
 export interface PerspectiveCamera extends SceneComponentBase {
-  type: 'PerspectiveCamera';
+  type: "PerspectiveCamera";
   near?: number;
   far?: number;
   fieldOfView?: number;
@@ -20,7 +20,7 @@ export interface PerspectiveCamera extends SceneComponentBase {
 }
 
 export interface OrthographicCamera extends SceneComponentBase {
-  type: 'OrthographicCamera';
+  type: "OrthographicCamera";
   near?: number;
   far?: number;
   viewHeight?: number;
@@ -29,26 +29,26 @@ export interface OrthographicCamera extends SceneComponentBase {
 }
 
 export interface AmbientLight extends SceneComponentBase {
-  type: 'AmbientLight';
+  type: "AmbientLight";
   color?: string;
   intensity?: Quantity;
 }
 
 export interface DirectionalLight extends SceneComponentBase {
-  type: 'DirectionalLight';
+  type: "DirectionalLight";
   color?: string;
   intensity?: Quantity;
   lookAt?: LookAtTarget;
 }
 
 export interface PointLight extends SceneComponentBase {
-  type: 'PointLight';
+  type: "PointLight";
   color?: string;
   intensity?: Quantity;
 }
 
 export interface SpotLight extends SceneComponentBase {
-  type: 'SpotLight';
+  type: "SpotLight";
   color?: string;
   intensity?: Quantity;
   angle?: number;
@@ -56,20 +56,20 @@ export interface SpotLight extends SceneComponentBase {
 }
 
 export interface AmbientAudio extends SceneComponentBase {
-  type: 'AmbientAudio';
-  source: AudioResource | { id: string; type: 'Audio' | 'Sound' };
+  type: "AmbientAudio";
+  source: AudioResource | { id: string; type: "Audio" | "Sound" };
   volume?: Quantity;
 }
 
 export interface PointAudio extends SceneComponentBase {
-  type: 'PointAudio';
-  source: AudioResource | { id: string; type: 'Audio' | 'Sound' };
+  type: "PointAudio";
+  source: AudioResource | { id: string; type: "Audio" | "Sound" };
   volume?: Quantity;
 }
 
 export interface SpotAudio extends SceneComponentBase {
-  type: 'SpotAudio';
-  source: AudioResource | { id: string; type: 'Audio' | 'Sound' };
+  type: "SpotAudio";
+  source: AudioResource | { id: string; type: "Audio" | "Sound" };
   volume?: Quantity;
   angle?: number;
   lookAt?: LookAtTarget;

@@ -6,13 +6,13 @@ import type {
   ManifestNormalized,
   RangeNormalized,
   ResourceProviderNormalized,
-} from '../presentation-3-normalized/types';
-import { _ServiceNormalized } from './serialize';
-import { EMPTY } from './utilities';
+} from "../presentation-3-normalized/types";
+import { _ServiceNormalized } from "./serialize";
+import { EMPTY } from "./utilities";
 
 export const emptyAnnotation: AnnotationNormalized = {
-  id: 'https://iiif-parser/annotation',
-  type: 'Annotation',
+  id: "https://iiif-parser/annotation",
+  type: "Annotation",
   behavior: EMPTY,
   label: null,
   thumbnail: EMPTY,
@@ -43,8 +43,8 @@ export const emptyAnnotation: AnnotationNormalized = {
 };
 
 export const emptyAnnotationPage: AnnotationPageNormalized = {
-  id: 'https://iiif-parser/annotation-page',
-  type: 'AnnotationPage',
+  id: "https://iiif-parser/annotation-page",
+  type: "AnnotationPage",
   behavior: EMPTY,
   label: null,
   thumbnail: EMPTY,
@@ -61,8 +61,8 @@ export const emptyAnnotationPage: AnnotationPageNormalized = {
 };
 
 export const emptyCanvas: CanvasNormalized = {
-  id: 'https://iiif-parser/empty-canvas',
-  type: 'Canvas',
+  id: "https://iiif-parser/empty-canvas",
+  type: "Canvas",
   label: null,
   behavior: EMPTY,
   thumbnail: EMPTY,
@@ -87,10 +87,10 @@ export const emptyCanvas: CanvasNormalized = {
 };
 
 export const emptyCollection: CollectionNormalized = {
-  id: 'https://iiif-parser/empty-collection',
-  type: 'Collection',
+  id: "https://iiif-parser/empty-collection",
+  type: "Collection",
   label: null,
-  viewingDirection: 'left-to-right',
+  viewingDirection: "left-to-right",
   behavior: EMPTY,
   thumbnail: EMPTY,
   accompanyingCanvas: null,
@@ -112,8 +112,8 @@ export const emptyCollection: CollectionNormalized = {
 };
 
 export const emptyManifest: ManifestNormalized = {
-  id: 'https://iiif-parser/empty-manifest',
-  type: 'Manifest',
+  id: "https://iiif-parser/empty-manifest",
+  type: "Manifest",
   annotations: EMPTY,
   behavior: EMPTY,
   homepage: EMPTY,
@@ -135,12 +135,12 @@ export const emptyManifest: ManifestNormalized = {
   structures: EMPTY,
   summary: null,
   thumbnail: EMPTY,
-  viewingDirection: 'left-to-right',
+  viewingDirection: "left-to-right",
 };
 
 export const emptyRange: RangeNormalized = {
-  id: 'https://iiif-parser/empty-canvas',
-  type: 'Range',
+  id: "https://iiif-parser/empty-canvas",
+  type: "Range",
   label: null,
   behavior: EMPTY,
   thumbnail: EMPTY,
@@ -161,12 +161,12 @@ export const emptyRange: RangeNormalized = {
   service: EMPTY,
   start: null,
   supplementary: null,
-  viewingDirection: 'left-to-right',
+  viewingDirection: "left-to-right",
 };
 
 export const emptyAgent: ResourceProviderNormalized = {
-  id: 'https://iiif-parser/empty-agent',
-  type: 'Agent',
+  id: "https://iiif-parser/empty-agent",
+  type: "Agent",
   label: {},
   logo: EMPTY,
   seeAlso: EMPTY,
@@ -174,6 +174,6 @@ export const emptyAgent: ResourceProviderNormalized = {
 };
 
 export const emptyService: _ServiceNormalized = {
-  id: 'https://iiif-parser/empty-service',
-  type: 'UnknownService',
+  id: "https://iiif-parser/empty-service",
+  type: "UnknownService",
 } as any;

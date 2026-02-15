@@ -4,7 +4,7 @@ export interface SelectorBase {
 }
 
 export interface PointSelector extends SelectorBase {
-  type: 'PointSelector';
+  type: "PointSelector";
   x?: number;
   y?: number;
   z?: number;
@@ -12,22 +12,22 @@ export interface PointSelector extends SelectorBase {
 }
 
 export interface WktSelector extends SelectorBase {
-  type: 'WktSelector';
+  type: "WktSelector";
   value: string;
 }
 
 export interface FragmentSelector extends SelectorBase {
-  type: 'FragmentSelector';
+  type: "FragmentSelector";
   value: string;
 }
 
 export interface AnimationSelector extends SelectorBase {
-  type: 'AnimationSelector';
+  type: "AnimationSelector";
   value: string;
 }
 
 export interface ImageApiSelector extends SelectorBase {
-  type: 'ImageApiSelector';
+  type: "ImageApiSelector";
   region?: string;
   size?: string;
   rotation?: string;
@@ -36,15 +36,15 @@ export interface ImageApiSelector extends SelectorBase {
 }
 
 export interface AudioContentSelector extends SelectorBase {
-  type: 'AudioContentSelector';
+  type: "AudioContentSelector";
 }
 
 export interface VisualContentSelector extends SelectorBase {
-  type: 'VisualContentSelector';
+  type: "VisualContentSelector";
 }
 
 export interface CompositeSelector extends SelectorBase {
-  type: 'CompositeSelector' | 'ChoiceSelector';
+  type: "CompositeSelector" | "ChoiceSelector";
   selectors: Selector[];
 }
 

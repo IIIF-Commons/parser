@@ -1,108 +1,108 @@
 /// <reference types="geojson" />
 
-import { ContentResource } from '../resources/contentResource';
-import { Service } from '../resources/service';
+import { ContentResource } from "../resources/contentResource";
+import { Service } from "../resources/service";
 
 export type ImageServiceProfile =
-  | 'http://library.stanford.edu/iiif/image-api/compliance.html#level0'
-  | 'http://library.stanford.edu/iiif/image-api/compliance.html#level1'
-  | 'http://library.stanford.edu/iiif/image-api/compliance.html#level2'
-  | 'http://library.stanford.edu/iiif/image-api/conformance.html#level0'
-  | 'http://library.stanford.edu/iiif/image-api/conformance.html#level1'
-  | 'http://library.stanford.edu/iiif/image-api/conformance.html#level2'
-  | 'http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level0'
-  | 'http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level1'
-  | 'http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2'
-  | 'http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level0'
-  | 'http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1'
-  | 'http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level2'
-  | 'http://iiif.io/api/image/1/level0.json'
-  | 'http://iiif.io/api/image/1/profiles/level0.json'
-  | 'http://iiif.io/api/image/1/level1.json'
-  | 'http://iiif.io/api/image/1/profiles/level1.json'
-  | 'http://iiif.io/api/image/1/level2.json'
-  | 'http://iiif.io/api/image/1/profiles/level2.json'
-  | 'http://iiif.io/api/image/2/level0.json'
-  | 'http://iiif.io/api/image/2/profiles/level0.json'
-  | 'http://iiif.io/api/image/2/level1.json'
-  | 'http://iiif.io/api/image/2/profiles/level1.json'
-  | 'http://iiif.io/api/image/2/level2.json'
-  | 'http://iiif.io/api/image/2/profiles/level2.json'
-  | 'http://iiif.io/api/image/3/level0.json'
-  | 'http://iiif.io/api/image/3/level1.json'
-  | 'http://iiif.io/api/image/3/level2.json'
-  | 'level0'
-  | 'level1'
-  | 'level2';
+  | "http://library.stanford.edu/iiif/image-api/compliance.html#level0"
+  | "http://library.stanford.edu/iiif/image-api/compliance.html#level1"
+  | "http://library.stanford.edu/iiif/image-api/compliance.html#level2"
+  | "http://library.stanford.edu/iiif/image-api/conformance.html#level0"
+  | "http://library.stanford.edu/iiif/image-api/conformance.html#level1"
+  | "http://library.stanford.edu/iiif/image-api/conformance.html#level2"
+  | "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level0"
+  | "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level1"
+  | "http://library.stanford.edu/iiif/image-api/1.1/compliance.html#level2"
+  | "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level0"
+  | "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1"
+  | "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level2"
+  | "http://iiif.io/api/image/1/level0.json"
+  | "http://iiif.io/api/image/1/profiles/level0.json"
+  | "http://iiif.io/api/image/1/level1.json"
+  | "http://iiif.io/api/image/1/profiles/level1.json"
+  | "http://iiif.io/api/image/1/level2.json"
+  | "http://iiif.io/api/image/1/profiles/level2.json"
+  | "http://iiif.io/api/image/2/level0.json"
+  | "http://iiif.io/api/image/2/profiles/level0.json"
+  | "http://iiif.io/api/image/2/level1.json"
+  | "http://iiif.io/api/image/2/profiles/level1.json"
+  | "http://iiif.io/api/image/2/level2.json"
+  | "http://iiif.io/api/image/2/profiles/level2.json"
+  | "http://iiif.io/api/image/3/level0.json"
+  | "http://iiif.io/api/image/3/level1.json"
+  | "http://iiif.io/api/image/3/level2.json"
+  | "level0"
+  | "level1"
+  | "level2";
 
 /**
  * The base URI of the service will redirect to the image information document.
  */
-type BaseUriRedirect = 'baseUriRedirect';
+type BaseUriRedirect = "baseUriRedirect";
 /**
  * The canonical image URI HTTP link header is provided on image responses.
  */
-type CanonicalLinkHeader = 'canonicalLinkHeader';
+type CanonicalLinkHeader = "canonicalLinkHeader";
 /**
  * The CORS HTTP headers are provided on all responses.
  */
-type Cors = 'cors';
+type Cors = "cors";
 /**
  * The JSON-LD media type is provided when requested.
  */
-type JsonldMediaType = 'jsonldMediaType';
+type JsonldMediaType = "jsonldMediaType";
 /**
  * The image may be rotated around the vertical axis, resulting in a left-to-right mirroring of the content.
  */
-type Mirroring = 'mirroring';
+type Mirroring = "mirroring";
 /**
  * The profile HTTP link header is provided on image responses.
  */
-type ProfileLinkHeader = 'profileLinkHeader';
+type ProfileLinkHeader = "profileLinkHeader";
 /**
  * Regions of the full image may be requested by percentage.
  */
-type RegionByPct = 'regionByPct';
+type RegionByPct = "regionByPct";
 /**
  * Regions of the full image may be requested by pixel dimensions.
  */
-type RegionByPx = 'regionByPx';
+type RegionByPx = "regionByPx";
 /**
  * A square region may be requested, where the width and height are equal to the shorter dimension of the full image.
  */
-type RegionSquare = 'regionSquare';
+type RegionSquare = "regionSquare";
 /**
  * Image rotation may be requested using values other than multiples of 90 degrees.
  */
-type RotationArbitrary = 'rotationArbitrary';
+type RotationArbitrary = "rotationArbitrary";
 /**
  * Image rotation may be requested in multiples of 90 degrees.
  */
-type RotationBy90s = 'rotationBy90s';
+type RotationBy90s = "rotationBy90s";
 /**
  * Image size may be requested in the form !w,h.
  */
-type SizeByConfinedWh = 'sizeByConfinedWh';
+type SizeByConfinedWh = "sizeByConfinedWh";
 /**
  * Image size may be requested in the form ,h.
  */
-type SizeByH = 'sizeByH';
+type SizeByH = "sizeByH";
 /**
  * Images size may be requested in the form pct:n.
  */
-type SizeByPct = 'sizeByPct';
+type SizeByPct = "sizeByPct";
 /**
  * Image size may be requested in the form w,.
  */
-type SizeByW = 'sizeByW';
+type SizeByW = "sizeByW";
 /**
  * Image size may be requested in the form w,h.
  */
-type SizeByWh = 'sizeByWh';
+type SizeByWh = "sizeByWh";
 /**
  * Image sizes prefixed with ^ may be requested.
  */
-type SizeUpscaling = 'sizeUpscaling';
+type SizeUpscaling = "sizeUpscaling";
 
 export type Image3ExtraFeatures =
   | BaseUriRedirect
@@ -133,7 +133,7 @@ export type ImageSize = {
   /**
    * The type of the object. If present, the value must be the string Size.
    */
-  type?: 'Size';
+  type?: "Size";
   /**
    * The width in pixels of the image to be requested, given as an integer.
    */
@@ -153,7 +153,7 @@ export type ImageTile = {
   /**
    * The type of the object. If present, the value must be the string Tile.
    */
-  type?: 'Tile';
+  type?: "Tile";
   /**
    * The set of resolution scaling factors for the image’s predefined tiles, expressed as positive integers by which to
    * divide the full size of the image. For example, a scale factor of 4 indicates that the service can efficiently
@@ -184,9 +184,9 @@ export type ImageTile = {
 export type ImageProfile =
   | ImageServiceProfile
   | {
-      '@context'?: string;
-      '@type'?: 'iiif:ImageProfile';
-      type?: 'ImageProfile';
+      "@context"?: string;
+      "@type"?: "iiif:ImageProfile";
+      type?: "ImageProfile";
       formats?: string[];
       qualities?: string[];
       supports?: string[];
@@ -196,9 +196,9 @@ export type ImageProfile =
     };
 
 export interface ImageService2 {
-  '@context'?: string | string[];
-  '@id': string;
-  '@type': 'ImageService2';
+  "@context"?: string | string[];
+  "@id": string;
+  "@type": "ImageService2";
   profile: ImageProfile | ImageProfile[];
   protocol?: string;
   width?: number | null;
@@ -218,7 +218,7 @@ export interface ImageService3 {
    * interpret the image information. If extensions are used then their context definitions should be included in
    * this top-level @context property.
    */
-  '@context'?: string | string[];
+  "@context"?: string | string[];
 
   /**
    * The base URI of the image as defined in URI Syntax, including scheme, server, prefix and identifier without a
@@ -229,13 +229,13 @@ export interface ImageService3 {
   /**
    * The type for the Image API. The value must be the string ImageService3.
    */
-  type: 'ImageService3';
+  type: "ImageService3";
 
   /**
    * A string indicating the highest compliance level which is fully supported by the service. The value must be one of
    * level0, level1, or level2.
    */
-  profile: 'level0' | 'level1' | 'level2';
+  profile: "level0" | "level1" | "level2";
 
   /**
    * The URI http://iiif.io/api/image which can be used to determine that the document describes an image service which
@@ -338,11 +338,11 @@ export interface ImageService {
    * interpret the image information. If extensions are used then their context definitions should be included in
    * this top-level @context property.
    */
-  '@context'?: string | string[];
-  '@id'?: string;
+  "@context"?: string | string[];
+  "@id"?: string;
   id: string;
-  type?: 'ImageService1' | 'ImageService2' | 'ImageService3';
-  '@type'?: 'ImageService1' | 'ImageService2' | 'ImageService3';
+  type?: "ImageService1" | "ImageService2" | "ImageService3";
+  "@type"?: "ImageService1" | "ImageService2" | "ImageService3";
   profile: ImageProfile | ImageProfile[];
   protocol?: string;
   width?: number | null;

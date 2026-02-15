@@ -1,41 +1,46 @@
-import { TechnicalProperties } from '../iiif/technical';
-import { DescriptiveProperties } from '../iiif/descriptive';
-import { LinkingProperties } from '../iiif/linking';
-import { LiteralUnion, OmitProperties, Prettify, SomeRequired } from '../utility';
-import { ContentResource, ContentResourceString } from './contentResource';
-import { TextGranularityExtension } from '../extensions/text-granularity';
+import { TechnicalProperties } from "../iiif/technical";
+import { DescriptiveProperties } from "../iiif/descriptive";
+import { LinkingProperties } from "../iiif/linking";
+import { LiteralUnion, OmitProperties, Prettify, SomeRequired } from "../utility";
+import { ContentResource, ContentResourceString } from "./contentResource";
+import { TextGranularityExtension } from "../extensions/text-granularity";
 
 export type AnnotationOmittedTechnical =
-  | 'format'
-  | 'profile'
-  | 'height'
-  | 'width'
-  | 'duration'
-  | 'viewingDirection'
-  | 'motivation';
-export type AnnotationOmittedDescriptive = 'accompanyingCanvas' | 'placeholderCanvas' | 'navDate' | 'language' | 'rights';
-export type AnnotationOmittedLinking = 'services' | 'start' | 'supplementary';
+  | "format"
+  | "profile"
+  | "height"
+  | "width"
+  | "duration"
+  | "viewingDirection"
+  | "motivation";
+export type AnnotationOmittedDescriptive =
+  | "accompanyingCanvas"
+  | "placeholderCanvas"
+  | "navDate"
+  | "language"
+  | "rights";
+export type AnnotationOmittedLinking = "services" | "start" | "supplementary";
 
 export type AnnotationTechnical = OmitProperties<TechnicalProperties, AnnotationOmittedTechnical>;
 export type AnnotationDescriptive = OmitProperties<DescriptiveProperties, AnnotationOmittedDescriptive>;
 export type AnnotationLinking = OmitProperties<LinkingProperties, AnnotationOmittedLinking>;
 
 export type W3CMotivation =
-  | 'assessing'
-  | 'bookmarking'
-  | 'classifying'
-  | 'commenting'
-  | 'describing'
-  | 'editing'
-  | 'highlighting'
-  | 'identifying'
-  | 'linking'
-  | 'moderating'
-  | 'questioning'
-  | 'replying'
-  | 'tagging'
+  | "assessing"
+  | "bookmarking"
+  | "classifying"
+  | "commenting"
+  | "describing"
+  | "editing"
+  | "highlighting"
+  | "identifying"
+  | "linking"
+  | "moderating"
+  | "questioning"
+  | "replying"
+  | "tagging"
   // Search2
-  | 'contextualizing';
+  | "contextualizing";
 
 export type AnyMotivation = LiteralUnion<W3CMotivation>;
 
@@ -65,23 +70,23 @@ export type ResourceBaseProperties = Prettify<
   }
 >;
 
-export type ExternalResourceTypes = 'Dataset' | 'Image' | 'Video' | 'Sound' | 'Text';
+export type ExternalResourceTypes = "Dataset" | "Image" | "Video" | "Sound" | "Text";
 
 export type ExternalWebResource = Prettify<
   ResourceBaseProperties & {
     id?: string;
-    type: 'Dataset' | 'Image' | 'Video' | 'Sound' | 'Text';
+    type: "Dataset" | "Image" | "Video" | "Sound" | "Text";
     format?: string;
     language?: string | string[];
     processingLanguage?: string;
-    textDirection?: 'ltr' | 'rtl' | 'auto';
+    textDirection?: "ltr" | "rtl" | "auto";
   }
 >;
 
 export type EmbeddedResource = Prettify<
   ResourceBaseProperties & {
     id?: string;
-    type: 'TextualBody';
+    type: "TextualBody";
     purpose?: string | string[];
     value?: string;
     language?: string | string[];
@@ -92,7 +97,7 @@ export type EmbeddedResource = Prettify<
 export type SpecificResource<Type = LinkedResource> = Prettify<
   ResourceBaseProperties & {
     id?: string;
-    type: 'SpecificResource';
+    type: "SpecificResource";
     state?: State | State[];
     purpose?: AnyMotivation | AnyMotivation[];
     source?: Type;
@@ -120,7 +125,7 @@ export type RefinedBy = {
 
 export type FragmentSelector = Prettify<
   RefinedBy & {
-    type: 'FragmentSelector';
+    type: "FragmentSelector";
     value: string;
     conformsTo?: string;
   }
@@ -128,19 +133,19 @@ export type FragmentSelector = Prettify<
 
 export type CssSelector = Prettify<
   RefinedBy & {
-    type: 'CssSelector';
+    type: "CssSelector";
     value: string;
   }
 >;
 export type XPathSelector = Prettify<
   RefinedBy & {
-    type: 'XPathSelector';
+    type: "XPathSelector";
     value: string;
   }
 >;
 export type TextQuoteSelector = Prettify<
   RefinedBy & {
-    type: 'TextQuoteSelector';
+    type: "TextQuoteSelector";
     exact: string;
     prefix?: string;
     suffix?: string;
@@ -148,14 +153,14 @@ export type TextQuoteSelector = Prettify<
 >;
 export type TextPositionSelector = Prettify<
   RefinedBy & {
-    type: 'TextPositionSelector';
+    type: "TextPositionSelector";
     start: number;
     end: number;
   }
 >;
 export type DataPositionSelector = Prettify<
   RefinedBy & {
-    type: 'DataPositionSelector';
+    type: "DataPositionSelector";
     start: number;
     end: number;
   }
@@ -163,17 +168,17 @@ export type DataPositionSelector = Prettify<
 export type SvgSelector =
   | Prettify<
       RefinedBy & {
-        type: 'SvgSelector';
+        type: "SvgSelector";
         value: string;
       }
     >
   | {
-      type: 'SvgSelector';
+      type: "SvgSelector";
       id: string;
     };
 
 export type RangeSelector<T> = {
-  type: 'RangeSelector';
+  type: "RangeSelector";
   startSelector: T;
   endSelector: T;
 };
@@ -195,7 +200,7 @@ export type RangeSelector<T> = {
  * that requires rotation before display.
  */
 export type ImageApiSelector = {
-  type: 'ImageApiSelector';
+  type: "ImageApiSelector";
   /**
    * The string to put in the region parameter of the URI.
    * Default: "full"
@@ -241,7 +246,7 @@ export type ImageApiSelector = {
  * called PointSelector.
  */
 export type PointSelector = {
-  type: 'PointSelector';
+  type: "PointSelector";
   /**
    * Optional. An integer giving the x coordinate of the point, relative to the dimensions of the target resource.
    */
@@ -258,11 +263,11 @@ export type PointSelector = {
 };
 
 export type AudioContentSelector = {
-  type: 'AudioContentSelector';
+  type: "AudioContentSelector";
 };
 
 export type VisualContentSelector = {
-  type: 'VisualContentSelector';
+  type: "VisualContentSelector";
 };
 
 export type Selector =
@@ -310,14 +315,14 @@ export type RefinedByState = {
 export type TimeState =
   | Prettify<
       RefinedByState & {
-        type: 'TimeState';
+        type: "TimeState";
         sourceDate: string | string[];
         cached?: string | string[];
       }
     >
   | Prettify<
       RefinedByState & {
-        type: 'TimeState';
+        type: "TimeState";
         sourceDateStart: string;
         sourceDateEnd: string;
         cached?: string | string[];
@@ -326,7 +331,7 @@ export type TimeState =
 
 export type RequestHeaderState = Prettify<
   RefinedByState & {
-    type: 'HttpRequestState';
+    type: "HttpRequestState";
     value: string;
   }
 >;
@@ -334,22 +339,22 @@ export type RequestHeaderState = Prettify<
 export type Stylesheet =
   | {
       id: string;
-      type: 'CssStylesheet';
+      type: "CssStylesheet";
     }
   | {
-      type: 'CssStylesheet';
+      type: "CssStylesheet";
       format?: string;
       value?: string | string[];
     };
 
 export type ChoiceBody = {
   id?: string;
-  type: 'Choice';
+  type: "Choice";
   items: Body[];
 };
 
 export type ChoiceTarget = {
-  type: 'Choice';
+  type: "Choice";
   items: Target[];
 };
 
@@ -362,27 +367,27 @@ export type AnnotationBody = ChoiceBody | ContentResource | ContentResourceStrin
 export type AnnotationTarget = W3CAnnotationTarget | ContentResource | ContentResourceString;
 
 export type TargetComposite = {
-  type: 'Composite';
+  type: "Composite";
   items: Array<Target | string>;
 };
 export type TargetList = {
-  type: 'List';
+  type: "List";
   items: Array<Target | string>;
 };
 export type TargetIndependents = {
-  type: 'Independents';
+  type: "Independents";
   items: Array<Target | string>;
 };
 
 export type Audience = {
   id: string;
-  type: 'Audience' | string;
+  type: "Audience" | string;
   [T: string]: string;
 };
 
 export type Agent = {
   id?: string;
-  type?: 'Person' | 'Organisation' | 'Software';
+  type?: "Person" | "Organisation" | "Software";
   name?: string | string[];
   nickname?: string;
   account?: string;
@@ -390,12 +395,12 @@ export type Agent = {
   email_sha1?: string;
   homepage?: string | string[];
   // ?
-  'schema:softwareVersion'?: any;
+  "schema:softwareVersion"?: any;
 };
 
 export type AnnotationW3C = Prettify<
   OtherProperties & {
-    '@context'?: 'http://www.w3.org/ns/anno.jsonld';
+    "@context"?: "http://www.w3.org/ns/anno.jsonld";
     body?: W3CAnnotationBody | W3CAnnotationBody[];
     bodyValue?: string;
     target?: W3CAnnotationTarget | W3CAnnotationTarget[];
@@ -406,12 +411,12 @@ export type AnnotationW3C = Prettify<
 >;
 
 export type Annotation = Prettify<
-  SomeRequired<AnnotationTechnical, 'id' | 'type'> &
+  SomeRequired<AnnotationTechnical, "id" | "type"> &
     Partial<AnnotationDescriptive> &
     Partial<AnnotationLinking> &
-    Partial<OmitProperties<AnnotationW3C, 'body' | 'target'>> &
+    Partial<OmitProperties<AnnotationW3C, "body" | "target">> &
     TextGranularityExtension & {
-      type: 'Annotation';
+      type: "Annotation";
       body?: AnnotationBody | AnnotationBody[];
       target?: AnnotationTarget | AnnotationTarget[];
     }

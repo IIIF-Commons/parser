@@ -6,12 +6,12 @@ import type {
   ResourceReference,
   ServiceReference,
   SpecificResource,
-} from './content-resources';
-import type { ActivatingAnnotation, ContentStateAnnotation } from './extended-properties';
+} from "./content-resources";
+import type { ActivatingAnnotation, ContentStateAnnotation } from "./extended-properties";
 
 export interface Annotation {
   id: string;
-  type: 'Annotation';
+  type: "Annotation";
   motivation?: string[];
   body?: Array<ContentResourceLike | ResourceReference | string>;
   target: Array<SpecificResource | ResourceReference | string>;
@@ -22,7 +22,7 @@ export interface Annotation {
 
 export interface AnnotationPage {
   id: string;
-  type: 'AnnotationPage';
+  type: "AnnotationPage";
   items: Annotation[];
   label?: LanguageMap;
   [key: string]: unknown;
@@ -30,7 +30,7 @@ export interface AnnotationPage {
 
 export interface AnnotationCollection {
   id: string;
-  type: 'AnnotationCollection';
+  type: "AnnotationCollection";
   items: Annotation[];
   label?: LanguageMap;
   [key: string]: unknown;
@@ -38,7 +38,7 @@ export interface AnnotationCollection {
 
 export interface Agent {
   id: string;
-  type: 'Agent';
+  type: "Agent";
   label?: LanguageMap;
   logo?: Array<ContentResourceLike | ResourceReference>;
   seeAlso?: Array<ContentResourceLike | ResourceReference>;
@@ -49,9 +49,9 @@ export interface Agent {
 
 export interface Range {
   id: string;
-  type: 'Range';
+  type: "Range";
   label?: LanguageMap;
-  items?: Array<ResourceReference<'Range' | 'Canvas' | 'Scene' | 'Timeline'> | SpecificResource>;
+  items?: Array<ResourceReference<"Range" | "Canvas" | "Scene" | "Timeline"> | SpecificResource>;
   behavior?: string[];
   [key: string]: unknown;
 }
@@ -74,26 +74,26 @@ interface ContainerBase {
   services?: ServiceReference[];
   homepage?: Array<ContentResourceLike | ResourceReference>;
   rendering?: Array<ContentResourceLike | ResourceReference>;
-  partOf?: Array<ResourceReference<'Collection' | 'Manifest'>>;
+  partOf?: Array<ResourceReference<"Collection" | "Manifest">>;
   structures?: Range[];
   annotations?: AnnotationPage[];
-  placeholderContainer?: ResourceReference<'Timeline' | 'Canvas' | 'Scene'> | null;
-  accompanyingContainer?: ResourceReference<'Timeline' | 'Canvas' | 'Scene'> | null;
+  placeholderContainer?: ResourceReference<"Timeline" | "Canvas" | "Scene"> | null;
+  accompanyingContainer?: ResourceReference<"Timeline" | "Canvas" | "Scene"> | null;
   [key: string]: unknown;
 }
 
 export interface Timeline extends ContainerBase {
-  type: 'Timeline';
+  type: "Timeline";
   duration: number;
-  items?: Array<AnnotationPage | ResourceReference<'AnnotationPage' | 'Canvas' | 'Scene' | 'Timeline'>>;
+  items?: Array<AnnotationPage | ResourceReference<"AnnotationPage" | "Canvas" | "Scene" | "Timeline">>;
 }
 
 export interface Canvas extends ContainerBase {
-  type: 'Canvas';
+  type: "Canvas";
   width: number;
   height: number;
   duration?: number;
-  items?: Array<AnnotationPage | ResourceReference<'AnnotationPage' | 'Canvas' | 'Scene' | 'Timeline'>>;
+  items?: Array<AnnotationPage | ResourceReference<"AnnotationPage" | "Canvas" | "Scene" | "Timeline">>;
   spatialScale?: Quantity | null;
   timeMode?: string | null;
   viewingDirection?: string;
@@ -101,22 +101,22 @@ export interface Canvas extends ContainerBase {
 }
 
 export interface Scene extends ContainerBase {
-  type: 'Scene';
+  type: "Scene";
   duration?: number;
-  items?: Array<AnnotationPage | ResourceReference<'AnnotationPage' | 'Canvas' | 'Scene' | 'Timeline'>>;
+  items?: Array<AnnotationPage | ResourceReference<"AnnotationPage" | "Canvas" | "Scene" | "Timeline">>;
   spatialScale?: Quantity | null;
   backgroundColor?: string | null;
 }
 
 export interface Collection extends ContainerBase {
-  type: 'Collection';
-  items?: Array<ResourceReference<'Collection' | 'Manifest'>>;
+  type: "Collection";
+  items?: Array<ResourceReference<"Collection" | "Manifest">>;
 }
 
 export interface Manifest extends ContainerBase {
-  type: 'Manifest';
-  items: Array<Canvas | Scene | Timeline | ResourceReference<'Canvas' | 'Scene' | 'Timeline'>>;
-  start?: SpecificResource | ResourceReference<'Canvas' | 'Scene' | 'Timeline'> | null;
+  type: "Manifest";
+  items: Array<Canvas | Scene | Timeline | ResourceReference<"Canvas" | "Scene" | "Timeline">>;
+  start?: SpecificResource | ResourceReference<"Canvas" | "Scene" | "Timeline"> | null;
   viewingDirection?: string;
 }
 

@@ -14,617 +14,728 @@ type DocDefinition = {
 const root = "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/";
 
 const definedTypes: Record<string, DocDefinition> = {
-  "Agent": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Agent",
-    "summary": "An Agent represents a person or organization, typically referenced with the provider property. Note that Agent is NOT an abstract class with subclasses, and thus should be instantiated directly.",
-    "title": "Agent"
+  Agent: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Agent",
+    summary:
+      "An Agent represents a person or organization, typically referenced with the provider property. Note that Agent is NOT an abstract class with subclasses, and thus should be instantiated directly.",
+    title: "Agent",
   },
-  "AmbientAudio": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AmbientAudio",
-    "summary": "Ambient Audio emits equally throughout the Scene, and does not have a position or direction. The Emitter must be annotated somewhere within the Scene so that it can be rendered by editing interfaces, and exists within the Scene’s hierarchy.",
-    "title": "Ambient Audio"
+  AmbientAudio: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AmbientAudio",
+    summary:
+      "Ambient Audio emits equally throughout the Scene, and does not have a position or direction. The Emitter must be annotated somewhere within the Scene so that it can be rendered by editing interfaces, and exists within the Scene’s hierarchy.",
+    title: "Ambient Audio",
   },
-  "AmbientLight": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AmbientLight",
-    "summary": "Ambient Light evenly illuminates all objects in the Scene, and does not have a direction or position. It does not have any new properties. The Light itself must be added into the scene at a specific position, however this is only such that editing interfaces can render the object to the user.",
-    "title": "Ambient Light"
+  AmbientLight: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AmbientLight",
+    summary:
+      "Ambient Light evenly illuminates all objects in the Scene, and does not have a direction or position. It does not have any new properties. The Light itself must be added into the scene at a specific position, however this is only such that editing interfaces can render the object to the user.",
+    title: "Ambient Light",
   },
-  "AnimationSelector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AnimationSelector",
-    "summary": "More interactive content resources, such as 3D models, may have animations or similar features that can be activated by user interaction. For example, a model of a box might have an animation that opens the lid and a second animation that closes the lid. In order to activate those animations, they need to be selectable, and thus the specification defines an Animation Selector. The identity of the activatable aspect is given in the value property.",
-    "title": "Animation Selector"
+  AnimationSelector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AnimationSelector",
+    summary:
+      "More interactive content resources, such as 3D models, may have animations or similar features that can be activated by user interaction. For example, a model of a box might have an animation that opens the lid and a second animation that closes the lid. In order to activate those animations, they need to be selectable, and thus the specification defines an Animation Selector. The identity of the activatable aspect is given in the value property.",
+    title: "Animation Selector",
   },
-  "Annotation": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Annotation",
-    "summary": "Annotations are used to associate content resources with Containers, as well as for transcriptions, commentary, tags and the association of other content. This provides a single, unified method for aligning information, and provides a standards-based framework for distinguishing parts of resources and parts of Canvases.",
-    "title": "Annotation"
+  Annotation: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Annotation",
+    summary:
+      "Annotations are used to associate content resources with Containers, as well as for transcriptions, commentary, tags and the association of other content. This provides a single, unified method for aligning information, and provides a standards-based framework for distinguishing parts of resources and parts of Canvases.",
+    title: "Annotation",
   },
-  "AnnotationCollection": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AnnotationCollection",
-    "summary": "Annotation Collections allow Annotations to collected together into ordered groups. For example, all of the English translation Annotations of a medieval French document could be kept separate from the transcription or an edition in modern French, or the director’s commentary on a film can be separated from the script.",
-    "title": "Annotation Collection"
+  AnnotationCollection: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AnnotationCollection",
+    summary:
+      "Annotation Collections allow Annotations to collected together into ordered groups. For example, all of the English translation Annotations of a medieval French document could be kept separate from the transcription or an edition in modern French, or the director’s commentary on a film can be separated from the script.",
+    title: "Annotation Collection",
   },
-  "AnnotationPage": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AnnotationPage",
-    "summary": "An ordered list of Annotations, typically associated with a Container, but may be referenced from other types of resource as well. Annotation Pages enumerate and order lists of Annotations, in the same way that Collection Pages order lists of Manifests and Collections within the containing Collection.",
-    "title": "Annotation Page"
+  AnnotationPage: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AnnotationPage",
+    summary:
+      "An ordered list of Annotations, typically associated with a Container, but may be referenced from other types of resource as well. Annotation Pages enumerate and order lists of Annotations, in the same way that Collection Pages order lists of Manifests and Collections within the containing Collection.",
+    title: "Annotation Page",
   },
-  "AudioContentSelector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AudioContentSelector",
-    "summary": "Video content resources consist of both visual and audio content within the same bit-level representation. There are situations when it is useful to refer to only one aspect of the content – either the visual or the audio, but not both. For example, an Annotation might associate only the visual content of a video that has spoken English in the audio, and an audio file that has the translation of that content in Spanish. The Audio Content Selector selects all of the audio content from an A/V content resource, and may be further refined with subsequent selectors to select a segment of it, using refinedBy .",
-    "title": "Audio Content Selector"
+  AudioContentSelector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AudioContentSelector",
+    summary:
+      "Video content resources consist of both visual and audio content within the same bit-level representation. There are situations when it is useful to refer to only one aspect of the content – either the visual or the audio, but not both. For example, an Annotation might associate only the visual content of a video that has spoken English in the audio, and an audio file that has the translation of that content in Spanish. The Audio Content Selector selects all of the audio content from an A/V content resource, and may be further refined with subsequent selectors to select a segment of it, using refinedBy .",
+    title: "Audio Content Selector",
   },
-  "AudioEmitters": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AudioEmitters",
-    "summary": "Audio is supported through the use of Audio Emitter resources annotated into Scenes, in the same way that light is emitted from the various subclasses of Light. AudioEmitter is also an abstract class, and thus must not be directly instantiated.",
-    "title": "Audio Emitters"
+  AudioEmitters: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#AudioEmitters",
+    summary:
+      "Audio is supported through the use of Audio Emitter resources annotated into Scenes, in the same way that light is emitted from the various subclasses of Light. AudioEmitter is also an abstract class, and thus must not be directly instantiated.",
+    title: "Audio Emitters",
   },
-  "Camera": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Camera",
-    "summary": "A Camera provides a view of a region of a Scene’s space from a particular position within the Scene; the client constructs a viewport into the Scene and uses the Camera to render that region. The size and aspect ratio of the viewport is client and device dependent. The first Camera defined in a Scene without the hidden behavior is the default Camera. Camera is an abstract class and must not be instantiated directly.",
-    "title": "Cameras"
+  Camera: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Camera",
+    summary:
+      "A Camera provides a view of a region of a Scene’s space from a particular position within the Scene; the client constructs a viewport into the Scene and uses the Camera to render that region. The size and aspect ratio of the viewport is client and device dependent. The first Camera defined in a Scene without the hidden behavior is the default Camera. Camera is an abstract class and must not be instantiated directly.",
+    title: "Cameras",
   },
-  "Canvas": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Canvas",
-    "summary": "A Canvas is a Container that represents a particular rectangular 2 dimensional view and has content resources associated with it or with parts of it. This aspect ratio is defined by the height and width properties. The values of these properties are not pixels, but arbitrary square units into which pixel-based resources can be scaled. A Canvas may also have a duration, given in the duration property, allowing audio and video to be correctly positioned in time as well as in the 2 dimensional space.",
-    "title": "Canvas"
+  Canvas: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Canvas",
+    summary:
+      "A Canvas is a Container that represents a particular rectangular 2 dimensional view and has content resources associated with it or with parts of it. This aspect ratio is defined by the height and width properties. The values of these properties are not pixels, but arbitrary square units into which pixel-based resources can be scaled. A Canvas may also have a duration, given in the duration property, allowing audio and video to be correctly positioned in time as well as in the 2 dimensional space.",
+    title: "Canvas",
   },
-  "Choice": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Choice",
-    "summary": "A Choice is a Web Annotation construction that allows one entry from a list to be selected for processing or display. The client may use any method to determine which item to select, including presenting the Choice to the user for a decision or using the properties of the items to make the decision. In the absence of any information, the client should select the first item in the array and publishers should list the items in order of preference. This specification allows behavior and other properties to be added to a Choice to influence how it is processed.",
-    "title": "Choice"
+  Choice: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Choice",
+    summary:
+      "A Choice is a Web Annotation construction that allows one entry from a list to be selected for processing or display. The client may use any method to determine which item to select, including presenting the Choice to the user for a decision or using the properties of the items to make the decision. In the absence of any information, the client should select the first item in the array and publishers should list the items in order of preference. This specification allows behavior and other properties to be added to a Choice to influence how it is processed.",
+    title: "Choice",
   },
-  "Collection": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Collection",
-    "summary": "A Collection is an ordered list of Manifests, and/or Collections, called the members of the Collection.",
-    "title": "Collection"
+  Collection: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Collection",
+    summary: "A Collection is an ordered list of Manifests, and/or Collections, called the members of the Collection.",
+    title: "Collection",
   },
-  "CollectionPage": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#CollectionPage",
-    "summary": "A Collection Page is an arbitrary division of members within the Collection to make it easier to consume by clients. It is strictly a technical affordance, and individual Collection Pages do not represent any real world set of items. The Collection Page model follows the ActivityStreams OrderedCollection model, as also used in Annotation Collections, the IIIF Change Discovery API, and the IIIF Search API.",
-    "title": "Collection Page"
+  CollectionPage: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#CollectionPage",
+    summary:
+      "A Collection Page is an arbitrary division of members within the Collection to make it easier to consume by clients. It is strictly a technical affordance, and individual Collection Pages do not represent any real world set of items. The Collection Page model follows the ActivityStreams OrderedCollection model, as also used in Annotation Collections, the IIIF Change Discovery API, and the IIIF Search API.",
+    title: "Collection Page",
   },
-  "DirectionalLight": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#DirectionalLight",
-    "summary": "Directional Lights emit their light in a specific direction as if infinitely far away, and as such the light does not come from a specific position. The rays produced are all parallel. The Light itself must be added into the scene at a specific position, however this is only such that editing interfaces can render the object to the user.",
-    "title": "Directional Light"
+  DirectionalLight: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#DirectionalLight",
+    summary:
+      "Directional Lights emit their light in a specific direction as if infinitely far away, and as such the light does not come from a specific position. The rays produced are all parallel. The Light itself must be added into the scene at a specific position, however this is only such that editing interfaces can render the object to the user.",
+    title: "Directional Light",
   },
-  "FragmentSelector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#FragmentSelector",
-    "summary": "Fragment Selectors use the fragment part of the URI specification to define a selection mechanism for parts of resources. The definition of the representation’s media type specifies the structure of the value of the fragment. This is commonly used in IIIF to include the media fragment syntax of xywh=<x>,<y>,<width>,<height> to define a 2 dimension region.",
-    "title": "FragmentSelector"
+  FragmentSelector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#FragmentSelector",
+    summary:
+      "Fragment Selectors use the fragment part of the URI specification to define a selection mechanism for parts of resources. The definition of the representation’s media type specifies the structure of the value of the fragment. This is commonly used in IIIF to include the media fragment syntax of xywh=<x>,<y>,<width>,<height> to define a 2 dimension region.",
+    title: "FragmentSelector",
   },
-  "ImageApiSelector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#ImageApiSelector",
-    "summary": "The Image API Selector is used to describe the operations expected to occur via the definitions of the IIIF Image API. This can be used with IIIF Image API services in order to retrieve a particular image representation, but also can be applied client side on static images, such as to process rotation via CSS. In this case the resource is the abstract image as identified by the [IIIF Image API][image-api] base URI plus identifier, and the retrieval process involves adding the correct parameters after that base URI.",
-    "title": "IIIF Image API Selector"
+  ImageApiSelector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#ImageApiSelector",
+    summary:
+      "The Image API Selector is used to describe the operations expected to occur via the definitions of the IIIF Image API. This can be used with IIIF Image API services in order to retrieve a particular image representation, but also can be applied client side on static images, such as to process rotation via CSS. In this case the resource is the abstract image as identified by the [IIIF Image API][image-api] base URI plus identifier, and the retrieval process involves adding the correct parameters after that base URI.",
+    title: "IIIF Image API Selector",
   },
-  "Light": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Light",
-    "summary": "It is necessary for there to be a Light within a Scene that illuminates the objects. If no Light is provided by the Scene’s description, then the client must provide default lighting. Light is an abstract class and must not be instantiated directly.",
-    "title": "Lights"
+  Light: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Light",
+    summary:
+      "It is necessary for there to be a Light within a Scene that illuminates the objects. If no Light is provided by the Scene’s description, then the client must provide default lighting. Light is an abstract class and must not be instantiated directly.",
+    title: "Lights",
   },
-  "Manifest": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Manifest",
-    "summary": "A Manifest is the primary unit of distribution of IIIF and provides a description of the structure and properties of a single item to be presented to the user.",
-    "title": "Manifest"
+  Manifest: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Manifest",
+    summary:
+      "A Manifest is the primary unit of distribution of IIIF and provides a description of the structure and properties of a single item to be presented to the user.",
+    title: "Manifest",
   },
-  "OrthographicCamera": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#OrthographicCamera",
-    "summary": "An Orthographic Camera removes visual perspective, resulting in object size remaining constant regardless of its distance from the camera.",
-    "title": "Orthographic Camera"
+  OrthographicCamera: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#OrthographicCamera",
+    summary:
+      "An Orthographic Camera removes visual perspective, resulting in object size remaining constant regardless of its distance from the camera.",
+    title: "Orthographic Camera",
   },
-  "PerspectiveCamera": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#PerspectiveCamera",
-    "summary": "A Perspective Camera mimics the way the human eye sees, in that objects further from the camera are presented as being smaller.",
-    "title": "Perspective Camera"
+  PerspectiveCamera: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#PerspectiveCamera",
+    summary:
+      "A Perspective Camera mimics the way the human eye sees, in that objects further from the camera are presented as being smaller.",
+    title: "Perspective Camera",
   },
-  "PointAudio": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#PointAudio",
-    "summary": "Point Audio emits in all directions from a single point in the Scene.",
-    "title": "Point Audio"
+  PointAudio: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#PointAudio",
+    summary: "Point Audio emits in all directions from a single point in the Scene.",
+    title: "Point Audio",
   },
-  "PointLight": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#PointLight",
-    "summary": "Point Lights emit in all directions from a single point within the Scene.",
-    "title": "Point Light"
+  PointLight: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#PointLight",
+    summary: "Point Lights emit in all directions from a single point within the Scene.",
+    title: "Point Light",
   },
-  "PointSelector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#PointSelector",
-    "summary": "There are common use cases in which a point, rather than a range or area, is the target of the Annotation. For example, putting a pin in a map should result in an exact point, not a very small rectangle. Points in time are not very short durations, and user interfaces should, equally, treat these differently. This is particularly important when zooming in (either spatially or temporally) beyond the scale of the frame of reference.",
-    "title": "Point Selector"
+  PointSelector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#PointSelector",
+    summary:
+      "There are common use cases in which a point, rather than a range or area, is the target of the Annotation. For example, putting a pin in a map should result in an exact point, not a very small rectangle. Points in time are not very short durations, and user interfaces should, equally, treat these differently. This is particularly important when zooming in (either spatially or temporally) beyond the scale of the frame of reference.",
+    title: "Point Selector",
   },
-  "Quantity": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Quantity",
-    "summary": "A Quantity expresses a quantity through a numerical value and associated unit of measurement. The value of unit must be drawn from the list of possible units, or a registered extension. The definition of unit defines the list of possible unit values .",
-    "title": "Quantity"
+  Quantity: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Quantity",
+    summary:
+      "A Quantity expresses a quantity through a numerical value and associated unit of measurement. The value of unit must be drawn from the list of possible units, or a registered extension. The definition of unit defines the list of possible unit values .",
+    title: "Quantity",
   },
-  "Range": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Range",
-    "summary": "Ranges are used to represent structure within a Manifest beyond the default order of the Containers in the items property.",
-    "title": "Range"
+  Range: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Range",
+    summary:
+      "Ranges are used to represent structure within a Manifest beyond the default order of the Containers in the items property.",
+    title: "Range",
   },
-  "RotateTransform": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#RotateTransform",
-    "summary": "A Rotate Transform rotates the resource around one or more axes. If present, the values of properties x , y , and z must be angular values in degrees that specify the extent of rotation around each axis. Positive angular values indicate counter-clockwise rotation around the axis due to coordinate right-handedness. Axis rotation is performed with a pivot point at the origin of the local coordinate space. As an example, for a point at (1, 1, 0) in local coordinate space, rotating 90 degrees around the x axis would transform the point to be at (1, 0, 1). If any property x , y , or z is not specified or is specified to be 0.0, rotation around that axis does not occur. When more than one axis rotation is specified through multiple non-zero values for x , y , and z , rotations comprise a Euler angle with ordering x-y-z, and rotation must be carried out first around the x axis, second around the y axis, and third around the z axis.",
-    "title": "Rotate Transform"
+  RotateTransform: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#RotateTransform",
+    summary:
+      "A Rotate Transform rotates the resource around one or more axes. If present, the values of properties x , y , and z must be angular values in degrees that specify the extent of rotation around each axis. Positive angular values indicate counter-clockwise rotation around the axis due to coordinate right-handedness. Axis rotation is performed with a pivot point at the origin of the local coordinate space. As an example, for a point at (1, 1, 0) in local coordinate space, rotating 90 degrees around the x axis would transform the point to be at (1, 0, 1). If any property x , y , or z is not specified or is specified to be 0.0, rotation around that axis does not occur. When more than one axis rotation is specified through multiple non-zero values for x , y , and z , rotations comprise a Euler angle with ordering x-y-z, and rotation must be carried out first around the x axis, second around the y axis, and third around the z axis.",
+    title: "Rotate Transform",
   },
-  "ScaleTransform": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#ScaleTransform",
-    "summary": "A Scale Transform scales the resource along one or more axes. If present, the values of properties x , y , and z must be multiplicative scale factors that specify the extent of scaling along each axis. As an example, for a point at 3.5 along the x axis in local coordinate space, scaling along the x axis by 2.0 would result in the point being at 7.0. If any property x , y , or z is not specified or is specified to be 1.0, scaling does not occur along that axis. Negative scale factor values indicate reflection as well as scaling along that axis.",
-    "title": "Scale Transform"
+  ScaleTransform: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#ScaleTransform",
+    summary:
+      "A Scale Transform scales the resource along one or more axes. If present, the values of properties x , y , and z must be multiplicative scale factors that specify the extent of scaling along each axis. As an example, for a point at 3.5 along the x axis in local coordinate space, scaling along the x axis by 2.0 would result in the point being at 7.0. If any property x , y , or z is not specified or is specified to be 1.0, scaling does not occur along that axis. Negative scale factor values indicate reflection as well as scaling along that axis.",
+    title: "Scale Transform",
   },
-  "Scene": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Scene",
-    "summary": "A Scene is a Container that represents an infinitely large three-dimensional space, with an optional duration property. Scenes have infinite height (y axis), width (x axis) and depth (z axis), where 0 on each axis (the origin of the coordinate system) is treated as the center of the scene’s space. From a perspective looking along the z axis towards negative infinity, the positive y axis points upwards and the positive x axis points to the right (a right-handed Cartesian coordinate system ).",
-    "title": "Scene"
+  Scene: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Scene",
+    summary:
+      "A Scene is a Container that represents an infinitely large three-dimensional space, with an optional duration property. Scenes have infinite height (y axis), width (x axis) and depth (z axis), where 0 on each axis (the origin of the coordinate system) is treated as the center of the scene’s space. From a perspective looking along the z axis towards negative infinity, the positive y axis points upwards and the positive x axis points to the right (a right-handed Cartesian coordinate system ).",
+    title: "Scene",
   },
-  "Service": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Service",
-    "summary": "A Service is an external software application that a client might interact with to gain additional information or functionality for the resource that is associated with the Service. The IIIF Image API is an example of a Service, as are the Auth API services. Known types of Service are registered in the Service Registry.",
-    "title": "Service"
+  Service: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Service",
+    summary:
+      "A Service is an external software application that a client might interact with to gain additional information or functionality for the resource that is associated with the Service. The IIIF Image API is an example of a Service, as are the Auth API services. Known types of Service are registered in the Service Registry.",
+    title: "Service",
   },
-  "SpecificResource": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#SpecificResource",
-    "summary": "A Specific Resource is a resource in the context of an Annotation. They are used to record further properties or relationships needed to understand the particular contextual use, such as which part of the resource is used or how it should be rendered. In IIIF, the Specific Resource model from the Web Annotation Data Model has some additional properties beyond those defined by the W3C, such as transform and position .",
-    "title": "Specific Resource"
+  SpecificResource: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#SpecificResource",
+    summary:
+      "A Specific Resource is a resource in the context of an Annotation. They are used to record further properties or relationships needed to understand the particular contextual use, such as which part of the resource is used or how it should be rendered. In IIIF, the Specific Resource model from the Web Annotation Data Model has some additional properties beyond those defined by the W3C, such as transform and position .",
+    title: "Specific Resource",
   },
-  "SpotAudio": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#SpotAudio",
-    "summary": "Spot Audio emits a cone of sound in a given direction from a single point. The Spot Audio’s angle property defines the radius of the cone. The default angle is client dependent if not specified.",
-    "title": "Spot Audio"
+  SpotAudio: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#SpotAudio",
+    summary:
+      "Spot Audio emits a cone of sound in a given direction from a single point. The Spot Audio’s angle property defines the radius of the cone. The default angle is client dependent if not specified.",
+    title: "Spot Audio",
   },
-  "SpotLight": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#SpotLight",
-    "summary": "Spot Light emits a cone of light in a given direction from a single point. The Spot Light’s angle property defines the radius of the cone. The default angle is client dependent if not specified.",
-    "title": "Spot Light"
+  SpotLight: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#SpotLight",
+    summary:
+      "Spot Light emits a cone of light in a given direction from a single point. The Spot Light’s angle property defines the radius of the cone. The default angle is client dependent if not specified.",
+    title: "Spot Light",
   },
-  "SvgSelector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#SvgSelector",
-    "summary": "SVG Selectors use the SVG specification to define a non-rectangular part of a resource. This allows for polygons, circles and multiple shapes to be used to highlight or otherwise select regions of images or other 2 dimensional resources.",
-    "title": "SvgSelector"
+  SvgSelector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#SvgSelector",
+    summary:
+      "SVG Selectors use the SVG specification to define a non-rectangular part of a resource. This allows for polygons, circles and multiple shapes to be used to highlight or otherwise select regions of images or other 2 dimensional resources.",
+    title: "SvgSelector",
   },
-  "TextualBody": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#TextualBody",
-    "summary": "A Textual Body is an embedded resource within an Annotation that carries, as the name suggests, a text as the body of the Annotation. It is defined by the Web Annotation Data Model, and this specification defines a new property for position that allows it to be positioned within a Container for rendering.",
-    "title": "Textual Body"
+  TextualBody: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#TextualBody",
+    summary:
+      "A Textual Body is an embedded resource within an Annotation that carries, as the name suggests, a text as the body of the Annotation. It is defined by the Web Annotation Data Model, and this specification defines a new property for position that allows it to be positioned within a Container for rendering.",
+    title: "Textual Body",
   },
-  "Timeline": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Timeline",
-    "summary": "A Timeline is a Container that represents only a temporal duration, measured in seconds. Timelines allow audio content to be presented, but do not allow anything with a height, width and/or depth, like an image, video or 3d model. The duration of the Timeline is given in the duration property.",
-    "title": "Timeline"
+  Timeline: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Timeline",
+    summary:
+      "A Timeline is a Container that represents only a temporal duration, measured in seconds. Timelines allow audio content to be presented, but do not allow anything with a height, width and/or depth, like an image, video or 3d model. The duration of the Timeline is given in the duration property.",
+    title: "Timeline",
   },
-  "Transforms": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Transforms",
-    "summary": "An operation to apply a transformation to a resource to generate a Specific Resource. Transforms are specified by the transform property on a Specific Resource. In the context of Scenes, transforms are carried out on a resource in the implicit or explicit local coordinate space of the resource, and are performed prior to painting that resource into any subsequent coordinate space.",
-    "title": "Transforms"
+  Transforms: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Transforms",
+    summary:
+      "An operation to apply a transformation to a resource to generate a Specific Resource. Transforms are specified by the transform property on a Specific Resource. In the context of Scenes, transforms are carried out on a resource in the implicit or explicit local coordinate space of the resource, and are performed prior to painting that resource into any subsequent coordinate space.",
+    title: "Transforms",
   },
-  "TranslateTransform": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#TranslateTransform",
-    "summary": "A Translate Transform translates or moves the resource along one or more axes. If present, the values of properties x , y , and z must be coordinate unit distances that specify the distance across each axis to translate the resource. As an example, for a point at 1.0 on the x axis, translating across the x axis by 3.0 would result in the point being at 4.0. If any property x , y , or z is not present or is specified to be 0.0, translation does not occur along that axis.",
-    "title": "Translate Transform"
+  TranslateTransform: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#TranslateTransform",
+    summary:
+      "A Translate Transform translates or moves the resource along one or more axes. If present, the values of properties x , y , and z must be coordinate unit distances that specify the distance across each axis to translate the resource. As an example, for a point at 1.0 on the x axis, translating across the x axis by 3.0 would result in the point being at 4.0. If any property x , y , or z is not present or is specified to be 0.0, translation does not occur along that axis.",
+    title: "Translate Transform",
   },
-  "VisualContentSelector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#VisualContentSelector",
-    "summary": "Similar to Audio Content Selectors, Visual Content Selectors select the visual aspects of the content of an A/V content resource. They may also be further refined by subsequent selectors that select an area or temporal segment of it.",
-    "title": "Visual Content Selector"
+  VisualContentSelector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#VisualContentSelector",
+    summary:
+      "Similar to Audio Content Selectors, Visual Content Selectors select the visual aspects of the content of an A/V content resource. They may also be further refined by subsequent selectors that select an area or temporal segment of it.",
+    title: "Visual Content Selector",
   },
-  "WktSelector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#WktSelector",
-    "summary": "Well-known text, or WKT, is an ISO standard method for describing 2 and 3 dimensional geometries. This selector thus goes beyond what the Web Annotation’s SvgSelector enables by incorporating the z axis, as well as additional types of selection such as MULTIPOLYGON.",
-    "title": "WKT Selector"
-  }
+  WktSelector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#WktSelector",
+    summary:
+      "Well-known text, or WKT, is an ISO standard method for describing 2 and 3 dimensional geometries. This selector thus goes beyond what the Web Annotation’s SvgSelector enables by incorporating the z axis, as well as additional types of selection such as MULTIPOLYGON.",
+    title: "WKT Selector",
+  },
 };
 
 const propertyDocumentation: Record<string, DocDefinition> = {
-  "accompanyingContainer": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#accompanyingContainer",
-    "summary": "A Container that provides additional content for use while the resource that has the accompanyingContainer property is shown or played. Examples include an image to show while a duration-only Canvas is playing audio; or background audio to play while a user is navigating an image-only Manifest.",
-    "title": "accompanyingContainer"
-  },
-  "action": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#action",
-    "summary": "The action property is used on Specific Resources that are in the body array of activating annotations (Annotations with the “activating” motivation). The values of the property are named actions which the client is being instructed to carry out upon the source of the Specific Resource. The list of possible values and their corresponding effects is given in the table below. Clients must process the Specific Resources in the order given in the Annotation, and must process the actions in the order given in the array. The client must perform all of the actions on the respective resources, and if it cannot, then it must not perform any of them. The set of actions within an Annotation is, thus, treated as an atomic transaction. If the activating annotation that is currently being processed is disabled as part of the processing, the client must not stop processing the ordered list when this occurs but keep processing until the end of the current Annotation’s set of actions. Each activating Annotation is processed completely before moving to another activating Annotation’s actions, even if an action causes another activating Annotation’s actions to be triggered. Instead, the activating Annotations are queued up in order that they are triggered, and when the client finishes one such annotation it can begin to process the next, and so on.",
-    "title": "action"
-  },
-  "angle": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#angle",
-    "summary": "The angle property is used with SpotLights and Spot Audio Emitters to define the radius of the cone of emitted light or sound. Note that the fieldOfView property is defined as the entire field of view, not half (as might be inferred from angle using radius).",
-    "title": "angle"
-  },
-  "annotations": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#annotations",
-    "summary": "An ordered list of Annotation Pages that contain commentary or other Annotations about this resource, separate from the Annotations that are used to paint content on to a Container. The motivation of the Annotations must not be painting , and the target of the Annotations must include this resource, or part of it, or some resource within its items hierarchy.",
-    "title": "annotations"
-  },
-  "backgroundColor": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#backgroundColor",
-    "summary": "This property sets the background color behind any painted resources on a spatial Container, such as a Canvas or Scene.",
-    "title": "backgroundColor"
-  },
-  "behavior": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#behavior",
-    "summary": "A set of user experience features that the publisher of the content would prefer the client to use when presenting the resource. This specification defines the values in the table below. Others may be defined externally as an [extension][prezi30-ldce].",
-    "title": "behavior"
-  },
-  "body": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#body",
-    "summary": "The list of bodies of an Annotation. As there may be more than one body, the value must be an array, even though the W3C specification does not require this. The resources listed in body can be instances of TextualBody , SpecificResource , core Structural Resources, or Content Resources.",
-    "title": "body"
-  },
-  "canonical": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#canonical",
-    "summary": "The URI that should be used to track the resource’s identity, regardless of where it is made accessible or the value of its id property. The canonical URI can then be used as the target for annotations, regardless of the URI from which it was retrieved. If this property is set, then clients must not change or delete it. Clients must not assign a canonical URI if one is not present, as the resource might already have one assigned by a different system but was not included in the representation received. Any reference to the canonical URI must be treated as a reference to this resource.",
-    "title": "canonical"
-  },
-  "color": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#color",
-    "summary": "This property sets the color of a Light.",
-    "title": "color"
-  },
-  "duration": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#duration",
-    "summary": "The duration of a container or external content resource, given in seconds.",
-    "title": "duration"
-  },
-  "exclude": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#exclude",
-    "summary": "Just as a Scene may contain multiple Annotations with models, light, and cameras, a single 3D model file can also contain a collection of 3D resources, including model geometry, assemblages of lights, and/or multiple cameras, with some of these potentially manipulated by animations. When painting Scenes, or models that themselves may contain multiple resources, into a Scene, it may be desirable to opt not to import some of these resources. This is accomplished through the Annotation property exclude , which prevents the import of audio, lights, cameras, or animations from a particular Scene or model prior to the Annotation’s body resource being painted into a Scene. When exclude is used, the excluded resource type or functionality should not be loaded into the Scene, and it is not possible to reactivate or turn on these excluded resources after loading.",
-    "title": "exclude"
-  },
-  "far": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#far",
-    "summary": "This property gives the distance along the axis of the camera’s orientation after which objects are no longer visible. Objects further from the camera than the far distance cannot be seen.",
-    "title": "far"
-  },
-  "fieldOfView": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#fieldOfView",
-    "summary": "The vertical projection angle from the top plane to the bottom plane of the camera’s field of view, specified in degrees. The horizontal projection angle is dependent on the aspect ratio of the client’s viewport.",
-    "title": "fieldOfView"
-  },
-  "fileSize": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#filesize",
-    "summary": "The size of a content resource in bytes. This will allow clients to determine whether the resource should be retrieved in the user’s current context. For example, the same 3d Model or AV file might be available in multiple formats, and the client can choose the most appropriate one based on the fileSize property.",
-    "title": "fileSize"
-  },
-  "first": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#first",
-    "summary": "This property references the first Annotation Page within an Annotation Collection, or the first Collection Page within a Collection. Note that Collections will only have the first property if there is a large number of items, more than could conveniently be included in a single page.",
-    "title": "first"
-  },
-  "format": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#format",
-    "summary": "For Content Resources, the format property records the specific media type (often called a MIME type), for example image/jpeg . This is important for distinguishing different formats of the same overall type of resource, such as distinguishing text in XML from plain text. The value of the property should thus be the same as the value of the Content-Type header returned when the URI of the Content Resource is dereferenced.",
-    "title": "format"
-  },
-  "height": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#height",
-    "summary": "The height of the Canvas or external Content Resource. For Content Resources, the value is in pixels. For Canvases, the value does not have a unit. Instead, in combination with the width property, it conveys an aspect ratio for the space in which Content Resources are located.",
-    "title": "height"
-  },
-  "homepage": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#homepage",
-    "summary": "A web page that is about the entity represented by the resource that has the homepage property. The web page is usually published by the organization responsible for the entity, and might be generated by a content management system or other cataloging system. The resource must be able to be displayed directly to the user. Resources that are related, but not home pages, must instead be added into the metadata property, with an appropriate label or value to describe the relationship.",
-    "title": "homepage"
-  },
-  "id": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#id",
-    "summary": "The URI that identifies the resource. If the resource is only available embedded within another resource, such as a Range within a Manifest, then the URI may be the URI of the embedding resource with a unique fragment on the end. This is not true for Containers, which must have their own URI without a fragment.",
-    "title": "id"
-  },
-  "instant": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#instant",
-    "summary": "A floating point number giving the time of the point in seconds from the beginning of the temporal resource. For example, an instant value of 4.5 means the exact point 4.5 seconds from the beginning of the resource.",
-    "title": "instant"
-  },
-  "intensity": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#intensity",
-    "summary": "This property sets the strength or brightness of a Light. The value of the referenced Quantity indicates the desired intensity on a linear scale between 0.0 (no brightness) and 1.0 (as bright as the client will render). If this property is not specified, then the default intensity value is client-dependent.",
-    "title": "intensity"
-  },
-  "interactionMode": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#interactionMode",
-    "summary": "A set of features that guide or limit user interaction with content within a Container that the publisher of the content would prefer the client to use when presenting the resource. This specification defines values in the table below that guide interactions with Cameras within a Scene. Other values for other Container types or specifying other interaction modes for 3D content may be defined externally as an [extension][prezi30-ldce]. For interaction modes pertaining to Cameras within a Scene, the client should use interactionMode to determine the user experience features and approaches whereby users are permitted to change or adjust Cameras when viewing content within a Scene (e.g., orbiting around the scene or locking the user to a first-person perspective). If interactionMode is not set for a Camera, then the mode to be used is client-dependent.",
-    "title": "interactionMode"
-  },
-  "items": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#items",
-    "summary": "Much of the functionality of the IIIF Presentation API is simply recording the order in which child resources occur within a parent resource, such as Collections or Manifests within a parent Collection, or Containers within a Manifest. All of these situations are covered with a single property, items .",
-    "title": "items"
-  },
-  "label": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#label",
-    "summary": "A human readable label, name or title. The label property is intended to be displayed as a short, textual surrogate for the resource if a human needs to make a distinction between it and similar resources, for example between objects, pages, or options for a choice of images to display. The label property can be fully internationalized, and each language can have multiple values. This pattern is described in more detail in the [languages][prezi40-languages] section.",
-    "title": "label"
-  },
-  "language": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#language",
-    "summary": "The language or languages used in the content of this external resource. It may be used for resources [referenced][prezi30-terminology] from body , target , source , homepage , rendering , and partOf , amongst others.",
-    "title": "language"
-  },
-  "last": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#last",
-    "summary": "This property references the last Annotation Page within an Annotation Collection, or last Collection Page within a Collection.",
-    "title": "last"
-  },
-  "logo": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#logo",
-    "summary": "A small image resource that represents the Agent resource it is associated with. The logo must be clearly rendered when the resource is displayed or used, without cropping, rotating or otherwise distorting the image. It is recommended that a [IIIF Image API][image-api] service be available for this image for other manipulations such as resizing.",
-    "title": "logo"
-  },
-  "lookAt": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#lookAt",
-    "summary": "It is useful to be able to rotate a light or camera or audio resource such that it is facing another object or point in the Scene, rather than calculating the angles within the Scene’s coordinate space. This is accomplished with a property called lookAt , valid on DirectionalLight, SpotLight, and all Cameras. The value of the property is either a PointSelector, a WktSelector, the URI of an Annotation which paints something into the current Scene, or a Specific Resource with a selector identifying a point or region in an arbitrary container.",
-    "title": "lookAt"
-  },
-  "metadata": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#metadata",
-    "summary": "An ordered list of descriptions to be displayed to the user when they interact with the resource, given as pairs of human readable label and value entries. The content of these entries is intended for presentation only; descriptive semantics should not be inferred. An entry might be used to convey information about the creation of the object, a physical description, ownership information, or other purposes.",
-    "title": "metadata"
-  },
-  "motivation": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#motivation",
-    "summary": "This specification defines three values for the [Web Annotation Data Model][org-w3c-webanno] property of motivation , or purpose when used on a Specific Resource or Textual Body.",
-    "title": "motivation"
-  },
-  "navDate": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#navDate",
-    "summary": "A date that clients may use for navigation purposes when presenting the resource to the user in a date-based user interface, such as a calendar or timeline. More descriptive date ranges, intended for display directly to the user, should be included in the metadata property for human consumption. If the resource contains Containers that have the duration property, the datetime given corresponds to the navigation datetime of the start of the resource. For example, a Range that includes a Canvas that represents a set of video content recording a historical event, the navDate is the datetime of the first moment of the recorded event.",
-    "title": "navDate"
-  },
-  "navPlace": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#navPlace",
-    "summary": "A geographic location that clients may use for navigation purposes when presenting the resource to the user in a map-based user interface. The location is identified using structured data, described below, with latitude and longitude based points or polygons. If the location is only textual, then the information should instead be included in the metadata property.",
-    "title": "navPlace"
-  },
-  "near": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#near",
-    "summary": "This property gives the distance along the Cameria’s axis of orientation from which objects are visible. Objects closer to the camera than the near distance cannot be seen.",
-    "title": "near"
-  },
-  "next": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#next",
-    "summary": "A reference from an Annotation Page to the following Annotation Page within an Annotation Collection, or from a Collection Page to the following Collection Page.",
-    "title": "next"
-  },
-  "partOf": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#partOf",
-    "summary": "A containing resource that includes the resource that has the partOf property. When a client encounters the partOf property, it might retrieve the [referenced][prezi30-terminology] containing resource, if it is not [embedded][prezi30-terminology] in the current representation, in order to contribute to the processing of the contained resource. For example, the partOf property on a Canvas can be used to reference an external Manifest in order to enable the discovery of further relevant information. Similarly, a Manifest can reference a containing Collection using partOf to aid in navigation.",
-    "title": "partOf"
-  },
-  "placeholderContainer": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#placeholderContainer",
-    "summary": "A single Container that provides additional content for use before the main content of the resource that has the placeholderContainer property is rendered, or as an advertisement or stand-in for that content. Examples include images, text and sound standing in for video content before the user initiates playback; or a film poster to attract user attention. The content provided by placeholderContainer differs from a thumbnail: a client might use thumbnail to summarize and navigate multiple resources, then show content from placeholderContainer as part of the initial presentation of a single resource. A placeholder Container is likely to have different dimensions to those of the Container(s) of the resource that has the placeholderContainer property. A placeholder Container may be of a different type from the resource that has the placeholderContainer property. For example, a Scene may have a placeholder Container of type Canvas .",
-    "title": "placeholderContainer"
-  },
-  "position": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#position",
-    "summary": "It is important to be able to position the body of an annotation within the Container’s space that the annotation also targets. For example, a description of part of an image in a Canvas should be positioned such that it does not obscure the image region itself and labels to be displayed as part of a Scene should not be rendered such that the text is hidden by the three dimensional geometry of the model. If this property is not supplied, then the client should do its best to ensure the content is visible to the user. The body resource must be either a TextualBody or a SpecificResource .",
-    "title": "position"
-  },
-  "prev": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#prev",
-    "summary": "A reference from an Annotation Page to the preceding Annotation Page within an Annotation Collection, or from a Collection Page to the preceding Collection Page.",
-    "title": "prev"
-  },
-  "profile": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#profile",
-    "summary": "A schema or named set of functionality available from the resource. The profile can further clarify the type and/or format of an external resource or service, allowing clients to customize their handling of the resource that has the profile property.",
-    "title": "profile"
-  },
-  "provider": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#provider",
-    "summary": "An organization or person that contributed to providing the content of the resource. Clients can then display this information to the user to acknowledge the provider’s contributions. This differs from the requiredStatement property, in that the data is structured, allowing the client to do more than just present text but instead have richer information about the people and organizations to use in different interfaces.",
-    "title": "provider"
-  },
-  "provides": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#provides",
-    "summary": "A set of features or additional functionality that a linked resource enables relative to the linking or including resource, often for accessibility purposes and which are not defined by the type , format or profile of the linked resource. It provides information as to why and how a client might want to interact with the resource, rather than what the resource is. For example, a text file (linked resource) that provides a closedCaptions for a Video (context resource), or an audio file (linked resource) that provides an audioDescription of a Canvas (context resource).",
-    "title": "provides"
-  },
-  "quality": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#quality",
-    "summary": "The quality parameter in the IIIF Image API URL structure, as recorded in an Image API Selector.",
-    "title": "quality"
-  },
-  "quantityValue": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#quantityValue",
-    "summary": "The quantityValue property of a Quantity conveys its numerical component, used with unit to determine how to interpret the number relative to quantities.",
-    "title": "quantityValue"
-  },
-  "refinedBy": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#refinedBy",
-    "summary": "The refinedBy property allows Selectors to be chained together to incrementally select more specific aspects of the resource given in source on the Specific Resource. The first selector on a Specific Resource describes how to select part of the main resource, and a subsequent selector in refinedBy then describes how to further select part of that part. This can be used, for example, to extract a rectangular region with a FragmentSelector and then further refine that region with an SvgSelector or WktSelector .",
-    "title": "refinedBy"
-  },
-  "region": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#region",
-    "summary": "The value of the region parameter in the IIIF Image API URL structure, as recorded in an Image API Selector.",
-    "title": "region"
-  },
-  "rendering": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#rendering",
-    "summary": "A resource that is an alternative, non-IIIF representation of the resource that has the rendering property. Such representations typically cannot be painted onto a single Container, as they either include too many views, have incompatible dimensions, or are compound resources requiring additional rendering functionality. The rendering resource must be able to be displayed directly to a human user, although the presentation may be outside of the IIIF client. The resource must not have a splash page or other interstitial resource that mediates access to it. If access control is required, then the [IIIF Authentication API][iiif-auth] is recommended . Examples include a rendering of a book as a PDF or EPUB, a slide deck with images of a building, or a 3D model of a statue otherwise represented as an Image on a Canvas.",
-    "title": "rendering"
-  },
-  "requiredStatement": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#requiredStatement",
-    "summary": "Text that must be displayed when the resource is displayed or used. For example, the requiredStatement property could be used to present copyright or ownership statements, an acknowledgement of the owning and/or publishing institution, or any other text that the publishing organization deems critical to display to the user. Given the wide variation of potential client user interfaces, it will not always be possible to display this statement to the user in the client’s initial state. If initially hidden, clients must make the method of revealing it as obvious as possible.",
-    "title": "requiredStatement"
-  },
-  "rights": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#rights",
-    "summary": "A string that identifies a license or rights statement that applies to the content of the resource, such as the JSON of a Manifest or the pixels of an image. The value must be drawn from the set of [Creative Commons][org-cc-licenses] license URIs, the [RightsStatements.org][org-rs-terms] rights statement URIs, or those added in the [rights registry][break-until-there-is-a-registry]. The inclusion of this property is informative, and for example could be used to display an icon representing the rights assertions.",
-    "title": "rights"
-  },
-  "rotation": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#rotation",
-    "summary": "The value of the rotation parameter in the IIIF Image API URL structure, as recorded in an Image API Selector.",
-    "title": "rotation"
-  },
-  "seeAlso": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#seeAlso",
-    "summary": "A machine-readable resource such as an XML or RDF description that is related to the current resource that has the seeAlso property. Properties of the resource should be given to help the client select between multiple descriptions (if provided), and to make appropriate use of the document. If the relationship between the resource and the document needs to be more specific, then the document should include that relationship rather than the IIIF resource. Other IIIF resources are also valid targets for seeAlso , for example to link to a Manifest that describes a related object. The URI of the document must identify a single representation of the data in a particular format. For example, if the same data exists in JSON and XML, then separate resources should be added for each representation, with distinct id and format properties.",
-    "title": "seeAlso"
-  },
-  "selector": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#selector",
-    "summary": "TODO",
-    "title": "selector"
-  },
-  "service": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#service",
-    "summary": "A service that the client might interact with directly and gain additional information or functionality for using the resource that has the service property, such as from an Image to the base URI of an associated [IIIF Image API][image-api] service. The service resource should have additional information associated with it in order to allow the client to determine how to make appropriate use of it. Please see the [Service Registry][registry-services] document for the details of currently known service types.",
-    "title": "service"
-  },
-  "services": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#services",
-    "summary": "A list of one or more service definitions on the top-most resource of the document, that are typically shared by more than one subsequent resource. This allows for these shared services to be collected together in a single place, rather than either having their information duplicated potentially many times throughout the document, or requiring a consuming client to traverse the entire document structure to find the information. The resource that the service applies to must still have the service property, as described above, where the service resources have at least the id and type or @id and @type properties. This allows the client to know that the service applies to that resource. Usage of the services property is at the discretion of the publishing system.",
-    "title": "services"
-  },
-  "size": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#size",
-    "summary": "The value of the size parameter in the IIIF Image API URL structure, as recorded in an Image API Selector.",
-    "title": "size"
-  },
-  "source": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#source",
-    "summary": "The source property refers to the URI of the resource that the Specific Resource is a more constrained version or representation of.",
-    "title": "source"
-  },
-  "spatialScale": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#spatialScale",
-    "summary": "A single Quantity that defines a real-world scale factor for the coordinate units of a Canvas or Scene. For a Canvas, this defines the physical distance corresponding to the length of a single Canvas coordinate unit. A Canvas with a width of 5000 and a spatialScale with quantityValue of 0.00008 and a unit of m represents a physical space 0.4 meters wide. For a Scene, this defines the physical distance corresponding to the XYZ coordinate units, or in other words, the physical distance length of a unit vector in the 3D coordinate space. The value of unit must be a length unit. In this specification, the only length unit defined is m , i.e., meters. Unless other values are defined externally as an [extension][prezi30-ldce], the value of unit should always be m .",
-    "title": "spatialScale"
-  },
-  "start": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#start",
-    "summary": "A Container, or part of a Container, which the client should show on initialization for the resource that has the start property. The reference to part of a Container is handled in the same way that Ranges reference parts of Containers by using either its URI, a URI with a fragment specifier, or a SpecificResource with a Selector. This property allows the client to begin with the first Container that contains interesting content rather than requiring the user to manually navigate to find it.",
-    "title": "start"
-  },
-  "startIndex": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#startIndex",
-    "summary": "A non-negative, 0-based integer value identifying the relative position of the first entry in the items list of a Collection Page or Annotation Collection Page within the overall logical order of its parent Collection or Annotation Collection. If this is the second page, and there are 100 entries on the first page, then the value is 100 (the first page contains entries 0 through 99 inclusive).",
-    "title": "startIndex"
-  },
-  "structures": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#structures",
-    "summary": "The structure of an object represented as a Manifest can be described using a hierarchy of Ranges. Ranges can be used to describe the “table of contents” of the object or other structures that the user can interact with beyond the order given by the items property of the Manifest. The hierarchy is built by nesting the child Range resources in the items array of the higher level Range. The top level Ranges of these hierarchies are given in the structures property.",
-    "title": "structures"
-  },
-  "styleClass": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#styleClass",
-    "summary": "The name of a CSS class to apply when rendering the Specific Resource the style class is associated with. This might change the color of the text, the background color, add borders to the element, change the font size or family, or any other CSS-based styling. The class definition is given using the stylesheet property, defined below, which can be used on an Annotation. While Specific Resources may appear outside of Annotations, styleClass is not valid in these circumstances as there will not be a corresponding stylesheet to define the style. If the stylesheet does not define the class given in styleClass , then the class must be ignored.",
-    "title": "styleClass"
-  },
-  "stylesheet": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#stylesheet",
-    "summary": "The stylesheet property conveys either a reference to an external CSS stylesheet document, or carries an embedded stylesheet. This stylesheet is used to resolve CSS classes for processing the styleClass directive on Specific Resources, described above.",
-    "title": "stylesheet"
-  },
-  "summary": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#summary",
-    "summary": "A short textual summary intended to be conveyed to the user when the metadata entries for the resource are not being displayed. This could be used as a brief description for item level search results, for small-screen environments, or as an alternative user interface when the metadata property is not currently being rendered. The summary property follows the same pattern as the label property described above.",
-    "title": "summary"
-  },
-  "supplementary": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#supplementary",
-    "summary": "A link from this Range to an Annotation Collection that includes the supplementing Annotations of content resources for the Range. Clients might use this to present additional content to the user from a different Canvas when interacting with the Range, or to jump to the next part of the Range within the same Canvas. For example, the Range might represent a newspaper article that spans non-sequential pages, and then uses the supplementary property to reference an Annotation Collection that consists of the Annotations that record the text, split into Annotation Pages per newspaper page. Alternatively, the Range might represent the parts of a manuscript that have been transcribed or translated, when there are other parts that have yet to be worked on. The Annotation Collection would be the Annotations that transcribe or translate, respectively.",
-    "title": "supplementary"
-  },
-  "target": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#target",
-    "summary": "The list of targets of an Annotation. As there may be more than one target, the value must be an array, even though the W3C specification does not require this. The resources listed in target can be instances of SpecificResource , core Structural Resources, or Content Resources.",
-    "title": "target"
-  },
-  "temporalScale": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#temporalScale",
-    "summary": "A single Quantity that defines a multiplier or scale factor for the duration property of a Container, indicating that one second in “Container time” represents some other real world duration. A Canvas with a duration of 450 seconds and a temporalScale with quantityValue of 1000 and a unit of s represents a real-world duration of 450,000 seconds (5.2 days), for example a time-lapse video of a growing plant. The value of unit must be a time unit. In this specification, the only time unit defined is s , i.e., seconds. Unless other values are defined externally as an [extension][prezi30-ldce], the value of unit should always be s .",
-    "title": "temporalScale"
-  },
-  "thumbnail": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#thumbnail",
-    "summary": "A content resource, such as a small image or short audio clip, that represents the resource that has the thumbnail property. A resource may have multiple thumbnail resources that have the same or different type and format .",
-    "title": "thumbnail"
-  },
-  "timeMode": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#timeMode",
-    "summary": "A mode associated with an Annotation that is to be applied to the rendering of any time-based media, or otherwise could be considered to have a duration, used as a body resource of that Annotation. Note that the association of timeMode with the Annotation means that different resources in the body cannot have different values. This specification defines the values specified in the table below. Others may be defined externally as an [extension][prezi30-ldce].",
-    "title": "timeMode"
-  },
-  "total": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#total",
-    "summary": "The total property indicates the total number of annotations contained in an Annotation Collection, or the total number of Collections and Manifests within a Collection. A Collection should have total if it uses pages, and may have it if it does not, however the information is readily available by finding the length of the items array in the latter case.",
-    "title": "total (totalItems)"
-  },
-  "transform": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#transform",
-    "summary": "An ordered list of 3D transform operations (translation, rotation, and scale) to be performed on a resource prior to painting that resource into a Scene. Transforms must be applied to the resource in the order given. The resulting state of the resource after applying a transform must be the input state for the subsequent transform in the ordered list. Therefore, transforms are not independent, and different orders of the same set of transforms can produce different results. The list of transforms may include multiple transforms of the same type, e.g., multiple rotation operations.",
-    "title": "transform"
-  },
-  "type": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#type",
-    "summary": "The type or class of the resource. For classes defined for this specification, the value of type will be described in the sections below describing each individual class.",
-    "title": "type"
-  },
-  "unit": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#unit",
-    "summary": "The unit of measurement of a quantity expressed by a Quantity.",
-    "title": "unit"
-  },
-  "value": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#value",
-    "summary": "The value property is used in several situations to convey a value of a resource. The value is always string-based, however the strings might be wrapped in the language map construction.",
-    "title": "value"
-  },
-  "version": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#version",
-    "summary": "TODO: write me",
-    "title": "version"
-  },
-  "via": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#via",
-    "summary": "The via property of a resource may be used to indicate one or more URIs which are the chain of sources from which the current resource was obtained. Each URI in the via list must be different from the URI in id , but may be the same as the URI in canonical if it is present. Recording via allows servers to provide the provenance chain of the resource, regardless of how many copy operations have occurred in the past.",
-    "title": "via"
-  },
-  "viewingDirection": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#viewingDirection",
-    "summary": "!!! TODO: Rewrite to be where is the navigation control to step to the next/ previous in the items of the manifest",
-    "title": "viewingDirection"
-  },
-  "volume": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#volume",
-    "summary": "The volume property represents the relative volume of an audio source. The quantityValue of the specified Quantity represents the desired volume on a linear scale from 0.0 (silence) to 1.0 (maximum volume). If this property is not specified, then the default volume value is client-dependent.",
-    "title": "volume"
-  },
-  "width": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#width",
-    "summary": "The width of the Canvas or external content resource. For content resources, the value is in pixels. For Canvases, the value does not have a unit. In combination with the height, it conveys an aspect ratio for the space in which content resources are located.",
-    "title": "width"
-  },
-  "x": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#x",
-    "summary": "A number (floating point or integer) giving the x coordinate of the point, relative to the dimensions of the source resource",
-    "title": "x"
-  },
-  "y": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#y",
-    "summary": "A number (floating point or integer) giving the y coordinate of the point, relative to the dimensions of the source resource",
-    "title": "y"
-  },
-  "z": {
-    "link": "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#z",
-    "summary": "A number (floating point) giving the z coordinate of the point, relative to the dimensions of the source resource",
-    "title": "z"
-  }
+  accompanyingContainer: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#accompanyingContainer",
+    summary:
+      "A Container that provides additional content for use while the resource that has the accompanyingContainer property is shown or played. Examples include an image to show while a duration-only Canvas is playing audio; or background audio to play while a user is navigating an image-only Manifest.",
+    title: "accompanyingContainer",
+  },
+  action: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#action",
+    summary:
+      "The action property is used on Specific Resources that are in the body array of activating annotations (Annotations with the “activating” motivation). The values of the property are named actions which the client is being instructed to carry out upon the source of the Specific Resource. The list of possible values and their corresponding effects is given in the table below. Clients must process the Specific Resources in the order given in the Annotation, and must process the actions in the order given in the array. The client must perform all of the actions on the respective resources, and if it cannot, then it must not perform any of them. The set of actions within an Annotation is, thus, treated as an atomic transaction. If the activating annotation that is currently being processed is disabled as part of the processing, the client must not stop processing the ordered list when this occurs but keep processing until the end of the current Annotation’s set of actions. Each activating Annotation is processed completely before moving to another activating Annotation’s actions, even if an action causes another activating Annotation’s actions to be triggered. Instead, the activating Annotations are queued up in order that they are triggered, and when the client finishes one such annotation it can begin to process the next, and so on.",
+    title: "action",
+  },
+  angle: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#angle",
+    summary:
+      "The angle property is used with SpotLights and Spot Audio Emitters to define the radius of the cone of emitted light or sound. Note that the fieldOfView property is defined as the entire field of view, not half (as might be inferred from angle using radius).",
+    title: "angle",
+  },
+  annotations: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#annotations",
+    summary:
+      "An ordered list of Annotation Pages that contain commentary or other Annotations about this resource, separate from the Annotations that are used to paint content on to a Container. The motivation of the Annotations must not be painting , and the target of the Annotations must include this resource, or part of it, or some resource within its items hierarchy.",
+    title: "annotations",
+  },
+  backgroundColor: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#backgroundColor",
+    summary:
+      "This property sets the background color behind any painted resources on a spatial Container, such as a Canvas or Scene.",
+    title: "backgroundColor",
+  },
+  behavior: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#behavior",
+    summary:
+      "A set of user experience features that the publisher of the content would prefer the client to use when presenting the resource. This specification defines the values in the table below. Others may be defined externally as an [extension][prezi30-ldce].",
+    title: "behavior",
+  },
+  body: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#body",
+    summary:
+      "The list of bodies of an Annotation. As there may be more than one body, the value must be an array, even though the W3C specification does not require this. The resources listed in body can be instances of TextualBody , SpecificResource , core Structural Resources, or Content Resources.",
+    title: "body",
+  },
+  canonical: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#canonical",
+    summary:
+      "The URI that should be used to track the resource’s identity, regardless of where it is made accessible or the value of its id property. The canonical URI can then be used as the target for annotations, regardless of the URI from which it was retrieved. If this property is set, then clients must not change or delete it. Clients must not assign a canonical URI if one is not present, as the resource might already have one assigned by a different system but was not included in the representation received. Any reference to the canonical URI must be treated as a reference to this resource.",
+    title: "canonical",
+  },
+  color: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#color",
+    summary: "This property sets the color of a Light.",
+    title: "color",
+  },
+  duration: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#duration",
+    summary: "The duration of a container or external content resource, given in seconds.",
+    title: "duration",
+  },
+  exclude: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#exclude",
+    summary:
+      "Just as a Scene may contain multiple Annotations with models, light, and cameras, a single 3D model file can also contain a collection of 3D resources, including model geometry, assemblages of lights, and/or multiple cameras, with some of these potentially manipulated by animations. When painting Scenes, or models that themselves may contain multiple resources, into a Scene, it may be desirable to opt not to import some of these resources. This is accomplished through the Annotation property exclude , which prevents the import of audio, lights, cameras, or animations from a particular Scene or model prior to the Annotation’s body resource being painted into a Scene. When exclude is used, the excluded resource type or functionality should not be loaded into the Scene, and it is not possible to reactivate or turn on these excluded resources after loading.",
+    title: "exclude",
+  },
+  far: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#far",
+    summary:
+      "This property gives the distance along the axis of the camera’s orientation after which objects are no longer visible. Objects further from the camera than the far distance cannot be seen.",
+    title: "far",
+  },
+  fieldOfView: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#fieldOfView",
+    summary:
+      "The vertical projection angle from the top plane to the bottom plane of the camera’s field of view, specified in degrees. The horizontal projection angle is dependent on the aspect ratio of the client’s viewport.",
+    title: "fieldOfView",
+  },
+  fileSize: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#filesize",
+    summary:
+      "The size of a content resource in bytes. This will allow clients to determine whether the resource should be retrieved in the user’s current context. For example, the same 3d Model or AV file might be available in multiple formats, and the client can choose the most appropriate one based on the fileSize property.",
+    title: "fileSize",
+  },
+  first: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#first",
+    summary:
+      "This property references the first Annotation Page within an Annotation Collection, or the first Collection Page within a Collection. Note that Collections will only have the first property if there is a large number of items, more than could conveniently be included in a single page.",
+    title: "first",
+  },
+  format: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#format",
+    summary:
+      "For Content Resources, the format property records the specific media type (often called a MIME type), for example image/jpeg . This is important for distinguishing different formats of the same overall type of resource, such as distinguishing text in XML from plain text. The value of the property should thus be the same as the value of the Content-Type header returned when the URI of the Content Resource is dereferenced.",
+    title: "format",
+  },
+  height: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#height",
+    summary:
+      "The height of the Canvas or external Content Resource. For Content Resources, the value is in pixels. For Canvases, the value does not have a unit. Instead, in combination with the width property, it conveys an aspect ratio for the space in which Content Resources are located.",
+    title: "height",
+  },
+  homepage: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#homepage",
+    summary:
+      "A web page that is about the entity represented by the resource that has the homepage property. The web page is usually published by the organization responsible for the entity, and might be generated by a content management system or other cataloging system. The resource must be able to be displayed directly to the user. Resources that are related, but not home pages, must instead be added into the metadata property, with an appropriate label or value to describe the relationship.",
+    title: "homepage",
+  },
+  id: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#id",
+    summary:
+      "The URI that identifies the resource. If the resource is only available embedded within another resource, such as a Range within a Manifest, then the URI may be the URI of the embedding resource with a unique fragment on the end. This is not true for Containers, which must have their own URI without a fragment.",
+    title: "id",
+  },
+  instant: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#instant",
+    summary:
+      "A floating point number giving the time of the point in seconds from the beginning of the temporal resource. For example, an instant value of 4.5 means the exact point 4.5 seconds from the beginning of the resource.",
+    title: "instant",
+  },
+  intensity: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#intensity",
+    summary:
+      "This property sets the strength or brightness of a Light. The value of the referenced Quantity indicates the desired intensity on a linear scale between 0.0 (no brightness) and 1.0 (as bright as the client will render). If this property is not specified, then the default intensity value is client-dependent.",
+    title: "intensity",
+  },
+  interactionMode: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#interactionMode",
+    summary:
+      "A set of features that guide or limit user interaction with content within a Container that the publisher of the content would prefer the client to use when presenting the resource. This specification defines values in the table below that guide interactions with Cameras within a Scene. Other values for other Container types or specifying other interaction modes for 3D content may be defined externally as an [extension][prezi30-ldce]. For interaction modes pertaining to Cameras within a Scene, the client should use interactionMode to determine the user experience features and approaches whereby users are permitted to change or adjust Cameras when viewing content within a Scene (e.g., orbiting around the scene or locking the user to a first-person perspective). If interactionMode is not set for a Camera, then the mode to be used is client-dependent.",
+    title: "interactionMode",
+  },
+  items: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#items",
+    summary:
+      "Much of the functionality of the IIIF Presentation API is simply recording the order in which child resources occur within a parent resource, such as Collections or Manifests within a parent Collection, or Containers within a Manifest. All of these situations are covered with a single property, items .",
+    title: "items",
+  },
+  label: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#label",
+    summary:
+      "A human readable label, name or title. The label property is intended to be displayed as a short, textual surrogate for the resource if a human needs to make a distinction between it and similar resources, for example between objects, pages, or options for a choice of images to display. The label property can be fully internationalized, and each language can have multiple values. This pattern is described in more detail in the [languages][prezi40-languages] section.",
+    title: "label",
+  },
+  language: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#language",
+    summary:
+      "The language or languages used in the content of this external resource. It may be used for resources [referenced][prezi30-terminology] from body , target , source , homepage , rendering , and partOf , amongst others.",
+    title: "language",
+  },
+  last: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#last",
+    summary:
+      "This property references the last Annotation Page within an Annotation Collection, or last Collection Page within a Collection.",
+    title: "last",
+  },
+  logo: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#logo",
+    summary:
+      "A small image resource that represents the Agent resource it is associated with. The logo must be clearly rendered when the resource is displayed or used, without cropping, rotating or otherwise distorting the image. It is recommended that a [IIIF Image API][image-api] service be available for this image for other manipulations such as resizing.",
+    title: "logo",
+  },
+  lookAt: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#lookAt",
+    summary:
+      "It is useful to be able to rotate a light or camera or audio resource such that it is facing another object or point in the Scene, rather than calculating the angles within the Scene’s coordinate space. This is accomplished with a property called lookAt , valid on DirectionalLight, SpotLight, and all Cameras. The value of the property is either a PointSelector, a WktSelector, the URI of an Annotation which paints something into the current Scene, or a Specific Resource with a selector identifying a point or region in an arbitrary container.",
+    title: "lookAt",
+  },
+  metadata: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#metadata",
+    summary:
+      "An ordered list of descriptions to be displayed to the user when they interact with the resource, given as pairs of human readable label and value entries. The content of these entries is intended for presentation only; descriptive semantics should not be inferred. An entry might be used to convey information about the creation of the object, a physical description, ownership information, or other purposes.",
+    title: "metadata",
+  },
+  motivation: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#motivation",
+    summary:
+      "This specification defines three values for the [Web Annotation Data Model][org-w3c-webanno] property of motivation , or purpose when used on a Specific Resource or Textual Body.",
+    title: "motivation",
+  },
+  navDate: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#navDate",
+    summary:
+      "A date that clients may use for navigation purposes when presenting the resource to the user in a date-based user interface, such as a calendar or timeline. More descriptive date ranges, intended for display directly to the user, should be included in the metadata property for human consumption. If the resource contains Containers that have the duration property, the datetime given corresponds to the navigation datetime of the start of the resource. For example, a Range that includes a Canvas that represents a set of video content recording a historical event, the navDate is the datetime of the first moment of the recorded event.",
+    title: "navDate",
+  },
+  navPlace: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#navPlace",
+    summary:
+      "A geographic location that clients may use for navigation purposes when presenting the resource to the user in a map-based user interface. The location is identified using structured data, described below, with latitude and longitude based points or polygons. If the location is only textual, then the information should instead be included in the metadata property.",
+    title: "navPlace",
+  },
+  near: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#near",
+    summary:
+      "This property gives the distance along the Cameria’s axis of orientation from which objects are visible. Objects closer to the camera than the near distance cannot be seen.",
+    title: "near",
+  },
+  next: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#next",
+    summary:
+      "A reference from an Annotation Page to the following Annotation Page within an Annotation Collection, or from a Collection Page to the following Collection Page.",
+    title: "next",
+  },
+  partOf: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#partOf",
+    summary:
+      "A containing resource that includes the resource that has the partOf property. When a client encounters the partOf property, it might retrieve the [referenced][prezi30-terminology] containing resource, if it is not [embedded][prezi30-terminology] in the current representation, in order to contribute to the processing of the contained resource. For example, the partOf property on a Canvas can be used to reference an external Manifest in order to enable the discovery of further relevant information. Similarly, a Manifest can reference a containing Collection using partOf to aid in navigation.",
+    title: "partOf",
+  },
+  placeholderContainer: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#placeholderContainer",
+    summary:
+      "A single Container that provides additional content for use before the main content of the resource that has the placeholderContainer property is rendered, or as an advertisement or stand-in for that content. Examples include images, text and sound standing in for video content before the user initiates playback; or a film poster to attract user attention. The content provided by placeholderContainer differs from a thumbnail: a client might use thumbnail to summarize and navigate multiple resources, then show content from placeholderContainer as part of the initial presentation of a single resource. A placeholder Container is likely to have different dimensions to those of the Container(s) of the resource that has the placeholderContainer property. A placeholder Container may be of a different type from the resource that has the placeholderContainer property. For example, a Scene may have a placeholder Container of type Canvas .",
+    title: "placeholderContainer",
+  },
+  position: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#position",
+    summary:
+      "It is important to be able to position the body of an annotation within the Container’s space that the annotation also targets. For example, a description of part of an image in a Canvas should be positioned such that it does not obscure the image region itself and labels to be displayed as part of a Scene should not be rendered such that the text is hidden by the three dimensional geometry of the model. If this property is not supplied, then the client should do its best to ensure the content is visible to the user. The body resource must be either a TextualBody or a SpecificResource .",
+    title: "position",
+  },
+  prev: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#prev",
+    summary:
+      "A reference from an Annotation Page to the preceding Annotation Page within an Annotation Collection, or from a Collection Page to the preceding Collection Page.",
+    title: "prev",
+  },
+  profile: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#profile",
+    summary:
+      "A schema or named set of functionality available from the resource. The profile can further clarify the type and/or format of an external resource or service, allowing clients to customize their handling of the resource that has the profile property.",
+    title: "profile",
+  },
+  provider: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#provider",
+    summary:
+      "An organization or person that contributed to providing the content of the resource. Clients can then display this information to the user to acknowledge the provider’s contributions. This differs from the requiredStatement property, in that the data is structured, allowing the client to do more than just present text but instead have richer information about the people and organizations to use in different interfaces.",
+    title: "provider",
+  },
+  provides: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#provides",
+    summary:
+      "A set of features or additional functionality that a linked resource enables relative to the linking or including resource, often for accessibility purposes and which are not defined by the type , format or profile of the linked resource. It provides information as to why and how a client might want to interact with the resource, rather than what the resource is. For example, a text file (linked resource) that provides a closedCaptions for a Video (context resource), or an audio file (linked resource) that provides an audioDescription of a Canvas (context resource).",
+    title: "provides",
+  },
+  quality: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#quality",
+    summary: "The quality parameter in the IIIF Image API URL structure, as recorded in an Image API Selector.",
+    title: "quality",
+  },
+  quantityValue: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#quantityValue",
+    summary:
+      "The quantityValue property of a Quantity conveys its numerical component, used with unit to determine how to interpret the number relative to quantities.",
+    title: "quantityValue",
+  },
+  refinedBy: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#refinedBy",
+    summary:
+      "The refinedBy property allows Selectors to be chained together to incrementally select more specific aspects of the resource given in source on the Specific Resource. The first selector on a Specific Resource describes how to select part of the main resource, and a subsequent selector in refinedBy then describes how to further select part of that part. This can be used, for example, to extract a rectangular region with a FragmentSelector and then further refine that region with an SvgSelector or WktSelector .",
+    title: "refinedBy",
+  },
+  region: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#region",
+    summary:
+      "The value of the region parameter in the IIIF Image API URL structure, as recorded in an Image API Selector.",
+    title: "region",
+  },
+  rendering: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#rendering",
+    summary:
+      "A resource that is an alternative, non-IIIF representation of the resource that has the rendering property. Such representations typically cannot be painted onto a single Container, as they either include too many views, have incompatible dimensions, or are compound resources requiring additional rendering functionality. The rendering resource must be able to be displayed directly to a human user, although the presentation may be outside of the IIIF client. The resource must not have a splash page or other interstitial resource that mediates access to it. If access control is required, then the [IIIF Authentication API][iiif-auth] is recommended . Examples include a rendering of a book as a PDF or EPUB, a slide deck with images of a building, or a 3D model of a statue otherwise represented as an Image on a Canvas.",
+    title: "rendering",
+  },
+  requiredStatement: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#requiredStatement",
+    summary:
+      "Text that must be displayed when the resource is displayed or used. For example, the requiredStatement property could be used to present copyright or ownership statements, an acknowledgement of the owning and/or publishing institution, or any other text that the publishing organization deems critical to display to the user. Given the wide variation of potential client user interfaces, it will not always be possible to display this statement to the user in the client’s initial state. If initially hidden, clients must make the method of revealing it as obvious as possible.",
+    title: "requiredStatement",
+  },
+  rights: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#rights",
+    summary:
+      "A string that identifies a license or rights statement that applies to the content of the resource, such as the JSON of a Manifest or the pixels of an image. The value must be drawn from the set of [Creative Commons][org-cc-licenses] license URIs, the [RightsStatements.org][org-rs-terms] rights statement URIs, or those added in the [rights registry][break-until-there-is-a-registry]. The inclusion of this property is informative, and for example could be used to display an icon representing the rights assertions.",
+    title: "rights",
+  },
+  rotation: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#rotation",
+    summary:
+      "The value of the rotation parameter in the IIIF Image API URL structure, as recorded in an Image API Selector.",
+    title: "rotation",
+  },
+  seeAlso: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#seeAlso",
+    summary:
+      "A machine-readable resource such as an XML or RDF description that is related to the current resource that has the seeAlso property. Properties of the resource should be given to help the client select between multiple descriptions (if provided), and to make appropriate use of the document. If the relationship between the resource and the document needs to be more specific, then the document should include that relationship rather than the IIIF resource. Other IIIF resources are also valid targets for seeAlso , for example to link to a Manifest that describes a related object. The URI of the document must identify a single representation of the data in a particular format. For example, if the same data exists in JSON and XML, then separate resources should be added for each representation, with distinct id and format properties.",
+    title: "seeAlso",
+  },
+  selector: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#selector",
+    summary: "TODO",
+    title: "selector",
+  },
+  service: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#service",
+    summary:
+      "A service that the client might interact with directly and gain additional information or functionality for using the resource that has the service property, such as from an Image to the base URI of an associated [IIIF Image API][image-api] service. The service resource should have additional information associated with it in order to allow the client to determine how to make appropriate use of it. Please see the [Service Registry][registry-services] document for the details of currently known service types.",
+    title: "service",
+  },
+  services: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#services",
+    summary:
+      "A list of one or more service definitions on the top-most resource of the document, that are typically shared by more than one subsequent resource. This allows for these shared services to be collected together in a single place, rather than either having their information duplicated potentially many times throughout the document, or requiring a consuming client to traverse the entire document structure to find the information. The resource that the service applies to must still have the service property, as described above, where the service resources have at least the id and type or @id and @type properties. This allows the client to know that the service applies to that resource. Usage of the services property is at the discretion of the publishing system.",
+    title: "services",
+  },
+  size: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#size",
+    summary:
+      "The value of the size parameter in the IIIF Image API URL structure, as recorded in an Image API Selector.",
+    title: "size",
+  },
+  source: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#source",
+    summary:
+      "The source property refers to the URI of the resource that the Specific Resource is a more constrained version or representation of.",
+    title: "source",
+  },
+  spatialScale: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#spatialScale",
+    summary:
+      "A single Quantity that defines a real-world scale factor for the coordinate units of a Canvas or Scene. For a Canvas, this defines the physical distance corresponding to the length of a single Canvas coordinate unit. A Canvas with a width of 5000 and a spatialScale with quantityValue of 0.00008 and a unit of m represents a physical space 0.4 meters wide. For a Scene, this defines the physical distance corresponding to the XYZ coordinate units, or in other words, the physical distance length of a unit vector in the 3D coordinate space. The value of unit must be a length unit. In this specification, the only length unit defined is m , i.e., meters. Unless other values are defined externally as an [extension][prezi30-ldce], the value of unit should always be m .",
+    title: "spatialScale",
+  },
+  start: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#start",
+    summary:
+      "A Container, or part of a Container, which the client should show on initialization for the resource that has the start property. The reference to part of a Container is handled in the same way that Ranges reference parts of Containers by using either its URI, a URI with a fragment specifier, or a SpecificResource with a Selector. This property allows the client to begin with the first Container that contains interesting content rather than requiring the user to manually navigate to find it.",
+    title: "start",
+  },
+  startIndex: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#startIndex",
+    summary:
+      "A non-negative, 0-based integer value identifying the relative position of the first entry in the items list of a Collection Page or Annotation Collection Page within the overall logical order of its parent Collection or Annotation Collection. If this is the second page, and there are 100 entries on the first page, then the value is 100 (the first page contains entries 0 through 99 inclusive).",
+    title: "startIndex",
+  },
+  structures: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#structures",
+    summary:
+      "The structure of an object represented as a Manifest can be described using a hierarchy of Ranges. Ranges can be used to describe the “table of contents” of the object or other structures that the user can interact with beyond the order given by the items property of the Manifest. The hierarchy is built by nesting the child Range resources in the items array of the higher level Range. The top level Ranges of these hierarchies are given in the structures property.",
+    title: "structures",
+  },
+  styleClass: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#styleClass",
+    summary:
+      "The name of a CSS class to apply when rendering the Specific Resource the style class is associated with. This might change the color of the text, the background color, add borders to the element, change the font size or family, or any other CSS-based styling. The class definition is given using the stylesheet property, defined below, which can be used on an Annotation. While Specific Resources may appear outside of Annotations, styleClass is not valid in these circumstances as there will not be a corresponding stylesheet to define the style. If the stylesheet does not define the class given in styleClass , then the class must be ignored.",
+    title: "styleClass",
+  },
+  stylesheet: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#stylesheet",
+    summary:
+      "The stylesheet property conveys either a reference to an external CSS stylesheet document, or carries an embedded stylesheet. This stylesheet is used to resolve CSS classes for processing the styleClass directive on Specific Resources, described above.",
+    title: "stylesheet",
+  },
+  summary: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#summary",
+    summary:
+      "A short textual summary intended to be conveyed to the user when the metadata entries for the resource are not being displayed. This could be used as a brief description for item level search results, for small-screen environments, or as an alternative user interface when the metadata property is not currently being rendered. The summary property follows the same pattern as the label property described above.",
+    title: "summary",
+  },
+  supplementary: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#supplementary",
+    summary:
+      "A link from this Range to an Annotation Collection that includes the supplementing Annotations of content resources for the Range. Clients might use this to present additional content to the user from a different Canvas when interacting with the Range, or to jump to the next part of the Range within the same Canvas. For example, the Range might represent a newspaper article that spans non-sequential pages, and then uses the supplementary property to reference an Annotation Collection that consists of the Annotations that record the text, split into Annotation Pages per newspaper page. Alternatively, the Range might represent the parts of a manuscript that have been transcribed or translated, when there are other parts that have yet to be worked on. The Annotation Collection would be the Annotations that transcribe or translate, respectively.",
+    title: "supplementary",
+  },
+  target: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#target",
+    summary:
+      "The list of targets of an Annotation. As there may be more than one target, the value must be an array, even though the W3C specification does not require this. The resources listed in target can be instances of SpecificResource , core Structural Resources, or Content Resources.",
+    title: "target",
+  },
+  temporalScale: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#temporalScale",
+    summary:
+      "A single Quantity that defines a multiplier or scale factor for the duration property of a Container, indicating that one second in “Container time” represents some other real world duration. A Canvas with a duration of 450 seconds and a temporalScale with quantityValue of 1000 and a unit of s represents a real-world duration of 450,000 seconds (5.2 days), for example a time-lapse video of a growing plant. The value of unit must be a time unit. In this specification, the only time unit defined is s , i.e., seconds. Unless other values are defined externally as an [extension][prezi30-ldce], the value of unit should always be s .",
+    title: "temporalScale",
+  },
+  thumbnail: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#thumbnail",
+    summary:
+      "A content resource, such as a small image or short audio clip, that represents the resource that has the thumbnail property. A resource may have multiple thumbnail resources that have the same or different type and format .",
+    title: "thumbnail",
+  },
+  timeMode: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#timeMode",
+    summary:
+      "A mode associated with an Annotation that is to be applied to the rendering of any time-based media, or otherwise could be considered to have a duration, used as a body resource of that Annotation. Note that the association of timeMode with the Annotation means that different resources in the body cannot have different values. This specification defines the values specified in the table below. Others may be defined externally as an [extension][prezi30-ldce].",
+    title: "timeMode",
+  },
+  total: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#total",
+    summary:
+      "The total property indicates the total number of annotations contained in an Annotation Collection, or the total number of Collections and Manifests within a Collection. A Collection should have total if it uses pages, and may have it if it does not, however the information is readily available by finding the length of the items array in the latter case.",
+    title: "total (totalItems)",
+  },
+  transform: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#transform",
+    summary:
+      "An ordered list of 3D transform operations (translation, rotation, and scale) to be performed on a resource prior to painting that resource into a Scene. Transforms must be applied to the resource in the order given. The resulting state of the resource after applying a transform must be the input state for the subsequent transform in the ordered list. Therefore, transforms are not independent, and different orders of the same set of transforms can produce different results. The list of transforms may include multiple transforms of the same type, e.g., multiple rotation operations.",
+    title: "transform",
+  },
+  type: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#type",
+    summary:
+      "The type or class of the resource. For classes defined for this specification, the value of type will be described in the sections below describing each individual class.",
+    title: "type",
+  },
+  unit: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#unit",
+    summary: "The unit of measurement of a quantity expressed by a Quantity.",
+    title: "unit",
+  },
+  value: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#value",
+    summary:
+      "The value property is used in several situations to convey a value of a resource. The value is always string-based, however the strings might be wrapped in the language map construction.",
+    title: "value",
+  },
+  version: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#version",
+    summary: "TODO: write me",
+    title: "version",
+  },
+  via: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#via",
+    summary:
+      "The via property of a resource may be used to indicate one or more URIs which are the chain of sources from which the current resource was obtained. Each URI in the via list must be different from the URI in id , but may be the same as the URI in canonical if it is present. Recording via allows servers to provide the provenance chain of the resource, regardless of how many copy operations have occurred in the past.",
+    title: "via",
+  },
+  viewingDirection: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#viewingDirection",
+    summary:
+      "!!! TODO: Rewrite to be where is the navigation control to step to the next/ previous in the items of the manifest",
+    title: "viewingDirection",
+  },
+  volume: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#volume",
+    summary:
+      "The volume property represents the relative volume of an audio source. The quantityValue of the specified Quantity represents the desired volume on a linear scale from 0.0 (silence) to 1.0 (maximum volume). If this property is not specified, then the default volume value is client-dependent.",
+    title: "volume",
+  },
+  width: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#width",
+    summary:
+      "The width of the Canvas or external content resource. For content resources, the value is in pixels. For Canvases, the value does not have a unit. In combination with the height, it conveys an aspect ratio for the space in which content resources are located.",
+    title: "width",
+  },
+  x: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#x",
+    summary:
+      "A number (floating point or integer) giving the x coordinate of the point, relative to the dimensions of the source resource",
+    title: "x",
+  },
+  y: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#y",
+    summary:
+      "A number (floating point or integer) giving the y coordinate of the point, relative to the dimensions of the source resource",
+    title: "y",
+  },
+  z: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#z",
+    summary:
+      "A number (floating point) giving the z coordinate of the point, relative to the dimensions of the source resource",
+    title: "z",
+  },
 };
 
 export const documentation = {
   attribution:
-    'Copyright (c) IIIF Consortium and contributors. Generated summaries derived from the Presentation 4 model specification.',
-  disclaimer: 'https://iiif.io/api/annex/notes/disclaimer/',
-  license: 'https://creativecommons.org/licenses/by/4.0/',
-  version: '4.0',
+    "Copyright (c) IIIF Consortium and contributors. Generated summaries derived from the Presentation 4 model specification.",
+  disclaimer: "https://iiif.io/api/annex/notes/disclaimer/",
+  license: "https://creativecommons.org/licenses/by/4.0/",
+  version: "4.0",
   root,
   definedTypes,
   properties: propertyDocumentation,

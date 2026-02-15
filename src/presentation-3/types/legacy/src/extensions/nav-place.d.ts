@@ -1,5 +1,5 @@
-import { Prettify } from '../utility';
-import type { GeoJSON } from '../../../../../shared/geojson';
+import { Prettify } from "../utility";
+import type { GeoJSON } from "../../../../../shared/geojson";
 
 /**
  * Nav place

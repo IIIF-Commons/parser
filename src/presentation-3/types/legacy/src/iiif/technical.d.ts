@@ -1,39 +1,39 @@
-import { LiteralUnion } from '../utility';
+import { LiteralUnion } from "../utility";
 
 export type ResourceType =
-  | 'Collection'
-  | 'Manifest'
-  | 'Canvas'
-  | 'Annotation'
-  | 'AnnotationPage'
-  | 'AnnotationCollection'
-  | 'Range'
-  | 'ContentResource'
-  | 'Choice'
-  | 'CanvasReference'
-  | 'Service';
+  | "Collection"
+  | "Manifest"
+  | "Canvas"
+  | "Annotation"
+  | "AnnotationPage"
+  | "AnnotationCollection"
+  | "Range"
+  | "ContentResource"
+  | "Choice"
+  | "CanvasReference"
+  | "Service";
 
-export type ViewingDirection = 'left-to-right' | 'right-to-left' | 'top-to-bottom' | 'bottom-to-top';
+export type ViewingDirection = "left-to-right" | "right-to-left" | "top-to-bottom" | "bottom-to-top";
 
 export type SpecificationBehaviors =
-  | 'auto-advance'
-  | 'continuous'
-  | 'facing-pages'
-  | 'individuals'
-  | 'multi-part'
-  | 'no-auto-advance'
-  | 'no-nav'
-  | 'no-repeat'
-  | 'non-paged'
-  | 'hidden'
-  | 'paged'
-  | 'repeat'
-  | 'sequence'
-  | 'thumbnail-nav'
-  | 'together'
-  | 'unordered';
+  | "auto-advance"
+  | "continuous"
+  | "facing-pages"
+  | "individuals"
+  | "multi-part"
+  | "no-auto-advance"
+  | "no-nav"
+  | "no-repeat"
+  | "non-paged"
+  | "hidden"
+  | "paged"
+  | "repeat"
+  | "sequence"
+  | "thumbnail-nav"
+  | "together"
+  | "unordered";
 
-export type SpecificationTimeMode = 'trim' | 'scale' | 'loop';
+export type SpecificationTimeMode = "trim" | "scale" | "loop";
 
 export type TechnicalProperties = {
   /**

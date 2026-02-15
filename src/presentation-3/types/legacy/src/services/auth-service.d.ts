@@ -1,8 +1,8 @@
-import { IdOrAtId, Prettify } from '../utility';
+import { IdOrAtId, Prettify } from "../utility";
 
 export type AuthAccessTokenService = Prettify<
   IdOrAtId<string> & {
-    profile: 'http://iiif.io/api/auth/1/token' | 'AuthTokenService1';
+    profile: "http://iiif.io/api/auth/1/token" | "AuthTokenService1";
   }
 >;
 
@@ -12,7 +12,7 @@ export type AuthAccessTokenServiceResponse = {
 };
 
 export type AuthAccessTokenServiceError = {
-  error: 'invalidRequest' | 'missingCredentials' | 'invalidCredentials' | 'invalidOrigin' | 'unavailable';
+  error: "invalidRequest" | "missingCredentials" | "invalidCredentials" | "invalidOrigin" | "unavailable";
   description?: string;
 };
 
@@ -29,34 +29,34 @@ type AuthAbstractService = Prettify<
 
 export type AuthClickThroughService = Prettify<
   IdOrAtId<string> & {
-    profile: 'http://iiif.io/api/auth/1/clickthrough';
+    profile: "http://iiif.io/api/auth/1/clickthrough";
     service: AuthAccessTokenService;
   }
 >;
 
 export type AuthLogoutService = Prettify<
   AuthAbstractService & {
-    profile: 'http://iiif.io/api/auth/1/logout' | 'AuthLogoutService1';
+    profile: "http://iiif.io/api/auth/1/logout" | "AuthLogoutService1";
   }
 >;
 
 export type AuthLoginService = Prettify<
   AuthAbstractService & {
-    profile: 'http://iiif.io/api/auth/1/login' | 'AuthCookieService1';
+    profile: "http://iiif.io/api/auth/1/login" | "AuthCookieService1";
     service: Array<AuthLoginService | AuthLogoutService>;
   }
 >;
 
 export type AuthKioskService = Prettify<
   AuthAbstractService & {
-    profile: 'http://iiif.io/api/auth/1/kiosk';
+    profile: "http://iiif.io/api/auth/1/kiosk";
     service: AuthAccessTokenService;
   }
 >;
 
 export type AuthExternalService = Prettify<
   AuthAbstractService & {
-    profile: 'http://iiif.io/api/auth/1/external';
+    profile: "http://iiif.io/api/auth/1/external";
     service: AuthAccessTokenService;
   }
 >;

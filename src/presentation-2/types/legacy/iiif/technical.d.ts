@@ -24,7 +24,7 @@ export declare type TechnicalProperties = {
    *    }
    * ```
    */
-  '@context'?: string | string[];
+  "@context"?: string | string[];
 
   /**
    * The URI that identifies the resource. It is recommended that an HTTP URI be used for all resources. Recommended
@@ -47,7 +47,7 @@ export declare type TechnicalProperties = {
    * - An {@link Annotation} should have exactly one id, must not have more than one, and the annotation’s representation
    *   should be published at that URI.
    */
-  '@id': string;
+  "@id": string;
 
   /**
    * The type of the resource. For the resource types defined by this specification, the value of @type will be
@@ -59,7 +59,7 @@ export declare type TechnicalProperties = {
    *   {@link https://iiif.io/api/presentation/2.1/#resource-type-overview Section 2}. Services, Thumbnails and
    *   other resources will have their own requirements.
    */
-  '@type': string;
+  "@type": string;
 
   /**
    * The specific media type (often called a MIME type) of a content resource, for example “image/jpeg”. This is
@@ -113,7 +113,7 @@ export declare type TechnicalProperties = {
    * - **top-to-bottom** – The object is displayed from the top to the bottom.
    * - **bottom-to-top** – The object is displayed from the bottom to the top.
    */
-  viewingDirection?: 'left-to-right' | 'right-to-left' | 'top-to-bottom' | 'bottom-to-top';
+  viewingDirection?: "left-to-right" | "right-to-left" | "top-to-bottom" | "bottom-to-top";
 
   /**
    * A hint to the client as to the most appropriate method of displaying the resource. This specification defines the
@@ -160,7 +160,7 @@ export declare type TechnicalProperties = {
    *   “paged” viewing hint, must be displayed by themselves, as they depict both parts of the opening. If all of the
    *   canvases are like this, then page turning is not possible, so simply use “individuals” instead.
    */
-  viewingHint?: 'individuals' | 'paged' | 'continuous' | 'multi-part' | 'non-paged' | 'top' | 'facing-pages';
+  viewingHint?: "individuals" | "paged" | "continuous" | "multi-part" | "non-paged" | "top" | "facing-pages";
 
   /**
    * A date that the client can use for navigation purposes when presenting the resource to the user in a time-based

@@ -1,25 +1,25 @@
-import { OmitProperties } from '../utility';
-import { TechnicalProperties } from '../iiif/technical';
-import { DescriptiveProperties } from '../iiif/descriptive';
-import { LinkingProperties } from '../iiif/linking';
-import { RightsProperties } from '../iiif/rights';
+import { OmitProperties } from "../utility";
+import { TechnicalProperties } from "../iiif/technical";
+import { DescriptiveProperties } from "../iiif/descriptive";
+import { LinkingProperties } from "../iiif/linking";
+import { RightsProperties } from "../iiif/rights";
 
-type RangeOmittedTechnical = 'format' | 'viewingDirection' | 'navDate';
-type RangeOmittedLinking = 'startCanvas';
+type RangeOmittedTechnical = "format" | "viewingDirection" | "navDate";
+type RangeOmittedLinking = "startCanvas";
 
 export type RangeStructural = {
   canvases?: string[];
   ranges?: string[];
   members?: Array<
     | {
-        '@id': string;
-        '@type': 'sc:Canvas';
+        "@id": string;
+        "@type": "sc:Canvas";
         label: string;
         contentLayer?: string;
       }
     | {
-        '@id': string;
-        '@type': 'sc:Range';
+        "@id": string;
+        "@type": "sc:Range";
         label: string;
         contentLayer?: string;
       }
@@ -33,7 +33,8 @@ export type RangeStructural = {
  * canvas and images, text and other resources are “painted” on to it.
  */
 export interface Range
-  extends OmitProperties<TechnicalProperties, RangeOmittedTechnical>,
+  extends
+    OmitProperties<TechnicalProperties, RangeOmittedTechnical>,
     DescriptiveProperties,
     RightsProperties,
     RangeStructural,

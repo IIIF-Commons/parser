@@ -42,7 +42,7 @@ const all = [
   "Transforms",
   "TranslateTransform",
   "VisualContentSelector",
-  "WktSelector"
+  "WktSelector",
 ] as const;
 
 export type Presentation4ResourceType = (typeof all)[number];
@@ -50,60 +50,39 @@ export type Presentation4ResourceType = (typeof all)[number];
 export const resources = {
   all,
   groups: {
-  "topLevel": [
-    "Collection",
-    "Manifest",
-    "Range"
-  ],
-  "paging": [
-    "CollectionPage"
-  ],
-  "containers": [
-    "Canvas",
-    "Scene",
-    "Timeline"
-  ],
-  "annotations": [
-    "Annotation",
-    "AnnotationCollection",
-    "AnnotationPage",
-    "Choice",
-    "SpecificResource",
-    "TextualBody"
-  ],
-  "selectors": [
-    "AnimationSelector",
-    "AudioContentSelector",
-    "FragmentSelector",
-    "ImageApiSelector",
-    "PointSelector",
-    "SvgSelector",
-    "VisualContentSelector",
-    "WktSelector"
-  ],
-  "sceneComponents": [
-    "AmbientAudio",
-    "AmbientLight",
-    "AudioEmitters",
-    "Camera",
-    "DirectionalLight",
-    "Light",
-    "OrthographicCamera",
-    "PerspectiveCamera",
-    "PointAudio",
-    "PointLight",
-    "RotateTransform",
-    "ScaleTransform",
-    "SpotAudio",
-    "SpotLight",
-    "Transforms",
-    "TranslateTransform"
-  ],
-  "utility": [
-    "Agent",
-    "Quantity",
-    "Service"
-  ],
-  "other": []
-} as const,
+    topLevel: ["Collection", "Manifest", "Range"],
+    paging: ["CollectionPage"],
+    containers: ["Canvas", "Scene", "Timeline"],
+    annotations: ["Annotation", "AnnotationCollection", "AnnotationPage", "Choice", "SpecificResource", "TextualBody"],
+    selectors: [
+      "AnimationSelector",
+      "AudioContentSelector",
+      "FragmentSelector",
+      "ImageApiSelector",
+      "PointSelector",
+      "SvgSelector",
+      "VisualContentSelector",
+      "WktSelector",
+    ],
+    sceneComponents: [
+      "AmbientAudio",
+      "AmbientLight",
+      "AudioEmitters",
+      "Camera",
+      "DirectionalLight",
+      "Light",
+      "OrthographicCamera",
+      "PerspectiveCamera",
+      "PointAudio",
+      "PointLight",
+      "RotateTransform",
+      "ScaleTransform",
+      "SpotAudio",
+      "SpotLight",
+      "Transforms",
+      "TranslateTransform",
+    ],
+    utility: ["Agent", "Quantity", "Service"],
+    other: [],
+  } as const,
 } as const;

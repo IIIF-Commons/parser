@@ -1,8 +1,8 @@
-import { ContentResource } from '../resources/content-resource';
-import { OneOrMany } from '../utility';
-import { Service } from '../../../../presentation-3/types';
-import { Canvas } from '../resources/canvas';
-import { Layer } from '../resources/layer';
+import { ContentResource } from "../resources/content-resource";
+import { OneOrMany } from "../utility";
+import { Service } from "../../../../presentation-3/types";
+import { Canvas } from "../resources/canvas";
+import { Layer } from "../resources/layer";
 
 export declare type LinkingProperties = {
   /**
@@ -69,7 +69,7 @@ export declare type LinkingProperties = {
    * - A {@link Sequence sequence} or a {@link Range range} may have exactly one canvas as its start canvas.
    * - Other resource types must not have a start canvas.
    */
-  startCanvas?: { '@id': string; type: 'sc:Canvas' } | string;
+  startCanvas?: { "@id": string; type: "sc:Canvas" } | string;
 
   /**
    * A link from a {@link Range range} to a {@link Layer layer} that includes the annotations of content resources for

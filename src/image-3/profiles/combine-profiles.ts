@@ -1,6 +1,6 @@
-import { levelToProfile } from './level-to-profile';
-import { Profile } from './profiles';
-import type { ImageService } from '../../presentation-3/types';
+import { levelToProfile } from "./level-to-profile";
+import { Profile } from "./profiles";
+import type { ImageService } from "../../presentation-3/types";
 
 export function combineProfiles(service: ImageService): Profile {
   const profiles: any[] = service ? (Array.isArray(service.profile) ? service.profile : [service.profile]) : [];
@@ -11,7 +11,7 @@ export function combineProfiles(service: ImageService): Profile {
   };
 
   for (let profile of profiles) {
-    if (typeof profile === 'string') {
+    if (typeof profile === "string") {
       profile = levelToProfile(profile);
     }
 

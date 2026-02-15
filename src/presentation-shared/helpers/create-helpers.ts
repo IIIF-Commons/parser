@@ -1,8 +1,8 @@
 export type DiscriminatedObject = {
   type?: unknown;
-  '@type'?: unknown;
+  "@type"?: unknown;
   id?: unknown;
-  '@id'?: unknown;
+  "@id"?: unknown;
 };
 
 export type ResourceSpec = {
@@ -44,7 +44,7 @@ export type NarrowApi<T extends Record<string, unknown>> = {
   /**
    * Build a reusable type guard for a discriminant string.
    */
-  byType<TType extends string>(type: TType): (value: unknown) => value is { type: TType } | { '@type': TType };
+  byType<TType extends string>(type: TType): (value: unknown) => value is { type: TType } | { "@type": TType };
 } & {
   [K in keyof T as GuardName<K & string>]: (value: unknown) => value is T[K];
 };
@@ -57,7 +57,7 @@ export type PresentationHelpers<T extends Record<string, unknown>> = {
 };
 
 function isObject(value: unknown): value is Record<string, unknown> {
-  return !!value && typeof value === 'object' && !Array.isArray(value);
+  return !!value && typeof value === "object" && !Array.isArray(value);
 }
 
 function capitalize(value: string): string {
@@ -65,16 +65,16 @@ function capitalize(value: string): string {
 }
 
 function getType(value: DiscriminatedObject): string | undefined {
-  if (typeof value.type === 'string') {
+  if (typeof value.type === "string") {
     return value.type;
   }
 
-  if (typeof value['@type'] === 'string') {
-    return value['@type'];
+  if (typeof value["@type"] === "string") {
+    return value["@type"];
   }
 
-  if (Array.isArray(value['@type'])) {
-    const firstString = value['@type'].find((entry): entry is string => typeof entry === 'string');
+  if (Array.isArray(value["@type"])) {
+    const firstString = value["@type"].find((entry): entry is string => typeof entry === "string");
     return firstString;
   }
 
@@ -82,11 +82,11 @@ function getType(value: DiscriminatedObject): string | undefined {
 }
 
 function hasValidIdShape(value: DiscriminatedObject): boolean {
-  if (typeof value.id !== 'undefined' && typeof value.id !== 'string') {
+  if (typeof value.id !== "undefined" && typeof value.id !== "string") {
     return false;
   }
 
-  if (typeof value['@id'] !== 'undefined' && typeof value['@id'] !== 'string') {
+  if (typeof value["@id"] !== "undefined" && typeof value["@id"] !== "string") {
     return false;
   }
 
@@ -106,10 +106,14 @@ function isExpectedType(actualType: string | undefined, expected: ResourceSpec):
 }
 
 function describeExpected(expected: ResourceSpec): string {
-  return [expected.type, ...(expected.aliases || [])].join(' | ');
+  return [expected.type, ...(expected.aliases || [])].join(" | ");
 }
 
-function assertDiscriminatedResource(value: unknown, expected: ResourceSpec, label: string): asserts value is DiscriminatedObject {
+function assertDiscriminatedResource(
+  value: unknown,
+  expected: ResourceSpec,
+  label: string
+): asserts value is DiscriminatedObject {
   if (!isObject(value)) {
     throw new TypeError(`${label} expected an object value.`);
   }
@@ -120,7 +124,7 @@ function assertDiscriminatedResource(value: unknown, expected: ResourceSpec, lab
 
   const actualType = getType(value);
   if (!isExpectedType(actualType, expected)) {
-    const received = typeof actualType === 'string' ? actualType : 'undefined';
+    const received = typeof actualType === "string" ? actualType : "undefined";
     throw new TypeError(`${label} expected type ${describeExpected(expected)} but received ${received}.`);
   }
 }
@@ -137,7 +141,9 @@ function isDiscriminatedResource(value: unknown, expected: ResourceSpec): boolea
  * Create version-specific `infer`, `cast`, and `narrow` helper APIs from a
  * discriminant registry.
  */
-export function createPresentationHelpers<T extends Record<string, unknown>>(specs: ResourceSpecs<T>): PresentationHelpers<T> {
+export function createPresentationHelpers<T extends Record<string, unknown>>(
+  specs: ResourceSpecs<T>
+): PresentationHelpers<T> {
   const infer = {} as InferApi<T>;
   const cast = {} as CastApi<T>;
   const narrow = {
@@ -145,7 +151,8 @@ export function createPresentationHelpers<T extends Record<string, unknown>>(spe
       return isDiscriminatedResource(value, { type });
     },
     byType<TType extends string>(type: TType) {
-      return (value: unknown): value is { type: TType } | { '@type': TType } => isDiscriminatedResource(value, { type });
+      return (value: unknown): value is { type: TType } | { "@type": TType } =>
+        isDiscriminatedResource(value, { type });
     },
   } as NarrowApi<T>;
 

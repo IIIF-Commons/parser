@@ -1,8 +1,8 @@
 export type NormalizedEntityV4 = {
   id?: string;
   type?: string;
-  '@id'?: string;
-  '@type'?: string;
+  "@id"?: string;
+  "@type"?: string;
   [key: string]: unknown;
 };
 
@@ -32,12 +32,12 @@ export type Presentation4NormalizeResult = {
   mapping: Record<string, Presentation4MappingType>;
   diagnostics: Array<{
     code: string;
-    severity: 'error' | 'warning' | 'info';
+    severity: "error" | "warning" | "info";
     message: string;
     path: string;
     resourceType?: string;
     resourceId?: string;
     specRef?: string;
   }>;
-  sourceVersion: 2 | 3 | 4 | 'unknown';
+  sourceVersion: 2 | 3 | 4 | "unknown";
 };

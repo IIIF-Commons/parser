@@ -1,8 +1,8 @@
-import { IdOrAtId, Prettify } from '../utility';
+import { IdOrAtId, Prettify } from "../utility";
 
 export type SearchService = IdOrAtId<string> & {
-  '@context': 'http://iiif.io/api/search/1/context.json';
-  profile: 'http://iiif.io/api/search/1/search' | 'SearchService1';
+  "@context": "http://iiif.io/api/search/1/context.json";
+  profile: "http://iiif.io/api/search/1/search" | "SearchService1";
 };
 
 export type SearchServiceQueryParams = {
@@ -14,7 +14,7 @@ export type SearchServiceQueryParams = {
 
 export type SearchServiceAutocomplete = Prettify<
   IdOrAtId<string> & {
-    profile: 'http://iiif.io/api/search/1/autocomplete' | 'AutoCompleteService1';
+    profile: "http://iiif.io/api/search/1/autocomplete" | "AutoCompleteService1";
   }
 >;
 
@@ -27,8 +27,8 @@ export type SearchServiceAutocompleteQueryParams = Prettify<
 
 export type SearchServiceAutocompleteResponse = Prettify<
   IdOrAtId<string> & {
-    '@context': 'http://iiif.io/api/search/1/context.json';
-    '@type': 'search:TermList';
+    "@context": "http://iiif.io/api/search/1/context.json";
+    "@type": "search:TermList";
     ignored: string[];
     terms: Array<{
       match: string;
@@ -40,18 +40,18 @@ export type SearchServiceAutocompleteResponse = Prettify<
 >;
 
 export type SearchServiceSearchResponse = {
-  '@context': 'http://iiif.io/api/presentation/3/context.json' | string[];
-  '@id': string;
-  '@type': 'sc:AnnotationList';
+  "@context": "http://iiif.io/api/presentation/3/context.json" | string[];
+  "@id": string;
+  "@type": "sc:AnnotationList";
   resources: Array<{
-    '@id': string;
-    '@type': 'oa:Annotation';
+    "@id": string;
+    "@type": "oa:Annotation";
     motivation: string;
     resource: SearchServiceCommonResources | any; // this is broad.
     on: SearchServiceSearchCommonSelectors | any | Array<SearchServiceSearchCommonSelectors> | Array<any>;
   }>;
   hits?: Array<{
-    '@type': 'search:Hit';
+    "@type": "search:Hit";
     annotations: string[];
     selectors: Array<SearchServiceCommonHitSelectors>;
     match?: string;
@@ -60,7 +60,7 @@ export type SearchServiceSearchResponse = {
   }>;
 };
 export type SearchServiceCommonHitSelectors = {
-  '@type': 'oa:TextQuoteSelector';
+  "@type": "oa:TextQuoteSelector";
   exact: string;
   prefix?: string;
   suffix?: string;
@@ -69,11 +69,11 @@ export type SearchServiceCommonHitSelectors = {
 export type SearchServiceSearchCommonSelectors =
   | string
   | {
-      '@id': string;
-      within: { '@id': string; type: string; label: string };
+      "@id": string;
+      within: { "@id": string; type: string; label: string };
     };
 
 export type SearchServiceCommonResources = {
-  '@type': 'cnt:ContentAsText';
+  "@type": "cnt:ContentAsText";
   chars: string;
 };

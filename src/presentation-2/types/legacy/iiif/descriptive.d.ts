@@ -1,5 +1,5 @@
-import { LanguageProperty, OneOrMany } from '../utility';
-import { ImageResourceSegment, ImageResourceSegmentWithService } from '../resources/content-resource';
+import { LanguageProperty, OneOrMany } from "../utility";
+import { ImageResourceSegment, ImageResourceSegmentWithService } from "../resources/content-resource";
 
 export declare type DescriptiveProperties = {
   /**

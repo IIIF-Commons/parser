@@ -77,6 +77,7 @@ presentation-4/
    - Content state resolution utilities
 
 **Deliverables:**
+
 - `types/*.ts` - All v4 type definitions
 - `empty-types.ts` - Default entities
 - `utilities.ts` - Core utilities
@@ -104,6 +105,7 @@ presentation-4/
    - Verify required properties for new containers
 
 **Deliverables:**
+
 - Complete `traverse.ts`
 - `serialize-presentation-4.ts`
 - `strict-upgrade.ts`
@@ -119,7 +121,7 @@ presentation-4/
    - Preserve all v3 functionality
    - Add default v4 properties where needed
 
-2. **v4 → v3 Downgrade** 
+2. **v4 → v3 Downgrade**
    - Convert v4 back to v3 (excluding 3D features)
    - Map Timelines to v3 Canvases with duration
    - Strip 3D-only features gracefully
@@ -132,6 +134,7 @@ presentation-4/
    - Migration utilities for existing data
 
 **Deliverables:**
+
 - `upgrade-from-v3.ts`
 - `serialize-presentation-3.ts` (downgrade)
 - Migration documentation
@@ -164,6 +167,7 @@ presentation-4/
    - Cross-container scaling
 
 **Deliverables:**
+
 - Advanced content state processing
 - 3D composition utilities
 - Interaction handlers
@@ -178,15 +182,15 @@ presentation-4/
 function upgradeManifestV3ToV4(v3Manifest: ManifestV3): ManifestV4 {
   return {
     ...v3Manifest,
-    '@context': 'http://iiif.io/api/presentation/4/context.json',
-    items: v3Manifest.items.map(canvas => upgradeCanvasV3ToV4(canvas))
+    "@context": "http://iiif.io/api/presentation/4/context.json",
+    items: v3Manifest.items.map((canvas) => upgradeCanvasV3ToV4(canvas)),
   };
 }
 
 function upgradeCanvasV3ToV4(v3Canvas: CanvasV3): CanvasV4 {
   return {
     ...v3Canvas,
-    type: 'Canvas', // Explicit container type
+    type: "Canvas", // Explicit container type
     // duration preserved if present
     // Add v4-specific defaults
   };
@@ -200,30 +204,30 @@ function upgradeCanvasV3ToV4(v3Canvas: CanvasV3): CanvasV4 {
 function downgradeManifestV4ToV3(v4Manifest: ManifestV4): ManifestV3 {
   return {
     ...v4Manifest,
-    '@context': 'http://iiif.io/api/presentation/3/context.json',
+    "@context": "http://iiif.io/api/presentation/3/context.json",
     items: v4Manifest.items
       .filter(isV3Compatible) // Remove Scenes, unsupported features
-      .map(container => downgradeContainerV4ToV3(container))
+      .map((container) => downgradeContainerV4ToV3(container)),
   };
 }
 
 function downgradeContainerV4ToV3(container: ContainerV4): CanvasV3 {
   switch (container.type) {
-    case 'Timeline':
+    case "Timeline":
       // Convert Timeline to Canvas with duration, default dimensions
       return {
         ...container,
-        type: 'Canvas',
+        type: "Canvas",
         width: 1, // Minimal dimensions for temporal content
         height: 1,
-        duration: container.duration
+        duration: container.duration,
       };
-    case 'Canvas':
+    case "Canvas":
       // Direct mapping, remove v4-only properties
       return stripV4Properties(container);
-    case 'Scene':
+    case "Scene":
       // Scenes cannot be downgraded - would need special handling
-      throw new Error('Scene containers cannot be downgraded to v3');
+      throw new Error("Scene containers cannot be downgraded to v3");
   }
 }
 ```
@@ -233,27 +237,25 @@ function downgradeContainerV4ToV3(container: ContainerV4): CanvasV3 {
 ### Parsing v4 Content
 
 ```typescript
-import { normalize as normalizeV4 } from './presentation-4';
+import { normalize as normalizeV4 } from "./presentation-4";
 
 // Parse v4 manifest
-const v4Manifest = await fetch('https://example.org/manifest-v4.json').then(r => r.json());
+const v4Manifest = await fetch("https://example.org/manifest-v4.json").then((r) => r.json());
 const { entities, resource, mapping } = normalizeV4(v4Manifest);
 
 // Access 3D scene
 const scene = entities.Scene[resource.items[0].id];
-const cameras = scene.items.filter(item => 
-  entities.Annotation[item.id]?.body?.type?.includes('Camera')
-);
+const cameras = scene.items.filter((item) => entities.Annotation[item.id]?.body?.type?.includes("Camera"));
 ```
 
 ### Converting Between Versions
 
 ```typescript
-import { upgradeFromV3, serialize } from './presentation-4';
-import { serializeConfigPresentation3 } from './serialize-presentation-3';
+import { upgradeFromV3, serialize } from "./presentation-4";
+import { serializeConfigPresentation3 } from "./serialize-presentation-3";
 
 // Upgrade v3 to v4
-const v3Manifest = await fetch('https://example.org/manifest-v3.json').then(r => r.json());
+const v3Manifest = await fetch("https://example.org/manifest-v3.json").then((r) => r.json());
 const v4Normalized = upgradeFromV3(v3Manifest);
 
 // Downgrade v4 to v3 (excluding 3D features)
@@ -266,18 +268,18 @@ const v3Compatible = serialize(v4Normalized.entities, v4Normalized.resource, ser
 // Process Scene with 3D models
 const scene = entities.Scene[sceneId];
 const modelAnnotations = scene.items
-  .flatMap(page => entities.AnnotationPage[page.id]?.items || [])
-  .map(annoId => entities.Annotation[annoId])
-  .filter(anno => anno?.body?.type === 'Model');
+  .flatMap((page) => entities.AnnotationPage[page.id]?.items || [])
+  .map((annoId) => entities.Annotation[annoId])
+  .filter((anno) => anno?.body?.type === "Model");
 
 // Extract camera positions
 const cameras = scene.items
-  .flatMap(page => entities.AnnotationPage[page.id]?.items || [])
-  .map(annoId => entities.Annotation[annoId])
-  .filter(anno => anno?.body?.type?.includes('Camera'))
-  .map(anno => ({
+  .flatMap((page) => entities.AnnotationPage[page.id]?.items || [])
+  .map((annoId) => entities.Annotation[annoId])
+  .filter((anno) => anno?.body?.type?.includes("Camera"))
+  .map((anno) => ({
     camera: anno.body,
-    position: anno.target.selector // PointSelector with x,y,z
+    position: anno.target.selector, // PointSelector with x,y,z
   }));
 ```
 
@@ -287,17 +289,17 @@ const cameras = scene.items
 
 ```typescript
 // Native v4 output
-import { serializeConfigPresentation4 } from './serialize-presentation-4';
+import { serializeConfigPresentation4 } from "./serialize-presentation-4";
 
 // v3 compatible output (downgrade)
-import { serializeConfigPresentation3 } from './serialize-presentation-3';
+import { serializeConfigPresentation3 } from "./serialize-presentation-3";
 
 // Custom config with specific feature toggles
 const customConfig = {
   ...serializeConfigPresentation4,
   stripUnsupported3DFeatures: true,
   preserveContentStates: false,
-  downgradeScenesToCanvas: true
+  downgradeScenesToCanvas: true,
 };
 ```
 
@@ -305,10 +307,10 @@ const customConfig = {
 
 ```typescript
 interface UpgradeOptions {
-  preserveV3Semantics: boolean;     // Keep v3-style behavior
-  addDefaultV4Properties: boolean;  // Add v4 defaults
-  enableContentStates: boolean;     // Process content state annotations
-  enable3DFeatures: boolean;        // Support Scene containers
+  preserveV3Semantics: boolean; // Keep v3-style behavior
+  addDefaultV4Properties: boolean; // Add v4 defaults
+  enableContentStates: boolean; // Process content state annotations
+  enable3DFeatures: boolean; // Support Scene containers
 }
 ```
 
@@ -338,21 +340,25 @@ interface UpgradeOptions {
 ## Testing Strategy
 
 ### Unit Tests
+
 - Individual function testing for normalization
 - Serialization round-trip testing
 - Type validation testing
 
 ### Integration Tests
+
 - Full manifest processing pipelines
 - v3↔v4 conversion accuracy
 - Real-world manifest compatibility
 
 ### Performance Tests
+
 - Large manifest processing
 - Memory usage optimization
 - Conversion speed benchmarks
 
 ### Compatibility Tests
+
 - Cross-version feature matrix
 - Edge case handling
 - Error condition testing
@@ -364,7 +370,7 @@ interface UpgradeOptions {
 After initial implementation, consider extracting shared utilities:
 
 - **Language map processing**: Common between v3/v4
-- **URI validation**: Same across versions  
+- **URI validation**: Same across versions
 - **Basic annotation processing**: Core logic unchanged
 - **JSON-LD context handling**: Similar patterns
 

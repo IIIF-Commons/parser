@@ -1,9 +1,9 @@
 export const EMPTY_ARRAY = Object.freeze([]) as readonly never[];
 export const EMPTY_OBJECT = Object.freeze({}) as Readonly<Record<string, never>>;
-export const PRESENTATION_4_CONTEXT = 'http://iiif.io/api/presentation/4/context.json';
-export const PRESENTATION_3_CONTEXT = 'http://iiif.io/api/presentation/3/context.json';
+export const PRESENTATION_4_CONTEXT = "http://iiif.io/api/presentation/4/context.json";
+export const PRESENTATION_3_CONTEXT = "http://iiif.io/api/presentation/3/context.json";
 
-export type ValidationSeverity = 'error' | 'warning' | 'info';
+export type ValidationSeverity = "error" | "warning" | "info";
 
 export type ValidationIssue = {
   code: string;
@@ -27,9 +27,9 @@ export type ValidationReport = {
 
 export function createValidationReport(issues: ValidationIssue[]): ValidationReport {
   const stats = {
-    errors: issues.filter((issue) => issue.severity === 'error').length,
-    warnings: issues.filter((issue) => issue.severity === 'warning').length,
-    info: issues.filter((issue) => issue.severity === 'info').length,
+    errors: issues.filter((issue) => issue.severity === "error").length,
+    warnings: issues.filter((issue) => issue.severity === "warning").length,
+    info: issues.filter((issue) => issue.severity === "info").length,
   };
 
   return {
@@ -40,18 +40,18 @@ export function createValidationReport(issues: ValidationIssue[]): ValidationRep
 }
 
 export function isPlainObject(value: unknown): value is Record<string, any> {
-  return !!value && Object.prototype.toString.call(value) === '[object Object]';
+  return !!value && Object.prototype.toString.call(value) === "[object Object]";
 }
 
 export function deepClone<T>(value: T): T {
-  if (typeof structuredClone !== 'undefined') {
+  if (typeof structuredClone !== "undefined") {
     return structuredClone(value);
   }
   return JSON.parse(JSON.stringify(value)) as T;
 }
 
 export function ensureArray<T>(value: T | T[] | undefined | null): T[] {
-  if (value === null || typeof value === 'undefined') {
+  if (value === null || typeof value === "undefined") {
     return [];
   }
   return Array.isArray(value) ? value : [value];
@@ -59,75 +59,75 @@ export function ensureArray<T>(value: T | T[] | undefined | null): T[] {
 
 export function ensureStringArray(value: unknown): string[] {
   if (Array.isArray(value)) {
-    return value.filter((v): v is string => typeof v === 'string');
+    return value.filter((v): v is string => typeof v === "string");
   }
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     return [value];
   }
   return [];
 }
 
 export function getId(resource: any): string | undefined {
-  if (!resource || typeof resource !== 'object') {
+  if (!resource || typeof resource !== "object") {
     return undefined;
   }
-  if (typeof resource.id === 'string') {
+  if (typeof resource.id === "string") {
     return resource.id;
   }
-  if (typeof resource['@id'] === 'string') {
-    return resource['@id'];
+  if (typeof resource["@id"] === "string") {
+    return resource["@id"];
   }
   return undefined;
 }
 
 export function getType(resource: any): string | undefined {
-  if (!resource || typeof resource !== 'object') {
+  if (!resource || typeof resource !== "object") {
     return undefined;
   }
-  if (typeof resource.type === 'string') {
+  if (typeof resource.type === "string") {
     return resource.type;
   }
-  if (typeof resource['@type'] === 'string') {
-    return resource['@type'];
+  if (typeof resource["@type"] === "string") {
+    return resource["@type"];
   }
-  if (Array.isArray(resource['@type'])) {
-    return resource['@type'].find((type: unknown) => typeof type === 'string');
+  if (Array.isArray(resource["@type"])) {
+    return resource["@type"].find((type: unknown) => typeof type === "string");
   }
   return undefined;
 }
 
 export function setId(resource: Record<string, any>, id: string) {
   resource.id = id;
-  delete resource['@id'];
+  delete resource["@id"];
 }
 
 export function setType(resource: Record<string, any>, type: string) {
   resource.type = type;
-  delete resource['@type'];
+  delete resource["@type"];
 }
 
 export function isSpecificResource(resource: any): boolean {
-  return getType(resource) === 'SpecificResource';
+  return getType(resource) === "SpecificResource";
 }
 
 export function isSelector(resource: any): boolean {
   const type = getType(resource);
-  return !!type && type.endsWith('Selector');
+  return !!type && type.endsWith("Selector");
 }
 
 export function isQuantity(resource: any): boolean {
-  return getType(resource) === 'Quantity';
+  return getType(resource) === "Quantity";
 }
 
 export function isServiceLike(resource: any): boolean {
-  if (!resource || typeof resource !== 'object') {
+  if (!resource || typeof resource !== "object") {
     return false;
   }
   const type = getType(resource);
-  if (type && type.includes('Service')) {
+  if (type && type.includes("Service")) {
     return true;
   }
-  return typeof resource.profile === 'string' || Array.isArray(resource.service);
+  return typeof resource.profile === "string" || Array.isArray(resource.service);
 }
 
 export function hashString(input: string): string {
@@ -142,46 +142,46 @@ export function hashString(input: string): string {
 
 export function stableStringify(value: unknown): string {
   if (Array.isArray(value)) {
-    return `[${value.map((item) => stableStringify(item)).join(',')}]`;
+    return `[${value.map((item) => stableStringify(item)).join(",")}]`;
   }
-  if (value && typeof value === 'object') {
+  if (value && typeof value === "object") {
     const object = value as Record<string, unknown>;
     const keys = Object.keys(object).sort();
-    return `{${keys.map((key) => `${JSON.stringify(key)}:${stableStringify(object[key])}`).join(',')}}`;
+    return `{${keys.map((key) => `${JSON.stringify(key)}:${stableStringify(object[key])}`).join(",")}}`;
   }
   return JSON.stringify(value);
 }
 
-export function mintDeterministicId(resource: unknown, type: string, path = '$'): string {
+export function mintDeterministicId(resource: unknown, type: string, path = "$"): string {
   const fingerprint = stableStringify({ type, path, resource });
   return `vault://iiif-parser/v4/${type}/${hashString(fingerprint)}`;
 }
 
-export const containerTypes = new Set(['Timeline', 'Canvas', 'Scene']);
-export const structuralTypes = new Set(['Collection', 'Manifest', 'Range']);
-export const annotationTypes = new Set(['Annotation', 'AnnotationPage', 'AnnotationCollection']);
+export const containerTypes = new Set(["Timeline", "Canvas", "Scene"]);
+export const structuralTypes = new Set(["Collection", "Manifest", "Range"]);
+export const annotationTypes = new Set(["Annotation", "AnnotationPage", "AnnotationCollection"]);
 export const sceneComponentTypes = new Set([
-  'PerspectiveCamera',
-  'OrthographicCamera',
-  'AmbientLight',
-  'DirectionalLight',
-  'PointLight',
-  'SpotLight',
-  'AmbientAudio',
-  'PointAudio',
-  'SpotAudio',
+  "PerspectiveCamera",
+  "OrthographicCamera",
+  "AmbientLight",
+  "DirectionalLight",
+  "PointLight",
+  "SpotLight",
+  "AmbientAudio",
+  "PointAudio",
+  "SpotAudio",
 ]);
-export const transformTypes = new Set(['RotateTransform', 'ScaleTransform', 'TranslateTransform']);
+export const transformTypes = new Set(["RotateTransform", "ScaleTransform", "TranslateTransform"]);
 export const contentTypes = new Set([
-  'Image',
-  'Audio',
-  'Sound',
-  'Video',
-  'Model',
-  'Text',
-  'TextualBody',
-  'Dataset',
-  'Choice',
+  "Image",
+  "Audio",
+  "Sound",
+  "Video",
+  "Model",
+  "Text",
+  "TextualBody",
+  "Dataset",
+  "Choice",
 ]);
 
 export function identifyResourceType(resource: any, typeHint?: string): string {
@@ -189,14 +189,14 @@ export function identifyResourceType(resource: any, typeHint?: string): string {
     if (typeHint) {
       return typeHint;
     }
-    throw new Error('Resource type is not known');
+    throw new Error("Resource type is not known");
   }
 
-  if (!resource || typeof resource !== 'object') {
+  if (!resource || typeof resource !== "object") {
     if (typeHint) {
       return typeHint;
     }
-    throw new Error('Resource must be an object');
+    throw new Error("Resource must be an object");
   }
 
   const type = getType(resource);
@@ -210,37 +210,37 @@ export function identifyResourceType(resource: any, typeHint?: string): string {
     if (annotationTypes.has(type)) {
       return type;
     }
-    if (type === 'SpecificResource') {
-      return 'SpecificResource';
+    if (type === "SpecificResource") {
+      return "SpecificResource";
     }
-    if (type === 'Agent') {
-      return 'Agent';
+    if (type === "Agent") {
+      return "Agent";
     }
-    if (type === 'Quantity') {
-      return 'Quantity';
+    if (type === "Quantity") {
+      return "Quantity";
     }
-    if (type.endsWith('Selector')) {
-      return 'Selector';
+    if (type.endsWith("Selector")) {
+      return "Selector";
     }
     if (transformTypes.has(type)) {
-      return 'Transform';
+      return "Transform";
     }
-    if (type.includes('Service') || type === 'Service') {
-      return 'Service';
+    if (type.includes("Service") || type === "Service") {
+      return "Service";
     }
     if (sceneComponentTypes.has(type) || contentTypes.has(type)) {
-      return 'ContentResource';
+      return "ContentResource";
     }
-    return 'ContentResource';
+    return "ContentResource";
   }
 
   if (isServiceLike(resource)) {
-    return 'Service';
+    return "Service";
   }
 
   if (typeHint) {
     return typeHint;
   }
 
-  throw new Error('Resource type is not known');
+  throw new Error("Resource type is not known");
 }

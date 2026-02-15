@@ -1,6 +1,6 @@
-import type { Selector } from './selectors';
-import type { Transform } from './transforms';
-import type { SceneComponent } from './scene-components';
+import type { Selector } from "./selectors";
+import type { Transform } from "./transforms";
+import type { SceneComponent } from "./scene-components";
 
 export type LanguageMap = Record<string, string[]>;
 
@@ -24,7 +24,7 @@ export interface ServiceReference {
 
 export interface Quantity {
   id?: string;
-  type: 'Quantity';
+  type: "Quantity";
   value: number;
   unit?: string;
   label?: LanguageMap;
@@ -59,50 +59,50 @@ export interface ContentResourceBase {
 }
 
 export interface ImageResource extends ContentResourceBase {
-  type: 'Image';
+  type: "Image";
   height: number;
   width: number;
 }
 
 export interface AudioResource extends ContentResourceBase {
-  type: 'Audio' | 'Sound';
+  type: "Audio" | "Sound";
   duration: number;
 }
 
 export interface VideoResource extends ContentResourceBase {
-  type: 'Video';
+  type: "Video";
   duration: number;
   height: number;
   width: number;
 }
 
 export interface ModelResource extends ContentResourceBase {
-  type: 'Model';
+  type: "Model";
 }
 
 export interface TextResource extends ContentResourceBase {
-  type: 'Text';
+  type: "Text";
 }
 
 export interface DatasetResource extends ContentResourceBase {
-  type: 'Dataset';
+  type: "Dataset";
 }
 
 export interface TextualBodyResource extends ContentResourceBase {
-  type: 'TextualBody';
+  type: "TextualBody";
   value: string;
   purpose?: string | string[];
 }
 
 export interface ChoiceResource extends ContentResourceBase {
-  type: 'Choice';
+  type: "Choice";
   items?: ContentResourceLike[];
   default?: ContentResourceLike;
 }
 
 export interface SpecificResource {
   id?: string;
-  type: 'SpecificResource';
+  type: "SpecificResource";
   source: ContentResourceLike | ResourceReference | string;
   selector?: Selector | Selector[];
   transform?: Transform | Transform[];
