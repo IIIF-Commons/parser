@@ -327,32 +327,46 @@ export class Traverse {
   private traverseAnnotationTarget(annotation: any, path: string) {
     if (annotation.target) {
       annotation.target = ensureArray(annotation.target).map((target: any, index: number) => {
+        const targetPath = `${path}.target[${index}]`;
         if (isSpecificResource(target)) {
-          return this.traverseSpecificResource(target, undefined, annotation, `${path}.target[${index}]`);
+          return this.traverseSpecificResource(target, undefined, annotation, targetPath);
         }
+
+        const typeHint = this.getContainerTypeHint(target, "Canvas");
+        const implicitSpecificResource = this.toImplicitSpecificResource(target, typeHint);
+        if (implicitSpecificResource) {
+          return this.traverseSpecificResource(implicitSpecificResource, typeHint, annotation, targetPath);
+        }
+
         if (this.options.coerceContainerTargetsToSpecificResources) {
-          const specificResource = this.toSpecificResource(target, this.getContainerTypeHint(target, "Canvas"));
+          const specificResource = this.toSpecificResource(target, typeHint);
           if (specificResource) {
-            return this.traverseSpecificResource(
-              specificResource,
-              this.getContainerTypeHint(target, "Canvas"),
-              annotation,
-              `${path}.target[${index}]`
-            );
+            return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
           }
         }
+
         if (typeof target === "string") {
+          const specificResource = this.toSpecificResource(target, typeHint);
+          if (specificResource && specificResource.selector) {
+            return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
+          }
           return target;
         }
-        if (target && typeof target === "object" && !Array.isArray(target) && !getType(target)) {
-          return target;
+
+        const targetType = getType(target);
+        if (targetType && containerTypes.has(targetType)) {
+          const specificResource = this.toSpecificResource(target, typeHint);
+          if (specificResource && specificResource.selector) {
+            return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
+          }
         }
+
         if (isResourceReference(target)) {
           return target;
         }
         return this.traverseUnknown(target, {
           parent: annotation,
-          path: `${path}.target[${index}]`,
+          path: targetPath,
         });
       });
     }
@@ -633,6 +647,33 @@ export class Traverse {
           }
         : undefined,
     };
+  }
+
+  private toImplicitSpecificResource(target: any, typeHint = "Canvas"): any | undefined {
+    if (!target || typeof target !== "object" || Array.isArray(target) || getType(target)) {
+      return undefined;
+    }
+
+    const targetId = getId(target);
+    const hasSpecificResourceFields =
+      "source" in target || "selector" in target || "transform" in target || "action" in target;
+    const [, fragment] = splitCanvasFragment(targetId);
+
+    if (!hasSpecificResourceFields && !fragment) {
+      return undefined;
+    }
+
+    if (hasSpecificResourceFields) {
+      return this.toSpecificResource(
+        {
+          ...target,
+          type: "SpecificResource",
+        },
+        typeHint
+      );
+    }
+
+    return this.toSpecificResource(target, typeHint);
   }
 
   traverseUnknown(resource: any, { parent, path, typeHint }: UnknownTraversalArgs): any {

@@ -1,5 +1,5 @@
+import { type SerializeConfig, UNSET } from "./serialize";
 import { PRESENTATION_3_CONTEXT, sceneComponentTypes } from "./utilities";
-import { SerializeConfig } from "./serialize";
 
 const unsupportedSelectorTypes = new Set(["PointSelector", "WktSelector", "AnimationSelector"]);
 const unsupportedContainerTypes = new Set(["Scene"]);
@@ -20,12 +20,12 @@ function unsupported(message: string): never {
   throw new Error(`Presentation 4 -> 3 downgrade unsupported: ${message}`);
 }
 
-function filterList<T>(value: T[] | T | undefined): T[] | undefined {
-  if (!value) {
+function filterList<T>(value: T[] | T | typeof UNSET | undefined): T[] | undefined {
+  if (!value || value === UNSET) {
     return undefined;
   }
   const list = Array.isArray(value) ? value : [value];
-  const filtered = list.filter(Boolean);
+  const filtered = list.filter((item) => item !== UNSET && Boolean(item));
   return filtered.length ? filtered : undefined;
 }
 
@@ -103,8 +103,8 @@ function* linkedProperties(entity: any): Generator<any, any, any> {
     ["thumbnail", filterList(yield entity.thumbnail)],
     ["provider", filterList(yield entity.provider)],
     ["seeAlso", filterList(yield entity.seeAlso)],
-    ["service", filterList(entity.service || [])],
-    ["services", filterList(entity.services || [])],
+    ["service", filterList(yield entity.service)],
+    ["services", filterList(yield entity.services)],
     ["homepage", filterList(yield entity.homepage)],
     ["rendering", filterList(yield entity.rendering)],
     ["partOf", filterList(yield entity.partOf)],

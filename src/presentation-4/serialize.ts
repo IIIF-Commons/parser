@@ -59,7 +59,9 @@ function resolveResource(
   }
 
   const id = value.id || value["@id"];
-  const type = value.type || value["@type"] || state.mapping[id];
+  const explicitType = value.type || value["@type"];
+  const mappedType = id ? state.mapping[id] : undefined;
+  const type = explicitType && state.entities[explicitType] ? explicitType : mappedType || explicitType;
   const store = type ? state.entities[type] : undefined;
   if (!id || !type || !store) {
     return [undefined, undefined];
@@ -102,12 +104,17 @@ export function serialize<Return>(
       throw new Error(`Circular reference at ${sub.type}(${sub.id})`);
     }
 
-    const generator = config[sub.type];
+    const mappedType = sub.id ? state.mapping[sub.id] : undefined;
+    const serializerType = config[sub.type] ? sub.type : mappedType && config[mappedType] ? mappedType : sub.type;
+    const generator = config[serializerType];
     if (!generator) {
       return UNSET;
     }
 
-    const [resource, full] = resolveResource(state, sub);
+    const [resource, full] = resolveResource(
+      state,
+      serializerType === sub.type ? sub : { ...sub, type: serializerType }
+    );
     if (!resource) {
       return UNSET;
     }

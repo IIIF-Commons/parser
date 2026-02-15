@@ -1,5 +1,5 @@
+import { type SerializeConfig, UNSET } from "./serialize";
 import { PRESENTATION_4_CONTEXT } from "./utilities";
-import { SerializeConfig, UNSET } from "./serialize";
 
 function filterList<T>(value: T[] | typeof UNSET): T[] | undefined {
   if (value === UNSET) {
@@ -59,8 +59,8 @@ function* withLinkedProperties(entity: any): Generator<any, Array<[string, any]>
     ["thumbnail", filterList(yield entity.thumbnail)],
     ["provider", filterList(yield entity.provider)],
     ["seeAlso", filterList(yield entity.seeAlso)],
-    ["service", filterList(entity.service || [])],
-    ["services", filterList(entity.services || [])],
+    ["service", filterList(yield entity.service)],
+    ["services", filterList(yield entity.services)],
     ["homepage", filterList(yield entity.homepage)],
     ["rendering", filterList(yield entity.rendering)],
     ["partOf", filterList(yield entity.partOf)],
