@@ -1,8 +1,10 @@
-import { compose } from '../shared/compose';
-import { ensureArray } from '../shared/ensure-array';
+import { splitCanvasFragment } from "../shared/canvas-fragments";
+import { compose } from "../shared/compose";
+import { ensureArray } from "../shared/ensure-array";
 import {
   annotationTypes,
   containerTypes,
+  getId,
   getType,
   identifyResourceType,
   isQuantity,
@@ -10,7 +12,7 @@ import {
   isSpecificResource,
   sceneComponentTypes,
   structuralTypes,
-} from './utilities';
+} from "./utilities";
 
 export type TraversalContext = {
   parent?: any;
@@ -41,6 +43,7 @@ export type TraversalMap = {
 
 export type TraverseOptions = {
   allowUndefinedReturn: boolean;
+  coerceContainerTargetsToSpecificResources: boolean;
 };
 
 type UnknownTraversalArgs = {
@@ -49,28 +52,21 @@ type UnknownTraversalArgs = {
   typeHint?: string;
 };
 
-const linkedResourceKeys = [
-  'thumbnail',
-  'homepage',
-  'rendering',
-  'seeAlso',
-  'supplementary',
-  'logo',
-] as const;
+const linkedResourceKeys = ["thumbnail", "homepage", "rendering", "seeAlso", "supplementary", "logo"] as const;
 
-const linkedObjectKeys = ['placeholderContainer', 'accompanyingContainer', 'start'] as const;
+const linkedObjectKeys = ["placeholderContainer", "accompanyingContainer", "start"] as const;
 
 function isResourceReference(resource: any): boolean {
-  if (!resource || typeof resource !== 'object' || Array.isArray(resource)) {
+  if (!resource || typeof resource !== "object" || Array.isArray(resource)) {
     return false;
   }
-  if (typeof resource.id !== 'string' || typeof resource.type !== 'string') {
+  if (typeof resource.id !== "string" || typeof resource.type !== "string") {
     return false;
   }
-  if (resource.type === 'SpecificResource') {
+  if (resource.type === "SpecificResource") {
     return false;
   }
-  return Object.keys(resource).every((key) => key === 'id' || key === 'type');
+  return Object.keys(resource).every((key) => key === "id" || key === "type");
 }
 
 export class Traverse {
@@ -99,6 +95,7 @@ export class Traverse {
     };
     this.options = {
       allowUndefinedReturn: false,
+      coerceContainerTargetsToSpecificResources: false,
       ...options,
     };
   }
@@ -125,7 +122,7 @@ export class Traverse {
   }
 
   private traverseLinkedResources(resource: any, path: string) {
-    if (!resource || typeof resource !== 'object') {
+    if (!resource || typeof resource !== "object") {
       return resource;
     }
 
@@ -157,14 +154,24 @@ export class Traverse {
 
     if (resource.partOf) {
       resource.partOf = ensureArray(resource.partOf).map((item: any, index: number) =>
-        typeof item === 'string'
+        typeof item === "string"
           ? item
-          : this.traverseUnknown(item, { parent: resource, path: `${path}.partOf[${index}]` })
+          : this.traverseUnknown(item, {
+              parent: resource,
+              path: `${path}.partOf[${index}]`,
+            })
       );
     }
 
     for (const key of linkedObjectKeys) {
       if (resource[key]) {
+        if (key === "start" && this.options.coerceContainerTargetsToSpecificResources) {
+          const specificResource = this.toSpecificResource(resource[key], "Canvas");
+          if (specificResource) {
+            resource[key] = this.traverseSpecificResource(specificResource, "Canvas", resource, `${path}.${key}`);
+            continue;
+          }
+        }
         resource[key] = this.traverseUnknown(resource[key], {
           parent: resource,
           path: `${path}.${key}`,
@@ -172,7 +179,7 @@ export class Traverse {
       }
     }
 
-    if (resource.navPlace && typeof resource.navPlace === 'object') {
+    if (resource.navPlace && typeof resource.navPlace === "object") {
       resource.navPlace = this.traverseType(resource.navPlace, { parent: resource, path: `${path}.navPlace` }, []);
     }
 
@@ -180,14 +187,14 @@ export class Traverse {
   }
 
   private traverseContainerItems(container: any, path: string) {
-    if (!container || typeof container !== 'object') {
+    if (!container || typeof container !== "object") {
       return container;
     }
 
     if (container.items) {
       container.items = ensureArray(container.items).map((item: any, index: number) => {
         const itemType = identifyResourceType(item);
-        if (itemType === 'AnnotationPage') {
+        if (itemType === "AnnotationPage") {
           return this.traverseAnnotationPage(item, container, `${path}.items[${index}]`);
         }
         return this.traverseUnknown(item, {
@@ -235,15 +242,18 @@ export class Traverse {
     return collection;
   }
 
-  traverseCollection(collection: any, parent?: any, path = '$'): any {
+  traverseCollection(collection: any, parent?: any, path = "$"): any {
     return this.traverseType(
-      this.traverseLinkedResources(this.traverseContainerItems(this.traverseCollectionItems(collection, path), path), path),
+      this.traverseLinkedResources(
+        this.traverseContainerItems(this.traverseCollectionItems(collection, path), path),
+        path
+      ),
       { parent, path },
       this.traversals.collection
     );
   }
 
-  traverseManifest(manifest: any, parent?: any, path = '$'): any {
+  traverseManifest(manifest: any, parent?: any, path = "$"): any {
     const pipeline = compose<any>(
       (value: any) => this.traverseManifestItems(value, path),
       (value: any) => this.traverseContainerItems(value, path),
@@ -252,7 +262,7 @@ export class Traverse {
     return this.traverseType(pipeline(manifest), { parent, path }, this.traversals.manifest);
   }
 
-  traverseTimeline(timeline: any, parent?: any, path = '$'): any {
+  traverseTimeline(timeline: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseContainerItems(timeline, path), path),
       { parent, path },
@@ -260,7 +270,7 @@ export class Traverse {
     );
   }
 
-  traverseCanvas(canvas: any, parent?: any, path = '$'): any {
+  traverseCanvas(canvas: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseContainerItems(canvas, path), path),
       { parent, path },
@@ -268,7 +278,7 @@ export class Traverse {
     );
   }
 
-  traverseScene(scene: any, parent?: any, path = '$'): any {
+  traverseScene(scene: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseContainerItems(scene, path), path),
       { parent, path },
@@ -285,7 +295,7 @@ export class Traverse {
     return page;
   }
 
-  traverseAnnotationPage(annotationPage: any, parent?: any, path = '$'): any {
+  traverseAnnotationPage(annotationPage: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseAnnotationItems(annotationPage, path), path),
       { parent, path },
@@ -293,7 +303,7 @@ export class Traverse {
     );
   }
 
-  traverseAnnotationCollection(annotationCollection: any, parent?: any, path = '$'): any {
+  traverseAnnotationCollection(annotationCollection: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseAnnotationItems(annotationCollection, path), path),
       { parent, path },
@@ -307,7 +317,7 @@ export class Traverse {
         this.traverseUnknown(body, {
           parent: annotation,
           path: `${path}.body[${index}]`,
-          typeHint: 'ContentResource',
+          typeHint: "ContentResource",
         })
       );
     }
@@ -320,10 +330,21 @@ export class Traverse {
         if (isSpecificResource(target)) {
           return this.traverseSpecificResource(target, undefined, annotation, `${path}.target[${index}]`);
         }
-        if (typeof target === 'string') {
+        if (this.options.coerceContainerTargetsToSpecificResources) {
+          const specificResource = this.toSpecificResource(target, this.getContainerTypeHint(target, "Canvas"));
+          if (specificResource) {
+            return this.traverseSpecificResource(
+              specificResource,
+              this.getContainerTypeHint(target, "Canvas"),
+              annotation,
+              `${path}.target[${index}]`
+            );
+          }
+        }
+        if (typeof target === "string") {
           return target;
         }
-        if (target && typeof target === 'object' && !Array.isArray(target) && !getType(target)) {
+        if (target && typeof target === "object" && !Array.isArray(target) && !getType(target)) {
           return target;
         }
         if (isResourceReference(target)) {
@@ -338,48 +359,51 @@ export class Traverse {
     return annotation;
   }
 
-  traverseAnnotation(annotation: any, parent?: any, path = '$'): any {
+  traverseAnnotation(annotation: any, parent?: any, path = "$"): any {
     return this.traverseType(
-      this.traverseLinkedResources(this.traverseAnnotationTarget(this.traverseAnnotationBody(annotation, path), path), path),
+      this.traverseLinkedResources(
+        this.traverseAnnotationTarget(this.traverseAnnotationBody(annotation, path), path),
+        path
+      ),
       { parent, path },
       this.traversals.annotation
     );
   }
 
-  traverseSelector(selector: any, parent?: any, path = '$'): any {
+  traverseSelector(selector: any, parent?: any, path = "$"): any {
     if (selector.refinedBy) {
       selector.refinedBy = this.traverseSelector(selector.refinedBy, selector, `${path}.refinedBy`);
     }
     return this.traverseType(selector, { parent, path }, this.traversals.selector);
   }
 
-  traverseQuantity(quantity: any, parent?: any, path = '$'): any {
+  traverseQuantity(quantity: any, parent?: any, path = "$"): any {
     return this.traverseType(quantity, { parent, path }, this.traversals.quantity);
   }
 
-  traverseTransform(transform: any, parent?: any, path = '$'): any {
+  traverseTransform(transform: any, parent?: any, path = "$"): any {
     return this.traverseType(transform, { parent, path }, this.traversals.transform);
   }
 
-  traverseSpecificResource(specificResource: any, typeHint?: string, parent?: any, path = '$'): any {
+  traverseSpecificResource(specificResource: any, typeHint?: string, parent?: any, path = "$"): any {
     const source = specificResource.source;
     let nextSource = source;
 
     if (Array.isArray(source)) {
       nextSource = source.map((sourceItem: any, index: number) =>
-        typeof sourceItem === 'string'
+        typeof sourceItem === "string"
           ? sourceItem
           : this.traverseUnknown(sourceItem, {
-              parent: specificResource,
+              parent,
               path: `${path}.source[${index}]`,
-              typeHint: typeHint || 'ContentResource',
+              typeHint: typeHint || "ContentResource",
             })
       );
-    } else if (source && typeof source === 'object') {
+    } else if (source && typeof source === "object") {
       nextSource = this.traverseUnknown(source, {
-        parent: specificResource,
+        parent,
         path: `${path}.source`,
-        typeHint: typeHint || 'ContentResource',
+        typeHint: typeHint || "ContentResource",
       });
     }
 
@@ -395,10 +419,10 @@ export class Traverse {
       );
     }
 
-    if (specificResource.position && typeof specificResource.position === 'object') {
+    if (specificResource.position && typeof specificResource.position === "object") {
       specificResource.position = this.traverseSpecificResource(
         specificResource.position,
-        'SpecificResource',
+        "SpecificResource",
         specificResource,
         `${path}.position`
       );
@@ -411,13 +435,13 @@ export class Traverse {
     return this.traverseType(specificResource, { parent, path }, this.traversals.specificResource);
   }
 
-  traverseContentResource(contentResource: any, parent?: any, path = '$'): any {
-    if (!contentResource || typeof contentResource !== 'object') {
+  traverseContentResource(contentResource: any, parent?: any, path = "$"): any {
+    if (!contentResource || typeof contentResource !== "object") {
       return contentResource;
     }
 
     if (isSpecificResource(contentResource)) {
-      return this.traverseSpecificResource(contentResource, 'ContentResource', parent, path);
+      return this.traverseSpecificResource(contentResource, "ContentResource", parent, path);
     }
 
     if (isQuantity(contentResource)) {
@@ -428,7 +452,7 @@ export class Traverse {
       return this.traverseSelector(contentResource, parent, path);
     }
 
-    if (contentResource.type === 'Choice' && contentResource.items) {
+    if (contentResource.type === "Choice" && contentResource.items) {
       contentResource.items = ensureArray(contentResource.items).map((item: any, index: number) =>
         this.traverseContentResource(item, contentResource, `${path}.items[${index}]`)
       );
@@ -459,11 +483,18 @@ export class Traverse {
     );
   }
 
-  traverseRange(range: any, parent?: any, path = '$'): any {
+  traverseRange(range: any, parent?: any, path = "$"): any {
     if (range.items) {
       range.items = ensureArray(range.items).map((item: any, index: number) => {
         if (isSpecificResource(item)) {
-          return this.traverseSpecificResource(item, 'Canvas', range, `${path}.items[${index}]`);
+          return this.traverseSpecificResource(item, "Canvas", range, `${path}.items[${index}]`);
+        }
+        if (this.options.coerceContainerTargetsToSpecificResources) {
+          const typeHint = this.getContainerTypeHint(item, "Canvas");
+          const specificResource = this.toSpecificResource(item, typeHint);
+          if (specificResource) {
+            return this.traverseSpecificResource(specificResource, typeHint, range, `${path}.items[${index}]`);
+          }
         }
         return this.traverseUnknown(item, {
           parent: range,
@@ -471,19 +502,15 @@ export class Traverse {
         });
       });
     }
-    return this.traverseType(
-      this.traverseLinkedResources(range, path),
-      { parent, path },
-      this.traversals.range
-    );
+    return this.traverseType(this.traverseLinkedResources(range, path), { parent, path }, this.traversals.range);
   }
 
-  traverseAgent(agent: any, parent?: any, path = '$'): any {
+  traverseAgent(agent: any, parent?: any, path = "$"): any {
     return this.traverseType(this.traverseLinkedResources(agent, path), { parent, path }, this.traversals.agent);
   }
 
-  traverseService(service: any, parent?: any, path = '$'): any {
-    if (service && typeof service === 'object' && service.service) {
+  traverseService(service: any, parent?: any, path = "$"): any {
+    if (service && typeof service === "object" && service.service) {
       service.service = ensureArray(service.service).map((innerService: any, index: number) =>
         this.traverseService(innerService, service, `${path}.service[${index}]`)
       );
@@ -494,51 +521,163 @@ export class Traverse {
   private traverseType<T>(object: T, context: TraversalContext, traversals: Array<Traversal<T>>): T {
     return traversals.reduce((acc: T, traversal: Traversal<T>): T => {
       const returnValue = traversal(acc, context) as T | undefined;
-      if (typeof returnValue === 'undefined') {
+      if (typeof returnValue === "undefined") {
         return acc;
       }
       return returnValue;
     }, object);
   }
 
+  private getContainerTypeHint(resource: any, fallbackType = "Canvas"): string {
+    const type = getType(resource);
+    if (type && containerTypes.has(type)) {
+      return type;
+    }
+    return fallbackType;
+  }
+
+  private toSpecificResource(target: any, typeHint = "Canvas"): any | undefined {
+    if (Array.isArray(target) || target === null || typeof target === "undefined") {
+      return undefined;
+    }
+
+    if (typeof target === "string") {
+      const [id, fragment] = splitCanvasFragment(target);
+      return {
+        type: "SpecificResource",
+        source: {
+          id,
+          type: typeHint,
+        },
+        selector: fragment
+          ? {
+              type: "FragmentSelector",
+              value: fragment,
+            }
+          : undefined,
+      };
+    }
+
+    if (typeof target !== "object") {
+      return undefined;
+    }
+
+    if (isSpecificResource(target)) {
+      const normalized = { ...target };
+      if (typeof normalized.source === "string") {
+        normalized.source = {
+          id: normalized.source,
+          type: typeHint,
+        };
+      } else if (normalized.source && typeof normalized.source === "object" && !Array.isArray(normalized.source)) {
+        if (!getType(normalized.source)) {
+          normalized.source = {
+            ...normalized.source,
+            type: typeHint,
+          };
+        }
+      } else if (getId(normalized)) {
+        normalized.source = {
+          id: getId(normalized),
+          type: typeHint,
+        };
+      }
+
+      if (
+        normalized.source &&
+        typeof normalized.source === "object" &&
+        !Array.isArray(normalized.source) &&
+        typeof normalized.source.id === "string"
+      ) {
+        const [id, fragment] = splitCanvasFragment(normalized.source.id);
+        normalized.source = {
+          ...normalized.source,
+          id,
+        };
+        if (!normalized.selector && fragment) {
+          normalized.selector = {
+            type: "FragmentSelector",
+            value: fragment,
+          };
+        }
+      }
+
+      return normalized;
+    }
+
+    const targetType = getType(target);
+    if (targetType && !containerTypes.has(targetType)) {
+      return undefined;
+    }
+
+    const targetId = getId(target);
+    if (!targetId) {
+      return undefined;
+    }
+
+    const source: any = {
+      ...target,
+      id: targetId,
+      type: targetType || typeHint,
+    };
+    const [id, fragment] = splitCanvasFragment(source.id);
+    source.id = id;
+
+    return {
+      type: "SpecificResource",
+      source,
+      selector: fragment
+        ? {
+            type: "FragmentSelector",
+            value: fragment,
+          }
+        : undefined,
+    };
+  }
+
   traverseUnknown(resource: any, { parent, path, typeHint }: UnknownTraversalArgs): any {
     const type = identifyResourceType(resource, typeHint);
 
     switch (type) {
-      case 'Collection':
+      case "Collection":
         return this.traverseCollection(resource, parent, path);
-      case 'Manifest':
+      case "Manifest":
         return this.traverseManifest(resource, parent, path);
-      case 'Timeline':
+      case "Timeline":
         return this.traverseTimeline(resource, parent, path);
-      case 'Canvas':
+      case "Canvas":
         return this.traverseCanvas(resource, parent, path);
-      case 'Scene':
+      case "Scene":
         return this.traverseScene(resource, parent, path);
-      case 'AnnotationCollection':
+      case "AnnotationCollection":
         return this.traverseAnnotationCollection(resource, parent, path);
-      case 'AnnotationPage':
+      case "AnnotationPage":
         return this.traverseAnnotationPage(resource, parent, path);
-      case 'Annotation':
+      case "Annotation":
         return this.traverseAnnotation(resource, parent, path);
-      case 'Range':
+      case "Range":
         return this.traverseRange(resource, parent, path);
-      case 'SpecificResource':
+      case "SpecificResource":
         return this.traverseSpecificResource(resource, undefined, parent, path);
-      case 'Selector':
+      case "Selector":
         return this.traverseSelector(resource, parent, path);
-      case 'Quantity':
+      case "Quantity":
         return this.traverseQuantity(resource, parent, path);
-      case 'Transform':
+      case "Transform":
         return this.traverseTransform(resource, parent, path);
-      case 'Service':
+      case "Service":
         return this.traverseService(resource, parent, path);
-      case 'Agent':
+      case "Agent":
         return this.traverseAgent(resource, parent, path);
-      case 'ContentResource':
+      case "ContentResource":
         return this.traverseContentResource(resource, parent, path);
       default: {
-        if (containerTypes.has(type) || structuralTypes.has(type) || annotationTypes.has(type) || sceneComponentTypes.has(type)) {
+        if (
+          containerTypes.has(type) ||
+          structuralTypes.has(type) ||
+          annotationTypes.has(type) ||
+          sceneComponentTypes.has(type)
+        ) {
           return this.traverseContentResource(resource, parent, path);
         }
         throw new Error(`Unknown or unsupported resource type ${type}`);
