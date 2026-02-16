@@ -92,7 +92,8 @@ function collectKnownTypes(resource: any, typeLookup: TypeLookup = {}): TypeLook
 
 function coerceSpecificResourceSource(source: any, typeLookup: TypeLookup, fallbackType: string): any {
   if (Array.isArray(source)) {
-    return source.map((item) => coerceSpecificResourceSource(item, typeLookup, fallbackType));
+    const coerced = source.map((item) => coerceSpecificResourceSource(item, typeLookup, fallbackType));
+    return coerced.length === 1 ? coerced[0] : coerced;
   }
   if (typeof source === "string") {
     return {
@@ -186,6 +187,10 @@ function coerceV4Shape(
     return resource;
   }
 
+  if (!isTopLevel && "@context" in resource) {
+    delete resource["@context"];
+  }
+
   toIdAndType(resource);
   const type = getType(resource);
   const currentContainerType = type && containerTypes.has(type) ? type : containerTypeHint;
@@ -204,10 +209,6 @@ function coerceV4Shape(
   }
 
   for (const [key, value] of Object.entries(resource)) {
-    if (key === "@context" && !isTopLevel) {
-      continue;
-    }
-
     if (value && typeof value === "object") {
       resource[key] = coerceV4Shape(value, typeLookup, false, currentContainerType);
     }

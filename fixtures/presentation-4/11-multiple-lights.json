@@ -9,7 +9,7 @@
   },
   "summary": {
     "en": [
-        "Viewer should render the model at the scene origin, and then viewer should add one red spotlight pointing at the front of the helmet, one blue spotlight point at the front-center of the model, and an ambient green light source. The viewer should add a default camera but NOT any other lighting."
+      "Viewer should render the model at the scene origin, and then viewer should add one red spotlight pointing at the front of the helmet, one blue spotlight point at the front-center of the model, and an ambient green light source. The viewer should add a default camera but NOT any other lighting."
     ]
   },
   "items": [
@@ -54,7 +54,7 @@
                 "transform": [
                   {
                     "type": "RotateTransform",
-                    "x": 90.0,
+                    "x": 90,
                     "y": 0,
                     "z": 0
                   },
@@ -68,12 +68,10 @@
               },
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ]
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
               }
             },
             {
@@ -102,12 +100,10 @@
               },
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ]
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
               }
             },
             {
@@ -137,7 +133,7 @@
                 "transform": [
                   {
                     "type": "RotateTransform",
-                    "x": 90.0,
+                    "x": 90,
                     "y": 0,
                     "z": 0
                   },
@@ -151,12 +147,10 @@
               },
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ]
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
               }
             },
             {
@@ -180,12 +174,10 @@
               },
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ]
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
               }
             }
           ]

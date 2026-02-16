@@ -7,7 +7,11 @@
       "Single Model with Multilingual Comment Annotations"
     ]
   },
-  "summary": { "en": ["Viewer should render the model at the scene origin and two multilingual comment annotations, one targeting a point near the astronaut's glove and the other targeting a point near the astronaut's helmet."] },
+  "summary": {
+    "en": [
+      "Viewer should render the model at the scene origin and two multilingual comment annotations, one targeting a point near the astronaut's glove and the other targeting a point near the astronaut's helmet."
+    ]
+  },
   "items": [
     {
       "id": "https://example.org/iiif/scene1/page/p1/1",
@@ -47,12 +51,10 @@
               },
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ]
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
               }
             }
           ]
@@ -90,12 +92,10 @@
               ],
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                },
                 "selector": [
                   {
                     "type": "PointSelector",
@@ -133,12 +133,10 @@
               ],
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                },
                 "selector": [
                   {
                     "type": "PointSelector",

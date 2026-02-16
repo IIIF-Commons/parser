@@ -21,6 +21,18 @@ function inlineList<T>(value: T[] | T | undefined): T[] | undefined {
   return filtered.length ? filtered : undefined;
 }
 
+function normalizeAnnotationTarget(target: any): any {
+  if (!target || typeof target !== "object" || Array.isArray(target)) {
+    return target;
+  }
+  const type = target.type || target["@type"];
+  if (type !== "Annotation") {
+    return target;
+  }
+  const id = stripVaultId(target.id || target["@id"]);
+  return id ? { id, type: "Annotation" } : { type: "Annotation" };
+}
+
 function stripVaultId(id?: string) {
   if (!id) {
     return undefined;
@@ -137,7 +149,7 @@ export const serializeConfigPresentation4: SerializeConfig = {
       ...(yield* withLinkedProperties(entity)),
       ["motivation", entity.motivation?.length ? entity.motivation : undefined],
       ["body", filterList(yield entity.body)],
-      ["target", inlineList(entity.target)],
+      ["target", inlineList(entity.target)?.map((target) => normalizeAnnotationTarget(target))],
       ["timeMode", entity.timeMode],
       ["exclude", entity.exclude?.length ? entity.exclude : undefined],
       ["position", entity.position ? yield entity.position : undefined],

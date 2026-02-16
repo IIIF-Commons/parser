@@ -2,13 +2,25 @@
   "@context": "http://iiif.io/api/presentation/4/context.json",
   "id": "https://example.org/iiif/3d/model_transform_negative_scale_position.json",
   "type": "Manifest",
-  "label": { "en": ["Model shown normally and mirrored"] },
-  "summary": { "en": ["Viewer should render the model twice, once at normal scale and once at normal scale but mirrored. Then the viewer should add default lighting and camera"] },
+  "label": {
+    "en": [
+      "Model shown normally and mirrored"
+    ]
+  },
+  "summary": {
+    "en": [
+      "Viewer should render the model twice, once at normal scale and once at normal scale but mirrored. Then the viewer should add default lighting and camera"
+    ]
+  },
   "items": [
     {
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
-      "label": { "en": ["A Scene"] },
+      "label": {
+        "en": [
+          "A Scene"
+        ]
+      },
       "items": [
         {
           "id": "https://example.org/iiif/scene1/page/p1/1",
@@ -17,7 +29,9 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": ["painting"],
+              "motivation": [
+                "painting"
+              ],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",
@@ -25,18 +39,16 @@
               },
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                },
                 "selector": [
                   {
                     "type": "PointSelector",
-                    "x": -1.0,
-                    "y": 0.0,
-                    "z": 0.0
+                    "x": -1,
+                    "y": 0,
+                    "z": 0
                   }
                 ]
               }
@@ -44,39 +56,37 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": ["painting"],
+              "motivation": [
+                "painting"
+              ],
               "body": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                    "type": "Model",
-                    "format": "model/gltf-binary"
-                  }
-                ],
+                "source": {
+                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                  "type": "Model",
+                  "format": "model/gltf-binary"
+                },
                 "transform": [
                   {
                     "type": "ScaleTransform",
-                    "x": -1.0,
-                    "y": 1.0,
-                    "z": 1.0
+                    "x": -1,
+                    "y": 1,
+                    "z": 1
                   }
                 ]
               },
               "target": {
                 "type": "SpecificResource",
-                "source": [
-                  {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
-                ],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                },
                 "selector": [
                   {
                     "type": "PointSelector",
-                    "x": 1.0,
-                    "y": 0.0,
-                    "z": 0.0
+                    "x": 1,
+                    "y": 0,
+                    "z": 0
                   }
                 ]
               }

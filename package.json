@@ -164,6 +164,8 @@
     "test": "vitest",
     "test:types": "vitest run --typecheck --typecheck.only",
     "update-cookbook-v4": "node scripts/update-cookbook-v4.mjs",
+    "convert-p3-to-p4": "node scripts/convert-p3-manifests-to-p4.mjs",
+    "generate-p3-to-p4-type-test": "node scripts/generate-p3-to-p4-type-test.mjs",
     "prepack": "tsdown && tsdown --config tsdown.umd.ts",
     "lint": "publint"
   },

@@ -2,10 +2,7 @@ import type {
   AnyMotivation,
   SpecificResource as SpecificResourceV3,
 } from "../../../../../presentation-3/types/legacy/src/resources/annotation";
-import type {
-  ContentResource as ContentResourceV3,
-  IIIFExternalWebResource as IIIFExternalWebResourceV3,
-} from "../../../../../presentation-3/types/legacy/src/resources/contentResource";
+import type { IIIFExternalWebResource as IIIFExternalWebResourceV3 } from "../../../../../presentation-3/types/legacy/src/resources/contentResource";
 import type {
   InternationalString,
   MetadataItem as MetadataItemV3,
@@ -16,35 +13,87 @@ import type { Selector } from "../extensions/presentation-4";
 import type { Provides, Quantity, Transform } from "../iiif/technical-v4";
 import type { SceneComponent } from "./scene-components";
 
-export type LanguageMap = InternationalString;
-export type MetadataItem = MetadataItemV3;
+export type LanguageMap = InternationalString & {
+  "@none"?: string[];
+  none?: string[];
+};
+export type MetadataItem =
+  | MetadataItemV3
+  | { label: LanguageMap; value: { [language: string]: Array<string | number> } };
 export type OneOrMany<T> = T | T[];
 
-export type ResourceReference<TType extends string = string> = Reference<TType>;
+export type ResourceReference<TType extends string = string> = Prettify<
+  Reference<TType> & {
+    label?: LanguageMap | string | null;
+    summary?: LanguageMap | null;
+    profile?: string | string[] | Record<string, unknown>;
+    format?: string;
+    height?: number;
+    width?: number;
+    duration?: number;
+    first?: string | ResourceReference;
+    last?: string | ResourceReference;
+    next?: string | ResourceReference;
+    prev?: string | ResourceReference;
+    total?: number;
+  }
+>;
 
 export type ServiceReference = {
-  id: string;
-  type: string;
-  profile?: string | string[];
+  id?: string;
+  "@id"?: string;
+  type?: string;
+  "@type"?: string;
+  profile?: string | string[] | Record<string, unknown>;
+  label?: LanguageMap | string;
   service?: OneOrMany<ServiceReference>;
+  services?: OneOrMany<ServiceReference>;
+  format?: string;
   [key: string]: unknown;
+};
+
+export type ServiceLike = ServiceReference | string;
+export type LinkedAnnotationLike = {
+  id?: string;
+  type: string;
+  motivation?: OneOrMany<string>;
+  body?: OneOrMany<ContentResourceLike | SpecificResource | ResourceReference | string>;
+  target?: OneOrMany<ContentResourceLike | SpecificResource | ResourceReference | string>;
+};
+export type LinkedResource = ContentResourceLike | SpecificResource | ResourceReference | LinkedAnnotationLike | string;
+export type AgentLike = {
+  id: string;
+  type: "Agent";
+  label?: LanguageMap | null;
+  homepage?: OneOrMany<LinkedResource>;
+  logo?: OneOrMany<LinkedResource>;
+  seeAlso?: OneOrMany<LinkedResource>;
+  service?: OneOrMany<ServiceLike>;
+  profile?: string | string[] | Record<string, unknown>;
 };
 
 export type ContentResourceBase = Prettify<
   Omit<IIIFExternalWebResourceV3, "language" | "service"> & {
-    id: string;
-    type: string;
+    id?: string;
+    "@id"?: string;
+    type?: string;
+    "@type"?: string;
+    profile?: string | string[] | Record<string, unknown>;
+    label?: LanguageMap | string | null;
     language?: OneOrMany<string>;
-    service?: OneOrMany<ServiceReference>;
-    thumbnail?: OneOrMany<ContentResourceLike | ResourceReference>;
+    service?: OneOrMany<ServiceLike>;
+    services?: OneOrMany<ServiceLike>;
+    thumbnail?: OneOrMany<LinkedResource>;
     metadata?: OneOrMany<MetadataItem>;
     summary?: LanguageMap;
     requiredStatement?: MetadataItem;
     rights?: string | null;
-    seeAlso?: OneOrMany<ContentResourceLike | ResourceReference>;
-    homepage?: OneOrMany<ContentResourceLike | ResourceReference>;
-    rendering?: OneOrMany<ContentResourceLike | ResourceReference>;
-    partOf?: OneOrMany<ResourceReference | ContentResourceLike>;
+    seeAlso?: OneOrMany<LinkedResource>;
+    homepage?: OneOrMany<LinkedResource>;
+    rendering?: OneOrMany<LinkedResource>;
+    partOf?: OneOrMany<LinkedResource>;
+    logo?: OneOrMany<LinkedResource>;
+    supplementary?: OneOrMany<LinkedResource>;
     spatialScale?: Quantity | null;
     temporalScale?: Quantity | null;
     provides?: OneOrMany<Provides>;
@@ -92,18 +141,18 @@ export type TextualBodyResource = Prettify<
 export type ChoiceResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "Choice";
-    items?: OneOrMany<ContentResourceLike | ResourceReference | string | Record<string, unknown>>;
-    default?: ContentResourceLike | ResourceReference | string | Record<string, unknown>;
+    items?: OneOrMany<LinkedResource>;
+    default?: LinkedResource;
   }
 >;
 
 export type SpecificResource = Prettify<
   Omit<SpecificResourceV3, "source" | "selector" | "purpose" | "scope"> & {
     type: "SpecificResource";
-    source: OneOrMany<ContentResourceLike | ResourceReference | string>;
+    source: OneOrMany<LinkedResource>;
     selector?: OneOrMany<Selector>;
     transform?: OneOrMany<Transform>;
-    action?: OneOrMany<ContentResourceLike | ResourceReference | string>;
+    action?: OneOrMany<LinkedResource>;
     purpose?: OneOrMany<AnyMotivation | string>;
     scope?: OneOrMany<ResourceReference | string>;
     [key: string]: unknown;
@@ -122,4 +171,4 @@ export type ContentResourceLike =
   | ContentResourceBase
   | SceneComponent;
 
-export type ContentResource = ContentResourceLike | SpecificResource | ContentResourceV3;
+export type ContentResource = ContentResourceLike | SpecificResource;
