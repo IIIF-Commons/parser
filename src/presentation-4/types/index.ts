@@ -1,9 +1,4 @@
-export type * from "./containers";
-export type * from "./content-resources";
-export type * from "./extended-properties";
-export type * from "./scene-components";
-export type * from "./selectors";
-export type * from "./transforms";
+export type * from "./legacy/index";
 
 import { createPresentationHelpers, type ResourceSpecs } from "../../presentation-shared/helpers/create-helpers";
 import type {
@@ -17,18 +12,18 @@ import type {
   Range,
   Scene,
   Timeline,
-} from "./containers";
+} from "./legacy/index";
 import type {
   ContentResourceLike,
-  ImageResource,
   AudioResource,
-  VideoResource,
-  ModelResource,
-  TextResource,
   DatasetResource,
-  Quantity,
+  ImageResource,
+  ModelResource,
   SpecificResource,
-} from "./content-resources";
+  TextResource,
+  Quantity,
+  VideoResource,
+} from "./legacy/index";
 import type {
   AmbientAudio,
   AmbientLight,
@@ -39,9 +34,11 @@ import type {
   PointLight,
   SpotAudio,
   SpotLight,
-} from "./scene-components";
-import type { Selector } from "./selectors";
-import type { Transform } from "./transforms";
+} from "./legacy/index";
+import type { Selector } from "./legacy/index";
+import type { Transform } from "./legacy/index";
+
+export type Container = Collection | Manifest | Timeline | Canvas | Scene;
 
 export type Presentation4HelperTypes = {
   Collection: Collection;
@@ -54,7 +51,7 @@ export type Presentation4HelperTypes = {
   Annotation: Annotation;
   ContentResource: ContentResourceLike;
   Range: Range;
-  Service: { id: string; type: string };
+  Service: { id: string; type: string; profile?: string | string[] };
   Selector: Selector;
   Agent: Agent;
   Quantity: Quantity;
