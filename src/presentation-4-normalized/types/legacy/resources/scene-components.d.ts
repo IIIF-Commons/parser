@@ -1,7 +1,7 @@
 import type { ContentResourceNormalized } from "./contentResource";
 
 export type SceneComponentNormalized = ContentResourceNormalized & {
-  type?:
+  type:
     | "PerspectiveCamera"
     | "OrthographicCamera"
     | "AmbientLight"

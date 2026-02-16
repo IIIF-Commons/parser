@@ -1,7 +1,7 @@
 import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/technical-v4";
 
 export type AgentNormalized = NormalizedLinkedEntity & {
-  type?: "Agent";
+  type: "Agent";
   logo: readonly NormalizedReference[];
 };
 

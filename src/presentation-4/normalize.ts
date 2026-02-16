@@ -1,5 +1,5 @@
 import type {
-  NormalizedEntityV4,
+  NormalizedEntity as NormalizedEntityV4,
   Presentation4Entities,
   Presentation4NormalizeResult,
 } from "../presentation-4-normalized/types";

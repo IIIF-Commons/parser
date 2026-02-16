@@ -1,7 +1,8 @@
 import type { NormalizedEntityBase, NormalizedLinkedEntity, NormalizedReference } from "../iiif/technical-v4";
 
 export type SpecificResourceNormalized = NormalizedEntityBase & {
-  type?: "SpecificResource";
+  id?: string;
+  type: "SpecificResource";
   source?: NormalizedReference | NormalizedReference[];
   selector: readonly NormalizedReference[];
   transform: readonly NormalizedReference[];
@@ -9,7 +10,7 @@ export type SpecificResourceNormalized = NormalizedEntityBase & {
 };
 
 export type ContentResourceNormalized = NormalizedLinkedEntity & {
-  type?: string;
+  type: string;
   language: readonly string[];
   items: readonly NormalizedReference[];
   selector: readonly NormalizedReference[];

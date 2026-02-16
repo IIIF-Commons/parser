@@ -1,6 +1,6 @@
 import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/technical-v4";
 
 export type CanvasNormalized = NormalizedLinkedEntity & {
-  type?: "Canvas";
+  type: "Canvas";
   items: readonly NormalizedReference[];
 };

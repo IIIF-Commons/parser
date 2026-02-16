@@ -1,7 +1,7 @@
 import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/technical-v4";
 
 export type ManifestNormalized = NormalizedLinkedEntity & {
-  type?: "Manifest";
+  type: "Manifest";
   items: readonly NormalizedReference[];
   structures: readonly NormalizedReference[];
   start?: NormalizedReference | null;

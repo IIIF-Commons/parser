@@ -1,6 +1,6 @@
 import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/technical-v4";
 
 export type AnnotationPageNormalized = NormalizedLinkedEntity & {
-  type?: "AnnotationPage";
+  type: "AnnotationPage";
   items: readonly NormalizedReference[];
 };

@@ -6,13 +6,11 @@ export type NormalizedJsonValue = NormalizedPrimitive | NormalizedJsonValue[] | 
 export interface NormalizedReferenceObject {
   id?: string;
   type?: string;
-  "@id"?: string;
-  "@type"?: string;
   [key: string]: NormalizedJsonValue | NormalizedReference | readonly NormalizedReference[] | undefined;
 }
 
 export interface NormalizedSpecificResourceReference extends NormalizedReferenceObject {
-  type?: "SpecificResource";
+  type: "SpecificResource";
   source?: NormalizedReference | readonly NormalizedReference[];
   selector?: readonly NormalizedReference[];
   transform?: readonly NormalizedReference[];
