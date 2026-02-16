@@ -45,6 +45,10 @@ export interface GeoJsonObject {
    */
   type: GeoJsonTypes;
   /**
+   * Optional identifier used by some GeoJSON producers (including IIIF navPlace payloads).
+   */
+  id?: string | number | undefined;
+  /**
    * Bounding box of the coordinate range of the object's Geometries, Features, or Feature Collections.
    * The value of the bbox member is an array of length 2*n where n is the number of dimensions
    * represented in the contained geometries, with all axes of the most southwesterly point

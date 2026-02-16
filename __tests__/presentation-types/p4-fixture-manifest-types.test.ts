@@ -3,6 +3,204 @@ import type { Manifest as Manifest4 } from '../../src/presentation-4/types';
 
 // Generated from fixtures/presentation-4 and fixtures/cookbook-v4 to preserve literal discriminants.
 const manifestsByFixture = {
+  fixtures_cookbook_v4_0001_mvm_image_json:     {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/manifest.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Simplest Image Example (IIIF Presentation v4)"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/canvas/p1",
+          "type": "Canvas",
+          "height": 1800,
+          "width": 1200,
+          "items": [
+            {
+              "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/page/p1/1",
+              "type": "AnnotationPage",
+              "items": [
+                {
+                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/annotation/p0001-image",
+                  "type": "Annotation",
+                  "motivation": [
+                    "painting"
+                  ],
+                  "body": [
+                    {
+                      "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+                      "type": "Image",
+                      "format": "image/png",
+                      "height": 1800,
+                      "width": 1200
+                    }
+                  ],
+                  "target": [
+                    {
+                      "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/canvas/p1",
+                      "type": "Canvas"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    } satisfies Manifest4,
+  fixtures_cookbook_v4_0002_mvm_audio_json:     {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/manifest.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Simplest Audio Example (IIIF Presentation v4)"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline",
+          "type": "Timeline",
+          "duration": 1985.024,
+          "items": [
+            {
+              "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline/page",
+              "type": "AnnotationPage",
+              "items": [
+                {
+                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline/page/annotation",
+                  "type": "Annotation",
+                  "motivation": [
+                    "painting"
+                  ],
+                  "body": [
+                    {
+                      "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
+                      "type": "Sound",
+                      "format": "audio/mp4",
+                      "duration": 1985.024
+                    }
+                  ],
+                  "target": [
+                    {
+                      "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline",
+                      "type": "Timeline"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    } satisfies Manifest4,
+  fixtures_cookbook_v4_0003_mvm_video_json:     {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/manifest.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Simplest Video Example (IIIF Presentation 4)"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas",
+          "type": "Canvas",
+          "height": 360,
+          "width": 480,
+          "duration": 572.034,
+          "items": [
+            {
+              "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas/page",
+              "type": "AnnotationPage",
+              "items": [
+                {
+                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas/page/annotation",
+                  "type": "Annotation",
+                  "motivation": [
+                    "painting"
+                  ],
+                  "body": [
+                    {
+                      "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
+                      "type": "Video",
+                      "height": 360,
+                      "width": 480,
+                      "duration": 572.034,
+                      "format": "video/mp4"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas",
+                      "type": "Canvas"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    } satisfies Manifest4,
+  fixtures_cookbook_v4_0608_mvm_3d_json:     {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/manifest.json",
+      "type": "Manifest",
+      "label": {
+        "en": [
+          "Simplest Model Example (IIIF Presentation v4)"
+        ]
+      },
+      "summary": {
+        "en": [
+          "Viewer should render the model at the scene origin and then add default lighting and camera"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1",
+          "type": "Scene",
+          "label": {
+            "en": [
+              "A Scene"
+            ]
+          },
+          "items": [
+            {
+              "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1/annotationPage/1",
+              "type": "AnnotationPage",
+              "items": [
+                {
+                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1/annotationPage/1/anno/1",
+                  "type": "Annotation",
+                  "motivation": [
+                    "painting"
+                  ],
+                  "body": [
+                    {
+                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                      "type": "Model",
+                      "format": "model/gltf-binary"
+                    }
+                  ],
+                  "target": [
+                    {
+                      "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1",
+                      "type": "Scene"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    } satisfies Manifest4,
   fixtures_presentation_4_01_model_in_scene_json:     {
       "@context": "http://iiif.io/api/presentation/4/context.json",
       "id": "https://example.org/iiif/3d/model_origin.json",
@@ -224,12 +422,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -310,12 +506,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -396,12 +590,10 @@ const manifestsByFixture = {
                       },
                       "target": {
                         "type": "SpecificResource",
-                        "source": [
-                          {
-                            "id": "https://example.org/iiif/scene1/page/p1/1",
-                            "type": "Scene"
-                          }
-                        ],
+                        "source": {
+                          "id": "https://example.org/iiif/scene1/page/p1/1",
+                          "type": "Scene"
+                        },
                         "selector": [
                           {
                             "type": "PointSelector",
@@ -435,12 +627,10 @@ const manifestsByFixture = {
                       },
                       "target": {
                         "type": "SpecificResource",
-                        "source": [
-                          {
-                            "id": "https://example.org/iiif/scene1/page/p1/1",
-                            "type": "Scene"
-                          }
-                        ],
+                        "source": {
+                          "id": "https://example.org/iiif/scene1/page/p1/1",
+                          "type": "Scene"
+                        },
                         "selector": [
                           {
                             "type": "PointSelector",
@@ -516,12 +706,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -739,17 +927,15 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/3d/lights/1",
-                        "type": "DirectionalLight",
-                        "label": {
-                          "en": [
-                            "Directional Light 1"
-                          ]
-                        }
+                    "source": {
+                      "id": "https://example.org/iiif/3d/lights/1",
+                      "type": "DirectionalLight",
+                      "label": {
+                        "en": [
+                          "Directional Light 1"
+                        ]
                       }
-                    ],
+                    },
                     "transform": [
                       {
                         "type": "RotateTransform",
@@ -840,12 +1026,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ]
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
                   }
                 },
                 {
@@ -874,12 +1058,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ]
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
                   }
                 },
                 {
@@ -923,12 +1105,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ]
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
                   }
                 },
                 {
@@ -952,12 +1132,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ]
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
                   }
                 }
               ]
@@ -1007,12 +1185,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1070,12 +1246,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1094,13 +1268,11 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                        "type": "Model",
-                        "format": "model/gltf-binary"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                      "type": "Model",
+                      "format": "model/gltf-binary"
+                    },
                     "transform": [
                       {
                         "type": "ScaleTransform",
@@ -1112,12 +1284,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1170,13 +1340,11 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                        "type": "Model",
-                        "format": "model/gltf-binary"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                      "type": "Model",
+                      "format": "model/gltf-binary"
+                    },
                     "transform": [
                       {
                         "type": "RotateTransform",
@@ -1188,12 +1356,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1246,13 +1412,11 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                        "type": "Model",
-                        "format": "model/gltf-binary"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                      "type": "Model",
+                      "format": "model/gltf-binary"
+                    },
                     "transform": [
                       {
                         "type": "RotateTransform",
@@ -1270,12 +1434,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1333,12 +1495,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1357,13 +1517,11 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                        "type": "Model",
-                        "format": "model/gltf-binary"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                      "type": "Model",
+                      "format": "model/gltf-binary"
+                    },
                     "transform": [
                       {
                         "type": "TranslateTransform",
@@ -1381,12 +1539,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1444,12 +1600,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1468,13 +1622,11 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                        "type": "Model",
-                        "format": "model/gltf-binary"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                      "type": "Model",
+                      "format": "model/gltf-binary"
+                    },
                     "transform": [
                       {
                         "type": "ScaleTransform",
@@ -1492,12 +1644,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1550,13 +1700,11 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                        "type": "Model",
-                        "format": "model/gltf-binary"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                      "type": "Model",
+                      "format": "model/gltf-binary"
+                    },
                     "transform": [
                       {
                         "type": "TranslateTransform",
@@ -1574,12 +1722,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1637,12 +1783,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1661,13 +1805,11 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                        "type": "Model",
-                        "format": "model/gltf-binary"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                      "type": "Model",
+                      "format": "model/gltf-binary"
+                    },
                     "transform": [
                       {
                         "type": "ScaleTransform",
@@ -1679,12 +1821,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1742,12 +1882,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -1771,12 +1909,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2107,12 +2243,10 @@ const manifestsByFixture = {
                   "bodyValue": "Glove",
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2132,12 +2266,10 @@ const manifestsByFixture = {
                   "bodyValue": "Helmet",
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2207,12 +2339,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ]
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
                   }
                 }
               ]
@@ -2250,12 +2380,10 @@ const manifestsByFixture = {
                   ],
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2293,12 +2421,10 @@ const manifestsByFixture = {
                   ],
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1/page/p1/1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2356,12 +2482,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2385,12 +2509,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2418,12 +2540,10 @@ const manifestsByFixture = {
                   "bodyValue": "Right pterygoid hamulus",
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2481,12 +2601,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2510,12 +2628,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2534,20 +2650,18 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/3d/cameras/1",
-                        "type": "PerspectiveCamera",
-                        "label": {
-                          "en": [
-                            "Perspective Camera Pointed At Pterygoid Hamulus"
-                          ]
-                        },
-                        "fieldOfView": 50,
-                        "near": 0.1,
-                        "far": 2000
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/3d/cameras/1",
+                      "type": "PerspectiveCamera",
+                      "label": {
+                        "en": [
+                          "Perspective Camera Pointed At Pterygoid Hamulus"
+                        ]
+                      },
+                      "fieldOfView": 50,
+                      "near": 0.1,
+                      "far": 2000
+                    },
                     "transform": [
                       {
                         "type": "RotateTransform",
@@ -2559,12 +2673,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2596,12 +2708,10 @@ const manifestsByFixture = {
                     "language": "en",
                     "position": {
                       "type": "SpecificResource",
-                      "source": [
-                        {
-                          "id": "https://example.org/iiif/scene1",
-                          "type": "Scene"
-                        }
-                      ],
+                      "source": {
+                        "id": "https://example.org/iiif/scene1",
+                        "type": "Scene"
+                      },
                       "selector": [
                         {
                           "type": "PointSelector",
@@ -2614,12 +2724,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2677,12 +2785,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2706,12 +2812,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2730,20 +2834,18 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/3d/cameras/1",
-                        "type": "PerspectiveCamera",
-                        "label": {
-                          "en": [
-                            "Perspective Camera Pointed At Pterygoid Hamulus"
-                          ]
-                        },
-                        "fieldOfView": 50,
-                        "near": 0.1,
-                        "far": 2000
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/3d/cameras/1",
+                      "type": "PerspectiveCamera",
+                      "label": {
+                        "en": [
+                          "Perspective Camera Pointed At Pterygoid Hamulus"
+                        ]
+                      },
+                      "fieldOfView": 50,
+                      "near": 0.1,
+                      "far": 2000
+                    },
                     "transform": [
                       {
                         "type": "RotateTransform",
@@ -2755,12 +2857,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2792,12 +2892,10 @@ const manifestsByFixture = {
                     "language": "en",
                     "position": {
                       "type": "SpecificResource",
-                      "source": [
-                        {
-                          "id": "https://example.org/iiif/scene1",
-                          "type": "Scene"
-                        }
-                      ],
+                      "source": {
+                        "id": "https://example.org/iiif/scene1",
+                        "type": "Scene"
+                      },
                       "selector": [
                         {
                           "type": "PointSelector",
@@ -2810,12 +2908,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2873,12 +2969,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2902,12 +2996,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2926,20 +3018,18 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/3d/cameras/1",
-                        "type": "PerspectiveCamera",
-                        "label": {
-                          "en": [
-                            "Perspective Camera Pointed At Pterygoid Hamulus"
-                          ]
-                        },
-                        "fieldOfView": 50,
-                        "near": 0.1,
-                        "far": 2000
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/3d/cameras/1",
+                      "type": "PerspectiveCamera",
+                      "label": {
+                        "en": [
+                          "Perspective Camera Pointed At Pterygoid Hamulus"
+                        ]
+                      },
+                      "fieldOfView": 50,
+                      "near": 0.1,
+                      "far": 2000
+                    },
                     "transform": [
                       {
                         "type": "RotateTransform",
@@ -2951,12 +3041,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -2988,12 +3076,10 @@ const manifestsByFixture = {
                     "language": "en",
                     "position": {
                       "type": "SpecificResource",
-                      "source": [
-                        {
-                          "id": "https://example.org/iiif/scene1",
-                          "type": "Scene"
-                        }
-                      ],
+                      "source": {
+                        "id": "https://example.org/iiif/scene1",
+                        "type": "Scene"
+                      },
                       "selector": [
                         {
                           "type": "PointSelector",
@@ -3014,12 +3100,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -3077,12 +3161,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -3106,12 +3188,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -3131,12 +3211,10 @@ const manifestsByFixture = {
                   "bodyValue": "Right pterygoid hamulus",
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -3155,20 +3233,18 @@ const manifestsByFixture = {
                   ],
                   "body": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/3d/cameras/1",
-                        "type": "PerspectiveCamera",
-                        "label": {
-                          "en": [
-                            "Perspective Camera Pointed At Pterygoid Hamulus"
-                          ]
-                        },
-                        "fieldOfView": 50,
-                        "near": 0.1,
-                        "far": 2000
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/3d/cameras/1",
+                      "type": "PerspectiveCamera",
+                      "label": {
+                        "en": [
+                          "Perspective Camera Pointed At Pterygoid Hamulus"
+                        ]
+                      },
+                      "fieldOfView": 50,
+                      "near": 0.1,
+                      "far": 2000
+                    },
                     "transform": [
                       {
                         "type": "RotateTransform",
@@ -3180,12 +3256,10 @@ const manifestsByFixture = {
                   },
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "PointSelector",
@@ -3213,12 +3287,10 @@ const manifestsByFixture = {
                   "bodyValue": "Foramen magnum",
                   "target": {
                     "type": "SpecificResource",
-                    "source": [
-                      {
-                        "id": "https://example.org/iiif/scene1",
-                        "type": "Scene"
-                      }
-                    ],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1",
+                      "type": "Scene"
+                    },
                     "selector": [
                       {
                         "type": "WKTSelector",
@@ -3226,204 +3298,6 @@ const manifestsByFixture = {
                       }
                     ]
                   }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    } satisfies Manifest4,
-  fixtures_cookbook_v4_0001_mvm_image_json:     {
-      "@context": "http://iiif.io/api/presentation/4/context.json",
-      "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/manifest.json",
-      "type": "Manifest",
-      "label": {
-        "en": [
-          "Simplest Image Example (IIIF Presentation v4)"
-        ]
-      },
-      "items": [
-        {
-          "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/canvas/p1",
-          "type": "Canvas",
-          "height": 1800,
-          "width": 1200,
-          "items": [
-            {
-              "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/page/p1/1",
-              "type": "AnnotationPage",
-              "items": [
-                {
-                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/annotation/p0001-image",
-                  "type": "Annotation",
-                  "motivation": [
-                    "painting"
-                  ],
-                  "body": [
-                    {
-                      "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
-                      "type": "Image",
-                      "format": "image/png",
-                      "height": 1800,
-                      "width": 1200
-                    }
-                  ],
-                  "target": [
-                    {
-                      "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/canvas/p1",
-                      "type": "Canvas"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    } satisfies Manifest4,
-  fixtures_cookbook_v4_0002_mvm_audio_json:     {
-      "@context": "http://iiif.io/api/presentation/4/context.json",
-      "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/manifest.json",
-      "type": "Manifest",
-      "label": {
-        "en": [
-          "Simplest Audio Example (IIIF Presentation v4)"
-        ]
-      },
-      "items": [
-        {
-          "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline",
-          "type": "Timeline",
-          "duration": 1985.024,
-          "items": [
-            {
-              "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline/page",
-              "type": "AnnotationPage",
-              "items": [
-                {
-                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline/page/annotation",
-                  "type": "Annotation",
-                  "motivation": [
-                    "painting"
-                  ],
-                  "body": [
-                    {
-                      "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
-                      "type": "Sound",
-                      "format": "audio/mp4",
-                      "duration": 1985.024
-                    }
-                  ],
-                  "target": [
-                    {
-                      "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline",
-                      "type": "Timeline"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    } satisfies Manifest4,
-  fixtures_cookbook_v4_0003_mvm_video_json:     {
-      "@context": "http://iiif.io/api/presentation/4/context.json",
-      "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/manifest.json",
-      "type": "Manifest",
-      "label": {
-        "en": [
-          "Simplest Video Example (IIIF Presentation 4)"
-        ]
-      },
-      "items": [
-        {
-          "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas",
-          "type": "Canvas",
-          "height": 360,
-          "width": 480,
-          "duration": 572.034,
-          "items": [
-            {
-              "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas/page",
-              "type": "AnnotationPage",
-              "items": [
-                {
-                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas/page/annotation",
-                  "type": "Annotation",
-                  "motivation": [
-                    "painting"
-                  ],
-                  "body": [
-                    {
-                      "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
-                      "type": "Video",
-                      "height": 360,
-                      "width": 480,
-                      "duration": 572.034,
-                      "format": "video/mp4"
-                    }
-                  ],
-                  "target": [
-                    {
-                      "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas",
-                      "type": "Canvas"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    } satisfies Manifest4,
-  fixtures_cookbook_v4_0608_mvm_3d_json:     {
-      "@context": "http://iiif.io/api/presentation/4/context.json",
-      "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/manifest.json",
-      "type": "Manifest",
-      "label": {
-        "en": [
-          "Simplest Model Example (IIIF Presentation v4)"
-        ]
-      },
-      "summary": {
-        "en": [
-          "Viewer should render the model at the scene origin and then add default lighting and camera"
-        ]
-      },
-      "items": [
-        {
-          "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1",
-          "type": "Scene",
-          "label": {
-            "en": [
-              "A Scene"
-            ]
-          },
-          "items": [
-            {
-              "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1/annotationPage/1",
-              "type": "AnnotationPage",
-              "items": [
-                {
-                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1/annotationPage/1/anno/1",
-                  "type": "Annotation",
-                  "motivation": [
-                    "painting"
-                  ],
-                  "body": [
-                    {
-                      "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                      "type": "Model",
-                      "format": "model/gltf-binary"
-                    }
-                  ],
-                  "target": [
-                    {
-                      "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1",
-                      "type": "Scene"
-                    }
-                  ]
                 }
               ]
             }

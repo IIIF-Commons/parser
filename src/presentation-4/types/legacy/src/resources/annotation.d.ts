@@ -4,7 +4,15 @@ import type {
   W3CMotivation,
 } from "../../../../../presentation-3/types/legacy/src/resources/annotation";
 import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
-import type { ContentResourceLike, OneOrMany, ResourceReference, SpecificResource } from "./contentResource";
+import type {
+  AgentLike,
+  ContentResourceLike,
+  LinkedResource,
+  OneOrMany,
+  ResourceReference,
+  ServiceLike,
+  SpecificResource,
+} from "./contentResource";
 import type { ExcludeType, Transform } from "../iiif/technical-v4";
 import type { Selector } from "../extensions/presentation-4";
 
@@ -37,11 +45,38 @@ export type ActivatingAnnotation = {
 };
 
 export type Annotation = Prettify<
-  Omit<AnnotationV3, "body" | "target" | "motivation" | "timeMode" | "selector"> & {
+  Omit<
+    AnnotationV3,
+    | "body"
+    | "target"
+    | "motivation"
+    | "timeMode"
+    | "selector"
+    | "thumbnail"
+    | "provider"
+    | "seeAlso"
+    | "service"
+    | "services"
+    | "homepage"
+    | "rendering"
+    | "partOf"
+    | "logo"
+    | "supplementary"
+  > & {
     type: "Annotation";
     motivation?: OneOrMany<AnnotationMotivation>;
     body?: OneOrMany<AnnotationBody>;
     target: OneOrMany<AnnotationTarget>;
+    thumbnail?: OneOrMany<LinkedResource>;
+    provider?: OneOrMany<AgentLike | ResourceReference<"Agent">>;
+    seeAlso?: OneOrMany<LinkedResource>;
+    service?: OneOrMany<ServiceLike>;
+    services?: OneOrMany<ServiceLike>;
+    homepage?: OneOrMany<LinkedResource>;
+    rendering?: OneOrMany<LinkedResource>;
+    partOf?: OneOrMany<LinkedResource>;
+    logo?: OneOrMany<LinkedResource>;
+    supplementary?: OneOrMany<LinkedResource>;
     selector?: OneOrMany<Selector>;
     action?: OneOrMany<ContentResourceLike | SpecificResource | ResourceReference | string | Record<string, unknown>>;
     exclude?: OneOrMany<ExcludeType>;
