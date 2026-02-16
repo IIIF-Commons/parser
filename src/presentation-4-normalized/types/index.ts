@@ -21,16 +21,16 @@ import type {
 } from "./legacy/index";
 
 export interface SelectorNormalized extends NormalizedEntityBase {
-  type?: string;
+  type: string;
   selectors: readonly NormalizedReference[];
 }
 
 export interface QuantityNormalized extends NormalizedEntityBase {
-  type?: "Quantity";
+  type: "Quantity";
 }
 
 export interface TransformNormalized extends NormalizedEntityBase {
-  type?: string;
+  type: string;
 }
 
 export type NormalizedEntity =
