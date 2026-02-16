@@ -21,6 +21,16 @@ import {
   emptyTimeline,
   emptyTransform,
 } from "./empty-types";
+import {
+  emptyAgent as legacyEmptyAgent,
+  emptyAnnotation as legacyEmptyAnnotation,
+  emptyAnnotationPage as legacyEmptyAnnotationPage,
+  emptyCanvas as legacyEmptyCanvas,
+  emptyCollection as legacyEmptyCollection,
+  emptyManifest as legacyEmptyManifest,
+  emptyRange as legacyEmptyRange,
+  emptyService as legacyEmptyService,
+} from "../presentation-3/empty-types";
 import { type TraversalContext, Traverse } from "./traverse";
 import { upgradeToPresentation4 } from "./upgrade";
 import {
@@ -81,7 +91,7 @@ export function getDefaultEntities(): Presentation4Entities {
 function mergeEntity(
   existing: any,
   incoming: any,
-  context?: { parent?: any; isTopLevel?: boolean }
+  context?: { parent?: any; isTopLevel?: boolean; legacyMode?: boolean }
 ): NormalizedEntityV4 {
   if (!incoming) {
     return existing;
@@ -159,18 +169,21 @@ function mergeEntity(
 
       if (merged[HAS_PART] && merged[HAS_PART].length) {
         const noExplicit = !(merged[HAS_PART] || []).find((r: any) => r["@explicit"]);
-        const hasDiverged = added.length > 0 || unchanged.length !== existingKeys.length;
+        const changedKeys = Object.keys(incomingChangedValues);
+        const hasDiverged = context.legacyMode
+          ? added.length > 0 || unchanged.length !== existingKeys.length
+          : added.length > 0 || changedKeys.length > 0;
         if (noExplicit && hasDiverged) {
           for (const item of merged[HAS_PART]) {
             const first = { ...item };
-            const changedKeys = Object.keys(previouslyChangedValues);
+            const previouslyChangedKeys = Object.keys(previouslyChangedValues);
             first["@explicit"] = true;
             for (const addedProperty of existingKeys) {
               if (addedProperty !== HAS_PART) {
                 first[addedProperty] = WILDCARD;
               }
             }
-            for (const changedKey of changedKeys) {
+            for (const changedKey of previouslyChangedKeys) {
               first[changedKey] = previouslyChangedValues[changedKey];
             }
             newHasPart.push(first);
@@ -180,7 +193,6 @@ function mergeEntity(
         }
 
         if (hasDiverged) {
-          const changedKeys = Object.keys(incomingChangedValues);
           part["@explicit"] = true;
           for (const addedProperty of added) {
             part[addedProperty] = WILDCARD;
@@ -197,7 +209,15 @@ function mergeEntity(
       part.id = merged.id;
       part.type = merged.type;
       newHasPart.push(part);
-      merged[HAS_PART] = newHasPart;
+      const seenFramingKeys = new Set<string>();
+      merged[HAS_PART] = newHasPart.filter((item: any) => {
+        const key = `${item?.[PART_OF] || ""}|${item?.id || ""}|${item?.type || ""}|${item?.["@explicit"] ? 1 : 0}`;
+        if (seenFramingKeys.has(key)) {
+          return false;
+        }
+        seenFramingKeys.add(key);
+        return true;
+      });
     }
 
     return merged;
@@ -212,7 +232,7 @@ function mergeEntity(
 function mergeEntities(
   existing: NormalizedEntityV4,
   incoming: Record<string, unknown>,
-  context?: { parent?: any; isTopLevel?: boolean }
+  context?: { parent?: any; isTopLevel?: boolean; legacyMode?: boolean }
 ): NormalizedEntityV4 {
   if (typeof existing === "string") {
     return existing as any;
@@ -338,6 +358,13 @@ function ensureDefaultFields<T, R>(defaultResource: R) {
   };
 }
 
+function addFlagForExternalResource<T extends { items?: unknown }>(resource: T): T {
+  if (resource && typeof resource === "object" && typeof resource.items === "undefined") {
+    (resource as any)["iiif-parser:isExternal"] = true;
+  }
+  return resource;
+}
+
 function recordType(mapping: NormalizeResult["mapping"]) {
   return (forcedType?: string) => (resource: any, _context: TraversalContext) => {
     if (!resource || typeof resource !== "object") {
@@ -353,7 +380,9 @@ function recordType(mapping: NormalizeResult["mapping"]) {
   };
 }
 
-function recordEntity(entities: Presentation4Entities) {
+function recordEntity(entities: Presentation4Entities, options: { legacyMode?: boolean } = {}) {
+  const { legacyMode = false } = options;
+
   return (forcedType?: string) => (resource: any, context: TraversalContext) => {
     if (!resource || typeof resource !== "object") {
       return resource;
@@ -369,6 +398,7 @@ function recordEntity(entities: Presentation4Entities) {
     const mergeContext = {
       parent: context.parent,
       isTopLevel: context.path === "$",
+      legacyMode,
     };
     entities[storeType][id] = current
       ? mergeEntities(current as any, resource, mergeContext)
@@ -381,7 +411,55 @@ function recordEntity(entities: Presentation4Entities) {
   };
 }
 
-function recordSelectorForLoading(entities: Presentation4Entities, mapping: NormalizeResult["mapping"]) {
+function recordSelectorForLoading(
+  entities: Presentation4Entities,
+  mapping: NormalizeResult["mapping"],
+  options: { preserveResourceShape?: boolean; legacyMode?: boolean } = {}
+) {
+  const { preserveResourceShape = false } = options;
+  const { legacyMode = false } = options;
+
+  return (resource: any, context: TraversalContext) => {
+    if (!resource || typeof resource !== "object") {
+      return resource;
+    }
+    const existingId = getId(resource);
+    const id = existingId || mintDeterministicId(resource, "Selector", context.path);
+    const resourceToStore = existingId
+      ? resource
+      : {
+          ...resource,
+          id,
+          type: getType(resource) || "Selector",
+        };
+
+    mapping[id] = "Selector";
+    const current = entities.Selector[id];
+    const mergeContext = {
+      parent: context.parent,
+      isTopLevel: context.path === "$",
+      legacyMode,
+    };
+    entities.Selector[id] = (
+      current
+        ? mergeEntities(current as any, resourceToStore, mergeContext)
+        : mergeEntities({ id, type: getType(resourceToStore) || "Selector" } as any, resourceToStore, mergeContext)
+    ) as any;
+
+    if (!existingId && !preserveResourceShape) {
+      resource.id = id;
+      if (!getType(resource)) {
+        resource.type = getType(resourceToStore) || "Selector";
+      }
+    }
+
+    return resource;
+  };
+}
+
+function recordServiceForLoading(entities: Presentation4Entities, options: { legacyMode?: boolean } = {}) {
+  const { legacyMode = false } = options;
+
   return (resource: any, context: TraversalContext) => {
     if (!resource || typeof resource !== "object") {
       return resource;
@@ -391,49 +469,79 @@ function recordSelectorForLoading(entities: Presentation4Entities, mapping: Norm
       return resource;
     }
 
-    mapping[id] = "Selector";
-    const current = entities.Selector[id];
+    const current = entities.Service[id];
     const mergeContext = {
       parent: context.parent,
       isTopLevel: context.path === "$",
+      legacyMode,
     };
-    entities.Selector[id] = (
+    entities.Service[id] = (
       current
         ? mergeEntities(current as any, resource, mergeContext)
-        : mergeEntities({ id, type: getType(resource) || "Selector" } as any, resource, mergeContext)
+        : mergeEntities({ id, type: getType(resource) || "Service" } as any, resource, mergeContext)
     ) as any;
 
+    // Keep the full service object on the parent resource, matching P3 behavior.
     return resource;
   };
 }
 
 export function normalize(input: unknown): NormalizeResult {
   const sourceVersion = detectSourceVersion(input as any);
+  const isLegacySource = sourceVersion === 2 || sourceVersion === 3;
   const diagnostics: ValidationIssue[] = [];
+  const originalContext = input && typeof input === "object" ? (input as any)["@context"] : undefined;
   const upgraded = upgradeToPresentation4(input);
 
-  if (upgraded && typeof upgraded === "object" && !upgraded["@context"]) {
-    upgraded["@context"] = PRESENTATION_4_CONTEXT;
+  if (upgraded && typeof upgraded === "object") {
+    if (isLegacySource) {
+      upgraded["@context"] = sourceVersion === 2 ? PRESENTATION_3_CONTEXT : originalContext || PRESENTATION_3_CONTEXT;
+    } else if (!upgraded["@context"]) {
+      upgraded["@context"] = PRESENTATION_4_CONTEXT;
+    }
   }
 
   const entities = getDefaultEntities();
   const mapping: NormalizeResult["mapping"] = {};
 
-  const record = recordEntity(entities);
+  const record = recordEntity(entities, { legacyMode: isLegacySource });
   const map = recordType(mapping);
-  const shouldCoerceContainerTargets = sourceVersion === 2 || sourceVersion === 3;
+  const shouldCoerceContainerTargets = isLegacySource;
+
+  const contentResourceTraversals: Array<(resource: any, context: TraversalContext) => any> = [
+    withId("ContentResource", diagnostics),
+  ];
+  if (!isLegacySource) {
+    contentResourceTraversals.push(ensureDefaultFields(emptyContentResource));
+  }
+  contentResourceTraversals.push(map("ContentResource"), record("ContentResource"));
+
+  const selectorTraversals: Array<(resource: any, context: TraversalContext) => any> = [];
+  if (!isLegacySource) {
+    selectorTraversals.push(withId("Selector", diagnostics), ensureDefaultFields(emptySelector));
+  }
+  selectorTraversals.push(
+    recordSelectorForLoading(entities, mapping, { preserveResourceShape: isLegacySource, legacyMode: isLegacySource })
+  );
+
+  const specificResourceTraversals: Array<(resource: any, context: TraversalContext) => any> = [];
+  if (!isLegacySource) {
+    specificResourceTraversals.push(ensureDefaultFields(emptySpecificResource));
+  }
 
   const traversal = new Traverse(
     {
       collection: [
+        ...(isLegacySource ? [addFlagForExternalResource] : []),
         withId("Collection", diagnostics),
-        ensureDefaultFields(emptyCollection),
+        ensureDefaultFields((isLegacySource ? legacyEmptyCollection : emptyCollection) as any),
         map("Collection"),
         record("Collection"),
       ],
       manifest: [
+        ...(isLegacySource ? [addFlagForExternalResource] : []),
         withId("Manifest", diagnostics),
-        ensureDefaultFields(emptyManifest),
+        ensureDefaultFields((isLegacySource ? legacyEmptyManifest : emptyManifest) as any),
         map("Manifest"),
         record("Manifest"),
       ],
@@ -443,7 +551,12 @@ export function normalize(input: unknown): NormalizeResult {
         map("Timeline"),
         record("Timeline"),
       ],
-      canvas: [withId("Canvas", diagnostics), ensureDefaultFields(emptyCanvas), map("Canvas"), record("Canvas")],
+      canvas: [
+        withId("Canvas", diagnostics),
+        ensureDefaultFields((isLegacySource ? legacyEmptyCanvas : emptyCanvas) as any),
+        map("Canvas"),
+        record("Canvas"),
+      ],
       scene: [withId("Scene", diagnostics), ensureDefaultFields(emptyScene), map("Scene"), record("Scene")],
       annotationCollection: [
         withId("AnnotationCollection", diagnostics),
@@ -452,47 +565,55 @@ export function normalize(input: unknown): NormalizeResult {
         record("AnnotationCollection"),
       ],
       annotationPage: [
+        ...(isLegacySource ? [addFlagForExternalResource] : []),
         withId("AnnotationPage", diagnostics),
-        ensureDefaultFields(emptyAnnotationPage),
+        ensureDefaultFields((isLegacySource ? legacyEmptyAnnotationPage : emptyAnnotationPage) as any),
         map("AnnotationPage"),
         record("AnnotationPage"),
       ],
       annotation: [
         withId("Annotation", diagnostics),
-        ensureDefaultFields(emptyAnnotation),
+        ...(isLegacySource ? [] : [ensureDefaultFields(emptyAnnotation)]),
         map("Annotation"),
         record("Annotation"),
       ],
-      contentResource: [
-        withId("ContentResource", diagnostics),
-        ensureDefaultFields(emptyContentResource),
-        map("ContentResource"),
-        record("ContentResource"),
+      contentResource: contentResourceTraversals,
+      range: [
+        withId("Range", diagnostics),
+        ensureDefaultFields((isLegacySource ? legacyEmptyRange : emptyRange) as any),
+        map("Range"),
+        record("Range"),
       ],
-      range: [withId("Range", diagnostics), ensureDefaultFields(emptyRange), map("Range"), record("Range")],
-      service: [withId("Service", diagnostics), ensureDefaultFields(emptyService), map("Service"), record("Service")],
-      selector: [
-        withId("Selector", diagnostics),
-        ensureDefaultFields(emptySelector),
-        recordSelectorForLoading(entities, mapping),
+      service: [
+        withId("Service", diagnostics),
+        ensureDefaultFields((isLegacySource ? legacyEmptyService : emptyService) as any),
+        map("Service"),
+        recordServiceForLoading(entities, { legacyMode: isLegacySource }),
       ],
+      selector: selectorTraversals,
       quantity: [
         withId("Quantity", diagnostics),
-        ensureDefaultFields(emptyQuantity),
+        ...(isLegacySource ? [] : [ensureDefaultFields(emptyQuantity)]),
         map("Quantity"),
         record("Quantity"),
       ],
       transform: [
         withId("Transform", diagnostics),
-        ensureDefaultFields(emptyTransform),
+        ...(isLegacySource ? [] : [ensureDefaultFields(emptyTransform)]),
         map("Transform"),
         record("Transform"),
       ],
-      agent: [withId("Agent", diagnostics), ensureDefaultFields(emptyAgent), map("Agent"), record("Agent")],
-      specificResource: [withId("SpecificResource", diagnostics), ensureDefaultFields(emptySpecificResource)],
+      agent: [
+        withId("Agent", diagnostics),
+        ensureDefaultFields((isLegacySource ? legacyEmptyAgent : emptyAgent) as any),
+        map("Agent"),
+        record("Agent"),
+      ],
+      specificResource: specificResourceTraversals,
     },
     {
       coerceContainerTargetsToSpecificResources: shouldCoerceContainerTargets,
+      legacyPresentation3Behavior: isLegacySource,
     }
   );
 
