@@ -88,11 +88,11 @@ export type Presentation4Entities = {
   Transform: Record<string, TransformNormalizedV4>;
 };
 
-export type Presentation4MappingType = keyof Presentation4Entities | string;
+export type Presentation4MappingType = keyof Presentation4Entities;
 
 export type Presentation4NormalizeResult = {
   entities: Presentation4Entities;
-  resource: { id: string; type: string };
+  resource: { id: string; type: Presentation4MappingType };
   mapping: Record<string, Presentation4MappingType>;
   diagnostics: Array<{
     code: string;

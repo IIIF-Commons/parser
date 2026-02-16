@@ -329,7 +329,11 @@ export class Traverse {
   private traverseAnnotationItems(page: any, path: string) {
     if (page.items) {
       page.items = ensureArray(page.items).map((item: any, index: number) =>
-        this.traverseAnnotation(item, page, `${path}.items[${index}]`)
+        this.traverseUnknown(item, {
+          parent: page,
+          path: `${path}.items[${index}]`,
+          typeHint: "Annotation",
+        })
       );
     }
     return page;
@@ -412,7 +416,7 @@ export class Traverse {
       });
 
       if (this.options.legacyPresentation3Behavior) {
-        annotation.target = Array.isArray(originalTarget) ? targets : targets[0] ?? null;
+        annotation.target = Array.isArray(originalTarget) ? targets : (targets[0] ?? null);
       } else {
         annotation.target = targets;
       }
@@ -492,7 +496,7 @@ export class Traverse {
         this.traverseSelector(selector, specificResource, `${path}.selector[${index}]`)
       );
       specificResource.selector =
-        this.options.legacyPresentation3Behavior && !wasSelectorArray ? selectors[0] ?? undefined : selectors;
+        this.options.legacyPresentation3Behavior && !wasSelectorArray ? (selectors[0] ?? undefined) : selectors;
     }
 
     if (specificResource.transform) {
@@ -501,7 +505,7 @@ export class Traverse {
         this.traverseTransform(transform, specificResource, `${path}.transform[${index}]`)
       );
       specificResource.transform =
-        this.options.legacyPresentation3Behavior && !wasTransformArray ? transforms[0] ?? undefined : transforms;
+        this.options.legacyPresentation3Behavior && !wasTransformArray ? (transforms[0] ?? undefined) : transforms;
     }
 
     if (specificResource.position && typeof specificResource.position === "object") {
