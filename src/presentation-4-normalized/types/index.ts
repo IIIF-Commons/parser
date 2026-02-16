@@ -1,103 +1,47 @@
-export type NormalizedReferenceV4 =
-  | string
-  | {
-      id?: string;
-      type?: string;
-      [key: string]: unknown;
-    };
+export type * from "./legacy/index";
 
-export type NormalizedFramingPartV4 = {
-  id?: string;
-  type?: string;
-  "@explicit"?: boolean;
-  "iiif-parser:partOf"?: string;
-  [key: string]: unknown;
-};
+import type {
+  AgentNormalized,
+  AnnotationCollectionNormalized,
+  AnnotationNormalized,
+  AnnotationPageNormalized,
+  CanvasNormalized,
+  CollectionNormalized,
+  ContentResourceNormalized,
+  ManifestNormalized,
+  NormalizedEntityBase,
+  NormalizedFramingPart,
+  NormalizedLinkedEntity,
+  NormalizedReference,
+  RangeNormalized,
+  SceneNormalized,
+  ServiceNormalized,
+  SpecificResourceNormalized,
+  TimelineNormalized,
+} from "./legacy/index";
 
-export interface NormalizedEntityV4Base {
-  id?: string;
-  type?: string;
-  "@id"?: string;
-  "@type"?: string;
-  "iiif-parser:hasPart"?: NormalizedFramingPartV4[];
-  [key: string]: unknown;
-}
+export type NormalizedReferenceV4 = NormalizedReference;
+export type NormalizedFramingPartV4 = NormalizedFramingPart;
+export type NormalizedEntityV4Base = NormalizedEntityBase;
+export type NormalizedLinkedEntityV4 = NormalizedLinkedEntity;
 
-export interface NormalizedLinkedEntityV4 extends NormalizedEntityV4Base {
-  metadata: readonly unknown[];
-  provider: readonly NormalizedReferenceV4[];
-  thumbnail: readonly NormalizedReferenceV4[];
-  behavior: readonly string[];
-  seeAlso: readonly NormalizedReferenceV4[];
-  service: readonly NormalizedReferenceV4[];
-  services: readonly NormalizedReferenceV4[];
-  homepage: readonly NormalizedReferenceV4[];
-  rendering: readonly NormalizedReferenceV4[];
-  partOf: readonly NormalizedReferenceV4[];
-  annotations: readonly NormalizedReferenceV4[];
-}
-
-export interface CollectionNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "Collection";
-  items: readonly NormalizedReferenceV4[];
-}
-
-export interface ManifestNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "Manifest";
-  items: readonly NormalizedReferenceV4[];
-  structures: readonly NormalizedReferenceV4[];
-}
-
-export interface TimelineNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "Timeline";
-  items: readonly NormalizedReferenceV4[];
-}
-
-export interface CanvasNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "Canvas";
-  items: readonly NormalizedReferenceV4[];
-}
-
-export interface SceneNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "Scene";
-  items: readonly NormalizedReferenceV4[];
-}
-
-export interface AnnotationPageNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "AnnotationPage";
-  items: readonly NormalizedReferenceV4[];
-}
-
-export interface AnnotationCollectionNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "AnnotationCollection";
-  items: readonly NormalizedReferenceV4[];
-}
-
-export interface AnnotationNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "Annotation";
-  motivation: readonly string[];
-  body: readonly NormalizedReferenceV4[];
-  target: readonly NormalizedReferenceV4[];
-}
-
-export interface RangeNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "Range";
-  items: readonly NormalizedReferenceV4[];
-}
-
-export interface ServiceNormalizedV4 extends NormalizedEntityV4Base {
-  type?: string;
-  service: readonly NormalizedReferenceV4[];
-}
+export type CollectionNormalizedV4 = CollectionNormalized;
+export type ManifestNormalizedV4 = ManifestNormalized;
+export type TimelineNormalizedV4 = TimelineNormalized;
+export type CanvasNormalizedV4 = CanvasNormalized;
+export type SceneNormalizedV4 = SceneNormalized;
+export type AnnotationPageNormalizedV4 = AnnotationPageNormalized;
+export type AnnotationCollectionNormalizedV4 = AnnotationCollectionNormalized;
+export type AnnotationNormalizedV4 = AnnotationNormalized;
+export type RangeNormalizedV4 = RangeNormalized;
+export type ServiceNormalizedV4 = ServiceNormalized;
+export type AgentNormalizedV4 = AgentNormalized;
+export type SpecificResourceNormalizedV4 = SpecificResourceNormalized;
+export type ContentResourceNormalizedV4 = ContentResourceNormalized;
 
 export interface SelectorNormalizedV4 extends NormalizedEntityV4Base {
   type?: string;
   selectors: readonly NormalizedReferenceV4[];
-}
-
-export interface AgentNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: "Agent";
-  logo: readonly NormalizedReferenceV4[];
 }
 
 export interface QuantityNormalizedV4 extends NormalizedEntityV4Base {
@@ -106,24 +50,6 @@ export interface QuantityNormalizedV4 extends NormalizedEntityV4Base {
 
 export interface TransformNormalizedV4 extends NormalizedEntityV4Base {
   type?: string;
-}
-
-export interface SpecificResourceNormalizedV4 extends NormalizedEntityV4Base {
-  type?: "SpecificResource";
-  source?: NormalizedReferenceV4 | NormalizedReferenceV4[];
-  selector: readonly NormalizedReferenceV4[];
-  transform: readonly NormalizedReferenceV4[];
-  action: readonly NormalizedReferenceV4[];
-}
-
-export interface ContentResourceNormalizedV4 extends NormalizedLinkedEntityV4 {
-  type?: string;
-  language: readonly string[];
-  items: readonly NormalizedReferenceV4[];
-  selector: readonly NormalizedReferenceV4[];
-  transform: readonly NormalizedReferenceV4[];
-  action: readonly NormalizedReferenceV4[];
-  provides: readonly string[];
 }
 
 export type NormalizedEntityV4 =
