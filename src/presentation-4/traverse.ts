@@ -44,6 +44,7 @@ export type TraversalMap = {
 export type TraverseOptions = {
   allowUndefinedReturn: boolean;
   coerceContainerTargetsToSpecificResources: boolean;
+  legacyPresentation3Behavior: boolean;
 };
 
 type UnknownTraversalArgs = {
@@ -96,6 +97,7 @@ export class Traverse {
     this.options = {
       allowUndefinedReturn: false,
       coerceContainerTargetsToSpecificResources: false,
+      legacyPresentation3Behavior: false,
       ...options,
     };
   }
@@ -167,7 +169,21 @@ export class Traverse {
       if (resource[key]) {
         if (key === "start" && this.options.coerceContainerTargetsToSpecificResources) {
           const specificResource = this.toSpecificResource(resource[key], "Canvas");
-          if (specificResource) {
+          const sourceValue = resource[key];
+          const isAlreadySpecificResource = isSpecificResource(sourceValue);
+          const hasSpecificResourceFields =
+            !!sourceValue &&
+            typeof sourceValue === "object" &&
+            !Array.isArray(sourceValue) &&
+            ("source" in sourceValue ||
+              "selector" in sourceValue ||
+              "transform" in sourceValue ||
+              "action" in sourceValue);
+
+          if (
+            specificResource &&
+            (specificResource.selector || isAlreadySpecificResource || hasSpecificResourceFields)
+          ) {
             resource[key] = this.traverseSpecificResource(specificResource, "Canvas", resource, `${path}.${key}`);
             continue;
           }
@@ -215,39 +231,63 @@ export class Traverse {
 
   private traverseManifestItems(manifest: any, path: string) {
     if (manifest.items) {
-      manifest.items = ensureArray(manifest.items).map((item: any, index: number) =>
-        this.traverseUnknown(item, {
-          parent: manifest,
-          path: `${path}.items[${index}]`,
-        })
-      );
+      if (this.options.legacyPresentation3Behavior) {
+        ensureArray(manifest.items).forEach((item: any, index: number) => {
+          this.traverseUnknown(item, {
+            path: `${path}.items[${index}]`,
+          });
+        });
+      } else {
+        manifest.items = ensureArray(manifest.items).map((item: any, index: number) =>
+          this.traverseUnknown(item, {
+            parent: manifest,
+            path: `${path}.items[${index}]`,
+          })
+        );
+      }
     }
     if (manifest.structures) {
-      manifest.structures = ensureArray(manifest.structures).map((item: any, index: number) =>
-        this.traverseRange(item, manifest, `${path}.structures[${index}]`)
-      );
+      if (this.options.legacyPresentation3Behavior) {
+        manifest.structures = ensureArray(manifest.structures).map((item: any, index: number) =>
+          this.traverseRange(item, undefined, `${path}.structures[${index}]`)
+        );
+      } else {
+        manifest.structures = ensureArray(manifest.structures).map((item: any, index: number) =>
+          this.traverseRange(item, manifest, `${path}.structures[${index}]`)
+        );
+      }
     }
     return manifest;
   }
 
   private traverseCollectionItems(collection: any, path: string) {
     if (collection.items) {
-      collection.items = ensureArray(collection.items).map((item: any, index: number) =>
-        this.traverseUnknown(item, {
-          parent: collection,
-          path: `${path}.items[${index}]`,
-        })
-      );
+      if (this.options.legacyPresentation3Behavior) {
+        ensureArray(collection.items).forEach((item: any, index: number) => {
+          this.traverseUnknown(item, {
+            path: `${path}.items[${index}]`,
+          });
+        });
+      } else {
+        collection.items = ensureArray(collection.items).map((item: any, index: number) =>
+          this.traverseUnknown(item, {
+            parent: collection,
+            path: `${path}.items[${index}]`,
+          })
+        );
+      }
     }
     return collection;
   }
 
   traverseCollection(collection: any, parent?: any, path = "$"): any {
+    const withCollectionItems = this.traverseCollectionItems(collection, path);
+    const withContainerItems = this.options.legacyPresentation3Behavior
+      ? withCollectionItems
+      : this.traverseContainerItems(withCollectionItems, path);
+
     return this.traverseType(
-      this.traverseLinkedResources(
-        this.traverseContainerItems(this.traverseCollectionItems(collection, path), path),
-        path
-      ),
+      this.traverseLinkedResources(withContainerItems, path),
       { parent, path },
       this.traversals.collection
     );
@@ -326,7 +366,8 @@ export class Traverse {
 
   private traverseAnnotationTarget(annotation: any, path: string) {
     if (annotation.target) {
-      annotation.target = ensureArray(annotation.target).map((target: any, index: number) => {
+      const originalTarget = annotation.target;
+      const targets = ensureArray(annotation.target).map((target: any, index: number) => {
         const targetPath = `${path}.target[${index}]`;
         if (isSpecificResource(target)) {
           return this.traverseSpecificResource(target, undefined, annotation, targetPath);
@@ -369,6 +410,12 @@ export class Traverse {
           path: targetPath,
         });
       });
+
+      if (this.options.legacyPresentation3Behavior) {
+        annotation.target = Array.isArray(originalTarget) ? targets : targets[0] ?? null;
+      } else {
+        annotation.target = targets;
+      }
     }
     return annotation;
   }
@@ -400,8 +447,18 @@ export class Traverse {
   }
 
   traverseSpecificResource(specificResource: any, typeHint?: string, parent?: any, path = "$"): any {
+    const normalizedSpecificResource = this.toSpecificResource(specificResource, typeHint || "Canvas");
+    if (normalizedSpecificResource) {
+      specificResource = normalizedSpecificResource;
+    }
+
     const source = specificResource.source;
     let nextSource = source;
+    const sourceWasDetailedObject =
+      !!source &&
+      typeof source === "object" &&
+      !Array.isArray(source) &&
+      Object.keys(source).some((key) => key !== "id" && key !== "@id" && key !== "type" && key !== "@type");
 
     if (Array.isArray(source)) {
       nextSource = source.map((sourceItem: any, index: number) =>
@@ -414,23 +471,37 @@ export class Traverse {
             })
       );
     } else if (source && typeof source === "object") {
-      nextSource = this.traverseUnknown(source, {
+      const traversedSource = this.traverseUnknown(source, {
         parent,
         path: `${path}.source`,
         typeHint: typeHint || "ContentResource",
       });
+      nextSource =
+        this.options.legacyPresentation3Behavior && sourceWasDetailedObject && isResourceReference(traversedSource)
+          ? {
+              ...source,
+              id: getId(traversedSource) || getId(source),
+              type: getType(traversedSource) || getType(source) || typeHint || "ContentResource",
+            }
+          : traversedSource;
     }
 
     if (specificResource.selector) {
-      specificResource.selector = ensureArray(specificResource.selector).map((selector: any, index: number) =>
+      const wasSelectorArray = Array.isArray(specificResource.selector);
+      const selectors = ensureArray(specificResource.selector).map((selector: any, index: number) =>
         this.traverseSelector(selector, specificResource, `${path}.selector[${index}]`)
       );
+      specificResource.selector =
+        this.options.legacyPresentation3Behavior && !wasSelectorArray ? selectors[0] ?? undefined : selectors;
     }
 
     if (specificResource.transform) {
-      specificResource.transform = ensureArray(specificResource.transform).map((transform: any, index: number) =>
+      const wasTransformArray = Array.isArray(specificResource.transform);
+      const transforms = ensureArray(specificResource.transform).map((transform: any, index: number) =>
         this.traverseTransform(transform, specificResource, `${path}.transform[${index}]`)
       );
+      specificResource.transform =
+        this.options.legacyPresentation3Behavior && !wasTransformArray ? transforms[0] ?? undefined : transforms;
     }
 
     if (specificResource.position && typeof specificResource.position === "object") {
@@ -446,11 +517,21 @@ export class Traverse {
       specificResource.source = nextSource;
     }
 
+    if (
+      this.options.legacyPresentation3Behavior &&
+      !Object.prototype.hasOwnProperty.call(specificResource, "selector")
+    ) {
+      specificResource.selector = undefined;
+    }
+
     return this.traverseType(specificResource, { parent, path }, this.traversals.specificResource);
   }
 
   traverseContentResource(contentResource: any, parent?: any, path = "$"): any {
     if (!contentResource || typeof contentResource !== "object") {
+      if (this.options.legacyPresentation3Behavior && typeof contentResource === "string") {
+        return { id: contentResource, type: "ContentResource" };
+      }
       return contentResource;
     }
 
@@ -557,19 +638,20 @@ export class Traverse {
 
     if (typeof target === "string") {
       const [id, fragment] = splitCanvasFragment(target);
-      return {
+      const specificResource: any = {
         type: "SpecificResource",
         source: {
           id,
           type: typeHint,
         },
-        selector: fragment
-          ? {
-              type: "FragmentSelector",
-              value: fragment,
-            }
-          : undefined,
       };
+      if (fragment) {
+        specificResource.selector = {
+          type: "FragmentSelector",
+          value: fragment,
+        };
+      }
+      return specificResource;
     }
 
     if (typeof target !== "object") {
@@ -637,16 +719,17 @@ export class Traverse {
     const [id, fragment] = splitCanvasFragment(source.id);
     source.id = id;
 
-    return {
+    const specificResource: any = {
       type: "SpecificResource",
       source,
-      selector: fragment
-        ? {
-            type: "FragmentSelector",
-            value: fragment,
-          }
-        : undefined,
     };
+    if (fragment) {
+      specificResource.selector = {
+        type: "FragmentSelector",
+        value: fragment,
+      };
+    }
+    return specificResource;
   }
 
   private toImplicitSpecificResource(target: any, typeHint = "Canvas"): any | undefined {
