@@ -20,72 +20,53 @@ import type {
   TimelineNormalized,
 } from "./legacy/index";
 
-export type NormalizedReferenceV4 = NormalizedReference;
-export type NormalizedFramingPartV4 = NormalizedFramingPart;
-export type NormalizedEntityV4Base = NormalizedEntityBase;
-export type NormalizedLinkedEntityV4 = NormalizedLinkedEntity;
-
-export type CollectionNormalizedV4 = CollectionNormalized;
-export type ManifestNormalizedV4 = ManifestNormalized;
-export type TimelineNormalizedV4 = TimelineNormalized;
-export type CanvasNormalizedV4 = CanvasNormalized;
-export type SceneNormalizedV4 = SceneNormalized;
-export type AnnotationPageNormalizedV4 = AnnotationPageNormalized;
-export type AnnotationCollectionNormalizedV4 = AnnotationCollectionNormalized;
-export type AnnotationNormalizedV4 = AnnotationNormalized;
-export type RangeNormalizedV4 = RangeNormalized;
-export type ServiceNormalizedV4 = ServiceNormalized;
-export type AgentNormalizedV4 = AgentNormalized;
-export type SpecificResourceNormalizedV4 = SpecificResourceNormalized;
-export type ContentResourceNormalizedV4 = ContentResourceNormalized;
-
-export interface SelectorNormalizedV4 extends NormalizedEntityV4Base {
+export interface SelectorNormalized extends NormalizedEntityBase {
   type?: string;
-  selectors: readonly NormalizedReferenceV4[];
+  selectors: readonly NormalizedReference[];
 }
 
-export interface QuantityNormalizedV4 extends NormalizedEntityV4Base {
+export interface QuantityNormalized extends NormalizedEntityBase {
   type?: "Quantity";
 }
 
-export interface TransformNormalizedV4 extends NormalizedEntityV4Base {
+export interface TransformNormalized extends NormalizedEntityBase {
   type?: string;
 }
 
-export type NormalizedEntityV4 =
-  | CollectionNormalizedV4
-  | ManifestNormalizedV4
-  | TimelineNormalizedV4
-  | CanvasNormalizedV4
-  | SceneNormalizedV4
-  | AnnotationPageNormalizedV4
-  | AnnotationCollectionNormalizedV4
-  | AnnotationNormalizedV4
-  | ContentResourceNormalizedV4
-  | SpecificResourceNormalizedV4
-  | RangeNormalizedV4
-  | ServiceNormalizedV4
-  | SelectorNormalizedV4
-  | AgentNormalizedV4
-  | QuantityNormalizedV4
-  | TransformNormalizedV4;
+export type NormalizedEntity =
+  | CollectionNormalized
+  | ManifestNormalized
+  | TimelineNormalized
+  | CanvasNormalized
+  | SceneNormalized
+  | AnnotationPageNormalized
+  | AnnotationCollectionNormalized
+  | AnnotationNormalized
+  | ContentResourceNormalized
+  | SpecificResourceNormalized
+  | RangeNormalized
+  | ServiceNormalized
+  | SelectorNormalized
+  | AgentNormalized
+  | QuantityNormalized
+  | TransformNormalized;
 
 export type Presentation4Entities = {
-  Collection: Record<string, CollectionNormalizedV4>;
-  Manifest: Record<string, ManifestNormalizedV4>;
-  Timeline: Record<string, TimelineNormalizedV4>;
-  Canvas: Record<string, CanvasNormalizedV4>;
-  Scene: Record<string, SceneNormalizedV4>;
-  AnnotationPage: Record<string, AnnotationPageNormalizedV4>;
-  AnnotationCollection: Record<string, AnnotationCollectionNormalizedV4>;
-  Annotation: Record<string, AnnotationNormalizedV4>;
-  ContentResource: Record<string, ContentResourceNormalizedV4 | SpecificResourceNormalizedV4>;
-  Range: Record<string, RangeNormalizedV4>;
-  Service: Record<string, ServiceNormalizedV4>;
-  Selector: Record<string, SelectorNormalizedV4>;
-  Agent: Record<string, AgentNormalizedV4>;
-  Quantity: Record<string, QuantityNormalizedV4>;
-  Transform: Record<string, TransformNormalizedV4>;
+  Collection: Record<string, CollectionNormalized>;
+  Manifest: Record<string, ManifestNormalized>;
+  Timeline: Record<string, TimelineNormalized>;
+  Canvas: Record<string, CanvasNormalized>;
+  Scene: Record<string, SceneNormalized>;
+  AnnotationPage: Record<string, AnnotationPageNormalized>;
+  AnnotationCollection: Record<string, AnnotationCollectionNormalized>;
+  Annotation: Record<string, AnnotationNormalized>;
+  ContentResource: Record<string, ContentResourceNormalized | SpecificResourceNormalized>;
+  Range: Record<string, RangeNormalized>;
+  Service: Record<string, ServiceNormalized>;
+  Selector: Record<string, SelectorNormalized>;
+  Agent: Record<string, AgentNormalized>;
+  Quantity: Record<string, QuantityNormalized>;
+  Transform: Record<string, TransformNormalized>;
 };
 
 export type Presentation4MappingType = keyof Presentation4Entities;

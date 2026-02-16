@@ -1,20 +1,20 @@
 import type {
-  AgentNormalizedV4,
-  AnnotationCollectionNormalizedV4,
-  AnnotationNormalizedV4,
-  AnnotationPageNormalizedV4,
-  CanvasNormalizedV4,
-  CollectionNormalizedV4,
-  ContentResourceNormalizedV4,
-  ManifestNormalizedV4,
-  QuantityNormalizedV4,
-  RangeNormalizedV4,
-  SceneNormalizedV4,
-  SelectorNormalizedV4,
-  ServiceNormalizedV4,
-  SpecificResourceNormalizedV4,
-  TimelineNormalizedV4,
-  TransformNormalizedV4,
+  AgentNormalized,
+  AnnotationCollectionNormalized,
+  AnnotationNormalized,
+  AnnotationPageNormalized,
+  CanvasNormalized,
+  CollectionNormalized,
+  ContentResourceNormalized,
+  ManifestNormalized,
+  QuantityNormalized,
+  RangeNormalized,
+  SceneNormalized,
+  SelectorNormalized,
+  ServiceNormalized,
+  SpecificResourceNormalized,
+  TimelineNormalized,
+  TransformNormalized,
 } from "../presentation-4-normalized/types";
 import { EMPTY_ARRAY } from "./utilities";
 
@@ -32,14 +32,14 @@ const baseLinkedArrays = {
   annotations: EMPTY_ARRAY,
 };
 
-export const emptyCollection: CollectionNormalizedV4 = {
+export const emptyCollection: CollectionNormalized = {
   id: "https://iiif-parser/empty-collection",
   type: "Collection",
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
 
-export const emptyManifest: ManifestNormalizedV4 = {
+export const emptyManifest: ManifestNormalized = {
   id: "https://iiif-parser/empty-manifest",
   type: "Manifest",
   items: EMPTY_ARRAY,
@@ -47,42 +47,42 @@ export const emptyManifest: ManifestNormalizedV4 = {
   ...baseLinkedArrays,
 };
 
-export const emptyTimeline: TimelineNormalizedV4 = {
+export const emptyTimeline: TimelineNormalized = {
   id: "https://iiif-parser/empty-timeline",
   type: "Timeline",
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
 
-export const emptyCanvas: CanvasNormalizedV4 = {
+export const emptyCanvas: CanvasNormalized = {
   id: "https://iiif-parser/empty-canvas",
   type: "Canvas",
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
 
-export const emptyScene: SceneNormalizedV4 = {
+export const emptyScene: SceneNormalized = {
   id: "https://iiif-parser/empty-scene",
   type: "Scene",
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
 
-export const emptyAnnotationPage: AnnotationPageNormalizedV4 = {
+export const emptyAnnotationPage: AnnotationPageNormalized = {
   id: "https://iiif-parser/empty-annotation-page",
   type: "AnnotationPage",
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
 
-export const emptyAnnotationCollection: AnnotationCollectionNormalizedV4 = {
+export const emptyAnnotationCollection: AnnotationCollectionNormalized = {
   id: "https://iiif-parser/empty-annotation-collection",
   type: "AnnotationCollection",
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
 
-export const emptyAnnotation: AnnotationNormalizedV4 = {
+export const emptyAnnotation: AnnotationNormalized = {
   id: "https://iiif-parser/empty-annotation",
   type: "Annotation",
   motivation: EMPTY_ARRAY,
@@ -91,50 +91,50 @@ export const emptyAnnotation: AnnotationNormalizedV4 = {
   ...baseLinkedArrays,
 };
 
-export const emptyRange: RangeNormalizedV4 = {
+export const emptyRange: RangeNormalized = {
   id: "https://iiif-parser/empty-range",
   type: "Range",
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
 
-export const emptyAgent: AgentNormalizedV4 = {
+export const emptyAgent: AgentNormalized = {
   id: "https://iiif-parser/empty-agent",
   type: "Agent",
   logo: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
 
-export const emptyService: ServiceNormalizedV4 = {
+export const emptyService: ServiceNormalized = {
   id: "https://iiif-parser/empty-service",
   type: "Service",
   service: EMPTY_ARRAY,
 };
 
-export const emptySelector: SelectorNormalizedV4 = {
+export const emptySelector: SelectorNormalized = {
   id: "https://iiif-parser/empty-selector",
   type: "Selector",
   selectors: EMPTY_ARRAY,
 };
 
-export const emptyQuantity: QuantityNormalizedV4 = {
+export const emptyQuantity: QuantityNormalized = {
   id: "https://iiif-parser/empty-quantity",
   type: "Quantity",
 };
 
-export const emptyTransform: TransformNormalizedV4 = {
+export const emptyTransform: TransformNormalized = {
   id: "https://iiif-parser/empty-transform",
   type: "Transform",
 };
 
-export const emptySpecificResource: SpecificResourceNormalizedV4 = {
+export const emptySpecificResource: SpecificResourceNormalized = {
   type: "SpecificResource",
   selector: EMPTY_ARRAY,
   transform: EMPTY_ARRAY,
   action: EMPTY_ARRAY,
 };
 
-export const emptyContentResource: ContentResourceNormalizedV4 = {
+export const emptyContentResource: ContentResourceNormalized = {
   id: "https://iiif-parser/empty-content-resource",
   type: "ContentResource",
   language: EMPTY_ARRAY,
