@@ -166,6 +166,7 @@
     "update-cookbook-v4": "node scripts/update-cookbook-v4.mjs",
     "convert-p3-to-p4": "node scripts/convert-p3-manifests-to-p4.mjs",
     "generate-p3-to-p4-type-test": "node scripts/generate-p3-to-p4-type-test.mjs",
+    "generate-p4-normalized-type-test": "node scripts/generate-p4-normalized-store-type-test.mjs",
     "prepack": "tsdown && tsdown --config tsdown.umd.ts",
     "lint": "publint"
   },

@@ -394,6 +394,18 @@ function recordEntity(entities: Presentation4Entities, options: { legacyMode?: b
 
     const inferredType = forcedType || identifyResourceType(resource);
     const storeType = mapTypeToStore(inferredType);
+    if (Object.prototype.hasOwnProperty.call(resource, "language")) {
+      if (typeof resource.language === "string") {
+        resource.language = [resource.language];
+      } else if (Array.isArray(resource.language)) {
+        resource.language = resource.language.filter((item: unknown): item is string => typeof item === "string");
+      } else if (resource.language == null) {
+        resource.language = [];
+      }
+    } else if (storeType === "ContentResource") {
+      resource.language = [];
+    }
+
     const current = entities[storeType][id];
     const mergeContext = {
       parent: context.parent,
@@ -630,7 +642,7 @@ export function normalize(input: unknown): NormalizeResult {
   return {
     entities,
     mapping,
-    resource: { id: resourceId, type: resourceType },
+    resource: { id: resourceId, type: mapTypeToStore(resourceType) },
     diagnostics: report.issues,
     sourceVersion,
   };
