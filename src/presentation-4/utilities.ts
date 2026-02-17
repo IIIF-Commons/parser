@@ -27,9 +27,21 @@ export type ValidationReport = {
     warnings: number;
     info: number;
   };
+  reporting?: {
+    classRequirements?: {
+      nodesChecked: number;
+      mustChecks: number;
+      shouldChecks: number;
+      allowedPropertyChecks: number;
+      mustNotChecks: number;
+    };
+  };
 };
 
-export function createValidationReport(issues: ValidationIssue[]): ValidationReport {
+export function createValidationReport(
+  issues: ValidationIssue[],
+  reporting?: ValidationReport["reporting"]
+): ValidationReport {
   const stats = {
     errors: issues.filter((issue) => issue.severity === "error").length,
     warnings: issues.filter((issue) => issue.severity === "warning").length,
@@ -40,6 +52,7 @@ export function createValidationReport(issues: ValidationIssue[]): ValidationRep
     valid: stats.errors === 0,
     issues,
     stats,
+    reporting,
   };
 }
 

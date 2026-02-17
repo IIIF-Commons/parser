@@ -305,6 +305,11 @@ function coerceV4Shape(
   const type = getType(resource);
   const currentContainerType = type && containerTypes.has(type) ? type : containerTypeHint;
 
+  if (type === "AnnotationPage") {
+    delete resource.width;
+    delete resource.height;
+  }
+
   if (resource.placeholderCanvas && !resource.placeholderContainer) {
     resource.placeholderContainer = resource.placeholderCanvas;
     delete resource.placeholderCanvas;

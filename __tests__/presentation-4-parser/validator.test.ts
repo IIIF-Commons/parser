@@ -345,4 +345,244 @@ describe("presentation-4 validator", () => {
     const report = validatePresentation4(manifest, { mode: "tolerant" });
     expect(report.issues.some((issue) => issue.code === "timeline-duration-required")).toBe(false);
   });
+
+  test("reports class requirement summary stats", () => {
+    const fixture = JSON.parse(readFileSync(join(cwd(), "fixtures/presentation-4/01-model-in-scene.json"), "utf8"));
+    const report = validatePresentation4(fixture, { mode: "tolerant" });
+
+    expect(report.reporting?.classRequirements?.nodesChecked).toBeGreaterThan(0);
+    expect(report.reporting?.classRequirements?.mustChecks).toBeGreaterThan(0);
+    expect(report.reporting?.classRequirements?.allowedPropertyChecks).toBeGreaterThan(0);
+  });
+
+  test("does not apply class requirements to target references", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/target-ref",
+      type: "Manifest",
+      label: { en: ["target refs"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/canvas/1/anno/1",
+                  type: "Annotation",
+                  motivation: ["painting"],
+                  body: {
+                    id: "https://example.org/image.jpg",
+                    type: "Image",
+                    format: "image/jpeg",
+                  },
+                  target: {
+                    id: "https://example.org/canvas/ref",
+                    type: "Canvas",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(manifest, { mode: "tolerant" });
+    const targetClassRequirementIssues = report.issues.filter(
+      (item) => item.code.startsWith("class-requirement-") && item.path.includes(".target")
+    );
+    expect(targetClassRequirementIssues).toEqual([]);
+  });
+
+  test("does not apply class requirements to partOf references", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/partof-ref",
+      type: "Manifest",
+      label: { en: ["partOf refs"] },
+      partOf: [
+        {
+          id: "https://example.org/collection/root",
+          type: "Collection",
+        },
+      ],
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(manifest, { mode: "tolerant" });
+    const partOfClassRequirementIssues = report.issues.filter(
+      (item) => item.code.startsWith("class-requirement-") && item.path.includes(".partOf")
+    );
+    expect(partOfClassRequirementIssues).toEqual([]);
+  });
+
+  test("does not apply class requirements to annotation paging/reference links", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/paging-ref",
+      type: "Manifest",
+      label: { en: ["paging refs"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          annotations: [
+            {
+              id: "https://example.org/ap/ref-1",
+              type: "AnnotationPage",
+              partOf: {
+                id: "https://example.org/ac/1",
+                type: "AnnotationCollection",
+              },
+            },
+          ],
+          items: [
+            {
+              id: "https://example.org/ap/embedded-1",
+              type: "AnnotationPage",
+              items: [],
+              next: {
+                id: "https://example.org/ap/ref-2",
+                type: "AnnotationPage",
+              },
+              prev: {
+                id: "https://example.org/ap/ref-0",
+                type: "AnnotationPage",
+              },
+              partOf: {
+                id: "https://example.org/ac/1",
+                type: "AnnotationCollection",
+              },
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(manifest, { mode: "tolerant" });
+    const referenceLinkIssues = report.issues.filter((item) => {
+      if (!item.code.startsWith("class-requirement-")) {
+        return false;
+      }
+      return (
+        item.path.includes(".annotations[0]") ||
+        item.path.includes(".next") ||
+        item.path.includes(".prev") ||
+        item.path.includes(".partOf")
+      );
+    });
+    expect(referenceLinkIssues).toEqual([]);
+  });
+
+  test("does not emit annotation page paging should-warnings for embedded canvas pages", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/embedded-annotation-page",
+      type: "Manifest",
+      label: { en: ["embedded annotation page"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [],
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(manifest, { mode: "tolerant" });
+    expect(
+      report.issues.some(
+        (item) =>
+          item.code === "class-requirement-should" &&
+          item.path.startsWith("$.items[0].items[0].") &&
+          (item.path.endsWith(".next") || item.path.endsWith(".prev") || item.path.endsWith(".partOf"))
+      )
+    ).toBe(false);
+  });
+
+  test("reports must/may/must-not class requirement violations", () => {
+    const invalid = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/collection/invalid-rules",
+      type: "Collection",
+      items: [
+        {
+          id: "https://example.org/manifest/1",
+          type: "Manifest",
+          items: [],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(invalid, { mode: "tolerant" });
+
+    expect(report.valid).toBe(false);
+    expect(report.issues.some((item) => item.code === "class-requirement-must")).toBe(true);
+    expect(report.issues.some((item) => item.code === "collection-item-manifest-forbidden")).toBe(true);
+  });
+
+  test("reports container fragment ids, unknown properties, and annotation bodyValue usage", () => {
+    const invalid = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/rule-detail",
+      type: "Manifest",
+      label: { en: ["rule detail"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1#xywh=0,0,100,100",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          foo: "bar",
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/canvas/1/page/1/anno/1",
+                  type: "Annotation",
+                  motivation: ["commenting"],
+                  target: {
+                    id: "https://example.org/canvas/1",
+                    type: "Canvas",
+                  },
+                  bodyValue: "invalid body value",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(invalid, { mode: "tolerant" });
+    expect(report.issues.some((item) => item.code === "container-id-fragment-forbidden")).toBe(true);
+    expect(report.issues.some((item) => item.code === "class-requirement-property-not-listed")).toBe(true);
+    expect(report.issues.some((item) => item.code === "annotation-body-value-forbidden")).toBe(true);
+  });
 });
