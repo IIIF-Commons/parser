@@ -412,3 +412,6 @@ export const presentation4ClassRequirements = {
     },
   },
 };
+
+// Backward-compatible alias while callsites migrate.
+export const presentation3ClassRequirements = presentation4ClassRequirements;
