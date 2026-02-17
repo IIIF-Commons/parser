@@ -22,14 +22,46 @@ describe("presentation-4 traverse", () => {
     };
 
     const traverse = new Traverse({
-      manifest: [() => void (seen.manifest += 1)],
-      scene: [() => void (seen.scene += 1)],
-      canvas: [() => void (seen.canvas += 1)],
-      range: [() => void (seen.range += 1)],
-      annotationPage: [() => void (seen.annotationPage += 1)],
-      annotation: [() => void (seen.annotation += 1)],
-      selector: [() => void (seen.selector += 1)],
-      contentResource: [() => void (seen.contentResource += 1)],
+      manifest: [
+        () => {
+          seen.manifest += 1;
+        },
+      ],
+      scene: [
+        () => {
+          seen.scene += 1;
+        },
+      ],
+      canvas: [
+        () => {
+          seen.canvas += 1;
+        },
+      ],
+      range: [
+        () => {
+          seen.range += 1;
+        },
+      ],
+      annotationPage: [
+        () => {
+          seen.annotationPage += 1;
+        },
+      ],
+      annotation: [
+        () => {
+          seen.annotation += 1;
+        },
+      ],
+      selector: [
+        () => {
+          seen.selector += 1;
+        },
+      ],
+      contentResource: [
+        () => {
+          seen.contentResource += 1;
+        },
+      ],
     });
 
     traverse.traverseUnknown(fixture, { path: "$" });
@@ -47,7 +79,11 @@ describe("presentation-4 traverse", () => {
   test("traverses selector on implicit specific resource annotation target", () => {
     let selectorCount = 0;
     const traverse = new Traverse({
-      selector: [() => void (selectorCount += 1)],
+      selector: [
+        () => {
+          selectorCount += 1;
+        },
+      ],
     });
 
     const annotation = {
@@ -74,5 +110,36 @@ describe("presentation-4 traverse", () => {
     expect(target.type).toBe("SpecificResource");
     expect(target.selector[0].type).toBe("FragmentSelector");
     expect(selectorCount).toBe(1);
+  });
+
+  test("accepts List-wrapped annotation body and target values", () => {
+    const traverse = new Traverse();
+    const annotation = {
+      id: "https://example.org/anno/list-wrapper",
+      type: "Annotation",
+      motivation: ["painting"],
+      body: {
+        type: "List",
+        items: [
+          {
+            id: "https://example.org/body/1",
+            type: "Image",
+            format: "image/jpeg",
+          },
+        ],
+      },
+      target: {
+        type: "List",
+        items: ["https://example.org/canvas/1#xywh=1,2,3,4"],
+      },
+    };
+
+    const traversed = traverse.traverseAnnotation(annotation, undefined, "$.annotation");
+    expect(Array.isArray(traversed.body)).toBe(true);
+    expect(Array.isArray(traversed.target)).toBe(true);
+    expect(traversed.body).toHaveLength(1);
+    expect(traversed.target).toHaveLength(1);
+    expect(traversed.target[0].type).toBe("SpecificResource");
+    expect(traversed.target[0].selector[0].type).toBe("FragmentSelector");
   });
 });

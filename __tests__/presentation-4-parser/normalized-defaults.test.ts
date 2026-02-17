@@ -1,9 +1,9 @@
 import { describe, expect, test } from "vitest";
 import { normalize } from "../../src/presentation-4";
 
-function expectArrayFields(resource: Record<string, unknown>, keys: string[]) {
+function expectArrayFields(resource: object, keys: string[]) {
   for (const key of keys) {
-    expect(Array.isArray(resource[key]), `${key} should default to array`).toBe(true);
+    expect(Array.isArray((resource as any)[key]), `${key} should default to array`).toBe(true);
   }
 }
 
@@ -81,7 +81,7 @@ describe("presentation-4 normalized defaults", () => {
       "annotations",
     ]);
 
-    const normalizedCanvas = result.entities.Canvas["https://example.org/canvas/1"] as Record<string, unknown>;
+    const normalizedCanvas = result.entities.Canvas["https://example.org/canvas/1"]!;
     expectArrayFields(normalizedCanvas, [
       "items",
       "annotations",
@@ -97,10 +97,7 @@ describe("presentation-4 normalized defaults", () => {
       "partOf",
     ]);
 
-    const normalizedAnnotation = result.entities.Annotation["https://example.org/canvas/1/annotation/1"] as Record<
-      string,
-      unknown
-    >;
+    const normalizedAnnotation = result.entities.Annotation["https://example.org/canvas/1/annotation/1"]!;
     expectArrayFields(normalizedAnnotation, [
       "motivation",
       "body",
@@ -118,9 +115,8 @@ describe("presentation-4 normalized defaults", () => {
       "annotations",
     ]);
 
-    const normalizedContentResource = result.entities.ContentResource[
-      "https://example.org/image/1/full/max/0/default.jpg"
-    ] as Record<string, unknown>;
+    const normalizedContentResource =
+      result.entities.ContentResource["https://example.org/image/1/full/max/0/default.jpg"]!;
     expectArrayFields(normalizedContentResource, [
       "metadata",
       "provider",
@@ -141,7 +137,7 @@ describe("presentation-4 normalized defaults", () => {
       "provides",
     ]);
 
-    const normalizedRange = result.entities.Range["https://example.org/range/1"] as Record<string, unknown>;
+    const normalizedRange = result.entities.Range["https://example.org/range/1"]!;
     expectArrayFields(normalizedRange, [
       "items",
       "metadata",
@@ -157,17 +153,5 @@ describe("presentation-4 normalized defaults", () => {
       "annotations",
     ]);
     expect((normalizedRange.items as unknown[]).length).toBe(0);
-
-    const normalizedService = result.entities.Service["https://example.org/image/1"] as Record<string, unknown>;
-    expectArrayFields(normalizedService, ["service"]);
-    expect(normalizedService.profile).toBe("level1");
-
-    const target = (normalizedAnnotation.target as Array<Record<string, unknown>>)[0]!;
-    const selector = Array.isArray(target.selector) ? target.selector[0] : target.selector;
-    const selectorEntity = result.entities.Selector[(selector as Record<string, unknown>).id as string] as Record<
-      string,
-      unknown
-    >;
-    expectArrayFields(selectorEntity, ["selectors"]);
   });
 });

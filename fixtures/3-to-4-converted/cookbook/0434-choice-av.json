@@ -13,10 +13,13 @@
     ]
   },
   "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
       "type": "Canvas",
+      "height": 0,
+      "width": 0,
       "duration": 16,
       "items": [
         {
@@ -29,12 +32,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "type": "Choice",
@@ -42,70 +39,79 @@
                     {
                       "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.m4a",
                       "type": "Sound",
-                      "format": "audio/alac",
-                      "duration": 16,
                       "label": {
                         "en": [
                           "ALAC"
                         ]
-                      }
+                      },
+                      "format": "audio/alac",
+                      "duration": 16
                     },
                     {
                       "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mp3",
                       "type": "Sound",
-                      "format": "audio/mpeg",
-                      "duration": 16,
                       "label": {
                         "en": [
                           "MP3"
                         ]
-                      }
+                      },
+                      "format": "audio/mpeg",
+                      "duration": 16
                     },
                     {
                       "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.flac",
                       "type": "Sound",
-                      "format": "audio/flac",
-                      "duration": 16,
                       "label": {
                         "en": [
                           "FLAC"
                         ]
-                      }
+                      },
+                      "format": "audio/flac",
+                      "duration": 16
                     },
                     {
                       "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.ogg",
                       "type": "Sound",
-                      "format": "audio/ogg",
-                      "duration": 16,
                       "label": {
                         "en": [
                           "OGG Vorbis OGG"
                         ]
-                      }
+                      },
+                      "format": "audio/ogg",
+                      "duration": 16
                     },
                     {
                       "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mpeg",
                       "type": "Sound",
-                      "format": "audio/mpeg",
-                      "duration": 16,
                       "label": {
                         "en": [
                           "MPEG2"
                         ]
-                      }
+                      },
+                      "format": "audio/mpeg",
+                      "duration": 16
                     },
                     {
                       "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.wav",
                       "type": "Sound",
-                      "format": "audio/wav",
-                      "duration": 16,
                       "label": {
                         "en": [
                           "WAV"
                         ]
-                      }
+                      },
+                      "format": "audio/wav",
+                      "duration": 16
                     }
                   ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

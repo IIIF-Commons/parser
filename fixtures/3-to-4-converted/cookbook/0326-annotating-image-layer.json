@@ -7,12 +7,14 @@
       "Choice Example with layer specific annotation"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0326-annotating-image-layer/canvas/p1",
       "type": "Canvas",
       "height": 1271,
       "width": 2000,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0326-annotating-image-layer/page/p1/1",
@@ -79,8 +81,6 @@
                               "body": [
                                 {
                                   "type": "TextualBody",
-                                  "value": "A group of skulls.",
-                                  "language": "en",
                                   "format": "text/plain"
                                 }
                               ],
@@ -108,8 +108,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0326-annotating-image-layer/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0326-annotating-image-layer/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

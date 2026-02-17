@@ -7,11 +7,6 @@
       "Picture of Göttingen taken during the 2019 IIIF Conference"
     ]
   },
-  "summary": {
-    "en": [
-      "<p>Picture taken by the <a href=\"https://github.com/glenrobson\">IIIF Technical Coordinator</a></p>"
-    ]
-  },
   "metadata": [
     {
       "label": {
@@ -26,7 +21,11 @@
       }
     }
   ],
-  "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "summary": {
+    "en": [
+      "<p>Picture taken by the <a href=\"https://github.com/glenrobson\">IIIF Technical Coordinator</a></p>"
+    ]
+  },
   "requiredStatement": {
     "label": {
       "en": [
@@ -39,12 +38,15 @@
       ]
     }
   },
+  "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/canvas/p1",
       "type": "Canvas",
       "height": 3024,
       "width": 4032,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/page/p1/1",
@@ -74,8 +76,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

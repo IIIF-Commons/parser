@@ -1,42 +1,48 @@
-import { describe, expect, test } from 'vitest';
-import { normalize, serialize, serializeConfigPresentation3, serializeConfigPresentation4 } from '../../src/presentation-4';
+import { describe, expect, test } from "vitest";
+import {
+  normalize,
+  serialize,
+  serializeConfigPresentation3,
+  serializeConfigPresentation4,
+} from "../../src/presentation-4";
+import { ContentResourceNormalized } from "../../src/presentation-4-normalized";
 
 function createManifestWithImageService() {
   return {
-    '@context': 'http://iiif.io/api/presentation/4/context.json',
-    id: 'https://example.org/manifest/service-profile',
-    type: 'Manifest',
-    label: { en: ['service profile retention'] },
+    "@context": "http://iiif.io/api/presentation/4/context.json",
+    id: "https://example.org/manifest/service-profile",
+    type: "Manifest",
+    label: { en: ["service profile retention"] },
     items: [
       {
-        id: 'https://example.org/canvas/1',
-        type: 'Canvas',
+        id: "https://example.org/canvas/1",
+        type: "Canvas",
         width: 1000,
         height: 1000,
         items: [
           {
-            id: 'https://example.org/canvas/1/page/1',
-            type: 'AnnotationPage',
+            id: "https://example.org/canvas/1/page/1",
+            type: "AnnotationPage",
             items: [
               {
-                id: 'https://example.org/canvas/1/annotation/1',
-                type: 'Annotation',
-                motivation: ['painting'],
+                id: "https://example.org/canvas/1/annotation/1",
+                type: "Annotation",
+                motivation: ["painting"],
                 body: [
                   {
-                    id: 'https://example.org/image/1/full/max/0/default.jpg',
-                    type: 'Image',
-                    format: 'image/jpeg',
+                    id: "https://example.org/image/1/full/max/0/default.jpg",
+                    type: "Image",
+                    format: "image/jpeg",
                     service: [
                       {
-                        id: 'https://example.org/image/1',
-                        type: 'ImageService3',
-                        profile: 'level1',
+                        id: "https://example.org/image/1",
+                        type: "ImageService3",
+                        profile: "level1",
                       },
                     ],
                   },
                 ],
-                target: ['https://example.org/canvas/1'],
+                target: ["https://example.org/canvas/1"],
               },
             ],
           },
@@ -46,11 +52,13 @@ function createManifestWithImageService() {
   };
 }
 
-describe('presentation-4 service profile retention', () => {
-  test('keeps service profile when serializing to presentation-4', () => {
-    const normalized = normalize(createManifestWithImageService() as any);
-    const storedService = normalized.entities.Service['https://example.org/image/1'] as any;
-    expect(storedService.profile).toBe('level1');
+describe("presentation-4 service profile retention", () => {
+  test("keeps service profile when serializing to presentation-4", () => {
+    const normalized = normalize(createManifestWithImageService());
+    const storedService = normalized.entities.ContentResource[
+      "https://example.org/image/1/full/max/0/default.jpg"
+    ] as ContentResourceNormalized;
+    expect(storedService.service[0]?.profile).toBe("level1");
 
     const serialized = serialize<any>(
       {
@@ -63,12 +71,12 @@ describe('presentation-4 service profile retention', () => {
     );
 
     const serializedService = serialized.items[0].items[0].items[0].body[0].service[0];
-    expect(serializedService.id).toBe('https://example.org/image/1');
-    expect(serializedService.type).toBe('ImageService3');
-    expect(serializedService.profile).toBe('level1');
+    expect(serializedService.id).toBe("https://example.org/image/1");
+    expect(serializedService.type).toBe("ImageService3");
+    expect(serializedService.profile).toBe("level1");
   });
 
-  test('keeps service profile when downgrading to presentation-3', () => {
+  test("keeps service profile when downgrading to presentation-3", () => {
     const normalized = normalize(createManifestWithImageService() as any);
 
     const serialized = serialize<any>(
@@ -84,8 +92,8 @@ describe('presentation-4 service profile retention', () => {
     const body = serialized.items[0].items[0].items[0].body;
     const serializedBody = Array.isArray(body) ? body[0] : body;
     const serializedService = serializedBody.service[0];
-    expect(serializedService.id).toBe('https://example.org/image/1');
-    expect(serializedService.type).toBe('ImageService3');
-    expect(serializedService.profile).toBe('level1');
+    expect(serializedService.id).toBe("https://example.org/image/1");
+    expect(serializedService.type).toBe("ImageService3");
+    expect(serializedService.profile).toBe("level1");
   });
 });

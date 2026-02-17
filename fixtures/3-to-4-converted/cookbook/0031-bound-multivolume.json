@@ -7,6 +7,7 @@
       "Gottesdienstliche Ceremonien, Oder H. Kirchen-Gebräuche Und Religions-Pflichten Der Christen"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
@@ -18,6 +19,7 @@
       },
       "height": 7230,
       "width": 5428,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p1/1",
@@ -47,8 +49,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -66,6 +71,7 @@
       },
       "height": 7230,
       "width": 5428,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p2/1",
@@ -95,8 +101,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -114,6 +123,7 @@
       },
       "height": 7230,
       "width": 5428,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p3/1",
@@ -143,8 +153,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p3",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -162,6 +175,7 @@
       },
       "height": 7230,
       "width": 5428,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p4/1",
@@ -191,8 +205,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p4",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -210,6 +227,7 @@
       },
       "height": 7230,
       "width": 5428,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p5/1",
@@ -239,8 +257,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p5",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p5",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -258,6 +279,7 @@
       },
       "height": 7230,
       "width": 5428,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/page/p6/1",
@@ -287,8 +309,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p6",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p6",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -306,6 +331,7 @@
           "Gottesdienstliche Ceremonien, Oder H. Kirchen-Gebräuche Und Religions-Pflichten Der Christen"
         ]
       },
+      "viewingDirection": "left-to-right",
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r1",
@@ -315,16 +341,7 @@
               "Front Matter"
             ]
           },
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
-              "type": "Canvas"
-            },
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p2",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         },
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r2",
@@ -334,16 +351,7 @@
               "Erste Ausgabe. Begreift die Ceremonien der Lutheraner von der Augspurgischen Confession, der Reformirten, der Holländischen u. a. Kirchen"
             ]
           },
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p3",
-              "type": "Canvas"
-            },
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p4",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         },
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r3",
@@ -353,16 +361,7 @@
               "Zweyte Ausgabe. Begreift die Ceremonien der Engl. hohen Kirche : Der Quacker, der Anabaptisten, der Adamiten, der Flagellanten, der Frey-Maurer, der Rhinsbürger..."
             ]
           },
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p5",
-              "type": "Canvas"
-            },
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p6",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         }
       ]
     }

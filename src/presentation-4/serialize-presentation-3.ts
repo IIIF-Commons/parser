@@ -115,8 +115,8 @@ function* linkedProperties(entity: any): Generator<any, any, any> {
     ["thumbnail", filterList(yield entity.thumbnail)],
     ["provider", filterList(yield entity.provider)],
     ["seeAlso", filterList(yield entity.seeAlso)],
-    ["service", filterList(yield entity.service)],
-    ["services", filterList(yield entity.services)],
+    ["service", filterList(entity.service)],
+    ["services", filterList(entity.services)],
     ["homepage", filterList(yield entity.homepage)],
     ["rendering", filterList(yield entity.rendering)],
     ["partOf", filterList(yield entity.partOf)],
@@ -243,15 +243,6 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ["type", entity.type || "Agent"],
       ["label", entity.label],
       ...(yield* linkedProperties(entity)),
-    ];
-  },
-
-  Service: function* (entity) {
-    return [
-      ["id", stripVaultId(entity.id)],
-      ["type", entity.type],
-      ["profile", entity.profile],
-      ["service", filterList(yield entity.service)],
     ];
   },
 

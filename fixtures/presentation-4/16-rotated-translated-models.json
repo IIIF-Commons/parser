@@ -32,26 +32,32 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                "type": "Model",
-                "format": "model/gltf-binary"
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": -1,
-                    "y": 0,
-                    "z": 0
+              "body": [
+                {
+                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                  "type": "Model",
+                  "format": "model/gltf-binary"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": -1,
+                      "y": 0,
+                      "z": 0
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
-                ]
-              }
+                }
+              ]
             },
             {
               "id": "https://example.org/iiif/3d/anno2",
@@ -59,43 +65,25 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                  "type": "Model",
-                  "format": "model/gltf-binary"
-                },
-                "transform": [
-                  {
-                    "type": "TranslateTransform",
-                    "x": 2,
-                    "y": 2,
-                    "z": 2
-                  },
-                  {
-                    "type": "ScaleTransform",
-                    "x": 2,
-                    "y": 2,
-                    "z": 2
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 1,
+                      "y": 0,
+                      "z": 0
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
-                ]
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": 1,
-                    "y": 0,
-                    "z": 0
-                  }
-                ]
-              }
+                }
+              ]
             }
           ]
         }

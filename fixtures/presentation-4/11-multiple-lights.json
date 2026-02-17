@@ -33,46 +33,18 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/3d/lights/1",
-                  "type": "SpotLight",
-                  "label": {
-                    "en": [
-                      "Red Spot Light"
-                    ]
-                  },
-                  "color": "#ff0000",
-                  "intensity": {
-                    "type": "Value",
-                    "value": 100,
-                    "unit": "relative"
-                  },
-                  "angle": 5
-                },
-                "transform": [
-                  {
-                    "type": "RotateTransform",
-                    "x": 90,
-                    "y": 0,
-                    "z": 0
-                  },
-                  {
-                    "type": "TranslateTransform",
-                    "x": 0,
-                    "y": 3.5,
-                    "z": 3.5
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
-                ]
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
                 }
-              }
+              ]
             },
             {
               "id": "https://example.org/iiif/3d/anno2",
@@ -80,31 +52,18 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/3d/lights/1",
-                  "type": "AmbientLight",
-                  "label": {
-                    "en": [
-                      "Green Ambient Light"
-                    ]
-                  },
-                  "color": "#7aff40",
-                  "intensity": {
-                    "type": "Value",
-                    "value": 0.5,
-                    "unit": "relative"
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
                 }
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                }
-              }
+              ]
             },
             {
               "id": "https://example.org/iiif/3d/anno3",
@@ -112,46 +71,18 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/3d/lights/1",
-                  "type": "SpotLight",
-                  "label": {
-                    "en": [
-                      "Blue Spot Light"
-                    ]
-                  },
-                  "color": "#0f00ff",
-                  "intensity": {
-                    "type": "Value",
-                    "value": 10,
-                    "unit": "relative"
-                  },
-                  "angle": 5
-                },
-                "transform": [
-                  {
-                    "type": "RotateTransform",
-                    "x": 90,
-                    "y": 0,
-                    "z": 0
-                  },
-                  {
-                    "type": "TranslateTransform",
-                    "x": 0,
-                    "y": 2.5,
-                    "z": 3.5
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
-                ]
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
                 }
-              }
+              ]
             },
             {
               "id": "https://example.org/iiif/3d/anno4",
@@ -159,26 +90,18 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                  "type": "Model",
-                  "label": {
-                    "en": [
-                      "Astronaut"
-                    ]
-                  },
-                  "format": "model/gltf-binary"
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
+                  }
                 }
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                }
-              }
+              ]
             }
           ]
         }

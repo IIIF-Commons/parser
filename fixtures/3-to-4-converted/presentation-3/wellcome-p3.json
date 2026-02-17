@@ -7,56 +7,6 @@
       "[Report 1960] / Medical Officer of Health, Llanwrtyd Wells U.D.C."
     ]
   },
-  "thumbnail": [
-    {
-      "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2/full/61,100/0/default.jpg",
-      "type": "Image",
-      "width": 61,
-      "height": 100,
-      "service": [
-        {
-          "profile": "http://iiif.io/api/image/2/level0.json",
-          "width": 620,
-          "height": 1024,
-          "sizes": [
-            {
-              "width": 61,
-              "height": 100
-            },
-            {
-              "width": 121,
-              "height": 200
-            },
-            {
-              "width": 242,
-              "height": 400
-            },
-            {
-              "width": 620,
-              "height": 1024
-            }
-          ],
-          "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2",
-          "type": "ImageService2"
-        }
-      ]
-    }
-  ],
-  "homepage": [
-    {
-      "id": "https://wellcomecollection.org/works/rfm2hr8w",
-      "type": "Text",
-      "label": {
-        "en": [
-          "[Report 1960] / Medical Officer of Health, Llanwrtyd Wells U.D.C."
-        ]
-      },
-      "format": "text/html",
-      "language": [
-        "en"
-      ]
-    }
-  ],
   "metadata": [
     {
       "label": {
@@ -114,7 +64,6 @@
       }
     }
   ],
-  "rights": "https://creativecommons.org/licenses/by/4.0/",
   "requiredStatement": {
     "label": {
       "en": [
@@ -128,6 +77,98 @@
       ]
     }
   },
+  "rights": "https://creativecommons.org/licenses/by/4.0/",
+  "behavior": [
+    "paged"
+  ],
+  "viewingDirection": "left-to-right",
+  "services": [
+    {
+      "type": "Text",
+      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "label": {
+        "en": [
+          "Format: Monograph, Institution: n/a, Identifier: b28857021, Digicode: digmoh, Collection code: n/a"
+        ]
+      }
+    },
+    {
+      "type": "Text",
+      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "label": {
+        "en": [
+          "open"
+        ]
+      }
+    }
+  ],
+  "service": [
+    {
+      "profile": "http://iiif.io/api/search/1/search",
+      "label": "Search within this manifest",
+      "service": [
+        {
+          "profile": "http://iiif.io/api/search/1/autocomplete",
+          "label": "Autocomplete words in this manifest",
+          "id": "https://iiif-test.wellcomecollection.org/search/autocomplete/v1/b28857021",
+          "type": "AutoCompleteService1"
+        }
+      ],
+      "id": "https://iiif-test.wellcomecollection.org/search/v1/b28857021",
+      "type": "SearchService1"
+    }
+  ],
+  "thumbnail": [
+    {
+      "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2/full/61,100/0/default.jpg",
+      "type": "Image",
+      "height": 100,
+      "width": 61,
+      "service": [
+        {
+          "profile": "http://iiif.io/api/image/2/level0.json",
+          "width": 620,
+          "height": 1024,
+          "sizes": [
+            {
+              "width": 61,
+              "height": 100
+            },
+            {
+              "width": 121,
+              "height": 200
+            },
+            {
+              "width": 242,
+              "height": 400
+            },
+            {
+              "width": 620,
+              "height": 1024
+            },
+            {
+              "width": 61,
+              "height": 100
+            },
+            {
+              "width": 121,
+              "height": 200
+            },
+            {
+              "width": 242,
+              "height": 400
+            },
+            {
+              "width": 620,
+              "height": 1024
+            }
+          ],
+          "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2",
+          "type": "ImageService2"
+        }
+      ]
+    }
+  ],
   "provider": [
     {
       "id": "https://wellcomecollection.org",
@@ -153,14 +194,32 @@
           },
           "format": "text/html"
         }
-      ],
-      "logo": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/logos/wellcome-collection-black.png",
-          "type": "Image",
-          "format": "image/png"
-        }
       ]
+    }
+  ],
+  "seeAlso": [
+    {
+      "id": "https://api.wellcomecollection.org/catalogue/v2/works/rfm2hr8w",
+      "type": "Dataset",
+      "label": {
+        "en": [
+          "Wellcome Collection Catalogue API"
+        ]
+      },
+      "profile": "https://api.wellcomecollection.org/catalogue/v2/context.json",
+      "format": "application/json"
+    }
+  ],
+  "homepage": [
+    {
+      "id": "https://wellcomecollection.org/works/rfm2hr8w",
+      "type": "Text",
+      "label": {
+        "en": [
+          "[Report 1960] / Medical Officer of Health, Llanwrtyd Wells U.D.C."
+        ]
+      },
+      "format": "text/html"
     }
   ],
   "rendering": [
@@ -185,54 +244,124 @@
       "format": "text/plain"
     }
   ],
-  "seeAlso": [
+  "partOf": [
     {
-      "id": "https://api.wellcomecollection.org/catalogue/v2/works/rfm2hr8w",
-      "type": "Dataset",
-      "profile": "https://api.wellcomecollection.org/catalogue/v2/context.json",
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/contributors/Llanwrtyd_Wells_(Wales)._Urban_District_Council.",
+      "type": "Collection",
       "label": {
         "en": [
-          "Wellcome Collection Catalogue API"
+          "Contributor: Llanwrtyd Wells (Wales). Urban District Council."
         ]
       },
-      "format": "application/json"
-    }
-  ],
-  "service": [
+      "viewingDirection": "left-to-right"
+    },
     {
-      "profile": "http://iiif.io/api/search/1/search",
-      "label": "Search within this manifest",
-      "service": [
-        {
-          "profile": "http://iiif.io/api/search/1/autocomplete",
-          "label": "Autocomplete words in this manifest",
-          "id": "https://iiif-test.wellcomecollection.org/search/autocomplete/v1/b28857021",
-          "type": "AutoCompleteService1"
-        }
-      ],
-      "id": "https://iiif-test.wellcomecollection.org/search/v1/b28857021",
-      "type": "SearchService1"
-    }
-  ],
-  "behavior": [
-    "paged"
-  ],
-  "services": [
-    {
-      "type": "Text",
-      "profile": "http://universalviewer.io/tracking-extensions-profile",
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/xaqnqsbj",
+      "type": "Collection",
       "label": {
         "en": [
-          "Format: Monograph, Institution: n/a, Identifier: b28857021, Digicode: digmoh, Collection code: n/a"
+          "Subject: Disease Outbreaks."
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    },
+    {
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/tva37rme",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Subject: Public Health."
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    },
+    {
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/p2mzt7rw",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Subject: Sanitation."
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    },
+    {
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/pxxu6hsg",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Subject: Water Supply."
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    },
+    {
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/dyss49dy",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Subject: Llanwrtyd Wells (Wales)"
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    },
+    {
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Electronic_books.",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Genre: Electronic books."
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    },
+    {
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Annual_reports.",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Genre: Annual reports."
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    },
+    {
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/MOH_reports.",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Genre: MOH reports."
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    },
+    {
+      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Statistics.",
+      "type": "Collection",
+      "label": {
+        "en": [
+          "Genre: Statistics."
+        ]
+      },
+      "viewingDirection": "left-to-right"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/images",
+      "type": "AnnotationPage",
+      "label": {
+        "en": [
+          "OCR-identified images and figures for b28857021"
         ]
       }
     },
     {
-      "type": "Text",
-      "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
+      "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/all/line",
+      "type": "AnnotationPage",
       "label": {
         "en": [
-          "open"
+          "All OCR-derived annotations for b28857021"
         ]
       }
     }
@@ -246,20 +375,37 @@
           "-"
         ]
       },
-      "width": 2670,
       "height": 4412,
+      "width": 2670,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0001.jp2/full/61,100/0/default.jpg",
           "type": "Image",
-          "width": 61,
           "height": 100,
+          "width": 61,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
               "width": 620,
               "height": 1024,
               "sizes": [
+                {
+                  "width": 61,
+                  "height": 100
+                },
+                {
+                  "width": 121,
+                  "height": 200
+                },
+                {
+                  "width": 242,
+                  "height": 400
+                },
+                {
+                  "width": 620,
+                  "height": 1024
+                },
                 {
                   "width": 61,
                   "height": 100
@@ -287,13 +433,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0001.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0001.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ],
       "items": [
@@ -311,9 +468,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0001.jp2/full/620,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 620,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 620,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -327,23 +484,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0001.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0001.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0001.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page  -"
-            ]
-          }
         }
       ]
     },
@@ -355,14 +504,15 @@
           "-"
         ]
       },
-      "width": 2547,
       "height": 4312,
+      "width": 2547,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0002.jp2/full/59,100/0/default.jpg",
           "type": "Image",
-          "width": 59,
           "height": 100,
+          "width": 59,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -396,13 +546,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0002.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0002.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ],
       "items": [
@@ -420,9 +581,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0002.jp2/full/605,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 605,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 605,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -436,23 +597,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0002.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0002.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0002.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page  -"
-            ]
-          }
         }
       ]
     },
@@ -464,14 +617,15 @@
           "-"
         ]
       },
-      "width": 2637,
       "height": 4357,
+      "width": 2637,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0003.jp2/full/61,100/0/default.jpg",
           "type": "Image",
-          "width": 61,
           "height": 100,
+          "width": 61,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -505,13 +659,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0003.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0003.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ],
       "items": [
@@ -529,9 +694,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0003.jp2/full/620,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 620,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 620,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -545,23 +710,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0003.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0003.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0003.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page  -"
-            ]
-          }
         }
       ]
     },
@@ -573,14 +730,15 @@
           "2"
         ]
       },
-      "width": 2626,
       "height": 4346,
+      "width": 2626,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0004.jp2/full/60,100/0/default.jpg",
           "type": "Image",
-          "width": 60,
           "height": 100,
+          "width": 60,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -614,13 +772,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0004.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0004.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page 2"
+            ]
+          }
         }
       ],
       "items": [
@@ -638,9 +807,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0004.jp2/full/619,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 619,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 619,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -654,23 +823,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0004.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0004.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0004.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page 2"
-            ]
-          }
         }
       ]
     },
@@ -682,14 +843,15 @@
           "3"
         ]
       },
-      "width": 2637,
       "height": 4357,
+      "width": 2637,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0005.jp2/full/61,100/0/default.jpg",
           "type": "Image",
-          "width": 61,
           "height": 100,
+          "width": 61,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -723,13 +885,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0005.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0005.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page 3"
+            ]
+          }
         }
       ],
       "items": [
@@ -747,9 +920,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0005.jp2/full/620,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 620,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 620,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -763,23 +936,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0005.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0005.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0005.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page 3"
-            ]
-          }
         }
       ]
     },
@@ -791,14 +956,15 @@
           "4"
         ]
       },
-      "width": 2626,
       "height": 4346,
+      "width": 2626,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0006.jp2/full/60,100/0/default.jpg",
           "type": "Image",
-          "width": 60,
           "height": 100,
+          "width": 60,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -832,13 +998,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0006.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0006.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page 4"
+            ]
+          }
         }
       ],
       "items": [
@@ -856,9 +1033,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0006.jp2/full/619,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 619,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 619,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -872,23 +1049,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0006.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0006.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0006.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page 4"
-            ]
-          }
         }
       ]
     },
@@ -900,14 +1069,15 @@
           "5"
         ]
       },
-      "width": 2637,
       "height": 4357,
+      "width": 2637,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0007.jp2/full/61,100/0/default.jpg",
           "type": "Image",
-          "width": 61,
           "height": 100,
+          "width": 61,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -941,13 +1111,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0007.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0007.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page 5"
+            ]
+          }
         }
       ],
       "items": [
@@ -965,9 +1146,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0007.jp2/full/620,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 620,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 620,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -981,23 +1162,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0007.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0007.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0007.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page 5"
-            ]
-          }
         }
       ]
     },
@@ -1009,14 +1182,15 @@
           "6"
         ]
       },
-      "width": 2626,
       "height": 4346,
+      "width": 2626,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0008.jp2/full/60,100/0/default.jpg",
           "type": "Image",
-          "width": 60,
           "height": 100,
+          "width": 60,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -1050,13 +1224,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0008.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0008.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page 6"
+            ]
+          }
         }
       ],
       "items": [
@@ -1074,9 +1259,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0008.jp2/full/619,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 619,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 619,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -1090,23 +1275,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0008.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0008.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0008.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page 6"
-            ]
-          }
         }
       ]
     },
@@ -1118,14 +1295,15 @@
           "7"
         ]
       },
-      "width": 2637,
       "height": 4357,
+      "width": 2637,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0009.jp2/full/61,100/0/default.jpg",
           "type": "Image",
-          "width": 61,
           "height": 100,
+          "width": 61,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -1159,13 +1337,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0009.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0009.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page 7"
+            ]
+          }
         }
       ],
       "items": [
@@ -1183,9 +1372,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0009.jp2/full/620,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 620,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 620,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -1199,23 +1388,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0009.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0009.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0009.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page 7"
-            ]
-          }
         }
       ]
     },
@@ -1227,14 +1408,15 @@
           "-"
         ]
       },
-      "width": 2670,
       "height": 4424,
+      "width": 2670,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://dlcs.io/thumbs/wellcome/6/b28857021_0010.jp2/full/60,100/0/default.jpg",
           "type": "Image",
-          "width": 60,
           "height": 100,
+          "width": 60,
           "service": [
             {
               "profile": "http://iiif.io/api/image/2/level0.json",
@@ -1268,13 +1450,24 @@
         {
           "id": "https://iiif-test.wellcomecollection.org/text/alto/b28857021/b28857021_0010.jp2",
           "type": "Dataset",
-          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "label": {
             "none": [
               "METS-ALTO XML"
             ]
           },
+          "profile": "http://www.loc.gov/standards/alto/v3/alto.xsd",
           "format": "text/xml"
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0010.jp2/line",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Text of page  -"
+            ]
+          }
         }
       ],
       "items": [
@@ -1292,9 +1485,9 @@
                 {
                   "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0010.jp2/full/618,1024/0/default.jpg",
                   "type": "Image",
-                  "width": 618,
-                  "height": 1024,
                   "format": "image/jpeg",
+                  "height": 1024,
+                  "width": 618,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -1308,23 +1501,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0010.jp2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0010.jp2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/b28857021_0010.jp2/line",
-          "type": "AnnotationPage",
-          "label": {
-            "en": [
-              "Text of page  -"
-            ]
-          }
         }
       ]
     }
@@ -1338,12 +1523,7 @@
           "Cover"
         ]
       },
-      "items": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0001.jp2",
-          "type": "Canvas"
-        }
-      ]
+      "viewingDirection": "left-to-right"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/ranges/LOG_0002",
@@ -1353,124 +1533,7 @@
           "Cover"
         ]
       },
-      "items": [
-        {
-          "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0010.jp2",
-          "type": "Canvas"
-        }
-      ]
-    }
-  ],
-  "annotations": [
-    {
-      "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/images",
-      "type": "AnnotationPage",
-      "label": {
-        "en": [
-          "OCR-identified images and figures for b28857021"
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/annotations/v3/b28857021/all/line",
-      "type": "AnnotationPage",
-      "label": {
-        "en": [
-          "All OCR-derived annotations for b28857021"
-        ]
-      }
-    }
-  ],
-  "partOf": [
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/contributors/Llanwrtyd_Wells_(Wales)._Urban_District_Council.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Contributor: Llanwrtyd Wells (Wales). Urban District Council."
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/xaqnqsbj",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Disease Outbreaks."
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/tva37rme",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Public Health."
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/p2mzt7rw",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Sanitation."
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/pxxu6hsg",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Water Supply."
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/dyss49dy",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Llanwrtyd Wells (Wales)"
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Electronic_books.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: Electronic books."
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Annual_reports.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: Annual reports."
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/MOH_reports.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: MOH reports."
-        ]
-      }
-    },
-    {
-      "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Statistics.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: Statistics."
-        ]
-      }
+      "viewingDirection": "left-to-right"
     }
   ]
 }

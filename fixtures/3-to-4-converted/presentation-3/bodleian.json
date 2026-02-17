@@ -7,11 +7,6 @@
       "Bodleian Library LP 44"
     ]
   },
-  "summary": {
-    "en": [
-      "Portrait of a woman, called Mary, Queen of Scots (1542–1587)"
-    ]
-  },
   "metadata": [
     {
       "label": {
@@ -266,18 +261,43 @@
       }
     }
   ],
-  "homepage": [
+  "summary": {
+    "en": [
+      "Portrait of a woman, called Mary, Queen of Scots (1542–1587)"
+    ]
+  },
+  "requiredStatement": {
+    "label": {
+      "en": [
+        "Terms of Use"
+      ]
+    },
+    "value": {
+      "en": [
+        "<span>Terms of use: <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\">CC-BY-NC 4.0</a>. For more information, please see <a href=\"https://digital.bodleian.ox.ac.uk/terms/\">https://digital.bodleian.ox.ac.uk/terms/</a></span>"
+      ]
+    }
+  },
+  "navDate": "1838-01-01T00:00:00Z",
+  "behavior": [
+    "paged"
+  ],
+  "viewingDirection": "left-to-right",
+  "thumbnail": [
     {
-      "id": "https://digital.bodleian.ox.ac.uk/objects/33c2e37e-957a-4820-83e1-611c987021c9/",
-      "type": "Text",
-      "label": {
-        "en": [
-          "View on Digital Bodleian"
-        ]
-      },
-      "format": "text/html",
-      "language": [
-        "en"
+      "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4/full/256,/0/default.jpg",
+      "type": "Image",
+      "service": [
+        {
+          "profile": "http://iiif.io/api/image/2/level1.json",
+          "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
+          "type": "ImageService2"
+        },
+        {
+          "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
+          "type": "ImageService3",
+          "profile": "level1"
+        }
       ]
     }
   ],
@@ -304,55 +324,18 @@
       ]
     }
   ],
-  "navDate": "1838-01-01T00:00:00Z",
-  "logo": [
+  "homepage": [
     {
-      "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71/full/256,/0/default.jpg",
-      "type": "Image",
-      "service": [
-        {
-          "profile": "http://iiif.io/api/image/2/level1.json",
-          "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71",
-          "type": "ImageService2"
-        },
-        {
-          "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/f27e28db-0b08-4f16-9bdf-3565f591fb71",
-          "type": "ImageService3",
-          "profile": "level1"
-        }
-      ]
+      "id": "https://digital.bodleian.ox.ac.uk/objects/33c2e37e-957a-4820-83e1-611c987021c9/",
+      "type": "Text",
+      "label": {
+        "en": [
+          "View on Digital Bodleian"
+        ]
+      },
+      "format": "text/html"
     }
   ],
-  "thumbnail": [
-    {
-      "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4/full/256,/0/default.jpg",
-      "type": "Image",
-      "service": [
-        {
-          "profile": "http://iiif.io/api/image/2/level1.json",
-          "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
-          "type": "ImageService2"
-        },
-        {
-          "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
-          "type": "ImageService3",
-          "profile": "level1"
-        }
-      ]
-    }
-  ],
-  "requiredStatement": {
-    "label": {
-      "en": [
-        "Terms of Use"
-      ]
-    },
-    "value": {
-      "en": [
-        "<span>Terms of use: <a href=\"https://creativecommons.org/licenses/by-nc/4.0/\">CC-BY-NC 4.0</a>. For more information, please see <a href=\"https://digital.bodleian.ox.ac.uk/terms/\">https://digital.bodleian.ox.ac.uk/terms/</a></span>"
-      ]
-    }
-  },
   "partOf": [
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/portraits",
@@ -361,7 +344,8 @@
         "en": [
           "Portraits"
         ]
-      }
+      },
+      "viewingDirection": "left-to-right"
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/bodleian",
@@ -370,7 +354,8 @@
         "en": [
           "Bodleian Libraries"
         ]
-      }
+      },
+      "viewingDirection": "left-to-right"
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/portraits-prints-drawings-objects",
@@ -379,7 +364,8 @@
         "en": [
           "Portraits, Prints and Drawings"
         ]
-      }
+      },
+      "viewingDirection": "left-to-right"
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/bodleian-portraits",
@@ -388,11 +374,9 @@
         "en": [
           "The Bodleian Libraries’ Portrait Collection: A Samuel H. Kress Foundation Digitization Project"
         ]
-      }
+      },
+      "viewingDirection": "left-to-right"
     }
-  ],
-  "behavior": [
-    "paged"
   ],
   "items": [
     {
@@ -403,8 +387,9 @@
           "front"
         ]
       },
-      "width": 1920,
       "height": 2326,
+      "width": 1920,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.bodleian.ox.ac.uk/iiif/annotationpage/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
@@ -413,19 +398,16 @@
             {
               "id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/012b1e0f-8c9e-48e7-83d6-5e51a70253b4_image.json",
               "type": "Annotation",
-              "target": [
-                {
-                  "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
-                  "type": "Canvas"
-                }
+              "motivation": [
+                "painting"
               ],
               "body": [
                 {
                   "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 1920,
                   "height": 2326,
+                  "width": 1920,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
@@ -440,8 +422,14 @@
                   ]
                 }
               ],
-              "motivation": [
-                "painting"
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+                    "type": "Canvas"
+                  }
+                }
               ]
             }
           ]
@@ -458,17 +446,64 @@
           "LP 44"
         ]
       },
-      "items": [
-        {
-          "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
-          "type": "Canvas"
-        }
-      ],
+      "viewingDirection": "left-to-right",
       "start": {
         "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
-        "type": "Canvas"
+        "type": "Canvas",
+        "label": {
+          "en": [
+            "front"
+          ]
+        },
+        "height": 2326,
+        "width": 1920,
+        "duration": 0,
+        "items": [
+          {
+            "id": "https://iiif.bodleian.ox.ac.uk/iiif/annotationpage/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+            "type": "AnnotationPage",
+            "items": [
+              {
+                "id": "https://iiif.bodleian.ox.ac.uk/iiif/annotation/012b1e0f-8c9e-48e7-83d6-5e51a70253b4_image.json",
+                "type": "Annotation",
+                "motivation": [
+                  "painting"
+                ],
+                "body": [
+                  {
+                    "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4/full/max/0/default.jpg",
+                    "type": "Image",
+                    "format": "image/jpeg",
+                    "height": 2326,
+                    "width": 1920,
+                    "service": [
+                      {
+                        "profile": "http://iiif.io/api/image/2/level1.json",
+                        "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
+                        "type": "ImageService2"
+                      },
+                      {
+                        "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4",
+                        "type": "ImageService3",
+                        "profile": "level1"
+                      }
+                    ]
+                  }
+                ],
+                "target": [
+                  {
+                    "type": "SpecificResource",
+                    "source": {
+                      "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+                      "type": "Canvas"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     }
-  ],
-  "viewingDirection": "left-to-right"
+  ]
 }

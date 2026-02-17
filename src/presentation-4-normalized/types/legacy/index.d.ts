@@ -18,7 +18,6 @@ export type { AnnotationPageNormalized } from "./resources/annotationPage";
 export type { AnnotationCollectionNormalized } from "./resources/annotationCollection";
 export type { AnnotationNormalized } from "./resources/annotation";
 export type { RangeNormalized } from "./resources/range";
-export type { ServiceNormalized } from "./resources/service";
 export type { AgentNormalized, ProviderNormalized } from "./resources/provider";
 export type { ContentResourceNormalized, SpecificResourceNormalized } from "./resources/contentResource";
 export type { SceneComponentNormalized } from "./resources/scene-components";

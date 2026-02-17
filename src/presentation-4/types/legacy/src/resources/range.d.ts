@@ -1,5 +1,6 @@
 import type { Range as RangeV3 } from "../../../../../presentation-3/types/legacy/src/resources/range";
 import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
+import type { GeoJSON } from "../../../../../shared/geojson";
 import type { AnnotationPage } from "./annotationPage";
 import type { Canvas } from "./canvas";
 import type {
@@ -24,36 +25,34 @@ export type RangeItem =
 
 export type RangeAnnotation = AnnotationPage | ResourceReference<"AnnotationPage"> | string;
 
-export type Range = Prettify<
-  Omit<
-    RangeV3,
-    | "items"
-    | "annotations"
-    | "start"
-    | "thumbnail"
-    | "provider"
-    | "seeAlso"
-    | "service"
-    | "services"
-    | "rendering"
-    | "homepage"
-    | "partOf"
-    | "logo"
-    | "supplementary"
-  > & {
-    type: "Range";
-    items?: OneOrMany<RangeItem>;
-    annotations?: OneOrMany<RangeAnnotation>;
-    thumbnail?: OneOrMany<LinkedResource>;
-    provider?: OneOrMany<AgentLike | ResourceReference<"Agent">>;
-    seeAlso?: OneOrMany<LinkedResource>;
-    service?: OneOrMany<ServiceLike>;
-    services?: OneOrMany<ServiceLike>;
-    rendering?: OneOrMany<LinkedResource>;
-    homepage?: OneOrMany<LinkedResource>;
-    partOf?: OneOrMany<LinkedResource>;
-    logo?: OneOrMany<LinkedResource>;
-    supplementary?: OneOrMany<LinkedResource>;
-    start?: OneOrMany<SpecificResource | ResourceReference<"Canvas" | "Scene" | "Timeline"> | string> | null;
-  }
->;
+export type Range = Prettify<{
+  id: string;
+  type: "Range";
+  viewingDirection?: NonNullable<ViewingDirection> | undefined;
+  behavior?: LiteralUnion<SpecificationBehaviors>[] | undefined;
+  label?: InternationalString;
+  metadata?: MetadataItem[] | undefined;
+  summary?: InternationalString | undefined;
+  requiredStatement?: MetadataItem | undefined;
+  rights?: string | undefined;
+  navDate?: string | undefined;
+  navPlace?: Prettify<GeoJSON> | undefined;
+  placeholderContainer?: Canvas | Timeline | Scene | null;
+  accompanyingContainer?: Canvas | Timeline | Scene | null;
+
+  items?: Array<RangeItem>;
+  annotations?: Array<RangeAnnotation>;
+  thumbnail?: Array<LinkedResource>;
+  provider?: Array<AgentLike | ResourceReference<"Agent">>;
+  seeAlso?: Array<LinkedResource>;
+  service?: Array<ServiceLike>;
+  services?: Array<ServiceLike>;
+  rendering?: Array<LinkedResource>;
+  homepage?: Array<LinkedResource>;
+  partOf?: OneOrMany<LinkedResource>;
+  logo?: Array<LinkedResource>;
+  supplementary?: Array<LinkedResource>;
+  start?: SpecificResource | ResourceReference<"Canvas" | "Scene" | "Timeline"> | string | null;
+  canonical?: string;
+  via?: OneOrMany<string>;
+}>;

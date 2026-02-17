@@ -32,26 +32,32 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_mandible.glb",
-                "type": "Model",
-                "format": "model/gltf-binary"
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": 0,
-                    "y": 0.03,
-                    "z": 0.05
+              "body": [
+                {
+                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_mandible.glb",
+                  "type": "Model",
+                  "format": "model/gltf-binary"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 0,
+                      "y": 0.03,
+                      "z": 0.05
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
-                ]
-              }
+                }
+              ]
             },
             {
               "id": "https://example.org/iiif/3d/anno2",
@@ -59,26 +65,32 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_cranium.glb",
-                "type": "Model",
-                "format": "model/gltf-binary"
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": 0,
-                    "y": 0.18,
-                    "z": 0
+              "body": [
+                {
+                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_cranium.glb",
+                  "type": "Model",
+                  "format": "model/gltf-binary"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 0,
+                      "y": 0.18,
+                      "z": 0
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
-                ]
-              }
+                }
+              ]
             }
           ]
         }

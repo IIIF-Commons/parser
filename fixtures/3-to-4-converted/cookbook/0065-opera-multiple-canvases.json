@@ -36,18 +36,25 @@
       }
     }
   ],
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1",
       "type": "Canvas",
-      "width": 1920,
-      "height": 1080,
-      "duration": 3971.24,
       "label": {
         "en": [
           "Atto Primo"
         ]
       },
+      "height": 1080,
+      "width": 1920,
+      "duration": 3971.24,
+      "thumbnail": [
+        {
+          "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+          "type": "Image"
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1/annotation_page/1",
@@ -59,12 +66,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4",
@@ -74,29 +75,38 @@
                   "width": 1920,
                   "duration": 3971.24
                 }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1",
+                    "type": "Canvas"
+                  }
+                }
               ]
             }
           ]
-        }
-      ],
-      "thumbnail": [
-        {
-          "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
-          "type": "Image"
         }
       ]
     },
     {
       "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2",
       "type": "Canvas",
-      "width": 1920,
-      "height": 1080,
-      "duration": 3307.22,
       "label": {
         "en": [
           "Atto Secondo"
         ]
       },
+      "height": 1080,
+      "width": 1920,
+      "duration": 3307.22,
+      "thumbnail": [
+        {
+          "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act2-thumbnail.png",
+          "type": "Image"
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2/annotation_page/1",
@@ -108,12 +118,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
@@ -123,84 +127,74 @@
                   "width": 1920,
                   "duration": 3307.22
                 }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2",
+                    "type": "Canvas"
+                  }
+                }
               ]
             }
           ]
-        }
-      ],
-      "thumbnail": [
-        {
-          "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act2-thumbnail.png",
-          "type": "Image"
         }
       ]
     }
   ],
   "structures": [
     {
-      "type": "Range",
       "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/1",
+      "type": "Range",
       "label": {
         "it": [
           "Gaetano Donizetti, L'Elisir D'Amore"
         ]
       },
+      "viewingDirection": "left-to-right",
       "items": [
         {
-          "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/2",
+          "type": "Range",
           "label": {
             "en": [
               "Atto Primo"
             ]
           },
+          "viewingDirection": "left-to-right",
           "items": [
             {
-              "type": "Range",
               "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/3",
+              "type": "Range",
               "label": {
                 "it": [
                   "Preludio e Coro d'introduzione – Bel conforto al mietitore"
                 ]
               },
-              "items": [
-                {
-                  "type": "Canvas",
-                  "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1#t=0,302.05"
-                }
-              ]
+              "viewingDirection": "left-to-right"
             },
             {
-              "type": "Range",
               "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/4",
+              "type": "Range",
               "label": {
                 "en": [
                   "Remainder of Atto Primo"
                 ]
               },
-              "items": [
-                {
-                  "type": "Canvas",
-                  "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1#t=302.05,3971.24"
-                }
-              ]
+              "viewingDirection": "left-to-right"
             }
           ]
         },
         {
-          "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/5",
+          "type": "Range",
           "label": {
             "en": [
               "Atto Secondo"
             ]
           },
-          "items": [
-            {
-              "type": "Canvas",
-              "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2#t=0,3307.22"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         }
       ]
     }

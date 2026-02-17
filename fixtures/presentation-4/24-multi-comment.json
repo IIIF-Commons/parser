@@ -25,41 +25,6 @@
         ]
       },
       "backgroundColor": "#33404d",
-      "items": [
-        {
-          "id": "https://example.org/iiif/scene1/page/p1/1",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://example.org/iiif/3d/anno1",
-              "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
-              "body": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                  "type": "Model",
-                  "label": {
-                    "en": [
-                      "Astronaut"
-                    ]
-                  },
-                  "format": "model/gltf-binary"
-                }
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                }
-              }
-            }
-          ]
-        }
-      ],
       "annotations": [
         {
           "id": "https://example.org/iiif/scene1/page/p2/1",
@@ -77,34 +42,64 @@
                   "items": [
                     {
                       "type": "TextualBody",
-                      "value": "Glove",
-                      "language": "en",
                       "format": "text/plain"
                     },
                     {
                       "type": "TextualBody",
-                      "value": "Guante",
-                      "language": "es",
+                      "format": "text/plain"
+                    }
+                  ]
+                },
+                {
+                  "type": "Choice",
+                  "items": [
+                    {
+                      "type": "TextualBody",
+                      "format": "text/plain"
+                    },
+                    {
+                      "type": "TextualBody",
                       "format": "text/plain"
                     }
                   ]
                 }
               ],
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": 1.075,
-                    "y": 1.894,
-                    "z": 0.204
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 1.075,
+                      "y": 1.894,
+                      "z": 0.204
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
-                ]
-              }
+                },
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 0.006,
+                      "y": 3.498,
+                      "z": 0.703
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
+                  }
+                }
+              ]
             },
             {
               "id": "https://example.org/iiif/3d/anno2",
@@ -118,34 +113,91 @@
                   "items": [
                     {
                       "type": "TextualBody",
-                      "value": "Helmet",
-                      "language": "en",
                       "format": "text/plain"
                     },
                     {
                       "type": "TextualBody",
-                      "value": "Casco",
-                      "language": "es",
+                      "format": "text/plain"
+                    }
+                  ]
+                },
+                {
+                  "type": "Choice",
+                  "items": [
+                    {
+                      "type": "TextualBody",
+                      "format": "text/plain"
+                    },
+                    {
+                      "type": "TextualBody",
                       "format": "text/plain"
                     }
                   ]
                 }
               ],
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": 0.006,
-                    "y": 3.498,
-                    "z": 0.703
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 1.075,
+                      "y": 1.894,
+                      "z": 0.204
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
                   }
-                ]
-              }
+                },
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 0.006,
+                      "y": 3.498,
+                      "z": 0.703
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "https://example.org/iiif/scene1/page/p1/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/3d/anno1",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1/page/p1/1",
+                    "type": "Scene"
+                  }
+                }
+              ]
             }
           ]
         }

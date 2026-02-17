@@ -17,4 +17,6 @@ export type ContentResourceNormalized = NormalizedLinkedEntity & {
   transform: readonly NormalizedReference[];
   action: readonly NormalizedReference[];
   provides: readonly string[];
+  // @todo normalize to string | null
+  value: string | null;
 };

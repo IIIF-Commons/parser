@@ -1,0 +1,6 @@
+[
+  {
+    "fixture": "cookbook/0022-linking-with-a-hotspot.json",
+    "reason": "Circular reference at Annotation(https://iiif.io/api/cookbook/recipe/0022-linking-with-a-hotspot/annotation/p0002-link)"
+  }
+]

@@ -7,12 +7,52 @@
       "Picture of Göttingen taken during the 2019 IIIF Conference"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
       "type": "Canvas",
       "height": 3024,
       "width": 4032,
+      "duration": 0,
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1",
+              "type": "Annotation",
+              "motivation": [
+                "commenting"
+              ],
+              "body": [
+                {
+                  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-fountain/full/300,/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg"
+                },
+                {
+                  "type": "TextualBody"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "xywh=138,550,1477,1710"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-1",
@@ -42,41 +82,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
-                  "type": "Canvas"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1/annopage-2/anno-1",
-              "type": "Annotation",
-              "motivation": [
-                "commenting"
-              ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-fountain/full/300,/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg"
-                },
-                {
-                  "type": "TextualBody",
-                  "language": "en",
-                  "value": "Night picture of the Gänseliesel fountain in Göttingen taken during the 2019 IIIF Conference"
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1#xywh=138,550,1477,1710",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0377-image-in-annotation/canvas-1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

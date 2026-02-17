@@ -7,6 +7,7 @@
       "Laocöon"
     ]
   },
+  "viewingDirection": "left-to-right",
   "homepage": [
     {
       "id": "https://www.getty.edu/art/collection/object/103RQQ",
@@ -16,10 +17,7 @@
           "Home page at the Getty Museum Collection"
         ]
       },
-      "format": "text/html",
-      "language": [
-        "en"
-      ]
+      "format": "text/html"
     }
   ],
   "items": [
@@ -33,6 +31,7 @@
       },
       "height": 3000,
       "width": 2315,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0047-homepage/canvas/1/page/1",
@@ -49,21 +48,24 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon/full/!500,500/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
+                  "height": 3000,
+                  "width": 2315,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/28473c77da3deebe4375c3a50572d9d3-laocoon",
                       "type": "ImageService3",
                       "profile": "level1"
                     }
-                  ],
-                  "height": 3000,
-                  "width": 2315
+                  ]
                 }
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0047-homepage/canvas/1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0047-homepage/canvas/1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

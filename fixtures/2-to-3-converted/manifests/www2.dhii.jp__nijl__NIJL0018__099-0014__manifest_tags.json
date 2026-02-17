@@ -63,11 +63,11 @@
     }
   },
   "behavior": ["paged"],
-  "homepage": {
+  "homepage": [{
     "format": "text/html",
     "type": "Text",
     "id": "http://www.nii.ac.jp/dsc/idr/nijl/nijl.html"
-  },
+  }],
   "partOf": [
     {
       "id": "http://www.nii.ac.jp/dsc/idr/nijl/nijl.html",

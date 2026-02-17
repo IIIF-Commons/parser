@@ -7,12 +7,48 @@
       "Picture of Göttingen taken during the 2019 IIIF Conference"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1",
       "type": "Canvas",
       "height": 3024,
       "width": 4032,
+      "duration": 0,
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/page/p2/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/anno/p0002-wikidata",
+              "type": "Annotation",
+              "motivation": [
+                "tagging"
+              ],
+              "body": [
+                {
+                  "type": "TextualBody",
+                  "format": "text/plain"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "xywh=749,1054,338,460"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/page/p1/1",
@@ -42,41 +78,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1",
-                  "type": "Canvas"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/page/p2/1",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/annotation/anno/p0002-wikidata",
-              "type": "Annotation",
-              "motivation": [
-                "tagging"
-              ],
-              "body": [
-                {
                   "type": "SpecificResource",
-                  "source": "http://www.wikidata.org/entity/Q18624915"
-                },
-                {
-                  "type": "TextualBody",
-                  "value": "Gänseliesel-Brunnen",
-                  "format": "text/plain",
-                  "language": "de"
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1#xywh=749,1054,338,460",
-                  "type": "Canvas"
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

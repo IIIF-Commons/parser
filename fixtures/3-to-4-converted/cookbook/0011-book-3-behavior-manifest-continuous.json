@@ -10,6 +10,7 @@
   "behavior": [
     "continuous"
   ],
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s1",
@@ -19,8 +20,9 @@
           "Section 1 [Recto]"
         ]
       },
-      "width": 11368,
       "height": 1592,
+      "width": 11368,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/s1/1",
@@ -37,8 +39,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmd9_1300412_master/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 11368,
                   "height": 1592,
+                  "width": 11368,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmd9_1300412_master",
@@ -50,8 +52,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -67,8 +72,9 @@
           "Section 2 [Recto]"
         ]
       },
-      "width": 11608,
       "height": 1536,
+      "width": 11608,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/s2/1",
@@ -85,8 +91,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmft_1300418_master/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 11608,
                   "height": 1536,
+                  "width": 11608,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmft_1300418_master",
@@ -98,8 +104,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -115,8 +124,9 @@
           "Section 3 [Recto]"
         ]
       },
-      "width": 10576,
       "height": 1504,
+      "width": 10576,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/s3/1",
@@ -133,8 +143,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmgb_1300426_master/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 10576,
                   "height": 1504,
+                  "width": 10576,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmgb_1300426_master",
@@ -146,8 +156,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s3",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -163,8 +176,9 @@
           "Section 4 [Recto]"
         ]
       },
-      "width": 2488,
       "height": 1464,
+      "width": 2488,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/page/s4/1",
@@ -181,8 +195,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmhv_1300436_master/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 2488,
                   "height": 1464,
+                  "width": 2488,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/8c169124171e6b2253b698a22a938f07-21198-zz001hbmhv_1300436_master",
@@ -194,8 +208,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s4",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

@@ -3,45 +3,47 @@ export type * from "./legacy/index";
 import { createPresentationHelpers, type ResourceSpecs } from "../../presentation-shared/helpers/create-helpers";
 import type {
   Agent,
+  AmbientAudio,
+  AmbientLight,
   Annotation,
   AnnotationCollection,
   AnnotationPage,
-  Canvas,
-  Collection,
-  Manifest,
-  Range,
-  Scene,
-  Timeline,
-} from "./legacy/index";
-import type {
-  ContentResourceLike,
   AudioResource,
+  Canvas,
+  ChoiceResource,
+  Collection,
+  CollectionPage,
+  CompositeResource,
+  ContentResourceLike,
   DatasetResource,
-  ImageResource,
-  ModelResource,
-  SpecificResource,
-  TextResource,
-  Quantity,
-  VideoResource,
-} from "./legacy/index";
-import type {
-  AmbientAudio,
-  AmbientLight,
   DirectionalLight,
+  ImageResource,
+  IndependentsResource,
+  ListResource,
+  Manifest,
+  ModelResource,
   OrthographicCamera,
   PerspectiveCamera,
   PointAudio,
   PointLight,
+  Quantity,
+  Range,
+  Scene,
+  Selector,
+  SpecificResource,
   SpotAudio,
   SpotLight,
+  TextResource,
+  Timeline,
+  Transform,
+  VideoResource,
 } from "./legacy/index";
-import type { Selector } from "./legacy/index";
-import type { Transform } from "./legacy/index";
 
 export type Container = Collection | Manifest | Timeline | Canvas | Scene;
 
 export type Presentation4HelperTypes = {
   Collection: Collection;
+  CollectionPage: CollectionPage;
   Manifest: Manifest;
   Timeline: Timeline;
   Canvas: Canvas;
@@ -63,6 +65,10 @@ export type Presentation4HelperTypes = {
   Model: ModelResource;
   Text: TextResource;
   Dataset: DatasetResource;
+  Choice: ChoiceResource;
+  Composite: CompositeResource;
+  List: ListResource;
+  Independents: IndependentsResource;
   PerspectiveCamera: PerspectiveCamera;
   OrthographicCamera: OrthographicCamera;
   AmbientLight: AmbientLight;
@@ -76,6 +82,7 @@ export type Presentation4HelperTypes = {
 
 const presentation4Specs: ResourceSpecs<Presentation4HelperTypes> = {
   Collection: { type: "Collection", aliases: ["sc:Collection"] },
+  CollectionPage: { type: "CollectionPage" },
   Manifest: { type: "Manifest", aliases: ["sc:Manifest"] },
   Timeline: { type: "Timeline" },
   Canvas: { type: "Canvas", aliases: ["sc:Canvas"] },
@@ -85,21 +92,44 @@ const presentation4Specs: ResourceSpecs<Presentation4HelperTypes> = {
   Annotation: { type: "Annotation", aliases: ["oa:Annotation"] },
   ContentResource: {
     type: "ContentResource",
-    aliases: ["Image", "Audio", "Sound", "Video", "Model", "Text", "Dataset", "TextualBody", "Choice"],
+    aliases: [
+      "Image",
+      "Audio",
+      "Sound",
+      "Video",
+      "Model",
+      "Text",
+      "Dataset",
+      "TextualBody",
+      "Choice",
+      "Composite",
+      "List",
+      "Independents",
+    ],
   },
   Range: { type: "Range", aliases: ["sc:Range"] },
   Service: { type: "Service" },
   Selector: { type: "Selector" },
   Agent: { type: "Agent" },
   Quantity: { type: "Quantity" },
-  Transform: { type: "Transform", aliases: ["RotateTransform", "ScaleTransform", "TranslateTransform"] },
-  SpecificResource: { type: "SpecificResource", aliases: ["oa:SpecificResource"] },
+  Transform: {
+    type: "Transform",
+    aliases: ["RotateTransform", "ScaleTransform", "TranslateTransform"],
+  },
+  SpecificResource: {
+    type: "SpecificResource",
+    aliases: ["oa:SpecificResource"],
+  },
   Image: { type: "Image", aliases: ["dctypes:Image"] },
   Audio: { type: "Audio", aliases: ["Sound", "dctypes:Sound"] },
   Video: { type: "Video" },
   Model: { type: "Model" },
   Text: { type: "Text", aliases: ["TextualBody", "dctypes:Text"] },
   Dataset: { type: "Dataset" },
+  Choice: { type: "Choice" },
+  Composite: { type: "Composite" },
+  List: { type: "List" },
+  Independents: { type: "Independents" },
   PerspectiveCamera: { type: "PerspectiveCamera" },
   OrthographicCamera: { type: "OrthographicCamera" },
   AmbientLight: { type: "AmbientLight" },

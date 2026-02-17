@@ -7,12 +7,14 @@
       "Single Image Example"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/canvas/p1",
       "type": "Canvas",
       "height": 1800,
       "width": 1200,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/page/p1/1",
@@ -35,8 +37,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

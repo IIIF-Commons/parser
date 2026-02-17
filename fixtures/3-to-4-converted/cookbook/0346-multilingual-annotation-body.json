@@ -10,12 +10,57 @@
       "琴棋書画図屏風"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
       "type": "Canvas",
       "height": 31722,
       "width": 70399,
+      "duration": 0,
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/page/p2/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/annotation/p0001-comment",
+              "type": "Annotation",
+              "motivation": [
+                "commenting"
+              ],
+              "body": [
+                {
+                  "type": "Choice",
+                  "items": [
+                    {
+                      "type": "TextualBody",
+                      "format": "text/plain"
+                    },
+                    {
+                      "type": "TextualBody",
+                      "format": "text/plain"
+                    }
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "xywh=1650,1200,925,1250"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/page/p1/1",
@@ -45,48 +90,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
-                  "type": "Canvas"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/page/p2/1",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/annotation/p0001-comment",
-              "type": "Annotation",
-              "motivation": [
-                "commenting"
-              ],
-              "body": [
-                {
-                  "type": "Choice",
-                  "items": [
-                    {
-                      "type": "TextualBody",
-                      "value": "Koto with a cover being carried",
-                      "language": "en",
-                      "format": "text/plain"
-                    },
-                    {
-                      "type": "TextualBody",
-                      "value": "袋に収められた琴",
-                      "language": "ja",
-                      "format": "text/plain"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1#xywh=1650,1200,925,1250",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

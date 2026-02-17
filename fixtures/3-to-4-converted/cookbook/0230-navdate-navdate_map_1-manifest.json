@@ -8,6 +8,7 @@
     ]
   },
   "navDate": "1987-01-01T00:00:00+00:00",
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/canvas/p1",
@@ -19,6 +20,7 @@
       },
       "height": 7072,
       "width": 5212,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/page/p1/1",
@@ -48,8 +50,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

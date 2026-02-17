@@ -141,36 +141,10 @@
       ]
     }
   },
-  "provider": [
-    {
-      "id": "https://www.bl.uk/about-us",
-      "type": "Agent",
-      "label": {
-        "en": [
-          "The British Library"
-        ]
-      },
-      "homepage": [
-        {
-          "id": "https://www.bl.uk/",
-          "type": "Text",
-          "format": "text/html",
-          "label": {
-            "en": [
-              "The British Library"
-            ]
-          }
-        }
-      ],
-      "logo": [
-        {
-          "id": "https://www.bl.uk/images/bl_logo_100.gif",
-          "type": "Image",
-          "format": "image/gif"
-        }
-      ]
-    }
+  "behavior": [
+    "auto-advance"
   ],
+  "viewingDirection": "left-to-right",
   "service": [
     {
       "id": "https://api.bl.uk/auth/iiif/login",
@@ -193,21 +167,86 @@
       "profile": "http://universalviewer.io/share-extensions-profile"
     }
   ],
+  "provider": [
+    {
+      "id": "https://www.bl.uk/about-us",
+      "type": "Agent",
+      "label": {
+        "en": [
+          "The British Library"
+        ]
+      },
+      "homepage": [
+        {
+          "id": "https://www.bl.uk/",
+          "type": "Text",
+          "label": {
+            "en": [
+              "The British Library"
+            ]
+          },
+          "format": "text/html"
+        }
+      ]
+    }
+  ],
   "homepage": [
     {
       "id": "http://access.bl.uk/item/viewer/ark:/81055/vdc_100052320369.0x000002",
       "type": "Text",
-      "format": "text/html",
       "label": {
         "en": [
           "View at the British Library"
         ]
-      }
+      },
+      "format": "text/html"
     }
   ],
-  "behavior": [
-    "auto-advance"
-  ],
+  "accompanyingContainer": {
+    "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/c/poster",
+    "type": "Canvas",
+    "label": {
+      "en": [
+        "world"
+      ]
+    },
+    "height": 962,
+    "width": 962,
+    "duration": 0,
+    "items": [
+      {
+        "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/c/a1",
+        "type": "AnnotationPage",
+        "items": [
+          {
+            "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/c/a1/a1",
+            "type": "Annotation",
+            "motivation": [
+              "painting"
+            ],
+            "body": [
+              {
+                "id": "https://iiif-commons.github.io/iiif-av-component/examples/data/bl/sounds-tests/posters/world.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 962,
+                "width": 962
+              }
+            ],
+            "target": [
+              {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/c/poster",
+                  "type": "Canvas"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "items": [
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000004",
@@ -217,6 +256,8 @@
           "Tape 1 Side 1"
         ]
       },
+      "height": 0,
+      "width": 0,
       "duration": 2023.56,
       "items": [
         {
@@ -226,14 +267,16 @@
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000004/anno1/1",
               "type": "Annotation",
+              "seeAlso": [
+                {
+                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x000032.dat",
+                  "type": "Dataset",
+                  "profile": "http://waveform.prototyping.bbc.co.uk",
+                  "format": "application/octet-stream"
+                }
+              ],
               "motivation": [
                 "painting"
-              ],
-              "target": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000004#t=0,2023.56",
-                  "type": "Canvas"
-                }
               ],
               "body": [
                 {
@@ -241,8 +284,8 @@
                   "items": [
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x000033/manifest.mpd",
-                      "format": "application/dash+xml",
                       "type": "Audio",
+                      "format": "application/dash+xml",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/dash/ark:/81055/vdc_100052320369.0x000033/probe.json",
@@ -253,8 +296,8 @@
                     },
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x000033/index.m3u8",
-                      "format": "vnd.apple.mpegURL",
                       "type": "Audio",
+                      "format": "vnd.apple.mpegURL",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/hls/ark:/81055/vdc_100052320369.0x000033/probe.json",
@@ -266,12 +309,17 @@
                   ]
                 }
               ],
-              "seeAlso": [
+              "target": [
                 {
-                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x000032.dat",
-                  "type": "Dataset",
-                  "format": "application/octet-stream",
-                  "profile": "http://waveform.prototyping.bbc.co.uk"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000004",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "t=0,2023.56"
+                  }
                 }
               ]
             }
@@ -287,6 +335,8 @@
           "Tape 1 Side 2"
         ]
       },
+      "height": 0,
+      "width": 0,
       "duration": 1760.04,
       "items": [
         {
@@ -296,14 +346,16 @@
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000005/anno2/1",
               "type": "Annotation",
+              "seeAlso": [
+                {
+                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x000034.dat",
+                  "type": "Dataset",
+                  "profile": "http://waveform.prototyping.bbc.co.uk",
+                  "format": "application/octet-stream"
+                }
+              ],
               "motivation": [
                 "painting"
-              ],
-              "target": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000005#t=0,1760.04",
-                  "type": "Canvas"
-                }
               ],
               "body": [
                 {
@@ -311,8 +363,8 @@
                   "items": [
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x000035/manifest.mpd",
-                      "format": "application/dash+xml",
                       "type": "Audio",
+                      "format": "application/dash+xml",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/dash/ark:/81055/vdc_100052320369.0x000035/probe.json",
@@ -323,8 +375,8 @@
                     },
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x000035/index.m3u8",
-                      "format": "vnd.apple.mpegURL",
                       "type": "Audio",
+                      "format": "vnd.apple.mpegURL",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/hls/ark:/81055/vdc_100052320369.0x000035/probe.json",
@@ -336,12 +388,17 @@
                   ]
                 }
               ],
-              "seeAlso": [
+              "target": [
                 {
-                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x000034.dat",
-                  "type": "Dataset",
-                  "format": "application/octet-stream",
-                  "profile": "http://waveform.prototyping.bbc.co.uk"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000005",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "t=0,1760.04"
+                  }
                 }
               ]
             }
@@ -357,6 +414,8 @@
           "Tape 2 Side 1"
         ]
       },
+      "height": 0,
+      "width": 0,
       "duration": 1392.56,
       "items": [
         {
@@ -366,14 +425,16 @@
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007/anno3/1",
               "type": "Annotation",
+              "seeAlso": [
+                {
+                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x000036.dat",
+                  "type": "Dataset",
+                  "profile": "http://waveform.prototyping.bbc.co.uk",
+                  "format": "application/octet-stream"
+                }
+              ],
               "motivation": [
                 "painting"
-              ],
-              "target": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007#t=0,1392.56",
-                  "type": "Canvas"
-                }
               ],
               "body": [
                 {
@@ -381,8 +442,8 @@
                   "items": [
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x000037/manifest.mpd",
-                      "format": "application/dash+xml",
                       "type": "Audio",
+                      "format": "application/dash+xml",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/dash/ark:/81055/vdc_100052320369.0x000037/probe.json",
@@ -393,8 +454,8 @@
                     },
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x000037/index.m3u8",
-                      "format": "vnd.apple.mpegURL",
                       "type": "Audio",
+                      "format": "vnd.apple.mpegURL",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/hls/ark:/81055/vdc_100052320369.0x000037/probe.json",
@@ -406,12 +467,17 @@
                   ]
                 }
               ],
-              "seeAlso": [
+              "target": [
                 {
-                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x000036.dat",
-                  "type": "Dataset",
-                  "format": "application/octet-stream",
-                  "profile": "http://waveform.prototyping.bbc.co.uk"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "t=0,1392.56"
+                  }
                 }
               ]
             }
@@ -427,6 +493,8 @@
           "Tape 2 Side 2"
         ]
       },
+      "height": 0,
+      "width": 0,
       "duration": 1404.92,
       "items": [
         {
@@ -436,14 +504,16 @@
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008/anno4/1",
               "type": "Annotation",
+              "seeAlso": [
+                {
+                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x000038.dat",
+                  "type": "Dataset",
+                  "profile": "http://waveform.prototyping.bbc.co.uk",
+                  "format": "application/octet-stream"
+                }
+              ],
               "motivation": [
                 "painting"
-              ],
-              "target": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=0,1404.92",
-                  "type": "Canvas"
-                }
               ],
               "body": [
                 {
@@ -451,8 +521,8 @@
                   "items": [
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x000039/manifest.mpd",
-                      "format": "application/dash+xml",
                       "type": "Audio",
+                      "format": "application/dash+xml",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/dash/ark:/81055/vdc_100052320369.0x000039/probe.json",
@@ -463,8 +533,8 @@
                     },
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x000039/index.m3u8",
-                      "format": "vnd.apple.mpegURL",
                       "type": "Audio",
+                      "format": "vnd.apple.mpegURL",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/hls/ark:/81055/vdc_100052320369.0x000039/probe.json",
@@ -476,12 +546,17 @@
                   ]
                 }
               ],
-              "seeAlso": [
+              "target": [
                 {
-                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x000038.dat",
-                  "type": "Dataset",
-                  "format": "application/octet-stream",
-                  "profile": "http://waveform.prototyping.bbc.co.uk"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "t=0,1404.92"
+                  }
                 }
               ]
             }
@@ -497,6 +572,8 @@
           "Tape 3 Side 1"
         ]
       },
+      "height": 0,
+      "width": 0,
       "duration": 1406.32,
       "items": [
         {
@@ -506,14 +583,16 @@
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a/anno5/1",
               "type": "Annotation",
+              "seeAlso": [
+                {
+                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x00003a.dat",
+                  "type": "Dataset",
+                  "profile": "http://waveform.prototyping.bbc.co.uk",
+                  "format": "application/octet-stream"
+                }
+              ],
               "motivation": [
                 "painting"
-              ],
-              "target": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a#t=0,1406.32",
-                  "type": "Canvas"
-                }
               ],
               "body": [
                 {
@@ -521,8 +600,8 @@
                   "items": [
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x00003b/manifest.mpd",
-                      "format": "application/dash+xml",
                       "type": "Audio",
+                      "format": "application/dash+xml",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/dash/ark:/81055/vdc_100052320369.0x00003b/probe.json",
@@ -533,8 +612,8 @@
                     },
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x00003b/index.m3u8",
-                      "format": "vnd.apple.mpegURL",
                       "type": "Audio",
+                      "format": "vnd.apple.mpegURL",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/hls/ark:/81055/vdc_100052320369.0x00003b/probe.json",
@@ -546,12 +625,17 @@
                   ]
                 }
               ],
-              "seeAlso": [
+              "target": [
                 {
-                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x00003a.dat",
-                  "type": "Dataset",
-                  "format": "application/octet-stream",
-                  "profile": "http://waveform.prototyping.bbc.co.uk"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "t=0,1406.32"
+                  }
                 }
               ]
             }
@@ -567,6 +651,8 @@
           "Tape 3 Side 2"
         ]
       },
+      "height": 0,
+      "width": 0,
       "duration": 1398.84,
       "items": [
         {
@@ -576,14 +662,16 @@
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000b/anno6/1",
               "type": "Annotation",
+              "seeAlso": [
+                {
+                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x00003c.dat",
+                  "type": "Dataset",
+                  "profile": "http://waveform.prototyping.bbc.co.uk",
+                  "format": "application/octet-stream"
+                }
+              ],
               "motivation": [
                 "painting"
-              ],
-              "target": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000b#t=0,1398.84",
-                  "type": "Canvas"
-                }
               ],
               "body": [
                 {
@@ -591,8 +679,8 @@
                   "items": [
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x00003d/manifest.mpd",
-                      "format": "application/dash+xml",
                       "type": "Audio",
+                      "format": "application/dash+xml",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/dash/ark:/81055/vdc_100052320369.0x00003d/probe.json",
@@ -603,8 +691,8 @@
                     },
                     {
                       "id": "https://api.bl.uk/media/iiif/ark:/81055/vdc_100052320369.0x00003d/index.m3u8",
-                      "format": "vnd.apple.mpegURL",
                       "type": "Audio",
+                      "format": "vnd.apple.mpegURL",
                       "service": [
                         {
                           "id": "https://api.bl.uk/media/hls/ark:/81055/vdc_100052320369.0x00003d/probe.json",
@@ -616,12 +704,17 @@
                   ]
                 }
               ],
-              "seeAlso": [
+              "target": [
                 {
-                  "id": "https://iiif-waveforms.s3.amazonaws.com/vdc_100052320369.0x00003c.dat",
-                  "type": "Dataset",
-                  "format": "application/octet-stream",
-                  "profile": "http://waveform.prototyping.bbc.co.uk"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000b",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "t=0,1398.84"
+                  }
                 }
               ]
             }
@@ -761,6 +854,7 @@
           }
         }
       ],
+      "viewingDirection": "left-to-right",
       "rendering": [
         {
           "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000002/top",
@@ -955,6 +1049,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00000c",
@@ -1147,6 +1242,7 @@
                   }
                 }
               ],
+              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00000d",
@@ -1157,12 +1253,6 @@
                     ]
                   },
                   "format": "audio/mp4"
-                }
-              ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000004#t=0,2023.56",
-                  "type": "Canvas"
                 }
               ]
             },
@@ -1333,6 +1423,7 @@
                   }
                 }
               ],
+              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00000e",
@@ -1344,12 +1435,6 @@
                   },
                   "format": "audio/mp4"
                 }
-              ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000005#t=0,1760.04",
-                  "type": "Canvas"
-                }
               ]
             },
             {
@@ -1358,12 +1443,7 @@
               "behavior": [
                 "no-nav"
               ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007#t=0,0.36",
-                  "type": "Canvas"
-                }
-              ]
+              "viewingDirection": "left-to-right"
             },
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000f",
@@ -1545,6 +1625,7 @@
                   }
                 }
               ],
+              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00000f",
@@ -1555,12 +1636,6 @@
                     ]
                   },
                   "format": "audio/mp4"
-                }
-              ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007#t=0.36,484.8",
-                  "type": "Canvas"
                 }
               ]
             }
@@ -1747,6 +1822,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000016",
@@ -1758,12 +1834,6 @@
               },
               "format": "audio/mp4"
             }
-          ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007#t=487.56,526.36",
-              "type": "Canvas"
-            }
           ]
         },
         {
@@ -1772,12 +1842,7 @@
           "behavior": [
             "no-nav"
           ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007#t=526.36,526.64",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000018",
@@ -1961,6 +2026,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000018",
@@ -1971,12 +2037,6 @@
                 ]
               },
               "format": "audio/mp4"
-            }
-          ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007#t=526.64,1026.48",
-              "type": "Canvas"
             }
           ]
         },
@@ -2160,6 +2220,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00001a",
@@ -2352,6 +2413,7 @@
                   }
                 }
               ],
+              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00001b",
@@ -2363,16 +2425,6 @@
                   },
                   "format": "audio/mp4"
                 }
-              ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007#t=1027,1392.56",
-                  "type": "Canvas"
-                },
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=0,259.8",
-                  "type": "Canvas"
-                }
               ]
             },
             {
@@ -2381,12 +2433,7 @@
               "behavior": [
                 "no-nav"
               ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=259.8,260",
-                  "type": "Canvas"
-                }
-              ]
+              "viewingDirection": "left-to-right"
             },
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00001c",
@@ -2567,6 +2614,7 @@
                   }
                 }
               ],
+              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00001c",
@@ -2578,12 +2626,6 @@
                   },
                   "format": "audio/mp4"
                 }
-              ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=260,276.24",
-                  "type": "Canvas"
-                }
               ]
             },
             {
@@ -2592,12 +2634,7 @@
               "behavior": [
                 "no-nav"
               ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=276.24,277.44",
-                  "type": "Canvas"
-                }
-              ]
+              "viewingDirection": "left-to-right"
             },
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00001d",
@@ -2779,6 +2816,7 @@
                   }
                 }
               ],
+              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00001d",
@@ -2789,12 +2827,6 @@
                     ]
                   },
                   "format": "audio/mp4"
-                }
-              ],
-              "items": [
-                {
-                  "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=277.44,821.36",
-                  "type": "Canvas"
                 }
               ]
             }
@@ -2979,6 +3011,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000024",
@@ -2990,12 +3023,6 @@
               },
               "format": "audio/mp4"
             }
-          ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=821.76,992.32",
-              "type": "Canvas"
-            }
           ]
         },
         {
@@ -3004,12 +3031,7 @@
           "behavior": [
             "no-nav"
           ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=992.32,992.96",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000026",
@@ -3190,6 +3212,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000026",
@@ -3200,12 +3223,6 @@
                 ]
               },
               "format": "audio/mp4"
-            }
-          ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008#t=992.96,1404.92",
-              "type": "Canvas"
             }
           ]
         },
@@ -3389,6 +3406,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000028",
@@ -3400,12 +3418,6 @@
               },
               "format": "audio/mp4"
             }
-          ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a#t=0,736",
-              "type": "Canvas"
-            }
           ]
         },
         {
@@ -3414,12 +3426,7 @@
           "behavior": [
             "no-nav"
           ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a#t=736,736.72",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00002a",
@@ -3601,6 +3608,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00002a",
@@ -3612,12 +3620,6 @@
               },
               "format": "audio/mp4"
             }
-          ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a#t=736.72,1158.84",
-              "type": "Canvas"
-            }
           ]
         },
         {
@@ -3626,12 +3628,7 @@
           "behavior": [
             "no-nav"
           ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a#t=1158.84,1159.12",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00002c",
@@ -3812,6 +3809,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00002c",
@@ -3823,12 +3821,6 @@
               },
               "format": "audio/mp4"
             }
-          ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a#t=1159.12,1346.4",
-              "type": "Canvas"
-            }
           ]
         },
         {
@@ -3837,12 +3829,7 @@
           "behavior": [
             "no-nav"
           ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a#t=1346.4,1406.32",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00002e",
@@ -3987,6 +3974,7 @@
               }
             }
           ],
+          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00002e",
@@ -3998,60 +3986,9 @@
               },
               "format": "audio/mp4"
             }
-          ],
-          "items": [
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000b#t=0,1398.84",
-              "type": "Canvas"
-            },
-            {
-              "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a#t=1346.52,1406.32",
-              "type": "Canvas"
-            }
           ]
         }
       ]
     }
-  ],
-  "accompanyingContainer": {
-    "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/c/poster",
-    "type": "Canvas",
-    "label": {
-      "en": [
-        "world"
-      ]
-    },
-    "width": 962,
-    "height": 962,
-    "items": [
-      {
-        "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/c/a1",
-        "type": "AnnotationPage",
-        "items": [
-          {
-            "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/c/a1/a1",
-            "type": "Annotation",
-            "motivation": [
-              "painting"
-            ],
-            "target": [
-              {
-                "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000002/c/poster",
-                "type": "Canvas"
-              }
-            ],
-            "body": [
-              {
-                "id": "https://iiif-commons.github.io/iiif-av-component/examples/data/bl/sounds-tests/posters/world.jpg",
-                "type": "Image",
-                "width": 962,
-                "height": 962,
-                "format": "image/jpeg"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  ]
 }

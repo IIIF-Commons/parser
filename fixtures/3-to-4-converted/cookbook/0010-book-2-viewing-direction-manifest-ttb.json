@@ -22,8 +22,9 @@
           "image 1"
         ]
       },
-      "width": 2251,
       "height": 3152,
+      "width": 2251,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/v1/1",
@@ -40,8 +41,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 2251,
                   "height": 3152,
+                  "width": 2251,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02",
@@ -53,8 +54,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -70,8 +74,9 @@
           "image 2"
         ]
       },
-      "width": 2268,
       "height": 3135,
+      "width": 2268,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/v2/1",
@@ -88,8 +93,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 2268,
                   "height": 3135,
+                  "width": 2268,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03",
@@ -101,8 +106,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -118,8 +126,9 @@
           "image 3"
         ]
       },
-      "width": 2274,
       "height": 3135,
+      "width": 2274,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/v3/1",
@@ -136,8 +145,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 2274,
                   "height": 3135,
+                  "width": 2274,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04",
@@ -149,8 +158,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v3",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -166,8 +178,9 @@
           "image 4"
         ]
       },
-      "width": 2268,
       "height": 3135,
+      "width": 2268,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/v4/1",
@@ -184,8 +197,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 2268,
                   "height": 3135,
+                  "width": 2268,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05",
@@ -197,8 +210,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v4",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

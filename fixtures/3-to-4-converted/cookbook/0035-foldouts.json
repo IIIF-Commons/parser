@@ -10,17 +10,19 @@
   "behavior": [
     "paged"
   ],
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/1",
       "type": "Canvas",
-      "height": 4429,
-      "width": 2533,
       "label": {
         "en": [
           "Front cover"
         ]
       },
+      "height": 4429,
+      "width": 2533,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/1/1",
@@ -50,8 +52,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -62,13 +67,14 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/2",
       "type": "Canvas",
-      "height": 4315,
-      "width": 2490,
       "label": {
         "en": [
           "Inside front cover"
         ]
       },
+      "height": 4315,
+      "width": 2490,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/2/1",
@@ -98,8 +104,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -110,13 +119,14 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/3",
       "type": "Canvas",
-      "height": 4278,
-      "width": 2197,
       "label": {
         "en": [
           "Foldout, folded"
         ]
       },
+      "height": 4278,
+      "width": 2197,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/3/1",
@@ -146,8 +156,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/3",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -158,16 +171,17 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/4",
       "type": "Canvas",
-      "behavior": [
-        "non-paged"
-      ],
-      "height": 1968,
-      "width": 3688,
       "label": {
         "en": [
           "Foldout, unfolded"
         ]
       },
+      "behavior": [
+        "non-paged"
+      ],
+      "height": 1968,
+      "width": 3688,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/4/1",
@@ -197,8 +211,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/4",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -209,13 +226,14 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/5",
       "type": "Canvas",
-      "height": 1968,
-      "width": 3688,
       "label": {
         "en": [
           "Foldout, folded (recto)"
         ]
       },
+      "height": 1968,
+      "width": 3688,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/5/1",
@@ -245,8 +263,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/5",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/5",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -257,13 +278,14 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/6",
       "type": "Canvas",
-      "height": 4315,
-      "width": 2490,
       "label": {
         "en": [
           "Title page"
         ]
       },
+      "height": 4315,
+      "width": 2490,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/6/1",
@@ -293,8 +315,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/6",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/6",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -305,13 +330,14 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/7",
       "type": "Canvas",
-      "height": 4315,
-      "width": 2490,
       "label": {
         "en": [
           "Back of title page"
         ]
       },
+      "height": 4315,
+      "width": 2490,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/7/1",
@@ -341,8 +367,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/7",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/7",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -353,13 +382,14 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/8",
       "type": "Canvas",
-      "height": 4315,
-      "width": 2490,
       "label": {
         "en": [
           "Inside back cover"
         ]
       },
+      "height": 4315,
+      "width": 2490,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/8/1",
@@ -389,8 +419,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/8",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/8",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -401,13 +434,14 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/9",
       "type": "Canvas",
-      "height": 4315,
-      "width": 2490,
       "label": {
         "en": [
           "Back cover"
         ]
       },
+      "height": 4315,
+      "width": 2490,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/page/9/1",
@@ -437,8 +471,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/9",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/9",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

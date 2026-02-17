@@ -7,6 +7,7 @@
       "Folio from Grandes Chroniques de France, ca. 1460"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/canvas/p1",
@@ -18,6 +19,7 @@
       },
       "height": 5412,
       "width": 7216,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/page/p1/1",
@@ -47,8 +49,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             },
@@ -62,14 +67,14 @@
                 {
                   "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/default.jpg",
                   "type": "Image",
-                  "format": "image/jpeg",
                   "label": {
                     "fr": [
                       "Miniature [Chilpéric Ier tue Galswinthe, se remarie et est assassiné]"
                     ]
                   },
-                  "width": 2138,
+                  "format": "image/jpeg",
                   "height": 2414,
+                  "width": 2138,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature",
@@ -81,8 +86,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/canvas/p1#xywh=3949,994,1091,1232",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/canvas/p1",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "xywh=3949,994,1091,1232"
+                  }
                 }
               ]
             }

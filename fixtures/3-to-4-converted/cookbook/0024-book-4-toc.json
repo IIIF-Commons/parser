@@ -7,6 +7,7 @@
       "Ethiopic Ms 10"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
@@ -18,6 +19,7 @@
       },
       "height": 2504,
       "width": 1768,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p1/1",
@@ -47,8 +49,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -66,6 +71,7 @@
       },
       "height": 2512,
       "width": 1792,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p2/1",
@@ -95,8 +101,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -114,6 +123,7 @@
       },
       "height": 2456,
       "width": 1792,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p3/1",
@@ -143,8 +153,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p3",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -162,6 +175,7 @@
       },
       "height": 2440,
       "width": 1760,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p4/1",
@@ -191,8 +205,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p4",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -210,6 +227,7 @@
       },
       "height": 2416,
       "width": 1776,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p5/1",
@@ -239,8 +257,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p5",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p5",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -258,6 +279,7 @@
       },
       "height": 2416,
       "width": 1776,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/page/p6/1",
@@ -287,8 +309,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p6",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p6",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -306,6 +331,7 @@
           "Table of Contents"
         ]
       },
+      "viewingDirection": "left-to-right",
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r1",
@@ -315,16 +341,7 @@
               "Tabiba Tabiban [ጠቢበ ጠቢባን]"
             ]
           },
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
-              "type": "Canvas"
-            },
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p2",
-              "type": "Canvas"
-            }
-          ]
+          "viewingDirection": "left-to-right"
         },
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2",
@@ -334,6 +351,7 @@
               "Arede'et [አርድዕት]"
             ]
           },
+          "viewingDirection": "left-to-right",
           "items": [
             {
               "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/1",
@@ -343,16 +361,7 @@
                   "Monday"
                 ]
               },
-              "items": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p3",
-                  "type": "Canvas"
-                },
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p4",
-                  "type": "Canvas"
-                }
-              ]
+              "viewingDirection": "left-to-right"
             },
             {
               "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/2",
@@ -362,16 +371,7 @@
                   "Tuesday"
                 ]
               },
-              "items": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p5",
-                  "type": "Canvas"
-                },
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p6",
-                  "type": "Canvas"
-                }
-              ]
+              "viewingDirection": "left-to-right"
             }
           ]
         }

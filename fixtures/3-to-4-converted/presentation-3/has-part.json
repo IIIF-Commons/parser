@@ -7,6 +7,7 @@
       "Picture of Göttingen taken during the 2019 IIIF Conference"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
@@ -16,15 +17,25 @@
           "Canvas with a single IIIF image"
         ]
       },
+      "height": 3024,
+      "width": 4032,
+      "duration": 0,
       "thumbnail": [
         {
           "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
           "type": "Image",
-          "format": "image/jpeg"
+          "format": "image/jpeg",
+          "height": 3024,
+          "width": 4032,
+          "service": [
+            {
+              "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen",
+              "profile": "level1",
+              "type": "ImageService3"
+            }
+          ]
         }
       ],
-      "height": 3024,
-      "width": 4032,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/page/p1/1",
@@ -54,8 +65,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

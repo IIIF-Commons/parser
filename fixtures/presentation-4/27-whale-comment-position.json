@@ -21,113 +21,6 @@
           "A Scene Containing a Whale Cranium and Mandible"
         ]
       },
-      "items": [
-        {
-          "id": "https://example.org/iiif/scene1/page/p1/1",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://example.org/iiif/3d/anno1",
-              "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
-              "body": {
-                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_mandible.glb",
-                "type": "Model",
-                "format": "model/gltf-binary"
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": 0,
-                    "y": 0.03,
-                    "z": 0.05
-                  }
-                ]
-              }
-            },
-            {
-              "id": "https://example.org/iiif/3d/anno2",
-              "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
-              "body": {
-                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_cranium.glb",
-                "type": "Model",
-                "format": "model/gltf-binary"
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": 0,
-                    "y": 0.18,
-                    "z": 0
-                  }
-                ]
-              }
-            },
-            {
-              "id": "https://example.org/iiif/3d/anno4",
-              "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
-              "body": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/3d/cameras/1",
-                  "type": "PerspectiveCamera",
-                  "label": {
-                    "en": [
-                      "Perspective Camera Pointed At Pterygoid Hamulus"
-                    ]
-                  },
-                  "fieldOfView": 50,
-                  "near": 0.1,
-                  "far": 2000
-                },
-                "transform": [
-                  {
-                    "type": "RotateTransform",
-                    "x": -15,
-                    "y": 215,
-                    "z": 0
-                  }
-                ]
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": -0.25,
-                    "y": 0,
-                    "z": -0.5
-                  }
-                ]
-              }
-            }
-          ]
-        }
-      ],
       "annotations": [
         {
           "id": "https://example.org/iiif/scene1/page/p2/1",
@@ -139,42 +32,131 @@
               "motivation": [
                 "commenting"
               ],
-              "body": {
-                "type": "TextualBody",
-                "value": "<p>Right pterygoid hamulus</p>",
-                "format": "text/html",
-                "language": "en",
-                "position": {
+              "body": [
+                {
+                  "type": "TextualBody",
+                  "format": "text/html"
+                }
+              ],
+              "target": [
+                {
                   "type": "SpecificResource",
-                  "source": {
-                    "id": "https://example.org/iiif/scene1",
-                    "type": "Scene"
-                  },
                   "selector": [
                     {
                       "type": "PointSelector",
                       "x": 0.04,
-                      "y": 0,
+                      "y": 0.063,
                       "z": -0.066
                     }
-                  ]
-                }
-              },
-              "target": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/scene1",
-                  "type": "Scene"
-                },
-                "selector": [
-                  {
-                    "type": "PointSelector",
-                    "x": 0.04,
-                    "y": 0.063,
-                    "z": -0.066
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1",
+                    "type": "Scene"
                   }
-                ]
-              }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "https://example.org/iiif/scene1/page/p1/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/3d/anno1",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "body": [
+                {
+                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_mandible.glb",
+                  "type": "Model",
+                  "format": "model/gltf-binary"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 0,
+                      "y": 0.03,
+                      "z": 0.05
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1",
+                    "type": "Scene"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "https://example.org/iiif/3d/anno2",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "body": [
+                {
+                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_cranium.glb",
+                  "type": "Model",
+                  "format": "model/gltf-binary"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": 0,
+                      "y": 0.18,
+                      "z": 0
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1",
+                    "type": "Scene"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "https://example.org/iiif/3d/anno4",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "selector": [
+                    {
+                      "type": "PointSelector",
+                      "x": -0.25,
+                      "y": 0,
+                      "z": -0.5
+                    }
+                  ],
+                  "transform": [],
+                  "action": [],
+                  "source": {
+                    "id": "https://example.org/iiif/scene1",
+                    "type": "Scene"
+                  }
+                }
+              ]
             }
           ]
         }

@@ -1,65 +1,12 @@
 {
-  "seeAlso": [
-    {
-      "format": "text/xml",
-      "profile": "http://www.loc.gov/mods/v3",
-      "label": {
-        "@none": [
-          "MODS metadata describing this object"
-        ]
-      },
-      "type": "Dataset",
-      "id": "https://digital.ucd.ie/view/ucdlib:33064.xml"
-    },
-    {
-      "format": "text/rdf+n3",
-      "label": {
-        "@none": [
-          "RDF n3 serialisation of metadata describing this object"
-        ]
-      },
-      "type": "Dataset",
-      "id": "https://digital.ucd.ie/view/ucdlib:33064.n3"
-    },
-    {
-      "format": "application/x.europeana-edm+xml",
-      "label": {
-        "@none": [
-          "EDM (Europeana Data Model) RDF metadata"
-        ]
-      },
-      "profile": "http://www.europeana.eu/schemas/edm/",
-      "type": "Dataset",
-      "id": "https://data.ucd.ie/api/edm/v1/ucdlib:33064"
-    },
-    {
-      "format": "application/rdf+xml",
-      "label": {
-        "@none": [
-          "RDF-XML metadata describing this object"
-        ]
-      },
-      "type": "Dataset",
-      "id": "https://digital.ucd.ie/view/ucdlib:33064.rdf"
-    }
-  ],
-  "logo": [
-    {
-      "id": "https://digital.ucd.ie/images/logos/ucd_logo_sm.png",
-      "type": "Image"
-    }
-  ],
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://data.ucd.ie/api/img/manifests/ucdlib:33064",
+  "type": "Manifest",
   "label": {
     "@none": [
       "Housing Plans for Greater Dublin"
     ]
   },
-  "thumbnail": [
-    {
-      "id": "https://digital.ucd.ie/get/ucdlib:33064/thumbnail",
-      "type": "Image"
-    }
-  ],
   "metadata": [
     {
       "label": {
@@ -195,8 +142,6 @@
       }
     }
   ],
-  "type": "Manifest",
-  "id": "https://data.ucd.ie/api/img/manifests/ucdlib:33064",
   "requiredStatement": {
     "label": {
       "@none": [
@@ -209,26 +154,81 @@
       ]
     }
   },
+  "viewingDirection": "left-to-right",
+  "thumbnail": [
+    {
+      "id": "https://digital.ucd.ie/get/ucdlib:33064/thumbnail",
+      "type": "Image"
+    }
+  ],
+  "seeAlso": [
+    {
+      "id": "https://digital.ucd.ie/view/ucdlib:33064.xml",
+      "type": "Dataset",
+      "label": {
+        "@none": [
+          "MODS metadata describing this object"
+        ]
+      },
+      "profile": "http://www.loc.gov/mods/v3",
+      "format": "text/xml"
+    },
+    {
+      "id": "https://digital.ucd.ie/view/ucdlib:33064.n3",
+      "type": "Dataset",
+      "label": {
+        "@none": [
+          "RDF n3 serialisation of metadata describing this object"
+        ]
+      },
+      "format": "text/rdf+n3"
+    },
+    {
+      "id": "https://data.ucd.ie/api/edm/v1/ucdlib:33064",
+      "type": "Dataset",
+      "label": {
+        "@none": [
+          "EDM (Europeana Data Model) RDF metadata"
+        ]
+      },
+      "profile": "http://www.europeana.eu/schemas/edm/",
+      "format": "application/x.europeana-edm+xml"
+    },
+    {
+      "id": "https://digital.ucd.ie/view/ucdlib:33064.rdf",
+      "type": "Dataset",
+      "label": {
+        "@none": [
+          "RDF-XML metadata describing this object"
+        ]
+      },
+      "format": "application/rdf+xml"
+    }
+  ],
   "partOf": [
     {
+      "id": "https://data.ucd.ie/api/img/collection/ucdlib:33058",
+      "type": "Collection",
       "label": {
         "@none": [
           "Dublin Town Planning Competition 1914"
         ]
       },
-      "type": "Collection",
-      "id": "https://data.ucd.ie/api/img/collection/ucdlib:33058"
+      "viewingDirection": "left-to-right"
     }
   ],
   "items": [
     {
+      "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
+      "type": "Canvas",
       "label": {
         "@none": [
           "recto"
         ]
       },
-      "width": 14451,
       "height": 14214,
+      "width": 14451,
+      "duration": 0,
       "service": [
         {
           "profile": "http://iiif.io/api/annex/services/physdim",
@@ -237,43 +237,44 @@
           "type": "Service"
         }
       ],
-      "type": "Canvas",
-      "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
       "items": [
         {
+          "id": "https://example.org/uuid/46df4103-9fa4-4f30-b85d-f01fc6bbaa9c",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://data.ucd.ie/api/img/ucdlib:33064/annotation/ucdlib:33543",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://data.ucd.ie/api/img/ucdlib:33064/annotation/ucdlib:33543",
-              "target": [
-                {
-                  "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://iiif.ucd.ie/loris/ucdlib:33543/full/full/0/default.jpg",
+                  "type": "dcTypes:Image",
+                  "format": "image/jpeg",
+                  "height": 14214,
+                  "width": 14451,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level2.json",
                       "id": "https://iiif.ucd.ie/loris/ucdlib:33543",
                       "type": "ImageService2"
                     }
-                  ],
-                  "format": "image/jpeg",
-                  "height": 14214,
-                  "width": 14451,
-                  "type": "dcTypes:Image",
-                  "id": "https://iiif.ucd.ie/loris/ucdlib:33543/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/46df4103-9fa4-4f30-b85d-f01fc6bbaa9c"
+          ]
         }
       ]
     }
@@ -282,22 +283,16 @@
     {
       "id": "https://data.ucd.ie/api/img/manifests/ucdlib:33064/sequence/normal",
       "type": "Range",
-      "behavior": [
-        "sequence",
-        "individuals"
-      ],
-      "items": [
-        {
-          "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
-          "type": "Canvas"
-        }
-      ],
       "label": {
         "@none": [
           "Current Page Order"
         ]
-      }
+      },
+      "behavior": [
+        "sequence",
+        "individuals"
+      ],
+      "viewingDirection": "left-to-right"
     }
-  ],
-  "@context": "http://iiif.io/api/presentation/4/context.json"
+  ]
 }

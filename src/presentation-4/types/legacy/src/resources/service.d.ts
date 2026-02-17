@@ -17,9 +17,9 @@ export type ServiceReference = {
 
 export type GenericService = Prettify<
   ServiceReference & {
-    id?: string;
+    id: string;
     "@id"?: string;
-    type?: string;
+    type: string;
     "@type"?: string;
     profile?: string | string[] | Record<string, unknown>;
     label?: LanguageMap | string;
@@ -29,4 +29,4 @@ export type GenericService = Prettify<
   }
 >;
 
-export type Service = ServiceV3 | GenericService | string | Record<string, unknown>;
+export type Service = ServiceV3 | GenericService;

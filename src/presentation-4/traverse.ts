@@ -56,6 +56,7 @@ type UnknownTraversalArgs = {
 const linkedResourceKeys = ["thumbnail", "homepage", "rendering", "seeAlso", "supplementary", "logo"] as const;
 
 const linkedObjectKeys = ["placeholderContainer", "accompanyingContainer", "start"] as const;
+const multiItemContentResourceTypes = new Set(["Choice", "Composite", "List", "Independents"]);
 
 function isResourceReference(resource: any): boolean {
   if (!resource || typeof resource !== "object" || Array.isArray(resource)) {
@@ -357,7 +358,8 @@ export class Traverse {
 
   private traverseAnnotationBody(annotation: any, path: string) {
     if (annotation.body) {
-      annotation.body = ensureArray(annotation.body).map((body: any, index: number) =>
+      const bodyValues = this.expandAnnotationListWrappers(annotation.body);
+      annotation.body = bodyValues.map((body: any, index: number) =>
         this.traverseUnknown(body, {
           parent: annotation,
           path: `${path}.body[${index}]`,
@@ -371,7 +373,8 @@ export class Traverse {
   private traverseAnnotationTarget(annotation: any, path: string) {
     if (annotation.target) {
       const originalTarget = annotation.target;
-      const targets = ensureArray(annotation.target).map((target: any, index: number) => {
+      const targetValues = this.expandAnnotationListWrappers(annotation.target);
+      const targets = targetValues.map((target: any, index: number) => {
         const targetPath = `${path}.target[${index}]`;
         if (isSpecificResource(target)) {
           return this.traverseSpecificResource(target, undefined, annotation, targetPath);
@@ -521,10 +524,7 @@ export class Traverse {
       specificResource.source = nextSource;
     }
 
-    if (
-      this.options.legacyPresentation3Behavior &&
-      !Object.prototype.hasOwnProperty.call(specificResource, "selector")
-    ) {
+    if (this.options.legacyPresentation3Behavior && !Object.hasOwn(specificResource, "selector")) {
       specificResource.selector = undefined;
     }
 
@@ -551,7 +551,7 @@ export class Traverse {
       return this.traverseSelector(contentResource, parent, path);
     }
 
-    if (contentResource.type === "Choice" && contentResource.items) {
+    if (multiItemContentResourceTypes.has(contentResource.type) && contentResource.items) {
       contentResource.items = ensureArray(contentResource.items).map((item: any, index: number) =>
         this.traverseContentResource(item, contentResource, `${path}.items[${index}]`)
       );
@@ -615,6 +615,22 @@ export class Traverse {
       );
     }
     return this.traverseType(service, { parent, path }, this.traversals.service);
+  }
+
+  private expandAnnotationListWrappers(value: any): any[] {
+    const values = ensureArray(value);
+    const expanded: any[] = [];
+
+    for (const item of values) {
+      const itemType = getType(item);
+      if (item && typeof item === "object" && !Array.isArray(item) && itemType === "List" && "items" in item) {
+        expanded.push(...ensureArray((item as any).items));
+        continue;
+      }
+      expanded.push(item);
+    }
+
+    return expanded;
   }
 
   private traverseType<T>(object: T, context: TraversalContext, traversals: Array<Traversal<T>>): T {

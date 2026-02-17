@@ -7,16 +7,6 @@
       "Video of a 30-minute digital clock"
     ]
   },
-  "start": {
-    "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
-    "type": "SpecificResource",
-    "source": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
-    "selector": {
-      "type": "PointSelector",
-      "t": 120.5
-    }
-  },
-  "rights": "http://creativecommons.org/licenses/by/3.0/",
   "requiredStatement": {
     "label": {
       "en": [
@@ -29,10 +19,14 @@
       ]
     }
   },
+  "rights": "http://creativecommons.org/licenses/by/3.0/",
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
       "type": "Canvas",
+      "height": 0,
+      "width": 0,
       "duration": 1801.055,
       "items": [
         {
@@ -49,14 +43,17 @@
                 {
                   "id": "https://fixtures.iiif.io/video/indiana/30-minute-clock/medium/30-minute-clock.mp4",
                   "type": "Video",
-                  "duration": 1801.055,
-                  "format": "video/mp4"
+                  "format": "video/mp4",
+                  "duration": 1801.055
                 }
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

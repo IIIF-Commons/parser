@@ -7,6 +7,7 @@
       "[Conoximent de las orines] Ihesus, Ihesus. En nom de Deu et dela beneyeta sa mare e de tots los angels i archangels e de tots los sants e santes de paradis yo micer Johannes comense aquest libre de reseptes en l’ayn Mi 466."
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
@@ -16,8 +17,9 @@
           "inside cover; 1r"
         ]
       },
-      "width": 2105,
       "height": 1523,
+      "width": 2105,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/p1/1",
@@ -29,35 +31,13 @@
               "motivation": [
                 "painting"
               ],
-              "stylesheet": {
-                "type": "CssStylesheet",
-                "value": ".rotated { transform-origin: center; transform: rotate(90deg); }"
-              },
-              "body": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/body/sr1",
-                  "type": "SpecificResource",
-                  "styleClass": "rotated",
-                  "source": {
-                    "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-page1/full/max/0/default.jpg",
-                    "type": "Image",
-                    "format": "image/jpeg",
-                    "width": 1523,
-                    "height": 2105,
-                    "service": [
-                      {
-                        "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-master",
-                        "type": "ImageService3",
-                        "profile": "level1"
-                      }
-                    ]
-                  }
-                }
-              ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

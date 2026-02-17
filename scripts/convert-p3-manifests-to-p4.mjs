@@ -87,6 +87,7 @@ function main() {
   });
 
   const converted = [];
+  const skipped = [];
 
   for (const sourceFile of sourceFiles) {
     const inputText = readFileSync(sourceFile, 'utf8');
@@ -102,29 +103,40 @@ function main() {
       continue;
     }
 
-    const normalized = normalize(inputJson);
-    const upgraded = serialize(
-      {
-        mapping: normalized.mapping,
-        entities: normalized.entities,
-        requests: {},
-      },
-      normalized.resource,
-      serializeConfigPresentation4
-    );
-    const cleaned = sanitizeConvertedManifest(upgraded, true);
-    const rel = toPosixPath(relative(fixturesRoot, sourceFile));
-    const destination = join(outputRoot, rel);
+    try {
+      const normalized = normalize(inputJson);
+      const upgraded = serialize(
+        {
+          mapping: normalized.mapping,
+          entities: normalized.entities,
+          requests: {},
+        },
+        normalized.resource,
+        serializeConfigPresentation4
+      );
+      const cleaned = sanitizeConvertedManifest(upgraded, true);
+      const rel = toPosixPath(relative(fixturesRoot, sourceFile));
+      const destination = join(outputRoot, rel);
 
-    mkdirSync(dirname(destination), { recursive: true });
-    writeFileSync(destination, `${JSON.stringify(cleaned, null, 2)}\n`);
-    converted.push(toPosixPath(relative(outputRoot, destination)));
+      mkdirSync(dirname(destination), { recursive: true });
+      writeFileSync(destination, `${JSON.stringify(cleaned, null, 2)}\n`);
+      converted.push(toPosixPath(relative(outputRoot, destination)));
+    } catch (error) {
+      const rel = toPosixPath(relative(fixturesRoot, sourceFile));
+      const reason = error instanceof Error ? error.message : String(error);
+      skipped.push({ fixture: rel, reason });
+      console.warn(`Skipping ${rel}: ${reason}`);
+    }
   }
 
   converted.sort();
   writeFileSync(join(outputRoot, '_index.json'), `${JSON.stringify(converted, null, 2)}\n`);
 
   console.log(`Converted ${converted.length} P3 manifests to ${toPosixPath(relative(process.cwd(), outputRoot))}`);
+  if (skipped.length) {
+    console.log(`Skipped ${skipped.length} manifests during conversion`);
+    writeFileSync(join(outputRoot, '_skipped.json'), `${JSON.stringify(skipped, null, 2)}\n`);
+  }
 }
 
 main();
