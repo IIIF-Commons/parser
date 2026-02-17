@@ -144,7 +144,6 @@
   "behavior": [
     "auto-advance"
   ],
-  "viewingDirection": "left-to-right",
   "service": [
     {
       "id": "https://api.bl.uk/auth/iiif/login",
@@ -250,14 +249,12 @@
   "items": [
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000004",
-      "type": "Canvas",
+      "type": "Timeline",
       "label": {
         "en": [
           "Tape 1 Side 1"
         ]
       },
-      "height": 0,
-      "width": 0,
       "duration": 2023.56,
       "items": [
         {
@@ -329,14 +326,12 @@
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000005",
-      "type": "Canvas",
+      "type": "Timeline",
       "label": {
         "en": [
           "Tape 1 Side 2"
         ]
       },
-      "height": 0,
-      "width": 0,
       "duration": 1760.04,
       "items": [
         {
@@ -408,14 +403,12 @@
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007",
-      "type": "Canvas",
+      "type": "Timeline",
       "label": {
         "en": [
           "Tape 2 Side 1"
         ]
       },
-      "height": 0,
-      "width": 0,
       "duration": 1392.56,
       "items": [
         {
@@ -472,7 +465,7 @@
                   "type": "SpecificResource",
                   "source": {
                     "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000007",
-                    "type": "Canvas"
+                    "type": "Timeline"
                   },
                   "selector": {
                     "type": "FragmentSelector",
@@ -487,14 +480,12 @@
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008",
-      "type": "Canvas",
+      "type": "Timeline",
       "label": {
         "en": [
           "Tape 2 Side 2"
         ]
       },
-      "height": 0,
-      "width": 0,
       "duration": 1404.92,
       "items": [
         {
@@ -551,7 +542,7 @@
                   "type": "SpecificResource",
                   "source": {
                     "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000008",
-                    "type": "Canvas"
+                    "type": "Timeline"
                   },
                   "selector": {
                     "type": "FragmentSelector",
@@ -566,14 +557,12 @@
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a",
-      "type": "Canvas",
+      "type": "Timeline",
       "label": {
         "en": [
           "Tape 3 Side 1"
         ]
       },
-      "height": 0,
-      "width": 0,
       "duration": 1406.32,
       "items": [
         {
@@ -630,7 +619,7 @@
                   "type": "SpecificResource",
                   "source": {
                     "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000a",
-                    "type": "Canvas"
+                    "type": "Timeline"
                   },
                   "selector": {
                     "type": "FragmentSelector",
@@ -645,14 +634,12 @@
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000b",
-      "type": "Canvas",
+      "type": "Timeline",
       "label": {
         "en": [
           "Tape 3 Side 2"
         ]
       },
-      "height": 0,
-      "width": 0,
       "duration": 1398.84,
       "items": [
         {
@@ -854,7 +841,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "rendering": [
         {
           "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000002/top",
@@ -1049,7 +1035,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00000c",
@@ -1242,7 +1227,6 @@
                   }
                 }
               ],
-              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00000d",
@@ -1423,7 +1407,6 @@
                   }
                 }
               ],
-              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00000e",
@@ -1442,8 +1425,7 @@
               "type": "Range",
               "behavior": [
                 "no-nav"
-              ],
-              "viewingDirection": "left-to-right"
+              ]
             },
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00000f",
@@ -1625,7 +1607,6 @@
                   }
                 }
               ],
-              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00000f",
@@ -1822,7 +1803,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000016",
@@ -1841,8 +1821,7 @@
           "type": "Range",
           "behavior": [
             "no-nav"
-          ],
-          "viewingDirection": "left-to-right"
+          ]
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000018",
@@ -2026,7 +2005,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000018",
@@ -2220,7 +2198,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00001a",
@@ -2413,7 +2390,6 @@
                   }
                 }
               ],
-              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00001b",
@@ -2432,8 +2408,7 @@
               "type": "Range",
               "behavior": [
                 "no-nav"
-              ],
-              "viewingDirection": "left-to-right"
+              ]
             },
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00001c",
@@ -2614,7 +2589,6 @@
                   }
                 }
               ],
-              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00001c",
@@ -2633,8 +2607,7 @@
               "type": "Range",
               "behavior": [
                 "no-nav"
-              ],
-              "viewingDirection": "left-to-right"
+              ]
             },
             {
               "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00001d",
@@ -2816,7 +2789,6 @@
                   }
                 }
               ],
-              "viewingDirection": "left-to-right",
               "rendering": [
                 {
                   "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00001d",
@@ -3011,7 +2983,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000024",
@@ -3030,8 +3001,7 @@
           "type": "Range",
           "behavior": [
             "no-nav"
-          ],
-          "viewingDirection": "left-to-right"
+          ]
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x000026",
@@ -3212,7 +3182,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000026",
@@ -3406,7 +3375,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x000028",
@@ -3425,8 +3393,7 @@
           "type": "Range",
           "behavior": [
             "no-nav"
-          ],
-          "viewingDirection": "left-to-right"
+          ]
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00002a",
@@ -3608,7 +3575,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00002a",
@@ -3627,8 +3593,7 @@
           "type": "Range",
           "behavior": [
             "no-nav"
-          ],
-          "viewingDirection": "left-to-right"
+          ]
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00002c",
@@ -3809,7 +3774,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00002c",
@@ -3828,8 +3792,7 @@
           "type": "Range",
           "behavior": [
             "no-nav"
-          ],
-          "viewingDirection": "left-to-right"
+          ]
         },
         {
           "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_100052320369.0x00002e",
@@ -3974,7 +3937,6 @@
               }
             }
           ],
-          "viewingDirection": "left-to-right",
           "rendering": [
             {
               "id": "https://api.bl.uk/item/download/ark:/81055/vdc_100052320369.0x000002/ark:/81055/vdc_100052320369.0x00002e",

@@ -226,7 +226,6 @@
     }
   },
   "rights": "http://creativecommons.org/licenses/by-nc/4.0/",
-  "viewingDirection": "left-to-right",
   "service": [
     {
       "profile": "https://www.w3.org/ns/webmention",
@@ -250,8 +249,7 @@
   "partOf": [
     {
       "id": "https://www.e-codices.ch/en/list/csg",
-      "type": "Collection",
-      "viewingDirection": "left-to-right"
+      "type": "Collection"
     }
   ],
   "items": [
@@ -6776,8 +6774,7 @@
       },
       "behavior": [
         "sequence"
-      ],
-      "viewingDirection": "left-to-right"
+      ]
     },
     {
       "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/sequence/Sequence-1190.json",
@@ -6798,8 +6795,7 @@
       },
       "behavior": [
         "sequence"
-      ],
-      "viewingDirection": "left-to-right"
+      ]
     }
   ]
 }

@@ -94,7 +94,6 @@
     }
   ],
   "navDate": "1804-01-28T00:00:00Z",
-  "viewingDirection": "left-to-right",
   "seeAlso": [
     {
       "id": "http://hdl.handle.net/10107/3320640",
@@ -106,8 +105,7 @@
   "partOf": [
     {
       "id": "http://dams.llgc.org.uk/iiif/newspapers/3320639.json",
-      "type": "Collection",
-      "viewingDirection": "left-to-right"
+      "type": "Collection"
     }
   ],
   "items": [
@@ -703,7 +701,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle1.json",
@@ -738,7 +735,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle2.json",
@@ -785,7 +781,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle3.json",
@@ -820,7 +815,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle4.json",
@@ -867,7 +861,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle5.json",
@@ -902,7 +895,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle6.json",
@@ -937,7 +929,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle7.json",
@@ -984,7 +975,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle8.json",
@@ -1019,7 +1009,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle9.json",
@@ -1054,7 +1043,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle10.json",
@@ -1101,7 +1089,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle11.json",
@@ -1148,7 +1135,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle12.json",
@@ -1195,7 +1181,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle13.json",
@@ -1230,7 +1215,6 @@
           }
         }
       ],
-      "viewingDirection": "left-to-right",
       "supplementary": [
         {
           "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle14.json",

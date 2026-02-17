@@ -7,7 +7,6 @@
       "Ethiopic Ms 10"
     ]
   },
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
@@ -331,7 +330,6 @@
           "Table of Contents"
         ]
       },
-      "viewingDirection": "left-to-right",
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r1",
@@ -340,8 +338,7 @@
             "gez": [
               "Tabiba Tabiban [ጠቢበ ጠቢባን]"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2",
@@ -351,7 +348,6 @@
               "Arede'et [አርድዕት]"
             ]
           },
-          "viewingDirection": "left-to-right",
           "items": [
             {
               "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/1",
@@ -360,8 +356,7 @@
                 "en": [
                   "Monday"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/2",
@@ -370,8 +365,7 @@
                 "en": [
                   "Tuesday"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             }
           ]
         }

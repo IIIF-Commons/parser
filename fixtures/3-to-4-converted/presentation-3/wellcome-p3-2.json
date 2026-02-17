@@ -86,7 +86,6 @@
   "behavior": [
     "paged"
   ],
-  "viewingDirection": "left-to-right",
   "services": [
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723#tracking",
@@ -269,8 +268,7 @@
         "en": [
           "Contributor: Bolle, Fritz."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/hq8gcy73",
@@ -279,8 +277,7 @@
         "en": [
           "Subject: Genetics - history"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Pamphlets",
@@ -289,8 +286,7 @@
         "en": [
           "Genre: Pamphlets"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     }
   ],
   "annotations": [
@@ -4398,8 +4394,7 @@
         "none": [
           "Front Cover"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/ranges/LOG_0003",
@@ -4408,8 +4403,7 @@
         "none": [
           "Title Page"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/ranges/LOG_0002",
@@ -4418,8 +4412,7 @@
         "none": [
           "Back Cover"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     }
   ]
 }

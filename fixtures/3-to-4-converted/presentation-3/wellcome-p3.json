@@ -81,7 +81,6 @@
   "behavior": [
     "paged"
   ],
-  "viewingDirection": "left-to-right",
   "services": [
     {
       "type": "Text",
@@ -252,8 +251,7 @@
         "en": [
           "Contributor: Llanwrtyd Wells (Wales). Urban District Council."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/xaqnqsbj",
@@ -262,8 +260,7 @@
         "en": [
           "Subject: Disease Outbreaks."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/tva37rme",
@@ -272,8 +269,7 @@
         "en": [
           "Subject: Public Health."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/p2mzt7rw",
@@ -282,8 +278,7 @@
         "en": [
           "Subject: Sanitation."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/pxxu6hsg",
@@ -292,8 +287,7 @@
         "en": [
           "Subject: Water Supply."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/dyss49dy",
@@ -302,8 +296,7 @@
         "en": [
           "Subject: Llanwrtyd Wells (Wales)"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Electronic_books.",
@@ -312,8 +305,7 @@
         "en": [
           "Genre: Electronic books."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Annual_reports.",
@@ -322,8 +314,7 @@
         "en": [
           "Genre: Annual reports."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/MOH_reports.",
@@ -332,8 +323,7 @@
         "en": [
           "Genre: MOH reports."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Statistics.",
@@ -342,8 +332,7 @@
         "en": [
           "Genre: Statistics."
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     }
   ],
   "annotations": [
@@ -1522,8 +1511,7 @@
         "none": [
           "Cover"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/ranges/LOG_0002",
@@ -1532,8 +1520,7 @@
         "none": [
           "Cover"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     }
   ]
 }

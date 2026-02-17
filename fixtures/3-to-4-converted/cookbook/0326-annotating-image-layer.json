@@ -7,7 +7,6 @@
       "Choice Example with layer specific annotation"
     ]
   },
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0326-annotating-image-layer/canvas/p1",

@@ -10,7 +10,6 @@
   "behavior": [
     "continuous"
   ],
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/s1",

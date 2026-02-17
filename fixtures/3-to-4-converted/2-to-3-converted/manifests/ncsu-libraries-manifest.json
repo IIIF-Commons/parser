@@ -93,7 +93,6 @@
       ]
     }
   },
-  "viewingDirection": "left-to-right",
   "service": [
     {
       "profile": "http://iiif.io/api/search/0/search",

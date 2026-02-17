@@ -21,7 +21,6 @@
       }
     }
   ],
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/canvas/canvas-48309544.json",
@@ -2411,7 +2410,6 @@
           "Table of Contents"
         ]
       },
-      "viewingDirection": "left-to-right",
       "items": [
         {
           "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1.json",
@@ -2421,7 +2419,6 @@
               "Bibliographic information (seq. 1-20)"
             ]
           },
-          "viewingDirection": "left-to-right",
           "items": [
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-1.json",
@@ -2430,8 +2427,7 @@
                 "@none": [
                   "(seq. 1)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-2.json",
@@ -2440,8 +2436,7 @@
                 "@none": [
                   "(seq. 2)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-3.json",
@@ -2450,8 +2445,7 @@
                 "@none": [
                   "(seq. 3)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-4.json",
@@ -2460,8 +2454,7 @@
                 "@none": [
                   "(seq. 4)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-5.json",
@@ -2470,8 +2463,7 @@
                 "@none": [
                   "(seq. 5)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-6.json",
@@ -2480,8 +2472,7 @@
                 "@none": [
                   "(seq. 6)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-7.json",
@@ -2490,8 +2481,7 @@
                 "@none": [
                   "(seq. 7)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-8.json",
@@ -2500,8 +2490,7 @@
                 "@none": [
                   "(seq. 8)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-9.json",
@@ -2510,8 +2499,7 @@
                 "@none": [
                   "(seq. 9)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-10.json",
@@ -2520,8 +2508,7 @@
                 "@none": [
                   "(seq. 10)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-11.json",
@@ -2530,8 +2517,7 @@
                 "@none": [
                   "(seq. 11)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-12.json",
@@ -2540,8 +2526,7 @@
                 "@none": [
                   "(seq. 12)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-13.json",
@@ -2550,8 +2535,7 @@
                 "@none": [
                   "(seq. 13)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-14.json",
@@ -2560,8 +2544,7 @@
                 "@none": [
                   "(seq. 14)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-15.json",
@@ -2570,8 +2553,7 @@
                 "@none": [
                   "(seq. 15)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-16.json",
@@ -2580,8 +2562,7 @@
                 "@none": [
                   "(seq. 16)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-17.json",
@@ -2590,8 +2571,7 @@
                 "@none": [
                   "(seq. 17)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-18.json",
@@ -2600,8 +2580,7 @@
                 "@none": [
                   "(seq. 18)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-19.json",
@@ -2610,8 +2589,7 @@
                 "@none": [
                   "(seq. 19)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-1-20.json",
@@ -2620,8 +2598,7 @@
                 "@none": [
                   "(seq. 20)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             }
           ]
         },
@@ -2633,7 +2610,6 @@
               "Recto (seq. 21-40)"
             ]
           },
-          "viewingDirection": "left-to-right",
           "items": [
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-1.json",
@@ -2642,8 +2618,7 @@
                 "@none": [
                   "(seq. 21)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-2.json",
@@ -2652,8 +2627,7 @@
                 "@none": [
                   "(seq. 22)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-3.json",
@@ -2662,8 +2636,7 @@
                 "@none": [
                   "(seq. 23)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-4.json",
@@ -2672,8 +2645,7 @@
                 "@none": [
                   "(seq. 24)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-5.json",
@@ -2682,8 +2654,7 @@
                 "@none": [
                   "(seq. 25)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-6.json",
@@ -2692,8 +2663,7 @@
                 "@none": [
                   "(seq. 26)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-7.json",
@@ -2702,8 +2672,7 @@
                 "@none": [
                   "(seq. 27)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-8.json",
@@ -2712,8 +2681,7 @@
                 "@none": [
                   "(seq. 28)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-9.json",
@@ -2722,8 +2690,7 @@
                 "@none": [
                   "(seq. 29)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-10.json",
@@ -2732,8 +2699,7 @@
                 "@none": [
                   "(seq. 30)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-11.json",
@@ -2742,8 +2708,7 @@
                 "@none": [
                   "(seq. 31)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-12.json",
@@ -2752,8 +2717,7 @@
                 "@none": [
                   "(seq. 32)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-13.json",
@@ -2762,8 +2726,7 @@
                 "@none": [
                   "(seq. 33)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-14.json",
@@ -2772,8 +2735,7 @@
                 "@none": [
                   "(seq. 34)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-15.json",
@@ -2782,8 +2744,7 @@
                 "@none": [
                   "(seq. 35)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-16.json",
@@ -2792,8 +2753,7 @@
                 "@none": [
                   "(seq. 36)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-17.json",
@@ -2802,8 +2762,7 @@
                 "@none": [
                   "(seq. 37)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-18.json",
@@ -2812,8 +2771,7 @@
                 "@none": [
                   "(seq. 38)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-19.json",
@@ -2822,8 +2780,7 @@
                 "@none": [
                   "(seq. 39)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.lib.harvard.edu/manifests/drs:48309543/range/range-1-2-20.json",
@@ -2832,8 +2789,7 @@
                 "@none": [
                   "(seq. 40)"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             }
           ]
         },
@@ -2844,8 +2800,7 @@
             "@none": [
               "Scroll view (stitched digital image) (seq. 41)"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         }
       ]
     }

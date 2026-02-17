@@ -10,7 +10,6 @@
   "behavior": [
     "paged"
   ],
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/canvas/p1",

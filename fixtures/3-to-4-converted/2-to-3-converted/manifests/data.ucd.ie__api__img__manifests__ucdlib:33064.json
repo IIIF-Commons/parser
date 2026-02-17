@@ -154,7 +154,6 @@
       ]
     }
   },
-  "viewingDirection": "left-to-right",
   "thumbnail": [
     {
       "id": "https://digital.ucd.ie/get/ucdlib:33064/thumbnail",
@@ -213,8 +212,7 @@
         "@none": [
           "Dublin Town Planning Competition 1914"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     }
   ],
   "items": [
@@ -291,8 +289,7 @@
       "behavior": [
         "sequence",
         "individuals"
-      ],
-      "viewingDirection": "left-to-right"
+      ]
     }
   ]
 }

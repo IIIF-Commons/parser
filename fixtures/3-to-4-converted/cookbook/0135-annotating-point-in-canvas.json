@@ -12,7 +12,6 @@
       "A map containing an point with an annotation of the location."
     ]
   },
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",

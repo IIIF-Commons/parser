@@ -142,7 +142,6 @@
     }
   },
   "rights": "https://creativecommons.org/publicdomain/mark/1.0/",
-  "viewingDirection": "left-to-right",
   "service": [
     {
       "profile": "http://iiif.io/api/auth/0/login",
@@ -47887,8 +47886,7 @@
         "@none": [
           "Section"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E.0x000002",
@@ -47897,8 +47895,7 @@
         "@none": [
           "Title"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E.0x000003",
@@ -47907,8 +47904,7 @@
         "@none": [
           "Table of Contents"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E.0x000004",
@@ -47917,8 +47913,7 @@
         "@none": [
           "Table of Contents"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E.0x000005",
@@ -47927,8 +47922,7 @@
         "@none": [
           "Section"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     }
   ]
 }

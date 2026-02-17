@@ -1,4 +1,4 @@
-export const presentation3ClassRequirements = {
+export const presentation4ClassRequirements = {
   spec: {
     name: "IIIF Presentation API 4.0 (preview) - Properties / Model",
     source: "https://preview.iiif.io/api/p4-composite/presentation/4.0/model/",

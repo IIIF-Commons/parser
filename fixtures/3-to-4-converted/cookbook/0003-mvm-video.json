@@ -7,7 +7,6 @@
       "Video Example 3"
     ]
   },
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas",
