@@ -81,12 +81,10 @@
       ]
     }
   },
-  "viewingDirection": "left-to-right",
   "partOf": [
     {
       "id": "within URI",
-      "type": "Collection",
-      "viewingDirection": "left-to-right"
+      "type": "Collection"
     }
   ],
   "items": [
@@ -932,7 +930,6 @@
           "Table of Contents"
         ]
       },
-      "viewingDirection": "left-to-right",
       "items": [
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c001",
@@ -941,8 +938,7 @@
             "@none": [
               "Untitled Text"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c003",
@@ -951,8 +947,7 @@
             "@none": [
               "MANIFESTE DADA 1918."
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c007",
@@ -961,8 +956,7 @@
             "@none": [
               "SOPRA UN QUADRO CUBISTA"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c009",
@@ -971,8 +965,7 @@
             "@none": [
               "Regard"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c012",
@@ -981,8 +974,7 @@
             "@none": [
               "Avant l'heure"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c013",
@@ -991,8 +983,7 @@
             "@none": [
               "SALIVE AMÉRICAINE"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c014",
@@ -1001,8 +992,7 @@
             "@none": [
               "Bois de E. PRAMPOLINI"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c045",
@@ -1011,8 +1001,7 @@
             "@none": [
               "ABRI"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c015",
@@ -1021,8 +1010,7 @@
             "@none": [
               "LA JOIE DES SEPT COULEURS: (Fragment)"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c019",
@@ -1031,8 +1019,7 @@
             "@none": [
               "CRAYON BLEU: Poème à trois voix simultanées"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c020",
@@ -1041,8 +1028,7 @@
             "@none": [
               "Guillaume Apollinaire"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c021",
@@ -1051,8 +1037,7 @@
             "@none": [
               "BOIS de H. RICHTER"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c022",
@@ -1061,8 +1046,7 @@
             "@none": [
               "Bâton"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c028",
@@ -1071,8 +1055,7 @@
             "@none": [
               "3 gravures sur bois par H. ARP"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c029",
@@ -1081,8 +1064,7 @@
             "@none": [
               "GUILLAUME APOLLINAIRE"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c031",
@@ -1091,8 +1073,7 @@
             "@none": [
               "circuit total par la lune et par la couleur"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c032",
@@ -1101,8 +1082,7 @@
             "@none": [
               "Gravure originale de MARCEL JANCO."
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c033",
@@ -1111,8 +1091,7 @@
             "@none": [
               "à Kisling"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c033a",
@@ -1121,8 +1100,7 @@
             "@none": [
               "Bulletin"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c034",
@@ -1131,8 +1109,7 @@
             "@none": [
               "Untitled Image"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c035",
@@ -1141,8 +1118,7 @@
             "@none": [
               "Untitled Image"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c036",
@@ -1151,8 +1127,7 @@
             "@none": [
               "LE MARIN"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c038",
@@ -1161,8 +1136,7 @@
             "@none": [
               "CALENDRIER"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c039",
@@ -1171,8 +1145,7 @@
             "@none": [
               "COW-BOY"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c042",
@@ -1181,8 +1154,7 @@
             "@none": [
               "[Advertisement]"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c043",
@@ -1191,8 +1163,7 @@
             "@none": [
               "[Advertisement]"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c044",
@@ -1201,8 +1172,7 @@
             "@none": [
               "[Advertisement]"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c046",
@@ -1211,8 +1181,7 @@
             "@none": [
               "[Advertisement]"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c047",
@@ -1221,8 +1190,7 @@
             "@none": [
               "[Advertisement]"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c048",
@@ -1231,8 +1199,7 @@
             "@none": [
               "Ad for Editions SIC"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "http://bluemountain.princeton.edu/exist/restxq/iiif/bmtnaae_1918-12_01/range/c049",
@@ -1241,8 +1208,7 @@
             "@none": [
               "Ad for Tzara's 25 Poemes"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         }
       ]
     }

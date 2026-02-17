@@ -129,7 +129,6 @@
       ]
     }
   },
-  "viewingDirection": "left-to-right",
   "rendering": [
     {
       "id": "https://www.harvardartmuseums.org/collections/object/299843",
@@ -145,8 +144,7 @@
   "partOf": [
     {
       "id": "https://www.harvardartmuseums.org/collections",
-      "type": "Collection",
-      "viewingDirection": "left-to-right"
+      "type": "Collection"
     }
   ],
   "items": [
@@ -506,8 +504,7 @@
       "behavior": [
         "sequence",
         "individuals"
-      ],
-      "viewingDirection": "left-to-right"
+      ]
     }
   ]
 }

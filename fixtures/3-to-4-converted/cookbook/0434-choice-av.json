@@ -13,13 +13,10 @@
     ]
   },
   "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
-      "type": "Canvas",
-      "height": 0,
-      "width": 0,
+      "type": "Timeline",
       "duration": 16,
       "items": [
         {
@@ -110,7 +107,7 @@
                   "type": "SpecificResource",
                   "source": {
                     "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
-                    "type": "Canvas"
+                    "type": "Timeline"
                   }
                 }
               ]

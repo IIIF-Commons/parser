@@ -7,12 +7,10 @@
       "Test 1 Manifest: Minimum Required Fields"
     ]
   },
-  "viewingDirection": "left-to-right",
   "partOf": [
     {
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/collection.json",
-      "type": "Collection",
-      "viewingDirection": "left-to-right"
+      "type": "Collection"
     }
   ],
   "items": [

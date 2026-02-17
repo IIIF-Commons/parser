@@ -7,7 +7,6 @@
       "Video navigation with thumbnails in a Range"
     ]
   },
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/canvas/1",
@@ -63,15 +62,13 @@
       "behavior": [
         "thumbnail-nav"
       ],
-      "viewingDirection": "left-to-right",
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/1.1",
           "type": "Range",
           "behavior": [
             "no-nav"
-          ],
-          "viewingDirection": "left-to-right"
+          ]
         },
         {
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/2",
@@ -81,7 +78,6 @@
               "9s – 305s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-01.png",
@@ -100,7 +96,6 @@
               "305s – 610s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-02.png",
@@ -119,7 +114,6 @@
               "610s – 915s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-03.png",
@@ -138,7 +132,6 @@
               "915s – 1220s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-04.png",
@@ -157,7 +150,6 @@
               "1220s – 1525s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-05.png",
@@ -176,7 +168,6 @@
               "1525s – 1830s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-06.png",
@@ -195,7 +186,6 @@
               "1830s – 2135s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-07.png",
@@ -214,7 +204,6 @@
               "2135s – 2440s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-08.png",
@@ -233,7 +222,6 @@
               "2440s – 2745s"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-09.png",
@@ -252,7 +240,6 @@
               "2745s – end"
             ]
           },
-          "viewingDirection": "left-to-right",
           "thumbnail": [
             {
               "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-10.png",

@@ -282,7 +282,6 @@
   "behavior": [
     "paged"
   ],
-  "viewingDirection": "left-to-right",
   "thumbnail": [
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/image/012b1e0f-8c9e-48e7-83d6-5e51a70253b4/full/256,/0/default.jpg",
@@ -344,8 +343,7 @@
         "en": [
           "Portraits"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/bodleian",
@@ -354,8 +352,7 @@
         "en": [
           "Bodleian Libraries"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/portraits-prints-drawings-objects",
@@ -364,8 +361,7 @@
         "en": [
           "Portraits, Prints and Drawings"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/bodleian-portraits",
@@ -374,8 +370,7 @@
         "en": [
           "The Bodleian Libraries’ Portrait Collection: A Samuel H. Kress Foundation Digitization Project"
         ]
-      },
-      "viewingDirection": "left-to-right"
+      }
     }
   ],
   "items": [
@@ -446,7 +441,6 @@
           "LP 44"
         ]
       },
-      "viewingDirection": "left-to-right",
       "start": {
         "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
         "type": "Canvas",

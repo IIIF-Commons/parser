@@ -23,7 +23,6 @@
     }
   },
   "rights": "http://rightsstatements.org/vocab/InC/1.0/",
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",

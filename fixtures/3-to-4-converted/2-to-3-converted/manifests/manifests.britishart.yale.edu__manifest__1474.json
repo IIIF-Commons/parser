@@ -166,7 +166,6 @@
       ]
     }
   },
-  "viewingDirection": "left-to-right",
   "seeAlso": [
     {
       "id": "https://manifests.britishart.yale.edu/xml/1474.xml",
@@ -491,8 +490,7 @@
       "behavior": [
         "sequence",
         "individuals"
-      ],
-      "viewingDirection": "left-to-right"
+      ]
     }
   ]
 }

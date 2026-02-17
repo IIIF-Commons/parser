@@ -7,7 +7,6 @@
       "Single Image Example"
     ]
   },
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/canvas/p1",

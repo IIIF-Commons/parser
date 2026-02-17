@@ -2,16 +2,17 @@ import { convertPresentation2 } from "../presentation-2";
 import {
   deepClone,
   ensureArray,
-  getType,
-  PRESENTATION_4_CONTEXT,
-  setType,
-  setId,
   getId,
+  getType,
   isPlainObject,
+  PRESENTATION_4_CONTEXT,
+  setId,
+  setType,
 } from "./utilities";
 
 const containerTypes = new Set(["Timeline", "Canvas", "Scene"]);
 type TypeLookup = Record<string, string>;
+const audioContentTypes = new Set(["Audio", "Sound"]);
 
 function hasPresentation4Context(resource: any): boolean {
   if (!resource || typeof resource !== "object") {
@@ -155,22 +156,123 @@ function coerceAnnotationTarget(target: any, typeLookup: TypeLookup, fallbackTyp
 }
 
 function coerceAnnotation(annotation: any, typeLookup: TypeLookup, fallbackTargetType: string) {
+  const toAnnotationObjectOrList = (value: any): any => {
+    const values = ensureArray(value).filter((item) => item !== null && typeof item !== "undefined");
+    if (values.length === 0) {
+      return undefined;
+    }
+    if (values.length === 1) {
+      return values[0];
+    }
+    return {
+      type: "List",
+      items: values,
+    };
+  };
+
+  const fromAnnotationObjectOrList = (value: any): any[] => {
+    if (typeof value === "undefined" || value === null) {
+      return [];
+    }
+    if (isPlainObject(value) && getType(value) === "List" && "items" in value) {
+      return ensureArray((value as any).items);
+    }
+    return ensureArray(value);
+  };
+
   annotation.motivation = ensureArray(annotation.motivation);
-  annotation.body = ensureArray(annotation.body);
-  annotation.target = ensureArray(annotation.target).map((target: any) =>
+  const bodyItems = fromAnnotationObjectOrList(annotation.body);
+  const targetItems = fromAnnotationObjectOrList(annotation.target).map((target: any) =>
     coerceAnnotationTarget(target, typeLookup, fallbackTargetType)
   );
+  annotation.body = toAnnotationObjectOrList(bodyItems);
+  annotation.target = toAnnotationObjectOrList(targetItems);
 
-  if (annotation.bodyValue && annotation.body.length === 0) {
-    annotation.body = [
-      {
-        type: "TextualBody",
-        value: annotation.bodyValue,
-        language: annotation.language,
-      },
-    ];
+  if (annotation.bodyValue && !annotation.body) {
+    annotation.body = {
+      type: "TextualBody",
+      value: annotation.bodyValue,
+      language: annotation.language,
+    };
     delete annotation.bodyValue;
   }
+}
+
+function hasPositiveNumber(value: any): boolean {
+  return typeof value === "number" && Number.isFinite(value) && value > 0;
+}
+
+function flattenChoiceLikeContent(item: any): any[] {
+  if (!isPlainObject(item)) {
+    return [item];
+  }
+
+  const type = getType(item);
+  if (type === "Choice" || type === "Composite" || type === "List" || type === "Independents") {
+    return ensureArray(item.items).flatMap((inner) => flattenChoiceLikeContent(inner));
+  }
+
+  return [item];
+}
+
+function isAudioPaintingBody(body: any): boolean {
+  const flattened = flattenChoiceLikeContent(body);
+  if (!flattened.length) {
+    return false;
+  }
+  return flattened.every((item) => {
+    if (!isPlainObject(item)) {
+      return false;
+    }
+    const type = getType(item);
+    return !!type && audioContentTypes.has(type);
+  });
+}
+
+function canvasHasAudioPaintingOnly(canvas: any): boolean {
+  const pages = ensureArray(canvas?.items);
+  if (!pages.length) {
+    return false;
+  }
+
+  let sawPainting = false;
+  for (const page of pages) {
+    if (!isPlainObject(page) || getType(page) !== "AnnotationPage") {
+      continue;
+    }
+    for (const annotation of ensureArray(page.items)) {
+      if (!isPlainObject(annotation) || getType(annotation) !== "Annotation") {
+        continue;
+      }
+      const motivations = ensureArray(annotation.motivation);
+      if (!motivations.includes("painting")) {
+        continue;
+      }
+      sawPainting = true;
+      const bodyItems = ensureArray(annotation.body);
+      if (!bodyItems.length || !bodyItems.every((body) => isAudioPaintingBody(body))) {
+        return false;
+      }
+    }
+  }
+
+  return sawPainting;
+}
+
+function shouldConvertCanvasToTimeline(resource: any): boolean {
+  if (!isPlainObject(resource) || getType(resource) !== "Canvas") {
+    return false;
+  }
+
+  if (!hasPositiveNumber(resource.duration)) {
+    return false;
+  }
+
+  if (hasPositiveNumber(resource.width) || hasPositiveNumber(resource.height)) {
+    return false;
+  }
+
+  return canvasHasAudioPaintingOnly(resource);
 }
 
 function coerceV4Shape(
@@ -192,6 +294,14 @@ function coerceV4Shape(
   }
 
   toIdAndType(resource);
+  if (shouldConvertCanvasToTimeline(resource)) {
+    setType(resource, "Timeline");
+    const id = getId(resource);
+    if (id) {
+      typeLookup[id] = "Timeline";
+    }
+  }
+
   const type = getType(resource);
   const currentContainerType = type && containerTypes.has(type) ? type : containerTypeHint;
 

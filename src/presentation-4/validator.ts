@@ -1,15 +1,15 @@
-import { normalize, NormalizeResult } from "./normalize";
+import { type NormalizeResult, normalize } from "./normalize";
 import { Traverse } from "./traverse";
 import { upgradeToPresentation4 } from "./upgrade";
 import {
-  ValidationIssue,
-  ValidationReport,
   createValidationReport,
   ensureArray,
   getId,
   getType,
   identifyResourceType,
   isSpecificResource,
+  type ValidationIssue,
+  type ValidationReport,
 } from "./utilities";
 
 export type ValidationMode = "tolerant" | "strict";
@@ -63,6 +63,189 @@ function isArrayOrUndefined(value: any): boolean {
   return typeof value === "undefined" || Array.isArray(value);
 }
 
+function isPlainObject(value: any): boolean {
+  return !!value && typeof value === "object" && !Array.isArray(value);
+}
+
+function isListWrapper(value: any): boolean {
+  return isPlainObject(value) && getType(value) === "List" && Object.hasOwn(value, "items");
+}
+
+function getAnnotationEntries(value: any): any[] {
+  if (isListWrapper(value)) {
+    return ensureArray((value as any).items);
+  }
+  if (Array.isArray(value)) {
+    return value;
+  }
+  return [value];
+}
+
+function pathIsSpecificResourceSource(path: string): boolean {
+  return /\.source(?:\[\d+\])?$/.test(path);
+}
+
+function isLikelyReferenceCanvas(canvas: any): boolean {
+  if (!isPlainObject(canvas)) {
+    return false;
+  }
+  if (!getId(canvas) || getType(canvas) !== "Canvas") {
+    return false;
+  }
+  if ("width" in canvas || "height" in canvas || "items" in canvas || "annotations" in canvas) {
+    return false;
+  }
+  return true;
+}
+
+function isLikelyReferenceTimeline(timeline: any): boolean {
+  if (!isPlainObject(timeline)) {
+    return false;
+  }
+  if (!getId(timeline) || getType(timeline) !== "Timeline") {
+    return false;
+  }
+  if ("duration" in timeline || "items" in timeline || "annotations" in timeline) {
+    return false;
+  }
+  return true;
+}
+
+function isReferenceAnnotation(annotation: any): boolean {
+  if (!isPlainObject(annotation) || getType(annotation) !== "Annotation" || !getId(annotation)) {
+    return false;
+  }
+
+  const hasTarget = typeof annotation.target !== "undefined";
+  const hasBody = typeof annotation.body !== "undefined";
+  const motivations = ensureArray(annotation.motivation);
+  const hasMotivations = motivations.length > 0;
+
+  if (hasTarget || hasBody || hasMotivations) {
+    return false;
+  }
+
+  const allowedReferenceKeys = new Set([
+    "id",
+    "type",
+    "@id",
+    "@type",
+    "label",
+    "summary",
+    "profile",
+    "format",
+    "height",
+    "width",
+    "duration",
+    "motivation",
+    "target",
+    "body",
+    "first",
+    "last",
+    "next",
+    "prev",
+    "total",
+  ]);
+
+  return Object.keys(annotation).every((key) => allowedReferenceKeys.has(key));
+}
+
+function validateAnnotationShape(
+  annotation: any,
+  nodePath: string,
+  issues: ValidationIssue[],
+  options: { allowArrayValues: boolean }
+) {
+  if (isReferenceAnnotation(annotation)) {
+    return;
+  }
+
+  if (typeof annotation.target === "undefined") {
+    issue(issues, {
+      code: "annotation-target-required",
+      message: "Annotation.target is required",
+      path: `${nodePath}.target`,
+      resource: annotation,
+      specRef: "#target",
+    });
+  } else if (!isPlainObject(annotation.target) && !(options.allowArrayValues && Array.isArray(annotation.target))) {
+    issue(issues, {
+      code: "annotation-target-object",
+      message: "Annotation.target must be an object, or a List object with items",
+      path: `${nodePath}.target`,
+      resource: annotation,
+      specRef: "#target",
+    });
+  } else {
+    const targets = getAnnotationEntries(annotation.target);
+    for (let i = 0; i < targets.length; i++) {
+      const target = targets[i];
+      const targetPath = isListWrapper(annotation.target)
+        ? `${nodePath}.target.items[${i}]`
+        : Array.isArray(annotation.target)
+          ? `${nodePath}.target[${i}]`
+          : `${nodePath}.target`;
+
+      if (!isPlainObject(target)) {
+        issue(issues, {
+          code: "annotation-target-entry-object",
+          message: "Annotation.target entries must be JSON objects",
+          path: targetPath,
+          resource: annotation,
+          specRef: "#target",
+        });
+        continue;
+      }
+
+      const targetType = getType(target);
+      if (!targetType) {
+        issue(issues, {
+          code: "annotation-target-type-required",
+          message: "Annotation.target entries must include a type",
+          path: `${targetPath}.type`,
+          resource: annotation,
+          specRef: "#target",
+        });
+      }
+
+      const targetId = getId(target);
+      if (!targetId && targetType !== "SpecificResource") {
+        issue(issues, {
+          code: "annotation-target-id-required",
+          message: "Annotation.target entries must include an id",
+          path: `${targetPath}.id`,
+          resource: annotation,
+          specRef: "#target",
+        });
+      }
+    }
+  }
+
+  if (
+    typeof annotation.body !== "undefined" &&
+    !isPlainObject(annotation.body) &&
+    !(options.allowArrayValues && Array.isArray(annotation.body))
+  ) {
+    issue(issues, {
+      code: "annotation-body-object",
+      message: "Annotation.body must be an object when present, or a List object with items",
+      path: `${nodePath}.body`,
+      resource: annotation,
+      specRef: "#body",
+    });
+  }
+
+  if (!isArrayOrUndefined(annotation.motivation)) {
+    issue(issues, {
+      code: "annotation-motivation-array",
+      message: "Annotation.motivation must be an array",
+      path: `${nodePath}.motivation`,
+      resource: annotation,
+      specRef: "#motivation",
+    });
+  }
+}
+
 function walkResourceTree(resource: any, path: string, visitor: (node: any, nodePath: string) => void) {
   if (Array.isArray(resource)) {
     for (let i = 0; i < resource.length; i++) {
@@ -91,74 +274,7 @@ export function runAuthoredShapeValidation(resource: any): ValidationIssue[] {
     if (getType(node) !== "Annotation") {
       return;
     }
-
-    if (!Array.isArray(node.target)) {
-      issue(issues, {
-        code: "annotation-target-array",
-        message: "Annotation.target must be an array",
-        path: `${nodePath}.target`,
-        resource: node,
-        specRef: "#target",
-      });
-    } else {
-      for (let i = 0; i < node.target.length; i++) {
-        const target = node.target[i];
-        const targetPath = `${nodePath}.target[${i}]`;
-
-        if (!target || typeof target !== "object" || Array.isArray(target)) {
-          issue(issues, {
-            code: "annotation-target-object",
-            message: "Annotation.target entries must be JSON objects",
-            path: targetPath,
-            resource: node,
-            specRef: "#target",
-          });
-          continue;
-        }
-
-        const targetType = getType(target);
-        if (!targetType) {
-          issue(issues, {
-            code: "annotation-target-type-required",
-            message: "Annotation.target object entries must include a type",
-            path: `${targetPath}.type`,
-            resource: node,
-            specRef: "#target",
-          });
-        }
-
-        const targetId = getId(target);
-        if (!targetId && targetType !== "SpecificResource") {
-          issue(issues, {
-            code: "annotation-target-id-required",
-            message: "Annotation.target object entries must include an id",
-            path: `${targetPath}.id`,
-            resource: node,
-            specRef: "#target",
-          });
-        }
-      }
-    }
-
-    if (typeof node.body !== "undefined" && !Array.isArray(node.body)) {
-      issue(issues, {
-        code: "annotation-body-array",
-        message: "Annotation.body must be an array when present",
-        path: `${nodePath}.body`,
-        resource: node,
-        specRef: "#body",
-      });
-    }
-
-    if (!isArrayOrUndefined(node.motivation)) {
-      issue(issues, {
-        code: "annotation-motivation-array",
-        message: "Annotation.motivation must be an array",
-        path: `${nodePath}.motivation`,
-        resource: node,
-        specRef: "#motivation",
-      });
-    }
+    validateAnnotationShape(node, nodePath, issues, { allowArrayValues: true });
   });
 
   return issues;
@@ -210,6 +326,9 @@ export function runRawValidation(resource: any): ValidationIssue[] {
     ],
     timeline: [
       (timeline, context) => {
+        if (pathIsSpecificResourceSource(context.path) || isLikelyReferenceTimeline(timeline)) {
+          return;
+        }
         if (!isPositiveNumber(timeline.duration)) {
           issue(issues, {
             code: "timeline-duration-required",
@@ -223,6 +342,9 @@ export function runRawValidation(resource: any): ValidationIssue[] {
     ],
     canvas: [
       (canvas, context) => {
+        if (pathIsSpecificResourceSource(context.path) || isLikelyReferenceCanvas(canvas)) {
+          return;
+        }
         if (!isPositiveInteger(canvas.width)) {
           issue(issues, {
             code: "canvas-width-required",
@@ -245,77 +367,13 @@ export function runRawValidation(resource: any): ValidationIssue[] {
     ],
     annotation: [
       (annotation, context) => {
-        if (!Array.isArray(annotation.target)) {
-          issue(issues, {
-            code: "annotation-target-array",
-            message: "Annotation.target must be an array",
-            path: `${context.path}.target`,
-            resource: annotation,
-            specRef: "#target",
-          });
-        } else {
-          for (let i = 0; i < annotation.target.length; i++) {
-            const target = annotation.target[i];
-            const targetPath = `${context.path}.target[${i}]`;
-
-            if (!target || typeof target !== "object" || Array.isArray(target)) {
-              issue(issues, {
-                code: "annotation-target-object",
-                message: "Annotation.target entries must be JSON objects",
-                path: targetPath,
-                resource: annotation,
-                specRef: "#target",
-              });
-              continue;
-            }
-
-            const targetType = getType(target);
-            if (!targetType) {
-              issue(issues, {
-                code: "annotation-target-type-required",
-                message: "Annotation.target object entries must include a type",
-                path: `${targetPath}.type`,
-                resource: annotation,
-                specRef: "#target",
-              });
-            }
-
-            const targetId = getId(target);
-            if (!targetId && targetType !== "SpecificResource") {
-              issue(issues, {
-                code: "annotation-target-id-required",
-                message: "Annotation.target object entries must include an id",
-                path: `${targetPath}.id`,
-                resource: annotation,
-                specRef: "#target",
-              });
-            }
-          }
-        }
-
-        if (typeof annotation.body !== "undefined" && !Array.isArray(annotation.body)) {
-          issue(issues, {
-            code: "annotation-body-array",
-            message: "Annotation.body must be an array when present",
-            path: `${context.path}.body`,
-            resource: annotation,
-            specRef: "#body",
-          });
-        }
-
-        if (!isArrayOrUndefined(annotation.motivation)) {
-          issue(issues, {
-            code: "annotation-motivation-array",
-            message: "Annotation.motivation must be an array",
-            path: `${context.path}.motivation`,
-            resource: annotation,
-            specRef: "#motivation",
-          });
-        }
+        validateAnnotationShape(annotation, context.path, issues, {
+          allowArrayValues: true,
+        });
 
         const motivations = ensureArray(annotation.motivation);
         if (motivations.includes("activating")) {
-          const body = ensureArray(annotation.body);
+          const body = getAnnotationEntries(annotation.body);
           for (let i = 0; i < body.length; i++) {
             const item = body[i];
             if (!isSpecificResource(item)) {

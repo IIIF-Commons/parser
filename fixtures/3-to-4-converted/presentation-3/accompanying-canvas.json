@@ -7,18 +7,15 @@
       "Partial audio recording of Gustav Mahler's _Symphony No. 3_"
     ]
   },
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/p1",
-      "type": "Canvas",
+      "type": "Timeline",
       "label": {
         "en": [
           "Gustav Mahler, Symphony No. 3, CD 1"
         ]
       },
-      "height": 0,
-      "width": 0,
       "duration": 1985.024,
       "accompanyingContainer": {
         "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying",

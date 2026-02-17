@@ -39,7 +39,6 @@
     }
   },
   "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/canvas/p1",

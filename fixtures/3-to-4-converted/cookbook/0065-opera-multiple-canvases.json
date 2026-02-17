@@ -36,7 +36,6 @@
       }
     }
   ],
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1",
@@ -152,7 +151,6 @@
           "Gaetano Donizetti, L'Elisir D'Amore"
         ]
       },
-      "viewingDirection": "left-to-right",
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/2",
@@ -162,7 +160,6 @@
               "Atto Primo"
             ]
           },
-          "viewingDirection": "left-to-right",
           "items": [
             {
               "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/3",
@@ -171,8 +168,7 @@
                 "it": [
                   "Preludio e Coro d'introduzione – Bel conforto al mietitore"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             },
             {
               "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/4",
@@ -181,8 +177,7 @@
                 "en": [
                   "Remainder of Atto Primo"
                 ]
-              },
-              "viewingDirection": "left-to-right"
+              }
             }
           ]
         },
@@ -193,8 +188,7 @@
             "en": [
               "Atto Secondo"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         }
       ]
     }

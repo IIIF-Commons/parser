@@ -241,8 +241,7 @@
   "partOf": [
     {
       "id": "https://www.ldmax.nl/datasets/q4350196.jsonld",
-      "type": "Collection",
-      "viewingDirection": "left-to-right"
+      "type": "Collection"
     }
   ],
   "items": [

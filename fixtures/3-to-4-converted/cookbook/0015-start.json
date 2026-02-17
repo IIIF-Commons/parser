@@ -20,13 +20,12 @@
     }
   },
   "rights": "http://creativecommons.org/licenses/by/3.0/",
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
       "type": "Canvas",
-      "height": 0,
-      "width": 0,
+      "height": 360,
+      "width": 640,
       "duration": 1801.055,
       "items": [
         {
@@ -52,7 +51,9 @@
                   "type": "SpecificResource",
                   "source": {
                     "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
-                    "type": "Canvas"
+                    "type": "Canvas",
+                    "width": 640,
+                    "height": 360
                   }
                 }
               ]

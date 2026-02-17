@@ -7,7 +7,6 @@
       "Gottesdienstliche Ceremonien, Oder H. Kirchen-Gebräuche Und Religions-Pflichten Der Christen"
     ]
   },
-  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
@@ -331,7 +330,6 @@
           "Gottesdienstliche Ceremonien, Oder H. Kirchen-Gebräuche Und Religions-Pflichten Der Christen"
         ]
       },
-      "viewingDirection": "left-to-right",
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r1",
@@ -340,8 +338,7 @@
             "en": [
               "Front Matter"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r2",
@@ -350,8 +347,7 @@
             "de": [
               "Erste Ausgabe. Begreift die Ceremonien der Lutheraner von der Augspurgischen Confession, der Reformirten, der Holländischen u. a. Kirchen"
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         },
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r3",
@@ -360,8 +356,7 @@
             "de": [
               "Zweyte Ausgabe. Begreift die Ceremonien der Engl. hohen Kirche : Der Quacker, der Anabaptisten, der Adamiten, der Flagellanten, der Frey-Maurer, der Rhinsbürger..."
             ]
-          },
-          "viewingDirection": "left-to-right"
+          }
         }
       ]
     }
