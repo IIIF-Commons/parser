@@ -7,12 +7,48 @@
       "Picture of Göttingen taken during the 2019 IIIF Conference"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/canvas/p1",
       "type": "Canvas",
       "height": 3024,
       "width": 4032,
+      "duration": 0,
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/page/p2/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0002-tag",
+              "type": "Annotation",
+              "motivation": [
+                "tagging"
+              ],
+              "body": [
+                {
+                  "type": "TextualBody",
+                  "format": "text/plain"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/canvas/p1",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "FragmentSelector",
+                    "value": "xywh=265,661,1260,1239"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/page/p1/1",
@@ -42,37 +78,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/canvas/p1",
-                  "type": "Canvas"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/page/p2/1",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0002-tag",
-              "type": "Annotation",
-              "motivation": [
-                "tagging"
-              ],
-              "body": [
-                {
-                  "type": "TextualBody",
-                  "value": "Gänseliesel-Brunnen",
-                  "language": "de",
-                  "format": "text/plain"
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/canvas/p1#xywh=265,661,1260,1239",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

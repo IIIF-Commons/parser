@@ -22,6 +22,7 @@
       },
       "height": 5745,
       "width": 4114,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p1/1",
@@ -51,8 +52,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -70,6 +74,7 @@
       },
       "height": 5745,
       "width": 7253,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p2/1",
@@ -99,8 +104,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -118,6 +126,7 @@
       },
       "height": 5745,
       "width": 7253,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p3/1",
@@ -147,8 +156,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p3",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -166,6 +178,7 @@
       },
       "height": 5745,
       "width": 7253,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p4/1",
@@ -195,8 +208,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p4",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -214,6 +230,7 @@
       },
       "height": 5745,
       "width": 7253,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/page/p5/1",
@@ -243,8 +260,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p5",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p5",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

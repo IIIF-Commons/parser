@@ -1,3 +1,4 @@
+import { InternationalString, Service } from "../../../../presentation-4/types";
 import type { MetadataItem } from "../../../../presentation-4/types/legacy/src/resources/contentResource";
 
 export type NormalizedPrimitive = string | number | boolean | null;
@@ -6,7 +7,6 @@ export type NormalizedJsonValue = NormalizedPrimitive | NormalizedJsonValue[] | 
 export interface NormalizedReferenceObject {
   id?: string;
   type?: string;
-  [key: string]: NormalizedJsonValue | NormalizedReference | readonly NormalizedReference[] | undefined;
 }
 
 export interface NormalizedSpecificResourceReference extends NormalizedReferenceObject {
@@ -20,7 +20,7 @@ export interface NormalizedSpecificResourceReference extends NormalizedReference
   styleClass?: string;
 }
 
-export type NormalizedReference = string | NormalizedReferenceObject | NormalizedSpecificResourceReference;
+export type NormalizedReference = NormalizedReferenceObject | NormalizedSpecificResourceReference;
 
 export interface NormalizedFramingPart extends NormalizedReferenceObject {
   "@explicit"?: boolean;
@@ -35,22 +35,18 @@ export interface NormalizedFramingPart extends NormalizedReferenceObject {
 
 export interface NormalizedEntityBase extends NormalizedReferenceObject {
   "iiif-parser:hasPart"?: readonly NormalizedFramingPart[];
-  [key: string]:
-    | NormalizedJsonValue
-    | NormalizedReference
-    | readonly NormalizedReference[]
-    | readonly NormalizedFramingPart[]
-    | undefined;
 }
 
 export interface NormalizedLinkedEntity extends NormalizedEntityBase {
+  label: InternationalString | null;
+  summary: InternationalString | null;
   metadata: readonly MetadataItem[];
   provider: readonly NormalizedReference[];
   thumbnail: readonly NormalizedReference[];
   behavior: readonly string[];
   seeAlso: readonly NormalizedReference[];
-  service: readonly NormalizedReference[];
-  services: readonly NormalizedReference[];
+  service: readonly Service[];
+  services: readonly Service[];
   homepage: readonly NormalizedReference[];
   rendering: readonly NormalizedReference[];
   partOf: readonly NormalizedReference[];

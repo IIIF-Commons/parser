@@ -10,7 +10,6 @@
       "For ladies. French models"
     ]
   },
-  "rights": "http://rightsstatements.org/vocab/InC/1.0/",
   "requiredStatement": {
     "label": {
       "en": [
@@ -23,6 +22,8 @@
       ]
     }
   },
+  "rights": "http://rightsstatements.org/vocab/InC/1.0/",
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
@@ -30,37 +31,6 @@
       "height": 384,
       "width": 288,
       "duration": 65,
-      "items": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page/annotation",
-              "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/europeana/Per_voi_signore_Modelli_francesi.mp4",
-                  "type": "Video",
-                  "height": 384,
-                  "width": 288,
-                  "duration": 65,
-                  "format": "video/mp4"
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
-                  "type": "Canvas"
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "annotations": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json/anno/page/1",
@@ -79,32 +49,67 @@
                     {
                       "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_en.vtt",
                       "type": "Text",
-                      "format": "text/vtt",
                       "label": {
                         "en": [
                           "Captions in WebVTT format"
                         ]
                       },
-                      "language": "en"
+                      "format": "text/vtt"
                     },
                     {
                       "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_it.vtt",
                       "type": "Text",
-                      "format": "text/vtt",
                       "label": {
                         "it": [
                           "Sottotitoli in formato WebVTT"
                         ]
                       },
-                      "language": "it"
+                      "format": "text/vtt"
                     }
                   ]
                 }
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
+                    "type": "Canvas"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page/annotation",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "body": [
+                {
+                  "id": "https://fixtures.iiif.io/video/europeana/Per_voi_signore_Modelli_francesi.mp4",
+                  "type": "Video",
+                  "format": "video/mp4",
+                  "height": 384,
+                  "width": 288,
+                  "duration": 65
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

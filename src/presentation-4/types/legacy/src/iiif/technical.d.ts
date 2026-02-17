@@ -3,6 +3,10 @@ import type { LiteralUnion, Prettify } from "../../../../../presentation-3/types
 
 export type InteractionMode = LiteralUnion<"locked" | "orbit" | "hemisphere-orbit" | "free" | "free-direction">;
 
+export type ViewingDirection = LiteralUnion<
+  "left-to-right" | "right-to-left" | "top-to-bottom" | "bottom-to-top" | "auto"
+>;
+
 export type Provides = LiteralUnion<
   | "closedCaptions"
   | "alternativeText"

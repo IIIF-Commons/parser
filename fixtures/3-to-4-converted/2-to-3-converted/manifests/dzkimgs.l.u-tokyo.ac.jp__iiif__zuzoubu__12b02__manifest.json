@@ -1,4 +1,7 @@
 {
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/manifest.json",
+  "type": "Manifest",
   "label": {
     "@none": [
       "大正新脩大藏經図像部第12b02巻"
@@ -66,16 +69,6 @@
       }
     }
   ],
-  "viewingDirection": "right-to-left",
-  "logo": [
-    {
-      "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/satlogo80.png",
-      "type": "Image"
-    }
-  ],
-  "type": "Manifest",
-  "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/manifest.json",
-  "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
   "requiredStatement": {
     "label": {
       "@none": [
@@ -88,64 +81,69 @@
       ]
     }
   },
+  "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
   "behavior": [
     "paged"
   ],
+  "viewingDirection": "right-to-left",
   "items": [
     {
+      "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025",
+      "type": "Canvas",
       "label": {
         "@none": [
           ""
         ]
       },
-      "width": 22779,
       "height": 30000,
-      "type": "Canvas",
-      "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025",
+      "width": 22779,
+      "duration": 0,
       "annotations": [
         {
-          "type": "AnnotationPage",
-          "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/list/p0001-0025.json"
+          "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/list/p0001-0025.json",
+          "type": "AnnotationPage"
         }
       ],
       "items": [
         {
+          "id": "https://example.org/uuid/3c1e463e-7ce0-46e2-b91d-e21786168d7c",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/ano0001-0025",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/ano0001-0025",
-              "target": [
-                {
-                  "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
-                  "width": 22779,
                   "height": 30000,
+                  "width": 22779,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
                       "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/3c1e463e-7ce0-46e2-b91d-e21786168d7c"
+          ]
         }
       ]
     }
-  ],
-  "@context": "http://iiif.io/api/presentation/4/context.json"
+  ]
 }

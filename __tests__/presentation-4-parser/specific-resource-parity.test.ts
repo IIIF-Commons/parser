@@ -77,13 +77,12 @@ describe("presentation-4 specific resource parity", () => {
     expect(targetSelector.type).toBe("FragmentSelector");
     expect(targetSelector.value).toBe("xywh=10,20,30,40");
 
-    const selectorId = targetSelector.id;
-    if (selectorId) {
-      expect(result.entities.Selector[selectorId]).toBeTruthy();
-      expect(result.mapping[selectorId]).toBe("Selector");
-    } else {
-      expect(Object.keys(result.entities.Selector).length).toBeGreaterThan(0);
-    }
+    expect(targetSelector).toMatchInlineSnapshot(`
+      {
+        "type": "FragmentSelector",
+        "value": "xywh=10,20,30,40",
+      }
+    `);
   });
 
   test("preserves selector through normalize and serialize for native p4 fragment targets", () => {

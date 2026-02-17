@@ -7,18 +7,16 @@ import type {
   CollectionNormalized,
   ContentResourceNormalized,
   ManifestNormalized,
-  QuantityNormalized,
   RangeNormalized,
   SceneNormalized,
-  SelectorNormalized,
-  ServiceNormalized,
   SpecificResourceNormalized,
   TimelineNormalized,
-  TransformNormalized,
 } from "../presentation-4-normalized/types";
 import { EMPTY_ARRAY } from "./utilities";
 
 const baseLinkedArrays = {
+  label: null,
+  summary: null,
   metadata: EMPTY_ARRAY,
   provider: EMPTY_ARRAY,
   thumbnail: EMPTY_ARRAY,
@@ -44,6 +42,7 @@ export const emptyManifest: ManifestNormalized = {
   type: "Manifest",
   items: EMPTY_ARRAY,
   structures: EMPTY_ARRAY,
+  start: null,
   ...baseLinkedArrays,
 };
 
@@ -105,28 +104,6 @@ export const emptyAgent: AgentNormalized = {
   ...baseLinkedArrays,
 };
 
-export const emptyService: ServiceNormalized = {
-  id: "https://iiif-parser/empty-service",
-  type: "Service",
-  service: EMPTY_ARRAY,
-};
-
-export const emptySelector: SelectorNormalized = {
-  id: "https://iiif-parser/empty-selector",
-  type: "Selector",
-  selectors: EMPTY_ARRAY,
-};
-
-export const emptyQuantity: QuantityNormalized = {
-  id: "https://iiif-parser/empty-quantity",
-  type: "Quantity",
-};
-
-export const emptyTransform: TransformNormalized = {
-  id: "https://iiif-parser/empty-transform",
-  type: "Transform",
-};
-
 export const emptySpecificResource: SpecificResourceNormalized = {
   type: "SpecificResource",
   selector: EMPTY_ARRAY,
@@ -137,6 +114,7 @@ export const emptySpecificResource: SpecificResourceNormalized = {
 export const emptyContentResource: ContentResourceNormalized = {
   id: "https://iiif-parser/empty-content-resource",
   type: "ContentResource",
+  value: null,
   language: EMPTY_ARRAY,
   items: EMPTY_ARRAY,
   selector: EMPTY_ARRAY,

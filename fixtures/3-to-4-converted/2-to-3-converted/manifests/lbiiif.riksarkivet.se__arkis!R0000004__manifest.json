@@ -1,4 +1,7 @@
 {
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/manifest",
+  "type": "Manifest",
   "label": {
     "sv": [
       "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
@@ -114,10 +117,11 @@
       }
     }
   ],
-  "type": "Manifest",
-  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/manifest",
+  "viewingDirection": "left-to-right",
   "items": [
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p1",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 1"
@@ -178,26 +182,22 @@
       ],
       "height": 5001,
       "width": 7022,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p1",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/d6bf1c22-dd03-4f63-9a95-54da248c4b7c",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p1",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p1",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p1",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 5001,
                   "width": 7022,
@@ -207,18 +207,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/d6bf1c22-dd03-4f63-9a95-54da248c4b7c"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p2",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 2"
@@ -279,26 +287,22 @@
       ],
       "height": 8926,
       "width": 6453,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p2",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/f2a8bd6f-a322-42eb-b7b1-07a25199fad3",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p2",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p2",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p2",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8926,
                   "width": 6453,
@@ -308,18 +312,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/f2a8bd6f-a322-42eb-b7b1-07a25199fad3"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p3",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 3"
@@ -380,26 +392,22 @@
       ],
       "height": 8874,
       "width": 6504,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p3",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/7765cdb6-4746-4113-9fbb-7e4d21295618",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p3",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p3",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p3",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8874,
                   "width": 6504,
@@ -409,18 +417,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/7765cdb6-4746-4113-9fbb-7e4d21295618"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p4",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 4"
@@ -481,26 +497,22 @@
       ],
       "height": 8866,
       "width": 12873,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p4",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/cea35819-4951-414d-924c-11d84b56ca09",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p4",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p4",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p4",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8866,
                   "width": 12873,
@@ -510,18 +522,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/cea35819-4951-414d-924c-11d84b56ca09"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p5",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 5"
@@ -582,26 +602,22 @@
       ],
       "height": 8911,
       "width": 12538,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p5",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/c7eb81ad-539a-4910-b6e8-8b34eac824dd",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p5",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p5",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p5",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8911,
                   "width": 12538,
@@ -611,18 +627,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p5",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/c7eb81ad-539a-4910-b6e8-8b34eac824dd"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p6",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 6"
@@ -683,26 +707,22 @@
       ],
       "height": 8968,
       "width": 12921,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p6",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/470432fd-61ff-46e5-bd38-cab8c6779b5d",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p6",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p6",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p6",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8968,
                   "width": 12921,
@@ -712,18 +732,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p6",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/470432fd-61ff-46e5-bd38-cab8c6779b5d"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p7",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 7"
@@ -784,26 +812,22 @@
       ],
       "height": 8936,
       "width": 12909,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p7",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/17d9571c-3c4b-4b7d-8362-72259d758cb4",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p7",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p7",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p7",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8936,
                   "width": 12909,
@@ -813,18 +837,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p7",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/17d9571c-3c4b-4b7d-8362-72259d758cb4"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p8",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 8"
@@ -885,26 +917,22 @@
       ],
       "height": 8914,
       "width": 12546,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p8",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/4faab575-2aa0-402e-a43a-64a20a0934cc",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p8",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p8",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p8",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8914,
                   "width": 12546,
@@ -914,18 +942,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p8",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/4faab575-2aa0-402e-a43a-64a20a0934cc"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p9",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 9"
@@ -986,26 +1022,22 @@
       ],
       "height": 8903,
       "width": 12541,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p9",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/919bd1ff-ef06-412d-b4e3-ecf4fe2e97b9",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p9",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p9",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p9",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8903,
                   "width": 12541,
@@ -1015,18 +1047,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p9",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/919bd1ff-ef06-412d-b4e3-ecf4fe2e97b9"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p10",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 10"
@@ -1087,26 +1127,22 @@
       ],
       "height": 8864,
       "width": 12908,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p10",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/b9c2312a-c869-47a5-bae5-9f90877e9c73",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p10",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p10",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p10",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8864,
                   "width": 12908,
@@ -1116,18 +1152,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p10",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/b9c2312a-c869-47a5-bae5-9f90877e9c73"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p11",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 11"
@@ -1188,26 +1232,22 @@
       ],
       "height": 8865,
       "width": 6539,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p11",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/94ed0dd3-44f8-40bf-82ae-503f2455c42e",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p11",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p11",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p11",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 8865,
                   "width": 6539,
@@ -1217,18 +1257,26 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p11",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/94ed0dd3-44f8-40bf-82ae-503f2455c42e"
+          ]
         }
       ]
     },
     {
+      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p12",
+      "type": "Canvas",
       "label": {
         "sv": [
           "Bild 12"
@@ -1289,26 +1337,22 @@
       ],
       "height": 5053,
       "width": 7105,
-      "type": "Canvas",
-      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p12",
+      "duration": 0,
       "items": [
         {
+          "id": "https://example.org/uuid/95851219-c1ca-468a-bf3f-dea1003fcdfb",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p12",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/annotation/p12",
-              "target": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p12",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012/full/full/0/default.jpg",
+                  "type": "Image",
                   "format": "image/jpeg",
                   "height": 5053,
                   "width": 7105,
@@ -1318,17 +1362,22 @@
                       "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012/full/full/0/default.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p12",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/95851219-c1ca-468a-bf3f-dea1003fcdfb"
+          ]
         }
       ]
     }
-  ],
-  "@context": "http://iiif.io/api/presentation/4/context.json"
+  ]
 }

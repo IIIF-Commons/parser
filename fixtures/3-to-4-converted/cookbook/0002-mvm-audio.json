@@ -7,10 +7,13 @@
       "Simplest Audio Example 1"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas",
       "type": "Canvas",
+      "height": 0,
+      "width": 0,
       "duration": 1985.024,
       "items": [
         {
@@ -33,8 +36,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/canvas",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

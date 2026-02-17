@@ -34,17 +34,19 @@
       }
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/canvas/1",
       "type": "Canvas",
-      "height": 3000,
-      "width": 2315,
       "label": {
         "en": [
           "Front of Bronze"
         ]
       },
+      "height": 3000,
+      "width": 2315,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/anno-page/1",
@@ -74,8 +76,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/canvas/1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/canvas/1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

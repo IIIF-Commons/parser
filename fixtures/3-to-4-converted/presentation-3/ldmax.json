@@ -98,6 +98,29 @@
       "De kunstenares maakte zes illustraties voor het sprookje 'Grethe het kippenvrouwtje' van H.C. Andersen."
     ]
   },
+  "requiredStatement": {
+    "label": {
+      "en": [
+        "Attribution"
+      ],
+      "nl": [
+        "Naamsvermelding"
+      ]
+    },
+    "value": {
+      "en": [
+        "Provided by Museum Kranenburgh"
+      ],
+      "nl": [
+        "Aangeboden door Museum Kranenburgh"
+      ]
+    }
+  },
+  "rights": "http://creativecommons.org/licenses/by/4.0",
+  "behavior": [
+    "paged"
+  ],
+  "viewingDirection": "right-to-left",
   "thumbnail": [
     {
       "id": "https://ndeiiif.adlibhosting.com/iiif/3/Q4350196.180/full/!250,250/0/default.jpg",
@@ -172,29 +195,6 @@
       ]
     }
   ],
-  "viewingDirection": "right-to-left",
-  "behavior": [
-    "paged"
-  ],
-  "rights": "http://creativecommons.org/licenses/by/4.0",
-  "requiredStatement": {
-    "label": {
-      "en": [
-        "Attribution"
-      ],
-      "nl": [
-        "Naamsvermelding"
-      ]
-    },
-    "value": {
-      "en": [
-        "Provided by Museum Kranenburgh"
-      ],
-      "nl": [
-        "Aangeboden door Museum Kranenburgh"
-      ]
-    }
-  },
   "provider": [
     {
       "id": "http://www.museumkranenburgh.nl",
@@ -208,20 +208,20 @@
         {
           "id": "https://www.ldmax.nl/organisaties/q4350196.jsonld",
           "type": "Dataset",
-          "format": "application/ld+json",
-          "profile": "https://schema.org/"
+          "profile": "https://schema.org/",
+          "format": "application/ld+json"
         },
         {
           "id": "https://www.ldmax.nl/organisaties/q4350196.ttl",
           "type": "Dataset",
-          "format": "text/turtle",
-          "profile": "https://schema.org/"
+          "profile": "https://schema.org/",
+          "format": "text/turtle"
         },
         {
           "id": "https://www.ldmax.nl/organisaties/q4350196.nt",
           "type": "Dataset",
-          "format": "application/n-triples",
-          "profile": "https://schema.org/"
+          "profile": "https://schema.org/",
+          "format": "application/n-triples"
         }
       ]
     }
@@ -241,7 +241,8 @@
   "partOf": [
     {
       "id": "https://www.ldmax.nl/datasets/q4350196.jsonld",
-      "type": "Collection"
+      "type": "Collection",
+      "viewingDirection": "left-to-right"
     }
   ],
   "items": [
@@ -255,6 +256,7 @@
       },
       "height": 1000,
       "width": 750,
+      "duration": 0,
       "items": [
         {
           "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation",
@@ -268,12 +270,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/body",
@@ -286,6 +282,15 @@
                       "profile": "level3"
                     }
                   ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -303,6 +308,7 @@
       },
       "height": 1000,
       "width": 750,
+      "duration": 0,
       "items": [
         {
           "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation",
@@ -316,12 +322,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/body",
@@ -334,6 +334,15 @@
                       "profile": "level3"
                     }
                   ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -351,6 +360,7 @@
       },
       "height": 1000,
       "width": 750,
+      "duration": 0,
       "items": [
         {
           "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation",
@@ -364,12 +374,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/body",
@@ -382,6 +386,15 @@
                       "profile": "level3"
                     }
                   ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -399,6 +412,7 @@
       },
       "height": 1000,
       "width": 750,
+      "duration": 0,
       "items": [
         {
           "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation",
@@ -412,12 +426,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/body",
@@ -430,6 +438,15 @@
                       "profile": "level3"
                     }
                   ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -447,6 +464,7 @@
       },
       "height": 1000,
       "width": 750,
+      "duration": 0,
       "items": [
         {
           "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation",
@@ -460,12 +478,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/body",
@@ -478,6 +490,15 @@
                       "profile": "level3"
                     }
                   ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -495,6 +516,7 @@
       },
       "height": 1000,
       "width": 750,
+      "duration": 0,
       "items": [
         {
           "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation",
@@ -508,12 +530,6 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
                   "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/body",
@@ -526,6 +542,15 @@
                       "profile": "level3"
                     }
                   ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

@@ -32,12 +32,19 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                "type": "Model",
-                "format": "model/gltf-binary"
-              },
-              "target": "https://example.org/iiif/scene1/page/p1/1"
+              "body": [
+                {
+                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                  "type": "Model",
+                  "format": "model/gltf-binary"
+                }
+              ],
+              "target": [
+                {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
+              ]
             },
             {
               "id": "https://example.org/iiif/3d/anno2",
@@ -45,30 +52,12 @@
               "motivation": [
                 "painting"
               ],
-              "body": {
-                "type": "SpecificResource",
-                "source": {
-                  "id": "https://example.org/iiif/3d/lights/1",
-                  "type": "DirectionalLight",
-                  "label": {
-                    "en": [
-                      "Directional Light 1"
-                    ]
-                  }
-                },
-                "transform": [
-                  {
-                    "type": "RotateTransform",
-                    "x": 30,
-                    "y": 0,
-                    "z": 0
-                  }
-                ]
-              },
-              "target": {
-                "id": "https://example.org/iiif/scene1/page/p1/1",
-                "type": "Scene"
-              }
+              "target": [
+                {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
+              ]
             }
           ]
         }

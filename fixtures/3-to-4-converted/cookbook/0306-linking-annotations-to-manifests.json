@@ -7,12 +7,20 @@
       "Picture of Göttingen taken during the 2019 IIIF Conference"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
       "type": "Canvas",
       "height": 3024,
       "width": 4032,
+      "duration": 0,
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
+          "type": "AnnotationPage"
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1/annopage-1",
@@ -42,18 +50,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/canvas-1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0306-linking-annotations-to-manifests/annotationpage.json",
-          "type": "AnnotationPage"
         }
       ]
     }

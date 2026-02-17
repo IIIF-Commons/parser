@@ -12,6 +12,7 @@
       "A map containing an point with an annotation of the location."
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
@@ -23,6 +24,42 @@
       },
       "height": 7072,
       "width": 5212,
+      "duration": 0,
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag",
+              "type": "Annotation",
+              "motivation": [
+                "tagging"
+              ],
+              "body": [
+                {
+                  "type": "TextualBody",
+                  "format": "text/plain"
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+                    "type": "Canvas"
+                  },
+                  "selector": {
+                    "type": "PointSelector",
+                    "x": 3385,
+                    "y": 1464
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/contentPage.json",
@@ -52,44 +89,10 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
-                  "type": "Canvas"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/page/p2/1",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag",
-              "type": "Annotation",
-              "motivation": [
-                "tagging"
-              ],
-              "body": [
-                {
-                  "type": "TextualBody",
-                  "value": "Town Creek Aqueduct",
-                  "language": "en",
-                  "format": "text/plain"
-                }
-              ],
-              "target": [
-                {
                   "type": "SpecificResource",
                   "source": {
                     "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
                     "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "PointSelector",
-                    "x": 3385,
-                    "y": 1464
                   }
                 }
               ]

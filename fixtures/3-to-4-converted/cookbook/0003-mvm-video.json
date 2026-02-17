@@ -7,6 +7,7 @@
       "Video Example 3"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas",
@@ -29,16 +30,19 @@
                 {
                   "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
                   "type": "Video",
+                  "format": "video/mp4",
                   "height": 360,
                   "width": 480,
-                  "duration": 572.034,
-                  "format": "video/mp4"
+                  "duration": 572.034
                 }
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/canvas",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

@@ -140,14 +140,14 @@
       ]
     }
   },
-  "homepage": {
+  "homepage": [{
     "label": {
       "@none": ["catalog entry at the Yale Center for British Art"]
     },
     "format": "text/html",
     "type": "Text",
     "id": "http://collections.britishart.yale.edu/vufind/Record/1666375"
-  },
+  }],
   "items": [
     {
       "width": 6127,

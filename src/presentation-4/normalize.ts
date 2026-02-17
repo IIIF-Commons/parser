@@ -12,24 +12,18 @@ import {
   emptyCollection,
   emptyContentResource,
   emptyManifest,
-  emptyQuantity,
   emptyRange,
   emptyScene,
-  emptySelector,
-  emptyService,
   emptySpecificResource,
   emptyTimeline,
-  emptyTransform,
 } from "./empty-types";
 import {
   emptyAgent as legacyEmptyAgent,
-  emptyAnnotation as legacyEmptyAnnotation,
   emptyAnnotationPage as legacyEmptyAnnotationPage,
   emptyCanvas as legacyEmptyCanvas,
   emptyCollection as legacyEmptyCollection,
   emptyManifest as legacyEmptyManifest,
   emptyRange as legacyEmptyRange,
-  emptyService as legacyEmptyService,
 } from "../presentation-3/empty-types";
 import { type TraversalContext, Traverse } from "./traverse";
 import { upgradeToPresentation4 } from "./upgrade";
@@ -61,11 +55,7 @@ export const defaultEntities: Presentation4Entities = {
   Annotation: {},
   ContentResource: {},
   Range: {},
-  Service: {},
-  Selector: {},
   Agent: {},
-  Quantity: {},
-  Transform: {},
 };
 
 export function getDefaultEntities(): Presentation4Entities {
@@ -80,11 +70,7 @@ export function getDefaultEntities(): Presentation4Entities {
     Annotation: {},
     ContentResource: {},
     Range: {},
-    Service: {},
-    Selector: {},
     Agent: {},
-    Quantity: {},
-    Transform: {},
   };
 }
 
@@ -305,16 +291,8 @@ function mapTypeToStore(type: string): keyof Presentation4Entities {
       return "Annotation";
     case "Range":
       return "Range";
-    case "Service":
-      return "Service";
     case "Agent":
       return "Agent";
-    case "Selector":
-      return "Selector";
-    case "Quantity":
-      return "Quantity";
-    case "Transform":
-      return "Transform";
     default:
       return "ContentResource";
   }
@@ -423,81 +401,6 @@ function recordEntity(entities: Presentation4Entities, options: { legacyMode?: b
   };
 }
 
-function recordSelectorForLoading(
-  entities: Presentation4Entities,
-  mapping: NormalizeResult["mapping"],
-  options: { preserveResourceShape?: boolean; legacyMode?: boolean } = {}
-) {
-  const { preserveResourceShape = false } = options;
-  const { legacyMode = false } = options;
-
-  return (resource: any, context: TraversalContext) => {
-    if (!resource || typeof resource !== "object") {
-      return resource;
-    }
-    const existingId = getId(resource);
-    const id = existingId || mintDeterministicId(resource, "Selector", context.path);
-    const resourceToStore = existingId
-      ? resource
-      : {
-          ...resource,
-          id,
-          type: getType(resource) || "Selector",
-        };
-
-    mapping[id] = "Selector";
-    const current = entities.Selector[id];
-    const mergeContext = {
-      parent: context.parent,
-      isTopLevel: context.path === "$",
-      legacyMode,
-    };
-    entities.Selector[id] = (
-      current
-        ? mergeEntities(current as any, resourceToStore, mergeContext)
-        : mergeEntities({ id, type: getType(resourceToStore) || "Selector" } as any, resourceToStore, mergeContext)
-    ) as any;
-
-    if (!existingId && !preserveResourceShape) {
-      resource.id = id;
-      if (!getType(resource)) {
-        resource.type = getType(resourceToStore) || "Selector";
-      }
-    }
-
-    return resource;
-  };
-}
-
-function recordServiceForLoading(entities: Presentation4Entities, options: { legacyMode?: boolean } = {}) {
-  const { legacyMode = false } = options;
-
-  return (resource: any, context: TraversalContext) => {
-    if (!resource || typeof resource !== "object") {
-      return resource;
-    }
-    const id = getId(resource);
-    if (!id) {
-      return resource;
-    }
-
-    const current = entities.Service[id];
-    const mergeContext = {
-      parent: context.parent,
-      isTopLevel: context.path === "$",
-      legacyMode,
-    };
-    entities.Service[id] = (
-      current
-        ? mergeEntities(current as any, resource, mergeContext)
-        : mergeEntities({ id, type: getType(resource) || "Service" } as any, resource, mergeContext)
-    ) as any;
-
-    // Keep the full service object on the parent resource, matching P3 behavior.
-    return resource;
-  };
-}
-
 export function normalize(input: unknown): NormalizeResult {
   const sourceVersion = detectSourceVersion(input as any);
   const isLegacySource = sourceVersion === 2 || sourceVersion === 3;
@@ -527,14 +430,6 @@ export function normalize(input: unknown): NormalizeResult {
     contentResourceTraversals.push(ensureDefaultFields(emptyContentResource));
   }
   contentResourceTraversals.push(map("ContentResource"), record("ContentResource"));
-
-  const selectorTraversals: Array<(resource: any, context: TraversalContext) => any> = [];
-  if (!isLegacySource) {
-    selectorTraversals.push(withId("Selector", diagnostics), ensureDefaultFields(emptySelector));
-  }
-  selectorTraversals.push(
-    recordSelectorForLoading(entities, mapping, { preserveResourceShape: isLegacySource, legacyMode: isLegacySource })
-  );
 
   const specificResourceTraversals: Array<(resource: any, context: TraversalContext) => any> = [];
   if (!isLegacySource) {
@@ -595,25 +490,6 @@ export function normalize(input: unknown): NormalizeResult {
         ensureDefaultFields((isLegacySource ? legacyEmptyRange : emptyRange) as any),
         map("Range"),
         record("Range"),
-      ],
-      service: [
-        withId("Service", diagnostics),
-        ensureDefaultFields((isLegacySource ? legacyEmptyService : emptyService) as any),
-        map("Service"),
-        recordServiceForLoading(entities, { legacyMode: isLegacySource }),
-      ],
-      selector: selectorTraversals,
-      quantity: [
-        withId("Quantity", diagnostics),
-        ...(isLegacySource ? [] : [ensureDefaultFields(emptyQuantity)]),
-        map("Quantity"),
-        record("Quantity"),
-      ],
-      transform: [
-        withId("Transform", diagnostics),
-        ...(isLegacySource ? [] : [ensureDefaultFields(emptyTransform)]),
-        map("Transform"),
-        record("Transform"),
       ],
       agent: [
         withId("Agent", diagnostics),

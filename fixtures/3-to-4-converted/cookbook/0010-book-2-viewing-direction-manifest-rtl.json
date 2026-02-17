@@ -22,8 +22,9 @@
           "front cover"
         ]
       },
-      "width": 3497,
       "height": 4823,
+      "width": 3497,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p1/1",
@@ -53,8 +54,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -70,8 +74,9 @@
           "pages 1–2"
         ]
       },
-      "width": 6062,
       "height": 4804,
+      "width": 6062,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p2/1",
@@ -88,8 +93,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 6062,
                   "height": 4804,
+                  "width": 6062,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_002",
@@ -101,8 +106,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -118,8 +126,9 @@
           "pages 3–4"
         ]
       },
-      "width": 6127,
       "height": 4776,
+      "width": 6127,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p3/1",
@@ -136,8 +145,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 6127,
                   "height": 4776,
+                  "width": 6127,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_003",
@@ -149,8 +158,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p3",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -166,8 +178,9 @@
           "pages 5–6"
         ]
       },
-      "width": 6124,
       "height": 4751,
+      "width": 6124,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p4/1",
@@ -184,8 +197,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 6124,
                   "height": 4751,
+                  "width": 6124,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_004",
@@ -197,8 +210,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p4",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -214,8 +230,9 @@
           "back cover"
         ]
       },
-      "width": 3510,
       "height": 4808,
+      "width": 3510,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/page/p5/1",
@@ -232,8 +249,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 3510,
                   "height": 4808,
+                  "width": 3510,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_005",
@@ -245,8 +262,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p5",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/p5",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

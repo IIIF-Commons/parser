@@ -7,10 +7,7 @@
       "Multiple Related Images (Book, etc.)"
     ]
   },
-  "start": {
-    "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
-    "type": "Canvas"
-  },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p1",
@@ -22,6 +19,7 @@
       },
       "height": 4613,
       "width": 3204,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p1/1",
@@ -51,8 +49,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -68,8 +69,9 @@
           "Frontispiece"
         ]
       },
-      "width": 3186,
       "height": 4612,
+      "width": 3186,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p2/1",
@@ -86,8 +88,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 3186,
                   "height": 4612,
+                  "width": 3186,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19",
@@ -99,8 +101,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -116,8 +121,9 @@
           "Title page"
         ]
       },
-      "width": 3204,
       "height": 4613,
+      "width": 3204,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p3/1",
@@ -134,8 +140,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 3204,
                   "height": 4613,
+                  "width": 3204,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20",
@@ -147,8 +153,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p3",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -164,8 +173,9 @@
           "Blank page"
         ]
       },
-      "width": 3174,
       "height": 4578,
+      "width": 3174,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p4/1",
@@ -182,8 +192,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 3174,
                   "height": 4578,
+                  "width": 3174,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21",
@@ -195,8 +205,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p4",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p4",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -212,8 +225,9 @@
           "Bookplate"
         ]
       },
-      "width": 3198,
       "height": 4632,
+      "width": 3198,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p5/1",
@@ -230,8 +244,8 @@
                   "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22/full/max/0/default.jpg",
                   "type": "Image",
                   "format": "image/jpeg",
-                  "width": 3198,
                   "height": 4632,
+                  "width": 3198,
                   "service": [
                     {
                       "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22",
@@ -243,8 +257,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p5",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p5",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -252,5 +269,57 @@
         }
       ]
     }
-  ]
+  ],
+  "start": {
+    "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
+    "type": "Canvas",
+    "label": {
+      "en": [
+        "Frontispiece"
+      ]
+    },
+    "height": 4612,
+    "width": 3186,
+    "duration": 0,
+    "items": [
+      {
+        "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p2/1",
+        "type": "AnnotationPage",
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/annotation/p0002-image",
+            "type": "Annotation",
+            "motivation": [
+              "painting"
+            ],
+            "body": [
+              {
+                "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4612,
+                "width": 3186,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19",
+                    "type": "ImageService3",
+                    "profile": "level1"
+                  }
+                ]
+              }
+            ],
+            "target": [
+              {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
+                  "type": "Canvas"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }

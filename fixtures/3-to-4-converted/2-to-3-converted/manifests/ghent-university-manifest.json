@@ -1,4 +1,12 @@
 {
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
+  "type": "Manifest",
+  "label": {
+    "@none": [
+      "Document uit het archief van de dichter Dioskoros van Aphrodite (?)[manuscript]"
+    ]
+  },
   "metadata": [
     {
       "label": {
@@ -109,33 +117,6 @@
       }
     }
   ],
-  "seeAlso": [
-    {
-      "dcterms:format": "application/marcxml+xml",
-      "type": "Dataset",
-      "id": "https://lib.ugent.be/catalog/rug01%3A001484515.marcxml"
-    }
-  ],
-  "logo": [
-    {
-      "id": "http://adore.ugent.be/IIIF/img/logo_i.svg",
-      "type": "Image"
-    }
-  ],
-  "label": {
-    "@none": [
-      "Document uit het archief van de dichter Dioskoros van Aphrodite (?)[manuscript]"
-    ]
-  },
-  "thumbnail": [
-    {
-      "type": "Image",
-      "id": "https://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/0,0,6215,15076/226,/0/default.jpg"
-    }
-  ],
-  "type": "Manifest",
-  "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
-  "rights": "http://rightsstatements.org/vocab/UND/1.0/",
   "requiredStatement": {
     "label": {
       "@none": [
@@ -148,41 +129,36 @@
       ]
     }
   },
-  "homepage": {
-    "format": "text/html",
-    "type": "Text",
-    "id": "https://lib.ugent.be/viewer/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"
-  },
+  "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+  "viewingDirection": "left-to-right",
+  "thumbnail": [
+    {
+      "id": "https://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/0,0,6215,15076/226,/0/default.jpg",
+      "type": "Image"
+    }
+  ],
+  "seeAlso": [
+    {
+      "id": "https://lib.ugent.be/catalog/rug01%3A001484515.marcxml",
+      "type": "Dataset"
+    }
+  ],
+  "homepage": [
+    {
+      "id": "https://lib.ugent.be/viewer/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
+      "type": "Text",
+      "format": "text/html"
+    }
+  ],
   "items": [
     {
-      "thumbnail": [
-        {
-          "type": "Image",
-          "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/0,0,6215,15076/226,/0/default.jpg"
-        }
-      ],
+      "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
+      "type": "Canvas",
       "label": {
         "@none": [
           "1"
         ]
       },
-      "height": 15076,
-      "width": 6215,
-      "rendering": [
-        {
-          "format": "image/jp2",
-          "label": {
-            "@none": [
-              "Download as jpeg2000 (78.77 MB)"
-            ]
-          },
-          "type": "Image",
-          "id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1&svc_id=original"
-        }
-      ],
-      "type": "Canvas",
-      "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
-      "rights": "http://rightsstatements.org/vocab/UND/1.0/",
       "requiredStatement": {
         "label": {
           "@none": [
@@ -195,78 +171,82 @@
           ]
         }
       },
+      "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+      "height": 15076,
+      "width": 6215,
+      "duration": 0,
+      "thumbnail": [
+        {
+          "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/0,0,6215,15076/226,/0/default.jpg",
+          "type": "Image"
+        }
+      ],
+      "rendering": [
+        {
+          "id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1&svc_id=original",
+          "type": "Image",
+          "label": {
+            "@none": [
+              "Download as jpeg2000 (78.77 MB)"
+            ]
+          },
+          "format": "image/jp2"
+        }
+      ],
       "items": [
         {
+          "id": "https://example.org/uuid/e68bf9f3-4544-4e31-a4cf-ef0810019f76",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1/image-annotations/0",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1/image-annotations/0",
-              "target": [
-                {
-                  "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/full/full/0/native.jpg",
+                  "type": "Image",
+                  "label": {
+                    "@none": [
+                      "BHSL-PAP-000044_2010_0001_AC.jp2"
+                    ]
+                  },
+                  "format": "image/jpeg",
+                  "height": 15076,
+                  "width": 6215,
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
                       "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1",
                       "type": "ImageService2"
                     }
-                  ],
-                  "height": 15076,
-                  "label": {
-                    "@none": [
-                      "BHSL-PAP-000044_2010_0001_AC.jp2"
-                    ]
-                  },
-                  "width": 6215,
-                  "format": "image/jpeg",
-                  "type": "Image",
-                  "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/full/full/0/native.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/e68bf9f3-4544-4e31-a4cf-ef0810019f76"
+          ]
         }
       ]
     },
     {
+      "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
+      "type": "Canvas",
       "label": {
         "@none": [
           "2"
         ]
       },
-      "height": 15036,
-      "thumbnail": [
-        {
-          "type": "Image",
-          "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/0,0,6235,15036/226,/0/default.jpg"
-        }
-      ],
-      "rendering": [
-        {
-          "format": "image/jp2",
-          "label": {
-            "@none": [
-              "Download as jpeg2000 (78.29 MB)"
-            ]
-          },
-          "type": "Image",
-          "id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3&svc_id=original"
-        }
-      ],
-      "width": 6235,
-      "type": "Canvas",
-      "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
-      "rights": "http://rightsstatements.org/vocab/UND/1.0/",
       "requiredStatement": {
         "label": {
           "@none": [
@@ -279,49 +259,73 @@
           ]
         }
       },
+      "rights": "http://rightsstatements.org/vocab/UND/1.0/",
+      "height": 15036,
+      "width": 6235,
+      "duration": 0,
+      "thumbnail": [
+        {
+          "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/0,0,6235,15036/226,/0/default.jpg",
+          "type": "Image"
+        }
+      ],
+      "rendering": [
+        {
+          "id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3&svc_id=original",
+          "type": "Image",
+          "label": {
+            "@none": [
+              "Download as jpeg2000 (78.29 MB)"
+            ]
+          },
+          "format": "image/jp2"
+        }
+      ],
       "items": [
         {
+          "id": "https://example.org/uuid/edb590d9-43f7-4e52-b2e8-17112e87843b",
           "type": "AnnotationPage",
           "items": [
             {
+              "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3/image-annotations/0",
+              "type": "Annotation",
               "motivation": [
                 "painting"
               ],
-              "type": "Annotation",
-              "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3/image-annotations/0",
-              "target": [
-                {
-                  "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
-                  "type": "Canvas"
-                }
-              ],
               "body": [
                 {
+                  "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/full/full/0/native.jpg",
+                  "type": "Image",
                   "label": {
                     "@none": [
                       "BHSL-PAP-000044_2010_0002_AC.jp2"
                     ]
                   },
+                  "format": "image/jpeg",
                   "height": 15036,
                   "width": 6235,
-                  "format": "image/jpeg",
                   "service": [
                     {
                       "profile": "http://iiif.io/api/image/2/level1.json",
                       "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3",
                       "type": "ImageService2"
                     }
-                  ],
-                  "type": "Image",
-                  "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/full/full/0/native.jpg"
+                  ]
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
-          ],
-          "id": "https://example.org/uuid/edb590d9-43f7-4e52-b2e8-17112e87843b"
+          ]
         }
       ]
     }
-  ],
-  "@context": "http://iiif.io/api/presentation/4/context.json"
+  ]
 }

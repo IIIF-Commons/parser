@@ -69,6 +69,7 @@
       ]
     }
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/canvas/p1",
@@ -78,8 +79,6 @@
           "Painting under natural light"
         ]
       },
-      "height": 1271,
-      "width": 2000,
       "metadata": [
         {
           "label": {
@@ -94,6 +93,9 @@
           }
         }
       ],
+      "height": 1271,
+      "width": 2000,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/page/p1/1",
@@ -123,8 +125,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -140,8 +145,6 @@
           "X-ray view of painting"
         ]
       },
-      "height": 1271,
-      "width": 2000,
       "metadata": [
         {
           "label": {
@@ -156,6 +159,9 @@
           }
         }
       ],
+      "height": 1271,
+      "width": 2000,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/page/p2/1",
@@ -185,8 +191,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/canvas/p2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0029-metadata-anywhere/canvas/p2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

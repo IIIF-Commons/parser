@@ -1,6 +1,12 @@
 import { type SerializeConfig, UNSET } from "./serialize";
 import { PRESENTATION_4_CONTEXT } from "./utilities";
 
+export type AnnotationBodyTargetMode = "array" | "object";
+
+export type SerializePresentation4Options = {
+  annotationBodyTargetMode?: AnnotationBodyTargetMode;
+};
+
 function filterList<T>(value: T[] | typeof UNSET): T[] | undefined {
   if (value === UNSET) {
     return undefined;
@@ -12,8 +18,8 @@ function filterList<T>(value: T[] | typeof UNSET): T[] | undefined {
   return filtered.length ? filtered : undefined;
 }
 
-function inlineList<T>(value: T[] | T | undefined): T[] | undefined {
-  if (!value) {
+function annotationList<T>(value: T[] | T | typeof UNSET | undefined): T[] | undefined {
+  if (value === UNSET || value === null || typeof value === "undefined") {
     return undefined;
   }
   const list = Array.isArray(value) ? value : [value];
@@ -40,6 +46,36 @@ function stripVaultId(id?: string) {
   return id.startsWith("vault://") ? undefined : id;
 }
 
+function asObjectOrList(items: any[]): any {
+  if (items.length === 1) {
+    const first = items[0];
+    if (first && typeof first === "object" && !Array.isArray(first)) {
+      return first;
+    }
+  }
+  return {
+    type: "List",
+    items,
+  };
+}
+
+function serializeAnnotationValue(
+  value: any[] | any | typeof UNSET | undefined,
+  mode: AnnotationBodyTargetMode,
+  normalizeItem?: (item: any) => any
+): any {
+  const items = annotationList(value);
+  if (!items || !items.length) {
+    return undefined;
+  }
+
+  const normalizedItems = normalizeItem ? items.map((item) => normalizeItem(item)) : items;
+  if (mode === "array") {
+    return normalizedItems;
+  }
+  return asObjectOrList(normalizedItems);
+}
+
 function baseProperties(entity: any) {
   return [
     ["id", stripVaultId(entity.id)],
@@ -60,9 +96,10 @@ function baseProperties(entity: any) {
     ["spatialScale", entity.spatialScale],
     ["temporalScale", entity.temporalScale],
     ["backgroundColor", entity.backgroundColor],
-    ["viewingDirection", entity.viewingDirection],
+    ["viewingDirection", entity.viewingDirection !== "left-to-right" ? entity.viewingDirection : undefined],
     ["timeMode", entity.timeMode],
-    ["services", undefined],
+    ["services", filterList(entity.services)],
+    ["service", filterList(entity.service)],
   ] as Array<[string, any]>;
 }
 
@@ -71,8 +108,8 @@ function* withLinkedProperties(entity: any): Generator<any, Array<[string, any]>
     ["thumbnail", filterList(yield entity.thumbnail)],
     ["provider", filterList(yield entity.provider)],
     ["seeAlso", filterList(yield entity.seeAlso)],
-    ["service", filterList(yield entity.service)],
-    ["services", filterList(yield entity.services)],
+    ["service", filterList(entity.service)],
+    ["services", filterList(entity.services)],
     ["homepage", filterList(yield entity.homepage)],
     ["rendering", filterList(yield entity.rendering)],
     ["partOf", filterList(yield entity.partOf)],
@@ -91,152 +128,115 @@ function* serializeContainer(entity: any, includeStructures = false): Generator<
   ];
 }
 
-export const serializeConfigPresentation4: SerializeConfig = {
-  Collection: function* (entity, _state, { isTopLevel }) {
-    return [
-      ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
-      ...baseProperties(entity),
-      ...(yield* withLinkedProperties(entity)),
-      ["items", filterList(yield entity.items)],
-      ["first", entity.first],
-      ["last", entity.last],
-      ["total", entity.total],
-    ];
-  },
+export function createSerializeConfigPresentation4(options: SerializePresentation4Options = {}): SerializeConfig {
+  const annotationBodyTargetMode = options.annotationBodyTargetMode || "array";
 
-  Manifest: function* (entity, _state, { isTopLevel }) {
-    return [
-      ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
-      ...(yield* serializeContainer(entity, true)),
-      ["start", entity.start ? yield entity.start : undefined],
-    ];
-  },
+  return {
+    Collection: function* (entity, _state, { isTopLevel }) {
+      return [
+        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", filterList(yield entity.items)],
+        ["first", entity.first],
+        ["last", entity.last],
+        ["total", entity.total],
+      ];
+    },
 
-  Timeline: function* (entity) {
-    return yield* serializeContainer(entity);
-  },
+    Manifest: function* (entity, _state, { isTopLevel }) {
+      return [
+        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
+        ...(yield* serializeContainer(entity, true)),
+        ["start", entity.start ? yield entity.start : undefined],
+      ];
+    },
 
-  Canvas: function* (entity) {
-    return yield* serializeContainer(entity);
-  },
+    Timeline: function* (entity) {
+      return yield* serializeContainer(entity);
+    },
 
-  Scene: function* (entity) {
-    return yield* serializeContainer(entity);
-  },
+    Canvas: function* (entity) {
+      return yield* serializeContainer(entity);
+    },
 
-  AnnotationPage: function* (entity) {
-    return [
-      ...baseProperties(entity),
-      ...(yield* withLinkedProperties(entity)),
-      ["items", filterList(yield entity.items)],
-    ];
-  },
+    Scene: function* (entity) {
+      return yield* serializeContainer(entity);
+    },
 
-  AnnotationCollection: function* (entity) {
-    return [
-      ...baseProperties(entity),
-      ...(yield* withLinkedProperties(entity)),
-      ["items", filterList(yield entity.items)],
-      ["first", entity.first],
-      ["last", entity.last],
-      ["total", entity.total],
-    ];
-  },
+    AnnotationPage: function* (entity) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", filterList(yield entity.items)],
+      ];
+    },
 
-  Annotation: function* (entity) {
-    return [
-      ...baseProperties(entity),
-      ...(yield* withLinkedProperties(entity)),
-      ["motivation", entity.motivation?.length ? entity.motivation : undefined],
-      ["body", filterList(yield entity.body)],
-      ["target", inlineList(entity.target)?.map((target) => normalizeAnnotationTarget(target))],
-      ["timeMode", entity.timeMode],
-      ["exclude", entity.exclude?.length ? entity.exclude : undefined],
-      ["position", entity.position ? yield entity.position : undefined],
-    ];
-  },
+    AnnotationCollection: function* (entity) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", filterList(yield entity.items)],
+        ["first", entity.first],
+        ["last", entity.last],
+        ["total", entity.total],
+      ];
+    },
 
-  Range: function* (entity) {
-    return [
-      ...baseProperties(entity),
-      ...(yield* withLinkedProperties(entity)),
-      ["items", filterList(yield entity.items)],
-      ["start", entity.start ? yield entity.start : undefined],
-      ["supplementary", entity.supplementary ? yield entity.supplementary : undefined],
-    ];
-  },
+    Annotation: function* (entity) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["motivation", entity.motivation?.length ? entity.motivation : undefined],
+        ["body", serializeAnnotationValue(yield entity.body, annotationBodyTargetMode)],
+        [
+          "target",
+          serializeAnnotationValue(entity.target, annotationBodyTargetMode, (target) =>
+            normalizeAnnotationTarget(target)
+          ),
+        ],
+        ["timeMode", entity.timeMode],
+        ["exclude", entity.exclude?.length ? entity.exclude : undefined],
+        ["position", entity.position ? yield entity.position : undefined],
+      ];
+    },
 
-  Agent: function* (entity) {
-    return [
-      ["id", stripVaultId(entity.id)],
-      ["type", entity.type || "Agent"],
-      ["label", entity.label],
-      ...(yield* withLinkedProperties(entity)),
-    ];
-  },
+    Range: function* (entity) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", filterList(yield entity.items)],
+        ["start", entity.start ? yield entity.start : undefined],
+        ["supplementary", entity.supplementary ? yield entity.supplementary : undefined],
+      ];
+    },
 
-  Service: function* (entity) {
-    return [
-      ["id", stripVaultId(entity.id)],
-      ["type", entity.type],
-      ["profile", entity.profile],
-      ["service", filterList(yield entity.service)],
-    ];
-  },
+    Agent: function* (entity) {
+      return [
+        ["id", stripVaultId(entity.id)],
+        ["type", entity.type || "Agent"],
+        ["label", entity.label],
+        ...(yield* withLinkedProperties(entity)),
+      ];
+    },
 
-  Selector: function* (entity) {
-    return [
-      ["id", stripVaultId(entity.id)],
-      ["type", entity.type],
-      ["value", entity.value],
-      ["x", entity.x],
-      ["y", entity.y],
-      ["z", entity.z],
-      ["instant", entity.instant],
-      ["region", entity.region],
-      ["size", entity.size],
-      ["rotation", entity.rotation],
-      ["quality", entity.quality],
-      ["format", entity.format],
-      ["version", entity.version],
-      ["refinedBy", entity.refinedBy ? yield entity.refinedBy : undefined],
-    ];
-  },
+    ContentResource: function* (entity) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", entity.items ? filterList(yield entity.items) : undefined],
+        ["source", entity.source ? yield entity.source : undefined],
+        ["selector", entity.selector ? filterList(yield entity.selector) : undefined],
+        ["transform", entity.transform ? filterList(yield entity.transform) : undefined],
+        ["action", entity.action?.length ? entity.action : undefined],
+        ["lookAt", entity.lookAt ? yield entity.lookAt : undefined],
+        ["position", entity.position ? yield entity.position : undefined],
+        ["provides", entity.provides?.length ? entity.provides : undefined],
+        ["quantityValue", entity.quantityValue],
+        ["unit", entity.unit],
+      ];
+    },
+  };
+}
 
-  Quantity: function* (entity) {
-    return [
-      ["id", stripVaultId(entity.id)],
-      ["type", entity.type || "Quantity"],
-      ["quantityValue", entity.quantityValue],
-      ["unit", entity.unit],
-      ["label", entity.label],
-    ];
-  },
-
-  Transform: function* (entity) {
-    return [
-      ["id", stripVaultId(entity.id)],
-      ["type", entity.type],
-      ["x", entity.x],
-      ["y", entity.y],
-      ["z", entity.z],
-    ];
-  },
-
-  ContentResource: function* (entity) {
-    return [
-      ...baseProperties(entity),
-      ...(yield* withLinkedProperties(entity)),
-      ["items", entity.items ? filterList(yield entity.items) : undefined],
-      ["source", entity.source ? yield entity.source : undefined],
-      ["selector", entity.selector ? filterList(yield entity.selector) : undefined],
-      ["transform", entity.transform ? filterList(yield entity.transform) : undefined],
-      ["action", entity.action?.length ? entity.action : undefined],
-      ["lookAt", entity.lookAt ? yield entity.lookAt : undefined],
-      ["position", entity.position ? yield entity.position : undefined],
-      ["provides", entity.provides?.length ? entity.provides : undefined],
-      ["quantityValue", entity.quantityValue],
-      ["unit", entity.unit],
-    ];
-  },
-};
+export const serializeConfigPresentation4 = createSerializeConfigPresentation4();

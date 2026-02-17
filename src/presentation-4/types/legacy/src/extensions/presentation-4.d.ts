@@ -15,11 +15,13 @@ export type SelectorBase = {
 };
 type OneOrMany<T> = T | T[];
 
-export type PointSelector = Prettify<Omit<PointSelectorV3, "t"> & { type: "PointSelector"; z?: number; t?: number }>;
-export type FragmentSelector = Prettify<FragmentSelectorV3 & { id?: string }>;
-export type ImageApiSelector = Prettify<ImageApiSelectorV3 & { id?: string }>;
-export type AudioContentSelector = Prettify<AudioContentSelectorV3 & { id?: string }>;
-export type VisualContentSelector = Prettify<VisualContentSelectorV3 & { id?: string }>;
+export type PointSelector = Prettify<
+  SelectorBase & Omit<PointSelectorV3, "t"> & { type: "PointSelector"; z?: number; instant?: number }
+>;
+export type FragmentSelector = Prettify<SelectorBase & FragmentSelectorV3 & { id?: string }>;
+export type ImageApiSelector = Prettify<SelectorBase & ImageApiSelectorV3 & { id?: string }>;
+export type AudioContentSelector = Prettify<SelectorBase & AudioContentSelectorV3 & { id?: string }>;
+export type VisualContentSelector = Prettify<SelectorBase & VisualContentSelectorV3 & { id?: string }>;
 
 export type WktSelector = SelectorBase & {
   type: "WktSelector" | "WKTSelector";

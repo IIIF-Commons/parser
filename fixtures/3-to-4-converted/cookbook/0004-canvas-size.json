@@ -7,12 +7,14 @@
       "Still image from an opera performance at Indiana University"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/canvas/p1",
       "type": "Canvas",
       "height": 1080,
       "width": 1920,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/page/p1/1",
@@ -35,8 +37,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

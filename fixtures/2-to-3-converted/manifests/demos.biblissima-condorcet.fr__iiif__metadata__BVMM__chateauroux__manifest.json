@@ -136,13 +136,13 @@
       ]
     }
   },
-  "homepage": {
+  "homepage": [{
     "label": {
       "@none": ["Digitized manuscript (BVMM, IRHT-CNRS)"]
     },
     "id": "http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=4490",
     "type": "Text"
-  },
+  }],
   "items": [
     {
       "label": {

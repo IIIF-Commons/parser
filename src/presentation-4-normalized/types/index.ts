@@ -9,29 +9,11 @@ import type {
   CollectionNormalized,
   ContentResourceNormalized,
   ManifestNormalized,
-  NormalizedEntityBase,
-  NormalizedFramingPart,
-  NormalizedLinkedEntity,
-  NormalizedReference,
   RangeNormalized,
   SceneNormalized,
-  ServiceNormalized,
   SpecificResourceNormalized,
   TimelineNormalized,
 } from "./legacy/index";
-
-export interface SelectorNormalized extends NormalizedEntityBase {
-  type: string;
-  selectors: readonly NormalizedReference[];
-}
-
-export interface QuantityNormalized extends NormalizedEntityBase {
-  type: "Quantity";
-}
-
-export interface TransformNormalized extends NormalizedEntityBase {
-  type: string;
-}
 
 export type NormalizedEntity =
   | CollectionNormalized
@@ -45,11 +27,7 @@ export type NormalizedEntity =
   | ContentResourceNormalized
   | SpecificResourceNormalized
   | RangeNormalized
-  | ServiceNormalized
-  | SelectorNormalized
-  | AgentNormalized
-  | QuantityNormalized
-  | TransformNormalized;
+  | AgentNormalized;
 
 export type Presentation4Entities = {
   Collection: Record<string, CollectionNormalized>;
@@ -62,11 +40,7 @@ export type Presentation4Entities = {
   Annotation: Record<string, AnnotationNormalized>;
   ContentResource: Record<string, ContentResourceNormalized | SpecificResourceNormalized>;
   Range: Record<string, RangeNormalized>;
-  Service: Record<string, ServiceNormalized>;
-  Selector: Record<string, SelectorNormalized>;
   Agent: Record<string, AgentNormalized>;
-  Quantity: Record<string, QuantityNormalized>;
-  Transform: Record<string, TransformNormalized>;
 };
 
 export type Presentation4MappingType = keyof Presentation4Entities;

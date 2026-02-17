@@ -7,7 +7,6 @@
       "Berliner Tageblatt - 1925-02-16"
     ]
   },
-  "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
   "requiredStatement": {
     "label": {
       "en": [
@@ -20,6 +19,8 @@
       ]
     }
   },
+  "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/canvas/p1",
@@ -31,6 +32,27 @@
       },
       "height": 5000,
       "width": 3602,
+      "duration": 0,
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
+          "type": "AnnotationPage",
+          "partOf": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_coll.json",
+              "type": "AnnotationCollection",
+              "label": {
+                "en": [
+                  "Newspaper layout markup"
+                ]
+              },
+              "first": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
+              "last": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json",
+              "total": 8
+            }
+          ]
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/annotation_page_painting/ap1",
@@ -58,33 +80,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
-          "type": "AnnotationPage",
-          "partOf": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_coll.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "en": [
-                  "Newspaper layout markup"
-                ]
-              },
-              "total": 8,
-              "first": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
-              "last": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json"
-            }
-          ],
-          "next": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json"
         }
       ]
     },
@@ -98,6 +102,27 @@
       },
       "height": 5000,
       "width": 3602,
+      "duration": 0,
+      "annotations": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json",
+          "type": "AnnotationPage",
+          "partOf": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_coll.json",
+              "type": "AnnotationCollection",
+              "label": {
+                "en": [
+                  "Newspaper layout markup"
+                ]
+              },
+              "first": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
+              "last": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json",
+              "total": 8
+            }
+          ]
+        }
+      ],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/annotation_page_painting/ap2",
@@ -125,33 +150,15 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/canvas/p2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/canvas/p2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
           ]
-        }
-      ],
-      "annotations": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json",
-          "type": "AnnotationPage",
-          "partOf": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_coll.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "en": [
-                  "Newspaper layout markup"
-                ]
-              },
-              "total": 8,
-              "first": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
-              "last": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json"
-            }
-          ],
-          "prev": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json"
         }
       ]
     }

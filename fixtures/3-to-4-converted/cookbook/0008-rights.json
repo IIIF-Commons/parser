@@ -12,7 +12,6 @@
       "<p>Picture taken by the <a href=\"https://github.com/glenrobson\">IIIF Technical Coordinator</a></p>"
     ]
   },
-  "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
   "requiredStatement": {
     "label": {
       "en": [
@@ -25,12 +24,15 @@
       ]
     }
   },
+  "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0008-rights/canvas/p1",
       "type": "Canvas",
       "height": 3024,
       "width": 4032,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0008-rights/page/p1/1",
@@ -60,8 +62,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0008-rights/canvas/p1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0008-rights/canvas/p1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

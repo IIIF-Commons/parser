@@ -7,12 +7,11 @@
       "Laocöon, geolocated sculpture and painting."
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/canvas/1",
       "type": "Canvas",
-      "height": 3000,
-      "width": 2315,
       "label": {
         "en": [
           "Front of Bronze"
@@ -45,6 +44,9 @@
           }
         ]
       },
+      "height": 3000,
+      "width": 2315,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/anno-page/1",
@@ -74,8 +76,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/canvas/1",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/canvas/1",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
@@ -86,8 +91,6 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/canvas/2",
       "type": "Canvas",
-      "height": 3259,
-      "width": 4096,
       "label": {
         "en": [
           "Painting"
@@ -117,6 +120,9 @@
           }
         ]
       },
+      "height": 3259,
+      "width": 4096,
+      "duration": 0,
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/anno-page/2",
@@ -146,8 +152,11 @@
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/canvas/2",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/canvas/2",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }

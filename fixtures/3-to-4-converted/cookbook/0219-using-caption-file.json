@@ -7,6 +7,7 @@
       "Lunchroom Manners"
     ]
   },
+  "viewingDirection": "left-to-right",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
@@ -14,37 +15,6 @@
       "height": 360,
       "width": 480,
       "duration": 572.034,
-      "items": [
-        {
-          "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas/page",
-          "type": "AnnotationPage",
-          "items": [
-            {
-              "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas/page/annotation1",
-              "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
-                  "type": "Video",
-                  "height": 360,
-                  "width": 480,
-                  "duration": 572.034,
-                  "format": "video/mp4"
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
-                  "type": "Canvas"
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "annotations": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas/page2",
@@ -60,19 +30,55 @@
                 {
                   "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/lunchroom_manners.vtt",
                   "type": "Text",
-                  "format": "text/vtt",
                   "label": {
                     "en": [
                       "Captions in WebVTT format"
                     ]
                   },
-                  "language": "en"
+                  "format": "text/vtt"
                 }
               ],
               "target": [
                 {
-                  "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
-                  "type": "Canvas"
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
+                    "type": "Canvas"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas/page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas/page/annotation1",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "body": [
+                {
+                  "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
+                  "type": "Video",
+                  "format": "video/mp4",
+                  "height": 360,
+                  "width": 480,
+                  "duration": 572.034
+                }
+              ],
+              "target": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
+                    "type": "Canvas"
+                  }
                 }
               ]
             }
