@@ -1,190 +1,195 @@
 {
-  "name": "@iiif/parser",
-  "version": "2.2.9",
-  "license": "MIT",
-  "type": "module",
-  "description": "IIIF Presentation 2, 3 and 4 parsing utilities",
-  "bugs": "https://github.com/iiif-commons/parser/issues",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iiif-commons/parser.git"
-  },
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
-      },
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      }
-    },
-    "./presentation-2": {
-      "require": {
-        "types": "./dist/presentation-2.d.cts",
-        "default": "./dist/presentation-2.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-2.d.ts",
-        "default": "./dist/presentation-2.js"
-      }
-    },
-    "./presentation-2/types": {
-      "require": {
-        "types": "./dist/presentation-2/types.d.cts",
-        "default": "./dist/presentation-2/types.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-2/types.d.ts",
-        "default": "./dist/presentation-2/types.js"
-      }
-    },
-    "./presentation-3": {
-      "require": {
-        "types": "./dist/presentation-3.d.cts",
-        "default": "./dist/presentation-3.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-3.d.ts",
-        "default": "./dist/presentation-3.js"
-      }
-    },
-    "./presentation-3/types": {
-      "require": {
-        "types": "./dist/presentation-3/types.d.cts",
-        "default": "./dist/presentation-3/types.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-3/types.d.ts",
-        "default": "./dist/presentation-3/types.js"
-      }
-    },
-    "./presentation-3-normalized": {
-      "require": {
-        "types": "./dist/presentation-3-normalized.d.cts",
-        "default": "./dist/presentation-3-normalized.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-3-normalized.d.ts",
-        "default": "./dist/presentation-3-normalized.js"
-      }
-    },
-    "./presentation-3-normalized/types": {
-      "require": {
-        "types": "./dist/presentation-3-normalized/types.d.cts",
-        "default": "./dist/presentation-3-normalized/types.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-3-normalized/types.d.ts",
-        "default": "./dist/presentation-3-normalized/types.js"
-      }
-    },
-    "./presentation-4": {
-      "require": {
-        "types": "./dist/presentation-4.d.cts",
-        "default": "./dist/presentation-4.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-4.d.ts",
-        "default": "./dist/presentation-4.js"
-      }
-    },
-    "./presentation-4/types": {
-      "require": {
-        "types": "./dist/presentation-4/types.d.cts",
-        "default": "./dist/presentation-4/types.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-4/types.d.ts",
-        "default": "./dist/presentation-4/types.js"
-      }
-    },
-    "./presentation-4-normalized": {
-      "require": {
-        "types": "./dist/presentation-4-normalized.d.cts",
-        "default": "./dist/presentation-4-normalized.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-4-normalized.d.ts",
-        "default": "./dist/presentation-4-normalized.js"
-      }
-    },
-    "./presentation-4-normalized/types": {
-      "require": {
-        "types": "./dist/presentation-4-normalized/types.d.cts",
-        "default": "./dist/presentation-4-normalized/types.cjs"
-      },
-      "import": {
-        "types": "./dist/presentation-4-normalized/types.d.ts",
-        "default": "./dist/presentation-4-normalized/types.js"
-      }
-    },
-    "./strict": {
-      "require": {
-        "types": "./dist/strict.d.cts",
-        "default": "./dist/strict.cjs"
-      },
-      "import": {
-        "types": "./dist/strict.d.ts",
-        "default": "./dist/strict.js"
-      }
-    },
-    "./image-3": {
-      "require": {
-        "types": "./dist/image-3.d.cts",
-        "default": "./dist/image-3.cjs"
-      },
-      "import": {
-        "types": "./dist/image-3.d.ts",
-        "default": "./dist/image-3.js"
-      }
-    },
-    "./upgrader": {
-      "require": {
-        "types": "./dist/upgrader.d.cts",
-        "default": "./dist/upgrader.cjs"
-      },
-      "import": {
-        "types": "./dist/upgrader.d.ts",
-        "default": "./dist/upgrader.js"
-      }
-    }
-  },
-  "scripts": {
-    "build": "tsdown && tsdown --config tsdown.umd.ts",
-    "dev": "tsdown --watch",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest",
-    "test:types": "vitest run --typecheck --typecheck.only",
-    "update-cookbook-v4": "node scripts/update-cookbook-v4.mjs",
-    "reserialize-p4-fixtures": "node scripts/reserialize-p4-fixtures.mjs",
-    "convert-p3-to-p4": "node scripts/convert-p3-manifests-to-p4.mjs",
-    "generate-p4-fixture-type-test": "node scripts/generate-p4-fixture-type-test.mjs",
-    "generate-p3-to-p4-type-test": "node scripts/generate-p3-to-p4-type-test.mjs",
-    "generate-p4-normalized-type-test": "node scripts/generate-p4-normalized-store-type-test.mjs",
-    "prepack": "tsdown && tsdown --config tsdown.umd.ts",
-    "lint": "publint"
-  },
-  "devDependencies": {
-    "@happy-dom/global-registrator": "^20.6.1",
-    "@hyperion-framework/validator": "^1.1.0",
-    "@types/node": "^22.19.11",
-    "prettier": "^3.8.1",
-    "publint": "^0.3.17",
-    "tsdown": "^0.20.3",
-    "tslib": "^2.6.2",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
-  },
-  "sideEffects": false,
-  "publishConfig": {
-    "access": "public"
-  }
+	"name": "@iiif/parser",
+	"version": "2.2.9",
+	"license": "MIT",
+	"type": "module",
+	"description": "IIIF Presentation 2, 3 and 4 parsing utilities",
+	"bugs": "https://github.com/iiif-commons/parser/issues",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/iiif-commons/parser.git"
+	},
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"bin": {
+		"iiif-parser": "./dist/cli.mjs"
+	},
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			},
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			}
+		},
+		"./presentation-2": {
+			"require": {
+				"types": "./dist/presentation-2.d.cts",
+				"default": "./dist/presentation-2.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-2.d.ts",
+				"default": "./dist/presentation-2.js"
+			}
+		},
+		"./presentation-2/types": {
+			"require": {
+				"types": "./dist/presentation-2/types.d.cts",
+				"default": "./dist/presentation-2/types.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-2/types.d.ts",
+				"default": "./dist/presentation-2/types.js"
+			}
+		},
+		"./presentation-3": {
+			"require": {
+				"types": "./dist/presentation-3.d.cts",
+				"default": "./dist/presentation-3.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-3.d.ts",
+				"default": "./dist/presentation-3.js"
+			}
+		},
+		"./presentation-3/types": {
+			"require": {
+				"types": "./dist/presentation-3/types.d.cts",
+				"default": "./dist/presentation-3/types.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-3/types.d.ts",
+				"default": "./dist/presentation-3/types.js"
+			}
+		},
+		"./presentation-3-normalized": {
+			"require": {
+				"types": "./dist/presentation-3-normalized.d.cts",
+				"default": "./dist/presentation-3-normalized.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-3-normalized.d.ts",
+				"default": "./dist/presentation-3-normalized.js"
+			}
+		},
+		"./presentation-3-normalized/types": {
+			"require": {
+				"types": "./dist/presentation-3-normalized/types.d.cts",
+				"default": "./dist/presentation-3-normalized/types.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-3-normalized/types.d.ts",
+				"default": "./dist/presentation-3-normalized/types.js"
+			}
+		},
+		"./presentation-4": {
+			"require": {
+				"types": "./dist/presentation-4.d.cts",
+				"default": "./dist/presentation-4.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-4.d.ts",
+				"default": "./dist/presentation-4.js"
+			}
+		},
+		"./presentation-4/types": {
+			"require": {
+				"types": "./dist/presentation-4/types.d.cts",
+				"default": "./dist/presentation-4/types.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-4/types.d.ts",
+				"default": "./dist/presentation-4/types.js"
+			}
+		},
+		"./presentation-4-normalized": {
+			"require": {
+				"types": "./dist/presentation-4-normalized.d.cts",
+				"default": "./dist/presentation-4-normalized.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-4-normalized.d.ts",
+				"default": "./dist/presentation-4-normalized.js"
+			}
+		},
+		"./presentation-4-normalized/types": {
+			"require": {
+				"types": "./dist/presentation-4-normalized/types.d.cts",
+				"default": "./dist/presentation-4-normalized/types.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-4-normalized/types.d.ts",
+				"default": "./dist/presentation-4-normalized/types.js"
+			}
+		},
+		"./strict": {
+			"require": {
+				"types": "./dist/strict.d.cts",
+				"default": "./dist/strict.cjs"
+			},
+			"import": {
+				"types": "./dist/strict.d.ts",
+				"default": "./dist/strict.js"
+			}
+		},
+		"./image-3": {
+			"require": {
+				"types": "./dist/image-3.d.cts",
+				"default": "./dist/image-3.cjs"
+			},
+			"import": {
+				"types": "./dist/image-3.d.ts",
+				"default": "./dist/image-3.js"
+			}
+		},
+		"./upgrader": {
+			"require": {
+				"types": "./dist/upgrader.d.cts",
+				"default": "./dist/upgrader.cjs"
+			},
+			"import": {
+				"types": "./dist/upgrader.d.ts",
+				"default": "./dist/upgrader.js"
+			}
+		}
+	},
+	"scripts": {
+		"build": "tsdown && tsdown --config tsdown.umd.ts && tsdown --config tsdown.cli.ts",
+		"cli": "bun run src/cli.ts",
+		"dev": "tsdown --watch",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest",
+		"test:types": "vitest run --typecheck --typecheck.only",
+		"update-cookbook-v4": "node scripts/update-cookbook-v4.mjs",
+		"reserialize-p4-fixtures": "node scripts/reserialize-p4-fixtures.mjs",
+		"convert-p3-to-p4": "node scripts/convert-p3-manifests-to-p4.mjs",
+		"generate-p4-fixture-type-test": "node scripts/generate-p4-fixture-type-test.mjs",
+		"generate-p3-to-p4-type-test": "node scripts/generate-p3-to-p4-type-test.mjs",
+		"generate-p4-normalized-type-test": "node scripts/generate-p4-normalized-store-type-test.mjs",
+		"validate:p4:fixtures": "bun run src/cli.ts validate-p4 fixtures/presentation-4 fixtures/cookbook-v4",
+		"prepack": "tsdown && tsdown --config tsdown.umd.ts && tsdown --config tsdown.cli.ts",
+		"lint": "publint"
+	},
+	"devDependencies": {
+		"@happy-dom/global-registrator": "^20.6.1",
+		"@hyperion-framework/validator": "^1.1.0",
+		"@types/node": "^22.19.11",
+		"prettier": "^3.8.1",
+		"publint": "^0.3.17",
+		"tsdown": "^0.20.3",
+		"tslib": "^2.6.2",
+		"typescript": "^5.9.3",
+		"vitest": "^4.0.18"
+	},
+	"sideEffects": false,
+	"publishConfig": {
+		"access": "public"
+	}
 }
