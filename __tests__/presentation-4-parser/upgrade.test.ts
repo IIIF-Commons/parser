@@ -187,4 +187,45 @@ describe("presentation-4 upgrade", () => {
     expect(report.issues.some((issue) => issue.code === "canvas-width-required")).toBe(false);
     expect(report.issues.some((issue) => issue.code === "canvas-height-required")).toBe(false);
   });
+
+  test("removes width and height from annotation pages during v3 to v4 upgrade", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/3/context.json",
+      id: "https://example.org/manifest/annotation-page-dimensions",
+      type: "Manifest",
+      label: { en: ["annotation page dimensions"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              width: 640,
+              height: 480,
+              items: [],
+            },
+          ],
+          annotations: [
+            {
+              id: "https://example.org/canvas/1/page/2",
+              type: "AnnotationPage",
+              width: 320,
+              height: 240,
+              items: [],
+            },
+          ],
+        },
+      ],
+    };
+
+    const upgraded = upgradePresentation3To4(manifest) as any;
+    expect(upgraded.items[0].items[0].width).toBeUndefined();
+    expect(upgraded.items[0].items[0].height).toBeUndefined();
+    expect(upgraded.items[0].annotations[0].width).toBeUndefined();
+    expect(upgraded.items[0].annotations[0].height).toBeUndefined();
+  });
 });

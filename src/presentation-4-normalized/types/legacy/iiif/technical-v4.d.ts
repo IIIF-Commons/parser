@@ -1,4 +1,5 @@
-import { InternationalString, Service } from "../../../../presentation-4/types";
+import type { InternationalString } from "../../../../presentation-3/types";
+import type { Service } from "../../../../presentation-4/types";
 import type { MetadataItem } from "../../../../presentation-4/types/legacy/src/resources/contentResource";
 
 export type NormalizedPrimitive = string | number | boolean | null;

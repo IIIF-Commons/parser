@@ -1,13 +1,16 @@
+import { presentation4ClassRequirements } from "./meta/class-requirements";
 import { type NormalizeResult, normalize } from "./normalize";
 import { Traverse } from "./traverse";
 import { upgradeToPresentation4 } from "./upgrade";
 import {
+  containerTypes,
   createValidationReport,
   ensureArray,
   getId,
   getType,
   identifyResourceType,
   isSpecificResource,
+  sceneComponentTypes,
   type ValidationIssue,
   type ValidationReport,
 } from "./utilities";
@@ -18,6 +21,26 @@ export type ValidateOptions = {
   mode?: ValidationMode;
   includePostNormalization?: boolean;
 };
+
+type ClassRequirement =
+  (typeof presentation4ClassRequirements.classes)[keyof typeof presentation4ClassRequirements.classes];
+
+type ClassRequirementStats = {
+  nodesChecked: number;
+  mustChecks: number;
+  shouldChecks: number;
+  allowedPropertyChecks: number;
+  mustNotChecks: number;
+};
+
+const classRequirementsByType = new Map<string, { className: string; requirement: ClassRequirement }>(
+  Object.entries(presentation4ClassRequirements.classes).map(([className, requirement]) => [
+    requirement.typeValue,
+    { className, requirement },
+  ])
+);
+
+const scenePaintableTypes = new Set(["Canvas", "Scene", "Model", ...Array.from(sceneComponentTypes)]);
 
 function hasPresentation4Context(resource: unknown): boolean {
   if (!resource || typeof resource !== "object") {
@@ -83,6 +106,18 @@ function getAnnotationEntries(value: any): any[] {
 
 function pathIsSpecificResourceSource(path: string): boolean {
   return /\.source(?:\[\d+\])?$/.test(path);
+}
+
+function pathIsReferenceContext(path: string): boolean {
+  return (
+    /(?:^|\.)partOf(?:\[\d+\])?(?:$|\.|\[)/.test(path) ||
+    /(?:^|\.)target(?:$|\.|\[)/.test(path) ||
+    /(?:^|\.)next(?:$|\.|\[)/.test(path) ||
+    /(?:^|\.)prev(?:$|\.|\[)/.test(path) ||
+    /(?:^|\.)first(?:$|\.|\[)/.test(path) ||
+    /(?:^|\.)last(?:$|\.|\[)/.test(path) ||
+    /(?:^|\.)annotations\[\d+\](?:$|\.|\[)/.test(path)
+  );
 }
 
 function isLikelyReferenceCanvas(canvas: any): boolean {
@@ -158,6 +193,16 @@ function validateAnnotationShape(
 ) {
   if (isReferenceAnnotation(annotation)) {
     return;
+  }
+
+  if (typeof annotation.bodyValue !== "undefined") {
+    issue(issues, {
+      code: "annotation-body-value-forbidden",
+      message: "Annotation.bodyValue is not allowed; use TextualBody instead",
+      path: `${nodePath}.bodyValue`,
+      resource: annotation,
+      specRef: "#Annotation",
+    });
   }
 
   if (typeof annotation.target === "undefined") {
@@ -265,6 +310,370 @@ function walkResourceTree(resource: any, path: string, visitor: (node: any, node
       walkResourceTree(value, `${path}.${key}`, visitor);
     }
   }
+}
+
+function walkResourceTreeWithParent(
+  resource: any,
+  path: string,
+  visitor: (node: any, nodePath: string, parent: any | undefined) => void,
+  parent?: any
+) {
+  if (Array.isArray(resource)) {
+    for (let i = 0; i < resource.length; i++) {
+      walkResourceTreeWithParent(resource[i], `${path}[${i}]`, visitor, parent);
+    }
+    return;
+  }
+
+  if (!resource || typeof resource !== "object") {
+    return;
+  }
+
+  visitor(resource, path, parent);
+
+  for (const [key, value] of Object.entries(resource)) {
+    if (value && typeof value === "object") {
+      walkResourceTreeWithParent(value, `${path}.${key}`, visitor, resource);
+    }
+  }
+}
+
+function hasProperty(resource: any, property: string): boolean {
+  if (property === "id") {
+    return typeof getId(resource) === "string";
+  }
+  if (property === "type") {
+    return typeof getType(resource) === "string";
+  }
+  return typeof resource?.[property] !== "undefined";
+}
+
+function collectAllowedProperties(requirement: ClassRequirement): Set<string> {
+  const allowed = new Set<string>([
+    ...requirement.must,
+    ...requirement.should,
+    ...requirement.may,
+    "@context",
+    "@id",
+    "@type",
+  ]);
+  return allowed;
+}
+
+function shouldCheckShouldProperty(className: string, property: string, node: any, parent: any): boolean {
+  if (className === "AnnotationPage" && (property === "next" || property === "prev" || property === "partOf")) {
+    const parentType = getType(parent);
+    const isEmbeddedInCanvas = parentType === "Canvas";
+    const hasPaginationLinks =
+      typeof node?.next !== "undefined" || typeof node?.prev !== "undefined" || typeof node?.partOf !== "undefined";
+    if (isEmbeddedInCanvas && !hasPaginationLinks) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function checkCollectionMustNotRules(collection: any, nodePath: string, issues: ValidationIssue[]) {
+  const hasFirst = typeof collection.first !== "undefined";
+  const hasLast = typeof collection.last !== "undefined";
+  if (hasFirst || hasLast) {
+    const items = ensureArray(collection.items);
+    if (items.length > 0) {
+      issue(issues, {
+        code: "collection-pages-items-exclusive",
+        message: "Collection using first/last paging must not include items",
+        path: `${nodePath}.items`,
+        resource: collection,
+        specRef: "#Collection",
+      });
+    }
+
+    const firstId = getId(collection.first);
+    const lastId = getId(collection.last);
+    if (!hasFirst || !hasLast || !firstId || !lastId || firstId === lastId) {
+      issue(issues, {
+        code: "collection-pages-minimum-two",
+        message: "Collection paging requires first and last pages that identify at least two distinct pages",
+        path: nodePath,
+        resource: collection,
+        specRef: "#CollectionPage",
+      });
+    }
+  }
+
+  const items = ensureArray(collection.items);
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i];
+    const itemType = getType(item);
+    if (itemType === "CollectionPage") {
+      issue(issues, {
+        code: "collection-item-collection-page-forbidden",
+        message: "Collection.items must not embed CollectionPage resources",
+        path: `${nodePath}.items[${i}]`,
+        resource: collection,
+        specRef: "#Collection",
+      });
+    }
+    if (itemType === "Manifest") {
+      issue(issues, {
+        code: "collection-item-manifest-forbidden",
+        message: "Collection.items must not embed Manifest resources",
+        path: `${nodePath}.items[${i}]`,
+        resource: collection,
+        specRef: "#Collection",
+      });
+    }
+  }
+}
+
+function checkManifestMustNotRules(manifest: any, nodePath: string, issues: ValidationIssue[]) {
+  const annotationPages = ensureArray(manifest.annotations);
+  for (let pageIndex = 0; pageIndex < annotationPages.length; pageIndex++) {
+    const page = annotationPages[pageIndex];
+    if (!isPlainObject(page)) {
+      continue;
+    }
+    const annotations = ensureArray((page as any).items);
+    for (let annotationIndex = 0; annotationIndex < annotations.length; annotationIndex++) {
+      const annotation = annotations[annotationIndex];
+      if (!isPlainObject(annotation) || getType(annotation) !== "Annotation") {
+        continue;
+      }
+      const motivations = ensureArray((annotation as any).motivation);
+      if (motivations.includes("painting")) {
+        issue(issues, {
+          code: "manifest-annotation-painting-forbidden",
+          message: "Manifest-level annotations must not use motivation=painting",
+          path: `${nodePath}.annotations[${pageIndex}].items[${annotationIndex}].motivation`,
+          resource: annotation,
+          specRef: "#Manifest",
+        });
+      }
+    }
+  }
+}
+
+function checkContainerMustNotRules(container: any, nodePath: string, issues: ValidationIssue[]) {
+  const id = getId(container);
+  if (id && id.includes("#")) {
+    issue(issues, {
+      code: "container-id-fragment-forbidden",
+      message: "Container ids must not include URI fragments",
+      path: `${nodePath}.id`,
+      resource: container,
+      specRef: "#Container",
+    });
+  }
+}
+
+function isAllowedScenePaintBody(body: any): boolean {
+  if (!isPlainObject(body)) {
+    return false;
+  }
+
+  const type = getType(body);
+  if (!type) {
+    return false;
+  }
+
+  if (type === "SpecificResource") {
+    const source = (body as any).source;
+    if (!isPlainObject(source)) {
+      return true;
+    }
+    const sourceType = getType(source);
+    return !!sourceType && scenePaintableTypes.has(sourceType);
+  }
+
+  return scenePaintableTypes.has(type);
+}
+
+function checkSceneMustNotRules(scene: any, nodePath: string, issues: ValidationIssue[]) {
+  const annotationPages = ensureArray(scene.items);
+  for (let pageIndex = 0; pageIndex < annotationPages.length; pageIndex++) {
+    const page = annotationPages[pageIndex];
+    if (!isPlainObject(page) || getType(page) !== "AnnotationPage") {
+      continue;
+    }
+
+    const annotations = ensureArray((page as any).items);
+    for (let annotationIndex = 0; annotationIndex < annotations.length; annotationIndex++) {
+      const annotation = annotations[annotationIndex];
+      if (!isPlainObject(annotation) || getType(annotation) !== "Annotation") {
+        continue;
+      }
+      const motivations = ensureArray((annotation as any).motivation);
+      if (!motivations.includes("painting")) {
+        continue;
+      }
+      const bodyEntries = getAnnotationEntries((annotation as any).body);
+      for (let bodyIndex = 0; bodyIndex < bodyEntries.length; bodyIndex++) {
+        const body = bodyEntries[bodyIndex];
+        if (!isAllowedScenePaintBody(body)) {
+          issue(issues, {
+            code: "scene-painting-non-3d-body",
+            message: "Scene painting annotations must paint 3D resources, containers, or audio emitters",
+            path: `${nodePath}.items[${pageIndex}].items[${annotationIndex}].body[${bodyIndex}]`,
+            resource: annotation,
+            specRef: "#Scene",
+          });
+        }
+      }
+    }
+  }
+}
+
+function checkAnnotationMustNotRules(annotation: any, nodePath: string, issues: ValidationIssue[]) {
+  if (typeof annotation.bodyValue !== "undefined") {
+    issue(issues, {
+      code: "annotation-body-value-forbidden",
+      message: "Annotation.bodyValue is not allowed; use TextualBody instead",
+      path: `${nodePath}.bodyValue`,
+      resource: annotation,
+      specRef: "#Annotation",
+    });
+  }
+
+  const bodyEntries = getAnnotationEntries(annotation.body);
+  for (let i = 0; i < bodyEntries.length; i++) {
+    const body = bodyEntries[i];
+    if (isPlainObject(body) && typeof (body as any).bodyValue !== "undefined") {
+      issue(issues, {
+        code: "annotation-body-entry-body-value-forbidden",
+        message: "Annotation body entries must not include bodyValue; use TextualBody.value",
+        path: `${nodePath}.body[${i}].bodyValue`,
+        resource: annotation,
+        specRef: "#Annotation",
+      });
+    }
+  }
+}
+
+export function runClassRequirementValidation(resource: any): {
+  issues: ValidationIssue[];
+  stats: ClassRequirementStats;
+} {
+  const issues: ValidationIssue[] = [];
+  const stats: ClassRequirementStats = {
+    nodesChecked: 0,
+    mustChecks: 0,
+    shouldChecks: 0,
+    allowedPropertyChecks: 0,
+    mustNotChecks: 0,
+  };
+
+  walkResourceTreeWithParent(resource, "$", (node, nodePath, parent) => {
+    const type = getType(node);
+    if (!type) {
+      return;
+    }
+
+    const classRequirement = classRequirementsByType.get(type);
+    if (!classRequirement) {
+      return;
+    }
+
+    if (pathIsReferenceContext(nodePath)) {
+      return;
+    }
+
+    stats.nodesChecked++;
+    const { className, requirement } = classRequirement;
+
+    for (const property of requirement.must) {
+      stats.mustChecks++;
+      if (property === "width" || property === "height") {
+        if (isLikelyReferenceCanvas(node) || pathIsSpecificResourceSource(nodePath) || nodePath.includes(".target")) {
+          continue;
+        }
+      }
+      if (property === "duration") {
+        if (isLikelyReferenceTimeline(node) || pathIsSpecificResourceSource(nodePath) || nodePath.includes(".target")) {
+          continue;
+        }
+      }
+      if (hasProperty(node, property)) {
+        continue;
+      }
+      issue(issues, {
+        code: "class-requirement-must",
+        message: `${className} must include "${property}"`,
+        path: `${nodePath}.${property}`,
+        resource: node,
+        severity: "error",
+        specRef: presentation4ClassRequirements.spec.source,
+      });
+    }
+
+    for (const property of requirement.should) {
+      stats.shouldChecks++;
+      if (!shouldCheckShouldProperty(className, property, node, parent)) {
+        continue;
+      }
+      if (hasProperty(node, property)) {
+        continue;
+      }
+      issue(issues, {
+        code: "class-requirement-should",
+        message: `${className} should include "${property}"`,
+        path: `${nodePath}.${property}`,
+        resource: node,
+        severity: "warning",
+        specRef: presentation4ClassRequirements.spec.source,
+      });
+    }
+
+    const allowedProperties = collectAllowedProperties(requirement);
+    for (const property of Object.keys(node)) {
+      stats.allowedPropertyChecks++;
+      if (allowedProperties.has(property)) {
+        continue;
+      }
+      issue(issues, {
+        code: "class-requirement-property-not-listed",
+        message: `${className} property "${property}" is not listed in must/should/may`,
+        path: `${nodePath}.${property}`,
+        resource: node,
+        severity: "warning",
+        specRef: presentation4ClassRequirements.spec.source,
+      });
+    }
+
+    if (className === "Collection") {
+      stats.mustNotChecks += 3;
+      checkCollectionMustNotRules(node, nodePath, issues);
+    }
+    if (className === "CollectionPage") {
+      stats.mustNotChecks += 1;
+      if (getType(parent) === "Collection") {
+        issue(issues, {
+          code: "collection-page-embedded-in-collection",
+          message: "CollectionPage resources must not be embedded within Collection.items",
+          path: nodePath,
+          resource: node,
+          specRef: "#CollectionPage",
+        });
+      }
+    }
+    if (className === "Manifest") {
+      stats.mustNotChecks += 2;
+      checkManifestMustNotRules(node, nodePath, issues);
+    }
+    if (containerTypes.has(type)) {
+      stats.mustNotChecks += 1;
+      checkContainerMustNotRules(node, nodePath, issues);
+    }
+    if (className === "Scene") {
+      stats.mustNotChecks += 1;
+      checkSceneMustNotRules(node, nodePath, issues);
+    }
+    if (className === "Annotation") {
+      stats.mustNotChecks += 1;
+      checkAnnotationMustNotRules(node, nodePath, issues);
+    }
+  });
+
+  return { issues, stats };
 }
 
 export function runAuthoredShapeValidation(resource: any): ValidationIssue[] {
@@ -530,6 +939,8 @@ export function validatePresentation4(input: unknown, options: ValidateOptions =
   }
 
   const upgraded = upgradeToPresentation4(input);
+  const classRequirementResult = runClassRequirementValidation(upgraded);
+  issues.push(...classRequirementResult.issues);
   issues.push(...runRawValidation(upgraded));
 
   if (includePostNormalization) {
@@ -537,7 +948,15 @@ export function validatePresentation4(input: unknown, options: ValidateOptions =
     issues.push(...runPostNormalizationValidation(normalized));
   }
 
-  const report = createValidationReport(issues);
+  const report = createValidationReport(issues, {
+    classRequirements: {
+      nodesChecked: classRequirementResult.stats.nodesChecked,
+      mustChecks: classRequirementResult.stats.mustChecks,
+      shouldChecks: classRequirementResult.stats.shouldChecks,
+      allowedPropertyChecks: classRequirementResult.stats.allowedPropertyChecks,
+      mustNotChecks: classRequirementResult.stats.mustNotChecks,
+    },
+  });
 
   if (mode === "strict" && !report.valid) {
     const first = report.issues.find((item) => item.severity === "error") || report.issues[0];

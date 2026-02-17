@@ -241,8 +241,15 @@ export const presentation4ClassRequirements = {
     AnnotationPage: {
       typeValue: "AnnotationPage",
       must: ["id", "type", "items"],
-      should: ["next", "prev", "partOf"],
+      should: [],
+      // SHOULD ONLY STANDALONE PAGES.
+      // should: ["next", "prev", "partOf"],
       may: [
+        // ONLY IN STANDALONE PAGES.
+        "next",
+        "prev",
+        "partOf",
+        //
         "label",
         "startIndex",
         "metadata",
