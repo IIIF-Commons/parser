@@ -275,6 +275,17 @@ function shouldConvertCanvasToTimeline(resource: any): boolean {
   return canvasHasAudioPaintingOnly(resource);
 }
 
+function coerceLegacyPointSelectorTime(resource: any): void {
+  if (!isPlainObject(resource) || getType(resource) !== "PointSelector" || !Object.hasOwn(resource, "t")) {
+    return;
+  }
+
+  if (typeof resource.instant === "undefined" && Number.isFinite(resource.t)) {
+    resource.instant = resource.t;
+  }
+  delete resource.t;
+}
+
 function coerceV4Shape(
   resource: any,
   typeLookup: TypeLookup,
@@ -303,6 +314,7 @@ function coerceV4Shape(
   }
 
   const type = getType(resource);
+  coerceLegacyPointSelectorTime(resource);
   const currentContainerType = type && containerTypes.has(type) ? type : containerTypeHint;
 
   if (type === "AnnotationPage") {

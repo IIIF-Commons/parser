@@ -45,6 +45,7 @@ export type TraverseOptions = {
   allowUndefinedReturn: boolean;
   coerceContainerTargetsToSpecificResources: boolean;
   legacyPresentation3Behavior: boolean;
+  coerceLegacyPointSelectorTime: boolean;
 };
 
 type UnknownTraversalArgs = {
@@ -99,6 +100,7 @@ export class Traverse {
       allowUndefinedReturn: false,
       coerceContainerTargetsToSpecificResources: false,
       legacyPresentation3Behavior: false,
+      coerceLegacyPointSelectorTime: true,
       ...options,
     };
   }
@@ -439,6 +441,20 @@ export class Traverse {
   }
 
   traverseSelector(selector: any, parent?: any, path = "$"): any {
+    if (
+      this.options.coerceLegacyPointSelectorTime &&
+      selector &&
+      typeof selector === "object" &&
+      !Array.isArray(selector) &&
+      selector.type === "PointSelector" &&
+      Object.hasOwn(selector, "t")
+    ) {
+      if (typeof selector.instant === "undefined" && Number.isFinite(selector.t)) {
+        selector.instant = selector.t;
+      }
+      delete selector.t;
+    }
+
     if (selector.refinedBy) {
       selector.refinedBy = this.traverseSelector(selector.refinedBy, selector, `${path}.refinedBy`);
     }

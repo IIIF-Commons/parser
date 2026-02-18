@@ -228,4 +228,54 @@ describe("presentation-4 upgrade", () => {
     expect(upgraded.items[0].annotations[0].width).toBeUndefined();
     expect(upgraded.items[0].annotations[0].height).toBeUndefined();
   });
+
+  test("coerces PointSelector.t to instant during upgrade", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/3/context.json",
+      id: "https://example.org/manifest/selector-time",
+      type: "Manifest",
+      label: { en: ["selector time"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/canvas/1/anno/1",
+                  type: "Annotation",
+                  motivation: "painting",
+                  body: {
+                    id: "https://example.org/image/1",
+                    type: "Image",
+                  },
+                  target: {
+                    type: "SpecificResource",
+                    source: "https://example.org/canvas/1",
+                    selector: {
+                      type: "PointSelector",
+                      x: 1,
+                      y: 2,
+                      t: 4.5,
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const upgraded = upgradePresentation3To4(manifest) as any;
+    const selector = upgraded.items[0].items[0].items[0].target.selector;
+
+    expect(selector.instant).toBe(4.5);
+    expect(Object.hasOwn(selector, "t")).toBe(false);
+  });
 });

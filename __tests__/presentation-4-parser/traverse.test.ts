@@ -142,4 +142,37 @@ describe("presentation-4 traverse", () => {
     expect(traversed.target[0].type).toBe("SpecificResource");
     expect(traversed.target[0].selector[0].type).toBe("FragmentSelector");
   });
+
+  test("coerces PointSelector.t to PointSelector.instant by default", () => {
+    const traverse = new Traverse();
+    const selector = {
+      type: "PointSelector",
+      x: 1,
+      y: 2,
+      t: 3.5,
+    };
+
+    const traversed = traverse.traverseSelector(selector, undefined, "$.selector");
+    expect(traversed.instant).toBe(3.5);
+    expect(Object.hasOwn(traversed, "t")).toBe(false);
+  });
+
+  test("can disable PointSelector.t coercion via traverse option", () => {
+    const traverse = new Traverse(
+      {},
+      {
+        coerceLegacyPointSelectorTime: false,
+      }
+    );
+    const selector = {
+      type: "PointSelector",
+      x: 1,
+      y: 2,
+      t: 3.5,
+    };
+
+    const traversed = traverse.traverseSelector(selector, undefined, "$.selector");
+    expect(traversed.t).toBe(3.5);
+    expect(Object.hasOwn(traversed, "instant")).toBe(false);
+  });
 });
