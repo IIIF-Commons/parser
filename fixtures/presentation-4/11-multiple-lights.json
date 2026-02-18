@@ -33,18 +33,16 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "selector": [],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             },
             {
               "id": "https://example.org/iiif/3d/anno2",
@@ -52,18 +50,16 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "selector": [],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             },
             {
               "id": "https://example.org/iiif/3d/anno3",
@@ -71,18 +67,16 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "selector": [],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             },
             {
               "id": "https://example.org/iiif/3d/anno4",
@@ -90,18 +84,16 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "selector": [],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             }
           ]
         }

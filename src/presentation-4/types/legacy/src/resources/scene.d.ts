@@ -4,7 +4,7 @@ import type { GeoJSON } from "../../../../../shared/geojson";
 import type { Quantity } from "../iiif/technical";
 import type { AnnotationPage } from "./annotationPage";
 import type { Canvas } from "./canvas";
-import type { AgentLike, LinkedResource, OneOrMany, ResourceReference, ServiceLike } from "./contentResource";
+import type { AgentLike, LinkedResource, ResourceReference, ServiceLike } from "./contentResource";
 import type { Timeline } from "./timeline";
 
 export type SceneItem = AnnotationPage | ResourceReference<"AnnotationPage" | "Canvas" | "Scene" | "Timeline"> | string;
@@ -58,11 +58,11 @@ export type Scene = Prettify<
     navPlace?: Prettify<GeoJSON>;
     rendering?: Array<LinkedResource>;
     homepage?: Array<LinkedResource>;
-    partOf?: OneOrMany<LinkedResource>;
+    partOf?: Array<LinkedResource>;
     logo?: Array<LinkedResource>;
     supplementary?: Array<LinkedResource>;
     canonical?: string;
-    via?: OneOrMany<string>;
+    via?: Array<string>;
     spatialScale?: Quantity | null;
     backgroundColor?: string | null;
     placeholderContainer?: Canvas | Timeline | Scene | null;

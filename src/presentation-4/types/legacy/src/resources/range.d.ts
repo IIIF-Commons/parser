@@ -6,10 +6,10 @@ import type { Canvas } from "./canvas";
 import type {
   AgentLike,
   LinkedResource,
-  OneOrMany,
   ResourceReference,
   ServiceLike,
   SpecificResource,
+  Start,
 } from "./contentResource";
 import type { Scene } from "./scene";
 import type { Timeline } from "./timeline";
@@ -19,11 +19,10 @@ export type RangeItem =
   | Canvas
   | Scene
   | Timeline
-  | string
   | SpecificResource
   | ResourceReference<"Range" | "Canvas" | "Scene" | "Timeline">;
 
-export type RangeAnnotation = AnnotationPage | ResourceReference<"AnnotationPage"> | string;
+export type RangeAnnotation = AnnotationPage | ResourceReference<"AnnotationPage">;
 
 export type Range = Prettify<{
   id: string;
@@ -49,10 +48,10 @@ export type Range = Prettify<{
   services?: Array<ServiceLike>;
   rendering?: Array<LinkedResource>;
   homepage?: Array<LinkedResource>;
-  partOf?: OneOrMany<LinkedResource>;
+  partOf?: Array<LinkedResource>;
   logo?: Array<LinkedResource>;
   supplementary?: Array<LinkedResource>;
-  start?: SpecificResource | ResourceReference<"Canvas" | "Scene" | "Timeline"> | string | null;
+  start?: Start;
   canonical?: string;
-  via?: OneOrMany<string>;
+  via?: Array<string>;
 }>;

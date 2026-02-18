@@ -24,21 +24,17 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
-                  "type": "Image",
-                  "format": "image/png",
-                  "height": 1800,
-                  "width": 1200
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/canvas/p1",
-                  "type": "Canvas"
-                }
-              ]
+              "body": {
+                "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+                "type": "Image",
+                "format": "image/png",
+                "height": 1800,
+                "width": 1200
+              },
+              "target": {
+                "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/canvas/p1",
+                "type": "Canvas"
+              }
             }
           ]
         }

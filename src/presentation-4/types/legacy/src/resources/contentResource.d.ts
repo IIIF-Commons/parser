@@ -56,12 +56,22 @@ export type ServiceReference = {
 };
 
 export type ServiceLike = ServiceReference | string;
+export type LinkedAnnotationBody = ContentResourceLike | SpecificResource | ResourceReference | Record<string, unknown>;
+export type LinkedAnnotationTarget =
+  | ContentResourceLike
+  | SpecificResource
+  | ResourceReference
+  | Record<string, unknown>;
+export type LinkedAnnotationList<T> = {
+  type: "List";
+  items: T[];
+};
 export type LinkedAnnotationLike = {
   id?: string;
   type: string;
   motivation?: OneOrMany<string>;
-  body?: OneOrMany<ContentResourceLike | SpecificResource | ResourceReference | string>;
-  target?: OneOrMany<ContentResourceLike | SpecificResource | ResourceReference | string>;
+  body?: LinkedAnnotationBody | LinkedAnnotationList<LinkedAnnotationBody>;
+  target?: LinkedAnnotationTarget | LinkedAnnotationList<LinkedAnnotationTarget>;
 };
 export type LinkedResource = ContentResourceLike | SpecificResource | ResourceReference | LinkedAnnotationLike | string;
 export type AgentLike = {
@@ -203,6 +213,17 @@ export type SpecificResource = Prettify<
     [key: string]: unknown;
   }
 > & { [key: string]: unknown };
+
+export type StartContainerReference = ResourceReference<"Canvas" | "Scene" | "Timeline">;
+
+export type StartSpecificResource = {
+  id: string;
+  type: "SpecificResource";
+  source: ResourceReference<"Canvas"> | string;
+  selector: Selector | Selector[];
+};
+
+export type Start = StartContainerReference | StartSpecificResource;
 
 export type ContentResourceLike =
   | ImageResource

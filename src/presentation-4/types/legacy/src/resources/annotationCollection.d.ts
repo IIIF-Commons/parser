@@ -1,16 +1,13 @@
 import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
 import type { GeoJSON } from "../../../../../shared/geojson";
-import type { Annotation } from "./annotation";
 import type { Canvas } from "./canvas";
 import type {
   AgentLike,
   ContentResourceLike,
   LinkedResource,
   MetadataItem,
-  OneOrMany,
   ResourceReference,
   ServiceLike,
-  SpecificResource,
 } from "./contentResource";
 import type { Scene } from "./scene";
 import type { Timeline } from "./timeline";
@@ -26,27 +23,25 @@ export type AnnotationCollection = Prettify<{
   rights?: string | null | undefined;
   navDate?: string | null | undefined;
   navPlace?: Prettify<GeoJSON> | undefined;
-  thumbnail?: OneOrMany<ContentResourceLike> | undefined;
-  provider?: OneOrMany<AgentLike | ResourceReference<"Agent">> | undefined;
+  thumbnail?: Array<ContentResourceLike> | undefined;
+  provider?: Array<AgentLike | ResourceReference<"Agent">> | undefined;
   "@context"?: string | undefined;
   total?: number | undefined;
   first: string | ResourceReference<"AnnotationPage">;
   last: string | ResourceReference<"AnnotationPage">;
-  start?: SpecificResource | ResourceReference<"Canvas" | "Scene" | "Timeline"> | string | null;
-  annotations?: OneOrMany<ResourceReference<"AnnotationPage"> | string>;
+  annotations?: Array<ResourceReference<"AnnotationPage"> | string>;
   canonical?: string;
-  via?: OneOrMany<string>;
+  via?: Array<string>;
   placeholderContainer?: Canvas | Timeline | Scene | null;
   accompanyingContainer?: Canvas | Timeline | Scene | null;
 
-  items?: OneOrMany<Annotation | ContentResourceLike | ResourceReference | string>;
-  metadata?: OneOrMany<MetadataItem>;
-  seeAlso?: OneOrMany<LinkedResource>;
-  service?: OneOrMany<ServiceLike>;
-  services?: OneOrMany<ServiceLike>;
-  rendering?: OneOrMany<LinkedResource>;
-  homepage?: OneOrMany<LinkedResource>;
-  partOf?: OneOrMany<LinkedResource>;
-  logo?: OneOrMany<LinkedResource>;
-  supplementary?: OneOrMany<LinkedResource>;
+  metadata?: Array<MetadataItem>;
+  seeAlso?: Array<LinkedResource>;
+  service?: Array<ServiceLike>;
+  services?: Array<ServiceLike>;
+  rendering?: Array<LinkedResource>;
+  homepage?: Array<LinkedResource>;
+  partOf?: Array<LinkedResource>;
+  logo?: Array<LinkedResource>;
+  supplementary?: Array<LinkedResource>;
 }>;

@@ -32,19 +32,15 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                  "type": "Model",
-                  "format": "model/gltf-binary"
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                }
-              ]
+              "body": {
+                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                "type": "Model",
+                "format": "model/gltf-binary"
+              },
+              "target": {
+                "id": "https://example.org/iiif/scene1/page/p1/1",
+                "type": "Scene"
+              }
             },
             {
               "id": "https://example.org/iiif/3d/anno2",
@@ -52,23 +48,19 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://example.org/iiif/3d/cameras/1",
-                  "type": "AmbientLight",
-                  "label": {
-                    "en": [
-                      "Ambient Green Light"
-                    ]
-                  }
+              "body": {
+                "id": "https://example.org/iiif/3d/cameras/1",
+                "type": "AmbientLight",
+                "label": {
+                  "en": [
+                    "Ambient Green Light"
+                  ]
                 }
-              ],
-              "target": [
-                {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                }
-              ]
+              },
+              "target": {
+                "id": "https://example.org/iiif/scene1/page/p1/1",
+                "type": "Scene"
+              }
             }
           ]
         }

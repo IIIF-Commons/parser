@@ -2,20 +2,13 @@ import type { Prettify } from "../../../../../presentation-3/types/legacy/src/ut
 import type { ViewingDirection } from "../iiif/technical";
 import type { AnnotationPage } from "./annotationPage";
 import type { Canvas } from "./canvas";
-import type {
-  AgentLike,
-  LinkedResource,
-  OneOrMany,
-  ResourceReference,
-  ServiceLike,
-  SpecificResource,
-} from "./contentResource";
+import type { AgentLike, LinkedResource, ResourceReference, ServiceLike, Start } from "./contentResource";
 import type { Manifest } from "./manifest";
 import type { Scene } from "./scene";
 import type { Timeline } from "./timeline";
 
-export type CollectionItem = Collection | Manifest | ResourceReference<"Collection" | "Manifest"> | string;
-export type CollectionAnnotation = AnnotationPage | ResourceReference<"AnnotationPage"> | string;
+export type CollectionItem = Collection | ResourceReference<"Collection" | "Manifest">;
+export type CollectionAnnotation = AnnotationPage | ResourceReference<"AnnotationPage">;
 
 export type Collection = Prettify<{
   // Unchanged from P3.
@@ -42,13 +35,13 @@ export type Collection = Prettify<{
   services?: Array<ServiceLike>;
   rendering?: Array<LinkedResource>;
   homepage?: Array<LinkedResource>;
-  partOf?: OneOrMany<LinkedResource>;
-  start?: SpecificResource | ResourceReference<"Canvas" | "Scene" | "Timeline"> | string | null;
+  partOf?: Array<LinkedResource>;
+  start?: Start;
   first?: string | ResourceReference<"CollectionPage">;
   last?: string | ResourceReference<"CollectionPage">;
   total?: number;
   canonical?: string;
-  via?: OneOrMany<string>;
+  via?: Array<string>;
   logo?: Array<LinkedResource>;
   supplementary?: Array<LinkedResource>;
   placeholderContainer?: Canvas | Timeline | Scene | null;

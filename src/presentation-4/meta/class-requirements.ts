@@ -230,7 +230,6 @@ export const presentation4ClassRequirements = {
         "homepage",
         "rendering",
         "partOf",
-        "start",
         "total",
         "canonical",
         "via",

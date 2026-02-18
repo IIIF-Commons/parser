@@ -43,6 +43,8 @@ export const emptyManifest: ManifestNormalized = {
   items: EMPTY_ARRAY,
   structures: EMPTY_ARRAY,
   start: null,
+  rights: null,
+  requiredStatement: null,
   ...baseLinkedArrays,
 };
 
