@@ -5,7 +5,7 @@ import {
   serializeConfigPresentation3,
   serializeConfigPresentation4,
 } from "../../src/presentation-4";
-import { ContentResourceNormalized } from "../../src/presentation-4-normalized";
+import type { ContentResourceNormalized } from "../../src/presentation-4-normalized";
 
 function createManifestWithImageService() {
   return {
@@ -70,7 +70,9 @@ describe("presentation-4 service profile retention", () => {
       serializeConfigPresentation4
     );
 
-    const serializedService = serialized.items[0].items[0].items[0].body[0].service[0];
+    const body = serialized.items[0].items[0].items[0].body;
+    const serializedBody = Array.isArray(body) ? body[0] : body;
+    const serializedService = serializedBody.service[0];
     expect(serializedService.id).toBe("https://example.org/image/1");
     expect(serializedService.type).toBe("ImageService3");
     expect(serializedService.profile).toBe("level1");

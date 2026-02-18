@@ -58,5 +58,19 @@
         }
       ]
     }
-  ]
+  ],
+  "start": {
+    "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
+    "type": "SpecificResource",
+    "source": {
+      "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+      "type": "Canvas",
+      "width": 640,
+      "height": 360
+    },
+    "selector": {
+      "type": "PointSelector",
+      "t": 120.5
+    }
+  }
 }

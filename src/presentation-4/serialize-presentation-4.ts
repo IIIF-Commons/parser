@@ -39,6 +39,71 @@ function normalizeAnnotationTarget(target: any): any {
   return id ? { id, type: "Annotation" } : { type: "Annotation" };
 }
 
+function isPlainObject(value: any): boolean {
+  return !!value && typeof value === "object" && !Array.isArray(value);
+}
+
+function serializeStartValue(start: any): any {
+  if (start === UNSET || start === null || typeof start === "undefined") {
+    return undefined;
+  }
+
+  if (typeof start === "string") {
+    const id = stripVaultId(start);
+    return id ? { id, type: "Canvas" } : undefined;
+  }
+
+  if (!isPlainObject(start)) {
+    return undefined;
+  }
+
+  const id = stripVaultId(start.id || start["@id"]);
+  const type = start.type || start["@type"];
+  if (!type) {
+    return undefined;
+  }
+
+  if (type === "SpecificResource") {
+    const specificResource = {
+      ...start,
+      type: "SpecificResource",
+    } as Record<string, any>;
+
+    if (id) {
+      specificResource.id = id;
+    } else {
+      delete specificResource.id;
+    }
+    delete specificResource["@id"];
+    delete specificResource["@type"];
+
+    if (specificResource.source) {
+      if (typeof specificResource.source === "string") {
+        specificResource.source = stripVaultId(specificResource.source) || specificResource.source;
+      } else if (isPlainObject(specificResource.source)) {
+        const sourceId = stripVaultId(specificResource.source.id || specificResource.source["@id"]);
+        const sourceType = specificResource.source.type || specificResource.source["@type"] || "Canvas";
+        if (sourceId) {
+          specificResource.source = { id: sourceId, type: sourceType };
+        }
+      }
+    }
+
+    return specificResource;
+  }
+
+  const containerReference: Record<string, any> = {
+    type,
+  };
+  if (id) {
+    containerReference.id = id;
+  }
+  if (typeof start.partOf !== "undefined") {
+    containerReference.partOf = start.partOf;
+  }
+  return containerReference;
+}
+
 function stripVaultId(id?: string) {
   if (!id) {
     return undefined;
@@ -144,6 +209,7 @@ export function createSerializeConfigPresentation4(options: SerializePresentatio
         ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
+        ["start", serializeStartValue(entity.start)],
         ["items", filterList(yield entity.items)],
         ["first", entity.first],
         ["last", entity.last],
@@ -155,7 +221,7 @@ export function createSerializeConfigPresentation4(options: SerializePresentatio
       return [
         ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
         ...(yield* serializeContainer(entity, true)),
-        ["start", entity.start ? yield entity.start : undefined],
+        ["start", serializeStartValue(entity.start)],
       ];
     },
 
@@ -213,7 +279,7 @@ export function createSerializeConfigPresentation4(options: SerializePresentatio
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["items", filterList(yield entity.items)],
-        ["start", entity.start ? yield entity.start : undefined],
+        ["start", serializeStartValue(entity.start)],
         ["supplementary", entity.supplementary ? yield entity.supplementary : undefined],
       ];
     },
