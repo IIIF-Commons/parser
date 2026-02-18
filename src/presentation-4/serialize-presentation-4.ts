@@ -124,13 +124,6 @@ function asObjectOrList(items: any[]): any {
   };
 }
 
-function asSingleOrArray(items: string[]): string[] | string | undefined {
-  if (!items.length) {
-    return undefined;
-  }
-  return items.length === 1 ? items[0] : items;
-}
-
 function serializeAnnotationValue(
   value: any[] | any | typeof UNSET | undefined,
   mode: AnnotationBodyTargetMode,
@@ -298,7 +291,7 @@ export function createSerializeConfigPresentation4(options: SerializePresentatio
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["value", entity.value ?? undefined],
-        ["language", asSingleOrArray(entity.language || [])],
+        ["language", entity.language?.length ? entity.language : undefined],
         ["items", entity.items ? filterList(yield entity.items) : undefined],
         ["source", entity.source ? yield entity.source : undefined],
         ["selector", entity.selector ? filterList(yield entity.selector) : undefined],

@@ -236,7 +236,9 @@
         ]
       },
       "format": "text/html",
-      "language": "en"
+      "language": [
+        "en"
+      ]
     }
   ],
   "rendering": [

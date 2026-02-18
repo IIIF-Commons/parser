@@ -53,7 +53,9 @@
                       ]
                     },
                     "format": "text/vtt",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_it.vtt",
@@ -64,7 +66,9 @@
                       ]
                     },
                     "format": "text/vtt",
-                    "language": "it"
+                    "language": [
+                      "it"
+                    ]
                   }
                 ]
               },

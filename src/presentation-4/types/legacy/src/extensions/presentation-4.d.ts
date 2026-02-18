@@ -13,7 +13,6 @@ export type SelectorBase = {
   id?: string;
   type: string;
 };
-type OneOrMany<T> = T | T[];
 
 export type PointSelector = Prettify<
   SelectorBase & Omit<PointSelectorV3, "t"> & { type: "PointSelector"; z?: number; instant?: number }
@@ -40,7 +39,7 @@ export type AnimationSelector = SelectorBase & {
 
 export type CompositeSelector = SelectorBase & {
   type: "CompositeSelector" | "ChoiceSelector";
-  selectors: OneOrMany<Selector>;
+  selectors: Selector[];
 };
 
 type LegacySelectorWithoutPoint = Exclude<SelectorV3, PointSelectorV3>;
@@ -55,6 +54,6 @@ export type Selector =
 
 export type ContentStateSpecificResource = Prettify<
   Omit<SpecificResourceV3, "selector"> & {
-    selector?: OneOrMany<Selector>;
+    selector?: Selector[];
   }
 >;

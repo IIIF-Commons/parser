@@ -278,4 +278,23 @@ describe("presentation-4 upgrade", () => {
     expect(selector.instant).toBe(4.5);
     expect(Object.hasOwn(selector, "t")).toBe(false);
   });
+
+  test("coerces scalar language to array during upgrade", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/3/context.json",
+      id: "https://example.org/manifest/language-array",
+      type: "Manifest",
+      label: { en: ["language coercion"] },
+      homepage: {
+        id: "https://example.org/home",
+        type: "Text",
+        format: "text/html",
+        language: "en",
+      },
+      items: [],
+    };
+
+    const upgraded = upgradePresentation3To4(manifest) as any;
+    expect(upgraded.homepage.language).toEqual(["en"]);
+  });
 });

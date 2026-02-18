@@ -286,6 +286,12 @@ function coerceLegacyPointSelectorTime(resource: any): void {
   delete resource.t;
 }
 
+function coerceKnownArrayProperties(resource: any): void {
+  if (typeof resource.language === "string") {
+    resource.language = [resource.language];
+  }
+}
+
 function coerceV4Shape(
   resource: any,
   typeLookup: TypeLookup,
@@ -315,6 +321,7 @@ function coerceV4Shape(
 
   const type = getType(resource);
   coerceLegacyPointSelectorTime(resource);
+  coerceKnownArrayProperties(resource);
   const currentContainerType = type && containerTypes.has(type) ? type : containerTypeHint;
 
   if (type === "AnnotationPage") {

@@ -23,7 +23,6 @@ export type MetadataItem =
       label: LanguageMap;
       value: { [language: string]: Array<string | number> };
     };
-export type OneOrMany<T> = T | T[];
 export type ServiceProfileDetails = {
   "@context"?: string;
   "@type"?: "iiif:ImageProfile";
@@ -88,8 +87,8 @@ export type ServiceReference = {
   extraQualities?: string[];
   header?: LanguageMap | string;
   description?: LanguageMap | string;
-  service?: OneOrMany<ServiceReference>;
-  services?: OneOrMany<ServiceReference>;
+  service?: ServiceReference[];
+  services?: ServiceReference[];
 };
 
 export type ServiceLike = ServiceReference | string;
@@ -102,7 +101,7 @@ export type LinkedAnnotationList<T> = {
 export type LinkedAnnotationLike = {
   id?: string;
   type: string;
-  motivation?: OneOrMany<string>;
+  motivation?: string[];
   body?: LinkedAnnotationBody | LinkedAnnotationList<LinkedAnnotationBody>;
   target?: LinkedAnnotationTarget | LinkedAnnotationList<LinkedAnnotationTarget>;
 };
@@ -111,11 +110,11 @@ export type AgentLike = {
   id?: string;
   type: "Agent";
   label: LanguageMap | null;
-  homepage?: OneOrMany<LinkedResource>;
-  logo?: OneOrMany<LinkedResource>;
-  seeAlso?: OneOrMany<LinkedResource>;
+  homepage?: LinkedResource[];
+  logo?: LinkedResource[];
+  seeAlso?: LinkedResource[];
   summary?: LanguageMap;
-  service?: OneOrMany<ServiceLike>;
+  service?: ServiceLike[];
   profile?: ServiceProfileValue;
 };
 
@@ -123,9 +122,9 @@ export type Agent = {
   id?: string;
   type: "Agent";
   label: LanguageMap | null;
-  homepage?: OneOrMany<LinkedResource>;
-  logo?: OneOrMany<LinkedResource>;
-  seeAlso?: OneOrMany<LinkedResource>;
+  homepage?: LinkedResource[];
+  logo?: LinkedResource[];
+  seeAlso?: LinkedResource[];
   summary?: LanguageMap;
 };
 
@@ -137,28 +136,28 @@ export type ContentResourceBase = Prettify<
     "@type"?: string;
     profile?: ServiceProfileValue;
     label?: LanguageMap | string | null;
-    language?: OneOrMany<string>;
-    provider?: OneOrMany<AgentLike | ResourceReference<"Agent">>;
-    behavior?: OneOrMany<string>;
-    service?: OneOrMany<ServiceLike>;
-    services?: OneOrMany<ServiceLike>;
-    thumbnail?: OneOrMany<LinkedResource>;
-    metadata?: OneOrMany<MetadataItem>;
+    language?: string[];
+    provider?: Array<AgentLike | ResourceReference<"Agent">>;
+    behavior?: string[];
+    service?: ServiceLike[];
+    services?: ServiceLike[];
+    thumbnail?: LinkedResource[];
+    metadata?: MetadataItem[];
     summary?: LanguageMap;
     requiredStatement?: MetadataItem;
     rights?: string | null;
-    seeAlso?: OneOrMany<LinkedResource>;
-    homepage?: OneOrMany<LinkedResource>;
-    rendering?: OneOrMany<LinkedResource>;
-    partOf?: OneOrMany<LinkedResource>;
-    logo?: OneOrMany<LinkedResource>;
-    supplementary?: OneOrMany<LinkedResource>;
+    seeAlso?: LinkedResource[];
+    homepage?: LinkedResource[];
+    rendering?: LinkedResource[];
+    partOf?: LinkedResource[];
+    logo?: LinkedResource[];
+    supplementary?: LinkedResource[];
     canonical?: string;
-    via?: OneOrMany<string>;
-    annotations?: OneOrMany<LinkedResource>;
+    via?: string[];
+    annotations?: LinkedResource[];
     spatialScale?: Quantity | null;
     temporalScale?: Quantity | null;
-    provides?: OneOrMany<Provides>;
+    provides?: Provides[];
     fileSize?: number;
   }
 >;
@@ -195,14 +194,14 @@ export type TextualBodyResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "TextualBody";
     value: string;
-    purpose?: OneOrMany<AnyMotivation | string>;
+    purpose?: Array<AnyMotivation | string>;
   }
 >;
 
 export type ChoiceResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "Choice";
-    items: OneOrMany<LinkedResource>;
+    items: LinkedResource[];
     default?: LinkedResource;
   }
 >;
@@ -210,21 +209,21 @@ export type ChoiceResource = Prettify<
 export type CompositeResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "Composite";
-    items: OneOrMany<LinkedResource>;
+    items: LinkedResource[];
   }
 >;
 
 export type ListResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "List";
-    items: OneOrMany<LinkedResource>;
+    items: LinkedResource[];
   }
 >;
 
 export type IndependentsResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "Independents";
-    items: OneOrMany<LinkedResource>;
+    items: LinkedResource[];
   }
 >;
 
@@ -233,12 +232,12 @@ export type SpecificResource = Prettify<
     id: string;
     type: "SpecificResource";
     source: LinkedResource;
-    selector?: OneOrMany<Selector>;
+    selector?: Selector[];
     position?: Selector;
-    transform?: OneOrMany<Transform>;
-    action?: OneOrMany<LinkedResource>;
-    purpose?: OneOrMany<AnyMotivation | string>;
-    scope?: OneOrMany<ResourceReference | string>;
+    transform?: Transform[];
+    action?: LinkedResource[];
+    purpose?: Array<AnyMotivation | string>;
+    scope?: Array<ResourceReference | string>;
   }
 >;
 

@@ -3,7 +3,7 @@ import type { Prettify } from "../../../../../presentation-3/types/legacy/src/ut
 import type { GeoJSON } from "../../../../../shared/geojson";
 import type { Quantity } from "../iiif/technical";
 import type { AnnotationPage } from "./annotationPage";
-import type { AgentLike, LinkedResource, OneOrMany, ResourceReference, ServiceLike } from "./contentResource";
+import type { AgentLike, LinkedResource, ResourceReference, ServiceLike } from "./contentResource";
 import type { Scene } from "./scene";
 import type { Timeline } from "./timeline";
 
@@ -40,11 +40,11 @@ export type Canvas = Prettify<{
   navPlace?: Prettify<GeoJSON>;
   rendering?: LinkedResource[];
   homepage?: LinkedResource[];
-  partOf?: LinkedResource[] | LinkedResource;
+  partOf?: LinkedResource[];
   logo?: LinkedResource[];
   supplementary?: LinkedResource[];
   canonical?: string;
-  via?: OneOrMany<string>;
+  via?: string[];
   spatialScale?: Quantity | null;
   timeMode?: string | null;
   backgroundColor?: string | null;

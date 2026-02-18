@@ -87,7 +87,9 @@
                 "type": "TextualBody",
                 "format": "text/html",
                 "value": "<p style='font-size:2000px'>Press Play</p>",
-                "language": "en"
+                "language": [
+                  "en"
+                ]
               },
               "target": {
                 "type": "SpecificResource",
@@ -111,7 +113,9 @@
                 "type": "TextualBody",
                 "format": "text/html",
                 "value": "<p style='font-size:1500px'>In 10 seconds, this text will be replaced by a clock and an image. You will have 30 seconds (shown on the clock) in which to take notes on the image you see. After 30 seconds, the image will be replaced by the start screen. You will not be responsible for the part of the image covered by the clock.</p>",
-                "language": "en"
+                "language": [
+                  "en"
+                ]
               },
               "target": {
                 "type": "SpecificResource",
@@ -135,7 +139,9 @@
                 "type": "TextualBody",
                 "format": "text/html",
                 "value": "<p style='font-size:2000px'>Close your browser</p>",
-                "language": "en"
+                "language": [
+                  "en"
+                ]
               },
               "target": {
                 "type": "SpecificResource",

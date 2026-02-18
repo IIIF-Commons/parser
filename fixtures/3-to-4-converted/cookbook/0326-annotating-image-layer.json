@@ -80,7 +80,9 @@
                               "type": "TextualBody",
                               "format": "text/plain",
                               "value": "A group of skulls.",
-                              "language": "en"
+                              "language": [
+                                "en"
+                              ]
                             },
                             "target": {
                               "type": "SpecificResource",

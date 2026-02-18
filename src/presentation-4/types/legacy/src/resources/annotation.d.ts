@@ -7,7 +7,6 @@ import type {
   AgentLike,
   ContentResourceLike,
   LinkedResource,
-  OneOrMany,
   ResourceReference,
   ServiceLike,
   SpecificResource,
@@ -36,7 +35,7 @@ export type ContentStateAnnotation = {
   motivation: "contentState";
   target: AnnotationTargetValue;
   body?: AnnotationBodyValue;
-  action?: OneOrMany<Transform | ResourceReference | string | Record<string, unknown>>;
+  action?: Array<Transform | ResourceReference | string | Record<string, unknown>>;
   [key: string]: unknown;
 };
 
@@ -75,7 +74,7 @@ export type Annotation = Prettify<{
   navPlace?: Prettify<GeoJSON> | undefined;
 
   // New for P4
-  motivation: OneOrMany<AnnotationMotivation>;
+  motivation: AnnotationMotivation[];
   body?: AnnotationBodyValue;
   target: AnnotationTargetValue;
   thumbnail?: LinkedResource[];

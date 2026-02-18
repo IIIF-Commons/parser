@@ -29,7 +29,9 @@
                 "type": "TextualBody",
                 "format": "text/plain",
                 "value": "Göttinger Marktplatz mit Gänseliesel Brunnen",
-                "language": "de"
+                "language": [
+                  "de"
+                ]
               },
               "target": {
                 "type": "SpecificResource",

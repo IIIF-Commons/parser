@@ -36,7 +36,9 @@
                   {
                     "type": "TextualBody",
                     "value": "Night picture of the Gänseliesel fountain in Göttingen taken during the 2019 IIIF Conference",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   }
                 ]
               },

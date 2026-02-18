@@ -108,6 +108,16 @@ const validAnnotationObjectBodyTarget = {
 
 void validAnnotationObjectBodyTarget;
 
+const annotationWithScalarMotivation = {
+  id: "https://example.org/annotation/motivation-scalar",
+  type: "Annotation",
+  // @ts-expect-error multi-valued properties must be arrays
+  motivation: "painting",
+  target: { id: "https://example.org/canvas/motivation-scalar", type: "Canvas" },
+} satisfies Annotation;
+
+void annotationWithScalarMotivation;
+
 const validAnnotationListBodyTarget = {
   id: "https://example.org/annotation/2",
   type: "Annotation",
@@ -147,6 +157,18 @@ const imageWithUnknownProperty = {
 } satisfies ImageResource;
 
 void imageWithUnknownProperty;
+
+const imageWithScalarService = {
+  id: "https://example.org/image/service-scalar",
+  type: "Image",
+  format: "image/jpeg",
+  height: 100,
+  width: 100,
+  // @ts-expect-error service must be an array
+  service: { id: "https://example.org/service/array-required", type: "ImageService3", profile: "level1" },
+} satisfies ImageResource;
+
+void imageWithScalarService;
 
 const serviceWithUnknownProperty = {
   id: "https://example.org/service/1",
