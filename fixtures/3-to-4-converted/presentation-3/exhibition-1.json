@@ -11,12 +11,14 @@
     {
       "id": "https://heritage.tudelft.nl/nl/exhibitions/inventing-creativity",
       "type": "Text",
-      "format": "text/html"
+      "format": "text/html",
+      "language": "nl"
     },
     {
       "id": "https://heritage.tudelft.nl/en/exhibitions/inventing-creativity",
       "type": "Text",
-      "format": "text/html"
+      "format": "text/html",
+      "language": "en"
     }
   ],
   "items": [
@@ -46,12 +48,10 @@
               "motivation": [
                 "describing"
               ],
-              "target": [
-                {
-                  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c",
-                  "type": "Annotation"
-                }
-              ]
+              "target": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c",
+                "type": "Annotation"
+              }
             },
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/36",
@@ -59,12 +59,10 @@
               "motivation": [
                 "describing"
               ],
-              "target": [
-                {
-                  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254",
-                  "type": "Annotation"
-                }
-              ]
+              "target": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254",
+                "type": "Annotation"
+              }
             },
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/37",
@@ -72,12 +70,10 @@
               "motivation": [
                 "describing"
               ],
-              "target": [
-                {
-                  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee",
-                  "type": "Annotation"
-                }
-              ]
+              "target": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee",
+                "type": "Annotation"
+              }
             },
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/38",
@@ -85,12 +81,10 @@
               "motivation": [
                 "describing"
               ],
-              "target": [
-                {
-                  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/742f09f4-1005-6fb1-0a56-7b2967a9c627",
-                  "type": "Annotation"
-                }
-              ]
+              "target": {
+                "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/742f09f4-1005-6fb1-0a56-7b2967a9c627",
+                "type": "Annotation"
+              }
             }
           ]
         }
@@ -163,19 +157,17 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
-                    "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "FragmentSelector",
-                    "value": "xywh=124,624,205,298"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "value": "xywh=124,624,205,298"
                 }
-              ]
+              }
             },
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254",
@@ -240,19 +232,17 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
-                    "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "FragmentSelector",
-                    "value": "xywh=365,622,205,296"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "value": "xywh=365,622,205,296"
                 }
-              ]
+              }
             },
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee",
@@ -317,19 +307,17 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
-                    "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "FragmentSelector",
-                    "value": "xywh=603,622,203,293"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "value": "xywh=603,622,203,293"
                 }
-              ]
+              }
             },
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/742f09f4-1005-6fb1-0a56-7b2967a9c627",
@@ -394,97 +382,93 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlc.services/iiif-img/7/21/00298292-8c7a-4939-b153-bef45c24160a/full/full/0/default.jpg",
-                  "type": "Image",
-                  "label": {
-                    "en": [
-                      "-"
-                    ]
-                  },
-                  "format": "image/jpeg",
-                  "height": 6423,
-                  "width": 8722,
-                  "service": [
-                    {
-                      "type": "ImageService2",
-                      "id": "https://dlc.services/iiif-img/7/21/00298292-8c7a-4939-b153-bef45c24160a",
-                      "protocol": "http://iiif.io/api/image",
-                      "width": 8722,
-                      "height": 6423,
-                      "tiles": [
-                        {
-                          "width": 256,
-                          "height": 256,
-                          "scaleFactors": [
-                            1,
-                            2,
-                            4,
-                            8,
-                            16,
-                            32,
-                            64
-                          ]
-                        }
-                      ],
-                      "sizes": [
-                        {
-                          "width": 1024,
-                          "height": 754
-                        },
-                        {
-                          "width": 400,
-                          "height": 295
-                        },
-                        {
-                          "width": 200,
-                          "height": 147
-                        },
-                        {
-                          "width": 100,
-                          "height": 74
-                        }
-                      ],
-                      "profile": [
-                        "http://iiif.io/api/image/2/level1.json",
-                        {
-                          "formats": [
-                            "jpg"
-                          ],
-                          "qualities": [
-                            "native",
-                            "color",
-                            "gray"
-                          ],
-                          "supports": [
-                            "regionByPct",
-                            "sizeByForcedWh",
-                            "sizeByWh",
-                            "sizeAboveFull",
-                            "rotationBy90s",
-                            "mirroring",
-                            "gray"
-                          ]
-                        }
-                      ]
-                    }
+              "body": {
+                "id": "https://dlc.services/iiif-img/7/21/00298292-8c7a-4939-b153-bef45c24160a/full/full/0/default.jpg",
+                "type": "Image",
+                "label": {
+                  "en": [
+                    "-"
                   ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
-                    "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "FragmentSelector",
-                    "value": "xywh=77,21,787,577"
+                },
+                "format": "image/jpeg",
+                "height": 6423,
+                "width": 8722,
+                "service": [
+                  {
+                    "type": "ImageService2",
+                    "id": "https://dlc.services/iiif-img/7/21/00298292-8c7a-4939-b153-bef45c24160a",
+                    "protocol": "http://iiif.io/api/image",
+                    "width": 8722,
+                    "height": 6423,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "height": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32,
+                          64
+                        ]
+                      }
+                    ],
+                    "sizes": [
+                      {
+                        "width": 1024,
+                        "height": 754
+                      },
+                      {
+                        "width": 400,
+                        "height": 295
+                      },
+                      {
+                        "width": 200,
+                        "height": 147
+                      },
+                      {
+                        "width": 100,
+                        "height": 74
+                      }
+                    ],
+                    "profile": [
+                      "http://iiif.io/api/image/2/level1.json",
+                      {
+                        "formats": [
+                          "jpg"
+                        ],
+                        "qualities": [
+                          "native",
+                          "color",
+                          "gray"
+                        ],
+                        "supports": [
+                          "regionByPct",
+                          "sizeByForcedWh",
+                          "sizeByWh",
+                          "sizeAboveFull",
+                          "rotationBy90s",
+                          "mirroring",
+                          "gray"
+                        ]
+                      }
+                    ]
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "value": "xywh=77,21,787,577"
                 }
-              ]
+              }
             }
           ]
         }

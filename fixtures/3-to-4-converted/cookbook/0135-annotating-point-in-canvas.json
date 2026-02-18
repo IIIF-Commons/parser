@@ -35,26 +35,24 @@
               "motivation": [
                 "tagging"
               ],
-              "body": [
-                {
-                  "type": "TextualBody",
-                  "format": "text/plain"
+              "body": {
+                "type": "TextualBody",
+                "format": "text/plain",
+                "value": "Town Creek Aqueduct",
+                "language": "en"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "PointSelector",
+                  "x": 3385,
+                  "y": 1464
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
-                    "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "PointSelector",
-                    "x": 3385,
-                    "y": 1464
-                  }
-                }
-              ]
+              }
             }
           ]
         }
@@ -70,31 +68,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 7072,
-                  "width": 5212,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 7072,
+                "width": 5212,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

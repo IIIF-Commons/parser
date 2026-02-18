@@ -25,27 +25,24 @@
               "motivation": [
                 "supplementing"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/lunchroom_manners.vtt",
-                  "type": "Text",
-                  "label": {
-                    "en": [
-                      "Captions in WebVTT format"
-                    ]
-                  },
-                  "format": "text/vtt"
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/lunchroom_manners.vtt",
+                "type": "Text",
+                "label": {
+                  "en": [
+                    "Captions in WebVTT format"
+                  ]
+                },
+                "format": "text/vtt",
+                "language": "en"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
+                  "type": "Canvas"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
-                    "type": "Canvas"
-                  }
-                }
-              ]
+              }
             }
           ]
         }
@@ -61,25 +58,21 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
-                  "type": "Video",
-                  "format": "video/mp4",
-                  "height": 360,
-                  "width": 480,
-                  "duration": 572.034
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "height": 360,
+                "width": 480,
+                "duration": 572.034
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
+                  "type": "Canvas"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas",
-                    "type": "Canvas"
-                  }
-                }
-              ]
+              }
             }
           ]
         }

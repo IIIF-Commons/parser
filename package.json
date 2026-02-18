@@ -191,5 +191,8 @@
 	"sideEffects": false,
 	"publishConfig": {
 		"access": "public"
+	},
+	"dependencies": {
+		"picocolors": "^1.1.1"
 	}
 }

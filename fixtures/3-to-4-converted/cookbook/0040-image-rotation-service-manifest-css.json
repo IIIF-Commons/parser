@@ -30,15 +30,13 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
-                    "type": "Canvas"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

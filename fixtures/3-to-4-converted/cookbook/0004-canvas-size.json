@@ -25,24 +25,20 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
-                  "type": "Image",
-                  "format": "image/png",
-                  "height": 360,
-                  "width": 640
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+                "type": "Image",
+                "format": "image/png",
+                "height": 360,
+                "width": 640
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/canvas/p1",
+                  "type": "Canvas"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0004-canvas-size/canvas/p1",
-                    "type": "Canvas"
-                  }
-                }
-              ]
+              }
             }
           ]
         }

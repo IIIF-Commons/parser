@@ -31,24 +31,20 @@
                 "motivation": [
                   "painting"
                 ],
-                "body": [
-                  {
-                    "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
-                    "type": "Image",
-                    "format": "image/png",
-                    "height": 360,
-                    "width": 640
+                "body": {
+                  "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
+                  "type": "Image",
+                  "format": "image/png",
+                  "height": 360,
+                  "width": 640
+                },
+                "target": {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti/placeholder",
+                    "type": "Canvas"
                   }
-                ],
-                "target": [
-                  {
-                    "type": "SpecificResource",
-                    "source": {
-                      "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti/placeholder",
-                      "type": "Canvas"
-                    }
-                  }
-                ]
+                }
               }
             ]
           }
@@ -65,25 +61,21 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
-                  "type": "Video",
-                  "format": "video/mp4",
-                  "height": 360,
-                  "width": 640,
-                  "duration": 7278.466
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "height": 360,
+                "width": 640,
+                "duration": 7278.466
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti",
+                  "type": "Canvas"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti",
-                    "type": "Canvas"
-                  }
-                }
-              ]
+              }
             }
           ]
         }

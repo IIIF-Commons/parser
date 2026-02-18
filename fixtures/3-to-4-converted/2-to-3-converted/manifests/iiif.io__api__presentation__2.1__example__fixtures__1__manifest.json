@@ -36,23 +36,19 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
-                  "type": "Image",
-                  "height": 1800,
-                  "width": 1200
+              "body": {
+                "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
+                "type": "Image",
+                "height": 1800,
+                "width": 1200
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json",
+                  "type": "Canvas"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json",
-                    "type": "Canvas"
-                  }
-                }
-              ]
+              }
             }
           ]
         }

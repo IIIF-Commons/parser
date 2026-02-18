@@ -49,22 +49,18 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg"
+              "body": {
+                "id": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Whistlers_Mother_high_res.jpg/1114px-Whistlers_Mother_high_res.jpg",
+                "type": "Image",
+                "format": "image/jpeg"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1",
+                  "type": "Canvas"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0118-multivalue/canvas/1",
-                    "type": "Canvas"
-                  }
-                }
-              ]
+              }
             }
           ]
         }

@@ -117,31 +117,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00000.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00000.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p1",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00000.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00000.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p1",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -169,31 +165,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00001.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00001.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p2",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00001.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00001.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -221,31 +213,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00002.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00002.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p3",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00002.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00002.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p3",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -273,31 +261,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00003.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00003.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p4",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00003.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00003.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p4",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -331,31 +315,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00004.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00004.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p5",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00004.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00004.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p5",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -389,31 +369,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00005.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00005.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p6",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00005.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00005.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p6",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -447,31 +423,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00006.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00006.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p7",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00006.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00006.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p7",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -505,31 +477,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00007.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00007.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p8",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00007.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00007.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p8",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -563,31 +531,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00008.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00008.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p9",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00008.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00008.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p9",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -621,31 +585,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00009.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00009.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p10",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00009.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00009.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p10",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -679,31 +639,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00010.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00010.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p11",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00010.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00010.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p11",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -737,31 +693,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00011.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00011.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p12",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00011.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00011.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p12",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -795,31 +747,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00012.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00012.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p13",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00012.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00012.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p13",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -853,31 +801,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00013.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00013.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p14",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00013.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00013.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p14",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -911,31 +855,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00014.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00014.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p15",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00014.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00014.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p15",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -969,31 +909,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00015.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00015.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p16",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00015.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00015.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p16",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1027,31 +963,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00016.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00016.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p17",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00016.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00016.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p17",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1085,31 +1017,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00017.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00017.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p18",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00017.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00017.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p18",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1137,31 +1065,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00018.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00018.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p19",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00018.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00018.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p19",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1189,31 +1113,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00019.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00019.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p20",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00019.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00019.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p20",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1241,31 +1161,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00020.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00020.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p21",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00020.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00020.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p21",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1293,31 +1209,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00021.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00021.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p22",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00021.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00021.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p22",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1345,31 +1257,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00022.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00022.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p23",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00022.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00022.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p23",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1397,31 +1305,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00023.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00023.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p24",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00023.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00023.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p24",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1455,31 +1359,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00024.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00024.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p25",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00024.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00024.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p25",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1513,31 +1413,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00025.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00025.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p26",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00025.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00025.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p26",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1571,31 +1467,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00026.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00026.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p27",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00026.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00026.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p27",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1629,31 +1521,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00027.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00027.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p28",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00027.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00027.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p28",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1687,31 +1575,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00028.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00028.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p29",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00028.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00028.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p29",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1745,31 +1629,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00029.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00029.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p30",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00029.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00029.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p30",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1803,31 +1683,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00030.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00030.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p31",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00030.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00030.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p31",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1861,31 +1737,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00031.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00031.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p32",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00031.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00031.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p32",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1919,31 +1791,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00032.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00032.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p33",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00032.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00032.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p33",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1977,31 +1845,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00033.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00033.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p34",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00033.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00033.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p34",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2035,31 +1899,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00034.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00034.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p35",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00034.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00034.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p35",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2093,31 +1953,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00035.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00035.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p36",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00035.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00035.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p36",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2151,31 +2007,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00036.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00036.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p37",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00036.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00036.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p37",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2209,31 +2061,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00037.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00037.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p38",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00037.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00037.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p38",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2267,31 +2115,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00038.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00038.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p39",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00038.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00038.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p39",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2325,31 +2169,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00039.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00039.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p40",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00039.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00039.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p40",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2383,31 +2223,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00040.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00040.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p41",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00040.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00040.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p41",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2441,31 +2277,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00041.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00041.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p42",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00041.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00041.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p42",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2499,31 +2331,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00042.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00042.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p43",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00042.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00042.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p43",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2557,31 +2385,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00043.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00043.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p44",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00043.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00043.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p44",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2615,31 +2439,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00044.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00044.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p45",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00044.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00044.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p45",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2673,31 +2493,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00045.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00045.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p46",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00045.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00045.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p46",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2731,31 +2547,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00046.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00046.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p47",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00046.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00046.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p47",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2783,31 +2595,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00047.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00047.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p48",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00047.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00047.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p48",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2835,31 +2643,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00048.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00048.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p49",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00048.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00048.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p49",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2887,31 +2691,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00049.jpg/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3744,
-                  "width": 5616,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00049.jpg",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p50",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00049.jpg/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3744,
+                "width": 5616,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/099-0014-00049.jpg",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://www2.dhii.jp/loris/NIJL0018/099-0014/p50",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

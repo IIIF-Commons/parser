@@ -524,6 +524,40 @@ describe("presentation-4 validator", () => {
     ).toBe(false);
   });
 
+  test("does not enforce service id/type class requirements for legacy service payloads", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/legacy-service",
+      type: "Manifest",
+      label: { en: ["legacy service"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          service: [
+            {
+              "@id": "https://example.org/legacy-service",
+              profile: "http://iiif.io/api/image/2/level2.json",
+            },
+          ],
+          items: [],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(manifest, { mode: "tolerant" });
+
+    expect(
+      report.issues.some(
+        (item) =>
+          item.code === "class-requirement-must" &&
+          (item.path === "$.items[0].service[0].id" || item.path === "$.items[0].service[0].type")
+      )
+    ).toBe(false);
+  });
+
   test("reports must/may/must-not class requirement violations", () => {
     const invalid = {
       "@context": "http://iiif.io/api/presentation/4/context.json",

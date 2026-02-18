@@ -235,7 +235,8 @@
           "Wunder der Vererbung / von Fritz Bolle."
         ]
       },
-      "format": "text/html"
+      "format": "text/html",
+      "language": "en"
     }
   ],
   "rendering": [
@@ -382,33 +383,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0001.JP2/full/742,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 742,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2569,
-                      "height": 3543,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0001.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0001.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0001.JP2/full/742,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 742,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2569,
+                    "height": 3543,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0001.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0001.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -495,33 +492,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0003.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0003.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0003.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0003.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0003.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0003.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -624,33 +617,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0004.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0004.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0004.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0004.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0004.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0004.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -737,33 +726,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0005.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0005.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0005.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0005.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0005.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0005.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -850,33 +835,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0006.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0006.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0006.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0006.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0006.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0006.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -963,33 +944,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0007.JP2/full/752,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 752,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2008,
-                      "height": 2736,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0007.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0007.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0007.JP2/full/752,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 752,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2008,
+                    "height": 2736,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0007.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0007.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1076,33 +1053,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0008.JP2/full/750,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 750,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2008,
-                      "height": 2740,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0008.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0008.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0008.JP2/full/750,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 750,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2008,
+                    "height": 2740,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0008.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0008.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1189,33 +1162,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0009.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0009.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0009.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0009.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0009.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0009.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1302,33 +1271,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0010.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0010.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0010.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0010.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0010.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0010.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1415,33 +1380,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0011.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0011.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0011.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0011.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0011.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0011.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1528,33 +1489,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0012.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0012.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0012.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0012.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0012.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0012.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1641,33 +1598,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0013.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0013.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0013.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0013.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0013.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0013.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1754,33 +1707,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0014.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0014.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0014.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0014.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0014.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0014.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1867,33 +1816,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0015.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0015.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0015.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0015.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0015.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0015.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1980,33 +1925,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0016.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0016.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0016.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0016.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0016.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0016.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2093,33 +2034,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0017.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0017.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0017.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0017.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0017.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0017.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2206,33 +2143,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0018.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0018.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0018.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0018.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0018.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0018.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2319,33 +2252,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0019.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0019.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0019.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0019.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0019.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0019.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2432,33 +2361,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0020.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0020.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0020.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0020.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0020.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0020.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2545,33 +2470,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0021.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0021.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0021.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0021.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0021.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0021.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2658,33 +2579,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0022.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0022.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0022.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0022.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0022.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0022.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2771,33 +2688,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0023.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0023.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0023.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0023.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0023.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0023.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2884,33 +2797,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0024.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0024.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0024.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0024.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0024.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0024.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2997,33 +2906,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0025.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0025.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0025.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0025.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0025.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0025.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -3110,33 +3015,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0026.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0026.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0026.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0026.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0026.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0026.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -3223,33 +3124,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0027.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0027.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0027.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0027.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0027.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0027.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -3336,33 +3233,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0028.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0028.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0028.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0028.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0028.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0028.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -3449,33 +3342,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0029.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0029.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0029.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0029.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0029.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0029.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -3562,33 +3451,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0030.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0030.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0030.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0030.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0030.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0030.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -3675,33 +3560,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0031.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0031.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0031.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0031.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0031.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0031.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -3788,33 +3669,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0032.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0032.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0032.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0032.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0032.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0032.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -3901,33 +3778,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0033.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0033.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0033.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0033.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0033.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0033.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -4014,33 +3887,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0034.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0034.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0034.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0034.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0034.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0034.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -4127,33 +3996,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0035.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0035.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0035.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0035.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0035.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0035.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -4240,33 +4105,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0036.JP2/full/732,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 732,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2411,
-                      "height": 3372,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0036.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0036.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0036.JP2/full/732,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 732,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2411,
+                    "height": 3372,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0036.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0036.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -4353,33 +4214,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.wellcomecollection.org/image/b18035723_0002.JP2/full/751,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 751,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2231,
-                      "height": 3040,
-                      "id": "https://iiif.wellcomecollection.org/image/b18035723_0002.JP2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0002.JP2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.wellcomecollection.org/image/b18035723_0002.JP2/full/751,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 751,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2231,
+                    "height": 3040,
+                    "id": "https://iiif.wellcomecollection.org/image/b18035723_0002.JP2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0002.JP2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

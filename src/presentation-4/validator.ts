@@ -116,7 +116,8 @@ function pathIsReferenceContext(path: string): boolean {
     /(?:^|\.)prev(?:$|\.|\[)/.test(path) ||
     /(?:^|\.)first(?:$|\.|\[)/.test(path) ||
     /(?:^|\.)last(?:$|\.|\[)/.test(path) ||
-    /(?:^|\.)annotations\[\d+\](?:$|\.|\[)/.test(path)
+    /(?:^|\.)annotations\[\d+\](?:$|\.|\[)/.test(path) ||
+    /(?:^|\.)supplementary\[\d+\](?:$|\.|\[)/.test(path)
   );
 }
 
@@ -582,6 +583,9 @@ export function runClassRequirementValidation(resource: any): {
 
     for (const property of requirement.must) {
       stats.mustChecks++;
+      if (className === "Service" && (property === "id" || property === "type")) {
+        continue;
+      }
       if (property === "width" || property === "height") {
         if (isLikelyReferenceCanvas(node) || pathIsSpecificResourceSource(nodePath) || nodePath.includes(".target")) {
           continue;

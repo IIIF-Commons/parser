@@ -246,31 +246,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.ucd.ie/loris/ucdlib:33543/full/full/0/default.jpg",
-                  "type": "dcTypes:Image",
-                  "format": "image/jpeg",
-                  "height": 14214,
-                  "width": 14451,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.ucd.ie/loris/ucdlib:33543",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.ucd.ie/loris/ucdlib:33543/full/full/0/default.jpg",
+                "type": "dcTypes:Image",
+                "format": "image/jpeg",
+                "height": 14214,
+                "width": 14451,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.ucd.ie/loris/ucdlib:33543",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

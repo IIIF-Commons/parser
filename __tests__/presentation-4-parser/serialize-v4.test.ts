@@ -29,7 +29,7 @@ describe("presentation-4 serializer", () => {
     expect(Array.isArray(serialized.items)).toBe(true);
   });
 
-  test("serializes non-strict annotation body/target values as lists", () => {
+  test("serializes annotation body/target as objects by default", () => {
     const fixture = JSON.parse(readFileSync(join(cwd(), "fixtures/presentation-4/01-model-in-scene.json"), "utf8"));
     const normalized = normalize(fixture);
     const annotationId = "https://example.org/iiif/3d/anno1";
@@ -49,8 +49,10 @@ describe("presentation-4 serializer", () => {
     );
 
     const serializedAnnotation = serialized.items[0].items[0].items[0];
-    expect(Array.isArray(serializedAnnotation.body)).toBe(true);
-    expect(Array.isArray(serializedAnnotation.target)).toBe(true);
+    expect(Array.isArray(serializedAnnotation.body)).toBe(false);
+    expect(Array.isArray(serializedAnnotation.target)).toBe(false);
+    expect(serializedAnnotation.body.type).toBeTruthy();
+    expect(serializedAnnotation.target.type).toBeTruthy();
   });
 
   test("optionally serializes annotation body/target as object with List wrapper for multiples", () => {
@@ -81,6 +83,29 @@ describe("presentation-4 serializer", () => {
     expect(serializedAnnotation.target.type).toBe("List");
     expect(Array.isArray(serializedAnnotation.target.items)).toBe(true);
     expect(serializedAnnotation.target.items).toHaveLength(2);
+  });
+
+  test("preserves TextualBody value/language through normalize+serialize", () => {
+    const fixture = JSON.parse(readFileSync(join(cwd(), "fixtures/cookbook/0489-multimedia-canvas.json"), "utf8"));
+    const normalized = normalize(fixture);
+
+    const serialized = serialize<any>(
+      {
+        entities: normalized.entities as any,
+        mapping: normalized.mapping as any,
+        requests: {},
+      },
+      normalized.resource,
+      serializeConfigPresentation4
+    );
+
+    const annotation = serialized.items[0].items[0].items.find(
+      (item: any) => item.id === "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/annotation/p0005-text"
+    );
+    expect(annotation).toBeTruthy();
+    expect(annotation.body.type).toBe("TextualBody");
+    expect(annotation.body.value).toContain("In 10 seconds");
+    expect(annotation.body.language).toBe("en");
   });
 
   test("does not serialize default left-to-right viewingDirection on Collection in partOf", () => {

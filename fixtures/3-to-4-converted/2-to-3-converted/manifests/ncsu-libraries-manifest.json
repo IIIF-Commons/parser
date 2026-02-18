@@ -232,30 +232,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0001/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1403,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0001",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0001",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0001/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1403,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0001",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0001",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -335,30 +331,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0002/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1401,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0002",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0002",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0002/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1401,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0002",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0002",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -438,30 +430,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0003/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1399,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0003",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0003",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0003/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1399,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0003",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0003",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -541,30 +529,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0004/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1400,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0004",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0004",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0004/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1400,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0004",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0004",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -644,30 +628,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0005/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1401,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0005",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0005",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0005/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1401,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0005",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0005",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -747,30 +727,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0006/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1401,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0006",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0006",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0006/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1401,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0006",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0006",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -850,30 +826,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0007/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1397,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0007",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0007",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0007/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1397,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0007",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0007",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -953,30 +925,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0008/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1404,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0008",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0008",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0008/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1404,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0008",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0008",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1056,30 +1024,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0009/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1392,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0009",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0009",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0009/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1392,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0009",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0009",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1159,30 +1123,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0010/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1398,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0010",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0010/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1398,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0010",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0010",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1262,30 +1222,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0011/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1394,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0011",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0011",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0011/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1394,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0011",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0011",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1365,30 +1321,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0012/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1396,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0012",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0012",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0012/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1396,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0012",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0012",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1468,30 +1420,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0013/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1389,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0013",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0013",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0013/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1389,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0013",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0013",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1571,30 +1519,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0014/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1392,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0014",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0014",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0014/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1392,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0014",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0014",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1674,30 +1618,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0015/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1394,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0015",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0015",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0015/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1394,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0015",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0015",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1777,30 +1717,26 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0016/full/1170,/0/default.jpg",
-                  "type": "Image",
-                  "height": 1406,
-                  "width": 1170,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0016",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0016",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0016/full/1170,/0/default.jpg",
+                "type": "Image",
+                "height": 1406,
+                "width": 1170,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.lib.ncsu.edu/iiif/nubian-message-1992-11-30_0016",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://d.lib.ncsu.edu/collections/canvas/nubian-message-1992-11-30_0016",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
