@@ -9,6 +9,7 @@ import type {
 } from "../../src/presentation-4/types";
 
 const validManifest = {
+  "@context": "http://iiif.io/api/presentation/4/context.json",
   id: "https://example.org/manifest/1",
   type: "Manifest",
   label: { en: ["Manifest"] },
@@ -26,6 +27,25 @@ const validManifest = {
 } satisfies Manifest;
 
 void validManifest;
+
+const manifestWithEmbeddedCanvasContext = {
+  id: "https://example.org/manifest/canvas-context",
+  type: "Manifest",
+  label: { en: ["Manifest"] },
+  items: [
+    {
+      id: "https://example.org/canvas/context",
+      type: "Canvas",
+      height: 1000,
+      width: 1000,
+      items: [],
+      // @ts-expect-error @context is restricted to top-level document resources
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+    },
+  ],
+} satisfies Manifest;
+
+void manifestWithEmbeddedCanvasContext;
 
 const manifestWithSpecificStart = {
   id: "https://example.org/manifest/2",

@@ -27,7 +27,6 @@ export type Canvas = Prettify<{
   requiredStatement?: MetadataItem | null | undefined;
   rights?: string | null | undefined;
   navDate?: string | null | undefined;
-  "@context"?: string | string[] | undefined;
 
   // New for P4.
   items?: CanvasItem[];

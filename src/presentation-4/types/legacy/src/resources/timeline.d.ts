@@ -22,7 +22,6 @@ export type Timeline = Prettify<{
   requiredStatement?: MetadataItem | null | undefined;
   rights?: string | null | undefined;
   navDate?: string | null | undefined;
-  "@context"?: string | string[] | undefined;
   duration: number;
   items?: Array<TimelineItem>;
   annotations?: Array<TimelineAnnotation>;

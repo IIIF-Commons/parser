@@ -20,7 +20,6 @@ export type AnnotationPage = Prettify<{
   rights?: string | null | undefined;
   thumbnail?: Array<ContentResourceLike> | undefined;
   provider?: Array<AgentLike | ResourceReference<"Agent">> | undefined;
-  "@context"?: string | undefined;
   next?: string | undefined;
   prev?: string | undefined;
   startIndex?: number | undefined;
