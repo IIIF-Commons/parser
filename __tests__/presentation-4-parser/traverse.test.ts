@@ -175,4 +175,48 @@ describe("presentation-4 traverse", () => {
     expect(traversed.t).toBe(3.5);
     expect(Object.hasOwn(traversed, "instant")).toBe(false);
   });
+
+  test("normalizes paging first/last string references to typed objects", () => {
+    const traverse = new Traverse();
+    const annotationCollection = {
+      id: "https://example.org/annotation-collection/1",
+      type: "AnnotationCollection",
+      first: "https://example.org/annotation-collection/1/page/1",
+      last: "https://example.org/annotation-collection/1/page/2",
+      items: [],
+    };
+
+    const traversedAnnotationCollection = traverse.traverseAnnotationCollection(
+      annotationCollection,
+      undefined,
+      "$.annotationCollection"
+    );
+
+    expect(traversedAnnotationCollection.first).toEqual({
+      id: "https://example.org/annotation-collection/1/page/1",
+      type: "AnnotationPage",
+    });
+    expect(traversedAnnotationCollection.last).toEqual({
+      id: "https://example.org/annotation-collection/1/page/2",
+      type: "AnnotationPage",
+    });
+
+    const collection = {
+      id: "https://example.org/collection/1",
+      type: "Collection",
+      first: "https://example.org/collection/1/page/1",
+      last: "https://example.org/collection/1/page/2",
+      items: [],
+    };
+
+    const traversedCollection = traverse.traverseCollection(collection, undefined, "$.collection");
+    expect(traversedCollection.first).toEqual({
+      id: "https://example.org/collection/1/page/1",
+      type: "CollectionPage",
+    });
+    expect(traversedCollection.last).toEqual({
+      id: "https://example.org/collection/1/page/2",
+      type: "CollectionPage",
+    });
+  });
 });

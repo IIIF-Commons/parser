@@ -51,6 +51,7 @@ export const emptyManifest: ManifestNormalized = {
 export const emptyTimeline: TimelineNormalized = {
   id: "https://iiif-parser/empty-timeline",
   type: "Timeline",
+  duration: 0,
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
@@ -58,6 +59,8 @@ export const emptyTimeline: TimelineNormalized = {
 export const emptyCanvas: CanvasNormalized = {
   id: "https://iiif-parser/empty-canvas",
   type: "Canvas",
+  height: 0,
+  width: 0,
   items: EMPTY_ARRAY,
   ...baseLinkedArrays,
 };
@@ -107,7 +110,12 @@ export const emptyAgent: AgentNormalized = {
 };
 
 export const emptySpecificResource: SpecificResourceNormalized = {
+  id: "https://iiif-parser/empty-specific-resource",
   type: "SpecificResource",
+  source: {
+    id: "https://iiif-parser/empty-specific-resource/source",
+    type: "Canvas",
+  },
   selector: EMPTY_ARRAY,
   transform: EMPTY_ARRAY,
   action: EMPTY_ARRAY,

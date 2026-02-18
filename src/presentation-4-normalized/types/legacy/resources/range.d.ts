@@ -3,4 +3,6 @@ import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/techni
 export type RangeNormalized = NormalizedLinkedEntity & {
   type: "Range";
   items: readonly NormalizedReference[];
+  start?: NormalizedReference;
+  supplementary?: NormalizedReference | readonly NormalizedReference[];
 };

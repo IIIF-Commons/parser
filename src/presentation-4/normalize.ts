@@ -1,3 +1,11 @@
+import {
+  emptyAgent as legacyEmptyAgent,
+  emptyAnnotationPage as legacyEmptyAnnotationPage,
+  emptyCanvas as legacyEmptyCanvas,
+  emptyCollection as legacyEmptyCollection,
+  emptyManifest as legacyEmptyManifest,
+  emptyRange as legacyEmptyRange,
+} from "../presentation-3/empty-types";
 import type {
   NormalizedEntity as NormalizedEntityV4,
   Presentation4Entities,
@@ -17,14 +25,6 @@ import {
   emptySpecificResource,
   emptyTimeline,
 } from "./empty-types";
-import {
-  emptyAgent as legacyEmptyAgent,
-  emptyAnnotationPage as legacyEmptyAnnotationPage,
-  emptyCanvas as legacyEmptyCanvas,
-  emptyCollection as legacyEmptyCollection,
-  emptyManifest as legacyEmptyManifest,
-  emptyRange as legacyEmptyRange,
-} from "../presentation-3/empty-types";
 import { type TraversalContext, Traverse } from "./traverse";
 import { upgradeToPresentation4 } from "./upgrade";
 import {
@@ -372,7 +372,7 @@ function recordEntity(entities: Presentation4Entities, options: { legacyMode?: b
 
     const inferredType = forcedType || identifyResourceType(resource);
     const storeType = mapTypeToStore(inferredType);
-    if (Object.prototype.hasOwnProperty.call(resource, "language")) {
+    if (Object.hasOwn(resource, "language")) {
       if (typeof resource.language === "string") {
         resource.language = [resource.language];
       } else if (Array.isArray(resource.language)) {
@@ -431,7 +431,9 @@ export function normalize(input: unknown): NormalizeResult {
   }
   contentResourceTraversals.push(map("ContentResource"), record("ContentResource"));
 
-  const specificResourceTraversals: Array<(resource: any, context: TraversalContext) => any> = [];
+  const specificResourceTraversals: Array<(resource: any, context: TraversalContext) => any> = [
+    withId("SpecificResource", diagnostics),
+  ];
   if (!isLegacySource) {
     specificResourceTraversals.push(ensureDefaultFields(emptySpecificResource));
   }

@@ -2,5 +2,7 @@ import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/techni
 
 export type CanvasNormalized = NormalizedLinkedEntity & {
   type: "Canvas";
+  height: number;
+  width: number;
   items: readonly NormalizedReference[];
 };

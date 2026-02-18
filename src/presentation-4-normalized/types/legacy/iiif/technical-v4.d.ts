@@ -1,21 +1,21 @@
 import type { InternationalString } from "../../../../presentation-3/types";
-import type { Service } from "../../../../presentation-4/types";
+import type { Selector, Service, Transform } from "../../../../presentation-4/types";
 import type { MetadataItem } from "../../../../presentation-4/types/legacy/src/resources/contentResource";
 
 export type NormalizedPrimitive = string | number | boolean | null;
 export type NormalizedJsonValue = NormalizedPrimitive | NormalizedJsonValue[] | { [key: string]: NormalizedJsonValue };
 
 export interface NormalizedReferenceObject {
-  id?: string;
-  type?: string;
+  id: string;
+  type: string;
 }
 
 export interface NormalizedSpecificResourceReference extends NormalizedReferenceObject {
   type: "SpecificResource";
-  source?: NormalizedReference | readonly NormalizedReference[];
-  selector?: readonly NormalizedReference[];
-  transform?: readonly NormalizedReference[];
-  action?: readonly NormalizedReference[];
+  source: NormalizedReference | readonly NormalizedReference[];
+  selector?: Selector | readonly Selector[];
+  transform?: Transform | readonly Transform[];
+  action?: readonly NormalizedJsonValue[];
   purpose?: readonly string[];
   scope?: NormalizedReference | string | readonly (NormalizedReference | string)[];
   styleClass?: string;
@@ -35,6 +35,7 @@ export interface NormalizedFramingPart extends NormalizedReferenceObject {
 }
 
 export interface NormalizedEntityBase extends NormalizedReferenceObject {
+  "@context"?: NormalizedJsonValue | readonly NormalizedJsonValue[];
   "iiif-parser:hasPart"?: readonly NormalizedFramingPart[];
 }
 
@@ -52,4 +53,20 @@ export interface NormalizedLinkedEntity extends NormalizedEntityBase {
   rendering: readonly NormalizedReference[];
   partOf: readonly NormalizedReference[];
   annotations: readonly NormalizedReference[];
+  rights?: string | null;
+  navDate?: string;
+  navPlace?: NormalizedJsonValue;
+  requiredStatement?: MetadataItem | null;
+  profile?: NormalizedJsonValue;
+  format?: string;
+  height?: number;
+  width?: number;
+  duration?: number;
+  spatialScale?: number;
+  temporalScale?: number;
+  backgroundColor?: string;
+  viewingDirection?: string;
+  timeMode?: string;
+  placeholderContainer?: NormalizedReference;
+  accompanyingContainer?: NormalizedReference;
 }

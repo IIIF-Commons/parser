@@ -63,16 +63,19 @@ describe("presentation-4 specific resource parity", () => {
       : normalizedTarget.selector;
 
     expect(normalizedManifest.start.type).toBe("SpecificResource");
+    expect(normalizedManifest.start.id.startsWith("vault://iiif-parser/v4/SpecificResource/")).toBe(true);
     expect(normalizedManifest.start.source.id).toBe("https://example.org/canvas/1");
     expect(startSelector.type).toBe("FragmentSelector");
     expect(startSelector.value).toBe("t=5,15");
 
     expect(normalizedRange.items[0].type).toBe("SpecificResource");
+    expect(normalizedRange.items[0].id.startsWith("vault://iiif-parser/v4/SpecificResource/")).toBe(true);
     expect(normalizedRange.items[0].source.id).toBe("https://example.org/canvas/1");
     expect(rangeSelector.type).toBe("FragmentSelector");
     expect(rangeSelector.value).toBe("t=0,10");
 
     expect(normalizedTarget.type).toBe("SpecificResource");
+    expect(normalizedTarget.id.startsWith("vault://iiif-parser/v4/SpecificResource/")).toBe(true);
     expect(normalizedTarget.source.id).toBe("https://example.org/canvas/1");
     expect(targetSelector.type).toBe("FragmentSelector");
     expect(targetSelector.value).toBe("xywh=10,20,30,40");
@@ -83,6 +86,23 @@ describe("presentation-4 specific resource parity", () => {
         "value": "xywh=10,20,30,40",
       }
     `);
+
+    const serialized = serialize<any>(
+      {
+        entities: result.entities as any,
+        mapping: result.mapping as any,
+        requests: {},
+      },
+      result.resource,
+      serializeConfigPresentation4
+    );
+
+    expect(serialized.start.type).toBe("SpecificResource");
+    expect(serialized.start.id).toBeUndefined();
+    expect(serialized.structures[0].items[0].type).toBe("SpecificResource");
+    expect(serialized.structures[0].items[0].id).toBeUndefined();
+    expect(serialized.items[0].items[0].items[0].target.type).toBe("SpecificResource");
+    expect(serialized.items[0].items[0].items[0].target.id).toBeUndefined();
   });
 
   test("preserves selector through normalize and serialize for native p4 fragment targets", () => {

@@ -3,5 +3,5 @@ import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/techni
 export type TimelineNormalized = NormalizedLinkedEntity & {
   type: "Timeline";
   items: readonly NormalizedReference[];
-  duration?: number;
+  duration: number;
 };
