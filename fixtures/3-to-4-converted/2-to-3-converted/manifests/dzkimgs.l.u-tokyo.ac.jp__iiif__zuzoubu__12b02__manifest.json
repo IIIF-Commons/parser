@@ -115,31 +115,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 30000,
-                  "width": 22779,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 30000,
+                "width": 22779,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

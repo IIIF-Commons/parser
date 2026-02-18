@@ -193,7 +193,7 @@ export type SpecificResource = Prettify<
   Omit<SpecificResourceV3, "source" | "selector" | "purpose" | "scope"> & {
     id: string;
     type: "SpecificResource";
-    source: OneOrMany<LinkedResource>;
+    source: LinkedResource;
     selector?: OneOrMany<Selector>;
     position?: Selector;
     transform?: OneOrMany<Transform>;

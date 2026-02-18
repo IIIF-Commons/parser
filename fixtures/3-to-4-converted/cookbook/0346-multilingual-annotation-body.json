@@ -28,34 +28,34 @@
               "motivation": [
                 "commenting"
               ],
-              "body": [
-                {
-                  "type": "Choice",
-                  "items": [
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    },
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
-                    "type": "Canvas"
+              "body": {
+                "type": "Choice",
+                "items": [
+                  {
+                    "type": "TextualBody",
+                    "format": "text/plain",
+                    "value": "Koto with a cover being carried",
+                    "language": "en"
                   },
-                  "selector": {
-                    "type": "FragmentSelector",
-                    "value": "xywh=1650,1200,925,1250"
+                  {
+                    "type": "TextualBody",
+                    "format": "text/plain",
+                    "value": "袋に収められた琴",
+                    "language": "ja"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "value": "xywh=1650,1200,925,1250"
                 }
-              ]
+              }
             }
           ]
         }
@@ -71,31 +71,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/36ca0a3370db128ec984b33d71a1543d-100320001004/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 31722,
-                  "width": 70399,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/36ca0a3370db128ec984b33d71a1543d-100320001004",
-                      "profile": "level1",
-                      "type": "ImageService3"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/36ca0a3370db128ec984b33d71a1543d-100320001004/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 31722,
+                "width": 70399,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/36ca0a3370db128ec984b33d71a1543d-100320001004",
+                    "profile": "level1",
+                    "type": "ImageService3"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

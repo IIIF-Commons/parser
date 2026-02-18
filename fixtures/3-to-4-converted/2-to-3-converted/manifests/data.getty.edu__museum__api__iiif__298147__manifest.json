@@ -200,31 +200,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://data.getty.edu/museum/api/iiif/633385/full/789,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 789,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level0.json",
-                      "id": "https://data.getty.edu/museum/api/iiif/633385",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://data.getty.edu/museum/api/iiif/298147/canvas/main",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://data.getty.edu/museum/api/iiif/633385/full/789,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 789,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level0.json",
+                    "id": "https://data.getty.edu/museum/api/iiif/633385",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://data.getty.edu/museum/api/iiif/298147/canvas/main",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

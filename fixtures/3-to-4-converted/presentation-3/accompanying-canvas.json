@@ -39,31 +39,27 @@
                 "motivation": [
                   "painting"
                 ],
-                "body": [
-                  {
-                    "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0/full/,998/0/default.jpg",
-                    "type": "Image",
-                    "format": "image/jpeg",
-                    "height": 998,
-                    "width": 772,
-                    "service": [
-                      {
-                        "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0",
-                        "type": "ImageService3",
-                        "profile": "level1"
-                      }
-                    ]
-                  }
-                ],
-                "target": [
-                  {
-                    "type": "SpecificResource",
-                    "source": {
-                      "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying",
-                      "type": "Canvas"
+                "body": {
+                  "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0/full/,998/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg",
+                  "height": 998,
+                  "width": 772,
+                  "service": [
+                    {
+                      "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0",
+                      "type": "ImageService3",
+                      "profile": "level1"
                     }
+                  ]
+                },
+                "target": {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying",
+                    "type": "Canvas"
                   }
-                ]
+                }
               }
             ]
           }
@@ -80,20 +76,16 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
-                  "type": "Sound",
-                  "format": "video/mp4",
-                  "duration": 1985.024
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/p1",
-                  "type": "AnnotationPage"
-                }
-              ]
+              "body": {
+                "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
+                "type": "Sound",
+                "format": "video/mp4",
+                "duration": 1985.024
+              },
+              "target": {
+                "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/p1",
+                "type": "AnnotationPage"
+              }
             }
           ]
         }

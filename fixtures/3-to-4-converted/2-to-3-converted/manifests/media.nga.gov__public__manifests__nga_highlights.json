@@ -59,31 +59,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/0/6/3/8/2/106382-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 402,
-                  "width": 307,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/0/6/3/8/2/106382-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/106382.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/0/6/3/8/2/106382-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 402,
+                "width": 307,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/0/6/3/8/2/106382-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/106382.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -137,31 +133,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/6/1/3/7/1/61371-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 325,
-                  "width": 443,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/6/1/3/7/1/61371-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/61371.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/6/1/3/7/1/61371-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 325,
+                "width": 443,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/6/1/3/7/1/61371-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/61371.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -215,31 +207,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/5/2/1/7/8/52178-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 334,
-                  "width": 441,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/5/2/1/7/8/52178-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/52178.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/5/2/1/7/8/52178-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 334,
+                "width": 441,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/5/2/1/7/8/52178-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/52178.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -293,31 +281,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/6/46626-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 2088,
-                  "width": 3348,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/6/46626-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/46626.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/6/46626-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2088,
+                "width": 3348,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/6/46626-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/46626.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -371,31 +355,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/1/3/8/1138-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 439,
-                  "width": 401,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/1/3/8/1138-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/1138.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/1/3/8/1138-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 439,
+                "width": 401,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/1/3/8/1138-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/1138.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -449,31 +429,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/4/6/1/5/9/46159-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 400,
-                  "width": 260,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/4/6/1/5/9/46159-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/46159.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/1/5/9/46159-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 400,
+                "width": 260,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/1/5/9/46159-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/46159.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -527,31 +503,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/3/3/2/5/3/33253-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 351,
-                  "width": 443,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/3/3/2/5/3/33253-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/33253.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/3/3/2/5/3/33253-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 351,
+                "width": 443,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/3/3/2/5/3/33253-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/33253.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -605,31 +577,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/2/3/1/1231-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 401,
-                  "width": 224,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/2/3/1/1231-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/1231.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/2/3/1/1231-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 401,
+                "width": 224,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/2/3/1/1231-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/1231.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -683,31 +651,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/3/7/0/0/3/37003-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 400,
-                  "width": 352,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/3/7/0/0/3/37003-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/37003.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/3/7/0/0/3/37003-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 400,
+                "width": 352,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/3/7/0/0/3/37003-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/37003.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -761,31 +725,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/5/7/6/576-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 298,
-                  "width": 442,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/5/7/6/576-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/576.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/5/7/6/576-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 298,
+                "width": 442,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/5/7/6/576-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/576.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -839,31 +799,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/7/9/79-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 402,
-                  "width": 312,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/7/9/79-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/79.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/7/9/79-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 402,
+                "width": 312,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/7/9/79-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/79.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -917,31 +873,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/2/3/6/1236-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 401,
-                  "width": 355,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/2/3/6/1236-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/1236.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/2/3/6/1236-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 401,
+                "width": 355,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/2/3/6/1236-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/1236.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -995,31 +947,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/4/6/3/0/3/46303-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 401,
-                  "width": 355,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/4/6/3/0/3/46303-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/46303.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/3/0/3/46303-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 401,
+                "width": 355,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/3/0/3/46303-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/46303.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1073,31 +1021,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/4/6/4/7/1/46471-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 351,
-                  "width": 441,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/4/6/4/7/1/46471-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/46471.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/4/7/1/46471-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 351,
+                "width": 441,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/4/7/1/46471-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/46471.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1151,31 +1095,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/4/6/1/1/4/46114-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 402,
-                  "width": 245,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/4/6/1/1/4/46114-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/46114.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/1/1/4/46114-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 402,
+                "width": 245,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/1/1/4/46114-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/46114.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1229,31 +1169,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/1/4/7/1147-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 240,
-                  "width": 443,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/1/4/7/1147-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/1147.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/1/4/7/1147-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 240,
+                "width": 443,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/1/4/7/1147-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/1147.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1307,31 +1243,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/2/2/5/1225-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 329,
-                  "width": 441,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/2/2/5/1225-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/1225.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/2/2/5/1225-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 329,
+                "width": 441,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/2/2/5/1225-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/1225.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1385,31 +1317,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/5/2/4/5/0/52450-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 299,
-                  "width": 441,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/5/2/4/5/0/52450-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/52450.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/5/2/4/5/0/52450-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 299,
+                "width": 441,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/5/2/4/5/0/52450-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/52450.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1463,31 +1391,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/2/1/9/8/12198-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 402,
-                  "width": 201,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/2/1/9/8/12198-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/12198.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/2/1/9/8/12198-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 402,
+                "width": 201,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/2/1/9/8/12198-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/12198.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1541,31 +1465,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/4/3/6/2/4/43624-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 360,
-                  "width": 442,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/4/3/6/2/4/43624-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/43624.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/4/3/6/2/4/43624-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 360,
+                "width": 442,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/4/3/6/2/4/43624-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/43624.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1619,31 +1539,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/7/4/7/9/6/74796-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 356,
-                  "width": 441,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/7/4/7/9/6/74796-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/74796.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/7/4/7/9/6/74796-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 356,
+                "width": 441,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/7/4/7/9/6/74796-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/74796.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1697,31 +1613,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/7/46627-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 349,
-                  "width": 442,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/7/46627-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/46627.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/7/46627-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 349,
+                "width": 442,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/4/6/6/2/7/46627-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/46627.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1775,31 +1687,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/3/4/4/8/5/134485-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 305,
-                  "width": 441,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/3/4/4/8/5/134485-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/134485.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/3/4/4/8/5/134485-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 305,
+                "width": 441,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/3/4/4/8/5/134485-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/134485.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1853,31 +1761,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/6/6/4/0/9/66409-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 400,
-                  "width": 372,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/6/6/4/0/9/66409-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/66409.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/6/6/4/0/9/66409-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 400,
+                "width": 372,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/6/6/4/0/9/66409-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/66409.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1931,31 +1835,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/3/9/8/398-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 400,
-                  "width": 300,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/3/9/8/398-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/398.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/3/9/8/398-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 400,
+                "width": 300,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/3/9/8/398-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/398.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -2009,31 +1909,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://media.nga.gov/iiif/public/objects/1/6/4/9/2/3/164923-primary-0-nativeres.ptif/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 340,
-                  "width": 441,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level2.json",
-                      "id": "https://media.nga.gov/iiif/public/objects/1/6/4/9/2/3/164923-primary-0-nativeres.ptif",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://media.nga.gov/public/manifests/canvas/164923.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://media.nga.gov/iiif/public/objects/1/6/4/9/2/3/164923-primary-0-nativeres.ptif/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 340,
+                "width": 441,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://media.nga.gov/iiif/public/objects/1/6/4/9/2/3/164923-primary-0-nativeres.ptif",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://media.nga.gov/public/manifests/canvas/164923.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

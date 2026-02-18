@@ -218,7 +218,8 @@
           "[Report 1960] / Medical Officer of Health, Llanwrtyd Wells U.D.C."
         ]
       },
-      "format": "text/html"
+      "format": "text/html",
+      "language": "en"
     }
   ],
   "rendering": [
@@ -453,33 +454,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0001.jp2/full/620,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 620,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2670,
-                      "height": 4412,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0001.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0001.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0001.jp2/full/620,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 620,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2670,
+                    "height": 4412,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0001.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0001.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -566,33 +563,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0002.jp2/full/605,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 605,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2547,
-                      "height": 4312,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0002.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0002.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0002.jp2/full/605,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 605,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2547,
+                    "height": 4312,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0002.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0002.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -679,33 +672,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0003.jp2/full/620,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 620,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2637,
-                      "height": 4357,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0003.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0003.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0003.jp2/full/620,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 620,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2637,
+                    "height": 4357,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0003.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0003.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -792,33 +781,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0004.jp2/full/619,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 619,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2626,
-                      "height": 4346,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0004.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0004.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0004.jp2/full/619,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 619,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2626,
+                    "height": 4346,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0004.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0004.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -905,33 +890,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0005.jp2/full/620,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 620,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2637,
-                      "height": 4357,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0005.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0005.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0005.jp2/full/620,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 620,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2637,
+                    "height": 4357,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0005.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0005.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1018,33 +999,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0006.jp2/full/619,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 619,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2626,
-                      "height": 4346,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0006.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0006.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0006.jp2/full/619,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 619,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2626,
+                    "height": 4346,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0006.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0006.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1131,33 +1108,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0007.jp2/full/620,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 620,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2637,
-                      "height": 4357,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0007.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0007.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0007.jp2/full/620,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 620,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2637,
+                    "height": 4357,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0007.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0007.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1244,33 +1217,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0008.jp2/full/619,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 619,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2626,
-                      "height": 4346,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0008.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0008.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0008.jp2/full/619,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 619,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2626,
+                    "height": 4346,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0008.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0008.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1357,33 +1326,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0009.jp2/full/620,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 620,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2637,
-                      "height": 4357,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0009.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0009.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0009.jp2/full/620,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 620,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2637,
+                    "height": 4357,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0009.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0009.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1470,33 +1435,29 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0010.jp2/full/618,1024/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1024,
-                  "width": 618,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "width": 2670,
-                      "height": 4424,
-                      "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0010.jp2",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0010.jp2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0010.jp2/full/618,1024/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1024,
+                "width": 618,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "width": 2670,
+                    "height": 4424,
+                    "id": "https://dlcs.io/iiif-img/wellcome/6/b28857021_0010.jp2",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0010.jp2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

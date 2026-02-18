@@ -28,25 +28,21 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
-                  "type": "Video",
-                  "format": "video/mp4",
-                  "height": 1080,
-                  "width": 1920,
-                  "duration": 7278.422
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "height": 1080,
+                "width": 1920,
+                "duration": 7278.422
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1",
+                  "type": "Canvas"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1",
-                    "type": "Canvas"
-                  }
-                }
-              ]
+              }
             }
           ]
         }

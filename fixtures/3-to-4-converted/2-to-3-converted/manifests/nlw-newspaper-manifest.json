@@ -173,46 +173,42 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://dams.llgc.org.uk/iiif/2.0/3320641/image/full/512,/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 7905,
-                  "width": 5826,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "height": 7905,
-                      "width": 5826,
-                      "tiles": [
-                        {
-                          "width": 256,
-                          "scaleFactors": [
-                            1,
-                            2,
-                            4,
-                            8,
-                            16,
-                            32
-                          ]
-                        }
-                      ],
-                      "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320641",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320641",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://dams.llgc.org.uk/iiif/2.0/3320641/image/full/512,/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 7905,
+                "width": 5826,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "height": 7905,
+                    "width": 5826,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32
+                        ]
+                      }
+                    ],
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320641",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320641",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -282,46 +278,42 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://dams.llgc.org.uk/iiif/2.0/3320642/image/full/512,/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 7905,
-                  "width": 5826,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "height": 7905,
-                      "width": 5826,
-                      "tiles": [
-                        {
-                          "width": 256,
-                          "scaleFactors": [
-                            1,
-                            2,
-                            4,
-                            8,
-                            16,
-                            32
-                          ]
-                        }
-                      ],
-                      "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320642",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320642",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://dams.llgc.org.uk/iiif/2.0/3320642/image/full/512,/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 7905,
+                "width": 5826,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "height": 7905,
+                    "width": 5826,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32
+                        ]
+                      }
+                    ],
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320642",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320642",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -471,46 +463,42 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://dams.llgc.org.uk/iiif/2.0/3320643/image/full/512,/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 7905,
-                  "width": 5826,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "height": 7905,
-                      "width": 5826,
-                      "tiles": [
-                        {
-                          "width": 256,
-                          "scaleFactors": [
-                            1,
-                            2,
-                            4,
-                            8,
-                            16,
-                            32
-                          ]
-                        }
-                      ],
-                      "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320643",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://dams.llgc.org.uk/iiif/2.0/3320643/image/full/512,/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 7905,
+                "width": 5826,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "height": 7905,
+                    "width": 5826,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32
+                        ]
+                      }
+                    ],
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320643",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -620,46 +608,42 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://dams.llgc.org.uk/iiif/2.0/3320644/image/full/512,/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 7905,
-                  "width": 5826,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "height": 7905,
-                      "width": 5826,
-                      "tiles": [
-                        {
-                          "width": 256,
-                          "scaleFactors": [
-                            1,
-                            2,
-                            4,
-                            8,
-                            16,
-                            32
-                          ]
-                        }
-                      ],
-                      "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320644",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644",
-                    "type": "Canvas"
+              "body": {
+                "id": "http://dams.llgc.org.uk/iiif/2.0/3320644/image/full/512,/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 7905,
+                "width": 5826,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "height": 7905,
+                    "width": 5826,
+                    "tiles": [
+                      {
+                        "width": 256,
+                        "scaleFactors": [
+                          1,
+                          2,
+                          4,
+                          8,
+                          16,
+                          32
+                        ]
+                      }
+                    ],
+                    "id": "http://dams.llgc.org.uk/iiif/2.0/image/3320644",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

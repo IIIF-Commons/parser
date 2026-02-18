@@ -35,25 +35,21 @@
               "motivation": [
                 "tagging"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/geo.json",
-                  "type": "Feature"
+              "body": {
+                "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/geo.json",
+                "type": "Feature"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/canvas.json",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "value": "xywh=920,3600,1510,3000"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/canvas.json",
-                    "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "FragmentSelector",
-                    "value": "xywh=920,3600,1510,3000"
-                  }
-                }
-              ]
+              }
             }
           ]
         }
@@ -69,31 +65,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 7072,
-                  "width": 5212,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/canvas.json",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 7072,
+                "width": 5212,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/canvas.json",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

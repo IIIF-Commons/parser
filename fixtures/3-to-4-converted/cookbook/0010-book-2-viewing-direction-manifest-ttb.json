@@ -36,31 +36,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3152,
-                  "width": 2251,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v1",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3152,
+                "width": 2251,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_02",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v1",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -88,31 +84,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3135,
-                  "width": 2268,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3135,
+                "width": 2268,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_03",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -140,31 +132,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3135,
-                  "width": 2274,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v3",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3135,
+                "width": 2274,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_04",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v3",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -192,31 +180,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 3135,
-                  "width": 2268,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v4",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 3135,
+                "width": 2268,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/9ee11092dfd2782634f5e8e2c87c16d5-uclamss_1841_diary_07_05",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v4",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

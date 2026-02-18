@@ -38,25 +38,21 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/30-minute-clock/medium/30-minute-clock.mp4",
-                  "type": "Video",
-                  "format": "video/mp4",
-                  "duration": 1801.055
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/30-minute-clock/medium/30-minute-clock.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "duration": 1801.055
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+                  "type": "Canvas",
+                  "width": 640,
+                  "height": 360
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
-                    "type": "Canvas",
-                    "width": 640,
-                    "height": 360
-                  }
-                }
-              ]
+              }
             }
           ]
         }

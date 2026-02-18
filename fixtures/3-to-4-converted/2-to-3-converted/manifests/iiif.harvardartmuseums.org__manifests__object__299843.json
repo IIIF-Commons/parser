@@ -176,31 +176,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://ids.lib.harvard.edu/ids/iiif/47174896/full/full/0/native.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 2550,
-                  "width": 2087,
-                  "service": [
-                    {
-                      "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                      "id": "https://ids.lib.harvard.edu/ids/iiif/47174896",
-                      "type": "ImageService1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-47174896",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://ids.lib.harvard.edu/ids/iiif/47174896/full/full/0/native.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2550,
+                "width": 2087,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/47174896",
+                    "type": "ImageService1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-47174896",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -234,31 +230,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://ids.lib.harvard.edu/ids/iiif/18737483/full/full/0/native.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 2550,
-                  "width": 2088,
-                  "service": [
-                    {
-                      "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                      "id": "https://ids.lib.harvard.edu/ids/iiif/18737483",
-                      "type": "ImageService1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-18737483",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://ids.lib.harvard.edu/ids/iiif/18737483/full/full/0/native.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2550,
+                "width": 2088,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/18737483",
+                    "type": "ImageService1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-18737483",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -292,31 +284,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://ids.lib.harvard.edu/ids/iiif/47174892/full/full/0/native.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 2550,
-                  "width": 2259,
-                  "service": [
-                    {
-                      "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                      "id": "https://ids.lib.harvard.edu/ids/iiif/47174892",
-                      "type": "ImageService1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-47174892",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://ids.lib.harvard.edu/ids/iiif/47174892/full/full/0/native.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2550,
+                "width": 2259,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/47174892",
+                    "type": "ImageService1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-47174892",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -350,31 +338,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://ids.lib.harvard.edu/ids/iiif/43182083/full/full/0/native.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 2550,
-                  "width": 2100,
-                  "service": [
-                    {
-                      "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                      "id": "https://ids.lib.harvard.edu/ids/iiif/43182083",
-                      "type": "ImageService1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43182083",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://ids.lib.harvard.edu/ids/iiif/43182083/full/full/0/native.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2550,
+                "width": 2100,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/43182083",
+                    "type": "ImageService1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43182083",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -408,31 +392,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://ids.lib.harvard.edu/ids/iiif/43183405/full/full/0/native.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 2550,
-                  "width": 2082,
-                  "service": [
-                    {
-                      "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                      "id": "https://ids.lib.harvard.edu/ids/iiif/43183405",
-                      "type": "ImageService1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43183405",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://ids.lib.harvard.edu/ids/iiif/43183405/full/full/0/native.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2550,
+                "width": 2082,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/43183405",
+                    "type": "ImageService1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43183405",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -466,31 +446,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://ids.lib.harvard.edu/ids/iiif/43183422/full/full/0/native.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 2550,
-                  "width": 2093,
-                  "service": [
-                    {
-                      "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
-                      "id": "https://ids.lib.harvard.edu/ids/iiif/43183422",
-                      "type": "ImageService1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43183422",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://ids.lib.harvard.edu/ids/iiif/43183422/full/full/0/native.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2550,
+                "width": 2093,
+                "service": [
+                  {
+                    "profile": "http://library.stanford.edu/iiif/image-api/1.1/conformance.html#level1",
+                    "id": "https://ids.lib.harvard.edu/ids/iiif/43183422",
+                    "type": "ImageService1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43183422",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

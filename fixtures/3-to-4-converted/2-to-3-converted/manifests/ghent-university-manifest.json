@@ -203,36 +203,32 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/full/full/0/native.jpg",
-                  "type": "Image",
-                  "label": {
-                    "@none": [
-                      "BHSL-PAP-000044_2010_0001_AC.jp2"
-                    ]
-                  },
-                  "format": "image/jpeg",
-                  "height": 15076,
-                  "width": 6215,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1",
-                      "type": "ImageService2"
-                    }
+              "body": {
+                "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/full/full/0/native.jpg",
+                "type": "Image",
+                "label": {
+                  "@none": [
+                    "BHSL-PAP-000044_2010_0001_AC.jp2"
                   ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
-                    "type": "Canvas"
+                },
+                "format": "image/jpeg",
+                "height": 15076,
+                "width": 6215,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -291,36 +287,32 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/full/full/0/native.jpg",
-                  "type": "Image",
-                  "label": {
-                    "@none": [
-                      "BHSL-PAP-000044_2010_0002_AC.jp2"
-                    ]
-                  },
-                  "format": "image/jpeg",
-                  "height": 15036,
-                  "width": 6235,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3",
-                      "type": "ImageService2"
-                    }
+              "body": {
+                "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/full/full/0/native.jpg",
+                "type": "Image",
+                "label": {
+                  "@none": [
+                    "BHSL-PAP-000044_2010_0002_AC.jp2"
                   ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
-                    "type": "Canvas"
+                },
+                "format": "image/jpeg",
+                "height": 15036,
+                "width": 6235,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

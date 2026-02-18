@@ -41,42 +41,40 @@
               "motivation": [
                 "supplementing"
               ],
-              "body": [
-                {
-                  "type": "Choice",
-                  "items": [
-                    {
-                      "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_en.vtt",
-                      "type": "Text",
-                      "label": {
-                        "en": [
-                          "Captions in WebVTT format"
-                        ]
-                      },
-                      "format": "text/vtt"
+              "body": {
+                "type": "Choice",
+                "items": [
+                  {
+                    "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_en.vtt",
+                    "type": "Text",
+                    "label": {
+                      "en": [
+                        "Captions in WebVTT format"
+                      ]
                     },
-                    {
-                      "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_it.vtt",
-                      "type": "Text",
-                      "label": {
-                        "it": [
-                          "Sottotitoli in formato WebVTT"
-                        ]
-                      },
-                      "format": "text/vtt"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
-                    "type": "Canvas"
+                    "format": "text/vtt",
+                    "language": "en"
+                  },
+                  {
+                    "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_it.vtt",
+                    "type": "Text",
+                    "label": {
+                      "it": [
+                        "Sottotitoli in formato WebVTT"
+                      ]
+                    },
+                    "format": "text/vtt",
+                    "language": "it"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -92,25 +90,21 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/europeana/Per_voi_signore_Modelli_francesi.mp4",
-                  "type": "Video",
-                  "format": "video/mp4",
-                  "height": 384,
-                  "width": 288,
-                  "duration": 65
+              "body": {
+                "id": "https://fixtures.iiif.io/video/europeana/Per_voi_signore_Modelli_francesi.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "height": 384,
+                "width": 288,
+                "duration": 65
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
+                  "type": "Canvas"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas",
-                    "type": "Canvas"
-                  }
-                }
-              ]
+              }
             }
           ]
         }

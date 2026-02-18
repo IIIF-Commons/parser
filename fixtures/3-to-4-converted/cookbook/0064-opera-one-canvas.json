@@ -60,29 +60,25 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4",
-                  "type": "Video",
-                  "format": "video/mp4",
-                  "height": 1080,
-                  "width": 1920,
-                  "duration": 3971.24
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "height": 1080,
+                "width": 1920,
+                "duration": 3971.24
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "value": "t=0,3971.24"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1",
-                    "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "FragmentSelector",
-                    "value": "t=0,3971.24"
-                  }
-                }
-              ]
+              }
             },
             {
               "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/2",
@@ -90,29 +86,25 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
-                  "type": "Video",
-                  "format": "video/mp4",
-                  "height": 1080,
-                  "width": 1920,
-                  "duration": 3307.22
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "height": 1080,
+                "width": 1920,
+                "duration": 3307.22
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1",
+                  "type": "Canvas"
+                },
+                "selector": {
+                  "type": "FragmentSelector",
+                  "value": "t=3971.24"
                 }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1",
-                    "type": "Canvas"
-                  },
-                  "selector": {
-                    "type": "FragmentSelector",
-                    "value": "t=3971.24"
-                  }
-                }
-              ]
+              }
             }
           ]
         }

@@ -33,31 +33,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 4429,
-                  "width": 2533,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/1",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4429,
+                "width": 2533,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-1_frontcover",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/1",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -85,31 +81,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 4315,
-                  "width": 2490,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4315,
+                "width": 2490,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-2_insidefrontcover",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -137,31 +129,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 4278,
-                  "width": 2197,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/3",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4278,
+                "width": 2197,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-folded",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/3",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -192,31 +180,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1968,
-                  "width": 3688,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/4",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1968,
+                "width": 3688,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-4_foldout",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/4",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -244,31 +228,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 1968,
-                  "width": 3688,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/5",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1968,
+                "width": 3688,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-3_foldout-rotated",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/5",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -296,31 +276,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 4315,
-                  "width": 2490,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/6",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4315,
+                "width": 2490,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-5_titlepage",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/6",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -348,31 +324,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 4315,
-                  "width": 2490,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/7",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4315,
+                "width": 2490,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-6_titlepage-recto",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/7",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -400,31 +372,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 4315,
-                  "width": 2490,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/8",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4315,
+                "width": 2490,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-8_insidebackcover",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/8",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -452,31 +420,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover/full/max/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 4315,
-                  "width": 2490,
-                  "service": [
-                    {
-                      "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover",
-                      "type": "ImageService3",
-                      "profile": "level1"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/9",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4315,
+                "width": 2490,
+                "service": [
+                  {
+                    "id": "https://iiif.io/api/image/3.0/example/reference/0a469c27256eda739d43124cc448a3ba-9_backcover",
+                    "type": "ImageService3",
+                    "profile": "level1"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/9",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

@@ -193,31 +193,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 5001,
-                  "width": 7022,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p1",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 5001,
+                "width": 7022,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00001",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p1",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -298,31 +294,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8926,
-                  "width": 6453,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p2",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8926,
+                "width": 6453,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00002",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p2",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -403,31 +395,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8874,
-                  "width": 6504,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p3",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8874,
+                "width": 6504,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00003",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p3",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -508,31 +496,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8866,
-                  "width": 12873,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p4",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8866,
+                "width": 12873,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00004",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p4",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -613,31 +597,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8911,
-                  "width": 12538,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p5",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8911,
+                "width": 12538,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00005",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p5",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -718,31 +698,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8968,
-                  "width": 12921,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p6",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8968,
+                "width": 12921,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00006",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p6",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -823,31 +799,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8936,
-                  "width": 12909,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p7",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8936,
+                "width": 12909,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00007",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p7",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -928,31 +900,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8914,
-                  "width": 12546,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p8",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8914,
+                "width": 12546,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00008",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p8",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1033,31 +1001,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8903,
-                  "width": 12541,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p9",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8903,
+                "width": 12541,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00009",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p9",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1138,31 +1102,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8864,
-                  "width": 12908,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p10",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8864,
+                "width": 12908,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00010",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p10",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1243,31 +1203,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 8865,
-                  "width": 6539,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p11",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 8865,
+                "width": 6539,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00011",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p11",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }
@@ -1348,31 +1304,27 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012/full/full/0/default.jpg",
-                  "type": "Image",
-                  "format": "image/jpeg",
-                  "height": 5053,
-                  "width": 7105,
-                  "service": [
-                    {
-                      "profile": "http://iiif.io/api/image/2/level1.json",
-                      "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012",
-                      "type": "ImageService2"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p12",
-                    "type": "Canvas"
+              "body": {
+                "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 5053,
+                "width": 7105,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level1.json",
+                    "id": "https://lbiiif.riksarkivet.se/arkis!R0000004_00012",
+                    "type": "ImageService2"
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://lbiiif.riksarkivet.se/arkis!R0000004/canvas/p12",
+                  "type": "Canvas"
                 }
-              ]
+              }
             }
           ]
         }

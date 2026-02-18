@@ -29,88 +29,84 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "type": "Choice",
-                  "items": [
-                    {
-                      "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.m4a",
-                      "type": "Sound",
-                      "label": {
-                        "en": [
-                          "ALAC"
-                        ]
-                      },
-                      "format": "audio/alac",
-                      "duration": 16
+              "body": {
+                "type": "Choice",
+                "items": [
+                  {
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.m4a",
+                    "type": "Sound",
+                    "label": {
+                      "en": [
+                        "ALAC"
+                      ]
                     },
-                    {
-                      "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mp3",
-                      "type": "Sound",
-                      "label": {
-                        "en": [
-                          "MP3"
-                        ]
-                      },
-                      "format": "audio/mpeg",
-                      "duration": 16
+                    "format": "audio/alac",
+                    "duration": 16
+                  },
+                  {
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mp3",
+                    "type": "Sound",
+                    "label": {
+                      "en": [
+                        "MP3"
+                      ]
                     },
-                    {
-                      "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.flac",
-                      "type": "Sound",
-                      "label": {
-                        "en": [
-                          "FLAC"
-                        ]
-                      },
-                      "format": "audio/flac",
-                      "duration": 16
+                    "format": "audio/mpeg",
+                    "duration": 16
+                  },
+                  {
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.flac",
+                    "type": "Sound",
+                    "label": {
+                      "en": [
+                        "FLAC"
+                      ]
                     },
-                    {
-                      "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.ogg",
-                      "type": "Sound",
-                      "label": {
-                        "en": [
-                          "OGG Vorbis OGG"
-                        ]
-                      },
-                      "format": "audio/ogg",
-                      "duration": 16
+                    "format": "audio/flac",
+                    "duration": 16
+                  },
+                  {
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.ogg",
+                    "type": "Sound",
+                    "label": {
+                      "en": [
+                        "OGG Vorbis OGG"
+                      ]
                     },
-                    {
-                      "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mpeg",
-                      "type": "Sound",
-                      "label": {
-                        "en": [
-                          "MPEG2"
-                        ]
-                      },
-                      "format": "audio/mpeg",
-                      "duration": 16
+                    "format": "audio/ogg",
+                    "duration": 16
+                  },
+                  {
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.mpeg",
+                    "type": "Sound",
+                    "label": {
+                      "en": [
+                        "MPEG2"
+                      ]
                     },
-                    {
-                      "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.wav",
-                      "type": "Sound",
-                      "label": {
-                        "en": [
-                          "WAV"
-                        ]
-                      },
-                      "format": "audio/wav",
-                      "duration": 16
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "source": {
-                    "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
-                    "type": "Timeline"
+                    "format": "audio/mpeg",
+                    "duration": 16
+                  },
+                  {
+                    "id": "https://fixtures.iiif.io/audio/ucla/egbe-iyawo-ucla.wav",
+                    "type": "Sound",
+                    "label": {
+                      "en": [
+                        "WAV"
+                      ]
+                    },
+                    "format": "audio/wav",
+                    "duration": 16
                   }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/canvas/1",
+                  "type": "Timeline"
                 }
-              ]
+              }
             }
           ]
         }
