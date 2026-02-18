@@ -173,6 +173,7 @@
 		"update-cookbook-v4": "node scripts/update-cookbook-v4.mjs",
 		"reserialize-p4-fixtures": "node scripts/reserialize-p4-fixtures.mjs",
 		"convert-p3-to-p4": "node scripts/convert-p3-manifests-to-p4.mjs",
+		"extract:service-examples": "node scripts/extract-service-examples.mjs --scope all",
 		"validate:p4:fixtures": "bun run src/cli.ts validate-p4 fixtures/presentation-4 fixtures/cookbook-v4",
 		"prepack": "tsdown && tsdown --config tsdown.umd.ts && tsdown --config tsdown.cli.ts",
 		"lint": "publint"

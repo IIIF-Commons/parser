@@ -247,6 +247,60 @@ describe("presentation-4 validator", () => {
     expect(report.issues.some((issue) => issue.code === "annotation-target-entry-object")).toBe(true);
   });
 
+  test("coerces PointSelector.t to instant during validation upgrade pass", () => {
+    const fixture = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/point-selector-t",
+      type: "Manifest",
+      label: { en: ["point selector t"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/canvas/1/anno/1",
+                  type: "Annotation",
+                  motivation: ["painting"],
+                  body: {
+                    id: "https://example.org/image/1.jpg",
+                    type: "Image",
+                    format: "image/jpeg",
+                  },
+                  target: {
+                    type: "SpecificResource",
+                    source: {
+                      id: "https://example.org/canvas/1",
+                      type: "Canvas",
+                    },
+                    selector: {
+                      type: "PointSelector",
+                      x: 10,
+                      y: 20,
+                      t: 1.25,
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(fixture);
+    expect(report.valid).toBe(true);
+    expect(
+      report.issues.some((issue) => issue.code === "class-property-not-allowed" && issue.path.endsWith(".t"))
+    ).toBe(false);
+  });
+
   test("does not require canvas dimensions on annotation target specific resource source references", () => {
     const manifest = {
       "@context": "http://iiif.io/api/presentation/4/context.json",

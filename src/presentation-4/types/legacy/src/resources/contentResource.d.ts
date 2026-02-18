@@ -24,12 +24,38 @@ export type MetadataItem =
       value: { [language: string]: Array<string | number> };
     };
 export type OneOrMany<T> = T | T[];
+export type ServiceProfileDetails = {
+  "@context"?: string;
+  "@type"?: "iiif:ImageProfile";
+  type?: "ImageProfile";
+  formats?: string[];
+  qualities?: string[];
+  supports?: string[];
+  maxArea?: number;
+  maxHeight?: number;
+  maxWidth?: number;
+};
+export type ServiceProfile = string | ServiceProfileDetails;
+export type ServiceProfileValue = ServiceProfile | ServiceProfile[];
+export type ServiceSize = {
+  type?: "Size";
+  width: number;
+  height: number;
+};
+export type ServiceTile = {
+  type?: "Tile";
+  scaleFactors: number[];
+  width: number;
+  height?: number;
+  maxWidth?: number;
+  maxHeight?: number;
+};
 
 export type ResourceReference<TType extends string = string> = Prettify<
   Reference<TType> & {
     label?: LanguageMap | string | null;
     summary?: LanguageMap | null;
-    profile?: string | string[] | Record<string, unknown>;
+    profile?: ServiceProfileValue;
     format?: string;
     height?: number;
     width?: number;
@@ -45,23 +71,30 @@ export type ResourceReference<TType extends string = string> = Prettify<
 export type ServiceReference = {
   id?: string;
   "@id"?: string;
+  "@context"?: string | string[];
   type?: string;
   "@type"?: string;
-  profile?: string | Array<string, Record<string, unknown>> | Record<string, unknown>;
+  profile?: ServiceProfileValue;
   label?: LanguageMap | string;
+  format?: string;
+  protocol?: string;
+  width?: number;
+  height?: number;
+  sizes?: ServiceSize[];
+  tiles?: ServiceTile[];
+  physicalScale?: number;
+  physicalUnits?: string;
+  extraFormats?: string[];
+  extraQualities?: string[];
+  header?: LanguageMap | string;
+  description?: LanguageMap | string;
   service?: OneOrMany<ServiceReference>;
   services?: OneOrMany<ServiceReference>;
-  format?: string;
-  [key: string]: unknown;
 };
 
 export type ServiceLike = ServiceReference | string;
-export type LinkedAnnotationBody = ContentResourceLike | SpecificResource | ResourceReference | Record<string, unknown>;
-export type LinkedAnnotationTarget =
-  | ContentResourceLike
-  | SpecificResource
-  | ResourceReference
-  | Record<string, unknown>;
+export type LinkedAnnotationBody = ContentResourceLike | SpecificResource | ResourceReference;
+export type LinkedAnnotationTarget = ContentResourceLike | SpecificResource | ResourceReference;
 export type LinkedAnnotationList<T> = {
   type: "List";
   items: T[];
@@ -83,7 +116,7 @@ export type AgentLike = {
   seeAlso?: OneOrMany<LinkedResource>;
   summary?: LanguageMap;
   service?: OneOrMany<ServiceLike>;
-  profile?: string | string[] | Record<string, unknown>;
+  profile?: ServiceProfileValue;
 };
 
 export type Agent = {
@@ -102,7 +135,7 @@ export type ContentResourceBase = Prettify<
     "@id"?: string;
     type?: string;
     "@type"?: string;
-    profile?: string | string[] | Record<string, unknown>;
+    profile?: ServiceProfileValue;
     label?: LanguageMap | string | null;
     language?: OneOrMany<string>;
     provider?: OneOrMany<AgentLike | ResourceReference<"Agent">>;
@@ -136,14 +169,14 @@ export type ImageResource = Prettify<
     height: number;
     width: number;
   }
-> & { [key: string]: unknown };
+>;
 
 export type AudioResource = Prettify<
   Omit<ContentResourceBase, "type" | "duration"> & {
     type: "Audio" | "Sound";
     duration: number;
   }
-> & { [key: string]: unknown };
+>;
 
 export type VideoResource = Prettify<
   Omit<ContentResourceBase, "type" | "duration" | "height" | "width"> & {
@@ -152,15 +185,11 @@ export type VideoResource = Prettify<
     height: number;
     width: number;
   }
-> & { [key: string]: unknown };
+>;
 
-export type ModelResource = Prettify<Omit<ContentResourceBase, "type"> & { type: "Model" }> & {
-  [key: string]: unknown;
-};
-export type TextResource = Prettify<Omit<ContentResourceBase, "type"> & { type: "Text" }> & { [key: string]: unknown };
-export type DatasetResource = Prettify<Omit<ContentResourceBase, "type"> & { type: "Dataset" }> & {
-  [key: string]: unknown;
-};
+export type ModelResource = Prettify<Omit<ContentResourceBase, "type"> & { type: "Model" }>;
+export type TextResource = Prettify<Omit<ContentResourceBase, "type"> & { type: "Text" }>;
+export type DatasetResource = Prettify<Omit<ContentResourceBase, "type"> & { type: "Dataset" }>;
 
 export type TextualBodyResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
@@ -168,7 +197,7 @@ export type TextualBodyResource = Prettify<
     value: string;
     purpose?: OneOrMany<AnyMotivation | string>;
   }
-> & { [key: string]: unknown };
+>;
 
 export type ChoiceResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
@@ -176,28 +205,28 @@ export type ChoiceResource = Prettify<
     items: OneOrMany<LinkedResource>;
     default?: LinkedResource;
   }
-> & { [key: string]: unknown };
+>;
 
 export type CompositeResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "Composite";
     items: OneOrMany<LinkedResource>;
   }
-> & { [key: string]: unknown };
+>;
 
 export type ListResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "List";
     items: OneOrMany<LinkedResource>;
   }
-> & { [key: string]: unknown };
+>;
 
 export type IndependentsResource = Prettify<
   Omit<ContentResourceBase, "type"> & {
     type: "Independents";
     items: OneOrMany<LinkedResource>;
   }
-> & { [key: string]: unknown };
+>;
 
 export type SpecificResource = Prettify<
   Omit<SpecificResourceV3, "source" | "selector" | "purpose" | "scope"> & {
@@ -210,9 +239,8 @@ export type SpecificResource = Prettify<
     action?: OneOrMany<LinkedResource>;
     purpose?: OneOrMany<AnyMotivation | string>;
     scope?: OneOrMany<ResourceReference | string>;
-    [key: string]: unknown;
   }
-> & { [key: string]: unknown };
+>;
 
 export type StartContainerReference = ResourceReference<"Canvas" | "Scene" | "Timeline">;
 

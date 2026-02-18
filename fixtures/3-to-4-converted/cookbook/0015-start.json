@@ -70,7 +70,7 @@
     },
     "selector": {
       "type": "PointSelector",
-      "t": 120.5
+      "instant": 120.5
     }
   }
 }

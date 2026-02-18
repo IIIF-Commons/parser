@@ -1,18 +1,29 @@
 import type { Service as ServiceV3 } from "../../../../../presentation-3/types/legacy/src/resources/service";
 import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
-import type { LanguageMap, OneOrMany } from "./contentResource";
+import type { LanguageMap, OneOrMany, ServiceProfileValue, ServiceSize, ServiceTile } from "./contentResource";
 
 export type ServiceReference = {
   id?: string;
   "@id"?: string;
+  "@context"?: string | string[];
   type?: string;
   "@type"?: string;
-  profile?: string | string[] | Record<string, unknown>;
+  profile?: ServiceProfileValue;
   label?: LanguageMap | string;
+  format?: string;
+  protocol?: string;
+  width?: number;
+  height?: number;
+  sizes?: ServiceSize[];
+  tiles?: ServiceTile[];
+  physicalScale?: number;
+  physicalUnits?: string;
+  extraFormats?: string[];
+  extraQualities?: string[];
+  header?: LanguageMap | string;
+  description?: LanguageMap | string;
   service?: OneOrMany<ServiceReference>;
   services?: OneOrMany<ServiceReference>;
-  format?: string;
-  [key: string]: unknown;
 };
 
 export type GenericService = Prettify<
@@ -21,11 +32,23 @@ export type GenericService = Prettify<
     "@id"?: string;
     type: string;
     "@type"?: string;
-    profile?: string | string[] | Record<string, unknown>;
+    "@context"?: string | string[];
+    profile?: ServiceProfileValue;
     label?: LanguageMap | string;
+    format?: string;
+    protocol?: string;
+    width?: number;
+    height?: number;
+    sizes?: ServiceSize[];
+    tiles?: ServiceTile[];
+    physicalScale?: number;
+    physicalUnits?: string;
+    extraFormats?: string[];
+    extraQualities?: string[];
+    header?: LanguageMap | string;
+    description?: LanguageMap | string;
     service?: OneOrMany<GenericService>;
     services?: OneOrMany<GenericService>;
-    [key: string]: unknown;
   }
 >;
 

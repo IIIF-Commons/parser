@@ -1,4 +1,11 @@
-import type { Annotation, AnnotationCollection, CollectionPage, Manifest } from "../../src/presentation-4/types";
+import type {
+  Annotation,
+  AnnotationCollection,
+  CollectionPage,
+  ImageResource,
+  Manifest,
+  ServiceReference,
+} from "../../src/presentation-4/types";
 
 const validManifest = {
   id: "https://example.org/manifest/1",
@@ -128,3 +135,42 @@ const annotationWithArrayBodyAndTarget = {
 } satisfies Annotation;
 
 void annotationWithArrayBodyAndTarget;
+
+const imageWithUnknownProperty = {
+  id: "https://example.org/image/1",
+  type: "Image",
+  format: "image/jpeg",
+  height: 100,
+  width: 100,
+  // @ts-expect-error unknown properties must be rejected
+  arbitrary: true,
+} satisfies ImageResource;
+
+void imageWithUnknownProperty;
+
+const serviceWithUnknownProperty = {
+  id: "https://example.org/service/1",
+  type: "ImageService3",
+  profile: "level1",
+  // @ts-expect-error unknown properties must be rejected
+  arbitrary: true,
+} satisfies ServiceReference;
+
+void serviceWithUnknownProperty;
+
+const validServiceWithObjectProfile = {
+  id: "https://example.org/service/2",
+  type: "ImageService3",
+  profile: { supports: ["regionByPx"] },
+} satisfies ServiceReference;
+
+void validServiceWithObjectProfile;
+
+const serviceWithInvalidObjectProfile = {
+  id: "https://example.org/service/3",
+  type: "ImageService3",
+  // @ts-expect-error profile object keys must match known service profile fields
+  profile: { level: "1" },
+} satisfies ServiceReference;
+
+void serviceWithInvalidObjectProfile;
