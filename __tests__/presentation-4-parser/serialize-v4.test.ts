@@ -160,4 +160,122 @@ describe("presentation-4 serializer", () => {
     expect(partOfCollection.type).toBe("Collection");
     expect(partOfCollection.viewingDirection).toBeUndefined();
   });
+
+  test("serializes manifest start container as a reference object", () => {
+    const fixture = JSON.parse(readFileSync(join(cwd(), "fixtures/presentation-3/start-canvas.json"), "utf8"));
+    const normalized = normalize(fixture);
+
+    const serialized = serialize<any>(
+      {
+        entities: normalized.entities as any,
+        mapping: normalized.mapping as any,
+        requests: {},
+      },
+      normalized.resource,
+      serializeConfigPresentation4
+    );
+
+    expect(serialized.start).toEqual({
+      id: "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
+      type: "Canvas",
+    });
+    expect(serialized.start.items).toBeUndefined();
+  });
+
+  test("serializes range start container as a reference object", () => {
+    const fixture = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/range-start",
+      type: "Manifest",
+      label: { en: ["Range start"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [],
+        },
+      ],
+      structures: [
+        {
+          id: "https://example.org/range/1",
+          type: "Range",
+          start: {
+            id: "https://example.org/canvas/1",
+            type: "Canvas",
+          },
+        },
+      ],
+    };
+    const normalized = normalize(fixture as any);
+
+    const serialized = serialize<any>(
+      {
+        entities: normalized.entities as any,
+        mapping: normalized.mapping as any,
+        requests: {},
+      },
+      normalized.resource,
+      serializeConfigPresentation4
+    );
+
+    expect(serialized.structures[0].start).toEqual({
+      id: "https://example.org/canvas/1",
+      type: "Canvas",
+    });
+    expect(serialized.structures[0].start.items).toBeUndefined();
+  });
+
+  test("serializes manifest start specific resource with source reference only", () => {
+    const fixture = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/start-specific-resource",
+      type: "Manifest",
+      label: { en: ["Start specific resource"] },
+      start: {
+        id: "https://example.org/manifest/start-specific-resource/segment/1",
+        type: "SpecificResource",
+        source: {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [],
+        },
+        selector: {
+          type: "PointSelector",
+          x: 10,
+          y: 20,
+        },
+      },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [],
+        },
+      ],
+    };
+    const normalized = normalize(fixture as any);
+
+    const serialized = serialize<any>(
+      {
+        entities: normalized.entities as any,
+        mapping: normalized.mapping as any,
+        requests: {},
+      },
+      normalized.resource,
+      serializeConfigPresentation4
+    );
+
+    expect(serialized.start.type).toBe("SpecificResource");
+    expect(serialized.start.source).toEqual({
+      id: "https://example.org/canvas/1",
+      type: "Canvas",
+    });
+    expect(serialized.start.source.items).toBeUndefined();
+  });
 });

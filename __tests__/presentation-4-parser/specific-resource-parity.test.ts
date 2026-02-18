@@ -141,7 +141,7 @@ describe("presentation-4 specific resource parity", () => {
       normalized.resource,
       serializeConfigPresentation4
     );
-    const serializedTarget = serialized.items[0].items[0].items[0].target[0];
+    const serializedTarget = serialized.items[0].items[0].items[0].target;
     const serializedSelector = Array.isArray(serializedTarget.selector)
       ? serializedTarget.selector[0]
       : serializedTarget.selector;
