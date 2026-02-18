@@ -3,6 +3,6 @@ import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/techni
 export type AnnotationNormalized = NormalizedLinkedEntity & {
   type: "Annotation";
   motivation: readonly string[];
-  body?: readonly NormalizedReference[];
-  target: readonly NormalizedReference[];
+  body: NormalizedReference | null;
+  target: NormalizedReference;
 };

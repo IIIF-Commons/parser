@@ -9,9 +9,9 @@ import type {
 export type SpecificResourceNormalized = NormalizedEntityBase & {
   id: string;
   type: "SpecificResource";
-  source: NormalizedReference | readonly NormalizedReference[];
-  selector: Selector | readonly Selector[];
-  transform: Transform | readonly Transform[];
+  source: NormalizedReference;
+  selector: readonly Selector[];
+  transform: readonly Transform[];
   action: readonly NormalizedJsonValue[];
   styleClass?: string;
 };

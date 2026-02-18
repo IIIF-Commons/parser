@@ -336,9 +336,27 @@ function ensureDefaultFields<T, R>(defaultResource: R) {
   };
 }
 
+const emptyAnnotationDefaults = {
+  ...emptyAnnotation,
+  body: undefined,
+  target: undefined,
+};
+
 function addFlagForExternalResource<T extends { items?: unknown }>(resource: T): T {
   if (resource && typeof resource === "object" && typeof resource.items === "undefined") {
     (resource as any)["iiif-parser:isExternal"] = true;
+  }
+  return resource;
+}
+
+function ensureRangeSupplementaryArray<T extends { supplementary?: unknown }>(resource: T): T {
+  if (resource && typeof resource === "object") {
+    const supplementary = (resource as any).supplementary;
+    (resource as any).supplementary = Array.isArray(supplementary)
+      ? supplementary
+      : supplementary
+        ? [supplementary]
+        : [];
   }
   return resource;
 }
@@ -433,10 +451,10 @@ export function normalize(input: unknown): NormalizeResult {
 
   const specificResourceTraversals: Array<(resource: any, context: TraversalContext) => any> = [
     withId("SpecificResource", diagnostics),
+    ensureDefaultFields(emptySpecificResource),
+    map("SpecificResource"),
+    record("SpecificResource"),
   ];
-  if (!isLegacySource) {
-    specificResourceTraversals.push(ensureDefaultFields(emptySpecificResource));
-  }
 
   const traversal = new Traverse(
     {
@@ -482,7 +500,7 @@ export function normalize(input: unknown): NormalizeResult {
       ],
       annotation: [
         withId("Annotation", diagnostics),
-        ...(isLegacySource ? [] : [ensureDefaultFields(emptyAnnotation)]),
+        ensureDefaultFields(emptyAnnotationDefaults),
         map("Annotation"),
         record("Annotation"),
       ],
@@ -490,6 +508,7 @@ export function normalize(input: unknown): NormalizeResult {
       range: [
         withId("Range", diagnostics),
         ensureDefaultFields((isLegacySource ? legacyEmptyRange : emptyRange) as any),
+        ensureRangeSupplementaryArray,
         map("Range"),
         record("Range"),
       ],

@@ -49,33 +49,27 @@ describe("presentation-4 specific resource parity", () => {
     const normalizedManifest = result.entities.Manifest["https://example.org/manifest/p3-upgrade"] as any;
     const normalizedRange = result.entities.Range["https://example.org/range/1"] as any;
     const normalizedAnnotation = result.entities.Annotation["https://example.org/canvas/1/annotation/1"] as any;
-    const normalizedTarget = Array.isArray(normalizedAnnotation.target)
-      ? normalizedAnnotation.target[0]
-      : normalizedAnnotation.target;
-    const startSelector = Array.isArray(normalizedManifest.start.selector)
-      ? normalizedManifest.start.selector[0]
-      : normalizedManifest.start.selector;
-    const rangeSelector = Array.isArray(normalizedRange.items[0].selector)
-      ? normalizedRange.items[0].selector[0]
-      : normalizedRange.items[0].selector;
-    const targetSelector = Array.isArray(normalizedTarget.selector)
-      ? normalizedTarget.selector[0]
-      : normalizedTarget.selector;
+    const normalizedStart = result.entities.ContentResource[normalizedManifest.start.id] as any;
+    const normalizedRangeItem = result.entities.ContentResource[normalizedRange.items[0].id] as any;
+    const normalizedTarget = result.entities.ContentResource[normalizedAnnotation.target.id] as any;
+    const startSelector = normalizedStart.selector[0];
+    const rangeSelector = normalizedRangeItem.selector[0];
+    const targetSelector = normalizedTarget.selector[0];
 
-    expect(normalizedManifest.start.type).toBe("SpecificResource");
+    expect(normalizedManifest.start.type).toBe("ContentResource");
     expect(normalizedManifest.start.id.startsWith("vault://iiif-parser/v4/SpecificResource/")).toBe(true);
-    expect(normalizedManifest.start.source.id).toBe("https://example.org/canvas/1");
+    expect(normalizedStart.source.id).toBe("https://example.org/canvas/1");
     expect(startSelector.type).toBe("FragmentSelector");
     expect(startSelector.value).toBe("t=5,15");
 
-    expect(normalizedRange.items[0].type).toBe("SpecificResource");
+    expect(normalizedRange.items[0].type).toBe("ContentResource");
     expect(normalizedRange.items[0].id.startsWith("vault://iiif-parser/v4/SpecificResource/")).toBe(true);
-    expect(normalizedRange.items[0].source.id).toBe("https://example.org/canvas/1");
+    expect(normalizedRangeItem.source.id).toBe("https://example.org/canvas/1");
     expect(rangeSelector.type).toBe("FragmentSelector");
     expect(rangeSelector.value).toBe("t=0,10");
 
-    expect(normalizedTarget.type).toBe("SpecificResource");
-    expect(normalizedTarget.id.startsWith("vault://iiif-parser/v4/SpecificResource/")).toBe(true);
+    expect(normalizedAnnotation.target.type).toBe("ContentResource");
+    expect(normalizedAnnotation.target.id.startsWith("vault://iiif-parser/v4/SpecificResource/")).toBe(true);
     expect(normalizedTarget.source.id).toBe("https://example.org/canvas/1");
     expect(targetSelector.type).toBe("FragmentSelector");
     expect(targetSelector.value).toBe("xywh=10,20,30,40");
@@ -144,10 +138,10 @@ describe("presentation-4 specific resource parity", () => {
 
     const normalized = normalize(manifest as any);
     const annotation = normalized.entities.Annotation["https://example.org/canvas/1/annotation/1"] as any;
-    const target = annotation.target[0];
-    const targetSelector = Array.isArray(target.selector) ? target.selector[0] : target.selector;
+    const target = normalized.entities.ContentResource[annotation.target.id] as any;
+    const targetSelector = target.selector[0];
 
-    expect(target.type).toBe("SpecificResource");
+    expect(annotation.target.type).toBe("ContentResource");
     expect(target.source.id).toBe("https://example.org/canvas/1");
     expect(targetSelector.type).toBe("FragmentSelector");
     expect(targetSelector.value).toBe("xywh=11,22,33,44");
@@ -170,5 +164,56 @@ describe("presentation-4 specific resource parity", () => {
     expect(serializedTarget.source.id).toBe("https://example.org/canvas/1");
     expect(serializedSelector.type).toBe("FragmentSelector");
     expect(serializedSelector.value).toBe("xywh=11,22,33,44");
+  });
+
+  test("keeps only the first SpecificResource.source entry when source is an array", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/first-source-only",
+      type: "Manifest",
+      label: { en: ["source array normalization"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/canvas/1/annotation/1",
+                  type: "Annotation",
+                  motivation: ["painting"],
+                  body: {
+                    id: "https://example.org/image/1.jpg",
+                    type: "Image",
+                    format: "image/jpeg",
+                  },
+                  target: {
+                    id: "https://example.org/canvas/1/sr/1",
+                    type: "SpecificResource",
+                    source: [
+                      { id: "https://example.org/canvas/1", type: "Canvas" },
+                      { id: "https://example.org/canvas/2", type: "Canvas" },
+                    ],
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const normalized = normalize(manifest as any);
+    const annotation = normalized.entities.Annotation["https://example.org/canvas/1/annotation/1"] as any;
+    const target = normalized.entities.ContentResource[annotation.target.id] as any;
+
+    expect(target.source.id).toBe("https://example.org/canvas/1");
+    expect(target.source.type).toBe("Canvas");
+    expect(Array.isArray(target.source)).toBe(false);
   });
 });

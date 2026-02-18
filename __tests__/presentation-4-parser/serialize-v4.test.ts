@@ -32,11 +32,6 @@ describe("presentation-4 serializer", () => {
   test("serializes annotation body/target as objects by default", () => {
     const fixture = JSON.parse(readFileSync(join(cwd(), "fixtures/presentation-4/01-model-in-scene.json"), "utf8"));
     const normalized = normalize(fixture);
-    const annotationId = "https://example.org/iiif/3d/anno1";
-    const annotation = normalized.entities.Annotation[annotationId] as any;
-
-    annotation.body = annotation.body[0];
-    annotation.target = annotation.target[0];
 
     const serialized = serialize<any>(
       {
@@ -61,8 +56,8 @@ describe("presentation-4 serializer", () => {
     const annotationId = "https://example.org/iiif/3d/anno1";
     const annotation = normalized.entities.Annotation[annotationId] as any;
 
-    annotation.body = [annotation.body[0], annotation.body[0]];
-    annotation.target = [annotation.target[0], annotation.target[0]];
+    annotation.body = [annotation.body, annotation.body];
+    annotation.target = [annotation.target, annotation.target];
 
     const serialized = serialize<any>(
       {
@@ -277,5 +272,81 @@ describe("presentation-4 serializer", () => {
       type: "Canvas",
     });
     expect(serialized.start.source.items).toBeUndefined();
+  });
+
+  test("omits empty normalized default fields in serialized output", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/omit-empty-fields",
+      type: "Manifest",
+      label: { en: ["Omit empty fields"] },
+      start: {
+        id: "https://example.org/manifest/omit-empty-fields/start",
+        type: "SpecificResource",
+        source: {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+        },
+        selector: {
+          type: "PointSelector",
+          x: 1,
+          y: 2,
+        },
+      },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [],
+        },
+      ],
+      structures: [{ id: "https://example.org/range/1", type: "Range" }],
+    };
+
+    const normalized = normalize(manifest as any);
+    const normalizedManifest = normalized.entities.Manifest["https://example.org/manifest/omit-empty-fields"] as any;
+    const normalizedStart = normalized.entities.ContentResource[normalizedManifest.start.id] as any;
+    normalizedStart.selector = [];
+    normalizedStart.transform = [];
+    normalizedStart.source = undefined;
+
+    const serializedManifest = serialize<any>(
+      {
+        entities: normalized.entities as any,
+        mapping: normalized.mapping as any,
+        requests: {},
+      },
+      normalized.resource,
+      serializeConfigPresentation4
+    );
+
+    expect(serializedManifest.start.type).toBe("SpecificResource");
+    expect(serializedManifest.start.selector).toBeUndefined();
+    expect(serializedManifest.start.transform).toBeUndefined();
+    expect(serializedManifest.start.source).toBeUndefined();
+    expect(serializedManifest.structures[0].supplementary).toBeUndefined();
+
+    const annotationCollection = normalize({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/annotation-collection/omits-defaults",
+      type: "AnnotationCollection",
+      items: [],
+    } as any);
+
+    const serializedAnnotationCollection = serialize<any>(
+      {
+        entities: annotationCollection.entities as any,
+        mapping: annotationCollection.mapping as any,
+        requests: {},
+      },
+      annotationCollection.resource,
+      serializeConfigPresentation4
+    );
+
+    expect(serializedAnnotationCollection.first).toBeUndefined();
+    expect(serializedAnnotationCollection.last).toBeUndefined();
+    expect(serializedAnnotationCollection.total).toBeUndefined();
   });
 });

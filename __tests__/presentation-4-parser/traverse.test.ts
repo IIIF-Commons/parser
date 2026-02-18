@@ -105,7 +105,7 @@ describe("presentation-4 traverse", () => {
     };
 
     const traversed = traverse.traverseAnnotation(annotation, undefined, "$.annotation");
-    const target = traversed.target[0];
+    const target = traversed.target;
 
     expect(target.type).toBe("SpecificResource");
     expect(target.selector[0].type).toBe("FragmentSelector");
@@ -135,12 +135,12 @@ describe("presentation-4 traverse", () => {
     };
 
     const traversed = traverse.traverseAnnotation(annotation, undefined, "$.annotation");
-    expect(Array.isArray(traversed.body)).toBe(true);
-    expect(Array.isArray(traversed.target)).toBe(true);
-    expect(traversed.body).toHaveLength(1);
-    expect(traversed.target).toHaveLength(1);
-    expect(traversed.target[0].type).toBe("SpecificResource");
-    expect(traversed.target[0].selector[0].type).toBe("FragmentSelector");
+    expect(Array.isArray(traversed.body)).toBe(false);
+    expect(Array.isArray(traversed.target)).toBe(false);
+    expect(traversed.body.type).toBe("List");
+    expect(traversed.target.type).toBe("List");
+    expect(traversed.target.items[0].type).toBe("SpecificResource");
+    expect(traversed.target.items[0].selector[0].type).toBe("FragmentSelector");
   });
 
   test("coerces PointSelector.t to PointSelector.instant by default", () => {
