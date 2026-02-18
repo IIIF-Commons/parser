@@ -186,12 +186,7 @@ function isReferenceAnnotation(annotation: any): boolean {
   return Object.keys(annotation).every((key) => allowedReferenceKeys.has(key));
 }
 
-function validateAnnotationShape(
-  annotation: any,
-  nodePath: string,
-  issues: ValidationIssue[],
-  options: { allowArrayValues: boolean }
-) {
+function validateAnnotationShape(annotation: any, nodePath: string, issues: ValidationIssue[]) {
   if (isReferenceAnnotation(annotation)) {
     return;
   }
@@ -214,7 +209,15 @@ function validateAnnotationShape(
       resource: annotation,
       specRef: "#target",
     });
-  } else if (!isPlainObject(annotation.target) && !(options.allowArrayValues && Array.isArray(annotation.target))) {
+  } else if (Array.isArray(annotation.target)) {
+    issue(issues, {
+      code: "annotation-target-array-forbidden",
+      message: 'Annotation.target must be an object; use {"type":"List","items":[...]} for multiple targets',
+      path: `${nodePath}.target`,
+      resource: annotation,
+      specRef: "#target",
+    });
+  } else if (!isPlainObject(annotation.target)) {
     issue(issues, {
       code: "annotation-target-object",
       message: "Annotation.target must be an object, or a List object with items",
@@ -226,11 +229,7 @@ function validateAnnotationShape(
     const targets = getAnnotationEntries(annotation.target);
     for (let i = 0; i < targets.length; i++) {
       const target = targets[i];
-      const targetPath = isListWrapper(annotation.target)
-        ? `${nodePath}.target.items[${i}]`
-        : Array.isArray(annotation.target)
-          ? `${nodePath}.target[${i}]`
-          : `${nodePath}.target`;
+      const targetPath = isListWrapper(annotation.target) ? `${nodePath}.target.items[${i}]` : `${nodePath}.target`;
 
       if (!isPlainObject(target)) {
         issue(issues, {
@@ -267,18 +266,24 @@ function validateAnnotationShape(
     }
   }
 
-  if (
-    typeof annotation.body !== "undefined" &&
-    !isPlainObject(annotation.body) &&
-    !(options.allowArrayValues && Array.isArray(annotation.body))
-  ) {
-    issue(issues, {
-      code: "annotation-body-object",
-      message: "Annotation.body must be an object when present, or a List object with items",
-      path: `${nodePath}.body`,
-      resource: annotation,
-      specRef: "#body",
-    });
+  if (typeof annotation.body !== "undefined") {
+    if (Array.isArray(annotation.body)) {
+      issue(issues, {
+        code: "annotation-body-array-forbidden",
+        message: 'Annotation.body must be an object; use {"type":"List","items":[...]} for multiple bodies',
+        path: `${nodePath}.body`,
+        resource: annotation,
+        specRef: "#body",
+      });
+    } else if (!isPlainObject(annotation.body)) {
+      issue(issues, {
+        code: "annotation-body-object",
+        message: "Annotation.body must be an object when present, or a List object with items",
+        path: `${nodePath}.body`,
+        resource: annotation,
+        specRef: "#body",
+      });
+    }
   }
 
   if (!isArrayOrUndefined(annotation.motivation)) {
@@ -550,6 +555,110 @@ function checkAnnotationMustNotRules(annotation: any, nodePath: string, issues: 
   }
 }
 
+function checkStartPropertyRules(className: string, node: any, nodePath: string, issues: ValidationIssue[]) {
+  if (typeof node?.start === "undefined") {
+    return;
+  }
+
+  if (className !== "Collection" && className !== "Manifest" && className !== "Range") {
+    issue(issues, {
+      code: "start-property-forbidden-class",
+      message: `${className} must not include start`,
+      path: `${nodePath}.start`,
+      resource: node,
+      specRef: "#start",
+    });
+    return;
+  }
+
+  const start = node.start;
+  if (!isPlainObject(start)) {
+    issue(issues, {
+      code: "start-property-object-required",
+      message: "start must be a JSON object with id and type",
+      path: `${nodePath}.start`,
+      resource: node,
+      specRef: "#start",
+    });
+    return;
+  }
+
+  const startId = getId(start);
+  const startType = getType(start);
+  if (!startId || !startType) {
+    issue(issues, {
+      code: "start-property-id-type-required",
+      message: "start must include id and type",
+      path: `${nodePath}.start`,
+      resource: node,
+      specRef: "#start",
+    });
+    return;
+  }
+
+  if (startType === "SpecificResource") {
+    const source = (start as any).source;
+    const selector = (start as any).selector;
+
+    if (typeof selector === "undefined") {
+      issue(issues, {
+        code: "start-specific-resource-selector-required",
+        message: "start SpecificResource must include selector",
+        path: `${nodePath}.start.selector`,
+        resource: node,
+        specRef: "#start",
+      });
+    }
+
+    if (typeof source === "string") {
+      return;
+    }
+
+    if (!isPlainObject(source)) {
+      issue(issues, {
+        code: "start-specific-resource-source-required",
+        message: "start SpecificResource must include source Canvas",
+        path: `${nodePath}.start.source`,
+        resource: node,
+        specRef: "#start",
+      });
+      return;
+    }
+
+    if (getType(source) !== "Canvas" || !getId(source)) {
+      issue(issues, {
+        code: "start-specific-resource-source-canvas",
+        message: "start SpecificResource source must reference a Canvas with id and type",
+        path: `${nodePath}.start.source`,
+        resource: node,
+        specRef: "#start",
+      });
+    }
+    return;
+  }
+
+  if (!containerTypes.has(startType)) {
+    issue(issues, {
+      code: "start-property-invalid-type",
+      message: "start must reference a Container (Canvas, Scene, Timeline) or a SpecificResource",
+      path: `${nodePath}.start.type`,
+      resource: node,
+      specRef: "#start",
+    });
+    return;
+  }
+
+  if (Object.hasOwn(start, "items")) {
+    issue(issues, {
+      code: "start-container-embedded-forbidden",
+      message: "start Container must be a reference object and must not embed items",
+      path: `${nodePath}.start.items`,
+      resource: node,
+      specRef: "#start",
+    });
+  }
+}
+
 export function runClassRequirementValidation(resource: any): {
   issues: ValidationIssue[];
   stats: ClassRequirementStats;
@@ -675,6 +784,7 @@ export function runClassRequirementValidation(resource: any): {
       stats.mustNotChecks += 1;
       checkAnnotationMustNotRules(node, nodePath, issues);
     }
+    checkStartPropertyRules(className, node, nodePath, issues);
   });
 
   return { issues, stats };
@@ -687,14 +797,23 @@ export function runAuthoredShapeValidation(resource: any): ValidationIssue[] {
     if (getType(node) !== "Annotation") {
       return;
     }
-    validateAnnotationShape(node, nodePath, issues, { allowArrayValues: true });
+    validateAnnotationShape(node, nodePath, issues);
   });
 
   return issues;
 }
 
-export function runRawValidation(resource: any): ValidationIssue[] {
+export function runRawValidation(resource: any, options: { skipAnnotationShape?: boolean } = {}): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
+
+  if (!options.skipAnnotationShape) {
+    walkResourceTree(resource, "$", (node, nodePath) => {
+      if (getType(node) !== "Annotation") {
+        return;
+      }
+      validateAnnotationShape(node, nodePath, issues);
+    });
+  }
 
   const traversal = new Traverse({
     collection: [
@@ -780,10 +899,6 @@ export function runRawValidation(resource: any): ValidationIssue[] {
     ],
     annotation: [
       (annotation, context) => {
-        validateAnnotationShape(annotation, context.path, issues, {
-          allowArrayValues: true,
-        });
-
         const motivations = ensureArray(annotation.motivation);
         if (motivations.includes("activating")) {
           const body = getAnnotationEntries(annotation.body);
@@ -936,16 +1051,17 @@ export function validatePresentation4(input: unknown, options: ValidateOptions =
   const mode = options.mode || "tolerant";
   const includePostNormalization =
     typeof options.includePostNormalization === "undefined" ? true : options.includePostNormalization;
+  const hasContext = hasPresentation4Context(input);
 
   const issues: ValidationIssue[] = [];
-  if (hasPresentation4Context(input)) {
+  if (hasContext) {
     issues.push(...runAuthoredShapeValidation(input as any));
   }
 
   const upgraded = upgradeToPresentation4(input);
   const classRequirementResult = runClassRequirementValidation(upgraded);
   issues.push(...classRequirementResult.issues);
-  issues.push(...runRawValidation(upgraded));
+  issues.push(...runRawValidation(upgraded, { skipAnnotationShape: hasContext }));
 
   if (includePostNormalization) {
     const normalized = normalize(upgraded);

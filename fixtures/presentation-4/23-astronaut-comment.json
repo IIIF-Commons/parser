@@ -32,30 +32,26 @@
               "motivation": [
                 "commenting"
               ],
-              "body": [
-                {
-                  "type": "TextualBody"
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [
-                    {
-                      "type": "PointSelector",
-                      "x": 1.075,
-                      "y": 1.894,
-                      "z": 0.204
-                    }
-                  ],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
+              "body": {
+                "type": "TextualBody"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "selector": [
+                  {
+                    "type": "PointSelector",
+                    "x": 1.075,
+                    "y": 1.894,
+                    "z": 0.204
                   }
+                ],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             },
             {
               "id": "https://example.org/iiif/3d/anno3",
@@ -63,30 +59,26 @@
               "motivation": [
                 "commenting"
               ],
-              "body": [
-                {
-                  "type": "TextualBody"
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [
-                    {
-                      "type": "PointSelector",
-                      "x": 0.006,
-                      "y": 3.498,
-                      "z": 0.703
-                    }
-                  ],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
+              "body": {
+                "type": "TextualBody"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "selector": [
+                  {
+                    "type": "PointSelector",
+                    "x": 0.006,
+                    "y": 3.498,
+                    "z": 0.703
                   }
+                ],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             }
           ]
         }
@@ -102,19 +94,15 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                  "type": "Model",
-                  "format": "model/gltf-binary"
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://example.org/iiif/scene1/page/p1/1",
-                  "type": "Scene"
-                }
-              ]
+              "body": {
+                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                "type": "Model",
+                "format": "model/gltf-binary"
+              },
+              "target": {
+                "id": "https://example.org/iiif/scene1/page/p1/1",
+                "type": "Scene"
+              }
             }
           ]
         }

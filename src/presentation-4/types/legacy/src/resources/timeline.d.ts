@@ -3,7 +3,7 @@ import type { Prettify } from "../../../../../presentation-3/types/legacy/src/ut
 import type { GeoJSON } from "../../../../../shared/geojson";
 import type { AnnotationPage } from "./annotationPage";
 import type { Canvas } from "./canvas";
-import type { AgentLike, LinkedResource, OneOrMany, ResourceReference, ServiceLike } from "./contentResource";
+import type { AgentLike, LinkedResource, ResourceReference, ServiceLike } from "./contentResource";
 import type { Scene } from "./scene";
 
 export type TimelineItem =
@@ -24,21 +24,21 @@ export type Timeline = Prettify<{
   navDate?: string | null | undefined;
   "@context"?: string | string[] | undefined;
   duration: number;
-  items?: OneOrMany<TimelineItem>;
-  annotations?: OneOrMany<TimelineAnnotation>;
-  thumbnail?: OneOrMany<LinkedResource>;
-  provider?: OneOrMany<AgentLike | ResourceReference<"Agent">>;
-  seeAlso?: OneOrMany<LinkedResource>;
-  service?: OneOrMany<ServiceLike>;
-  services?: OneOrMany<ServiceLike>;
+  items?: Array<TimelineItem>;
+  annotations?: Array<TimelineAnnotation>;
+  thumbnail?: Array<LinkedResource>;
+  provider?: Array<AgentLike | ResourceReference<"Agent">>;
+  seeAlso?: Array<LinkedResource>;
+  service?: Array<ServiceLike>;
+  services?: Array<ServiceLike>;
   navPlace?: Prettify<GeoJSON>;
-  rendering?: OneOrMany<LinkedResource>;
-  homepage?: OneOrMany<LinkedResource>;
-  partOf?: OneOrMany<LinkedResource>;
-  logo?: OneOrMany<LinkedResource>;
-  supplementary?: OneOrMany<LinkedResource>;
+  rendering?: Array<LinkedResource>;
+  homepage?: Array<LinkedResource>;
+  partOf?: Array<LinkedResource>;
+  logo?: Array<LinkedResource>;
+  supplementary?: Array<LinkedResource>;
   placeholderContainer?: Canvas | Timeline | Scene | null;
   accompanyingContainer?: Canvas | Timeline | Scene | null;
   canonical?: string;
-  via?: OneOrMany<string>;
+  via?: Array<string>;
 }>;

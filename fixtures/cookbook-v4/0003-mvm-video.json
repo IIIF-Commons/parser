@@ -25,22 +25,18 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
-                  "type": "Video",
-                  "format": "video/mp4",
-                  "height": 360,
-                  "width": 480,
-                  "duration": 572.034
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas",
-                  "type": "Canvas"
-                }
-              ]
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "height": 360,
+                "width": 480,
+                "duration": 572.034
+              },
+              "target": {
+                "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas",
+                "type": "Canvas"
+              }
             }
           ]
         }

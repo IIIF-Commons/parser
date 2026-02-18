@@ -7,9 +7,6 @@ import { upgradeToPresentation4, validatePresentation4 } from "../../src/present
 describe("presentation-4 validator", () => {
   test("accepts authored v4 fixtures with object/List annotation target and body", () => {
     const fixture = JSON.parse(readFileSync(join(cwd(), "fixtures/presentation-4/01-model-in-scene.json"), "utf8"));
-    const annotation = fixture.items[0].items[0].items[0];
-    annotation.body = annotation.body[0];
-    annotation.target = annotation.target[0];
 
     const report = validatePresentation4(fixture);
 
@@ -48,6 +45,44 @@ describe("presentation-4 validator", () => {
     expect(report.valid).toBe(false);
     expect(report.issues.some((issue) => issue.code === "canvas-width-required")).toBe(true);
     expect(report.issues.some((issue) => issue.code === "canvas-height-required")).toBe(true);
+  });
+
+  test("rejects array-form annotation body/target in favor of object/List", () => {
+    const invalid = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/annotation-array-shape",
+      type: "Manifest",
+      label: { en: ["annotation array shape"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/canvas/1/page/1/anno/1",
+                  type: "Annotation",
+                  motivation: ["painting"],
+                  body: [{ id: "https://example.org/image/1/full/full/0/default.jpg", type: "Image" }],
+                  target: [{ id: "https://example.org/canvas/1", type: "Canvas" }],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(invalid);
+
+    expect(report.valid).toBe(false);
+    expect(report.issues.some((issue) => issue.code === "annotation-body-array-forbidden")).toBe(true);
+    expect(report.issues.some((issue) => issue.code === "annotation-target-array-forbidden")).toBe(true);
   });
 
   test("throws in strict mode when errors are present", () => {

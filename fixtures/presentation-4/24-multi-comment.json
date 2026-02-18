@@ -36,70 +36,76 @@
               "motivation": [
                 "commenting"
               ],
-              "body": [
-                {
-                  "type": "Choice",
-                  "items": [
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    },
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    }
-                  ]
-                },
-                {
-                  "type": "Choice",
-                  "items": [
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    },
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [
-                    {
-                      "type": "PointSelector",
-                      "x": 1.075,
-                      "y": 1.894,
-                      "z": 0.204
-                    }
-                  ],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
+              "body": {
+                "type": "List",
+                "items": [
+                  {
+                    "type": "Choice",
+                    "items": [
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      },
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Choice",
+                    "items": [
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      },
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      }
+                    ]
                   }
-                },
-                {
-                  "type": "SpecificResource",
-                  "selector": [
-                    {
-                      "type": "PointSelector",
-                      "x": 0.006,
-                      "y": 3.498,
-                      "z": 0.703
+                ]
+              },
+              "target": {
+                "type": "List",
+                "items": [
+                  {
+                    "type": "SpecificResource",
+                    "selector": [
+                      {
+                        "type": "PointSelector",
+                        "x": 1.075,
+                        "y": 1.894,
+                        "z": 0.204
+                      }
+                    ],
+                    "transform": [],
+                    "action": [],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
                     }
-                  ],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
+                  },
+                  {
+                    "type": "SpecificResource",
+                    "selector": [
+                      {
+                        "type": "PointSelector",
+                        "x": 0.006,
+                        "y": 3.498,
+                        "z": 0.703
+                      }
+                    ],
+                    "transform": [],
+                    "action": [],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
                   }
-                }
-              ]
+                ]
+              }
             },
             {
               "id": "https://example.org/iiif/3d/anno2",
@@ -107,70 +113,76 @@
               "motivation": [
                 "commenting"
               ],
-              "body": [
-                {
-                  "type": "Choice",
-                  "items": [
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    },
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    }
-                  ]
-                },
-                {
-                  "type": "Choice",
-                  "items": [
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    },
-                    {
-                      "type": "TextualBody",
-                      "format": "text/plain"
-                    }
-                  ]
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [
-                    {
-                      "type": "PointSelector",
-                      "x": 1.075,
-                      "y": 1.894,
-                      "z": 0.204
-                    }
-                  ],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
+              "body": {
+                "type": "List",
+                "items": [
+                  {
+                    "type": "Choice",
+                    "items": [
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      },
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Choice",
+                    "items": [
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      },
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      }
+                    ]
                   }
-                },
-                {
-                  "type": "SpecificResource",
-                  "selector": [
-                    {
-                      "type": "PointSelector",
-                      "x": 0.006,
-                      "y": 3.498,
-                      "z": 0.703
+                ]
+              },
+              "target": {
+                "type": "List",
+                "items": [
+                  {
+                    "type": "SpecificResource",
+                    "selector": [
+                      {
+                        "type": "PointSelector",
+                        "x": 1.075,
+                        "y": 1.894,
+                        "z": 0.204
+                      }
+                    ],
+                    "transform": [],
+                    "action": [],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
                     }
-                  ],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
+                  },
+                  {
+                    "type": "SpecificResource",
+                    "selector": [
+                      {
+                        "type": "PointSelector",
+                        "x": 0.006,
+                        "y": 3.498,
+                        "z": 0.703
+                      }
+                    ],
+                    "transform": [],
+                    "action": [],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
                   }
-                }
-              ]
+                ]
+              }
             }
           ]
         }
@@ -186,18 +198,16 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
-                  }
+              "target": {
+                "type": "SpecificResource",
+                "selector": [],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             }
           ]
         }

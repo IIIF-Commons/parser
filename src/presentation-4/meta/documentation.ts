@@ -293,7 +293,7 @@ const propertyDocumentation: Record<string, DocDefinition> = {
   body: {
     link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#body",
     summary:
-      "The list of bodies of an Annotation. As there may be more than one body, the value must be an array, even though the W3C specification does not require this. The resources listed in body can be instances of TextualBody , SpecificResource , core Structural Resources, or Content Resources.",
+      "The body of an Annotation. The value must be a JSON object. If there is more than one body, the value must be a List object with an items array. The resources listed in body can be instances of TextualBody, SpecificResource, core Structural Resources, or Content Resources.",
     title: "body",
   },
   canonical: {
@@ -631,7 +631,7 @@ const propertyDocumentation: Record<string, DocDefinition> = {
   target: {
     link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#target",
     summary:
-      "The list of targets of an Annotation. As there may be more than one target, the value must be an array, even though the W3C specification does not require this. The resources listed in target can be instances of SpecificResource , core Structural Resources, or Content Resources.",
+      "The target of an Annotation. The value must be a JSON object. If there is more than one target, the value must be a List object with an items array. The resources listed in target can be instances of SpecificResource, core Structural Resources, or Content Resources.",
     title: "target",
   },
   temporalScale: {

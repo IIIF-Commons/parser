@@ -32,25 +32,23 @@
               "motivation": [
                 "painting"
               ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [
-                    {
-                      "type": "PointSelector",
-                      "x": 0,
-                      "y": 0,
-                      "z": 0
-                    }
-                  ],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
+              "target": {
+                "type": "SpecificResource",
+                "selector": [
+                  {
+                    "type": "PointSelector",
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
                   }
+                ],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             }
           ]
         }

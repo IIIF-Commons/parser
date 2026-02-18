@@ -1,35 +1,28 @@
 import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
-import type {
-  AgentLike,
-  LinkedResource,
-  MetadataItem,
-  OneOrMany,
-  ResourceReference,
-  ServiceLike,
-} from "./contentResource";
+import type { AgentLike, LinkedResource, MetadataItem, ResourceReference, ServiceLike } from "./contentResource";
 
-export type CollectionPageItem = ResourceReference<"Collection" | "Manifest"> | string;
+export type CollectionPageItem = ResourceReference<"Collection" | "Manifest">;
 
 export type CollectionPage = Prettify<{
   id: string;
   type: "CollectionPage";
-  partOf: OneOrMany<ResourceReference<"Collection"> | string>;
-  items: OneOrMany<CollectionPageItem>;
+  partOf: Array<ResourceReference<"Collection">>;
+  items: Array<CollectionPageItem>;
   next?: string | ResourceReference<"CollectionPage">;
   prev?: string | ResourceReference<"CollectionPage">;
   startIndex?: number;
-  metadata?: OneOrMany<MetadataItem>;
+  metadata?: Array<MetadataItem>;
   summary?: InternationalString | null | undefined;
-  provider?: OneOrMany<AgentLike | ResourceReference<"Agent">> | undefined;
-  thumbnail?: OneOrMany<LinkedResource> | undefined;
+  provider?: Array<AgentLike | ResourceReference<"Agent">> | undefined;
+  thumbnail?: Array<LinkedResource> | undefined;
   requiredStatement?: MetadataItem | null | undefined;
   rights?: string | null | undefined;
   behavior?: LiteralUnion<SpecificationBehaviors>[] | undefined;
-  seeAlso?: OneOrMany<LinkedResource>;
-  service?: OneOrMany<ServiceLike>;
-  homepage?: OneOrMany<LinkedResource>;
-  rendering?: OneOrMany<LinkedResource>;
+  seeAlso?: Array<LinkedResource>;
+  service?: Array<ServiceLike>;
+  homepage?: Array<LinkedResource>;
+  rendering?: Array<LinkedResource>;
   canonical?: string;
-  via?: OneOrMany<string>;
-  annotations?: OneOrMany<ResourceReference<"AnnotationPage"> | string>;
+  via?: Array<string>;
+  annotations?: Array<ResourceReference<"AnnotationPage">>;
 }>;

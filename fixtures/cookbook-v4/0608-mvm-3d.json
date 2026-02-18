@@ -32,19 +32,15 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                  "type": "Model",
-                  "format": "model/gltf-binary"
-                }
-              ],
-              "target": [
-                {
-                  "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1",
-                  "type": "Scene"
-                }
-              ]
+              "body": {
+                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                "type": "Model",
+                "format": "model/gltf-binary"
+              },
+              "target": {
+                "id": "https://preview.iiif.io/cookbook/v4/recipe/0608-mvm-3d/v4/scene/1",
+                "type": "Scene"
+              }
             }
           ]
         }

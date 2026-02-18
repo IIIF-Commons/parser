@@ -14,20 +14,28 @@ import type {
 } from "./contentResource";
 
 export type AnnotationMotivation = AnyMotivation | W3CMotivation | "contentState" | "activating" | string;
-export type AnnotationBody =
-  | ContentResourceLike
-  | SpecificResource
-  | ResourceReference
-  | string
-  | Record<string, unknown>;
-export type AnnotationTarget = SpecificResource | ResourceReference | string | Record<string, unknown>;
+export type AnnotationBody = ContentResourceLike | SpecificResource | ResourceReference | Record<string, unknown>;
+export type AnnotationTarget = SpecificResource | ResourceReference | Record<string, unknown>;
+
+export type AnnotationBodyList = {
+  type: "List";
+  items: AnnotationBody[];
+};
+
+export type AnnotationTargetList = {
+  type: "List";
+  items: AnnotationTarget[];
+};
+
+export type AnnotationBodyValue = AnnotationBody | AnnotationBodyList;
+export type AnnotationTargetValue = AnnotationTarget | AnnotationTargetList;
 
 export type ContentStateAnnotation = {
   id?: string;
   type: "Annotation";
   motivation: "contentState";
-  target: OneOrMany<AnnotationTarget>;
-  body?: OneOrMany<AnnotationBody>;
+  target: AnnotationTargetValue;
+  body?: AnnotationBodyValue;
   action?: OneOrMany<Transform | ResourceReference | string | Record<string, unknown>>;
   [key: string]: unknown;
 };
@@ -36,8 +44,8 @@ export type ActivatingAnnotation = {
   id?: string;
   type: "Annotation";
   motivation: "activating";
-  body: OneOrMany<AnnotationBody>;
-  target: OneOrMany<AnnotationTarget>;
+  body: AnnotationBodyValue;
+  target: AnnotationTargetValue;
   [key: string]: unknown;
 };
 
@@ -68,8 +76,8 @@ export type Annotation = Prettify<{
 
   // New for P4
   motivation: OneOrMany<AnnotationMotivation>;
-  body?: OneOrMany<AnnotationBody>;
-  target: OneOrMany<AnnotationTarget>;
+  body?: AnnotationBodyValue;
+  target: AnnotationTargetValue;
   thumbnail?: LinkedResource[];
   provider?: Array<AgentLike | ResourceReference<"Agent">>;
   seeAlso?: LinkedResource[];
@@ -77,13 +85,13 @@ export type Annotation = Prettify<{
   services?: ServiceLike[];
   homepage?: LinkedResource[];
   rendering?: LinkedResource[];
-  partOf?: OneOrMany<LinkedResource>;
+  partOf?: Array<LinkedResource>;
   logo?: LinkedResource[];
   supplementary?: LinkedResource[];
-  selector?: OneOrMany<Selector>;
-  action?: OneOrMany<ContentResourceLike | SpecificResource | ResourceReference | string | Record<string, unknown>>;
+  selector?: Selector[];
+  action?: Array<ContentResourceLike | SpecificResource | ResourceReference | string | Record<string, unknown>>;
   exclude?: ExcludeType[];
-  provides?: OneOrMany<Provides>;
+  provides?: Array<Provides>;
   position?: Selector;
   timeMode?: string | null;
 }>;

@@ -5,7 +5,6 @@ import type {
   ContentResourceLike,
   LinkedResource,
   MetadataItem,
-  OneOrMany,
   ResourceReference,
   ServiceLike,
 } from "./contentResource";
@@ -19,25 +18,25 @@ export type AnnotationPage = Prettify<{
   summary?: InternationalString | null | undefined;
   requiredStatement?: MetadataItem | null | undefined;
   rights?: string | null | undefined;
-  thumbnail?: OneOrMany<ContentResourceLike> | undefined;
-  provider?: OneOrMany<AgentLike | ResourceReference<"Agent">> | undefined;
+  thumbnail?: Array<ContentResourceLike> | undefined;
+  provider?: Array<AgentLike | ResourceReference<"Agent">> | undefined;
   "@context"?: string | undefined;
   next?: string | undefined;
   prev?: string | undefined;
   startIndex?: number | undefined;
 
   // New for P4.
-  items: OneOrMany<Annotation | ContentResourceLike | ResourceReference | string>;
-  metadata?: OneOrMany<MetadataItem>;
-  seeAlso?: OneOrMany<LinkedResource>;
-  service?: OneOrMany<ServiceLike>;
-  services?: OneOrMany<ServiceLike>;
-  rendering?: OneOrMany<LinkedResource>;
-  homepage?: OneOrMany<LinkedResource>;
-  partOf?: OneOrMany<LinkedResource>;
+  items: Array<Annotation>;
+  metadata?: Array<MetadataItem>;
+  seeAlso?: Array<LinkedResource>;
+  service?: Array<ServiceLike>;
+  services?: Array<ServiceLike>;
+  rendering?: Array<LinkedResource>;
+  homepage?: Array<LinkedResource>;
+  partOf?: Array<LinkedResource>;
   canonical?: string;
-  via?: OneOrMany<string>;
-  annotations?: OneOrMany<ResourceReference<"AnnotationPage"> | string>;
-  logo?: OneOrMany<LinkedResource>;
-  supplementary?: OneOrMany<LinkedResource>;
+  via?: Array<string>;
+  annotations?: Array<ResourceReference<"AnnotationPage"> | string>;
+  logo?: Array<LinkedResource>;
+  supplementary?: Array<LinkedResource>;
 }>;

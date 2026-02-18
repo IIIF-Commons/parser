@@ -32,32 +32,28 @@
               "motivation": [
                 "painting"
               ],
-              "body": [
-                {
-                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
-                  "type": "Model",
-                  "format": "model/gltf-binary"
-                }
-              ],
-              "target": [
-                {
-                  "type": "SpecificResource",
-                  "selector": [
-                    {
-                      "type": "PointSelector",
-                      "x": -1,
-                      "y": 0,
-                      "z": 1
-                    }
-                  ],
-                  "transform": [],
-                  "action": [],
-                  "source": {
-                    "id": "https://example.org/iiif/scene1/page/p1/1",
-                    "type": "Scene"
+              "body": {
+                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                "type": "Model",
+                "format": "model/gltf-binary"
+              },
+              "target": {
+                "type": "SpecificResource",
+                "selector": [
+                  {
+                    "type": "PointSelector",
+                    "x": -1,
+                    "y": 0,
+                    "z": 1
                   }
+                ],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
                 }
-              ]
+              }
             }
           ]
         }

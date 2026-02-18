@@ -1,21 +1,14 @@
 import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
 import type { AnnotationPage } from "./annotationPage";
 import type { Canvas } from "./canvas";
-import type {
-  AgentLike,
-  LinkedResource,
-  OneOrMany,
-  ResourceReference,
-  ServiceLike,
-  SpecificResource,
-} from "./contentResource";
+import type { AgentLike, LinkedResource, ResourceReference, ServiceLike, Start } from "./contentResource";
 import type { Range } from "./range";
 import type { Scene } from "./scene";
 import type { Timeline } from "./timeline";
 
-export type ManifestItem = Canvas | Scene | Timeline | ResourceReference<"Canvas" | "Scene" | "Timeline"> | string;
-export type ManifestStructure = Range | ResourceReference<"Range"> | string;
-export type ManifestAnnotation = AnnotationPage | ResourceReference<"AnnotationPage"> | string;
+export type ManifestItem = Canvas | Scene | Timeline;
+export type ManifestStructure = Range | ResourceReference<"Range">;
+export type ManifestAnnotation = AnnotationPage | ResourceReference<"AnnotationPage">;
 
 export type Manifest = Prettify<{
   // Unchanged from V3.
@@ -42,17 +35,14 @@ export type Manifest = Prettify<{
   services?: Array<ServiceLike>;
   rendering?: Array<LinkedResource>;
   homepage?: Array<LinkedResource>;
-  partOf?: OneOrMany<LinkedResource>;
+  partOf?: Array<LinkedResource>;
   canonical?: string;
-  via?: OneOrMany<string>;
+  via?: Array<string>;
 
   rights?: string;
 
   supplementary?: Array<LinkedResource>;
   placeholderContainer?: Canvas | Timeline | Scene | null;
   accompanyingContainer?: Canvas | Timeline | Scene | null;
-  start?: SpecificResource | ResourceReference<"Canvas" | "Scene" | "Timeline"> | string | null;
-
-  /** @deprecated */
-  [subject: string]: unknown;
+  start?: Start;
 }>;
