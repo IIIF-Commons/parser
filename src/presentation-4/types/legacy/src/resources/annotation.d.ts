@@ -67,7 +67,6 @@ export type Annotation = Prettify<{
   accessibility?: string | string[] | undefined;
   canonical?: string | undefined;
   via?: string | (string[] & string) | undefined;
-  "@context"?: "http://www.w3.org/ns/anno.jsonld" | undefined;
   stylesheet?: (string | Stylesheet) | undefined;
   textGranularity?: TextGranularityOptions | undefined;
   navDate?: string | undefined;

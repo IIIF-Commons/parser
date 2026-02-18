@@ -25,7 +25,6 @@ export type AnnotationCollection = Prettify<{
   navPlace?: Prettify<GeoJSON> | undefined;
   thumbnail?: Array<ContentResourceLike> | undefined;
   provider?: Array<AgentLike | ResourceReference<"Agent">> | undefined;
-  "@context"?: string | undefined;
   total?: number | undefined;
   first: string | ResourceReference<"AnnotationPage">;
   last: string | ResourceReference<"AnnotationPage">;
