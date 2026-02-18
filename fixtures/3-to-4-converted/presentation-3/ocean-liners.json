@@ -378,6 +378,7 @@
       ],
       "items": [
         {
+          "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/painting",
           "type": "AnnotationPage",
           "items": [
             {
