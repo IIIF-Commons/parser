@@ -1,8 +1,8 @@
-import type { AudioResource, OneOrMany } from "./contentResource";
-import type { PointSelector, WktSelector } from "../extensions/presentation-4";
-import type { InteractionMode, Quantity } from "../iiif/technical";
 import type { InternationalString } from "../../../../../presentation-3/types/legacy/src/iiif/descriptive";
 import type { Reference } from "../../../../../presentation-3/types/legacy/src/reference";
+import type { PointSelector, WktSelector } from "../extensions/presentation-4";
+import type { InteractionMode, Quantity } from "../iiif/technical";
+import type { AudioResource } from "./contentResource";
 
 export type LookAtTarget = PointSelector | WktSelector | Reference;
 
@@ -19,7 +19,7 @@ export type PerspectiveCamera = SceneComponentBase & {
   far?: number;
   fieldOfView?: number;
   lookAt?: LookAtTarget;
-  interactionMode?: OneOrMany<InteractionMode>;
+  interactionMode?: InteractionMode[];
 };
 
 export type OrthographicCamera = SceneComponentBase & {
@@ -28,7 +28,7 @@ export type OrthographicCamera = SceneComponentBase & {
   far?: number;
   viewHeight?: number;
   lookAt?: LookAtTarget;
-  interactionMode?: OneOrMany<InteractionMode>;
+  interactionMode?: InteractionMode[];
 };
 
 export type AmbientLight = SceneComponentBase & {

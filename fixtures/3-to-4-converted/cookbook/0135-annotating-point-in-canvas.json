@@ -39,7 +39,9 @@
                 "type": "TextualBody",
                 "format": "text/plain",
                 "value": "Town Creek Aqueduct",
-                "language": "en"
+                "language": [
+                  "en"
+                ]
               },
               "target": {
                 "type": "SpecificResource",

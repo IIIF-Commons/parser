@@ -159,61 +159,81 @@
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Title: Hair",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Title: Capelli",
-                    "language": "it"
+                    "language": [
+                      "it"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Description: Buddha's hair, with an uṣṇīṣa.",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Tag: [hair parted in middle with lateral continuous waves; separate uṣṇīṣa](https://w3id.org/diga/terms/1940192311)\nVocabulary: [DiGA - The Digitization of Gandharan Artefacts Thesaurus](https://diga.skosmos.ub.rub.de/thesaurus/en/)\nData: {\"trace\":[{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"figures\"},{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"literay persons\"},{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"buddha\"},{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"buddha: general features\"},{\"key\":\"https:\\/\\/w3id.org\\/diga\\/terms\\/1940192311\",\"label\":\"hair of buddha\"}]}",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Note: (Harle 1974, 132) “wavy, rolling up and inwards from the hairline on either side of a central little almond-shaped dividing point”",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Note: (Mitterwallner 1987, 217) “rendered in a systematized manner in the form of semi-circles… bound by a band”",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Note: (Guy 2022, 97) “his uncut hair is drawn back in prominent waves and tied up to form a large chignon-ushnisha”",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Attribution: Allon 2022",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Date: 1970-01-01",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Line Color: Medium",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   }
                 ]
               },

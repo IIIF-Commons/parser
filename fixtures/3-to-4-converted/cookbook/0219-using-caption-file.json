@@ -34,7 +34,9 @@
                   ]
                 },
                 "format": "text/vtt",
-                "language": "en"
+                "language": [
+                  "en"
+                ]
               },
               "target": {
                 "type": "SpecificResource",

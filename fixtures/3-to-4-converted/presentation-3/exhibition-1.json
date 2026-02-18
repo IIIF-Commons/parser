@@ -12,13 +12,17 @@
       "id": "https://heritage.tudelft.nl/nl/exhibitions/inventing-creativity",
       "type": "Text",
       "format": "text/html",
-      "language": "nl"
+      "language": [
+        "nl"
+      ]
     },
     {
       "id": "https://heritage.tudelft.nl/en/exhibitions/inventing-creativity",
       "type": "Text",
       "format": "text/html",
-      "language": "en"
+      "language": [
+        "en"
+      ]
     }
   ],
   "items": [

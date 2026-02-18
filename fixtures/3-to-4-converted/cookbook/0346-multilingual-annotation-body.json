@@ -35,13 +35,17 @@
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Koto with a cover being carried",
-                    "language": "en"
+                    "language": [
+                      "en"
+                    ]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "袋に収められた琴",
-                    "language": "ja"
+                    "language": [
+                      "ja"
+                    ]
                   }
                 ]
               },
