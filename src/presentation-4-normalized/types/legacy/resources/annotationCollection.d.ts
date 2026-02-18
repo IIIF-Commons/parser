@@ -3,4 +3,7 @@ import type { NormalizedLinkedEntity, NormalizedReference } from "../iiif/techni
 export type AnnotationCollectionNormalized = NormalizedLinkedEntity & {
   type: "AnnotationCollection";
   items: readonly NormalizedReference[];
+  first?: NormalizedReference;
+  last?: NormalizedReference;
+  total?: number;
 };

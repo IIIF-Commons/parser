@@ -288,9 +288,10 @@ export class Traverse {
     const withContainerItems = this.options.legacyPresentation3Behavior
       ? withCollectionItems
       : this.traverseContainerItems(withCollectionItems, path);
+    const withPaging = this.traversePagingReferences(withContainerItems, path, "CollectionPage");
 
     return this.traverseType(
-      this.traverseLinkedResources(withContainerItems, path),
+      this.traverseLinkedResources(withPaging, path),
       { parent, path },
       this.traversals.collection
     );
@@ -342,6 +343,34 @@ export class Traverse {
     return page;
   }
 
+  private traversePagingReferences(resource: any, path: string, typeHint: "CollectionPage" | "AnnotationPage") {
+    if (!resource || typeof resource !== "object") {
+      return resource;
+    }
+
+    for (const key of ["first", "last"] as const) {
+      if (!resource[key]) {
+        continue;
+      }
+
+      if (typeof resource[key] === "string") {
+        resource[key] = {
+          id: resource[key],
+          type: typeHint,
+        };
+        continue;
+      }
+
+      resource[key] = this.traverseUnknown(resource[key], {
+        parent: resource,
+        path: `${path}.${key}`,
+        typeHint,
+      });
+    }
+
+    return resource;
+  }
+
   traverseAnnotationPage(annotationPage: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseAnnotationItems(annotationPage, path), path),
@@ -352,7 +381,10 @@ export class Traverse {
 
   traverseAnnotationCollection(annotationCollection: any, parent?: any, path = "$"): any {
     return this.traverseType(
-      this.traverseLinkedResources(this.traverseAnnotationItems(annotationCollection, path), path),
+      this.traverseLinkedResources(
+        this.traversePagingReferences(this.traverseAnnotationItems(annotationCollection, path), path, "AnnotationPage"),
+        path
+      ),
       { parent, path },
       this.traversals.annotationCollection
     );
