@@ -12,10 +12,10 @@ export interface NormalizedReferenceObject {
 
 export interface NormalizedSpecificResourceReference extends NormalizedReferenceObject {
   type: "SpecificResource";
-  source: NormalizedReference | readonly NormalizedReference[];
-  selector?: Selector | readonly Selector[];
-  transform?: Transform | readonly Transform[];
-  action?: readonly NormalizedJsonValue[];
+  source: NormalizedReference;
+  selector: readonly Selector[];
+  transform: readonly Transform[];
+  action: readonly NormalizedJsonValue[];
   purpose?: readonly string[];
   scope?: NormalizedReference | string | readonly (NormalizedReference | string)[];
   styleClass?: string;

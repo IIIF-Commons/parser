@@ -63,13 +63,13 @@ const specificResourceWithoutId = {
 
 void specificResourceWithoutId;
 
-const annotationWithoutBody = {
+const annotationWithEmptyBody = {
   ...emptyAnnotation,
-  target: [{ id: "https://example.org/canvas/1", type: "Canvas" }],
-  body: undefined,
+  target: { id: "https://example.org/canvas/1", type: "Canvas" },
+  body: null,
 } satisfies AnnotationNormalized;
 
-void annotationWithoutBody;
+void annotationWithEmptyBody;
 
 const rangeWithSupplementary = {
   ...emptyRange,

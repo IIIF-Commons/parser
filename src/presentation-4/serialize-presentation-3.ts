@@ -15,9 +15,21 @@ const unsupportedContentTypes = new Set([
   "PointAudio",
   "SpotAudio",
 ]);
+const sequenceResourceTypes = new Set(["List", "Composite", "Independents"]);
 
 function unsupported(message: string): never {
   throw new Error(`Presentation 4 -> 3 downgrade unsupported: ${message}`);
+}
+
+function isEmptySequenceResource(value: any): boolean {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    return false;
+  }
+  const type = value.type || value["@type"];
+  if (!type || !sequenceResourceTypes.has(type)) {
+    return false;
+  }
+  return Array.isArray(value.items) && value.items.length === 0;
 }
 
 function filterList<T>(value: T[] | T | typeof UNSET | undefined): T[] | undefined {
@@ -25,7 +37,7 @@ function filterList<T>(value: T[] | T | typeof UNSET | undefined): T[] | undefin
     return undefined;
   }
   const list = Array.isArray(value) ? value : [value];
-  const filtered = list.filter((item) => item !== UNSET && Boolean(item));
+  const filtered = list.filter((item) => item !== UNSET && Boolean(item) && !isEmptySequenceResource(item));
   return filtered.length ? filtered : undefined;
 }
 
@@ -34,7 +46,20 @@ function inlineList<T>(value: T[] | T | undefined): T[] | undefined {
     return undefined;
   }
   const list = Array.isArray(value) ? value : [value];
-  const filtered = list.filter((item) => item !== null && typeof item !== "undefined");
+  const filtered = list.filter(
+    (item) => item !== null && typeof item !== "undefined" && !isEmptySequenceResource(item)
+  );
+  return filtered.length ? filtered : undefined;
+}
+
+function preserveObjectOrOmitEmptyList(value: any): any {
+  if (!value || value === UNSET) {
+    return undefined;
+  }
+  if (!Array.isArray(value)) {
+    return value;
+  }
+  const filtered = value.filter((item) => item !== UNSET && item !== null && typeof item !== "undefined");
   return filtered.length ? filtered : undefined;
 }
 
@@ -48,6 +73,28 @@ function normalizeAnnotationTarget(target: any): any {
   }
   const id = stripVaultId(target.id || target["@id"]);
   return id ? { id, type: "Annotation" } : { type: "Annotation" };
+}
+
+function resolveContentResourceReference(state: any, value: any): any {
+  if (Array.isArray(value)) {
+    return value.map((item) => resolveContentResourceReference(state, item));
+  }
+  if (!value || typeof value !== "object") {
+    return value;
+  }
+
+  const id = value.id || value["@id"];
+  if (!id) {
+    return value;
+  }
+
+  const explicitType = value.type || value["@type"];
+  const mappedType = state?.mapping?.[id];
+  if (explicitType !== "ContentResource" && mappedType !== "ContentResource") {
+    return value;
+  }
+
+  return state?.entities?.ContentResource?.[id] || value;
 }
 
 function asSingleOrArray<T>(items: T[] | undefined): T[] | T | undefined {
@@ -211,18 +258,25 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ["items", filterList(yield entity.items)],
       ["first", entity.first],
       ["last", entity.last],
-      ["total", entity.total],
+      ["total", typeof entity.total === "number" && entity.total > 0 ? entity.total : undefined],
     ];
   },
 
-  Annotation: function* (entity) {
+  Annotation: function* (entity, state) {
     ensureNoV4OnlyBehavior(entity);
     return [
       ...commonProperties(entity),
       ...(yield* linkedProperties(entity)),
       ["motivation", asSingleOrArray(entity.motivation)],
       ["body", asSingleOrArray(filterList(yield entity.body))],
-      ["target", asSingleOrArray(inlineList(entity.target)?.map((target) => normalizeAnnotationTarget(target)))],
+      [
+        "target",
+        asSingleOrArray(
+          inlineList(resolveContentResourceReference(state, entity.target))?.map((target) =>
+            normalizeAnnotationTarget(target)
+          )
+        ),
+      ],
       ["timeMode", entity.timeMode],
     ];
   },
@@ -233,7 +287,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...(yield* linkedProperties(entity)),
       ["items", filterList(yield entity.items)],
       ["start", entity.start ? yield entity.start : undefined],
-      ["supplementary", entity.supplementary ? yield entity.supplementary : undefined],
+      ["supplementary", filterList(yield entity.supplementary)],
     ];
   },
 
@@ -273,7 +327,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...commonProperties(entity),
       ...(yield* linkedProperties(entity)),
       ["items", entity.items ? filterList(yield entity.items) : undefined],
-      ["source", entity.source ? yield entity.source : undefined],
+      ["source", entity.source ? preserveObjectOrOmitEmptyList(yield entity.source) : undefined],
       ["selector", entity.selector ? asSingleOrArray(filterList(yield entity.selector)) : undefined],
     ];
   },

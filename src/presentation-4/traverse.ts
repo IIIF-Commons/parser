@@ -10,6 +10,7 @@ import {
   isQuantity,
   isSelector,
   isSpecificResource,
+  mintDeterministicId,
   sceneComponentTypes,
   structuralTypes,
 } from "./utilities";
@@ -391,74 +392,122 @@ export class Traverse {
   }
 
   private traverseAnnotationBody(annotation: any, path: string) {
-    if (annotation.body) {
-      const bodyValues = this.expandAnnotationListWrappers(annotation.body);
-      annotation.body = bodyValues.map((body: any, index: number) =>
-        this.traverseUnknown(body, {
+    if (annotation.body === null || typeof annotation.body === "undefined") {
+      annotation.body = null;
+      return annotation;
+    }
+
+    const bodyValues = ensureArray(annotation.body)
+      .map((body: any, index: number) => {
+        if (typeof body === "string") {
+          return this.traverseContentResource(
+            {
+              id: body,
+              type: "ContentResource",
+            },
+            annotation,
+            `${path}.body[${index}]`
+          );
+        }
+        if (!body || typeof body !== "object") {
+          return undefined;
+        }
+        return this.traverseUnknown(body, {
           parent: annotation,
           path: `${path}.body[${index}]`,
           typeHint: "ContentResource",
-        })
-      );
+        });
+      })
+      .filter((body: any) => !!body);
+
+    if (bodyValues.length === 0) {
+      annotation.body = null;
+      return annotation;
     }
+
+    annotation.body = this.toSingleAnnotationObject(bodyValues, annotation, `${path}.body`);
     return annotation;
   }
 
   private traverseAnnotationTarget(annotation: any, path: string) {
-    if (annotation.target) {
-      const originalTarget = annotation.target;
-      const targetValues = this.expandAnnotationListWrappers(annotation.target);
-      const targets = targetValues.map((target: any, index: number) => {
-        const targetPath = `${path}.target[${index}]`;
-        if (isSpecificResource(target)) {
-          return this.traverseSpecificResource(target, undefined, annotation, targetPath);
-        }
+    const targetValues = ensureArray(annotation.target);
+    const targets = targetValues
+      .map((target: any, index: number) =>
+        this.traverseAnnotationTargetValue(target, annotation, `${path}.target[${index}]`)
+      )
+      .filter((target: any) => !!target);
 
-        const typeHint = this.getContainerTypeHint(target, "Canvas");
-        const implicitSpecificResource = this.toImplicitSpecificResource(target, typeHint);
-        if (implicitSpecificResource) {
-          return this.traverseSpecificResource(implicitSpecificResource, typeHint, annotation, targetPath);
-        }
+    annotation.target = this.toSingleAnnotationObject(targets, annotation, `${path}.target`);
+    return annotation;
+  }
 
-        if (this.options.coerceContainerTargetsToSpecificResources) {
-          const specificResource = this.toSpecificResource(target, typeHint);
-          if (specificResource) {
-            return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
-          }
-        }
+  private traverseAnnotationTargetValue(target: any, annotation: any, targetPath: string): any {
+    if (isSpecificResource(target)) {
+      return this.traverseSpecificResource(target, undefined, annotation, targetPath);
+    }
 
-        if (typeof target === "string") {
-          const specificResource = this.toSpecificResource(target, typeHint);
-          if (specificResource && specificResource.selector) {
-            return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
-          }
-          return target;
-        }
+    const typeHint = this.getContainerTypeHint(target, "Canvas");
+    const targetType = getType(target);
 
-        const targetType = getType(target);
-        if (targetType && containerTypes.has(targetType)) {
-          const specificResource = this.toSpecificResource(target, typeHint);
-          if (specificResource && specificResource.selector) {
-            return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
-          }
-        }
+    if (
+      target &&
+      typeof target === "object" &&
+      !Array.isArray(target) &&
+      targetType &&
+      multiItemContentResourceTypes.has(targetType) &&
+      "items" in target
+    ) {
+      return this.traverseContentResource(
+        {
+          ...target,
+          items: ensureArray((target as any).items)
+            .map((item: any, index: number) =>
+              this.traverseAnnotationTargetValue(item, annotation, `${targetPath}.items[${index}]`)
+            )
+            .filter((item: any) => !!item),
+        },
+        annotation,
+        targetPath
+      );
+    }
 
-        if (isResourceReference(target)) {
-          return target;
-        }
-        return this.traverseUnknown(target, {
-          parent: annotation,
-          path: targetPath,
-        });
-      });
+    const implicitSpecificResource = this.toImplicitSpecificResource(target, typeHint);
+    if (implicitSpecificResource) {
+      return this.traverseSpecificResource(implicitSpecificResource, typeHint, annotation, targetPath);
+    }
 
-      if (this.options.legacyPresentation3Behavior) {
-        annotation.target = Array.isArray(originalTarget) ? targets : (targets[0] ?? null);
-      } else {
-        annotation.target = targets;
+    if (this.options.coerceContainerTargetsToSpecificResources) {
+      const specificResource = this.toSpecificResource(target, typeHint);
+      if (specificResource) {
+        return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
       }
     }
-    return annotation;
+
+    if (typeof target === "string") {
+      const specificResource = this.toSpecificResource(target, typeHint);
+      if (specificResource?.selector) {
+        return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
+      }
+      return {
+        id: target,
+        type: typeHint,
+      };
+    }
+
+    if (targetType && containerTypes.has(targetType)) {
+      const specificResource = this.toSpecificResource(target, typeHint);
+      if (specificResource && specificResource.selector) {
+        return this.traverseSpecificResource(specificResource, typeHint, annotation, targetPath);
+      }
+    }
+
+    if (isResourceReference(target)) {
+      return target;
+    }
+    return this.traverseUnknown(target, {
+      parent: annotation,
+      path: targetPath,
+    });
   }
 
   traverseAnnotation(annotation: any, parent?: any, path = "$"): any {
@@ -508,56 +557,44 @@ export class Traverse {
     }
 
     const source = specificResource.source;
-    let nextSource = source;
-    const sourceWasDetailedObject =
-      !!source &&
-      typeof source === "object" &&
-      !Array.isArray(source) &&
-      Object.keys(source).some((key) => key !== "id" && key !== "@id" && key !== "type" && key !== "@type");
+    const sourceItem = Array.isArray(source) ? source[0] : source;
+    let nextSource: any;
 
-    if (Array.isArray(source)) {
-      nextSource = source.map((sourceItem: any, index: number) =>
-        typeof sourceItem === "string"
-          ? sourceItem
-          : this.traverseUnknown(sourceItem, {
-              parent,
-              path: `${path}.source[${index}]`,
-              typeHint: typeHint || "ContentResource",
-            })
+    if (typeof sourceItem === "string") {
+      const [id] = splitCanvasFragment(sourceItem);
+      nextSource = {
+        id,
+        type: typeHint || "ContentResource",
+      };
+    } else if (sourceItem && typeof sourceItem === "object") {
+      const sourceWasDetailedObject = Object.keys(sourceItem).some(
+        (key) => key !== "id" && key !== "@id" && key !== "type" && key !== "@type"
       );
-    } else if (source && typeof source === "object") {
-      const traversedSource = this.traverseUnknown(source, {
+      const traversedSource = this.traverseUnknown(sourceItem, {
         parent,
-        path: `${path}.source`,
+        path: Array.isArray(source) ? `${path}.source[0]` : `${path}.source`,
         typeHint: typeHint || "ContentResource",
       });
+
       nextSource =
         this.options.legacyPresentation3Behavior && sourceWasDetailedObject && isResourceReference(traversedSource)
           ? {
-              ...source,
-              id: getId(traversedSource) || getId(source),
-              type: getType(traversedSource) || getType(source) || typeHint || "ContentResource",
+              ...sourceItem,
+              id: getId(traversedSource) || getId(sourceItem),
+              type: getType(traversedSource) || getType(sourceItem) || typeHint || "ContentResource",
             }
           : traversedSource;
     }
 
-    if (specificResource.selector) {
-      const wasSelectorArray = Array.isArray(specificResource.selector);
-      const selectors = ensureArray(specificResource.selector).map((selector: any, index: number) =>
-        this.traverseSelector(selector, specificResource, `${path}.selector[${index}]`)
-      );
-      specificResource.selector =
-        this.options.legacyPresentation3Behavior && !wasSelectorArray ? (selectors[0] ?? undefined) : selectors;
-    }
+    const selectors = ensureArray(specificResource.selector).map((selector: any, index: number) =>
+      this.traverseSelector(selector, specificResource, `${path}.selector[${index}]`)
+    );
+    specificResource.selector = selectors;
 
-    if (specificResource.transform) {
-      const wasTransformArray = Array.isArray(specificResource.transform);
-      const transforms = ensureArray(specificResource.transform).map((transform: any, index: number) =>
-        this.traverseTransform(transform, specificResource, `${path}.transform[${index}]`)
-      );
-      specificResource.transform =
-        this.options.legacyPresentation3Behavior && !wasTransformArray ? (transforms[0] ?? undefined) : transforms;
-    }
+    const transforms = ensureArray(specificResource.transform).map((transform: any, index: number) =>
+      this.traverseTransform(transform, specificResource, `${path}.transform[${index}]`)
+    );
+    specificResource.transform = transforms;
 
     if (specificResource.position && typeof specificResource.position === "object") {
       specificResource.position = this.traverseSpecificResource(
@@ -570,10 +607,6 @@ export class Traverse {
 
     if (nextSource) {
       specificResource.source = nextSource;
-    }
-
-    if (this.options.legacyPresentation3Behavior && !Object.hasOwn(specificResource, "selector")) {
-      specificResource.selector = undefined;
     }
 
     return this.traverseType(specificResource, { parent, path }, this.traversals.specificResource);
@@ -665,20 +698,25 @@ export class Traverse {
     return this.traverseType(service, { parent, path }, this.traversals.service);
   }
 
-  private expandAnnotationListWrappers(value: any): any[] {
-    const values = ensureArray(value);
-    const expanded: any[] = [];
-
-    for (const item of values) {
-      const itemType = getType(item);
-      if (item && typeof item === "object" && !Array.isArray(item) && itemType === "List" && "items" in item) {
-        expanded.push(...ensureArray((item as any).items));
-        continue;
-      }
-      expanded.push(item);
+  private toSingleAnnotationObject(values: any[], parent: any, path: string): any {
+    if (values.length === 1 && values[0] && typeof values[0] === "object") {
+      return values[0];
     }
 
-    return expanded;
+    const listResource = {
+      id: mintDeterministicId(
+        {
+          type: "List",
+          items: values,
+        },
+        "ContentResource",
+        path
+      ),
+      type: "List",
+      items: values,
+    };
+
+    return this.traverseContentResource(listResource, parent, path);
   }
 
   private traverseType<T>(object: T, context: TraversalContext, traversals: Array<Traversal<T>>): T {
@@ -728,6 +766,9 @@ export class Traverse {
 
     if (isSpecificResource(target)) {
       const normalized = { ...target };
+      if (Array.isArray(normalized.source)) {
+        normalized.source = normalized.source[0];
+      }
       if (typeof normalized.source === "string") {
         normalized.source = {
           id: normalized.source,
