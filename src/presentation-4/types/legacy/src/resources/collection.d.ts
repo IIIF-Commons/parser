@@ -10,7 +10,7 @@ import type { Timeline } from "./timeline";
 export type CollectionItem = Collection | ResourceReference<"Collection" | "Manifest">;
 export type CollectionAnnotation = AnnotationPage | ResourceReference<"AnnotationPage">;
 
-export type Collection = Prettify<{
+type CollectionBase = {
   // Unchanged from P3.
   id: string;
   type: "Collection";
@@ -26,7 +26,6 @@ export type Collection = Prettify<{
   navPlace?: Prettify<GeoJSON> | undefined;
 
   // New for P4.
-  items?: Array<CollectionItem>;
   annotations?: Array<CollectionAnnotation>;
   thumbnail?: Array<LinkedResource>;
   provider?: Array<AgentLike | ResourceReference<"Agent">>;
@@ -37,15 +36,28 @@ export type Collection = Prettify<{
   homepage?: Array<LinkedResource>;
   partOf?: Array<LinkedResource>;
   start?: Start;
-  first?: string | ResourceReference<"CollectionPage">;
-  last?: string | ResourceReference<"CollectionPage">;
-  total?: number;
   canonical?: string;
   via?: Array<string>;
   logo?: Array<LinkedResource>;
   supplementary?: Array<LinkedResource>;
   placeholderContainer?: Canvas | Timeline | Scene | null;
   accompanyingContainer?: Canvas | Timeline | Scene | null;
-}>;
+};
+
+type CollectionWithItems = {
+  items: Array<CollectionItem>;
+  first?: never;
+  last?: never;
+  total?: never;
+};
+
+type CollectionWithPages = {
+  items?: never;
+  first: string | ResourceReference<"CollectionPage">;
+  last: string | ResourceReference<"CollectionPage">;
+  total?: number;
+};
+
+export type Collection = Prettify<CollectionBase & (CollectionWithItems | CollectionWithPages)>;
 
 export type CollectionItemSchemas = "Collection" | "Manifest";

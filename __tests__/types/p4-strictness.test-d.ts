@@ -1,6 +1,7 @@
 import type {
   Annotation,
   AnnotationCollection,
+  Collection,
   CollectionPage,
   ImageResource,
   Manifest,
@@ -97,6 +98,60 @@ const annotationCollectionWithStart = {
 } satisfies AnnotationCollection;
 
 void annotationCollectionWithStart;
+
+const validCollectionWithItems = {
+  id: "https://example.org/collection/with-items",
+  type: "Collection",
+  label: { en: ["Collection"] },
+  items: [{ id: "https://example.org/manifest/1", type: "Manifest" }],
+} satisfies Collection;
+
+void validCollectionWithItems;
+
+const validCollectionWithPages = {
+  id: "https://example.org/collection/with-pages",
+  type: "Collection",
+  label: { en: ["Collection"] },
+  first: { id: "https://example.org/collection/with-pages/page/1", type: "CollectionPage" },
+  last: { id: "https://example.org/collection/with-pages/page/2", type: "CollectionPage" },
+  total: 2,
+} satisfies Collection;
+
+void validCollectionWithPages;
+
+// @ts-expect-error Collection must use items xor first/last paging
+const collectionWithItemsAndPages: Collection = {
+  id: "https://example.org/collection/invalid-both",
+  type: "Collection",
+  label: { en: ["Collection"] },
+  items: [],
+  first: { id: "https://example.org/collection/invalid-both/page/1", type: "CollectionPage" },
+  last: { id: "https://example.org/collection/invalid-both/page/2", type: "CollectionPage" },
+  total: 2,
+};
+
+void collectionWithItemsAndPages;
+
+// @ts-expect-error Collection must include either items or first/last
+const collectionWithNeitherItemsNorPages: Collection = {
+  id: "https://example.org/collection/invalid-neither",
+  type: "Collection",
+  label: { en: ["Collection"] },
+};
+
+void collectionWithNeitherItemsNorPages;
+
+const annotationCollectionWithItems = {
+  id: "https://example.org/annotations/invalid-items",
+  type: "AnnotationCollection",
+  label: { en: ["Annotations"] },
+  first: { id: "https://example.org/annotations/invalid-items/page/1", type: "AnnotationPage" },
+  last: { id: "https://example.org/annotations/invalid-items/page/2", type: "AnnotationPage" },
+  // @ts-expect-error AnnotationCollection is paging-only and must not include items
+  items: [{ id: "https://example.org/annotation/1", type: "Annotation" }],
+} satisfies AnnotationCollection;
+
+void annotationCollectionWithItems;
 
 const validAnnotationObjectBodyTarget = {
   id: "https://example.org/annotation/1",
