@@ -28,6 +28,8 @@ jobs:
       - run: pnpm run test
       - run: pnpm run lint
       - run: pnpm run typecheck
+      - run: node scripts/typecheck-p4-json-fixtures.mjs
+      - run: node scripts/typecheck-p4-normalized-fixtures.mjs
       - run: node pkg-tests/node-load.cjs
       - run: node pkg-tests/node-load.mjs
       - run: node pkg-tests/node-umd.mjs
