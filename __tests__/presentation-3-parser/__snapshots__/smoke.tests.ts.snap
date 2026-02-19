@@ -8550,6 +8550,13 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
           },
         ],
         "id": "https://iiif.vam.ac.uk/collections/O1023003/anno/a1",
+        "iiif-parser:hasPart": [
+          {
+            "id": "https://iiif.vam.ac.uk/collections/O1023003/anno/a1",
+            "iiif-parser:partOf": "https://iiif.vam.ac.uk/collections/O1023003/annopage/painting",
+            "type": "Annotation",
+          },
+        ],
         "motivation": [
           "painting",
         ],
@@ -8940,13 +8947,13 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
         "thumbnail": [],
         "type": "AnnotationPage",
       },
-      "vault://e29cf2aa": {
+      "https://iiif.vam.ac.uk/collections/O1023003/annopage/painting": {
         "behavior": [],
         "homepage": [],
-        "id": "vault://e29cf2aa",
+        "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/painting",
         "iiif-parser:hasPart": [
           {
-            "id": "vault://e29cf2aa",
+            "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/painting",
             "iiif-parser:partOf": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
             "type": "AnnotationPage",
           },
@@ -8986,7 +8993,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
         "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
         "items": [
           {
-            "id": "vault://e29cf2aa",
+            "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/painting",
             "type": "AnnotationPage",
           },
         ],
@@ -9368,6 +9375,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
     "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a7": "Annotation",
     "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a8": "Annotation",
     "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a9": "Annotation",
+    "https://iiif.vam.ac.uk/collections/O1023003/annopage/painting": "AnnotationPage",
     "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0": "Canvas",
     "https://iiif.vam.ac.uk/collections/O1023003/manifest.json": "Manifest",
     "vault://273a0e05": "ContentResource",
@@ -9378,7 +9386,6 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/ocean-liners.json 1
     "vault://9db702ac": "ContentResource",
     "vault://c83a324b": "ContentResource",
     "vault://cd5ac71c": "ContentResource",
-    "vault://e29cf2aa": "AnnotationPage",
     "vault://eb28a21a": "ContentResource",
     "vault://f2184d89": "ContentResource",
   },

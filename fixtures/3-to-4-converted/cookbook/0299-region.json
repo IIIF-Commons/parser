@@ -1,0 +1,41 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0299-region/manifest.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Berliner Tageblatt article, 'Ein neuer Sicherungsplan?'"
+    ]
+  },
+  "items": [
+    {
+      "id": "https://iiif.io/api/cookbook/recipe/0299-region/canvas/p1",
+      "type": "Canvas",
+      "height": 2080,
+      "width": 1768,
+      "duration": 0,
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0299-region/page/p1/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0299-region/annotation/p0001-image",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0299-region/canvas/p1",
+                  "type": "Canvas"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

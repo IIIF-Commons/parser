@@ -179,10 +179,10 @@
       "@none": ["e-codices - Virtual Manuscript Library of Switzerland"]
     }
   },
-  "homepage": {
+  "homepage": [{
     "id": "https://www.e-codices.ch/en/list/one/csg/0730",
     "type": "Text"
-  },
+  }],
   "partOf": [
     {
       "id": "https://www.e-codices.ch/en/list/csg",

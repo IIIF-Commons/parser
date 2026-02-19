@@ -1,5 +1,5 @@
 import { compressSpecificResource } from '../../src/shared/compress-specific-resource';
-import { SpecificResource } from '@iiif/presentation-3';
+import { SpecificResource } from '../../src/presentation-3/types';
 import { frameResource, WILDCARD } from '../../src';
 
 describe('Misc Utilites', function () {

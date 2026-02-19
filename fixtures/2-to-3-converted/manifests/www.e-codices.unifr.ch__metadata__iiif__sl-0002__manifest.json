@@ -196,10 +196,10 @@
       "@none": ["e-codices - Virtual Manuscript Library of Switzerland"]
     }
   },
-  "homepage": {
+  "homepage": [{
     "id": "http://www.e-codices.ch/en/list/one/sl/0002",
     "type": "Text"
-  },
+  }],
   "partOf": [
     {
       "id": "http://www.e-codices.ch/en/list/sl",

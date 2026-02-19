@@ -116,11 +116,11 @@
       "@none": ["Provided by Ghent University Library"]
     }
   },
-  "homepage": {
+  "homepage": [{
     "format": "text/html",
     "type": "Text",
     "id": "https://lib.ugent.be/viewer/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"
-  },
+  }],
   "items": [
     {
       "thumbnail": [

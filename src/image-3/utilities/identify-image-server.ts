@@ -7,11 +7,11 @@
  */
 export function identifyImageServer(url: string): string {
   // Strip off the protocol + www
-  const id = url.replace(/(https?:\/\/)?(www.)?/i, '');
+  const id = url.replace(/(https?:\/\/)?(www.)?/i, "");
 
   // Strip off the path.
-  if (id.indexOf('/') !== -1) {
-    return id.split('/')[0]!;
+  if (id.indexOf("/") !== -1) {
+    return id.split("/")[0]!;
   }
 
   // Return the id.

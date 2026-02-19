@@ -1,6 +1,6 @@
-import { ImageService } from '@iiif/presentation-3';
-import { isImageServiceLevel } from './is-image-service-level';
-import { isImageService } from './is-image-service';
+import type { ImageService } from "../../presentation-3/types";
+import { isImageServiceLevel } from "./is-image-service-level";
+import { isImageService } from "./is-image-service";
 
 export function getImageServiceLevel(service: ImageService): null | number {
   if (!isImageService(service)) {

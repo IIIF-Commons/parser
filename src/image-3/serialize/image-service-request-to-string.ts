@@ -1,18 +1,18 @@
-import { ImageServiceImageRequest } from '../types';
-import { regionParameterToString } from './region-parameter-to-string';
-import { sizeParameterToString } from './size-parameter-to-string';
-import { rotationParameterToString } from './rotation-parameter-to-string';
-import { ImageService } from '@iiif/presentation-3';
+import { ImageServiceImageRequest } from "../types";
+import { regionParameterToString } from "./region-parameter-to-string";
+import { sizeParameterToString } from "./size-parameter-to-string";
+import { rotationParameterToString } from "./rotation-parameter-to-string";
+import type { ImageService } from "../../presentation-3/types";
 
 export function imageServiceRequestToString(req: ImageServiceImageRequest, service?: ImageService): string {
-  const prefix = req.prefix.startsWith('/') ? req.prefix.substring(1) : req.prefix;
-  const baseUrl = `${req.scheme}://${req.server}/${prefix ? `${prefix}/` : ''}${req.identifier}`;
+  const prefix = req.prefix.startsWith("/") ? req.prefix.substring(1) : req.prefix;
+  const baseUrl = `${req.scheme}://${req.server}/${prefix ? `${prefix}/` : ""}${req.identifier}`;
 
-  if (req.type === 'base') {
+  if (req.type === "base") {
     return baseUrl;
   }
 
-  if (req.type === 'info') {
+  if (req.type === "info") {
     return `${baseUrl}/info.json`;
   }
 
@@ -21,13 +21,13 @@ export function imageServiceRequestToString(req: ImageServiceImageRequest, servi
 
   if (service) {
     // Service specific changes.
-    const ctx = service['@context']
-      ? Array.isArray(service['@context'])
-        ? service['@context']
-        : [service['@context']]
+    const ctx = service["@context"]
+      ? Array.isArray(service["@context"])
+        ? service["@context"]
+        : [service["@context"]]
       : [];
-    const is2 = ctx.indexOf('http://iiif.io/api/image/2/context.json') !== -1;
-    const is3 = ctx.indexOf('http://iiif.io/api/image/3/context.json') !== -1;
+    const is2 = ctx.indexOf("http://iiif.io/api/image/2/context.json") !== -1;
+    const is3 = ctx.indexOf("http://iiif.io/api/image/3/context.json") !== -1;
 
     // max size, for canonical.
     if (
@@ -77,5 +77,5 @@ export function imageServiceRequestToString(req: ImageServiceImageRequest, servi
     `${quality}.${format}`,
   ]
     .filter(Boolean)
-    .join('/');
+    .join("/");
 }

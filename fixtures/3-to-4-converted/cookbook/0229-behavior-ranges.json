@@ -1,0 +1,252 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/manifest.json ",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Video navigation with thumbnails in a Range"
+    ]
+  },
+  "items": [
+    {
+      "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/canvas/1",
+      "type": "Canvas",
+      "height": 1080,
+      "width": 1920,
+      "duration": 3307.22,
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/canvas/1/annotation_page/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/canvas/1/annotation_page/1/annotation/2",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "body": {
+                "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
+                "type": "Video",
+                "format": "video/mp4",
+                "height": 1080,
+                "width": 1920,
+                "duration": 3307.22
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/canvas/1",
+                  "type": "Canvas"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/1",
+      "type": "Range",
+      "label": {
+        "en": [
+          "Thumbnail Navigation"
+        ]
+      },
+      "behavior": [
+        "thumbnail-nav"
+      ],
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/1.1",
+          "type": "Range",
+          "behavior": [
+            "no-nav"
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/2",
+          "type": "Range",
+          "label": {
+            "en": [
+              "9s – 305s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-01.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/3",
+          "type": "Range",
+          "label": {
+            "en": [
+              "305s – 610s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-02.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/4",
+          "type": "Range",
+          "label": {
+            "en": [
+              "610s – 915s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-03.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/5",
+          "type": "Range",
+          "label": {
+            "en": [
+              "915s – 1220s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-04.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/6",
+          "type": "Range",
+          "label": {
+            "en": [
+              "1220s – 1525s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-05.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/7",
+          "type": "Range",
+          "label": {
+            "en": [
+              "1525s – 1830s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-06.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/8",
+          "type": "Range",
+          "label": {
+            "en": [
+              "1830s – 2135s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-07.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/9",
+          "type": "Range",
+          "label": {
+            "en": [
+              "2135s – 2440s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-08.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/10",
+          "type": "Range",
+          "label": {
+            "en": [
+              "2440s – 2745s"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-09.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        },
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/11",
+          "type": "Range",
+          "label": {
+            "en": [
+              "2745s – end"
+            ]
+          },
+          "thumbnail": [
+            {
+              "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/thumbnails/thumb-nav-10.png",
+              "type": "Image",
+              "format": "image/png",
+              "height": 1266,
+              "width": 2250
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

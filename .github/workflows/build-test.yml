@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['18', '22']
+        node: ['22']
 
     name: Node ${{ matrix.node }} build
     steps:
@@ -28,6 +28,9 @@ jobs:
       - run: pnpm run test
       - run: pnpm run lint
       - run: pnpm run typecheck
+      - run: node scripts/typecheck-p4-json-fixtures.mjs
+      - run: node scripts/typecheck-p4-normalized-fixtures.mjs
       - run: node pkg-tests/node-load.cjs
       - run: node pkg-tests/node-load.mjs
       - run: node pkg-tests/node-umd.mjs
+      - run: pnpm dlx pkg-pr-new publish

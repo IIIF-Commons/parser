@@ -17,7 +17,7 @@
     "strict": true,
     "target": "ES2022",
     "allowJs": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals", "@types/node"]
   },
   "include": ["./src/**/*", "./src/*", "./__tests__/**/*", "./demos/**/*", "./fixtures/**/*"],
   "exclude": ["node_modules", "dist"]

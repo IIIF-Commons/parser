@@ -1,0 +1,46 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/manifest-service.json ",
+  "type": "Manifest",
+  "label": {
+    "ca": [
+      "[Conoximent de las orines] Ihesus, Ihesus. En nom de Deu et dela beneyeta sa mare e de tots los angels i archangels e de tots los sants e santes de paradis yo micer Johannes comense aquest libre de reseptes en l’ayn Mi 466."
+    ]
+  },
+  "items": [
+    {
+      "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
+      "type": "Canvas",
+      "label": {
+        "en": [
+          "inside cover; 1r"
+        ]
+      },
+      "height": 1523,
+      "width": 2105,
+      "duration": 0,
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/p1/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/annotation/v0001-image",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/canvas/p1",
+                  "type": "Canvas"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

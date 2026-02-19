@@ -1,4 +1,4 @@
-import type { Manifest } from '@iiif/presentation-3';
+import type { Manifest } from '../../src/presentation-3/types';
 import manifestFixture from '../../fixtures/2-to-3-converted/manifests/iiif.io__api__presentation__2.1__example__fixtures__1__manifest.json';
 import p2ManifestWithStart from '../../fixtures/presentation-2/bl-manifest.json';
 import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';

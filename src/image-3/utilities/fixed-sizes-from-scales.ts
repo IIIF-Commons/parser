@@ -1,4 +1,4 @@
-import { ImageSize } from '@iiif/presentation-3';
+import type { ImageSize } from "../../presentation-3/types";
 
 /**
  * Fixed sizes from scales.

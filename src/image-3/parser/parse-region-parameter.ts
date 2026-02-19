@@ -1,16 +1,16 @@
-import { RegionParameter } from '../types';
+import { RegionParameter } from "../types";
 
 export function parseRegionParameter(pathPart: string): RegionParameter {
   try {
-    if (pathPart === 'full') {
+    if (pathPart === "full") {
       return { full: true };
     }
-    if (pathPart === 'square') {
+    if (pathPart === "square") {
       return { square: true };
     }
 
-    const percent = pathPart.startsWith('pct:');
-    const stringParts = pathPart.substr(percent ? 4 : 0).split(',');
+    const percent = pathPart.startsWith("pct:");
+    const stringParts = pathPart.substr(percent ? 4 : 0).split(",");
     const xywh = stringParts.map((part) => parseFloat(part));
     return {
       x: xywh[0],

@@ -1,8 +1,8 @@
-import { RotationParameter } from '../types';
+import { RotationParameter } from "../types";
 
 export function parseRotationParameter(pathPart: string): RotationParameter {
   const rotation: RotationParameter = { angle: 0 };
-  if (pathPart[0] === '!') {
+  if (pathPart[0] === "!") {
     rotation.mirror = true;
     pathPart = pathPart.substr(1);
   }

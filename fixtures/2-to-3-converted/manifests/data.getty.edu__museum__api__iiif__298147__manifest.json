@@ -125,10 +125,10 @@
       ]
     }
   },
-  "homepage": {
+  "homepage": [{
     "id": "https://www.getty.edu/art/collection/objects/298147/jean-antoine-watteau-la-surprise-french-1718-1719/",
     "type": "Text"
-  },
+  }],
   "partOf": [
     {
       "id": "http://www.getty.edu/art/collection/",

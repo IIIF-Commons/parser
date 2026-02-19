@@ -1,0 +1,291 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://data.ucd.ie/api/img/manifests/ucdlib:33064",
+  "type": "Manifest",
+  "label": {
+    "@none": [
+      "Housing Plans for Greater Dublin"
+    ]
+  },
+  "metadata": [
+    {
+      "label": {
+        "@none": [
+          "title"
+        ]
+      },
+      "value": {
+        "@none": [
+          "Housing Plans for Greater Dublin"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "Type of resource"
+        ]
+      },
+      "value": {
+        "@none": [
+          "dctypes:StillImage"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "published"
+        ]
+      },
+      "value": {
+        "@none": [
+          "Urbana, Ill."
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "created"
+        ]
+      },
+      "value": {
+        "@none": [
+          "1914"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "Exhibitions"
+        ]
+      },
+      "value": {
+        "@none": [
+          "A label included with the drawings indicates that Cushing Smith later exhibited the drawings in the Thirtieth Annual Chicago Architectural Exhibition, Art Institute of Chicago, 5-29 April, 1917."
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "Ownership/custodial history"
+        ]
+      },
+      "value": {
+        "@none": [
+          "The drawings were donated to the Wilmette Historical Museum, Wilmette, Illinois by Cushing Smith&apos;s granddaughter, Mary Duke Smith, and daughter-in-law, Joan Smith. With the Smiths permission, Wilmette Historical Museum donated the drawings to the Irish Architectural Archive in 2011."
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "permalink"
+        ]
+      },
+      "value": {
+        "@none": [
+          "doi:10.7925/drs1.ucdlib_33064"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "topic-LCSH"
+        ]
+      },
+      "value": {
+        "@none": [
+          "City planning",
+          "Architecture, Domestic"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "genre"
+        ]
+      },
+      "value": {
+        "@none": [
+          "Competition drawings"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "genre"
+        ]
+      },
+      "value": {
+        "@none": [
+          "Architectural drawings"
+        ]
+      }
+    },
+    {
+      "label": {
+        "@none": [
+          "Description"
+        ]
+      },
+      "value": {
+        "@none": [
+          "Drawing submitted by F.A. Cushing Smith to the town plan for Dublin international competition organised by the Civics Institute of Ireland in 1914. Cushing Smith was the sole US entrant and also one of only two single-person entrants. His address at the time of the competition was the University Club, Urbana, Illinois. To ensure anonymity during the adjudication process his entry was give the designation &apos;B&apos;. Aside from the winners, the adjudicators were unanimous in giving Honourable Mention to four entries including Cushing Smith&apos;s. This drawing includes plans and elevations for various types of housing and a block plan of suburban house arrangements."
+        ]
+      }
+    }
+  ],
+  "requiredStatement": {
+    "label": {
+      "@none": [
+        "Attribution"
+      ]
+    },
+    "value": {
+      "@none": [
+        "Irish Architectural Archive"
+      ]
+    }
+  },
+  "thumbnail": [
+    {
+      "id": "https://digital.ucd.ie/get/ucdlib:33064/thumbnail",
+      "type": "Image"
+    }
+  ],
+  "seeAlso": [
+    {
+      "id": "https://digital.ucd.ie/view/ucdlib:33064.xml",
+      "type": "Dataset",
+      "label": {
+        "@none": [
+          "MODS metadata describing this object"
+        ]
+      },
+      "profile": "http://www.loc.gov/mods/v3",
+      "format": "text/xml"
+    },
+    {
+      "id": "https://digital.ucd.ie/view/ucdlib:33064.n3",
+      "type": "Dataset",
+      "label": {
+        "@none": [
+          "RDF n3 serialisation of metadata describing this object"
+        ]
+      },
+      "format": "text/rdf+n3"
+    },
+    {
+      "id": "https://data.ucd.ie/api/edm/v1/ucdlib:33064",
+      "type": "Dataset",
+      "label": {
+        "@none": [
+          "EDM (Europeana Data Model) RDF metadata"
+        ]
+      },
+      "profile": "http://www.europeana.eu/schemas/edm/",
+      "format": "application/x.europeana-edm+xml"
+    },
+    {
+      "id": "https://digital.ucd.ie/view/ucdlib:33064.rdf",
+      "type": "Dataset",
+      "label": {
+        "@none": [
+          "RDF-XML metadata describing this object"
+        ]
+      },
+      "format": "application/rdf+xml"
+    }
+  ],
+  "partOf": [
+    {
+      "id": "https://data.ucd.ie/api/img/collection/ucdlib:33058",
+      "type": "Collection",
+      "label": {
+        "@none": [
+          "Dublin Town Planning Competition 1914"
+        ]
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
+      "type": "Canvas",
+      "label": {
+        "@none": [
+          "recto"
+        ]
+      },
+      "height": 14214,
+      "width": 14451,
+      "duration": 0,
+      "service": [
+        {
+          "profile": "http://iiif.io/api/annex/services/physdim",
+          "physicalScale": 0.00333333333333333,
+          "physicalUnits": "in",
+          "type": "Service"
+        }
+      ],
+      "items": [
+        {
+          "id": "https://example.org/uuid/46df4103-9fa4-4f30-b85d-f01fc6bbaa9c",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://data.ucd.ie/api/img/ucdlib:33064/annotation/ucdlib:33543",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "body": {
+                "id": "https://iiif.ucd.ie/loris/ucdlib:33543/full/full/0/default.jpg",
+                "type": "dcTypes:Image",
+                "format": "image/jpeg",
+                "height": 14214,
+                "width": 14451,
+                "service": [
+                  {
+                    "profile": "http://iiif.io/api/image/2/level2.json",
+                    "id": "https://iiif.ucd.ie/loris/ucdlib:33543",
+                    "type": "ImageService2"
+                  }
+                ]
+              },
+              "target": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
+                  "type": "Canvas"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "structures": [
+    {
+      "id": "https://data.ucd.ie/api/img/manifests/ucdlib:33064/sequence/normal",
+      "type": "Range",
+      "label": {
+        "@none": [
+          "Current Page Order"
+        ]
+      },
+      "behavior": [
+        "sequence",
+        "individuals"
+      ]
+    }
+  ]
+}
