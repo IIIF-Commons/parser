@@ -117,6 +117,16 @@
 				"default": "./dist/presentation-4/upgrader.js"
 			}
 		},
+		"./presentation-4/validator": {
+			"require": {
+				"types": "./dist/presentation-4/validator.d.cts",
+				"default": "./dist/presentation-4/validator.cjs"
+			},
+			"import": {
+				"types": "./dist/presentation-4/validator.d.ts",
+				"default": "./dist/presentation-4/validator.js"
+			}
+		},
 		"./presentation-4-normalized": {
 			"require": {
 				"types": "./dist/presentation-4-normalized.d.cts",
