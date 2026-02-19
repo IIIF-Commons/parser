@@ -248,6 +248,52 @@ describe("presentation-4 validator", () => {
     expect(report.issues.some((issue) => issue.code === "annotation-target-entry-object")).toBe(true);
   });
 
+  test("reports malformed List-form annotation targets when items is not an array", () => {
+    const invalid = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/target-list-items-shape",
+      type: "Manifest",
+      label: { en: ["target list shape"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/canvas/1/page/1/anno/1",
+                  type: "Annotation",
+                  motivation: ["painting"],
+                  body: {
+                    id: "https://example.org/image.jpg",
+                    type: "Image",
+                    format: "image/jpeg",
+                  },
+                  target: {
+                    type: "List",
+                    items: {
+                      id: "https://example.org/canvas/1",
+                      type: "Canvas",
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(invalid, { mode: "tolerant" });
+    expect(report.valid).toBe(false);
+    expect(report.issues.some((issue) => issue.code === "annotation-target-list-items-array")).toBe(true);
+  });
+
   test("coerces PointSelector.t to instant during validation upgrade pass", () => {
     const fixture = {
       "@context": "http://iiif.io/api/presentation/4/context.json",
@@ -488,6 +534,46 @@ describe("presentation-4 validator", () => {
       (item) => item.code.startsWith("class-requirement-") && item.path.includes(".target")
     );
     expect(targetClassRequirementIssues).toEqual([]);
+  });
+
+  test("does not validate range item canvas references as full canvases", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/range-canvas-ref",
+      type: "Manifest",
+      label: { en: ["range canvas ref"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [],
+        },
+      ],
+      structures: [
+        {
+          id: "https://example.org/range/1",
+          type: "Range",
+          label: { en: ["chapter 1"] },
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(manifest, { mode: "tolerant" });
+    const rangeCanvasClassRequirementIssues = report.issues.filter(
+      (item) => item.code.startsWith("class-requirement-") && item.path.startsWith("$.structures[0].items[0].")
+    );
+
+    expect(rangeCanvasClassRequirementIssues).toEqual([]);
+    expect(report.issues.some((issue) => issue.code === "canvas-width-required")).toBe(false);
+    expect(report.issues.some((issue) => issue.code === "canvas-height-required")).toBe(false);
   });
 
   test("does not apply class requirements to partOf references", () => {
