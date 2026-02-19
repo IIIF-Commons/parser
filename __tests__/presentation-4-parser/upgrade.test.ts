@@ -2,7 +2,8 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { cwd } from "node:process";
 import { describe, expect, test } from "vitest";
-import { upgradePresentation3To4, upgradeToPresentation4, validatePresentation4 } from "../../src/presentation-4";
+import { upgradePresentation3To4, upgradeToPresentation4 } from "../../src/presentation-4";
+import { validatePresentation4 } from "../../src/presentation-4/validator";
 
 const PRESENTATION_4_CONTEXT = "http://iiif.io/api/presentation/4/context.json";
 

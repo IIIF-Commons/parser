@@ -1,6 +1,7 @@
 import { performance } from "node:perf_hooks";
 import { describe, expect, test } from "vitest";
-import { normalize, serialize, serializeConfigPresentation4, validatePresentation4 } from "../../src/presentation-4";
+import { normalize, serialize, serializeConfigPresentation4 } from "../../src/presentation-4";
+import { validatePresentation4 } from "../../src/presentation-4/validator";
 
 function createLargeCanvasManifest(canvasCount = 200, annotationsPerCanvas = 4) {
   return {

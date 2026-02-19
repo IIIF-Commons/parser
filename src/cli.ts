@@ -11,8 +11,8 @@ import {
   serializeConfigPresentation3,
   serializeConfigPresentation4,
   upgradeToPresentation4,
-  validatePresentation4,
 } from "./presentation-4";
+import { validatePresentation4 } from "./presentation-4/validator";
 
 type CliDeps = {
   readFileText: (path: string) => Promise<string>;

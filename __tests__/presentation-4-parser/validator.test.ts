@@ -2,7 +2,8 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { cwd } from "node:process";
 import { describe, expect, test } from "vitest";
-import { upgradeToPresentation4, validatePresentation4 } from "../../src/presentation-4";
+import { upgradeToPresentation4 } from "../../src/presentation-4";
+import { validatePresentation4 } from "../../src/presentation-4/validator";
 
 describe("presentation-4 validator", () => {
   test("accepts authored v4 fixtures with object/List annotation target and body", () => {
