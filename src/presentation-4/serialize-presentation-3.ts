@@ -129,10 +129,7 @@ function compactContainerTargetReference(target: any): any {
 
   const id = stripVaultId(target.id || target["@id"]);
   if (id) {
-    return {
-      id,
-      type: "Canvas",
-    };
+    return id;
   }
 
   return { type: "Canvas" };

@@ -72,10 +72,7 @@ describe("presentation-4 to presentation-3 downgrade serializer", () => {
 
     expect(serialized.items[0].items[0].items[0].target).toEqual([
       "https://example.org/iiif/timeline/1#t=0,10",
-      {
-        id: "https://example.org/iiif/scene/1",
-        type: "Canvas",
-      },
+      "https://example.org/iiif/scene/1",
     ]);
   });
 
