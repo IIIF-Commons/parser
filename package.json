@@ -12,9 +12,7 @@
 	"main": "dist/index.cjs",
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
-	"bin": {
-		"@iiif/parser": "./dist/cli.mjs"
-	},
+	"bin": "./dist/cli.mjs",
 	"files": [
 		"dist"
 	],
