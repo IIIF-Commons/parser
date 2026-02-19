@@ -208,13 +208,11 @@
 		"tsdown": "^0.20.3",
 		"tslib": "^2.6.2",
 		"typescript": "^5.9.3",
+		"picocolors": "^1.1.1",
 		"vitest": "^4.0.18"
 	},
 	"sideEffects": false,
 	"publishConfig": {
 		"access": "public"
-	},
-	"dependencies": {
-		"picocolors": "^1.1.1"
 	}
 }

@@ -5,6 +5,7 @@ export default defineConfig({
   format: ["esm"],
   platform: "node",
   clean: false,
+  inlineOnly: false,
   entry: {
     cli: "src/cli.ts",
   },
