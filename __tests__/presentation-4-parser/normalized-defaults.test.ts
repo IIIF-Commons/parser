@@ -157,10 +157,11 @@ describe("presentation-4 normalized defaults", () => {
     ]);
     expect((normalizedRange.items as unknown[]).length).toBe(0);
 
-    const normalizedTargetEntity = result.entities.ContentResource[(normalizedAnnotation as any).target.id] as any;
-    expect(normalizedTargetEntity).toBeTruthy();
-    expectArrayFields(normalizedTargetEntity, ["selector", "transform"]);
-    expect(Array.isArray(normalizedTargetEntity.source)).toBe(false);
+    const normalizedTarget = (normalizedAnnotation as any).target;
+    expect(normalizedTarget.type).toBe("SpecificResource");
+    expectArrayFields(normalizedTarget, ["selector", "transform"]);
+    expect(Array.isArray(normalizedTarget.source)).toBe(false);
+    expect(result.entities.ContentResource[normalizedTarget.id]).toBeUndefined();
   });
 
   test("applies canonical defaults for legacy-upgraded resources", () => {
@@ -202,12 +203,13 @@ describe("presentation-4 normalized defaults", () => {
     const result = normalize(legacyManifest as any);
     const annotation = result.entities.Annotation["https://example.org/canvas/1/annotation/1"] as any;
     const range = result.entities.Range["https://example.org/range/1"] as any;
-    const target = result.entities.ContentResource[annotation.target.id] as any;
+    const target = annotation.target;
 
     expect(annotation.body).toBeNull();
     expect(Array.isArray(range.supplementary)).toBe(true);
     expectArrayFields(target, ["selector", "transform"]);
     expect(Array.isArray(target.source)).toBe(false);
+    expect(result.entities.ContentResource[target.id]).toBeUndefined();
   });
 
   test("wraps multiple body/target values in minted List resources", () => {
@@ -247,7 +249,7 @@ describe("presentation-4 normalized defaults", () => {
     const normalized = normalize(manifest as any);
     const annotation = normalized.entities.Annotation["https://example.org/canvas/1/annotation/1"] as any;
     const body = normalized.entities.ContentResource[annotation.body.id] as any;
-    const target = normalized.entities.ContentResource[annotation.target.id] as any;
+    const target = annotation.target;
 
     expect(annotation.body.id.startsWith("vault://iiif-parser/v4/ContentResource/")).toBe(true);
     expect(annotation.target.id.startsWith("vault://iiif-parser/v4/ContentResource/")).toBe(true);
@@ -257,6 +259,8 @@ describe("presentation-4 normalized defaults", () => {
     expect(Array.isArray(target.items)).toBe(true);
     expect(body.items).toHaveLength(2);
     expect(target.items).toHaveLength(2);
+    expect(target.items[0].type).toBe("SpecificResource");
+    expect(normalized.entities.ContentResource[annotation.target.id]).toBeUndefined();
   });
 
   test("defaults annotation collection paging fields", () => {
