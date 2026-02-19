@@ -96,7 +96,7 @@ function isListWrapper(value: any): boolean {
 
 function getAnnotationEntries(value: any): any[] {
   if (isListWrapper(value)) {
-    return ensureArray((value as any).items);
+    return Array.isArray((value as any).items) ? (value as any).items : [];
   }
   if (Array.isArray(value)) {
     return value;
@@ -145,6 +145,38 @@ function isLikelyReferenceTimeline(timeline: any): boolean {
     return false;
   }
   return true;
+}
+
+function isLikelyReferenceScene(scene: any): boolean {
+  if (!isPlainObject(scene)) {
+    return false;
+  }
+  if (!getId(scene) || getType(scene) !== "Scene") {
+    return false;
+  }
+  if ("duration" in scene || "items" in scene || "annotations" in scene) {
+    return false;
+  }
+  return true;
+}
+
+function isRangeContainerReference(node: any, parent: any): boolean {
+  if (!isPlainObject(node) || !isPlainObject(parent) || getType(parent) !== "Range") {
+    return false;
+  }
+
+  const type = getType(node);
+  if (type === "Canvas") {
+    return isLikelyReferenceCanvas(node);
+  }
+  if (type === "Timeline") {
+    return isLikelyReferenceTimeline(node);
+  }
+  if (type === "Scene") {
+    return isLikelyReferenceScene(node);
+  }
+
+  return false;
 }
 
 function isReferenceAnnotation(annotation: any): boolean {
@@ -226,6 +258,26 @@ function validateAnnotationShape(annotation: any, nodePath: string, issues: Vali
       specRef: "#target",
     });
   } else {
+    if (isListWrapper(annotation.target)) {
+      if (!Array.isArray((annotation.target as any).items)) {
+        issue(issues, {
+          code: "annotation-target-list-items-array",
+          message: "Annotation.target List must include an items array",
+          path: `${nodePath}.target.items`,
+          resource: annotation,
+          specRef: "#target",
+        });
+      } else if ((annotation.target as any).items.length === 0) {
+        issue(issues, {
+          code: "annotation-target-list-items-empty",
+          message: "Annotation.target List must include at least one item",
+          path: `${nodePath}.target.items`,
+          resource: annotation,
+          specRef: "#target",
+        });
+      }
+    }
+
     const targets = getAnnotationEntries(annotation.target);
     for (let i = 0; i < targets.length; i++) {
       const target = targets[i];
@@ -689,10 +741,14 @@ export function runClassRequirementValidation(resource: any): {
 
     stats.nodesChecked++;
     const { className, requirement } = classRequirement;
+    const rangeContainerReference = isRangeContainerReference(node, parent);
 
     for (const property of requirement.must) {
       stats.mustChecks++;
       if (className === "Service" && (property === "id" || property === "type")) {
+        continue;
+      }
+      if (rangeContainerReference && property !== "id" && property !== "type") {
         continue;
       }
       if (property === "width" || property === "height") {
@@ -720,6 +776,9 @@ export function runClassRequirementValidation(resource: any): {
 
     for (const property of requirement.should) {
       stats.shouldChecks++;
+      if (rangeContainerReference) {
+        continue;
+      }
       if (!shouldCheckShouldProperty(className, property, node, parent)) {
         continue;
       }

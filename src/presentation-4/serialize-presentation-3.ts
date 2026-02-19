@@ -1,5 +1,6 @@
 import { type SerializeConfig, UNSET } from "./serialize";
 import { PRESENTATION_3_CONTEXT, sceneComponentTypes } from "./utilities";
+import { compressSpecificResource } from "../shared/compress-specific-resource";
 
 const unsupportedSelectorTypes = new Set(["PointSelector", "WktSelector", "AnimationSelector"]);
 const unsupportedContainerTypes = new Set(["Scene"]);
@@ -41,17 +42,6 @@ function filterList<T>(value: T[] | T | typeof UNSET | undefined): T[] | undefin
   return filtered.length ? filtered : undefined;
 }
 
-function inlineList<T>(value: T[] | T | undefined): T[] | undefined {
-  if (!value) {
-    return undefined;
-  }
-  const list = Array.isArray(value) ? value : [value];
-  const filtered = list.filter(
-    (item) => item !== null && typeof item !== "undefined" && !isEmptySequenceResource(item)
-  );
-  return filtered.length ? filtered : undefined;
-}
-
 function preserveObjectOrOmitEmptyList(value: any): any {
   if (!value || value === UNSET) {
     return undefined;
@@ -73,6 +63,184 @@ function normalizeAnnotationTarget(target: any): any {
   }
   const id = stripVaultId(target.id || target["@id"]);
   return id ? { id, type: "Annotation" } : { type: "Annotation" };
+}
+
+function isPlainObject(value: any): boolean {
+  return !!value && typeof value === "object" && !Array.isArray(value);
+}
+
+function isListWrapper(value: any): boolean {
+  if (!isPlainObject(value)) {
+    return false;
+  }
+  const type = value.type || value["@type"];
+  return type === "List" && Object.hasOwn(value, "items");
+}
+
+function getAnnotationEntries(value: any): any[] | undefined {
+  if (!value || value === UNSET) {
+    return undefined;
+  }
+
+  if (Array.isArray(value)) {
+    return value;
+  }
+
+  if (isListWrapper(value)) {
+    return Array.isArray(value.items) ? value.items : undefined;
+  }
+
+  return [value];
+}
+
+function remapContainerReferenceToCanvas(value: any): any {
+  if (!isPlainObject(value)) {
+    return value;
+  }
+
+  const type = value.type || value["@type"];
+  if (type !== "Timeline" && type !== "Scene") {
+    return value;
+  }
+
+  if (Object.hasOwn(value, "type")) {
+    return { ...value, type: "Canvas" };
+  }
+
+  return { ...value, "@type": "Canvas" };
+}
+
+function normalizeTargetContainerType(type: string | undefined): string | undefined {
+  if (type === "Timeline" || type === "Scene") {
+    return "Canvas";
+  }
+  return type;
+}
+
+function compactContainerTargetReference(target: any): any {
+  if (!isPlainObject(target)) {
+    return target;
+  }
+
+  const targetType = normalizeTargetContainerType(target.type || target["@type"]);
+  if (!targetType || targetType !== "Canvas") {
+    return target;
+  }
+
+  const id = stripVaultId(target.id || target["@id"]);
+  if (id) {
+    return {
+      id,
+      type: "Canvas",
+    };
+  }
+
+  return { type: "Canvas" };
+}
+
+function remapAnnotationTargetToCanvas(target: any): any {
+  if (!isPlainObject(target)) {
+    return target;
+  }
+
+  if (isListWrapper(target)) {
+    return {
+      ...target,
+      items: Array.isArray(target.items) ? target.items.map((item: any) => remapAnnotationTargetToCanvas(item)) : [],
+    };
+  }
+
+  const type = target.type || target["@type"];
+  if (type === "SpecificResource") {
+    const source = target.source;
+    if (Array.isArray(source)) {
+      return {
+        ...target,
+        source: source.map((item) => remapContainerReferenceToCanvas(item)),
+      };
+    }
+    if (isPlainObject(source)) {
+      return {
+        ...target,
+        source: remapContainerReferenceToCanvas(source),
+      };
+    }
+    return target;
+  }
+
+  return remapContainerReferenceToCanvas(target);
+}
+
+function normalizeSpecificResourceTargetForCompression(target: any, state: any): any {
+  if (!isPlainObject(target)) {
+    return target;
+  }
+
+  const specificTarget: Record<string, any> = {
+    ...target,
+    type: "SpecificResource",
+  };
+  delete specificTarget.id;
+  delete specificTarget["@id"];
+  delete specificTarget["@type"];
+
+  if (Array.isArray(specificTarget.selector)) {
+    const selectors = specificTarget.selector.filter(
+      (selector: any) => selector !== null && typeof selector !== "undefined"
+    );
+    if (selectors.length === 1) {
+      specificTarget.selector = selectors[0];
+    } else if (selectors.length === 0) {
+      delete specificTarget.selector;
+    }
+  }
+
+  if (Array.isArray(specificTarget.transform) && specificTarget.transform.length === 0) {
+    delete specificTarget.transform;
+  }
+  if (Array.isArray(specificTarget.action) && specificTarget.action.length === 0) {
+    delete specificTarget.action;
+  }
+
+  if (Array.isArray(specificTarget.source)) {
+    specificTarget.source = specificTarget.source[0];
+  }
+
+  if (typeof specificTarget.source === "string") {
+    const sourceId = specificTarget.source;
+    const mappedType = normalizeTargetContainerType(state?.mapping?.[sourceId]) || "Canvas";
+    specificTarget.source = {
+      id: sourceId,
+      type: mappedType,
+    };
+  } else if (isPlainObject(specificTarget.source)) {
+    const sourceType = normalizeTargetContainerType(specificTarget.source.type || specificTarget.source["@type"]);
+    specificTarget.source = {
+      ...specificTarget.source,
+      ...(sourceType ? { type: sourceType } : {}),
+    };
+  }
+
+  return specificTarget;
+}
+
+function serializeAnnotationTarget(target: any, state: any): any {
+  const normalizedTarget = normalizeAnnotationTarget(remapAnnotationTargetToCanvas(target));
+  const targetType = normalizedTarget?.type || normalizedTarget?.["@type"];
+
+  if (targetType === "Canvas") {
+    return compactContainerTargetReference(normalizedTarget);
+  }
+
+  if (targetType !== "SpecificResource") {
+    return normalizedTarget;
+  }
+
+  return compressSpecificResource(normalizeSpecificResourceTargetForCompression(normalizedTarget, state) as any, {
+    allowString: true,
+    allowSourceString: true,
+    allowedStringType: "Canvas",
+  });
 }
 
 function resolveContentResourceReference(state: any, value: any): any {
@@ -223,8 +391,8 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ["id", stripVaultId(entity.id)],
       ["type", "Canvas"],
       ["label", entity.label],
-      ["width", 1],
-      ["height", 1],
+      ["width", UNSET],
+      ["height", UNSET],
       ["duration", entity.duration],
       ...(yield* linkedProperties(entity)),
       ["items", filterList(yield entity.items)],
@@ -263,20 +431,18 @@ export const serializeConfigPresentation3: SerializeConfig = {
   },
 
   Annotation: function* (entity, state) {
+    const annotationTargets = getAnnotationEntries(resolveContentResourceReference(state, entity.target));
+    const serializedTargets = annotationTargets
+      ?.map((target) => serializeAnnotationTarget(target, state))
+      .filter((target) => target !== null && typeof target !== "undefined");
+
     ensureNoV4OnlyBehavior(entity);
     return [
       ...commonProperties(entity),
       ...(yield* linkedProperties(entity)),
       ["motivation", asSingleOrArray(entity.motivation)],
       ["body", asSingleOrArray(filterList(yield entity.body))],
-      [
-        "target",
-        asSingleOrArray(
-          inlineList(resolveContentResourceReference(state, entity.target))?.map((target) =>
-            normalizeAnnotationTarget(target)
-          )
-        ),
-      ],
+      ["target", asSingleOrArray(serializedTargets)],
       ["timeMode", entity.timeMode],
     ];
   },
