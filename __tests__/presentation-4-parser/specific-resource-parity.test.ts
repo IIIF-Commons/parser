@@ -51,7 +51,7 @@ describe("presentation-4 specific resource parity", () => {
     const normalizedAnnotation = result.entities.Annotation["https://example.org/canvas/1/annotation/1"] as any;
     const normalizedStart = result.entities.ContentResource[normalizedManifest.start.id] as any;
     const normalizedRangeItem = result.entities.ContentResource[normalizedRange.items[0].id] as any;
-    const normalizedTarget = result.entities.ContentResource[normalizedAnnotation.target.id] as any;
+    const normalizedTarget = normalizedAnnotation.target;
     const startSelector = normalizedStart.selector[0];
     const rangeSelector = normalizedRangeItem.selector[0];
     const targetSelector = normalizedTarget.selector[0];
@@ -68,11 +68,12 @@ describe("presentation-4 specific resource parity", () => {
     expect(rangeSelector.type).toBe("FragmentSelector");
     expect(rangeSelector.value).toBe("t=0,10");
 
-    expect(normalizedAnnotation.target.type).toBe("ContentResource");
+    expect(normalizedAnnotation.target.type).toBe("SpecificResource");
     expect(normalizedAnnotation.target.id.startsWith("vault://iiif-parser/v4/SpecificResource/")).toBe(true);
     expect(normalizedTarget.source.id).toBe("https://example.org/canvas/1");
     expect(targetSelector.type).toBe("FragmentSelector");
     expect(targetSelector.value).toBe("xywh=10,20,30,40");
+    expect(result.entities.ContentResource[normalizedAnnotation.target.id]).toBeUndefined();
 
     expect(targetSelector).toMatchInlineSnapshot(`
       {
@@ -138,13 +139,14 @@ describe("presentation-4 specific resource parity", () => {
 
     const normalized = normalize(manifest as any);
     const annotation = normalized.entities.Annotation["https://example.org/canvas/1/annotation/1"] as any;
-    const target = normalized.entities.ContentResource[annotation.target.id] as any;
+    const target = annotation.target;
     const targetSelector = target.selector[0];
 
-    expect(annotation.target.type).toBe("ContentResource");
+    expect(annotation.target.type).toBe("SpecificResource");
     expect(target.source.id).toBe("https://example.org/canvas/1");
     expect(targetSelector.type).toBe("FragmentSelector");
     expect(targetSelector.value).toBe("xywh=11,22,33,44");
+    expect(normalized.entities.ContentResource[annotation.target.id]).toBeUndefined();
 
     const serialized = serialize<any>(
       {
@@ -210,10 +212,11 @@ describe("presentation-4 specific resource parity", () => {
 
     const normalized = normalize(manifest as any);
     const annotation = normalized.entities.Annotation["https://example.org/canvas/1/annotation/1"] as any;
-    const target = normalized.entities.ContentResource[annotation.target.id] as any;
+    const target = annotation.target;
 
     expect(target.source.id).toBe("https://example.org/canvas/1");
     expect(target.source.type).toBe("Canvas");
     expect(Array.isArray(target.source)).toBe(false);
+    expect(normalized.entities.ContentResource[target.id]).toBeUndefined();
   });
 });

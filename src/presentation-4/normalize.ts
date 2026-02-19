@@ -349,6 +349,19 @@ function addFlagForExternalResource<T extends { items?: unknown }>(resource: T):
   return resource;
 }
 
+function isAnnotationTargetContext(context: TraversalContext): boolean {
+  return context.path.includes(".target");
+}
+
+function skipOnAnnotationTarget<T extends (resource: any, context: TraversalContext) => any>(traversal: T): T {
+  return (((resource: any, context: TraversalContext) => {
+    if (isAnnotationTargetContext(context)) {
+      return resource;
+    }
+    return traversal(resource, context);
+  }) as unknown) as T;
+}
+
 function ensureRangeSupplementaryArray<T extends { supplementary?: unknown }>(resource: T): T {
   if (resource && typeof resource === "object") {
     const supplementary = (resource as any).supplementary;
@@ -447,13 +460,16 @@ export function normalize(input: unknown): NormalizeResult {
   if (!isLegacySource) {
     contentResourceTraversals.push(ensureDefaultFields(emptyContentResource));
   }
-  contentResourceTraversals.push(map("ContentResource"), record("ContentResource"));
+  contentResourceTraversals.push(
+    skipOnAnnotationTarget(map("ContentResource")),
+    skipOnAnnotationTarget(record("ContentResource"))
+  );
 
   const specificResourceTraversals: Array<(resource: any, context: TraversalContext) => any> = [
     withId("SpecificResource", diagnostics),
     ensureDefaultFields(emptySpecificResource),
-    map("SpecificResource"),
-    record("SpecificResource"),
+    skipOnAnnotationTarget(map("SpecificResource")),
+    skipOnAnnotationTarget(record("SpecificResource")),
   ];
 
   const traversal = new Traverse(
