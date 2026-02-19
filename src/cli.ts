@@ -625,9 +625,7 @@ export async function runCli(args: string[], deps: CliDeps = defaultDeps): Promi
   }
 }
 
-const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
-
-if (isMain) {
+if (import.meta.main) {
   runCli(process.argv.slice(2)).then((exitCode) => {
     process.exit(exitCode);
   });
