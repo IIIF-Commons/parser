@@ -169,7 +169,7 @@ function usage(c: Colors): string {
     "",
     `    ${c.green("iiif-parser")} ${c.yellow("upgrade")}      ${c.dim("<input.json> <output.json>")}`,
     `    ${c.green("iiif-parser")} ${c.yellow("download")}     ${c.dim("<manifest-url> <output.json>")} ${c.dim("[--version 3|4]")}`,
-    `    ${c.green("iiif-parser")} ${c.yellow("validate-p4")}  ${c.dim("<input-path...>")} ${c.dim("[--strict] [--json] [--show-warnings]")}`,
+    `    ${c.green("iiif-parser")} ${c.yellow("validate-p4")}  ${c.dim("<input-path-or-url...>")} ${c.dim("[--strict] [--json] [--show-warnings]")}`,
     "",
     `  ${c.bold(c.cyan("Commands:"))}`,
     "",
@@ -179,7 +179,7 @@ function usage(c: Colors): string {
     `    ${c.yellow("download")}      Download a manifest and save as Presentation 3`,
     `                  ${c.dim("(default)")} or Presentation 4.`,
     "",
-    `    ${c.yellow("validate-p4")}   Validate one or more files/folders of Presentation 4`,
+    `    ${c.yellow("validate-p4")}   Validate one or more files/folders/URLs of Presentation 4`,
     `                  manifests.`,
     "",
     `  ${c.bold(c.cyan("Options:"))}`,
@@ -238,6 +238,15 @@ function parseJson(contents: string, source: string): unknown {
     return JSON.parse(contents);
   } catch (error) {
     throw new Error(`Invalid JSON in ${source}: ${(error as Error).message}`);
+  }
+}
+
+function isHttpUrl(value: string): boolean {
+  try {
+    const url = new URL(value);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
   }
 }
 
@@ -339,7 +348,7 @@ async function runValidateP4(
   if (positionals.length < 2) {
     deps.stderr(`\n  ${c.red(`${SYM.cross} Missing arguments`)}\n`);
     deps.stderr(
-      `  Usage: ${c.green("iiif-parser")} ${c.yellow("validate-p4")} ${c.dim("<input-path...> [--strict] [--json] [--show-warnings]")}\n`
+      `  Usage: ${c.green("iiif-parser")} ${c.yellow("validate-p4")} ${c.dim("<input-path-or-url...> [--strict] [--json] [--show-warnings]")}\n`
     );
     return 2;
   }
@@ -348,12 +357,17 @@ async function runValidateP4(
   const strict = options.strict === true;
   const jsonOutput = options.json === true;
   const showWarnings = options["show-warnings"] === true;
-  const expandedPaths: string[] = [];
+  const expandedInputs: Array<{ type: "file" | "url"; path: string }> = [];
 
   async function collectJsonFiles(path: string): Promise<void> {
+    if (isHttpUrl(path)) {
+      expandedInputs.push({ type: "url", path });
+      return;
+    }
+
     const pathInfo = await stat(path);
     if (!pathInfo.isDirectory()) {
-      expandedPaths.push(path);
+      expandedInputs.push({ type: "file", path });
       return;
     }
 
@@ -365,7 +379,7 @@ async function runValidateP4(
         continue;
       }
       if (entry.isFile() && entry.name.toLowerCase().endsWith(".json")) {
-        expandedPaths.push(entryPath);
+        expandedInputs.push({ type: "file", path: entryPath });
       }
     }
   }
@@ -374,10 +388,10 @@ async function runValidateP4(
     await collectJsonFiles(inputPath);
   }
 
-  expandedPaths.sort();
+  expandedInputs.sort((a, b) => a.path.localeCompare(b.path));
 
   const summary = {
-    scanned: expandedPaths.length,
+    scanned: expandedInputs.length,
     validated: 0,
     skipped: 0,
     valid: 0,
@@ -397,14 +411,18 @@ async function runValidateP4(
     deps.stdout(
       `  ${c.bold(c.cyan("Presentation 4 Validation"))} ${c.dim(`(${strict ? "strict" : "tolerant"} mode)`)}`
     );
-    deps.stdout(`  ${c.dim(`Scanning ${expandedPaths.length} file${expandedPaths.length === 1 ? "" : "s"}...`)}`);
+    deps.stdout(`  ${c.dim(`Scanning ${expandedInputs.length} input${expandedInputs.length === 1 ? "" : "s"}...`)}`);
     deps.stdout("");
   }
 
   // ── First pass: compact one-line-per-file results ──────────────
 
-  for (const inputPath of expandedPaths) {
-    const input = parseJson(await deps.readFileText(inputPath), inputPath);
+  for (const inputRef of expandedInputs) {
+    const inputPath = inputRef.path;
+    const input =
+      inputRef.type === "url"
+        ? await deps.fetchJson(inputPath)
+        : parseJson(await deps.readFileText(inputPath), inputPath);
     const resourceType = (input as { type?: string; "@type"?: string })?.type ?? (input as any)?.["@type"];
     if (resourceType !== "Manifest") {
       summary.skipped++;

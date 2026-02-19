@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { describe, expect, test } from "vitest";
 import { runCli } from "../src/cli";
 
-function testDeps(overrides: { files?: Record<string, string>; fetchJson?: () => Promise<unknown> }) {
+function testDeps(overrides: { files?: Record<string, string>; fetchJson?: (url: string) => Promise<unknown> }) {
   const files: Record<string, string> = overrides.files ?? {};
   const stdout: string[] = [];
   const stderr: string[] = [];
@@ -483,6 +483,82 @@ describe("iiif-parser CLI", () => {
       expect(jsonResult.summary.scanned).toBe(1);
       expect(jsonResult.summary.validated).toBe(1);
       expect(jsonResult.reports).toHaveLength(1);
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("validate-p4 accepts a manifest URL input", async () => {
+    const manifestUrl = "https://example.org/manifest.json";
+    const { stdout, deps } = testDeps({
+      fetchJson: async (url: string) => {
+        expect(url).toBe(manifestUrl);
+        return {
+          "@context": "http://iiif.io/api/presentation/4/context.json",
+          id: "https://example.org/manifest",
+          type: "Manifest",
+          label: { en: ["Remote"] },
+          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+        };
+      },
+    });
+
+    const code = await runCli(["validate-p4", manifestUrl], deps);
+    expect(code).toBe(0);
+
+    const allOutput = stdout.join("\n");
+    expect(allOutput).toContain("PASS");
+    expect(allOutput).toContain(manifestUrl);
+    expect(allOutput).toContain("Scanned:");
+    expect(allOutput).toContain("1");
+  });
+
+  test("validate-p4 supports mixed local path and URL inputs", async () => {
+    const dir = await mkdtemp(join(tmpdir(), "iiif-parser-cli-"));
+    const manifestPath = join(dir, "local.json");
+    const manifestUrl = "https://example.org/remote-manifest.json";
+
+    try {
+      await writeFile(
+        manifestPath,
+        JSON.stringify({
+          "@context": "http://iiif.io/api/presentation/4/context.json",
+          id: "https://example.org/manifest/local",
+          type: "Manifest",
+          label: { en: ["Local"] },
+          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+        }),
+        "utf8"
+      );
+
+      const stdout: string[] = [];
+      const stderr: string[] = [];
+      const deps = {
+        ...fsDeps(stdout, stderr),
+        fetchJson: async (url: string) => {
+          expect(url).toBe(manifestUrl);
+          return {
+            "@context": "http://iiif.io/api/presentation/4/context.json",
+            id: "https://example.org/manifest/remote",
+            type: "Manifest",
+            label: { en: ["Remote"] },
+            items: [{ id: "https://example.org/canvas/2", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          };
+        },
+      };
+
+      const code = await runCli(["validate-p4", manifestPath, manifestUrl], deps);
+      expect(code).toBe(0);
+      expect(stderr).toEqual([]);
+
+      const allOutput = stdout.join("\n");
+      expect(allOutput).toContain("PASS");
+      expect(allOutput).toContain(manifestPath);
+      expect(allOutput).toContain(manifestUrl);
+      expect(allOutput).toContain("Scanned:");
+      expect(allOutput).toContain("2");
+      expect(allOutput).toContain("Validated:");
+      expect(allOutput).toContain("2");
     } finally {
       await rm(dir, { recursive: true, force: true });
     }
