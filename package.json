@@ -13,7 +13,7 @@
 	"module": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"bin": {
-		"iiif-parser": "./dist/cli.mjs"
+		"@iiif/parser": "./dist/cli.mjs"
 	},
 	"files": [
 		"dist"
