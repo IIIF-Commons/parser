@@ -74,6 +74,43 @@ function issue(
   });
 }
 
+function dedupeValidationIssues(issues: ValidationIssue[]): ValidationIssue[] {
+  const uniqueIssues: ValidationIssue[] = [];
+  const exactKeys = new Set<string>();
+
+  for (const current of issues) {
+    const key = [
+      current.code,
+      current.severity,
+      current.path,
+      current.resourceId || "",
+      current.resourceType || "",
+      current.specRef || "",
+      current.message,
+    ].join("|");
+    if (exactKeys.has(key)) {
+      continue;
+    }
+    exactKeys.add(key);
+    uniqueIssues.push(current);
+  }
+
+  const hasSpecificIssueByPath = new Map<string, boolean>();
+  for (const current of uniqueIssues) {
+    const isClassRequirement = current.code === "class-requirement-must" || current.code === "class-requirement-should";
+    if (!isClassRequirement) {
+      hasSpecificIssueByPath.set(`${current.severity}|${current.path}`, true);
+    }
+  }
+
+  return uniqueIssues.filter((current) => {
+    if (current.code !== "class-requirement-must" && current.code !== "class-requirement-should") {
+      return true;
+    }
+    return !hasSpecificIssueByPath.get(`${current.severity}|${current.path}`);
+  });
+}
+
 function isPositiveInteger(value: any): boolean {
   return typeof value === "number" && Number.isInteger(value) && value > 0;
 }
@@ -1127,7 +1164,7 @@ export function validatePresentation4(input: unknown, options: ValidateOptions =
     issues.push(...runPostNormalizationValidation(normalized));
   }
 
-  const report = createValidationReport(issues, {
+  const report = createValidationReport(dedupeValidationIssues(issues), {
     classRequirements: {
       nodesChecked: classRequirementResult.stats.nodesChecked,
       mustChecks: classRequirementResult.stats.mustChecks,

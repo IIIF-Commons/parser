@@ -48,6 +48,29 @@ describe("presentation-4 validator", () => {
     expect(report.issues.some((issue) => issue.code === "canvas-height-required")).toBe(true);
   });
 
+  test("prefers specific property requirement issues over generic class requirement issues", () => {
+    const invalid = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/missing-canvas-height",
+      type: "Manifest",
+      label: { en: ["missing canvas height"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          items: [],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(invalid);
+    const heightIssues = report.issues.filter((issue) => issue.path === "$.items[0].height");
+
+    expect(heightIssues.some((issue) => issue.code === "canvas-height-required")).toBe(true);
+    expect(heightIssues.some((issue) => issue.code === "class-requirement-must")).toBe(false);
+  });
+
   test("rejects array-form annotation body/target in favor of object/List", () => {
     const invalid = {
       "@context": "http://iiif.io/api/presentation/4/context.json",
@@ -794,5 +817,47 @@ describe("presentation-4 validator", () => {
     expect(report.issues.some((item) => item.code === "container-id-fragment-forbidden")).toBe(true);
     expect(report.issues.some((item) => item.code === "class-requirement-property-not-listed")).toBe(true);
     expect(report.issues.some((item) => item.code === "annotation-body-value-forbidden")).toBe(true);
+  });
+
+  test("deduplicates exact duplicate issues emitted by multiple validation passes", () => {
+    const invalid = {
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/annotation-body-value-dedupe",
+      type: "Manifest",
+      label: { en: ["annotation body value dedupe"] },
+      items: [
+        {
+          id: "https://example.org/canvas/1",
+          type: "Canvas",
+          width: 1000,
+          height: 1000,
+          items: [
+            {
+              id: "https://example.org/canvas/1/page/1",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/canvas/1/page/1/anno/1",
+                  type: "Annotation",
+                  motivation: ["commenting"],
+                  target: {
+                    id: "https://example.org/canvas/1",
+                    type: "Canvas",
+                  },
+                  bodyValue: "invalid body value",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const report = validatePresentation4(invalid, { mode: "tolerant" });
+    const bodyValueIssues = report.issues.filter((issue) => issue.code === "annotation-body-value-forbidden");
+    const firstBodyValueIssue = bodyValueIssues.at(0);
+
+    expect(bodyValueIssues).toHaveLength(1);
+    expect(firstBodyValueIssue?.path).toBe("$.items[0].items[0].items[0].bodyValue");
   });
 });
