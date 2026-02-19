@@ -12,14 +12,15 @@ This is a parser and set of low-level utilities for the following IIIF Specifica
 - [IIIF Presentation 2](https://iiif.io/api/presentation/2.1/)
 
 These include:
+
 - [W3C Annotations](https://www.w3.org/TR/annotation-model/)
 - [Open Annotations](https://iiif.io/api/annex/openannotation/)
-
 
 > [!NOTE]
 > Presentation API v4 support is available from `@iiif/parser/presentation-4` and is designed for mixed v2.1/v3.0/v4.0 ingestion with a v4 normalization pipeline.
 
 ### Features
+
 The features of this library are focussed on encoding the structure of all types of IIIF and providing utilities for extracting data from the IIIF or converting it into another format that is easier to develop with. The aim of the parser is to maximize the IIIF compatibility of other tools built on top of it.
 
 #### Type Modules and DX Helpers
@@ -35,19 +36,19 @@ Type surfaces are available directly from parser subpaths:
 The versioned parser entrypoints also re-export `infer`, `cast` and `narrow` helpers:
 
 ```ts
-import { infer, cast, narrow, type Manifest } from '@iiif/parser/presentation-3';
+import { infer, cast, narrow, type Manifest } from "@iiif/parser/presentation-3";
 
 const manifest = {
-  id: 'https://example.org/manifest',
-  type: 'Manifest',
-  label: { en: ['Example'] },
+  id: "https://example.org/manifest",
+  type: "Manifest",
+  label: { en: ["Example"] },
   items: [],
 } satisfies Manifest;
 
 const typed = infer.Manifest(manifest);
 const checked = cast.Manifest(manifest);
 
-if (narrow.isImage({ id: 'https://example.org/image.jpg', type: 'Image' })) {
+if (narrow.isImage({ id: "https://example.org/image.jpg", type: "Image" })) {
   // narrowed image resource
 }
 ```
@@ -65,18 +66,19 @@ if (narrow.isImage({ id: 'https://example.org/image.jpg', type: 'Image' })) {
   - **Presentation v2 serializer** - outputs good-enough Presentation 2 JSON (missing features).
 - **Strict Upgrader** utility which can automatically fix Presentation 3 JSON that has issues.
 
-
 ```js
-import { Traverse } from '@iiif/parser';
+import { Traverse } from "@iiif/parser";
 
 // Or for presentation 2 resources
 // import { Traverse } from '@iiif/parser/presentation-2';
 
 const ids = [];
 const extractCanvasLabels = new Traverse({
-  canvas: [(canvas) => {
-    ids.push(canvas.id); // string
-  }],
+  canvas: [
+    (canvas) => {
+      ids.push(canvas.id); // string
+    },
+  ],
 });
 
 extractCanvasLabels.traverseUnknown(loadSomeManifest());
@@ -85,37 +87,38 @@ console.log(ids); // all canvas ids.
 ```
 
 #### IIIF Presentation 2
+
 - **Traverse** utility for walking through IIIF v2 documents and running code at different "types"
 - **Upgrader** utility built on-top of the Traverse utility for upgrading IIIF v2 to IIIF v3.
 
 The intention for IIIF Presentation 2 is to upgrade it to 3 and then work with that. The tooling will always offer and upgrade to the latest version and tools on top of that.
 
 ```ts
-import { Traverse, convertPresentation2  } from '@iiif/parser/presentation-2';
+import { Traverse, convertPresentation2 } from "@iiif/parser/presentation-2";
 
 convertPresentation2(p2); // to latest IIIF version
 
 const logAnnotations = new Traverse({
   // Every type is a key on this record, with an array of functions to call
   annotation: [
-    anno => {
-      console.log(anno['@id']);
+    (anno) => {
+      console.log(anno["@id"]);
 
       // Optionally return to replace the resource.
-    }
-  ]
+    },
+  ],
 });
 
 logAnnotations.traverseManifest(someInputManifest); // Logs all annotation IDs.
 
 // Also an "all" traversal.
-const logAllIds = Traverse.all(resource => console.log(resource['@id']));
+const logAllIds = Traverse.all((resource) => console.log(resource["@id"]));
 
 logAllIds.traverseUnknown(someInput);
-
 ```
 
 The available types to traverse (v3) are:
+
 ```ts
 export type TraversalMap = {
   collection?: Array<Traversal<Collection>>;
@@ -130,7 +133,7 @@ export type TraversalMap = {
   service?: Array<Traversal<Service>>;
   agent?: Array<Traversal<ResourceProvider>>;
   specificResource?: Array<Traversal<SpecificResource>>;
-  geoJson?: Array<Traversal<import('geojson').GeoJSON>>;
+  geoJson?: Array<Traversal<import("geojson").GeoJSON>>;
 };
 ```
 
@@ -150,8 +153,8 @@ import {
   normalize,
   validatePresentation4,
   serialize,
-  serializeConfigPresentation4
-} from '@iiif/parser/presentation-4';
+  serializeConfigPresentation4,
+} from "@iiif/parser/presentation-4";
 
 const upgraded = upgradeToPresentation4(loadSomeManifest());
 const report = validatePresentation4(upgraded);
@@ -186,13 +189,13 @@ The Image 3 parser is adapted from an Image Server implementation, and supports:
   - `canonicalServiceUrl()`, `getId()`, `getType()` and `isImageService()` for compatibility and validation
 
 ```ts
-import { parseImageServiceRequest, imageServiceRequestInfo } from '@iiif/parser/image-3';
-import { ImageService } from '@iiif/parser/presentation-3/types';
+import { parseImageServiceRequest, imageServiceRequestInfo } from "@iiif/parser/image-3";
+import { ImageService } from "@iiif/parser/presentation-3/types";
 
 const parsed = parseImageServiceRequest(
-  'https://munch.emuseum.com/apis/iiif/image/v2/17261/full/max/0/default.jpg',
+  "https://munch.emuseum.com/apis/iiif/image/v2/17261/full/max/0/default.jpg",
   // Optionally provide a path, so the identifier can be extracted
-  'apis/iiif/image/v2'
+  "apis/iiif/image/v2"
 );
 
 // {
@@ -227,12 +230,11 @@ const imageUrl = imageServiceRequestToString(parsed);
 const infoJson = imageServiceRequestInfo(parsed);
 // https://munch.emuseum.com/apis/iiif/image/v2/17261/info.json
 
-
-const imageService: ImageService = await fetch(infoJson).then(r => r.json());
+const imageService: ImageService = await fetch(infoJson).then((r) => r.json());
 
 // Likely true - as its supported by level0, level1 and level2
 const supportsSizes = supports(imageService, {
-  extraFeatures: ['sizeByWhListed']
+  extraFeatures: ["sizeByWhListed"],
 });
 ```
 
@@ -241,7 +243,7 @@ const supportsSizes = supports(imageService, {
 Upgrades IIIF JSON to the latest IIIF Presentation version (current: 3).
 
 ```ts
-import { upgrade } from '@iiif/parser/upgrader';
+import { upgrade } from "@iiif/parser/upgrader";
 
 upgrade(presentation2Manifest); // Presentation 3 Manifest or Collection
 ```
