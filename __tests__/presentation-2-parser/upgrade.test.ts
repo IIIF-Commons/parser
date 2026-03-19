@@ -2,6 +2,7 @@ import { Validator } from '@hyperion-framework/validator';
 import { expect } from 'vitest';
 import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
 import artic from '../../fixtures/presentation-2/artic-manifest.json';
+import biblissimaCollection from '../../fixtures/presentation-2/biblissima-collection.json';
 import iiifManifest2 from '../../fixtures/presentation-2/biblissima-manifest.json';
 import blManifest from '../../fixtures/presentation-2/bl-manifest.json';
 import bodleianManifest from '../../fixtures/presentation-2/bodleian-manifest.json';
@@ -17,6 +18,7 @@ import iiifManifest from '../../fixtures/presentation-2/iiif-fixture-manifest.js
 import iiifManifestInvalid from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
 import withDimensions from '../../fixtures/presentation-2/iiif-fixture-manifest-with-dimensions.json';
 import loc from '../../fixtures/presentation-2/loc.json';
+import malformedImageAnnotation from '../../fixtures/presentation-2/malformed-image-annotation.json';
 import level0manifest from '../../fixtures/presentation-2/manifest-l0.json';
 import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
 import ngaManifest from '../../fixtures/presentation-2/nga-manifest.json';
@@ -33,7 +35,6 @@ import stanfordManifest from '../../fixtures/presentation-2/stanford-manifest.js
 import goettingen from '../../fixtures/presentation-2/uni-goettingen.json';
 import villanovaManifest from '../../fixtures/presentation-2/villanova-manifest.json';
 import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
-import malformedImageAnnotation from '../../fixtures/presentation-2/malformed-image-annotation.json';
 import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
 
 describe('Presentation 2 to 3', () => {
@@ -2635,5 +2636,18 @@ describe('Presentation 2 to 3', () => {
     expect(annotation?.type).toEqual('Annotation');
     expect(annotation?.motivation).toEqual('painting');
     expect(annotation?.body).toBeDefined();
+  });
+
+  test('automatic @type=sc:Manifest for Biblissima Collection', () => {
+    const result = presentation2to3.traverseCollection(biblissimaCollection as any);
+    const isValid = validator.validateCollection(result);
+
+    expect(validator.validators.collection!.errors).toEqual(null);
+    expect(validator.validators.manifest!.errors).toEqual(null);
+    expect(isValid).toEqual(true);
+
+    const collection = result as any;
+    expect(collection.type).toEqual('Collection');
+    expect(collection.items?.[0].type).toEqual('Manifest');
   });
 });

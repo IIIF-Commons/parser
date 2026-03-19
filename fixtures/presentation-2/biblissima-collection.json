@@ -1,0 +1,381 @@
+{
+	"@context": "http://iiif.io/api/presentation/2/context.json",
+	"@id": "https://biblissima.fr/iiif/collection/gallica-bnf/manuscripts-department/allemand/",
+	"label": "Allemand",
+	"@type": "sc:Collection",
+	"attribution": "IIIF Collection provided by Biblissima.",
+	"manifests": [
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b7200024s/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 305",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b7200024s/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b7200024s",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000013689",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b7200024s",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 305"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b525006620/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 127",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b525006620/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b525006620",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025622",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b525006620",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 127"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b85409527/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 150",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b85409527/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b85409527",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025646",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b85409527",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 150"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52504171f/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 232",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b52504171f/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b52504171f",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025712",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b52504171f",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 232"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b525046413/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 236",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b525046413/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b525046413",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025712",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b525046413",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 236"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b525037219/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 259",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b525037219/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b525037219",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025726",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b525037219",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 259"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10512750r/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 33",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b10512750r/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b10512750r",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025784",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b10512750r",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 33"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10527637q/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 34",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b10527637q/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b10527637q",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025789",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b10527637q",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 34"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b8452670s/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 76",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b8452670s/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b8452670s",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025830",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b8452670s",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 76"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52000978v/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 84",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b52000978v/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b52000978v",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000025837",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b52000978v",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 84"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b52500138j/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 381",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b52500138j/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b52500138j",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000091535",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b52500138j",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 381"
+				}
+			]
+		},
+		{
+			"@id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b525031211/manifest.json",
+			"label": "BnF, Manuscrits, Allemand 334",
+			"thumbnail": "https://gallica.bnf.fr/ark:/12148/btv1b525031211/f1.thumbnail",
+			"related": [
+				{
+					"@id": "https://gallica.bnf.fr/ark:/12148/btv1b525031211",
+					"format": "text/html",
+					"label": "Digital object in Gallica"
+				},
+				{
+					"@id": "http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000096440",
+					"format": "text/html",
+					"label": "Record in BnF Archives and Manuscripts Catalog"
+				}
+			],
+			"seeAlso": {
+				"@id": "http://oai.bnf.fr/oai2/OAIHandler?verb=GetRecord&metadataPrefix=oai_dc&identifier=oai:bnf.fr:gallica/ark:/12148/btv1b525031211",
+				"format": "application/xml"
+			},
+			"metadata": [
+				{
+					"label": "Repository",
+					"value": "Bibliothèque nationale de France, Département des Manuscrits"
+				},
+				{
+					"label": "Complete shelfmark",
+					"value": "France, Paris, Bibliothèque nationale de France, Département des Manuscrits, Allemand 334"
+				}
+			]
+		}
+	]
+}
