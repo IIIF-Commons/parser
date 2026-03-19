@@ -158,6 +158,9 @@ export class Traverse<
           if (typeof manifest === 'string') {
             return { '@id': manifest, '@type': 'sc:Manifest' };
           }
+          if (!manifest['@type']) {
+            manifest['@type'] = 'sc:Manifest';
+          }
           return manifest;
         }),
         ...(collection.collections || []).map((subCollection) => {
@@ -184,13 +187,17 @@ export class Traverse<
     }
 
     if (collection.manifests) {
-      collection.manifests = collection.manifests.map((manifest) =>
-        this.traverseManifest(
-          typeof manifest === 'string'
-            ? ({ '@id': manifest, '@type': 'sc:Manifest' } as Manifest)
-            : (manifest as Manifest)
-        )
-      );
+      collection.manifests = collection.manifests.map((manifest) => {
+        let _manifest = manifest;
+        if (typeof manifest === 'string') {
+          _manifest = { '@id': manifest, '@type': 'sc:Manifest' } as Manifest;
+        }
+        if (!(_manifest as any)['@type']) {
+          (_manifest as any)['@type'] = 'sc:Manifest';
+        }
+
+        return this.traverseManifest(_manifest as Manifest);
+      });
     }
 
     if (collection.collections) {
