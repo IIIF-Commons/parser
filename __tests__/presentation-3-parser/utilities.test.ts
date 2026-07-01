@@ -53,6 +53,35 @@ describe('Misc Utilites', function () {
     `);
   });
 
+  test('compressSpecificResource (with styleClass)', () => {
+    const state: SpecificResource = {
+      id: 'https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1',
+      type: 'SpecificResource',
+      source: {
+        id: 'https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1',
+        type: 'Canvas',
+      },
+      selector: {
+        type: 'FragmentSelector',
+        value: 'xywh=225,70,750,150',
+      },
+      styleClass: 'some-class',
+    };
+
+    expect(compressSpecificResource(state, { allowString: true, allowSourceString: true, allowedStringType: 'Canvas' })).toMatchInlineSnapshot(`
+      {
+        "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
+        "selector": {
+          "type": "FragmentSelector",
+          "value": "xywh=225,70,750,150",
+        },
+        "source": "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+        "styleClass": "some-class",
+        "type": "SpecificResource",
+      }
+    `);
+  });
+
   test('compressSpecificResource (single content resource)', () => {
     const state: SpecificResource = {
       type: 'SpecificResource',
