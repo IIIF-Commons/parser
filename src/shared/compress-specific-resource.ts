@@ -39,6 +39,7 @@ export function compressSpecificResource(
       if (
         !Array.isArray(target.selector) &&
         typeof target.selector !== 'string' &&
+        typeof target.styleClass !== 'string' &&
         target.selector.type === 'FragmentSelector'
       ) {
         const newId = `${target.source.id}#${target.selector.value}`;
