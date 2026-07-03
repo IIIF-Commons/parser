@@ -3,6 +3,45 @@ import { Collection, Manifest } from '@iiif/presentation-3';
 import hotspot from '../../fixtures/cookbook/0022-linking-with-a-hotspot.json';
 
 describe('serializer', () => {
+  test('manifest homepage thumbnails are serialized', () => {
+    const input = () =>
+      ({
+        '@context': 'http://iiif.io/api/presentation/3/context.json',
+        id: 'https://example.org/iiif/book1/manifest',
+        type: 'Manifest',
+        label: { en: ['Book 1'] },
+        homepage: [
+          {
+            id: 'https://example.org/info/book1/',
+            type: 'Text',
+            label: { en: ['Home page for Book 1'] },
+            format: 'text/html',
+            thumbnail: [
+              {
+                id: 'https://example.org/info/book1/thumbnail.jpg',
+                type: 'Image',
+                format: 'image/jpeg',
+              },
+            ],
+          },
+        ],
+        items: [],
+      }) as const;
+
+    const result = normalize(input());
+    const serialized = serialize(
+      {
+        mapping: result.mapping,
+        entities: result.entities,
+        requests: {},
+      },
+      result.resource,
+      serializeConfigPresentation3
+    );
+
+    expect(serialized).toEqual(input());
+  });
+
   test('parse, then serialize', () => {
     const input = () =>
       ({

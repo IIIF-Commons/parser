@@ -166,7 +166,7 @@ export class Traverse {
     }
     if (resource.homepage) {
       resource.homepage = ensureArray(resource.homepage).map((homepage) =>
-        this.traverseType(homepage, { parent: resource }, this.traversals.contentResource)
+        this.traverseContentResource(homepage, resource)
       );
     }
     if (resource.partOf) {
@@ -272,7 +272,7 @@ export class Traverse {
     this.traverseDescriptive.bind(this),
     this.traverseLinkedCanvases.bind(this),
     this.traverseManifestStructures.bind(this),
-    this.traverseInlineAnnotationPages.bind(this),
+    this.traverseInlineAnnotationPages.bind(this)
   );
 
   traverseManifest(manifest: Manifest, parent?: any): Manifest {
@@ -398,7 +398,9 @@ export class Traverse {
       // This needs an `any` because of the scope of W3C annotation bodies (covered by ContentResource).
       // ContentResources are permitted to have a `.annotations` property, so we can pass it as any  for this
       // case.
-      this.traverseInlineAnnotationPages(this.traverseContentResourceLinking(contentResourceJson) as any),
+      this.traverseInlineAnnotationPages(
+        this.traverseContentResourceLinking(this.traverseDescriptive(contentResourceJson as any)) as any
+      ),
       { parent },
       this.traversals.contentResource
     );
