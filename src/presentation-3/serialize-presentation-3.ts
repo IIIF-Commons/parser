@@ -111,7 +111,7 @@ function* linkingProperties(
 ): Generator<any, any, Array<[keyof LinkingNormalized, any]>> {
   let filteredPartOf = [];
   for (let partOf of entity.partOf || []) {
-    if (partOf.type === 'Manifest' && parent.type === 'Manifest') continue;
+    if (partOf.type === 'Manifest' && parent?.type === 'Manifest') continue;
     filteredPartOf.push(yield partOf);
   }
 
