@@ -25,6 +25,8 @@ function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof
     ['behavior', entity.behavior && entity.behavior.length ? entity.behavior : undefined],
     ['timeMode', entity.timeMode],
     ['motivation', Array.isArray(entity.motivation) ? entity.motivation[0] : entity.motivation],
+    // Presetntation 4 compat.
+    ['backgroundColor', (entity as any).backgroundColor || undefined] as any,
     [HAS_PART as any, UNSET],
   ];
 }
