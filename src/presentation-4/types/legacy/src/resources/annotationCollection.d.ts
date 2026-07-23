@@ -1,5 +1,8 @@
-import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
+import type { InternationalString } from "../../../../../presentation-3/types/legacy/src/iiif/descriptive";
+import type { SpecificationBehaviors } from "../../../../../presentation-3/types/legacy/src/iiif/technical";
+import type { LiteralUnion, Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
 import type { GeoJSON } from "../../../../../shared/geojson";
+import type { ViewingDirection } from "../iiif/technical";
 import type { Canvas } from "./canvas";
 import type {
   AgentLike,

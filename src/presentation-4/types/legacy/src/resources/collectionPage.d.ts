@@ -1,4 +1,6 @@
-import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
+import type { InternationalString } from "../../../../../presentation-3/types/legacy/src/iiif/descriptive";
+import type { SpecificationBehaviors } from "../../../../../presentation-3/types/legacy/src/iiif/technical";
+import type { LiteralUnion, Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
 import type { AgentLike, LinkedResource, MetadataItem, ResourceReference, ServiceLike } from "./contentResource";
 
 export type CollectionPageItem = ResourceReference<"Collection" | "Manifest">;

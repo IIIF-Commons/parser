@@ -186,6 +186,7 @@
 		"dev": "tsdown --watch",
 		"typecheck": "tsc --noEmit",
 		"test": "vitest",
+		"test:package-types": "node pkg-tests/package-types.mjs",
 		"test:types": "vitest run --typecheck --typecheck.only --passWithNoTests && pnpm run typecheck:p4-fixtures && pnpm run typecheck:p4-fixtures:converted",
 		"typecheck:p4-fixtures": "node scripts/typecheck-p4-json-fixtures.mjs --scope authored",
 		"typecheck:p4-fixtures:converted": "node scripts/typecheck-p4-json-fixtures.mjs --scope converted --report-only",

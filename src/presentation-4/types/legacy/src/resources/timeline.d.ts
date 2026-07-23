@@ -1,10 +1,12 @@
 import type { Canvas as CanvasV3 } from "../../../../../presentation-3/types/legacy/src/resources/canvas";
-import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
+import type { InternationalString } from "../../../../../presentation-3/types/legacy/src/iiif/descriptive";
+import type { SpecificationBehaviors } from "../../../../../presentation-3/types/legacy/src/iiif/technical";
+import type { LiteralUnion, Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
 import type { GeoJSON } from "../../../../../shared/geojson";
 import type { InteractionMode, Quantity } from "../iiif/technical";
 import type { AnnotationPage } from "./annotationPage";
 import type { Canvas } from "./canvas";
-import type { AgentLike, LinkedResource, ResourceReference, ServiceLike } from "./contentResource";
+import type { AgentLike, LinkedResource, MetadataItem, ResourceReference, ServiceLike } from "./contentResource";
 import type { Scene } from "./scene";
 
 export type TimelineItem = AnnotationPage | ResourceReference<"AnnotationPage">;

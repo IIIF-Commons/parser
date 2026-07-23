@@ -1,5 +1,14 @@
-import type { AnyMotivation, W3CMotivation } from "../../../../../presentation-3/types/legacy/src/resources/annotation";
-import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
+import type { InternationalString } from "../../../../../presentation-3/types/legacy/src/iiif/descriptive";
+import type { SpecificationBehaviors } from "../../../../../presentation-3/types/legacy/src/iiif/technical";
+import type {
+  AnyMotivation,
+  Audience,
+  Creator,
+  Stylesheet,
+  W3CMotivation,
+} from "../../../../../presentation-3/types/legacy/src/resources/annotation";
+import type { TextGranularityOptions } from "../../../../../presentation-3/types/legacy/src/extensions/text-granularity";
+import type { LiteralUnion, Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
 import type { GeoJSON } from "../../../../../shared/geojson";
 import type { Selector } from "../extensions/presentation-4";
 import type { ExcludeType, Provides, Transform } from "../iiif/technical";
@@ -7,6 +16,7 @@ import type {
   AgentLike,
   ContentResourceLike,
   LinkedResource,
+  MetadataItem,
   ResourceReference,
   ServiceLike,
   SpecificResource,

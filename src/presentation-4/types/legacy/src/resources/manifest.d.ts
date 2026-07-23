@@ -1,7 +1,11 @@
-import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
+import type { InternationalString } from "../../../../../presentation-3/types/legacy/src/iiif/descriptive";
+import type { SpecificationBehaviors } from "../../../../../presentation-3/types/legacy/src/iiif/technical";
+import type { LiteralUnion, Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
+import type { GeoJSON } from "../../../../../shared/geojson";
+import type { ViewingDirection } from "../iiif/technical";
 import type { AnnotationPage } from "./annotationPage";
 import type { Canvas } from "./canvas";
-import type { AgentLike, LinkedResource, ResourceReference, ServiceLike, Start } from "./contentResource";
+import type { AgentLike, LinkedResource, MetadataItem, ResourceReference, ServiceLike, Start } from "./contentResource";
 import type { Range } from "./range";
 import type { Scene } from "./scene";
 import type { Timeline } from "./timeline";
@@ -38,8 +42,6 @@ export type Manifest = Prettify<{
   partOf?: Array<LinkedResource>;
   canonical?: string;
   via?: Array<string>;
-
-  rights?: string;
 
   placeholderContainer?: Canvas | Timeline | Scene | null;
   accompanyingContainer?: Canvas | Timeline | Scene | null;
