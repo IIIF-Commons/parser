@@ -100,7 +100,7 @@ describe("presentation-4 serializer", () => {
     expect(annotation).toBeTruthy();
     expect(annotation.body.type).toBe("TextualBody");
     expect(annotation.body.value).toContain("In 10 seconds");
-    expect(annotation.body.language).toBe("en");
+    expect(annotation.body.language).toEqual(["en"]);
   });
 
   test("does not serialize default left-to-right viewingDirection on Collection in partOf", () => {

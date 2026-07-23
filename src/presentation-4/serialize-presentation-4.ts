@@ -45,11 +45,11 @@ function preserveObjectOrOmitEmptyList(value: any): any {
   return filtered.length ? filtered : undefined;
 }
 
-function serializeLanguage(language: unknown): string | string[] | undefined {
+function serializeLanguage(language: unknown): string[] | undefined {
   if (!Array.isArray(language) || language.length === 0) {
     return undefined;
   }
-  return language.length === 1 ? language[0] : language;
+  return language;
 }
 
 function isEmptySequenceResource(value: any): boolean {
@@ -112,6 +112,38 @@ function resolveContentResourceReference(state: any, value: any): any {
   return state?.entities?.ContentResource?.[id] || value;
 }
 
+function cleanSpecificResourceWireValue(value: any): any {
+  if (Array.isArray(value)) {
+    return value
+      .map((item) => cleanSpecificResourceWireValue(item))
+      .filter((item) => item !== null && typeof item !== "undefined" && item !== UNSET);
+  }
+  if (!isPlainObject(value)) {
+    return value;
+  }
+
+  const cleaned: Record<string, any> = {};
+  for (const [key, child] of Object.entries(value)) {
+    if (
+      key.startsWith("iiif-parser:") ||
+      key === "@explicit" ||
+      child === null ||
+      typeof child === "undefined" ||
+      child === UNSET ||
+      (Array.isArray(child) && child.length === 0)
+    ) {
+      continue;
+    }
+    const wireKey = key === "@id" ? "id" : key === "@type" ? "type" : key;
+    const cleanedChild = cleanSpecificResourceWireValue(child);
+    if (wireKey === "id" && !stripVaultId(cleanedChild)) {
+      continue;
+    }
+    cleaned[wireKey] = wireKey === "id" ? stripVaultId(cleanedChild) : cleanedChild;
+  }
+  return cleaned;
+}
+
 function serializeSpecificResourceSource(source: any): any {
   if (Array.isArray(source)) {
     const serialized = source
@@ -134,23 +166,10 @@ function serializeSpecificResourceSource(source: any): any {
     return source;
   }
 
-  const sourceId = stripVaultId(source.id || source["@id"]);
-  const sourceType = source.type || source["@type"];
-  if (!sourceId && !sourceType) {
-    return source;
-  }
-
-  const sourceReference: Record<string, any> = {};
-  if (sourceId) {
-    sourceReference.id = sourceId;
-  }
-  if (sourceType) {
-    sourceReference.type = sourceType;
-  }
-  return sourceReference;
+  return cleanSpecificResourceWireValue(source);
 }
 
-function serializeSpecificResource(resource: any): any {
+function serializeSpecificResource(resource: any, state: any): any {
   if (!isPlainObject(resource)) {
     return resource;
   }
@@ -165,6 +184,19 @@ function serializeSpecificResource(resource: any): any {
     type: "SpecificResource",
   } as Record<string, any>;
 
+  for (const [key, value] of Object.entries(specificResource)) {
+    if (
+      key.startsWith("iiif-parser:") ||
+      key === "@explicit" ||
+      value === null ||
+      typeof value === "undefined" ||
+      value === UNSET ||
+      (Array.isArray(value) && value.length === 0)
+    ) {
+      delete specificResource[key];
+    }
+  }
+
   const id = stripVaultId(specificResource.id || specificResource["@id"]);
   if (id) {
     specificResource.id = id;
@@ -175,7 +207,9 @@ function serializeSpecificResource(resource: any): any {
   delete specificResource["@type"];
 
   if (typeof specificResource.source !== "undefined") {
-    const serializedSource = serializeSpecificResourceSource(specificResource.source);
+    const serializedSource = serializeSpecificResourceSource(
+      resolveContentResourceReference(state, specificResource.source)
+    );
     if (typeof serializedSource === "undefined") {
       delete specificResource.source;
     } else {
@@ -184,11 +218,11 @@ function serializeSpecificResource(resource: any): any {
   }
 
   if (isPlainObject(specificResource.position)) {
-    specificResource.position = serializeSpecificResource(specificResource.position);
+    specificResource.position = serializeSpecificResource(specificResource.position, state);
   }
 
   if (isPlainObject(specificResource.lookAt)) {
-    specificResource.lookAt = serializeSpecificResource(specificResource.lookAt);
+    specificResource.lookAt = serializeSpecificResource(specificResource.lookAt, state);
   }
 
   const selector = compactList(specificResource.selector);
@@ -215,7 +249,7 @@ function serializeSpecificResource(resource: any): any {
   return specificResource;
 }
 
-function serializeStartValue(start: any): any {
+function serializeStartValue(start: any, state: any): any {
   if (start === UNSET || start === null || typeof start === "undefined") {
     return undefined;
   }
@@ -236,7 +270,7 @@ function serializeStartValue(start: any): any {
   }
 
   if (type === "SpecificResource") {
-    return serializeSpecificResource(start);
+    return serializeSpecificResource(start, state);
   }
 
   const containerReference: Record<string, any> = {
@@ -284,7 +318,7 @@ function serializeAnnotationValue(
   return asObjectOrList(normalizedItems);
 }
 
-function serializeRangeItems(items: any[] | undefined): any[] | undefined {
+function serializeRangeItems(items: any[] | undefined, state: any): any[] | undefined {
   if (!Array.isArray(items)) {
     return undefined;
   }
@@ -295,7 +329,7 @@ function serializeRangeItems(items: any[] | undefined): any[] | undefined {
         return undefined;
       }
       if (isPlainObject(item) && (item.type || item["@type"]) === "SpecificResource") {
-        return serializeSpecificResource(item);
+        return serializeSpecificResource(item, state);
       }
       return item;
     })
@@ -363,7 +397,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
-        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start))],
+        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
         ["items", filterList(yield entity.items)],
         ["first", entity.first],
         ["last", entity.last],
@@ -387,7 +421,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
       return [
         ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
         ...(yield* serializeContainer(entity, true)),
-        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start))],
+        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
       ];
     },
 
@@ -427,11 +461,11 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["motivation", entity.motivation?.length ? entity.motivation : undefined],
-        ["body", serializeAnnotationValue(yield entity.body, serializeSpecificResource)],
+        ["body", serializeAnnotationValue(yield entity.body, (body) => serializeSpecificResource(body, state))],
         [
           "target",
           serializeAnnotationValue(resolveContentResourceReference(state, entity.target), (target) =>
-            serializeSpecificResource(normalizeAnnotationTarget(target))
+            serializeSpecificResource(normalizeAnnotationTarget(target), state)
           ),
         ],
         ["timeMode", entity.timeMode],
@@ -444,8 +478,8 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
       return [
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
-        ["items", serializeRangeItems(resolveContentResourceReference(state, entity.items))],
-        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start))],
+        ["items", serializeRangeItems(resolveContentResourceReference(state, entity.items), state)],
+        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
         ["supplementary", filterList(yield entity.supplementary)],
       ];
     },
@@ -459,9 +493,9 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
       ];
     },
 
-    ContentResource: function* (entity) {
+    ContentResource: function* (entity, state) {
       if (entity.type === "SpecificResource") {
-        return [UNWRAP, serializeSpecificResource(entity)];
+        return [UNWRAP, serializeSpecificResource(entity, state)];
       }
 
       return [
