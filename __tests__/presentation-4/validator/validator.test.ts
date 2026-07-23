@@ -125,6 +125,28 @@ describe("Presentation 4 authored validation", () => {
     );
   });
 
+  test("accepts a SpecificResource without an authored id", () => {
+    const input = JSON.parse(readFileSync(join(goldDirectory, "manifest-canvas.json"), "utf8"));
+    input.items[0].items[0].items[0].target = {
+      type: "SpecificResource",
+      source: {
+        id: input.items[0].id,
+        type: "Canvas",
+      },
+    };
+
+    const report = validateAuthoredPresentation4(input);
+
+    expect(report.issues).not.toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          code: "class-requirement-must",
+          path: "$.items[0].items[0].items[0].target.id",
+        }),
+      ])
+    );
+  });
+
   test("rejects input that only becomes Presentation 4 after upgrading", () => {
     const presentation3 = {
       "@context": "http://iiif.io/api/presentation/3/context.json",

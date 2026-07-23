@@ -298,4 +298,141 @@ describe("presentation-4 upgrade", () => {
     const upgraded = upgradePresentation3To4(manifest) as any;
     expect(upgraded.homepage.language).toEqual(["en"]);
   });
+
+  test("canonicalizes legacy body purposes and Image API selectors", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/3/context.json",
+      id: "https://example.org/manifest/legacy-selector",
+      type: "Manifest",
+      label: { en: ["legacy selector"] },
+      items: [
+        {
+          id: "https://example.org/canvas/legacy-selector",
+          type: "Canvas",
+          width: 100,
+          height: 100,
+          items: [
+            {
+              id: "https://example.org/page/legacy-selector",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/annotation/legacy-selector",
+                  type: "Annotation",
+                  motivation: "commenting",
+                  body: {
+                    type: "TextualBody",
+                    value: "Comment",
+                    purpose: "describing",
+                  },
+                  target: {
+                    type: "SpecificResource",
+                    source: "https://example.org/canvas/legacy-selector",
+                    selector: {
+                      type: "iiif:ImageApiSelector",
+                      region: "0,0,100,100",
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const upgraded = upgradePresentation3To4(manifest) as any;
+    const annotation = upgraded.items[0].items[0].items[0];
+
+    expect(annotation.body.purpose).toEqual(["describing"]);
+    expect(annotation.target.selector.type).toBe("ImageApiSelector");
+  });
+
+  test("keeps reference-only Annotations as references", () => {
+    const manifest = {
+      "@context": PRESENTATION_4_CONTEXT,
+      id: "https://example.org/manifest/annotation-reference",
+      type: "Manifest",
+      label: { en: ["annotation reference"] },
+      items: [
+        {
+          id: "https://example.org/canvas/annotation-reference",
+          type: "Canvas",
+          width: 100,
+          height: 100,
+          items: [],
+          annotations: [
+            {
+              id: "https://example.org/page/annotation-reference",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/annotation/annotation-reference",
+                  type: "Annotation",
+                  motivation: ["describing"],
+                  target: {
+                    id: "https://example.org/annotation/painted",
+                    type: "Annotation",
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const upgraded = upgradeToPresentation4(manifest) as any;
+    expect(upgraded.items[0].annotations[0].items[0].target).toEqual({
+      id: "https://example.org/annotation/painted",
+      type: "Annotation",
+    });
+  });
+
+  test("rewrites fragment Container ids and their references", () => {
+    const manifest = {
+      "@context": "http://iiif.io/api/presentation/3/context.json",
+      id: "https://example.org/manifest/fragment-containers",
+      type: "Manifest",
+      label: { en: ["fragment containers"] },
+      items: [
+        {
+          id: "https://example.org/manifest/fragment-containers#/canvas/1",
+          type: "Canvas",
+          width: 100,
+          height: 100,
+          items: [
+            {
+              id: "https://example.org/manifest/fragment-containers#/canvas/1/page",
+              type: "AnnotationPage",
+              items: [
+                {
+                  id: "https://example.org/manifest/fragment-containers#/canvas/1/annotation",
+                  type: "Annotation",
+                  motivation: "painting",
+                  body: {
+                    id: "https://example.org/image/fragment-container",
+                    type: "Image",
+                    width: 100,
+                    height: 100,
+                  },
+                  target: "https://example.org/manifest/fragment-containers#/canvas/1",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    };
+
+    const upgraded = upgradePresentation3To4(manifest) as any;
+    const canvas = upgraded.items[0];
+
+    expect(canvas.id).toBe("https://example.org/manifest/fragment-containers/canvas/1");
+    expect(canvas.items[0].id).toBe("https://example.org/manifest/fragment-containers/canvas/1/page");
+    expect(canvas.items[0].items[0].target).toEqual({
+      id: canvas.id,
+      type: "Canvas",
+    });
+  });
 });

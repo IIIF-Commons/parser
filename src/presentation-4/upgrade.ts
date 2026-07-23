@@ -91,6 +91,74 @@ function collectKnownTypes(resource: any, typeLookup: TypeLookup = {}): TypeLook
   return typeLookup;
 }
 
+function fragmentFreeContainerId(id: string, type: string): string {
+  const fragmentIndex = id.indexOf("#");
+  if (fragmentIndex === -1) {
+    return id;
+  }
+
+  const base = id.slice(0, fragmentIndex).replace(/\/+$/, "");
+  const fragment = id
+    .slice(fragmentIndex + 1)
+    .replace(/^\/+/, "")
+    .replace(/\/+$/, "");
+  return `${base}/${fragment || type.toLowerCase()}`;
+}
+
+function collectContainerIdRewrites(resource: any, rewrites = new Map<string, string>()): Map<string, string> {
+  if (Array.isArray(resource)) {
+    resource.forEach((item) => collectContainerIdRewrites(item, rewrites));
+    return rewrites;
+  }
+  if (!isPlainObject(resource)) {
+    return rewrites;
+  }
+
+  toIdAndType(resource);
+  const id = getId(resource);
+  const type = getType(resource);
+  if (id && type && containerTypes.has(type) && id.includes("#")) {
+    rewrites.set(id, fragmentFreeContainerId(id, type));
+  }
+
+  Object.values(resource).forEach((value) => collectContainerIdRewrites(value, rewrites));
+  return rewrites;
+}
+
+function rewriteContainerId(value: string, rewrites: Array<[string, string]>): string {
+  for (const [oldId, newId] of rewrites) {
+    if (value === oldId) {
+      return newId;
+    }
+    if (value.startsWith(`${oldId}/`)) {
+      return `${newId}${value.slice(oldId.length)}`;
+    }
+  }
+  return value;
+}
+
+function rewriteContainerIds(resource: any, rewrites: Array<[string, string]>): any {
+  if (typeof resource === "string") {
+    return rewriteContainerId(resource, rewrites);
+  }
+  if (Array.isArray(resource)) {
+    return resource.map((item) => rewriteContainerIds(item, rewrites));
+  }
+  if (!isPlainObject(resource)) {
+    return resource;
+  }
+
+  for (const [key, value] of Object.entries(resource)) {
+    resource[key] = rewriteContainerIds(value, rewrites);
+  }
+  return resource;
+}
+
+function prepareContainerIds(resource: any): any {
+  const rewrites = [...collectContainerIdRewrites(resource)].sort(([left], [right]) => right.length - left.length);
+  return rewrites.length ? rewriteContainerIds(resource, rewrites) : resource;
+}
+
 function coerceSpecificResourceSource(source: any, typeLookup: TypeLookup, fallbackType: string): any {
   if (Array.isArray(source)) {
     const coerced = source.map((item) => coerceSpecificResourceSource(item, typeLookup, fallbackType));
@@ -278,9 +346,18 @@ function coerceLegacyPointSelectorTime(resource: any): void {
   delete resource.t;
 }
 
+function coerceLegacySelectorType(resource: any): void {
+  if (getType(resource) === "iiif:ImageApiSelector") {
+    setType(resource, "ImageApiSelector");
+  }
+}
+
 function coerceKnownArrayProperties(resource: any): void {
   if (typeof resource.language === "string") {
     resource.language = [resource.language];
+  }
+  if (typeof resource.purpose === "string") {
+    resource.purpose = [resource.purpose];
   }
 }
 
@@ -312,6 +389,7 @@ function coerceV4Shape(
   }
 
   const type = getType(resource);
+  coerceLegacySelectorType(resource);
   coerceLegacyPointSelectorTime(resource);
   coerceKnownArrayProperties(resource);
   const currentContainerType = type && containerTypes.has(type) ? type : containerTypeHint;
@@ -330,7 +408,10 @@ function coerceV4Shape(
     delete resource.accompanyingCanvas;
   }
 
-  if (type === "Annotation") {
+  if (
+    type === "Annotation" &&
+    (Object.hasOwn(resource, "body") || Object.hasOwn(resource, "target") || Object.hasOwn(resource, "motivation"))
+  ) {
     coerceAnnotation(resource, typeLookup, currentContainerType);
   }
 
@@ -348,16 +429,16 @@ function coerceV4Shape(
 }
 
 export function upgradePresentation3To4(entity: any): any {
-  const clone = deepClone(entity);
+  const clone = prepareContainerIds(deepClone(entity));
   const typeLookup = collectKnownTypes(clone);
   return coerceV4Shape(clone, typeLookup, true);
 }
 
 export function upgradeToPresentation4(entity: any): any {
   const upgraded = convertPresentation2(deepClone(entity));
-  const typeLookup = collectKnownTypes(upgraded);
   if (hasPresentation4Context(upgraded)) {
-    return coerceV4Shape(upgraded, typeLookup, true);
+    return coerceV4Shape(upgraded, collectKnownTypes(upgraded), true);
   }
-  return coerceV4Shape(upgraded, typeLookup, true);
+  prepareContainerIds(upgraded);
+  return coerceV4Shape(upgraded, collectKnownTypes(upgraded), true);
 }

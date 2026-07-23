@@ -389,22 +389,31 @@ function serializeAnnotationValue(
   return asObjectOrList(normalizedItems);
 }
 
-function serializeRangeItems(items: any[] | undefined, state: any): any[] | undefined {
+function* serializeRangeItems(items: any[] | undefined, state: any): Generator<any, any[] | undefined, any> {
   if (!Array.isArray(items)) {
     return undefined;
   }
 
-  const normalizedItems = items
-    .map((item) => {
-      if (item === UNSET || item === null || typeof item === "undefined") {
-        return undefined;
+  const normalizedItems = [];
+  for (const item of items) {
+    if (item === UNSET || item === null || typeof item === "undefined") {
+      continue;
+    }
+    if (isPlainObject(item) && (item.type || item["@type"]) === "SpecificResource") {
+      normalizedItems.push(serializeSpecificResource(item, state));
+      continue;
+    }
+    const id = isPlainObject(item) ? item.id || item["@id"] : undefined;
+    const type = isPlainObject(item) ? item.type || item["@type"] || state?.mapping?.[id] : undefined;
+    if (type === "Range") {
+      const range = yield item;
+      if (range !== UNSET) {
+        normalizedItems.push(range);
       }
-      if (isPlainObject(item) && (item.type || item["@type"]) === "SpecificResource") {
-        return serializeSpecificResource(item, state);
-      }
-      return item;
-    })
-    .filter((item) => item !== undefined);
+      continue;
+    }
+    normalizedItems.push(item);
+  }
 
   return normalizedItems.length ? normalizedItems : undefined;
 }
@@ -448,7 +457,7 @@ function* withLinkedProperties(entity: any): Generator<any, Array<[string, any]>
     ["services", filterList(entity.services)],
     ["homepage", filterList(yield entity.homepage)],
     ["rendering", filterList(yield entity.rendering)],
-    ["partOf", filterList(yield entity.partOf)],
+    ["partOf", compactList(entity.partOf)?.map((item) => cleanSpecificResourceWireValue(item))],
     ["placeholderContainer", entity.placeholderContainer ? yield entity.placeholderContainer : undefined],
     ["accompanyingContainer", entity.accompanyingContainer ? yield entity.accompanyingContainer : undefined],
     ["annotations", filterList(yield entity.annotations)],
@@ -554,7 +563,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
       return [
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
-        ["items", serializeRangeItems(resolveContentResourceReference(state, entity.items), state)],
+        ["items", yield* serializeRangeItems(resolveContentResourceReference(state, entity.items), state)],
         ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
         ["supplementary", entity.supplementary ? yield entity.supplementary : undefined],
       ];

@@ -130,6 +130,8 @@ export type Agent = {
 
 export type ContentResourceBase = Prettify<
   Omit<IIIFExternalWebResourceV3, "language" | "service"> & {
+    [extension: `${string}:${string}`]: unknown;
+    [legacyExtension: `@${string}`]: unknown;
     id?: string;
     "@id"?: string;
     type?: string;
@@ -228,7 +230,7 @@ export type IndependentsResource = Prettify<
 
 export type SpecificResource = Prettify<
   Omit<SpecificResourceV3, "source" | "selector" | "purpose" | "scope"> & {
-    id: string;
+    id?: string;
     type: "SpecificResource";
     source: LinkedResource;
     selector?: Selector[];
@@ -243,7 +245,7 @@ export type SpecificResource = Prettify<
 export type StartContainerReference = ResourceReference<"Canvas" | "Scene" | "Timeline">;
 
 export type StartSpecificResource = {
-  id: string;
+  id?: string;
   type: "SpecificResource";
   source: ResourceReference<"Canvas"> | string;
   selector: Selector | Selector[];

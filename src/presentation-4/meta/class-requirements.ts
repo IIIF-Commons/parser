@@ -312,9 +312,10 @@ export const presentation4ClassRequirements = {
 
     SpecificResource: {
       typeValue: "SpecificResource",
-      must: ["id", "type", "source"],
+      must: ["type", "source"],
       should: [],
       may: [
+        "id",
         "selector",
         "position",
         "transform",

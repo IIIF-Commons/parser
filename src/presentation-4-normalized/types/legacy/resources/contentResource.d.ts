@@ -20,15 +20,19 @@ export type SpecificResourceNormalized = NormalizedEntityBase & {
 };
 
 export type ContentResourceNormalized = NormalizedLinkedEntity & {
+  [extension: string]: unknown;
   type: string;
   language: readonly string[];
   items: readonly NormalizedReference[];
   selector: readonly Selector[];
   transform: readonly Transform[];
   action: readonly NormalizedJsonValue[];
+  purpose?: readonly string[];
   provides: readonly string[];
   fileSize?: number;
   lookAt?: NormalizedJsonValue;
+  properties?: NormalizedJsonValue;
+  geometry?: NormalizedJsonValue;
   // @todo normalize to string | null
   value: string | null;
 };

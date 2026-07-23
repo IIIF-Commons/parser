@@ -1163,13 +1163,6 @@ export function runClassRequirementValidation(resource: any): {
       if (className === "Service" && (property === "id" || property === "type")) {
         continue;
       }
-      if (
-        className === "SpecificResource" &&
-        property === "id" &&
-        /\.target(?:\.items\[\d+\])?$/.test(nodePath)
-      ) {
-        continue;
-      }
       if (rangeContainerReference && property !== "id" && property !== "type") {
         continue;
       }
