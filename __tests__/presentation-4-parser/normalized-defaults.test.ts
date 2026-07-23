@@ -212,7 +212,7 @@ describe("presentation-4 normalized defaults", () => {
     expect(result.entities.ContentResource[target.id]).toBeUndefined();
   });
 
-  test("wraps multiple body/target values in minted List resources", () => {
+  test("repairs direct body/target arrays as minted Independents resources", () => {
     const manifest = {
       "@context": "http://iiif.io/api/presentation/4/context.json",
       id: "https://example.org/manifest/list-wrapper",
@@ -253,8 +253,8 @@ describe("presentation-4 normalized defaults", () => {
 
     expect(annotation.body.id.startsWith("vault://iiif-parser/v4/ContentResource/")).toBe(true);
     expect(annotation.target.id.startsWith("vault://iiif-parser/v4/ContentResource/")).toBe(true);
-    expect(body.type).toBe("List");
-    expect(target.type).toBe("List");
+    expect(body.type).toBe("Independents");
+    expect(target.type).toBe("Independents");
     expect(Array.isArray(body.items)).toBe(true);
     expect(Array.isArray(target.items)).toBe(true);
     expect(body.items).toHaveLength(2);
