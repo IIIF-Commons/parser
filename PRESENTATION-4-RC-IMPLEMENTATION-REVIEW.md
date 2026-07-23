@@ -5,6 +5,30 @@ Branch reviewed: `feature/presentation-4.0` at `f422ee4`
 Baseline: `main`  
 Status: review and implementation plan; this document does not apply the proposed fixes
 
+## Implementation pass — 2026-07-23
+
+The first joint implementation pass is complete on this branch:
+
+- `validateAuthoredPresentation4()` now validates authored v4 JSON without
+  upgrade or repair, backed by self-contained gold fixtures under
+  `__tests__/presentation-4/fixtures/gold`.
+- The default Presentation 3 normalizer/upgrader accepts supported v4 input.
+  Timeline projects to Canvas; Scene fails explicitly instead of producing a
+  mixed or unresolved store.
+- Collection Page is a first-class normalized entity with v4 traversal and
+  serialization.
+- Legacy multiple annotation bodies and targets upgrade to `Independents`;
+  authored Choice, Composite, List, and Independents remain distinct.
+- The v4 wire boundary strips internal identities/framing, retains concrete
+  Specific Resource source types and values, and preserves array cardinality.
+- The sibling Helpers repository is linked with pnpm and has fixed-schema
+  Vault/Vault4 integration coverage.
+
+This is a usable foundation, not the end of the review plan. The next release
+pass still needs a pinned official IIIF example corpus, structured diagnostics
+instead of the current Scene exception, broader property/model reconciliation,
+packed-tarball joint CI, and a deliberate decision on unsupported nested 3D.
+
 This review supersedes `P4-PRESENTATION-TYPE-AUDIT.md` as the planning baseline for the next implementation pass. The earlier document remains useful history, but it predates the current RC interpretation and, among other differences, recommends `List` for legacy multiple bodies/targets where this review requires `Independents`.
 
 The companion `iiif-helpers/PRESENTATION-4-RC-JOINT-DELIVERY-REVIEW.md` reviews Vault and Helpers and turns both repositories into one release plan. The parser owns wire/version/normalization policy; the joint review owns Vault lifecycle, helper semantics, packaging, and cross-repository gates.
