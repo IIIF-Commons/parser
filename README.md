@@ -243,7 +243,15 @@ const supportsSizes = supports(imageService, {
 Upgrades IIIF JSON to the latest IIIF Presentation version (current: 3).
 
 ```ts
-import { upgrade } from "@iiif/parser/upgrader";
+import {
+  getPresentation3CompatibilityDiagnostics,
+  upgrade,
+} from "@iiif/parser/upgrader";
 
 upgrade(presentation2Manifest); // Presentation 3 Manifest or Collection
+
+// Presentation 4 Timeline/Canvas resources are projected to Presentation 3.
+// Unsupported Scene resources can be checked before upgrade(); upgrade()
+// throws Presentation4CompatibilityError with the same diagnostics.
+const diagnostics = getPresentation3CompatibilityDiagnostics(presentation4Manifest);
 ```
