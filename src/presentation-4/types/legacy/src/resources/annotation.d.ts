@@ -66,7 +66,7 @@ export type Annotation = Prettify<{
   audience?: Audience | Audience[] | undefined;
   accessibility?: string | string[] | undefined;
   canonical?: string | undefined;
-  via?: string | (string[] & string) | undefined;
+  via?: string[] | undefined;
   stylesheet?: (string | Stylesheet) | undefined;
   textGranularity?: TextGranularityOptions | undefined;
   navDate?: string | undefined;
@@ -85,11 +85,11 @@ export type Annotation = Prettify<{
   rendering?: LinkedResource[];
   partOf?: Array<LinkedResource>;
   logo?: LinkedResource[];
-  supplementary?: LinkedResource[];
   selector?: Selector[];
   action?: Array<ContentResourceLike | SpecificResource | ResourceReference | string | Record<string, unknown>>;
   exclude?: ExcludeType[];
   provides?: Array<Provides>;
+  scope?: Array<ResourceReference>;
   position?: Selector;
   timeMode?: string | null;
 }>;

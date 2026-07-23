@@ -22,13 +22,13 @@ export type Provides = LiteralUnion<
   | "subtitles"
 >;
 
-export type ExcludeType = LiteralUnion<"Audio" | "Animations" | "Cameras" | "Lights">;
+export type ExcludeType = "audio" | "animations" | "cameras" | "lights";
 
 export type Quantity = Prettify<{
   id?: string;
-  type: "Quantity" | "Value" | string;
-  value: number;
-  unit?: string;
+  type: "Quantity";
+  quantityValue: number;
+  unit: string;
   label?: InternationalString;
   [key: string]: unknown;
 }>;

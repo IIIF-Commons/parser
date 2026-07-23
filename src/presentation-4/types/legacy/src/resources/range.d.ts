@@ -50,7 +50,7 @@ export type Range = Prettify<{
   homepage?: Array<LinkedResource>;
   partOf?: Array<LinkedResource>;
   logo?: Array<LinkedResource>;
-  supplementary?: Array<LinkedResource>;
+  supplementary?: ResourceReference<"AnnotationCollection">;
   start?: Start;
   canonical?: string;
   via?: Array<string>;

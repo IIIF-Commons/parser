@@ -60,8 +60,8 @@ const canvasWithDuration = {
   duration: 12.5,
   viewingDirection: "left-to-right",
   backgroundColor: "#f6f6f6",
-  temporalScale: 1,
-  spatialScale: 2,
+  temporalScale: { type: "Quantity", quantityValue: 1, unit: "s" },
+  spatialScale: { type: "Quantity", quantityValue: 2, unit: "m" },
 } satisfies CanvasNormalized;
 
 void canvasWithDuration;
@@ -173,7 +173,7 @@ void annotationWithInvalidBody;
 const rangeWithSupplementary = {
   ...emptyRange,
   start: { id: "https://example.org/canvas/5", type: "Canvas" },
-  supplementary: [{ id: "https://example.org/annotation-collection/1", type: "AnnotationCollection" }],
+  supplementary: { id: "https://example.org/annotation-collection/1", type: "AnnotationCollection" },
 } satisfies RangeNormalized;
 
 void rangeWithSupplementary;

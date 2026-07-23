@@ -1,5 +1,5 @@
 import type { InternationalString } from "../../../../presentation-3/types";
-import type { Selector, Service, Transform } from "../../../../presentation-4/types";
+import type { Quantity, Selector, Service, Transform } from "../../../../presentation-4/types";
 import type { MetadataItem } from "../../../../presentation-4/types/legacy/src/resources/contentResource";
 
 export type NormalizedPrimitive = string | number | boolean | null;
@@ -17,7 +17,7 @@ export interface NormalizedSpecificResourceReference extends NormalizedReference
   transform: readonly Transform[];
   action: readonly NormalizedJsonValue[];
   purpose?: readonly string[];
-  scope?: NormalizedReference | string | readonly (NormalizedReference | string)[];
+  scope?: readonly NormalizedReference[];
   styleClass?: string;
 }
 
@@ -53,6 +53,8 @@ export interface NormalizedLinkedEntity extends NormalizedEntityBase {
   rendering: readonly NormalizedReference[];
   partOf: readonly NormalizedReference[];
   annotations: readonly NormalizedReference[];
+  canonical?: string;
+  via?: readonly string[];
   rights?: string | null;
   navDate?: string;
   navPlace?: NormalizedJsonValue;
@@ -62,9 +64,10 @@ export interface NormalizedLinkedEntity extends NormalizedEntityBase {
   height?: number;
   width?: number;
   duration?: number;
-  spatialScale?: number;
-  temporalScale?: number;
+  spatialScale?: Quantity;
+  temporalScale?: Quantity;
   backgroundColor?: string;
+  interactionMode?: readonly string[];
   viewingDirection?: string;
   timeMode?: string;
   placeholderContainer?: NormalizedReference;

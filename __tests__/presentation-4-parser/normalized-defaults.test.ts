@@ -142,7 +142,6 @@ describe("presentation-4 normalized defaults", () => {
     const normalizedRange = result.entities.Range["https://example.org/range/1"]!;
     expectArrayFields(normalizedRange, [
       "items",
-      "supplementary",
       "metadata",
       "provider",
       "thumbnail",
@@ -155,6 +154,7 @@ describe("presentation-4 normalized defaults", () => {
       "partOf",
       "annotations",
     ]);
+    expect(normalizedRange.supplementary).toBeNull();
     expect((normalizedRange.items as unknown[]).length).toBe(0);
 
     const normalizedTarget = (normalizedAnnotation as any).target;
@@ -206,7 +206,7 @@ describe("presentation-4 normalized defaults", () => {
     const target = annotation.target;
 
     expect(annotation.body).toBeNull();
-    expect(Array.isArray(range.supplementary)).toBe(true);
+    expect(range.supplementary).toBeNull();
     expectArrayFields(target, ["selector", "transform"]);
     expect(Array.isArray(target.source)).toBe(false);
     expect(result.entities.ContentResource[target.id]).toBeUndefined();
@@ -276,6 +276,6 @@ describe("presentation-4 normalized defaults", () => {
 
     expect(normalized.first).toBeNull();
     expect(normalized.last).toBeNull();
-    expect(normalized.total).toBe(0);
+    expect(normalized.total).toBeUndefined();
   });
 });

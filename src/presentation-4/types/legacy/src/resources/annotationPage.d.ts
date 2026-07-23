@@ -37,5 +37,4 @@ export type AnnotationPage = Prettify<{
   via?: Array<string>;
   annotations?: Array<ResourceReference<"AnnotationPage"> | string>;
   logo?: Array<LinkedResource>;
-  supplementary?: Array<LinkedResource>;
 }>;

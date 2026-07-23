@@ -95,7 +95,6 @@ export const emptyAnnotationCollection: AnnotationCollectionNormalized = {
   items: EMPTY_ARRAY,
   first: null,
   last: null,
-  total: 0,
   ...baseLinkedArrays,
 };
 
@@ -104,6 +103,7 @@ export const emptyAnnotation: AnnotationNormalized = {
   type: "Annotation",
   motivation: EMPTY_ARRAY,
   body: null,
+  provides: EMPTY_ARRAY,
   target: {
     id: "https://iiif-parser/empty-annotation/target",
     type: "ContentResource",
@@ -115,7 +115,7 @@ export const emptyRange: RangeNormalized = {
   id: "https://iiif-parser/empty-range",
   type: "Range",
   items: EMPTY_ARRAY,
-  supplementary: EMPTY_ARRAY,
+  supplementary: null,
   ...baseLinkedArrays,
 };
 

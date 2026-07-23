@@ -358,10 +358,13 @@ function baseProperties(entity: any) {
     ["spatialScale", entity.spatialScale],
     ["temporalScale", entity.temporalScale],
     ["backgroundColor", entity.backgroundColor],
+    ["interactionMode", entity.interactionMode?.length ? entity.interactionMode : undefined],
     ["viewingDirection", entity.viewingDirection !== "left-to-right" ? entity.viewingDirection : undefined],
     ["timeMode", entity.timeMode],
     ["services", filterList(entity.services)],
     ["service", filterList(entity.service)],
+    ["canonical", entity.canonical],
+    ["via", entity.via?.length ? entity.via : undefined],
   ] as Array<[string, any]>;
 }
 
@@ -452,7 +455,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ["items", filterList(yield entity.items)],
         ["first", entity.first],
         ["last", entity.last],
-        ["total", typeof entity.total === "number" && entity.total > 0 ? entity.total : undefined],
+        ["total", typeof entity.total === "number" ? entity.total : undefined],
       ];
     },
 
@@ -470,6 +473,8 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ],
         ["timeMode", entity.timeMode],
         ["exclude", entity.exclude?.length ? entity.exclude : undefined],
+        ["provides", entity.provides?.length ? entity.provides : undefined],
+        ["scope", entity.scope?.length ? entity.scope : undefined],
         ["position", entity.position ? yield entity.position : undefined],
       ];
     },
@@ -480,7 +485,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ...(yield* withLinkedProperties(entity)),
         ["items", serializeRangeItems(resolveContentResourceReference(state, entity.items), state)],
         ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
-        ["supplementary", filterList(yield entity.supplementary)],
+        ["supplementary", entity.supplementary ? yield entity.supplementary : undefined],
       ];
     },
 
@@ -511,6 +516,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ["lookAt", entity.lookAt ? yield entity.lookAt : undefined],
         ["position", entity.position ? yield entity.position : undefined],
         ["provides", entity.provides?.length ? entity.provides : undefined],
+        ["fileSize", entity.fileSize],
         ["quantityValue", entity.quantityValue],
         ["unit", entity.unit],
       ];

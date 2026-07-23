@@ -450,7 +450,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
       ...(yield* linkedProperties(entity)),
       ["items", filterList(yield entity.items)],
       ["start", entity.start ? yield entity.start : undefined],
-      ["supplementary", filterList(yield entity.supplementary)],
+      ["supplementary", entity.supplementary ? yield entity.supplementary : undefined],
     ];
   },
 

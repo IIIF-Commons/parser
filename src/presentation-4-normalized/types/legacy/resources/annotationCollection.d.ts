@@ -5,5 +5,5 @@ export type AnnotationCollectionNormalized = NormalizedLinkedEntity & {
   items: readonly NormalizedReference[];
   first: NormalizedReference | null;
   last: NormalizedReference | null;
-  total: number;
+  total?: number;
 };

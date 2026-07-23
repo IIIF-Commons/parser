@@ -41,7 +41,6 @@ export type Manifest = Prettify<{
 
   rights?: string;
 
-  supplementary?: Array<LinkedResource>;
   placeholderContainer?: Canvas | Timeline | Scene | null;
   accompanyingContainer?: Canvas | Timeline | Scene | null;
   start?: Start;

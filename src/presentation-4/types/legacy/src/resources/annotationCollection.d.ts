@@ -42,5 +42,4 @@ export type AnnotationCollection = Prettify<{
   homepage?: Array<LinkedResource>;
   partOf?: Array<LinkedResource>;
   logo?: Array<LinkedResource>;
-  supplementary?: Array<LinkedResource>;
 }>;

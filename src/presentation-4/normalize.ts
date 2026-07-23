@@ -367,14 +367,13 @@ function skipOnAnnotationTarget<T extends (resource: any, context: TraversalCont
   }) as unknown) as T;
 }
 
-function ensureRangeSupplementaryArray<T extends { supplementary?: unknown }>(resource: T): T {
+function ensureRangeSupplementaryObject<T extends { supplementary?: unknown }>(resource: T): T {
   if (resource && typeof resource === "object") {
     const supplementary = (resource as any).supplementary;
-    (resource as any).supplementary = Array.isArray(supplementary)
-      ? supplementary
-      : supplementary
-        ? [supplementary]
-        : [];
+    // Older drafts and early parser builds normalized this single-valued
+    // property as an array. Accept that state at the boundary without
+    // perpetuating the non-spec cardinality.
+    (resource as any).supplementary = Array.isArray(supplementary) ? supplementary[0] || null : supplementary || null;
   }
   return resource;
 }
@@ -535,7 +534,7 @@ export function normalize(input: unknown): NormalizeResult {
       range: [
         withId("Range", diagnostics),
         ensureDefaultFields((isLegacySource ? legacyEmptyRange : emptyRange) as any),
-        ensureRangeSupplementaryArray,
+        ensureRangeSupplementaryObject,
         map("Range"),
         record("Range"),
       ],

@@ -151,7 +151,6 @@ export type ContentResourceBase = Prettify<
     rendering?: LinkedResource[];
     partOf?: LinkedResource[];
     logo?: LinkedResource[];
-    supplementary?: LinkedResource[];
     canonical?: string;
     via?: string[];
     annotations?: LinkedResource[];
@@ -237,7 +236,7 @@ export type SpecificResource = Prettify<
     transform?: Transform[];
     action?: LinkedResource[];
     purpose?: Array<AnyMotivation | string>;
-    scope?: Array<ResourceReference | string>;
+    scope?: Array<ResourceReference>;
   }
 >;
 

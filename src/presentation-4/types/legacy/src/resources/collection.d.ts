@@ -39,7 +39,6 @@ type CollectionBase = {
   canonical?: string;
   via?: Array<string>;
   logo?: Array<LinkedResource>;
-  supplementary?: Array<LinkedResource>;
   placeholderContainer?: Canvas | Timeline | Scene | null;
   accompanyingContainer?: Canvas | Timeline | Scene | null;
 };

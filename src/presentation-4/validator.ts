@@ -729,6 +729,31 @@ function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {
       }
     }
 
+    if (containerTypes.has(type || "") && typeof node.items !== "undefined") {
+      if (!Array.isArray(node.items)) {
+        issue(issues, {
+          code: "container-items-array",
+          message: `${type}.items must be an array of Annotation Pages`,
+          path: `${nodePath}.items`,
+          resource: node,
+          specRef: "#items",
+        });
+      } else {
+        for (let index = 0; index < node.items.length; index++) {
+          const item = node.items[index];
+          if (!isPlainObject(item) || getType(item) !== "AnnotationPage") {
+            issue(issues, {
+              code: "container-item-annotation-page",
+              message: `${type}.items entries must be Annotation Pages`,
+              path: `${nodePath}.items[${index}]`,
+              resource: node,
+              specRef: "#items",
+            });
+          }
+        }
+      }
+    }
+
     if (type === "AnnotationPage" && !Array.isArray(node.items)) {
       issue(issues, {
         code: "annotation-page-items-array",
@@ -751,6 +776,68 @@ function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {
         resource: node,
         specRef: "#items",
       });
+    }
+
+    if (type === "Range" && typeof node.supplementary !== "undefined") {
+      const supplementary = node.supplementary;
+      if (!isPlainObject(supplementary) || getType(supplementary) !== "AnnotationCollection" || !getId(supplementary)) {
+        issue(issues, {
+          code: "range-supplementary-annotation-collection",
+          message: "Range.supplementary must be one AnnotationCollection reference with id and type",
+          path: `${nodePath}.supplementary`,
+          resource: node,
+          specRef: "#supplementary",
+        });
+      }
+    }
+
+    if (type === "Annotation" && typeof node.exclude !== "undefined") {
+      const allowedExcludeValues = new Set(["audio", "animations", "cameras", "lights"]);
+      if (
+        !Array.isArray(node.exclude) ||
+        node.exclude.length === 0 ||
+        node.exclude.some((value: unknown) => typeof value !== "string" || !allowedExcludeValues.has(value))
+      ) {
+        issue(issues, {
+          code: "annotation-exclude-values",
+          message: "Annotation.exclude must be a non-empty array containing audio, animations, cameras, or lights",
+          path: `${nodePath}.exclude`,
+          resource: node,
+          specRef: "#exclude",
+        });
+      }
+    }
+
+    if ((type === "Annotation" || type === "SpecificResource") && typeof node.scope !== "undefined") {
+      if (
+        !Array.isArray(node.scope) ||
+        node.scope.length === 0 ||
+        node.scope.some((value: unknown) => !isPlainObject(value) || !getId(value) || !getType(value))
+      ) {
+        issue(issues, {
+          code: "scope-reference-array",
+          message: `${type}.scope must be a non-empty array of resource references with id and type`,
+          path: `${nodePath}.scope`,
+          resource: node,
+          specRef: "#scope",
+        });
+      }
+    }
+
+    if (typeof node.via !== "undefined") {
+      if (
+        !Array.isArray(node.via) ||
+        node.via.length === 0 ||
+        node.via.some((value: unknown) => typeof value !== "string")
+      ) {
+        issue(issues, {
+          code: "via-uri-array",
+          message: "via must be a non-empty array of URI strings",
+          path: `${nodePath}.via`,
+          resource: node,
+          specRef: "#via",
+        });
+      }
     }
   });
 

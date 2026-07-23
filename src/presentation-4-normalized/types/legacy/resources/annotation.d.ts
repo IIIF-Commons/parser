@@ -12,4 +12,6 @@ export type AnnotationNormalized = NormalizedLinkedEntity & {
   motivation: readonly string[];
   body: NormalizedReference | null;
   target: AnnotationTargetNormalized;
+  provides: readonly string[];
+  scope?: readonly NormalizedReference[];
 };

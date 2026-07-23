@@ -1,16 +1,13 @@
 import type { Canvas as CanvasV3 } from "../../../../../presentation-3/types/legacy/src/resources/canvas";
 import type { Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
 import type { GeoJSON } from "../../../../../shared/geojson";
-import type { Quantity } from "../iiif/technical";
+import type { InteractionMode, Quantity } from "../iiif/technical";
 import type { AnnotationPage } from "./annotationPage";
 import type { AgentLike, LinkedResource, ResourceReference, ServiceLike } from "./contentResource";
 import type { Scene } from "./scene";
 import type { Timeline } from "./timeline";
 
-export type CanvasItem =
-  | AnnotationPage
-  | ResourceReference<"AnnotationPage" | "Canvas" | "Scene" | "Timeline">
-  | string;
+export type CanvasItem = AnnotationPage | ResourceReference<"AnnotationPage">;
 export type CanvasAnnotation = AnnotationPage | ResourceReference<"AnnotationPage"> | string;
 
 export type Canvas = Prettify<{
@@ -41,9 +38,9 @@ export type Canvas = Prettify<{
   homepage?: LinkedResource[];
   partOf?: LinkedResource[];
   logo?: LinkedResource[];
-  supplementary?: LinkedResource[];
   canonical?: string;
   via?: string[];
+  interactionMode?: InteractionMode[];
   spatialScale?: Quantity | null;
   timeMode?: string | null;
   backgroundColor?: string | null;
@@ -51,4 +48,4 @@ export type Canvas = Prettify<{
   accompanyingContainer?: Canvas | Timeline | Scene | null;
 }>;
 
-export type CanvasItemSchemas = "AnnotationPage" | "Canvas" | "Scene" | "Timeline";
+export type CanvasItemSchemas = "AnnotationPage";
