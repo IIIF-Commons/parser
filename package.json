@@ -1,6 +1,9 @@
 {
 	"name": "@iiif/parser",
 	"version": "2.3.0",
+	"engines": {
+		"node": ">=22"
+	},
 	"license": "MIT",
 	"type": "module",
 	"description": "IIIF Presentation 2, 3 and 4 parsing utilities",

@@ -3,7 +3,32 @@
 Date: 2026-07-22  
 Branch reviewed: `feature/presentation-4.0` at `f422ee4`  
 Baseline: `main`  
-Status: review and implementation plan; this document does not apply the proposed fixes
+Status: implementation complete; coordinated publication is the remaining external action
+
+## Completion pass — 2026-07-23
+
+All implementation milestones in this review are complete:
+
+- The Presentation 4 property model, validator, traversal, normalization, and
+  serializers now share tested class/property policy, including Quantity
+  objects, Container membership, serializer coverage, canonical property names,
+  opaque services, and singular supplementary resources.
+- The package root is the stable Presentation 3 compatibility contract for
+  Presentation 2, 3, and supported non-3D Presentation 4. The native
+  `/presentation-4` entry point is the fixed Presentation 4 contract.
+- The Scene boundary is implemented as a preservation-oriented vertical slice.
+  Known Model content, cameras, selectors, ordered transforms/actions, and
+  unknown extension data round trip; unsupported rendering/runtime behavior is
+  explicitly documented.
+- The packed parser declarations are self-contained. Every exported subpath is
+  checked from fresh ESM, CommonJS, NodeNext, and Bundler consumers with
+  `skipLibCheck: false`.
+- Parser `2.3.0` and Helpers `1.6.0` require Node 22 or newer. CI covers Node 22
+  and 24, and release CI includes the packed declaration test.
+
+The paired registry publication described in Phase 6 was deliberately not
+performed by this implementation pass. It should be executed from the exact
+green commits recorded by the two repositories' release handoff.
 
 ## Implementation pass — 2026-07-23
 
@@ -576,7 +601,7 @@ Exit: existing Helper behavior remains stable for the compatibility path, and v4
 
 Exit: every claimed 3D feature has authored, normalized, serialized, and helper/Vault tests. Unclaimed features remain explicitly unsupported rather than partially modeled.
 
-## Current verification snapshot
+## Initial review verification snapshot
 
 The following checks were run against the reviewed branch:
 
@@ -593,29 +618,48 @@ The following checks were run against the reviewed branch:
 
 The green checks demonstrate useful scaffolding and regression coverage. They do not establish Presentation 4 conformance because invalid source fixtures, weak smoke assertions, permissive/open declarations, and self-round-tripped fixtures can all make a lossy implementation appear green.
 
+## Final verification snapshot
+
+The completion pass was verified on Node 24 with the sibling Helpers checkout
+linked through pnpm:
+
+| Command | Result |
+| --- | --- |
+| `pnpm exec vitest run` | Pass: 37 files, 417 tests |
+| `pnpm run typecheck` | Pass |
+| `pnpm run build` | Pass |
+| `pnpm run lint` | Pass |
+| `pnpm run test:types` | Pass |
+| `pnpm run typecheck:p4-fixtures` | Pass: 33/33 authored fixtures |
+| `pnpm run typecheck:p4-normalized-fixtures:all` | Pass: 131/131 |
+| `pnpm run test:package-types` | Pass: packed ESM/CJS and strict NodeNext/Bundler declarations |
+| Helpers `pnpm run test:presentation-4:packed` | Pass: parser 2.3.0 + Helpers 1.6.0, 41 public subpaths |
+
 ## Definition of done
 
 The two product paths are ready when all of the following are true:
 
-- [ ] The supported input/output/version matrix is a public contract.
-- [ ] Official fixtures are pinned, pristine, provenance-tracked, and validation-clean under the recorded policy.
-- [ ] The default public API accepts v2, v3, and supported v4 without application version branches.
-- [ ] Existing v2/v3 normalized behavior and Helpers remain compatible.
-- [ ] Timeline projection rewrites identities and references consistently.
-- [ ] Scene/3D behavior is explicit, structured, and never silently lossy.
-- [ ] V4 aggregates preserve `Choice`, `Composite`, `List`, and `Independents` semantics.
-- [ ] Collection Page and Annotation Collection paging work without implicit network access.
-- [ ] Services, GeoJSON, and unknown extensions remain opaque and preserved.
-- [ ] No serialized output contains internal store fields, internal IDs, sentinels, or accidental default values.
-- [ ] Supported output validates and passes semantic, deterministic round trips.
-- [ ] Types, validator, traversal, normalized model, and serializer share one tested property policy.
-- [ ] Public declarations pass library checking.
-- [ ] README examples run against the packed public API.
-- [ ] Vault and IIIF Helpers pass cross-repository compatibility tests.
-- [ ] The first release documents exactly which 3D constructs are unsupported.
+- [x] The supported input/output/version matrix is a public contract.
+- [x] Official fixtures are pinned, pristine, provenance-tracked, and validation-clean under the recorded policy.
+- [x] The default public API accepts v2, v3, and supported v4 without application version branches.
+- [x] Existing v2/v3 normalized behavior and Helpers remain compatible.
+- [x] Timeline projection rewrites identities and references consistently.
+- [x] Scene/3D behavior is explicit, structured, and never silently lossy.
+- [x] V4 aggregates preserve `Choice`, `Composite`, `List`, and `Independents` semantics.
+- [x] Collection Page and Annotation Collection paging work without implicit network access.
+- [x] Services, GeoJSON, and unknown extensions remain opaque and preserved.
+- [x] No serialized output contains internal store fields, internal IDs, sentinels, or accidental default values.
+- [x] Supported output validates and passes semantic, deterministic round trips.
+- [x] Types, validator, traversal, normalized model, and serializer share one tested property policy.
+- [x] Public declarations pass library checking.
+- [x] README examples run against the packed public API.
+- [x] Vault and IIIF Helpers pass cross-repository compatibility tests.
+- [x] The first release documents exactly which 3D constructs are unsupported.
 
-## Overall recommendation
+## Final release recommendation
 
-Do not continue by filling individual serializer or type gaps on top of the current fixture baseline. First restore a trustworthy RC oracle and record the few unresolved specification policies. Then implement the transparent v4-to-v3 adapter as the narrow first product. Once that is stable, align the v4-native declarations, runtime model, validation, and wire serializer around the same pinned source.
-
-That sequence preserves the library's main value: consumers can keep building against a well-formed v3 model while support for v4 rolls out. It also creates a clean opt-in v4 path without forcing full 3D normalization or speculative abstractions into the first release.
+Publish parser `2.3.0` first, run the Helpers joint gate against that exact
+registry artifact, then publish Helpers `1.6.0`. Record the resulting tarball
+integrities beside IIIF/api fixture commit
+`28a88829699ebbbe7722b4692cf3b7b67969bc6c`. Do not broaden the advertised 3D
+surface without another fixture-backed parser/Vault/helper vertical slice.

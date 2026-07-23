@@ -7,7 +7,7 @@ npm i @iiif/parser
 This is a parser and set of low-level utilities for the following IIIF Specifications:
 
 - [IIIF Presentation 3](https://iiif.io/api/presentation/3.0/) (current)
-- [IIIF Presentation 4](https://preview.iiif.io/api/prezi-4/presentation/4.0/) (preview support via `/presentation-4`)
+- [IIIF Presentation 4](https://iiif.io/api/presentation/4.0/) (release candidate)
 - [IIIF Image 3](https://iiif.io/api/image/3.0/) (current)
 - [IIIF Presentation 2](https://iiif.io/api/presentation/2.1/)
 
@@ -17,7 +17,9 @@ These include:
 - [Open Annotations](https://iiif.io/api/annex/openannotation/)
 
 > [!NOTE]
-> Presentation API v4 support is available from `@iiif/parser/presentation-4` and is designed for mixed v2.1/v3.0/v4.0 ingestion with a v4 normalization pipeline.
+> Node.js 22 or newer is required. Presentation 4 has two deliberate public
+> contracts: the package root keeps the Presentation 3 application model, while
+> `@iiif/parser/presentation-4` opts into a Presentation 4 model.
 
 ### Features
 
@@ -139,6 +141,38 @@ export type TraversalMap = {
 
 #### IIIF Presentation 4
 
+Existing applications can keep importing from the package root. The normal
+Presentation 3 `normalize()` path accepts Presentation 2.1, 3.0, and supported
+non-3D Presentation 4 input. Presentation 4 Timelines are projected to
+Presentation 3 Canvases, including their identities and references:
+
+```ts
+import { normalize } from "@iiif/parser";
+import {
+  getPresentation3CompatibilityDiagnostics,
+  Presentation4CompatibilityError,
+} from "@iiif/parser/upgrader";
+
+const diagnostics = getPresentation3CompatibilityDiagnostics(input);
+if (diagnostics.length) {
+  console.warn(diagnostics);
+}
+
+try {
+  const presentation3Store = normalize(input);
+} catch (error) {
+  if (error instanceof Presentation4CompatibilityError) {
+    console.error(error.diagnostics);
+  }
+}
+```
+
+Scenes cannot be represented faithfully in Presentation 3. The compatibility
+path returns structured preflight diagnostics and throws rather than silently
+discarding Scene content.
+
+New applications can opt into the Presentation 4-native entry point:
+
 - `upgradeToPresentation4()` to ingest v2.1, v3.0 or v4.0 into a v4-compatible shape
 - `Traverse` with v4 container support (`Timeline`, `Canvas`, `Scene`)
 - `normalize()` with deterministic ID minting for missing IDs
@@ -165,6 +199,13 @@ const serialized = serialize(
   serializeConfigPresentation4
 );
 ```
+
+The native path preserves a deliberately bounded Scene data slice: Model and
+camera content resources, selectors, ordered transforms/actions, and unknown
+extension data survive round trips. It does not render Scenes, execute actions,
+build scene graphs, apply transforms, or normalize nested 3D components into
+dedicated entities. See the
+[runtime boundary](src/presentation-4/README.md) for the exact support policy.
 
 #### Image 3
 
