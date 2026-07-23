@@ -32,4 +32,6 @@ export interface GenericService extends ServiceReference {
   services?: GenericService[];
 }
 
-export type Service = ServiceV3 | GenericService;
+// Services are external extension resources. Preserve legacy and profile-only
+// service objects without requiring Presentation resource identity.
+export type Service = ServiceV3 | GenericService | ServiceReference;
