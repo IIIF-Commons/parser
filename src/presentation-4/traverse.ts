@@ -25,6 +25,7 @@ export type Traversal<T = any> = (resource: T, context: TraversalContext) => T |
 
 export type TraversalMap = {
   collection?: Array<Traversal>;
+  collectionPage?: Array<Traversal>;
   manifest?: Array<Traversal>;
   timeline?: Array<Traversal>;
   canvas?: Array<Traversal>;
@@ -80,6 +81,7 @@ export class Traverse {
   constructor(traversals: TraversalMap = {}, options: Partial<TraverseOptions> = {}) {
     this.traversals = {
       collection: [],
+      collectionPage: [],
       manifest: [],
       timeline: [],
       canvas: [],
@@ -109,6 +111,7 @@ export class Traverse {
   static all(traversal: Traversal) {
     return new Traverse({
       collection: [traversal],
+      collectionPage: [traversal],
       manifest: [traversal],
       timeline: [traversal],
       canvas: [traversal],
@@ -298,6 +301,16 @@ export class Traverse {
     );
   }
 
+  traverseCollectionPage(collectionPage: any, parent?: any, path = "$"): any {
+    const withItems = this.traverseCollectionItems(collectionPage, path);
+    const withLinks = this.traversePageReferences(withItems, path, "CollectionPage");
+    return this.traverseType(
+      this.traverseLinkedResources(withLinks, path),
+      { parent, path },
+      this.traversals.collectionPage
+    );
+  }
+
   traverseManifest(manifest: any, parent?: any, path = "$"): any {
     const pipeline = compose<any>(
       (value: any) => this.traverseManifestItems(value, path),
@@ -367,6 +380,27 @@ export class Traverse {
         path: `${path}.${key}`,
         typeHint,
       });
+    }
+
+    return resource;
+  }
+
+  private traversePageReferences(resource: any, path: string, typeHint: "CollectionPage" | "AnnotationPage") {
+    if (!resource || typeof resource !== "object") {
+      return resource;
+    }
+
+    for (const key of ["next", "prev"] as const) {
+      if (!resource[key]) {
+        continue;
+      }
+      resource[key] =
+        typeof resource[key] === "string"
+          ? { id: resource[key], type: typeHint }
+          : {
+              ...resource[key],
+              type: getType(resource[key]) || typeHint,
+            };
     }
 
     return resource;
@@ -874,6 +908,8 @@ export class Traverse {
     switch (type) {
       case "Collection":
         return this.traverseCollection(resource, parent, path);
+      case "CollectionPage":
+        return this.traverseCollectionPage(resource, parent, path);
       case "Manifest":
         return this.traverseManifest(resource, parent, path);
       case "Timeline":

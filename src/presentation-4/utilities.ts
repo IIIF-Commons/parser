@@ -185,7 +185,7 @@ export function mintDeterministicId(resource: unknown, type: string, path = "$")
 }
 
 export const containerTypes = new Set(["Timeline", "Canvas", "Scene"]);
-export const structuralTypes = new Set(["Collection", "Manifest", "Range"]);
+export const structuralTypes = new Set(["Collection", "CollectionPage", "Manifest", "Range"]);
 export const annotationTypes = new Set(["Annotation", "AnnotationPage", "AnnotationCollection"]);
 export const sceneComponentTypes = new Set([
   "PerspectiveCamera",

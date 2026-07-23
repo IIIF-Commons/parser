@@ -18,6 +18,7 @@ import {
   emptyAnnotationPage,
   emptyCanvas,
   emptyCollection,
+  emptyCollectionPage,
   emptyContentResource,
   emptyManifest,
   emptyRange,
@@ -46,6 +47,7 @@ export type NormalizeResult = Presentation4NormalizeResult;
 
 export const defaultEntities: Presentation4Entities = {
   Collection: {},
+  CollectionPage: {},
   Manifest: {},
   Timeline: {},
   Canvas: {},
@@ -61,6 +63,7 @@ export const defaultEntities: Presentation4Entities = {
 export function getDefaultEntities(): Presentation4Entities {
   return {
     Collection: {},
+    CollectionPage: {},
     Manifest: {},
     Timeline: {},
     Canvas: {},
@@ -275,6 +278,8 @@ function mapTypeToStore(type: string): keyof Presentation4Entities {
   switch (type) {
     case "Collection":
       return "Collection";
+    case "CollectionPage":
+      return "CollectionPage";
     case "Manifest":
       return "Manifest";
     case "Timeline":
@@ -480,6 +485,12 @@ export function normalize(input: unknown): NormalizeResult {
         ensureDefaultFields((isLegacySource ? legacyEmptyCollection : emptyCollection) as any),
         map("Collection"),
         record("Collection"),
+      ],
+      collectionPage: [
+        withId("CollectionPage", diagnostics),
+        ensureDefaultFields(emptyCollectionPage),
+        map("CollectionPage"),
+        record("CollectionPage"),
       ],
       manifest: [
         ...(isLegacySource ? [addFlagForExternalResource] : []),

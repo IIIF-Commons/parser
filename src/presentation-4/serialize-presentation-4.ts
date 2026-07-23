@@ -372,6 +372,18 @@ export function createSerializeConfigPresentation4(options: SerializePresentatio
       ];
     },
 
+    CollectionPage: function* (entity, _state, { isTopLevel }) {
+      return [
+        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", filterList(yield entity.items)],
+        ["next", entity.next],
+        ["prev", entity.prev],
+        ["startIndex", entity.startIndex],
+      ];
+    },
+
     Manifest: function* (entity, state, { isTopLevel }) {
       return [
         ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),

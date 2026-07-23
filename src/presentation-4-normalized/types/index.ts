@@ -7,6 +7,7 @@ import type {
   AnnotationPageNormalized,
   CanvasNormalized,
   CollectionNormalized,
+  CollectionPageNormalized,
   ContentResourceNormalized,
   ManifestNormalized,
   RangeNormalized,
@@ -17,6 +18,7 @@ import type {
 
 export type NormalizedEntity =
   | CollectionNormalized
+  | CollectionPageNormalized
   | ManifestNormalized
   | TimelineNormalized
   | CanvasNormalized
@@ -31,6 +33,7 @@ export type NormalizedEntity =
 
 export type Presentation4Entities = {
   Collection: Record<string, CollectionNormalized>;
+  CollectionPage: Record<string, CollectionPageNormalized>;
   Manifest: Record<string, ManifestNormalized>;
   Timeline: Record<string, TimelineNormalized>;
   Canvas: Record<string, CanvasNormalized>;

@@ -5,6 +5,7 @@ import type {
   AnnotationPageNormalized,
   CanvasNormalized,
   CollectionNormalized,
+  CollectionPageNormalized,
   ContentResourceNormalized,
   ManifestNormalized,
   RangeNormalized,
@@ -34,6 +35,15 @@ export const emptyCollection: CollectionNormalized = {
   id: "https://iiif-parser/empty-collection",
   type: "Collection",
   items: EMPTY_ARRAY,
+  ...baseLinkedArrays,
+};
+
+export const emptyCollectionPage: CollectionPageNormalized = {
+  id: "https://iiif-parser/empty-collection-page",
+  type: "CollectionPage",
+  items: EMPTY_ARRAY,
+  next: null,
+  prev: null,
   ...baseLinkedArrays,
 };
 

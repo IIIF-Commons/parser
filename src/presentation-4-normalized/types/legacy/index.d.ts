@@ -10,6 +10,7 @@ export type {
 } from "./iiif/technical-v4";
 
 export type { CollectionNormalized } from "./resources/collection";
+export type { CollectionPageNormalized } from "./resources/collectionPage";
 export type { ManifestNormalized } from "./resources/manifest";
 export type { TimelineNormalized } from "./resources/timeline";
 export type { CanvasNormalized } from "./resources/canvas";
