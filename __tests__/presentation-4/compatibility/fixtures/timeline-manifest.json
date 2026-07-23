@@ -1,0 +1,38 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/presentation-4/timeline/manifest",
+  "type": "Manifest",
+  "label": {
+    "en": ["Presentation 4 timeline"]
+  },
+  "items": [
+    {
+      "id": "https://example.org/iiif/presentation-4/timeline/1",
+      "type": "Timeline",
+      "duration": 30,
+      "items": [
+        {
+          "id": "https://example.org/iiif/presentation-4/timeline/1/page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/presentation-4/timeline/1/page/painting",
+              "type": "Annotation",
+              "motivation": ["painting"],
+              "body": {
+                "id": "https://example.org/audio/example.mp3",
+                "type": "Sound",
+                "format": "audio/mpeg",
+                "duration": 30
+              },
+              "target": {
+                "id": "https://example.org/iiif/presentation-4/timeline/1",
+                "type": "Timeline"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

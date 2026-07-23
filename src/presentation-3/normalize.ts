@@ -20,7 +20,7 @@ import type {
   RangeNormalized,
   ResourceProviderNormalized,
 } from '../presentation-3-normalized/types';
-import { convertPresentation2 } from '../presentation-2';
+import { upgrade } from '../upgrader';
 import { expandTargetToSpecificResource } from '../shared/expand-target';
 import { isSpecificResource } from '../shared/is-specific-resource';
 import {
@@ -492,7 +492,7 @@ export function addFlagForExternalResource<T extends AnnotationPage | Manifest |
 }
 
 export function normalize(unknownEntity: unknown) {
-  const entity = convertPresentation2(unknownEntity);
+  const entity = upgrade(unknownEntity);
   const entities = getDefaultEntities();
   const mapping = {};
   const addToEntities = mapToEntities(entities, entity);
