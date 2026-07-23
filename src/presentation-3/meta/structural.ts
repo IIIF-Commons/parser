@@ -1,4 +1,4 @@
-import type { StructuralProperties } from "@iiif/presentation-3";
+import type { StructuralProperties } from "../types";
 
 const required = {
   Collection: ["items"],

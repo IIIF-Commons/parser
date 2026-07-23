@@ -1,4 +1,4 @@
-import type { DescriptiveProperties } from "@iiif/presentation-3";
+import type { DescriptiveProperties } from "../types";
 
 const required = {
   Collection: ["label"],

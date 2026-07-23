@@ -1,4 +1,4 @@
-import type { NavPlaceExtension, TextGranularityExtension } from "@iiif/presentation-3";
+import type { NavPlaceExtension, TextGranularityExtension } from "../types";
 
 export type ExtensionProperties = TextGranularityExtension & NavPlaceExtension;
 

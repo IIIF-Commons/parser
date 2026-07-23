@@ -1,4 +1,4 @@
-import type { LinkingProperties } from "@iiif/presentation-3";
+import type { LinkingProperties } from "../types";
 
 const required = {
   Collection: [],
