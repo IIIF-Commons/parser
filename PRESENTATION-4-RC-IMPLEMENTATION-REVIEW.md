@@ -24,10 +24,37 @@ The first joint implementation pass is complete on this branch:
 - The sibling Helpers repository is linked with pnpm and has fixed-schema
   Vault/Vault4 integration coverage.
 
-This is a usable foundation, not the end of the review plan. The next release
-pass still needs a pinned official IIIF example corpus, structured diagnostics
-instead of the current Scene exception, broader property/model reconciliation,
-packed-tarball joint CI, and a deliberate decision on unsupported nested 3D.
+This was a usable foundation, not the end of the review plan. The
+release-confidence pass below closes the fixture, diagnostic, and package-gate
+items. Broader property/model reconciliation and a deliberate decision on
+unsupported nested 3D remain.
+
+## Release-confidence pass — 2026-07-23
+
+The second joint milestone is complete:
+
+- Six unchanged, representative non-3D examples are pinned from IIIF/api commit
+  `28a88829699ebbbe7722b4692cf3b7b67969bc6c`, with source, license, retrieval
+  date, and SHA-256 hashes recorded under
+  `__tests__/presentation-4/fixtures/official`.
+- Strict authored validation accepts every pinned fixture without mutating it.
+  Two excluded examples are documented findings rather than being repaired into
+  the gold set: an upstream embedded Image Service context violation and a
+  parser reference/full-resource distinction gap.
+- `getPresentation3CompatibilityDiagnostics()` provides non-throwing preflight
+  diagnostics for Scene resources. Existing `upgrade()` and `normalize()` calls
+  retain their fail-safe behavior through `Presentation4CompatibilityError`,
+  which carries stable codes, paths, resource types, and resource identities.
+- The parser candidate now identifies itself as `2.3.0`, matching the Helpers
+  `^2.3.0` peer contract used by the coordinated release.
+- Helpers can build both repositories as tarballs, install them into a fresh
+  strict-peer consumer, and prove the fixed v3 and native v4 Vault contracts,
+  including structured Scene failure. A manually dispatched joint workflow
+  accepts an exact parser ref and also runs the full linked source checks.
+
+The next milestone should reconcile typed references versus embedded resources
+across validation/traversal/serialization, then use that policy to broaden the
+official corpus before beginning the shared Vault engine refactor.
 
 This review supersedes `P4-PRESENTATION-TYPE-AUDIT.md` as the planning baseline for the next implementation pass. The earlier document remains useful history, but it predates the current RC interpretation and, among other differences, recommends `List` for legacy multiple bodies/targets where this review requires `Independents`.
 
