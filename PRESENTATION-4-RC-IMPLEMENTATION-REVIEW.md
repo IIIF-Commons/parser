@@ -52,9 +52,36 @@ The second joint milestone is complete:
   including structured Scene failure. A manually dispatched joint workflow
   accepts an exact parser ref and also runs the full linked source checks.
 
-The next milestone should reconcile typed references versus embedded resources
-across validation/traversal/serialization, then use that policy to broaden the
-official corpus before beginning the shared Vault engine refactor.
+That next milestone is recorded below. The remaining parser work is broader
+property reconciliation and the explicit nested 3D preservation/support policy.
+
+## Model/runtime convergence pass — 2026-07-23
+
+The third joint milestone is complete:
+
+- Strict authored validation now distinguishes typed references from embedded
+  resources consistently across class, raw-shape, and document validation.
+  Reference-only Manifests no longer require embedded `items`, while a full
+  embedded Manifest is still validated and `Manifest.items` still requires
+  embedded Containers.
+- Reference handling does not weaken embedded semantics: provider Agents still
+  require `label`, and SpecificResource, TextualBody, and annotation aggregate
+  bodies still require `source`, `value`, and `items` respectively.
+- The pinned oracle now includes `uc03_issue1.json` and
+  `uc07_image_composite.json`. At the pinned IIIF/api commit, every non-3D
+  example now passes strict authored validation except `09_manifest.json`,
+  whose embedded Image Service contexts violate the RC JSON-LD rule already
+  documented by this review.
+- Helpers now uses one Vault runtime for both fixed profiles. `Vault4` extends
+  the shared typed runtime and contains only its v4 normalization,
+  serialization, and CollectionPage surface.
+- Painting, thumbnail fallback, and transcription now reuse
+  `resolveAnnotationValues()` for Choice, Composite, List, Independents, and
+  SpecificResource traversal.
+
+The next milestone should make Collection and Annotation Collection page-chain
+loading first-class in the shared Vault runtime, then remove the remaining
+v4 `@ts-nocheck` suites against that stable API.
 
 This review supersedes `P4-PRESENTATION-TYPE-AUDIT.md` as the planning baseline for the next implementation pass. The earlier document remains useful history, but it predates the current RC interpretation and, among other differences, recommends `List` for legacy multiple bodies/targets where this review requires `Independents`.
 
