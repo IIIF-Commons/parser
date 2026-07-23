@@ -13,6 +13,7 @@ const officialFixtures = [
   "uc03_issue1.json",
   "uc07_duration_composite.json",
   "uc07_image_composite.json",
+  "uc08_3d_comments_with_cameras.json",
 ];
 
 describe("official Presentation 4 corpus", () => {

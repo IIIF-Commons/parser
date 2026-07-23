@@ -13,6 +13,58 @@ export type SerializePresentation4Options = {
 };
 
 const sequenceResourceTypes = new Set(["List", "Composite", "Independents"]);
+const serializedContentResourceProperties = new Set([
+  "@context",
+  "@id",
+  "@type",
+  "id",
+  "type",
+  "label",
+  "metadata",
+  "summary",
+  "requiredStatement",
+  "rights",
+  "navDate",
+  "navPlace",
+  "behavior",
+  "profile",
+  "format",
+  "height",
+  "width",
+  "duration",
+  "spatialScale",
+  "temporalScale",
+  "backgroundColor",
+  "interactionMode",
+  "viewingDirection",
+  "timeMode",
+  "services",
+  "service",
+  "canonical",
+  "via",
+  "thumbnail",
+  "provider",
+  "seeAlso",
+  "homepage",
+  "rendering",
+  "partOf",
+  "placeholderContainer",
+  "accompanyingContainer",
+  "annotations",
+  "value",
+  "language",
+  "items",
+  "source",
+  "selector",
+  "transform",
+  "action",
+  "lookAt",
+  "position",
+  "provides",
+  "fileSize",
+  "quantityValue",
+  "unit",
+]);
 
 function filterList<T>(value: T[] | typeof UNSET): T[] | undefined {
   if (value === UNSET) {
@@ -142,6 +194,25 @@ function cleanSpecificResourceWireValue(value: any): any {
     cleaned[wireKey] = wireKey === "id" ? stripVaultId(cleanedChild) : cleanedChild;
   }
   return cleaned;
+}
+
+function opaqueContentResourceProperties(entity: any): Array<[string, any]> {
+  const properties: Array<[string, any]> = [];
+  for (const [key, value] of Object.entries(entity)) {
+    if (
+      serializedContentResourceProperties.has(key) ||
+      key.startsWith("iiif-parser:") ||
+      key === "@explicit" ||
+      value === null ||
+      typeof value === "undefined" ||
+      value === UNSET ||
+      (Array.isArray(value) && value.length === 0)
+    ) {
+      continue;
+    }
+    properties.push([key, cleanSpecificResourceWireValue(value)]);
+  }
+  return properties;
 }
 
 function serializeSpecificResourceSource(source: any): any {
@@ -504,6 +575,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
       }
 
       return [
+        ...opaqueContentResourceProperties(entity),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["value", entity.value ?? undefined],

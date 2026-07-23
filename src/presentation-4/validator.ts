@@ -332,42 +332,7 @@ function isRangeContainerReference(node: any, nodePath: string, parent: any): bo
 }
 
 function isReferenceAnnotation(annotation: any): boolean {
-  if (!isPlainObject(annotation) || getType(annotation) !== "Annotation" || !getId(annotation)) {
-    return false;
-  }
-
-  const hasTarget = typeof annotation.target !== "undefined";
-  const hasBody = typeof annotation.body !== "undefined";
-  const motivations = ensureArray(annotation.motivation);
-  const hasMotivations = motivations.length > 0;
-
-  if (hasTarget || hasBody || hasMotivations) {
-    return false;
-  }
-
-  const allowedReferenceKeys = new Set([
-    "id",
-    "type",
-    "@id",
-    "@type",
-    "label",
-    "summary",
-    "profile",
-    "format",
-    "height",
-    "width",
-    "duration",
-    "motivation",
-    "target",
-    "body",
-    "first",
-    "last",
-    "next",
-    "prev",
-    "total",
-  ]);
-
-  return Object.keys(annotation).every((key) => allowedReferenceKeys.has(key));
+  return getType(annotation) === "Annotation" && isTypedReferenceObject(annotation);
 }
 
 function validateAnnotationShape(annotation: any, nodePath: string, issues: ValidationIssue[]) {
