@@ -156,37 +156,29 @@ function coerceAnnotationTarget(target: any, typeLookup: TypeLookup, fallbackTyp
 }
 
 function coerceAnnotation(annotation: any, typeLookup: TypeLookup, fallbackTargetType: string) {
-  const toAnnotationObjectOrList = (value: any): any => {
-    const values = ensureArray(value).filter((item) => item !== null && typeof item !== "undefined");
-    if (values.length === 0) {
-      return undefined;
-    }
-    if (values.length === 1) {
-      return values[0];
-    }
-    return {
-      type: "List",
-      items: values,
-    };
-  };
-
-  const fromAnnotationObjectOrList = (value: any): any[] => {
-    if (typeof value === "undefined" || value === null) {
-      return [];
-    }
-    if (isPlainObject(value) && getType(value) === "List" && "items" in value) {
-      return ensureArray((value as any).items);
-    }
-    return ensureArray(value);
-  };
-
   annotation.motivation = ensureArray(annotation.motivation);
-  const bodyItems = fromAnnotationObjectOrList(annotation.body);
-  const targetItems = fromAnnotationObjectOrList(annotation.target).map((target: any) =>
-    coerceAnnotationTarget(target, typeLookup, fallbackTargetType)
-  );
-  annotation.body = toAnnotationObjectOrList(bodyItems);
-  annotation.target = toAnnotationObjectOrList(targetItems);
+  if (Array.isArray(annotation.body)) {
+    const items = annotation.body.filter((item: any) => item !== null && typeof item !== "undefined");
+    annotation.body =
+      items.length > 1 ? { type: "Independents", items } : items.length === 1 ? items[0] : undefined;
+  }
+  if (Array.isArray(annotation.target)) {
+    const items = annotation.target
+      .filter((item: any) => item !== null && typeof item !== "undefined")
+      .map((target: any) => coerceAnnotationTarget(target, typeLookup, fallbackTargetType));
+    annotation.target =
+      items.length > 1 ? { type: "Independents", items } : items.length === 1 ? items[0] : undefined;
+  } else if (
+    isPlainObject(annotation.target) &&
+    ["Choice", "Composite", "List", "Independents"].includes(getType(annotation.target) || "") &&
+    "items" in annotation.target
+  ) {
+    annotation.target.items = ensureArray(annotation.target.items).map((target: any) =>
+      coerceAnnotationTarget(target, typeLookup, fallbackTargetType)
+    );
+  } else {
+    annotation.target = coerceAnnotationTarget(annotation.target, typeLookup, fallbackTargetType);
+  }
 
   if (annotation.bodyValue && !annotation.body) {
     annotation.body = {

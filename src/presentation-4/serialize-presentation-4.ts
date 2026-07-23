@@ -1,6 +1,11 @@
 import { type SerializeConfig, UNSET, UNWRAP } from "./serialize";
 import { PRESENTATION_4_CONTEXT } from "./utilities";
 
+/**
+ * @deprecated Presentation 4 requires Annotation body and target to be objects.
+ * The legacy "array" value is retained for source compatibility and now emits
+ * an object, wrapping multiple values in a List.
+ */
 export type AnnotationBodyTargetMode = "array" | "object";
 
 export type SerializePresentation4Options = {
@@ -268,7 +273,6 @@ function asObjectOrList(items: any[]): any {
 
 function serializeAnnotationValue(
   value: any[] | any | typeof UNSET | undefined,
-  mode: AnnotationBodyTargetMode,
   normalizeItem?: (item: any) => any
 ): any {
   const items = annotationList(value);
@@ -277,9 +281,6 @@ function serializeAnnotationValue(
   }
 
   const normalizedItems = normalizeItem ? items.map((item) => normalizeItem(item)) : items;
-  if (mode === "array") {
-    return normalizedItems;
-  }
   return asObjectOrList(normalizedItems);
 }
 
@@ -355,9 +356,7 @@ function* serializeContainer(entity: any, includeStructures = false): Generator<
   ];
 }
 
-export function createSerializeConfigPresentation4(options: SerializePresentation4Options = {}): SerializeConfig {
-  const annotationBodyTargetMode = options.annotationBodyTargetMode || "object";
-
+export function createSerializeConfigPresentation4(_options: SerializePresentation4Options = {}): SerializeConfig {
   return {
     Collection: function* (entity, state, { isTopLevel }) {
       return [
@@ -428,13 +427,11 @@ export function createSerializeConfigPresentation4(options: SerializePresentatio
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["motivation", entity.motivation?.length ? entity.motivation : undefined],
-        ["body", serializeAnnotationValue(yield entity.body, annotationBodyTargetMode, serializeSpecificResource)],
+        ["body", serializeAnnotationValue(yield entity.body, serializeSpecificResource)],
         [
           "target",
-          serializeAnnotationValue(
-            resolveContentResourceReference(state, entity.target),
-            annotationBodyTargetMode,
-            (target) => serializeSpecificResource(normalizeAnnotationTarget(target))
+          serializeAnnotationValue(resolveContentResourceReference(state, entity.target), (target) =>
+            serializeSpecificResource(normalizeAnnotationTarget(target))
           ),
         ],
         ["timeMode", entity.timeMode],
