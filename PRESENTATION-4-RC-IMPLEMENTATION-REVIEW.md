@@ -625,13 +625,15 @@ linked through pnpm:
 
 | Command | Result |
 | --- | --- |
-| `pnpm exec vitest run` | Pass: 37 files, 417 tests |
+| `pnpm exec vitest run` | Pass: 37 files, 423 tests |
 | `pnpm run typecheck` | Pass |
 | `pnpm run build` | Pass |
 | `pnpm run lint` | Pass |
 | `pnpm run test:types` | Pass |
 | `pnpm run typecheck:p4-fixtures` | Pass: 33/33 authored fixtures |
-| `pnpm run typecheck:p4-normalized-fixtures:all` | Pass: 131/131 |
+| `pnpm run typecheck:p4-fixtures:all` | Pass: 132/132 authored and converted fixtures |
+| `pnpm run typecheck:p4-normalized-fixtures:all` | Pass: 132/132 |
+| `bun run src/cli.ts validate-p4 fixtures/3-to-4-converted` | Pass: 99/99 converted resources valid |
 | `pnpm run test:package-types` | Pass: packed ESM/CJS and strict NodeNext/Bundler declarations |
 | Helpers `pnpm run test:presentation-4:packed` | Pass: parser 2.3.0 + Helpers 1.6.0, 41 public subpaths |
 
