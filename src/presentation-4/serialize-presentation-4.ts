@@ -1,0 +1,608 @@
+import { type SerializeConfig, UNSET, UNWRAP } from "./serialize";
+import { PRESENTATION_4_CONTEXT } from "./utilities";
+
+/**
+ * @deprecated Presentation 4 requires Annotation body and target to be objects.
+ * The legacy "array" value is retained for source compatibility and now emits
+ * an object, wrapping multiple values in a List.
+ */
+export type AnnotationBodyTargetMode = "array" | "object";
+
+export type SerializePresentation4Options = {
+  annotationBodyTargetMode?: AnnotationBodyTargetMode;
+};
+
+const sequenceResourceTypes = new Set(["List", "Composite", "Independents"]);
+const serializedContentResourceProperties = new Set([
+  "@context",
+  "@id",
+  "@type",
+  "id",
+  "type",
+  "label",
+  "metadata",
+  "summary",
+  "requiredStatement",
+  "rights",
+  "navDate",
+  "navPlace",
+  "behavior",
+  "profile",
+  "format",
+  "height",
+  "width",
+  "duration",
+  "spatialScale",
+  "temporalScale",
+  "backgroundColor",
+  "interactionMode",
+  "viewingDirection",
+  "timeMode",
+  "services",
+  "service",
+  "canonical",
+  "via",
+  "thumbnail",
+  "provider",
+  "seeAlso",
+  "homepage",
+  "rendering",
+  "partOf",
+  "placeholderContainer",
+  "accompanyingContainer",
+  "annotations",
+  "value",
+  "language",
+  "items",
+  "source",
+  "selector",
+  "transform",
+  "action",
+  "lookAt",
+  "position",
+  "provides",
+  "fileSize",
+  "quantityValue",
+  "unit",
+]);
+
+function filterList<T>(value: T[] | typeof UNSET): T[] | undefined {
+  if (value === UNSET) {
+    return undefined;
+  }
+  if (!Array.isArray(value)) {
+    return undefined;
+  }
+  const filtered = value.filter((item) => item !== UNSET) as T[];
+  return filtered.length ? filtered : undefined;
+}
+
+function compactList<T>(value: T[] | T | null | undefined): T[] | undefined {
+  if (value === null || typeof value === "undefined") {
+    return undefined;
+  }
+  const list = Array.isArray(value) ? value : [value];
+  const filtered = list.filter((item) => item !== null && typeof item !== "undefined") as T[];
+  return filtered.length ? filtered : undefined;
+}
+
+function preserveObjectOrOmitEmptyList(value: any): any {
+  if (value === UNSET || value === null || typeof value === "undefined") {
+    return undefined;
+  }
+  if (!Array.isArray(value)) {
+    return value;
+  }
+  const filtered = value.filter((item) => item !== UNSET && item !== null && typeof item !== "undefined");
+  return filtered.length ? filtered : undefined;
+}
+
+function serializeLanguage(language: unknown): string[] | undefined {
+  if (!Array.isArray(language) || language.length === 0) {
+    return undefined;
+  }
+  return language;
+}
+
+function isEmptySequenceResource(value: any): boolean {
+  if (!isPlainObject(value)) {
+    return false;
+  }
+  const type = value.type || value["@type"];
+  if (!type || !sequenceResourceTypes.has(type)) {
+    return false;
+  }
+  return Array.isArray(value.items) && value.items.length === 0;
+}
+
+function annotationList<T>(value: T[] | T | typeof UNSET | undefined): T[] | undefined {
+  if (value === UNSET || value === null || typeof value === "undefined") {
+    return undefined;
+  }
+  const list = Array.isArray(value) ? value : [value];
+  const filtered = list.filter(
+    (item) => item !== UNSET && item !== null && typeof item !== "undefined" && !isEmptySequenceResource(item)
+  ) as T[];
+  return filtered.length ? filtered : undefined;
+}
+
+function normalizeAnnotationTarget(target: any): any {
+  if (!target || typeof target !== "object" || Array.isArray(target)) {
+    return target;
+  }
+  const type = target.type || target["@type"];
+  if (type !== "Annotation") {
+    return target;
+  }
+  const id = stripVaultId(target.id || target["@id"]);
+  return id ? { id, type: "Annotation" } : { type: "Annotation" };
+}
+
+function isPlainObject(value: any): boolean {
+  return !!value && typeof value === "object" && !Array.isArray(value);
+}
+
+function resolveContentResourceReference(state: any, value: any): any {
+  if (Array.isArray(value)) {
+    return value.map((item) => resolveContentResourceReference(state, item));
+  }
+  if (!isPlainObject(value)) {
+    return value;
+  }
+
+  const id = value.id || value["@id"];
+  if (!id) {
+    return value;
+  }
+
+  const explicitType = value.type || value["@type"];
+  const mappedType = state?.mapping?.[id];
+  if (explicitType !== "ContentResource" && mappedType !== "ContentResource") {
+    return value;
+  }
+
+  return state?.entities?.ContentResource?.[id] || value;
+}
+
+function cleanSpecificResourceWireValue(value: any): any {
+  if (Array.isArray(value)) {
+    return value
+      .map((item) => cleanSpecificResourceWireValue(item))
+      .filter((item) => item !== null && typeof item !== "undefined" && item !== UNSET);
+  }
+  if (!isPlainObject(value)) {
+    return value;
+  }
+
+  const cleaned: Record<string, any> = {};
+  for (const [key, child] of Object.entries(value)) {
+    if (
+      key.startsWith("iiif-parser:") ||
+      key === "@explicit" ||
+      child === null ||
+      typeof child === "undefined" ||
+      child === UNSET ||
+      (Array.isArray(child) && child.length === 0)
+    ) {
+      continue;
+    }
+    const wireKey = key === "@id" ? "id" : key === "@type" ? "type" : key;
+    const cleanedChild = cleanSpecificResourceWireValue(child);
+    if (wireKey === "id" && !stripVaultId(cleanedChild)) {
+      continue;
+    }
+    cleaned[wireKey] = wireKey === "id" ? stripVaultId(cleanedChild) : cleanedChild;
+  }
+  return cleaned;
+}
+
+function opaqueContentResourceProperties(entity: any): Array<[string, any]> {
+  const properties: Array<[string, any]> = [];
+  for (const [key, value] of Object.entries(entity)) {
+    if (
+      serializedContentResourceProperties.has(key) ||
+      key.startsWith("iiif-parser:") ||
+      key === "@explicit" ||
+      value === null ||
+      typeof value === "undefined" ||
+      value === UNSET ||
+      (Array.isArray(value) && value.length === 0)
+    ) {
+      continue;
+    }
+    properties.push([key, cleanSpecificResourceWireValue(value)]);
+  }
+  return properties;
+}
+
+function serializeSpecificResourceSource(source: any): any {
+  if (Array.isArray(source)) {
+    const serialized = source
+      .map((sourceItem) => serializeSpecificResourceSource(sourceItem))
+      .filter((sourceItem) => sourceItem !== null && typeof sourceItem !== "undefined");
+    if (!serialized.length) {
+      return undefined;
+    }
+    if (serialized.length === 1) {
+      return serialized[0];
+    }
+    return serialized;
+  }
+
+  if (typeof source === "string") {
+    return stripVaultId(source) || source;
+  }
+
+  if (!isPlainObject(source)) {
+    return source;
+  }
+
+  return cleanSpecificResourceWireValue(source);
+}
+
+function serializeSpecificResource(resource: any, state: any): any {
+  if (!isPlainObject(resource)) {
+    return resource;
+  }
+
+  const type = resource.type || resource["@type"];
+  if (type !== "SpecificResource") {
+    return resource;
+  }
+
+  const specificResource = {
+    ...resource,
+    type: "SpecificResource",
+  } as Record<string, any>;
+
+  for (const [key, value] of Object.entries(specificResource)) {
+    if (
+      key.startsWith("iiif-parser:") ||
+      key === "@explicit" ||
+      value === null ||
+      typeof value === "undefined" ||
+      value === UNSET ||
+      (Array.isArray(value) && value.length === 0)
+    ) {
+      delete specificResource[key];
+    }
+  }
+
+  const id = stripVaultId(specificResource.id || specificResource["@id"]);
+  if (id) {
+    specificResource.id = id;
+  } else {
+    delete specificResource.id;
+  }
+  delete specificResource["@id"];
+  delete specificResource["@type"];
+
+  if (typeof specificResource.source !== "undefined") {
+    const serializedSource = serializeSpecificResourceSource(
+      resolveContentResourceReference(state, specificResource.source)
+    );
+    if (typeof serializedSource === "undefined") {
+      delete specificResource.source;
+    } else {
+      specificResource.source = serializedSource;
+    }
+  }
+
+  if (isPlainObject(specificResource.position)) {
+    specificResource.position = serializeSpecificResource(specificResource.position, state);
+  }
+
+  if (isPlainObject(specificResource.lookAt)) {
+    specificResource.lookAt = serializeSpecificResource(specificResource.lookAt, state);
+  }
+
+  const selector = compactList(specificResource.selector);
+  if (selector) {
+    specificResource.selector = selector;
+  } else {
+    delete specificResource.selector;
+  }
+
+  const transform = compactList(specificResource.transform);
+  if (transform) {
+    specificResource.transform = transform;
+  } else {
+    delete specificResource.transform;
+  }
+
+  const action = compactList(specificResource.action);
+  if (action) {
+    specificResource.action = action;
+  } else {
+    delete specificResource.action;
+  }
+
+  return specificResource;
+}
+
+function serializeStartValue(start: any, state: any): any {
+  if (start === UNSET || start === null || typeof start === "undefined") {
+    return undefined;
+  }
+
+  if (typeof start === "string") {
+    const id = stripVaultId(start);
+    return id ? { id, type: "Canvas" } : undefined;
+  }
+
+  if (!isPlainObject(start)) {
+    return undefined;
+  }
+
+  const id = stripVaultId(start.id || start["@id"]);
+  const type = start.type || start["@type"];
+  if (!type) {
+    return undefined;
+  }
+
+  if (type === "SpecificResource") {
+    return serializeSpecificResource(start, state);
+  }
+
+  const containerReference: Record<string, any> = {
+    type,
+  };
+  if (id) {
+    containerReference.id = id;
+  }
+  if (typeof start.partOf !== "undefined") {
+    containerReference.partOf = start.partOf;
+  }
+  return containerReference;
+}
+
+function stripVaultId(id?: string) {
+  if (!id) {
+    return undefined;
+  }
+  return id.startsWith("vault://") ? undefined : id;
+}
+
+function asObjectOrList(items: any[]): any {
+  if (items.length === 1) {
+    const first = items[0];
+    if (first && typeof first === "object" && !Array.isArray(first)) {
+      return first;
+    }
+  }
+  return {
+    type: "List",
+    items,
+  };
+}
+
+function serializeAnnotationValue(
+  value: any[] | any | typeof UNSET | undefined,
+  normalizeItem?: (item: any) => any
+): any {
+  const items = annotationList(value);
+  if (!items || !items.length) {
+    return undefined;
+  }
+
+  const normalizedItems = normalizeItem ? items.map((item) => normalizeItem(item)) : items;
+  return asObjectOrList(normalizedItems);
+}
+
+function* serializeRangeItems(items: any[] | undefined, state: any): Generator<any, any[] | undefined, any> {
+  if (!Array.isArray(items)) {
+    return undefined;
+  }
+
+  const normalizedItems = [];
+  for (const item of items) {
+    if (item === UNSET || item === null || typeof item === "undefined") {
+      continue;
+    }
+    if (isPlainObject(item) && (item.type || item["@type"]) === "SpecificResource") {
+      normalizedItems.push(serializeSpecificResource(item, state));
+      continue;
+    }
+    const id = isPlainObject(item) ? item.id || item["@id"] : undefined;
+    const type = isPlainObject(item) ? item.type || item["@type"] || state?.mapping?.[id] : undefined;
+    if (type === "Range") {
+      const range = yield item;
+      if (range !== UNSET) {
+        normalizedItems.push(range);
+      }
+      continue;
+    }
+    normalizedItems.push(item);
+  }
+
+  return normalizedItems.length ? normalizedItems : undefined;
+}
+
+function baseProperties(entity: any) {
+  return [
+    ["id", stripVaultId(entity.id)],
+    ["type", entity.type],
+    ["label", entity.label],
+    ["metadata", entity.metadata?.length ? entity.metadata : undefined],
+    ["summary", entity.summary],
+    ["requiredStatement", entity.requiredStatement],
+    ["rights", entity.rights],
+    ["navDate", entity.navDate],
+    ["navPlace", entity.navPlace],
+    ["behavior", entity.behavior?.length ? entity.behavior : undefined],
+    ["profile", entity.profile],
+    ["format", entity.format],
+    ["height", entity.height],
+    ["width", entity.width],
+    ["duration", entity.duration],
+    ["spatialScale", entity.spatialScale],
+    ["temporalScale", entity.temporalScale],
+    ["backgroundColor", entity.backgroundColor],
+    ["interactionMode", entity.interactionMode?.length ? entity.interactionMode : undefined],
+    ["viewingDirection", entity.viewingDirection !== "left-to-right" ? entity.viewingDirection : undefined],
+    ["timeMode", entity.timeMode],
+    ["services", filterList(entity.services)],
+    ["service", filterList(entity.service)],
+    ["canonical", entity.canonical],
+    ["via", entity.via?.length ? entity.via : undefined],
+  ] as Array<[string, any]>;
+}
+
+function* withLinkedProperties(entity: any): Generator<any, Array<[string, any]>, any> {
+  return [
+    ["thumbnail", filterList(yield entity.thumbnail)],
+    ["provider", filterList(yield entity.provider)],
+    ["seeAlso", filterList(yield entity.seeAlso)],
+    ["service", filterList(entity.service)],
+    ["services", filterList(entity.services)],
+    ["homepage", filterList(yield entity.homepage)],
+    ["rendering", filterList(yield entity.rendering)],
+    ["partOf", compactList(entity.partOf)?.map((item) => cleanSpecificResourceWireValue(item))],
+    ["placeholderContainer", entity.placeholderContainer ? yield entity.placeholderContainer : undefined],
+    ["accompanyingContainer", entity.accompanyingContainer ? yield entity.accompanyingContainer : undefined],
+    ["annotations", filterList(yield entity.annotations)],
+  ];
+}
+
+function* serializeContainer(entity: any, includeStructures = false): Generator<any, any, any> {
+  return [
+    ...baseProperties(entity),
+    ...(yield* withLinkedProperties(entity)),
+    ["items", filterList(yield entity.items)],
+    ...(includeStructures ? [["structures", filterList(yield entity.structures)]] : []),
+  ];
+}
+
+export function createSerializeConfigPresentation4(_options: SerializePresentation4Options = {}): SerializeConfig {
+  return {
+    Collection: function* (entity, state, { isTopLevel }) {
+      return [
+        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
+        ["items", filterList(yield entity.items)],
+        ["first", entity.first],
+        ["last", entity.last],
+        ["total", entity.total],
+      ];
+    },
+
+    CollectionPage: function* (entity, _state, { isTopLevel }) {
+      return [
+        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", filterList(yield entity.items)],
+        ["next", entity.next],
+        ["prev", entity.prev],
+        ["startIndex", entity.startIndex],
+      ];
+    },
+
+    Manifest: function* (entity, state, { isTopLevel }) {
+      return [
+        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
+        ...(yield* serializeContainer(entity, true)),
+        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
+      ];
+    },
+
+    Timeline: function* (entity) {
+      return yield* serializeContainer(entity);
+    },
+
+    Canvas: function* (entity) {
+      return yield* serializeContainer(entity);
+    },
+
+    Scene: function* (entity) {
+      return yield* serializeContainer(entity);
+    },
+
+    AnnotationPage: function* (entity) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", filterList(yield entity.items)],
+      ];
+    },
+
+    AnnotationCollection: function* (entity) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", filterList(yield entity.items)],
+        ["first", entity.first],
+        ["last", entity.last],
+        ["total", typeof entity.total === "number" ? entity.total : undefined],
+      ];
+    },
+
+    Annotation: function* (entity, state) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["motivation", entity.motivation?.length ? entity.motivation : undefined],
+        ["body", serializeAnnotationValue(yield entity.body, (body) => serializeSpecificResource(body, state))],
+        [
+          "target",
+          serializeAnnotationValue(resolveContentResourceReference(state, entity.target), (target) =>
+            serializeSpecificResource(normalizeAnnotationTarget(target), state)
+          ),
+        ],
+        ["timeMode", entity.timeMode],
+        ["exclude", entity.exclude?.length ? entity.exclude : undefined],
+        ["provides", entity.provides?.length ? entity.provides : undefined],
+        ["scope", entity.scope?.length ? entity.scope : undefined],
+        ["position", entity.position ? yield entity.position : undefined],
+      ];
+    },
+
+    Range: function* (entity, state) {
+      return [
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["items", yield* serializeRangeItems(resolveContentResourceReference(state, entity.items), state)],
+        ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
+        ["supplementary", entity.supplementary ? yield entity.supplementary : undefined],
+      ];
+    },
+
+    Agent: function* (entity) {
+      return [
+        ["id", stripVaultId(entity.id)],
+        ["type", entity.type || "Agent"],
+        ["label", entity.label],
+        ...(yield* withLinkedProperties(entity)),
+      ];
+    },
+
+    ContentResource: function* (entity, state) {
+      if (entity.type === "SpecificResource") {
+        return [UNWRAP, serializeSpecificResource(entity, state)];
+      }
+
+      return [
+        ...opaqueContentResourceProperties(entity),
+        ...baseProperties(entity),
+        ...(yield* withLinkedProperties(entity)),
+        ["value", entity.value ?? undefined],
+        ["language", serializeLanguage(entity.language)],
+        ["items", entity.items ? filterList(yield entity.items) : undefined],
+        ["source", entity.source ? preserveObjectOrOmitEmptyList(yield entity.source) : undefined],
+        ["selector", entity.selector ? filterList(yield entity.selector) : undefined],
+        ["transform", entity.transform ? filterList(yield entity.transform) : undefined],
+        ["action", entity.action?.length ? entity.action : undefined],
+        ["lookAt", entity.lookAt ? yield entity.lookAt : undefined],
+        ["position", entity.position ? yield entity.position : undefined],
+        ["provides", entity.provides?.length ? entity.provides : undefined],
+        ["fileSize", entity.fileSize],
+        ["quantityValue", entity.quantityValue],
+        ["unit", entity.unit],
+      ];
+    },
+  };
+}
+
+export const serializeConfigPresentation4 = createSerializeConfigPresentation4();

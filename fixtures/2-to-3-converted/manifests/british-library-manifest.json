@@ -265,14 +265,14 @@
       ]
     }
   },
-  "homepage": {
+  "homepage": [{
     "format": "text/html",
     "label": {
       "@none": ["View at the British Library"]
     },
     "type": "Text",
     "id": "http://access.bl.uk/item/viewer/ark:/81055/vdc_00000004216E"
-  },
+  }],
   "items": [
     {
       "label": {

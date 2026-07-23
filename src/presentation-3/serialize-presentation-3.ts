@@ -1,13 +1,13 @@
 import { SerializeConfig } from './serialize';
-import {
+import type {
   ImageService,
   ImageService2,
   ImageService3,
   ResourceProvider,
   TechnicalProperties,
-} from '@iiif/presentation-3';
+} from './types';
 import { compressSpecificResource } from '../shared/compress-specific-resource';
-import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
+import type { DescriptiveNormalized, LinkingNormalized } from '../presentation-3-normalized/types';
 import { HAS_PART, IS_EXTERNAL, PART_OF, UNSET, UNWRAP } from './utilities';
 import { isSpecificResource } from '../shared/is-specific-resource';
 
@@ -34,6 +34,10 @@ function technicalProperties(entity: Partial<TechnicalProperties>): Array<[keyof
 function filterEmpty<T>(item?: T[] | typeof UNSET): T[] | undefined | typeof UNSET {
   if (item === UNSET) {
     return undefined;
+  }
+
+  if (!Array.isArray(item)) {
+    return item;
   }
 
   if (!item || item.length === 0) {
@@ -99,8 +103,8 @@ function* descriptiveProperties(
     ['language', entity.language],
     // We yield these fully as they are embedded in here.
     ['thumbnail', filterEmpty(yield entity.thumbnail)],
-    ['placeholderCanvas', yield entity.placeholderCanvas],
-    ['accompanyingCanvas', yield entity.accompanyingCanvas],
+    ['placeholderCanvas', filterEmpty(yield entity.placeholderCanvas)],
+    ['accompanyingCanvas', filterEmpty(yield entity.accompanyingCanvas)],
 
     // @todo need to test this one.
     ['provider', filterEmpty(yield entity.provider)],
@@ -157,10 +161,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     }
 
     return [
-      [
-        '@context',
-        (entity as any)['@context'] ? (entity as any)['@context'] : context,
-      ],
+      ['@context', (entity as any)['@context'] ? (entity as any)['@context'] : context],
       ...technicalProperties(entity),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
@@ -379,7 +380,6 @@ function mergeRemainingProperties(entries: [string, any][], object: any): [strin
   }
   return entries;
 }
-
 
 function itemsHaveNavPlace(item: any) {
   if (!item.items || !Array.isArray(item.items)) {

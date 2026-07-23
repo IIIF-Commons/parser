@@ -1,6 +1,6 @@
 import { levelToProfile } from './level-to-profile';
 import { Profile } from './profiles';
-import { ImageService } from '@iiif/presentation-3';
+import type { ImageService } from '../../presentation-3/types';
 
 export function combineProfiles(service: ImageService): Profile {
   const profiles: any[] = service ? (Array.isArray(service.profile) ? service.profile : [service.profile]) : [];

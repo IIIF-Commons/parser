@@ -1,0 +1,58 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/3d/model_transform_rotate_position.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Rotated Model"
+    ]
+  },
+  "summary": {
+    "en": [
+      "Viewer should render the model rotated by 180 degrees around the Y axis"
+    ]
+  },
+  "items": [
+    {
+      "id": "https://example.org/iiif/scene1/page/p1/1",
+      "type": "Scene",
+      "label": {
+        "en": [
+          "A Scene"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://example.org/iiif/scene1/page/p1/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/3d/anno1",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "target": {
+                "type": "SpecificResource",
+                "selector": [
+                  {
+                    "type": "PointSelector",
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                  }
+                ],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

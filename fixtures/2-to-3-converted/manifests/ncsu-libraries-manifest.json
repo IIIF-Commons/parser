@@ -126,7 +126,7 @@
       ]
     }
   },
-  "homepage": {
+  "homepage": [{
     "format": "text/html",
     "label": {
       "@none": ["HTML page for the resource"]
@@ -134,7 +134,7 @@
     "dcterms:modified": "2018-05-04T19:59:35.01Z",
     "type": "Text",
     "id": "https://d.lib.ncsu.edu/collections/catalog/nubian-message-1992-11-30"
-  },
+  }],
   "items": [
     {
       "width": 4703,

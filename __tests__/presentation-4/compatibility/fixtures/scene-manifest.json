@@ -1,0 +1,14 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/presentation-4/scene/manifest",
+  "type": "Manifest",
+  "label": {
+    "en": ["Presentation 4 scene"]
+  },
+  "items": [
+    {
+      "id": "https://example.org/iiif/presentation-4/scene/1",
+      "type": "Scene"
+    }
+  ]
+}

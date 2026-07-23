@@ -1,0 +1,95 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/manifest.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Partial audio recording of Gustav Mahler's _Symphony No. 3_"
+    ]
+  },
+  "items": [
+    {
+      "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/p1",
+      "type": "Timeline",
+      "label": {
+        "en": [
+          "Gustav Mahler, Symphony No. 3, CD 1"
+        ]
+      },
+      "duration": 1985.024,
+      "accompanyingContainer": {
+        "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying",
+        "type": "Canvas",
+        "label": {
+          "en": [
+            "First page of score for Gustav Mahler, Symphony No. 3"
+          ]
+        },
+        "height": 998,
+        "width": 772,
+        "duration": 0,
+        "items": [
+          {
+            "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying/annotation/page",
+            "type": "AnnotationPage",
+            "items": [
+              {
+                "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying/annotation/image",
+                "type": "Annotation",
+                "motivation": [
+                  "painting"
+                ],
+                "body": {
+                  "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0/full/,998/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg",
+                  "height": 998,
+                  "width": 772,
+                  "service": [
+                    {
+                      "id": "https://iiif.io/api/image/3.0/example/reference/4b45bba3ea612ee46f5371ce84dbcd89-mahler-0",
+                      "type": "ImageService3",
+                      "profile": "level1"
+                    }
+                  ]
+                },
+                "target": {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying",
+                    "type": "Canvas"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "items": [
+        {
+          "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/p1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/annotation/segment1-audio",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "body": {
+                "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
+                "type": "Sound",
+                "format": "video/mp4",
+                "duration": 1985.024
+              },
+              "target": {
+                "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/page/p1",
+                "type": "AnnotationPage"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

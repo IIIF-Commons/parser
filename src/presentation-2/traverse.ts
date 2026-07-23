@@ -18,7 +18,7 @@ import type {
   TraversableEntityTypes,
   Traversal,
   TraversalMap,
-} from '@iiif/presentation-2';
+} from './types';
 
 export const types: TraversableEntityTypes[] = [
   'sc:Collection',

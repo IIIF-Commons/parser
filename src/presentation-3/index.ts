@@ -5,6 +5,7 @@ export * from './serialize';
 export * from './serialize-presentation-2';
 export * from './serialize-presentation-3';
 export * from './utilities';
+export * from './types';
 
 // Export some shared utilities
 export * from '../shared/to-ref';

@@ -1,0 +1,217 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/3d/model_origin.json",
+  "type": "Manifest",
+  "label": {
+    "en": [
+      "Single Model with Multilingual Comment Annotations"
+    ]
+  },
+  "summary": {
+    "en": [
+      "Viewer should render the model at the scene origin and two multilingual comment annotations, one targeting a point near the astronaut's glove and the other targeting a point near the astronaut's helmet."
+    ]
+  },
+  "items": [
+    {
+      "id": "https://example.org/iiif/scene1/page/p1/1",
+      "type": "Scene",
+      "label": {
+        "en": [
+          "Single Model with Comment Annotations"
+        ],
+        "es": [
+          "Modelo único con anotaciones de comentarios"
+        ]
+      },
+      "backgroundColor": "#33404d",
+      "annotations": [
+        {
+          "id": "https://example.org/iiif/scene1/page/p2/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/3d/anno2",
+              "type": "Annotation",
+              "motivation": [
+                "commenting"
+              ],
+              "body": {
+                "type": "List",
+                "items": [
+                  {
+                    "type": "Choice",
+                    "items": [
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      },
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Choice",
+                    "items": [
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      },
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "target": {
+                "type": "List",
+                "items": [
+                  {
+                    "type": "SpecificResource",
+                    "selector": [
+                      {
+                        "type": "PointSelector",
+                        "x": 1.075,
+                        "y": 1.894,
+                        "z": 0.204
+                      }
+                    ],
+                    "transform": [],
+                    "action": [],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
+                  },
+                  {
+                    "type": "SpecificResource",
+                    "selector": [
+                      {
+                        "type": "PointSelector",
+                        "x": 0.006,
+                        "y": 3.498,
+                        "z": 0.703
+                      }
+                    ],
+                    "transform": [],
+                    "action": [],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "https://example.org/iiif/3d/anno2",
+              "type": "Annotation",
+              "motivation": [
+                "commenting"
+              ],
+              "body": {
+                "type": "List",
+                "items": [
+                  {
+                    "type": "Choice",
+                    "items": [
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      },
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "Choice",
+                    "items": [
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      },
+                      {
+                        "type": "TextualBody",
+                        "format": "text/plain"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "target": {
+                "type": "List",
+                "items": [
+                  {
+                    "type": "SpecificResource",
+                    "selector": [
+                      {
+                        "type": "PointSelector",
+                        "x": 1.075,
+                        "y": 1.894,
+                        "z": 0.204
+                      }
+                    ],
+                    "transform": [],
+                    "action": [],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
+                  },
+                  {
+                    "type": "SpecificResource",
+                    "selector": [
+                      {
+                        "type": "PointSelector",
+                        "x": 0.006,
+                        "y": 3.498,
+                        "z": 0.703
+                      }
+                    ],
+                    "transform": [],
+                    "action": [],
+                    "source": {
+                      "id": "https://example.org/iiif/scene1/page/p1/1",
+                      "type": "Scene"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "id": "https://example.org/iiif/scene1/page/p1/1",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/3d/anno1",
+              "type": "Annotation",
+              "motivation": [
+                "painting"
+              ],
+              "target": {
+                "type": "SpecificResource",
+                "selector": [],
+                "transform": [],
+                "action": [],
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

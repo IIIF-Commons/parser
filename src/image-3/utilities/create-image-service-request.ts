@@ -1,4 +1,4 @@
-import { ImageService } from '@iiif/presentation-3';
+import type { ImageService } from '../../presentation-3/types';
 import { ImageServiceImageRequest } from '../types';
 import { combineProfiles } from '../profiles/combine-profiles';
 import { parseImageServiceRequest } from '../parser/parse-image-service-request';

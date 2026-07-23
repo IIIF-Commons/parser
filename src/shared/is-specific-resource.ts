@@ -1,4 +1,4 @@
-import { SpecificResource } from '@iiif/presentation-3';
+import type { SpecificResource } from '../presentation-3/types';
 
 export function isSpecificResource(resource: unknown): resource is SpecificResource {
   if (typeof resource === 'string') {
