@@ -12,8 +12,9 @@ add one final POSIX newline; the upstream files at this pin omit it.
 - License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), as stated by the source specification
 
 The compact selection covers Timeline, Canvas fragments, SpecificResource,
-Collection references, Range structures, services, language values, temporal
-content, and nested Timeline painting without bringing the 3D model into the
+Collection references, Range structures, linked Annotation Collections,
+services, language values, temporal content, nested Timeline painting, and
+Canvas references with `partOf`, without bringing the 3D model into the
 Presentation 3 compatibility gate.
 
 ## SHA-256
@@ -24,5 +25,7 @@ bbe0aad8b1974f57d4b840fec5e3870f48c838b179d486503fa576002af4c334  05_fragment.js
 988304852807834d1a94402651c03ef1c5b507a77861476a034d81b21e40032c  06_specific_resource.json
 9dab7cb4883e25e7a31021ce72c80e174ca53e5f2b365fe8845d5c34452f4412  07_collection.json
 a126e38445988123b9956b2d291af61bd091044c60ff8e94c405fc783093f73e  08_range.json
+60215ef5d23a2dc01953a4976e2ad5db1b29f71dd9ee613c53c7646102b1482d  uc03_issue1.json
 ba30de8ba3f917b038f58ec0358836d1c5c099a850da73b482293abd1104b763  uc07_duration_composite.json
+9b990050e18a137bff2aef9f7a423a0ced62af400d885957c3681040959b0160  uc07_image_composite.json
 ```

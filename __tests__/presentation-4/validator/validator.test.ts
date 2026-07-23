@@ -35,6 +35,96 @@ describe("Presentation 4 authored validation", () => {
     );
   });
 
+  test("validates full resources while accepting typed objects in reference-valued properties", () => {
+    const input = JSON.parse(readFileSync(join(goldDirectory, "manifest-canvas.json"), "utf8"));
+    input.items[0].partOf = [
+      {
+        id: "https://example.org/iiif/manifest/embedded",
+        type: "Manifest",
+        label: { en: ["Embedded"] },
+        items: [],
+      },
+    ];
+
+    const report = validateAuthoredPresentation4(input);
+
+    expect(report.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          code: "manifest-items-required",
+          path: "$.items[0].partOf[0].items",
+        }),
+      ])
+    );
+  });
+
+  test("does not accept a typed Container reference in Manifest.items", () => {
+    const input = JSON.parse(readFileSync(join(goldDirectory, "manifest-canvas.json"), "utf8"));
+    input.items = [{ id: "https://example.org/iiif/canvas/reference", type: "Canvas" }];
+
+    const report = validateAuthoredPresentation4(input);
+
+    expect(report.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          code: "manifest-container-embedded-required",
+          path: "$.items[0]",
+        }),
+      ])
+    );
+  });
+
+  test("requires embedded provider Agents to include a label", () => {
+    const input = JSON.parse(readFileSync(join(goldDirectory, "manifest-canvas.json"), "utf8"));
+    input.provider = [{ id: "https://example.org/agent/provider", type: "Agent" }];
+
+    const report = validateAuthoredPresentation4(input);
+
+    expect(report.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          code: "class-requirement-must",
+          path: "$.provider[0].label",
+        }),
+      ])
+    );
+  });
+
+  test.each([
+    [
+      "SpecificResource",
+      { id: "https://example.org/specific-resource", type: "SpecificResource" },
+      "source",
+      "class-requirement-must",
+    ],
+    [
+      "TextualBody",
+      { id: "https://example.org/text", type: "TextualBody" },
+      "value",
+      "class-requirement-must",
+    ],
+    [
+      "Choice",
+      { id: "https://example.org/choice", type: "Choice" },
+      "items",
+      "annotation-body-aggregate-items-array",
+    ],
+  ])("does not treat embedded %s bodies as reference-only", (_type, body, requiredProperty, code) => {
+    const input = JSON.parse(readFileSync(join(goldDirectory, "manifest-canvas.json"), "utf8"));
+    input.items[0].items[0].items[0].body = body;
+
+    const report = validateAuthoredPresentation4(input);
+
+    expect(report.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          code,
+          path: `$.items[0].items[0].items[0].body.${requiredProperty}`,
+        }),
+      ])
+    );
+  });
+
   test("rejects input that only becomes Presentation 4 after upgrading", () => {
     const presentation3 = {
       "@context": "http://iiif.io/api/presentation/3/context.json",

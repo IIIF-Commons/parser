@@ -44,6 +44,27 @@ const classRequirementsByType = new Map<string, { className: string; requirement
 
 const scenePaintableTypes = new Set(["Canvas", "Scene", "Model", ...Array.from(sceneComponentTypes)]);
 const annotationAggregateTypes = new Set(["Choice", "Composite", "List", "Independents"]);
+const linkedResourceProperties = [
+  "partOf",
+  "target",
+  "body",
+  "source",
+  "next",
+  "prev",
+  "first",
+  "last",
+  "annotations",
+  "supplementary",
+  "thumbnail",
+  "seeAlso",
+  "rendering",
+  "homepage",
+  "logo",
+  "scope",
+  "action",
+  "default",
+  "start",
+];
 
 function hasPresentation4Context(resource: unknown): boolean {
   if (!resource || typeof resource !== "object") {
@@ -205,16 +226,57 @@ function pathIsSpecificResourceSource(path: string): boolean {
   return /\.source(?:\[\d+\])?$/.test(path);
 }
 
-function pathIsReferenceContext(path: string): boolean {
+function isTypedReferenceObject(node: any): boolean {
+  if (!isPlainObject(node) || !getId(node) || !getType(node)) {
+    return false;
+  }
+
+  const type = getType(node);
+  if (
+    ["Collection", "CollectionPage", "Manifest", "Range", "Timeline", "Canvas", "Scene", "AnnotationCollection", "AnnotationPage"].includes(
+      type || ""
+    )
+  ) {
+    return !Object.hasOwn(node, "items");
+  }
+  if (type === "Annotation") {
+    return !Object.hasOwn(node, "body") && !Object.hasOwn(node, "target") && !Object.hasOwn(node, "motivation");
+  }
+  if (type === "SpecificResource" || type === "TextualBody" || annotationAggregateTypes.has(type || "")) {
+    return false;
+  }
+
+  return true;
+}
+
+function pathIsLinkedResourceValue(path: string): boolean {
+  return linkedResourceProperties.some((property) =>
+    new RegExp(`(?:^|\\.)${property}(?:\\[\\d+\\])?$`).test(path)
+  );
+}
+
+function isTypedReferenceContext(node: any, path: string, parent: any): boolean {
+  if (!isTypedReferenceObject(node)) {
+    return false;
+  }
+
+  if (
+    pathIsLinkedResourceValue(path) ||
+    /\.target\.items\[\d+\]$/.test(path) ||
+    /\.body\.items\[\d+\]$/.test(path) ||
+    /\.structures\[\d+\]$/.test(path)
+  ) {
+    return true;
+  }
+
+  if (!/\.items\[\d+\]$/.test(path)) {
+    return false;
+  }
+
+  const parentType = getType(parent) || "";
   return (
-    /(?:^|\.)partOf(?:\[\d+\])?(?:$|\.|\[)/.test(path) ||
-    /(?:^|\.)target(?:$|\.|\[)/.test(path) ||
-    /(?:^|\.)next(?:$|\.|\[)/.test(path) ||
-    /(?:^|\.)prev(?:$|\.|\[)/.test(path) ||
-    /(?:^|\.)first(?:$|\.|\[)/.test(path) ||
-    /(?:^|\.)last(?:$|\.|\[)/.test(path) ||
-    /(?:^|\.)annotations\[\d+\](?:$|\.|\[)/.test(path) ||
-    /(?:^|\.)supplementary\[\d+\](?:$|\.|\[)/.test(path)
+    ["Collection", "CollectionPage", "Range", "Canvas", "Timeline", "Scene"].includes(parentType) ||
+    annotationAggregateTypes.has(parentType)
   );
 }
 
@@ -257,23 +319,16 @@ function isLikelyReferenceScene(scene: any): boolean {
   return true;
 }
 
-function isRangeContainerReference(node: any, parent: any): boolean {
+function isRangeContainerReference(node: any, nodePath: string, parent: any): boolean {
   if (!isPlainObject(node) || !isPlainObject(parent) || getType(parent) !== "Range") {
     return false;
   }
 
   const type = getType(node);
-  if (type === "Canvas") {
-    return isLikelyReferenceCanvas(node);
-  }
-  if (type === "Timeline") {
-    return isLikelyReferenceTimeline(node);
-  }
-  if (type === "Scene") {
-    return isLikelyReferenceScene(node);
-  }
-
-  return false;
+  return (
+    (type === "Canvas" || type === "Timeline" || type === "Scene") &&
+    isTypedReferenceContext(node, nodePath, parent)
+  );
 }
 
 function isReferenceAnnotation(annotation: any): boolean {
@@ -495,7 +550,7 @@ function isCollectionMemberReference(node: any, nodePath: string, parent: any): 
   return (
     (parentType === "Collection" || parentType === "CollectionPage") &&
     (type === "Collection" || type === "Manifest") &&
-    /\.items\[\d+\]$/.test(nodePath)
+    isTypedReferenceContext(node, nodePath, parent)
   );
 }
 
@@ -503,8 +558,7 @@ function isTopLevelRangeReference(node: any, nodePath: string, parent: any): boo
   return (
     getType(node) === "Range" &&
     getType(parent) === "Manifest" &&
-    /\.structures\[\d+\]$/.test(nodePath) &&
-    !Object.hasOwn(node, "items")
+    isTypedReferenceContext(node, nodePath, parent)
   );
 }
 
@@ -560,7 +614,7 @@ function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {
       });
     }
 
-    if (pathIsReferenceContext(nodePath) || isCollectionMemberReference(node, nodePath, parent)) {
+    if (isTypedReferenceContext(node, nodePath, parent)) {
       return;
     }
 
@@ -1042,19 +1096,26 @@ export function runClassRequirementValidation(resource: any): {
       return;
     }
 
-    if (pathIsReferenceContext(nodePath)) {
+    if (isTypedReferenceContext(node, nodePath, parent)) {
       return;
     }
 
     stats.nodesChecked++;
     const { className, requirement } = classRequirement;
-    const rangeContainerReference = isRangeContainerReference(node, parent);
+    const rangeContainerReference = isRangeContainerReference(node, nodePath, parent);
     const collectionMemberReference = isCollectionMemberReference(node, nodePath, parent);
     const topLevelRangeReference = isTopLevelRangeReference(node, nodePath, parent);
 
     for (const property of requirement.must) {
       stats.mustChecks++;
       if (className === "Service" && (property === "id" || property === "type")) {
+        continue;
+      }
+      if (
+        className === "SpecificResource" &&
+        property === "id" &&
+        /\.target(?:\.items\[\d+\])?$/.test(nodePath)
+      ) {
         continue;
       }
       if (rangeContainerReference && property !== "id" && property !== "type") {
@@ -1211,7 +1272,7 @@ export function runRawValidation(resource: any, options: { skipAnnotationShape?:
     ],
     manifest: [
       (manifest, context) => {
-        if (isCollectionMemberReference(manifest, context.path, context.parent)) {
+        if (isTypedReferenceContext(manifest, context.path, context.parent)) {
           return;
         }
         if (!Array.isArray(manifest.items) || manifest.items.length === 0) {
