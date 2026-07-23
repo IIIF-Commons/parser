@@ -122,6 +122,7 @@
   ],
   "seeAlso": [
     {
+      "@format": "application/ld+json",
       "id": "https://collections.vam.ac.uk/item/O1023003.jsonld",
       "type": "Dataset"
     }
@@ -160,10 +161,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=1800,2000,500,500"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=1800,2000,500,500"
+                  }
+                ]
               }
             },
             {
@@ -183,10 +186,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=3000,2100,100,200"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=3000,2100,100,200"
+                  }
+                ]
               }
             },
             {
@@ -206,10 +211,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2000,2800,400,400"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2000,2800,400,400"
+                  }
+                ]
               }
             },
             {
@@ -229,10 +236,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=1400,2500,100,200"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=1400,2500,100,200"
+                  }
+                ]
               }
             },
             {
@@ -252,10 +261,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2450,3800,100,200"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2450,3800,100,200"
+                  }
+                ]
               }
             },
             {
@@ -275,10 +286,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=800,3500,100,200"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=800,3500,100,200"
+                  }
+                ]
               }
             },
             {
@@ -298,10 +311,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2500,4500,500,800"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2500,4500,500,800"
+                  }
+                ]
               }
             },
             {
@@ -321,10 +336,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=3000,4000,100,200"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=3000,4000,100,200"
+                  }
+                ]
               }
             },
             {
@@ -344,10 +361,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2100,4000,100,200"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2100,4000,100,200"
+                  }
+                ]
               }
             },
             {
@@ -367,10 +386,12 @@
                   "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=1500,3250,100,200"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=1500,3250,100,200"
+                  }
+                ]
               }
             }
           ]

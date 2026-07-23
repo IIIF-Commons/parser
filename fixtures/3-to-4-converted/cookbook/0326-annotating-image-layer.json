@@ -90,11 +90,13 @@
                                 "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray",
                                 "type": "ImageService3"
                               },
-                              "selector": {
-                                "type": "ImageApiSelector",
-                                "region": "810,900,260,370",
-                                "size": "2000,1271"
-                              }
+                              "selector": [
+                                {
+                                  "type": "ImageApiSelector",
+                                  "region": "810,900,260,370",
+                                  "size": "2000,1271"
+                                }
+                              ]
                             }
                           }
                         ]

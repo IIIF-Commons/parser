@@ -249,93 +249,43 @@
   "partOf": [
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/contributors/Llanwrtyd_Wells_(Wales)._Urban_District_Council.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Contributor: Llanwrtyd Wells (Wales). Urban District Council."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/xaqnqsbj",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Disease Outbreaks."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/tva37rme",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Public Health."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/p2mzt7rw",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Sanitation."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/pxxu6hsg",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Water Supply."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/subjects/dyss49dy",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Llanwrtyd Wells (Wales)"
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Electronic_books.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: Electronic books."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Annual_reports.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: Annual reports."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/MOH_reports.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: MOH reports."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/collections/genres/Statistics.",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: Statistics."
-        ]
-      }
+      "type": "Collection"
     }
   ],
   "annotations": [
@@ -1474,7 +1424,16 @@
         "none": [
           "Cover"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0001.jp2",
+            "type": "Canvas"
+          }
+        }
+      ]
     },
     {
       "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/ranges/LOG_0002",
@@ -1483,7 +1442,16 @@
         "none": [
           "Cover"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif-test.wellcomecollection.org/presentation/b28857021/canvases/b28857021_0010.jp2",
+            "type": "Canvas"
+          }
+        }
+      ]
     }
   ]
 }

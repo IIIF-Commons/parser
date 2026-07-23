@@ -243,10 +243,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981394",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=3949,994,1091,1232"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=3949,994,1091,1232"
+                  }
+                ]
               }
             }
           ]
@@ -323,10 +325,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981395",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2618,927,1080,1224"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2618,927,1080,1224"
+                  }
+                ]
               }
             }
           ]
@@ -403,10 +407,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981406",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=3953,927,1078,1045"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=3953,927,1078,1045"
+                  }
+                ]
               }
             }
           ]
@@ -483,10 +489,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981407",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2632,881,1091,1024"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2632,881,1091,1024"
+                  }
+                ]
               }
             }
           ]
@@ -563,10 +571,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981414",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=3928,956,1093,1381"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=3928,956,1093,1381"
+                  }
+                ]
               }
             }
           ]
@@ -643,10 +653,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981415",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2683,925,1046,1333"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2683,925,1046,1333"
+                  }
+                ]
               }
             }
           ]
@@ -723,10 +735,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981428",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=4053,964,1096,1051"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=4053,964,1096,1051"
+                  }
+                ]
               }
             }
           ]
@@ -803,10 +817,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981429",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2695,938,1087,1025"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2695,938,1087,1025"
+                  }
+                ]
               }
             }
           ]
@@ -883,10 +899,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981441",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=4007,970,1094,1064"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=4007,970,1094,1064"
+                  }
+                ]
               }
             }
           ]
@@ -963,10 +981,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981442",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2758,974,1044,1046"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2758,974,1044,1046"
+                  }
+                ]
               }
             }
           ]
@@ -1043,10 +1063,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981445",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=4005,963,1089,1085"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=4005,963,1089,1085"
+                  }
+                ]
               }
             }
           ]
@@ -1123,10 +1145,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981446",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2726,970,1097,1080"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2726,970,1097,1080"
+                  }
+                ]
               }
             }
           ]
@@ -1203,10 +1227,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981449",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=4077,1028,1055,1015"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=4077,1028,1055,1015"
+                  }
+                ]
               }
             }
           ]
@@ -1283,10 +1309,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981450",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2904,956,1030,1008"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2904,956,1030,1008"
+                  }
+                ]
               }
             }
           ]
@@ -1363,10 +1391,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981542",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=4064,1409,976,1026"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=4064,1409,976,1026"
+                  }
+                ]
               }
             }
           ]
@@ -1443,10 +1473,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981543",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2843,1384,990,1039"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2843,1384,990,1039"
+                  }
+                ]
               }
             }
           ]
@@ -1523,10 +1555,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981549",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=4067,2816,961,1027"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=4067,2816,961,1027"
+                  }
+                ]
               }
             }
           ]
@@ -1603,10 +1637,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981550",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=2864,2853,1000,1074"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=2864,2853,1000,1074"
+                  }
+                ]
               }
             }
           ]
@@ -1683,10 +1719,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981720",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=5025,2529,1058,1045"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=5025,2529,1058,1045"
+                  }
+                ]
               }
             }
           ]
@@ -1763,10 +1801,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981721",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=1093,2503,1085,1060"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=1093,2503,1085,1060"
+                  }
+                ]
               }
             }
           ]
@@ -1843,10 +1883,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981776",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=4865,2140,1053,1168"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=4865,2140,1053,1168"
+                  }
+                ]
               }
             }
           ]
@@ -1923,10 +1965,12 @@
                   "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981777",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=1019,2146,1077,1185"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=1019,2146,1077,1185"
+                  }
+                ]
               }
             }
           ]

@@ -138,6 +138,7 @@
   ],
   "seeAlso": [
     {
+      "dcterms:format": "application/marcxml+xml",
       "id": "https://lib.ugent.be/catalog/rug01%3A001484515.marcxml",
       "type": "Dataset"
     }

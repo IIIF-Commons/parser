@@ -75,7 +75,16 @@
                 "it": [
                   "Preludio e Coro d'introduzione – Bel conforto al mietitore"
                 ]
-              }
+              },
+              "items": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1/t=0,302.05",
+                    "type": "Canvas"
+                  }
+                }
+              ]
             },
             {
               "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/4",
@@ -84,7 +93,16 @@
                 "en": [
                   "Remainder of Atto Primo"
                 ]
-              }
+              },
+              "items": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1/t=302.05,3971.24",
+                    "type": "Canvas"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -95,7 +113,16 @@
             "it": [
               "Atto Secondo"
             ]
-          }
+          },
+          "items": [
+            {
+              "type": "SpecificResource",
+              "source": {
+                "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/canvas/1/t=3971.24",
+                "type": "Canvas"
+              }
+            }
+          ]
         }
       ]
     }

@@ -314,7 +314,23 @@
             "gez": [
               "Tabiba Tabiban [ጠቢበ ጠቢባን]"
             ]
-          }
+          },
+          "items": [
+            {
+              "type": "SpecificResource",
+              "source": {
+                "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
+                "type": "Canvas"
+              }
+            },
+            {
+              "type": "SpecificResource",
+              "source": {
+                "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p2",
+                "type": "Canvas"
+              }
+            }
+          ]
         },
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2",
@@ -332,7 +348,23 @@
                 "en": [
                   "Monday"
                 ]
-              }
+              },
+              "items": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p3",
+                    "type": "Canvas"
+                  }
+                },
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p4",
+                    "type": "Canvas"
+                  }
+                }
+              ]
             },
             {
               "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/2",
@@ -341,7 +373,23 @@
                 "en": [
                   "Tuesday"
                 ]
-              }
+              },
+              "items": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p5",
+                    "type": "Canvas"
+                  }
+                },
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p6",
+                    "type": "Canvas"
+                  }
+                }
+              ]
             }
           ]
         }

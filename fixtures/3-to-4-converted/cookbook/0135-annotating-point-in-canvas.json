@@ -49,11 +49,13 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "PointSelector",
-                  "x": 3385,
-                  "y": 1464
-                }
+                "selector": [
+                  {
+                    "type": "PointSelector",
+                    "x": 3385,
+                    "y": 1464
+                  }
+                ]
               }
             }
           ]

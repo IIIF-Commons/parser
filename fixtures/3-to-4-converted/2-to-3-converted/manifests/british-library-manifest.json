@@ -46038,7 +46038,16 @@
         "@none": [
           "Section"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216D.0x000001",
+            "type": "Canvas"
+          }
+        }
+      ]
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E.0x000002",
@@ -46047,7 +46056,16 @@
         "@none": [
           "Title"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216D.0x000007",
+            "type": "Canvas"
+          }
+        }
+      ]
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E.0x000003",
@@ -46056,7 +46074,16 @@
         "@none": [
           "Table of Contents"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216D.0x00000B",
+            "type": "Canvas"
+          }
+        }
+      ]
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E.0x000004",
@@ -46065,7 +46092,16 @@
         "@none": [
           "Table of Contents"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216D.0x00000C",
+            "type": "Canvas"
+          }
+        }
+      ]
     },
     {
       "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216E.0x000005",
@@ -46074,7 +46110,16 @@
         "@none": [
           "Section"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://api.bl.uk/metadata/iiif/ark:/81055/vdc_00000004216D.0x0001CE",
+            "type": "Canvas"
+          }
+        }
+      ]
     }
   ]
 }

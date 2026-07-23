@@ -55,10 +55,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/canvas/p1",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=1650,1200,925,1250"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=1650,1200,925,1250"
+                  }
+                ]
               }
             }
           ]

@@ -341,39 +341,19 @@
   "partOf": [
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/portraits",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Portraits"
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/bodleian",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Bodleian Libraries"
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/portraits-prints-drawings-objects",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Portraits, Prints and Drawings"
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif.bodleian.ox.ac.uk/iiif/collection/bodleian-portraits",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "The Bodleian Libraries’ Portrait Collection: A Samuel H. Kress Foundation Digitization Project"
-        ]
-      }
+      "type": "Collection"
     }
   ],
   "items": [
@@ -440,6 +420,15 @@
           "LP 44"
         ]
       },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json",
+            "type": "Canvas"
+          }
+        }
+      ],
       "start": {
         "type": "Canvas",
         "id": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/012b1e0f-8c9e-48e7-83d6-5e51a70253b4.json"

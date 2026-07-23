@@ -26,11 +26,23 @@
                 "tagging"
               ],
               "body": {
-                "type": "TextualBody",
-                "format": "text/plain",
-                "value": "Gänseliesel-Brunnen",
-                "language": [
-                  "de"
+                "type": "Independents",
+                "items": [
+                  {
+                    "type": "SpecificResource",
+                    "source": {
+                      "id": "http://www.wikidata.org/entity/Q18624915",
+                      "type": "ContentResource"
+                    }
+                  },
+                  {
+                    "type": "TextualBody",
+                    "format": "text/plain",
+                    "value": "Gänseliesel-Brunnen",
+                    "language": [
+                      "de"
+                    ]
+                  }
                 ]
               },
               "target": {
@@ -39,10 +51,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0258-tagging-external-resource/canvas/p1",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=749,1054,338,460"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=749,1054,338,460"
+                  }
+                ]
               }
             }
           ]

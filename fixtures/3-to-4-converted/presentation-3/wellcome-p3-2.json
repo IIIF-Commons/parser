@@ -266,30 +266,15 @@
   "partOf": [
     {
       "id": "https://iiif.wellcomecollection.org/presentation/collections/contributors/xtwzf3g5",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Contributor: Bolle, Fritz."
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/hq8gcy73",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Subject: Genetics - history"
-        ]
-      }
+      "type": "Collection"
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Pamphlets",
-      "type": "Collection",
-      "label": {
-        "en": [
-          "Genre: Pamphlets"
-        ]
-      }
+      "type": "Collection"
     }
   ],
   "annotations": [
@@ -4253,7 +4238,16 @@
         "none": [
           "Front Cover"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0001.JP2",
+            "type": "Canvas"
+          }
+        }
+      ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/ranges/LOG_0003",
@@ -4262,7 +4256,16 @@
         "none": [
           "Title Page"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0004.JP2",
+            "type": "Canvas"
+          }
+        }
+      ]
     },
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b18035723/ranges/LOG_0002",
@@ -4271,7 +4274,16 @@
         "none": [
           "Back Cover"
         ]
-      }
+      },
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.wellcomecollection.org/presentation/b18035723/canvases/b18035723_0002.JP2",
+            "type": "Canvas"
+          }
+        }
+      ]
     }
   ]
 }

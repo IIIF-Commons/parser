@@ -30,6 +30,25 @@
               "motivation": [
                 "painting"
               ],
+              "body": {
+                "id": "https://iiif.io/api/cookbook/recipe/0040-image-rotation-service/body/sr1",
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-page1/full/max/0/default.jpg",
+                  "type": "Image",
+                  "format": "image/jpeg",
+                  "width": 1523,
+                  "height": 2105,
+                  "service": [
+                    {
+                      "id": "https://iiif.io/api/image/3.0/example/reference/85a96c630f077e6ac6cb984f1b752bbf-0-21198-zz00022840-1-master",
+                      "type": "ImageService3",
+                      "profile": "level1"
+                    }
+                  ]
+                },
+                "styleClass": "rotated"
+              },
               "target": {
                 "type": "SpecificResource",
                 "source": {

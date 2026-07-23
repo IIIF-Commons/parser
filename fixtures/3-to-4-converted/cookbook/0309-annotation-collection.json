@@ -39,15 +39,7 @@
           "partOf": [
             {
               "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_coll.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "en": [
-                  "Newspaper layout markup"
-                ]
-              },
-              "first": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
-              "last": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json",
-              "total": 8
+              "type": "AnnotationCollection"
             }
           ]
         }
@@ -105,15 +97,7 @@
           "partOf": [
             {
               "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_coll.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "en": [
-                  "Newspaper layout markup"
-                ]
-              },
-              "first": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
-              "last": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p2.json",
-              "total": 8
+              "type": "AnnotationCollection"
             }
           ]
         }

@@ -160,7 +160,16 @@
                 "it": [
                   "Preludio e Coro d'introduzione – Bel conforto al mietitore"
                 ]
-              }
+              },
+              "items": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1/t=0,302.05",
+                    "type": "Canvas"
+                  }
+                }
+              ]
             },
             {
               "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/4",
@@ -169,7 +178,16 @@
                 "en": [
                   "Remainder of Atto Primo"
                 ]
-              }
+              },
+              "items": [
+                {
+                  "type": "SpecificResource",
+                  "source": {
+                    "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/1/t=302.05,3971.24",
+                    "type": "Canvas"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -180,7 +198,16 @@
             "en": [
               "Atto Secondo"
             ]
-          }
+          },
+          "items": [
+            {
+              "type": "SpecificResource",
+              "source": {
+                "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/canvas/2/t=0,3307.22",
+                "type": "Canvas"
+              }
+            }
+          ]
         }
       ]
     }

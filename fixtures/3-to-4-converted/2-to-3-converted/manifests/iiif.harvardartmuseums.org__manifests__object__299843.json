@@ -480,6 +480,50 @@
       "behavior": [
         "sequence",
         "individuals"
+      ],
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-47174896",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-18737483",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-47174892",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43182083",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43183405",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://iiif.harvardartmuseums.org/manifests/object/299843/canvas/canvas-43183422",
+            "type": "Canvas"
+          }
+        }
       ]
     }
   ]

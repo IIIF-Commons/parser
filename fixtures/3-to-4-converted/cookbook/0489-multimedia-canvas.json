@@ -45,10 +45,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/canvas",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "t=11,42"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "t=11,42"
+                  }
+                ]
               }
             },
             {
@@ -71,10 +73,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/canvas",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=1000,500,5000,6000&t=11,42"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=1000,500,5000,6000&t=11,42"
+                  }
+                ]
               }
             },
             {
@@ -97,10 +101,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/canvas",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=30200,10200,15000,5000&t=0,1"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=30200,10200,15000,5000&t=0,1"
+                  }
+                ]
               }
             },
             {
@@ -123,10 +129,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/canvas",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=20220,5000,30000,5000&t=1,11"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=20220,5000,30000,5000&t=1,11"
+                  }
+                ]
               }
             },
             {
@@ -149,10 +157,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/canvas",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=27000,10200,25000,5000&t=42,180"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=27000,10200,25000,5000&t=42,180"
+                  }
+                ]
               }
             }
           ]

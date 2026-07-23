@@ -39,10 +39,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/canvas/p1",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=265,661,1260,1239"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=265,661,1260,1239"
+                  }
+                ]
               }
             }
           ]

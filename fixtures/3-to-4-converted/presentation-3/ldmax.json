@@ -246,7 +246,7 @@
   ],
   "items": [
     {
-      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
+      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/1",
       "type": "Canvas",
       "label": {
         "none": [
@@ -258,17 +258,17 @@
       "duration": 0,
       "items": [
         {
-          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation",
+          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/1/annotation",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/annotation/image",
+              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/1/annotation/image",
               "type": "Annotation",
               "motivation": [
                 "painting"
               ],
               "body": {
-                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1/body",
+                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/1/body",
                 "type": "Image",
                 "format": "image/jpeg",
                 "service": [
@@ -282,7 +282,7 @@
               "target": {
                 "type": "SpecificResource",
                 "source": {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/1",
+                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/1",
                   "type": "Canvas"
                 }
               }
@@ -292,7 +292,7 @@
       ]
     },
     {
-      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
+      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/2",
       "type": "Canvas",
       "label": {
         "none": [
@@ -304,17 +304,17 @@
       "duration": 0,
       "items": [
         {
-          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation",
+          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/2/annotation",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/annotation/image",
+              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/2/annotation/image",
               "type": "Annotation",
               "motivation": [
                 "painting"
               ],
               "body": {
-                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2/body",
+                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/2/body",
                 "type": "Image",
                 "format": "image/jpeg",
                 "service": [
@@ -328,7 +328,7 @@
               "target": {
                 "type": "SpecificResource",
                 "source": {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/2",
+                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/2",
                   "type": "Canvas"
                 }
               }
@@ -338,7 +338,7 @@
       ]
     },
     {
-      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
+      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/3",
       "type": "Canvas",
       "label": {
         "none": [
@@ -350,17 +350,17 @@
       "duration": 0,
       "items": [
         {
-          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation",
+          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/3/annotation",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/annotation/image",
+              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/3/annotation/image",
               "type": "Annotation",
               "motivation": [
                 "painting"
               ],
               "body": {
-                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3/body",
+                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/3/body",
                 "type": "Image",
                 "format": "image/jpeg",
                 "service": [
@@ -374,7 +374,7 @@
               "target": {
                 "type": "SpecificResource",
                 "source": {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/3",
+                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/3",
                   "type": "Canvas"
                 }
               }
@@ -384,7 +384,7 @@
       ]
     },
     {
-      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
+      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/4",
       "type": "Canvas",
       "label": {
         "none": [
@@ -396,17 +396,17 @@
       "duration": 0,
       "items": [
         {
-          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation",
+          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/4/annotation",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/annotation/image",
+              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/4/annotation/image",
               "type": "Annotation",
               "motivation": [
                 "painting"
               ],
               "body": {
-                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4/body",
+                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/4/body",
                 "type": "Image",
                 "format": "image/jpeg",
                 "service": [
@@ -420,7 +420,7 @@
               "target": {
                 "type": "SpecificResource",
                 "source": {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/4",
+                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/4",
                   "type": "Canvas"
                 }
               }
@@ -430,7 +430,7 @@
       ]
     },
     {
-      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
+      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/5",
       "type": "Canvas",
       "label": {
         "none": [
@@ -442,17 +442,17 @@
       "duration": 0,
       "items": [
         {
-          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation",
+          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/5/annotation",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/annotation/image",
+              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/5/annotation/image",
               "type": "Annotation",
               "motivation": [
                 "painting"
               ],
               "body": {
-                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5/body",
+                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/5/body",
                 "type": "Image",
                 "format": "image/jpeg",
                 "service": [
@@ -466,7 +466,7 @@
               "target": {
                 "type": "SpecificResource",
                 "source": {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/5",
+                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/5",
                   "type": "Canvas"
                 }
               }
@@ -476,7 +476,7 @@
       ]
     },
     {
-      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
+      "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/6",
       "type": "Canvas",
       "label": {
         "none": [
@@ -488,17 +488,17 @@
       "duration": 0,
       "items": [
         {
-          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation",
+          "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/6/annotation",
           "type": "AnnotationPage",
           "items": [
             {
-              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/annotation/image",
+              "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/6/annotation/image",
               "type": "Annotation",
               "motivation": [
                 "painting"
               ],
               "body": {
-                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6/body",
+                "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/6/body",
                 "type": "Image",
                 "format": "image/jpeg",
                 "service": [
@@ -512,7 +512,7 @@
               "target": {
                 "type": "SpecificResource",
                 "source": {
-                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json#/canvas/6",
+                  "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/6",
                   "type": "Canvas"
                 }
               }

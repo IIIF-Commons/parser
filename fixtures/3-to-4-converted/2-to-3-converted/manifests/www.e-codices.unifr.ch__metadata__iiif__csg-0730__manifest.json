@@ -236,6 +236,7 @@
   ],
   "seeAlso": [
     {
+      "@format": "application/tei+xml",
       "id": "https://www.e-codices.unifr.ch/xml/tei_published/csg-0730.xml",
       "type": "Dataset"
     }
@@ -6274,6 +6275,883 @@
       },
       "behavior": [
         "sequence"
+      ],
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_e001.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_e005.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_000a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_000b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_000c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_000d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_001.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_002.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_003.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_004.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_005.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_006.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_007.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_008.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_009.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_010.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_011.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_012.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_013.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_014.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_015.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_016.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_017.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_018.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_019.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_020.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_021.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_022.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_023.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_024.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_025.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_026.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_026a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_026b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_027.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_028.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_028a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_028b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_028c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_028d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_029.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_030.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_030a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_030b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_030c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_030d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_030e.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_030f.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_031.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_032.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_032a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_032b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_032c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_032d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_033.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034e.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034f.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034g.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_034h.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_035.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_036.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_037.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_038.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_039.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_040.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_041.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_042.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_043.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_044.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_045.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_046.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_047.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_048.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_049.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_050.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_051.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_052.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_053.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_054.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_055.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_056.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_057.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_058.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_059.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_060.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_061.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062e.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062f.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062g.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062h.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062i.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_062j.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_063.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_064.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_065.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_066.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_067.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_068.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_069.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_070.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_071.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_072.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_073.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_074.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_e006.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_e003.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_e002.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_e004.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_e007.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_e008.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_MassE.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_MassS.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_ProfilE.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_ProfilS.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730_ProfilSG.json",
+            "type": "Canvas"
+          }
+        }
       ]
     },
     {
@@ -6295,6 +7173,1058 @@
       },
       "behavior": [
         "sequence"
+      ],
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_e001.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_e005.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000e.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000g.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000f.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000h.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000i.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000j.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000k.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000l.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000m.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_000n.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_001.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_002.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_002a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_002b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_003.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_004.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_005.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_006.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_007.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_008.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_009.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_010.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_010a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_010b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_011.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_012.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_013.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_014.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_015.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_016.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_017.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_018.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_019.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_020.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_021.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_022.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_023.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_024.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_025.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_026.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_026a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_026b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_027.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_028.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_028a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_028b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_028c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_028d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_029.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_030.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_030a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_030b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_030c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_030d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_030e.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_030f.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_031.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_032.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_032a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_032b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_032c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_032d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_033.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034e.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034f.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034g.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_034h.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_035.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_036.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_037.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_038.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_039.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_040.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_041.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_042.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_043.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_044.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_045.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_046.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_047.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_048.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_049.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_050.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_051.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_052.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_053.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_054.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_055.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_056.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_057.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_058.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_059.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_060.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_061.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062c.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062d.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062e.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062f.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062g.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062h.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062i.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062j.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062k.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062l.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062m.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062n.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062o.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062p.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062q.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062r.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062s.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062t.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062u.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062v.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062w.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062x.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062y.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_062z.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_063.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_064.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_065.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_066.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_067.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_068.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_069.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_070.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_071.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_072.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_073.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_074.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_999a.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_999b.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_e006.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_e003.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_e002.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_e004.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_e007.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_e008.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_Mass.json",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://www.e-codices.unifr.ch/metadata/iiif/csg-0730/canvas/csg-0730a_Profil.json",
+            "type": "Canvas"
+          }
+        }
       ]
     }
   ]

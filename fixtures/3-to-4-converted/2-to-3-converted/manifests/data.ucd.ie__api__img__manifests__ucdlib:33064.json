@@ -207,12 +207,7 @@
   "partOf": [
     {
       "id": "https://data.ucd.ie/api/img/collection/ucdlib:33058",
-      "type": "Collection",
-      "label": {
-        "@none": [
-          "Dublin Town Planning Competition 1914"
-        ]
-      }
+      "type": "Collection"
     }
   ],
   "items": [
@@ -285,6 +280,15 @@
       "behavior": [
         "sequence",
         "individuals"
+      ],
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
+            "type": "Canvas"
+          }
+        }
       ]
     }
   ]

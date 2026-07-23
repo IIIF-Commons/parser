@@ -470,6 +470,43 @@
       "behavior": [
         "sequence",
         "individuals"
+      ],
+      "items": [
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0001-pub",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0001-bar",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0002-pub",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0003-pub",
+            "type": "Canvas"
+          }
+        },
+        {
+          "type": "SpecificResource",
+          "source": {
+            "id": "https://manifests.britishart.yale.edu/canvas/ba-obj-1474-0004-pub",
+            "type": "Canvas"
+          }
+        }
       ]
     }
   ]

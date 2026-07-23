@@ -90,8 +90,7 @@
   "partOf": [
     {
       "id": "http://www.nii.ac.jp/dsc/idr/nijl/nijl.html",
-      "type": "Text",
-      "format": "text/html"
+      "type": "ContentResource"
     }
   ],
   "items": [

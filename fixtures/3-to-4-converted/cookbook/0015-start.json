@@ -68,9 +68,11 @@
       "width": 640,
       "height": 360
     },
-    "selector": {
-      "type": "PointSelector",
-      "instant": 120.5
-    }
+    "selector": [
+      {
+        "type": "PointSelector",
+        "instant": 120.5
+      }
+    ]
   }
 }

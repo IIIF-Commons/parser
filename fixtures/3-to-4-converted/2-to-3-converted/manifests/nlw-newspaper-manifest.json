@@ -132,12 +132,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle1.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -152,12 +147,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle2.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         }
@@ -237,12 +227,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle3.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -257,12 +242,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle4.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         }
@@ -342,12 +322,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle5.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -362,12 +337,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle6.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -382,12 +352,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle7.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -402,12 +367,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle8.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -422,12 +382,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle9.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -442,12 +397,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle10.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         }
@@ -527,12 +477,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle11.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -547,12 +492,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle12.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -567,12 +507,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle13.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         },
@@ -587,12 +522,7 @@
           "partOf": [
             {
               "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle14.json",
-              "type": "AnnotationCollection",
-              "label": {
-                "@none": [
-                  "OCR Article Text"
-                ]
-              }
+              "type": "AnnotationCollection"
             }
           ]
         }
@@ -685,17 +615,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle1.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320641/xywh=540,5040,3306,18510",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle1.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle2",
@@ -719,17 +656,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle2.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320641/xywh=3834,4983,13134,18528",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle2.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle3",
@@ -765,17 +709,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle3.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320642/xywh=582,555,16413,22638",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle3.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle4",
@@ -799,17 +750,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle4.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320642/xywh=13773,9642,3387,13467",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle4.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle5",
@@ -845,17 +803,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle5.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643/xywh=525,525,9993,22614",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle5.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle6",
@@ -879,17 +844,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle6.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643/xywh=7173,14520,3303,6357",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle6.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle7",
@@ -913,17 +885,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle7.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643/xywh=7209,20913,3120,1470",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle7.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle8",
@@ -959,17 +938,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle8.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643/xywh=7218,22359,3222,714",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle8.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle9",
@@ -993,17 +979,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle9.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643/xywh=10401,540,3360,15036",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle9.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle10",
@@ -1027,17 +1020,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle10.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320643/xywh=10377,546,6693,22560",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle10.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle11",
@@ -1073,17 +1073,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle11.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644/xywh=549,744,3213,9366",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle11.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle12",
@@ -1119,17 +1126,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle12.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644/xywh=510,10398,3210,8079",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle12.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle13",
@@ -1165,17 +1179,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle13.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644/xywh=549,576,16377,20817",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle13.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     },
     {
       "id": "http://dams.llgc.org.uk/iiif/3320640/article/modsarticle14",
@@ -1199,17 +1220,24 @@
           }
         }
       ],
-      "supplementary": [
+      "items": [
         {
-          "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle14.json",
-          "type": "AnnotationCollection",
-          "label": {
-            "@none": [
-              "OCR Article Text"
-            ]
+          "type": "SpecificResource",
+          "source": {
+            "id": "http://dams.llgc.org.uk/iiif/3320640/canvas/3320644/xywh=660,21486,16311,1770",
+            "type": "Canvas"
           }
         }
-      ]
+      ],
+      "supplementary": {
+        "id": "http://dams.llgc.org.uk/iiif/3320640/annotation/layer/modsarticle14.json",
+        "type": "AnnotationCollection",
+        "label": {
+          "@none": [
+            "OCR Article Text"
+          ]
+        }
+      }
     }
   ]
 }

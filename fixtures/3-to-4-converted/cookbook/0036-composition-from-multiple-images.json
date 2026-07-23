@@ -83,10 +83,12 @@
                   "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/canvas/p1",
                   "type": "Canvas"
                 },
-                "selector": {
-                  "type": "FragmentSelector",
-                  "value": "xywh=3949,994,1091,1232"
-                }
+                "selector": [
+                  {
+                    "type": "FragmentSelector",
+                    "value": "xywh=3949,994,1091,1232"
+                  }
+                ]
               }
             }
           ]
