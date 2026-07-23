@@ -1,0 +1,43 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/manifest/canvas",
+  "type": "Manifest",
+  "label": {
+    "en": ["Gold canvas manifest"]
+  },
+  "items": [
+    {
+      "id": "https://example.org/iiif/canvas/1",
+      "type": "Canvas",
+      "label": {
+        "en": ["Page 1"]
+      },
+      "height": 1200,
+      "width": 1800,
+      "items": [
+        {
+          "id": "https://example.org/iiif/canvas/1/page/painting",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/canvas/1/annotation/painting",
+              "type": "Annotation",
+              "motivation": ["painting"],
+              "body": {
+                "id": "https://example.org/media/page-1.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 1200,
+                "width": 1800
+              },
+              "target": {
+                "id": "https://example.org/iiif/canvas/1",
+                "type": "Canvas"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

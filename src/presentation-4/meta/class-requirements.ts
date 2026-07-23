@@ -1,14 +1,14 @@
 export const presentation4ClassRequirements = {
   spec: {
-    name: "IIIF Presentation API 4.0 (preview) - Properties / Model",
-    source: "https://preview.iiif.io/api/p4-composite/presentation/4.0/model/",
-    generated: "2026-02-17",
+    name: "IIIF Presentation API 4.0 RC - Data Model",
+    source: "https://iiif.io/api/presentation/4.0/model/",
+    generated: "2026-07-23",
   },
   classes: {
     Collection: {
       typeValue: "Collection",
       must: ["id", "type", "label"],
-      should: ["metadata", "summary", "provider", "thumbnail", "items"],
+      should: ["metadata", "summary", "provider", "thumbnail", "total", "items"],
       may: [
         "requiredStatement",
         "rights",
@@ -27,7 +27,6 @@ export const presentation4ClassRequirements = {
         "start",
         "first",
         "last",
-        "total",
         "canonical",
         "via",
         "annotations",
@@ -96,8 +95,8 @@ export const presentation4ClassRequirements = {
 
     Range: {
       typeValue: "Range",
-      must: ["id", "type"],
-      should: ["label", "items"],
+      must: ["id", "type", "items"],
+      should: ["label"],
       may: [
         "start",
         "supplementary",
@@ -213,8 +212,8 @@ export const presentation4ClassRequirements = {
 
     AnnotationCollection: {
       typeValue: "AnnotationCollection",
-      must: ["id", "type", "label", "first", "last"],
-      should: ["metadata", "summary", "provider", "thumbnail"],
+      must: ["id", "type", "label"],
+      should: ["total"],
       may: [
         "requiredStatement",
         "rights",
@@ -230,7 +229,9 @@ export const presentation4ClassRequirements = {
         "homepage",
         "rendering",
         "partOf",
-        "total",
+        "items",
+        "first",
+        "last",
         "canonical",
         "via",
         "annotations",
@@ -300,7 +301,7 @@ export const presentation4ClassRequirements = {
     SpecificResource: {
       typeValue: "SpecificResource",
       must: ["id", "type", "source"],
-      should: ["selector"],
+      should: [],
       may: [
         "position",
         "transform",

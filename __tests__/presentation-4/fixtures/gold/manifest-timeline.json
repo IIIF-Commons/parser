@@ -1,0 +1,41 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/manifest/timeline",
+  "type": "Manifest",
+  "label": {
+    "en": ["Gold timeline manifest"]
+  },
+  "items": [
+    {
+      "id": "https://example.org/iiif/timeline/1",
+      "type": "Timeline",
+      "label": {
+        "en": ["Side A"]
+      },
+      "duration": 180.5,
+      "items": [
+        {
+          "id": "https://example.org/iiif/timeline/1/page/painting",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/timeline/1/annotation/painting",
+              "type": "Annotation",
+              "motivation": ["painting"],
+              "body": {
+                "id": "https://example.org/media/side-a.mp3",
+                "type": "Audio",
+                "format": "audio/mpeg",
+                "duration": 180.5
+              },
+              "target": {
+                "id": "https://example.org/iiif/timeline/1",
+                "type": "Timeline"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

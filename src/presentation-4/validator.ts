@@ -5,11 +5,13 @@ import { upgradeToPresentation4 } from "./upgrade";
 import {
   containerTypes,
   createValidationReport,
+  deepClone,
   ensureArray,
   getId,
   getType,
   identifyResourceType,
   isSpecificResource,
+  PRESENTATION_4_CONTEXT,
   sceneComponentTypes,
   type ValidationIssue,
   type ValidationReport,
@@ -41,6 +43,7 @@ const classRequirementsByType = new Map<string, { className: string; requirement
 );
 
 const scenePaintableTypes = new Set(["Canvas", "Scene", "Model", ...Array.from(sceneComponentTypes)]);
+const annotationAggregateTypes = new Set(["Choice", "Composite", "List", "Independents"]);
 
 function hasPresentation4Context(resource: unknown): boolean {
   if (!resource || typeof resource !== "object") {
@@ -127,18 +130,75 @@ function isPlainObject(value: any): boolean {
   return !!value && typeof value === "object" && !Array.isArray(value);
 }
 
-function isListWrapper(value: any): boolean {
-  return isPlainObject(value) && getType(value) === "List" && Object.hasOwn(value, "items");
+function isAnnotationAggregate(value: any): boolean {
+  return isPlainObject(value) && annotationAggregateTypes.has(getType(value) || "");
 }
 
 function getAnnotationEntries(value: any): any[] {
-  if (isListWrapper(value)) {
+  if (isAnnotationAggregate(value)) {
     return Array.isArray((value as any).items) ? (value as any).items : [];
   }
   if (Array.isArray(value)) {
     return value;
   }
   return [value];
+}
+
+function validateAnnotationAggregate(
+  aggregate: any,
+  nodePath: string,
+  property: "body" | "target",
+  issues: ValidationIssue[],
+  annotation: any
+) {
+  const aggregateType = getType(aggregate);
+  const issueCodePrefix =
+    property === "target" && aggregateType === "List" ? "annotation-target-list" : `annotation-${property}-aggregate`;
+
+  if (!Array.isArray(aggregate.items)) {
+    issue(issues, {
+      code: `${issueCodePrefix}-items-array`,
+      message: `Annotation.${property} ${aggregateType} must include an items array`,
+      path: `${nodePath}.items`,
+      resource: annotation,
+      specRef: `#${property}`,
+    });
+    return;
+  }
+
+  if (aggregate.items.length === 0) {
+    issue(issues, {
+      code: `${issueCodePrefix}-items-empty`,
+      message: `Annotation.${property} ${aggregateType} must include at least one item`,
+      path: `${nodePath}.items`,
+      resource: annotation,
+      specRef: `#${property}`,
+    });
+  }
+
+  for (let index = 0; index < aggregate.items.length; index++) {
+    const entry = aggregate.items[index];
+    const entryPath = `${nodePath}.items[${index}]`;
+    if (!isPlainObject(entry)) {
+      issue(issues, {
+        code: `annotation-${property}-aggregate-entry-object`,
+        message: `Annotation.${property} aggregate entries must be JSON objects`,
+        path: entryPath,
+        resource: annotation,
+        specRef: `#${property}`,
+      });
+      continue;
+    }
+    if (!getType(entry)) {
+      issue(issues, {
+        code: `annotation-${property}-aggregate-entry-type-required`,
+        message: `Annotation.${property} aggregate entries must include a type`,
+        path: `${entryPath}.type`,
+        resource: annotation,
+        specRef: `#${property}`,
+      });
+    }
+  }
 }
 
 function pathIsSpecificResourceSource(path: string): boolean {
@@ -295,30 +355,12 @@ function validateAnnotationShape(annotation: any, nodePath: string, issues: Vali
       specRef: "#target",
     });
   } else {
-    if (isListWrapper(annotation.target)) {
-      if (!Array.isArray((annotation.target as any).items)) {
-        issue(issues, {
-          code: "annotation-target-list-items-array",
-          message: "Annotation.target List must include an items array",
-          path: `${nodePath}.target.items`,
-          resource: annotation,
-          specRef: "#target",
-        });
-      } else if ((annotation.target as any).items.length === 0) {
-        issue(issues, {
-          code: "annotation-target-list-items-empty",
-          message: "Annotation.target List must include at least one item",
-          path: `${nodePath}.target.items`,
-          resource: annotation,
-          specRef: "#target",
-        });
-      }
-    }
-
     const targets = getAnnotationEntries(annotation.target);
     for (let i = 0; i < targets.length; i++) {
       const target = targets[i];
-      const targetPath = isListWrapper(annotation.target) ? `${nodePath}.target.items[${i}]` : `${nodePath}.target`;
+      const targetPath = isAnnotationAggregate(annotation.target)
+        ? `${nodePath}.target.items[${i}]`
+        : `${nodePath}.target`;
 
       if (!isPlainObject(target)) {
         issue(issues, {
@@ -343,7 +385,7 @@ function validateAnnotationShape(annotation: any, nodePath: string, issues: Vali
       }
 
       const targetId = getId(target);
-      if (!targetId && targetType !== "SpecificResource") {
+      if (!targetId && targetType !== "SpecificResource" && !annotationAggregateTypes.has(targetType || "")) {
         issue(issues, {
           code: "annotation-target-id-required",
           message: "Annotation.target entries must include an id",
@@ -352,6 +394,10 @@ function validateAnnotationShape(annotation: any, nodePath: string, issues: Vali
           specRef: "#target",
         });
       }
+    }
+
+    if (isAnnotationAggregate(annotation.target)) {
+      validateAnnotationAggregate(annotation.target, `${nodePath}.target`, "target", issues, annotation);
     }
   }
 
@@ -372,6 +418,16 @@ function validateAnnotationShape(annotation: any, nodePath: string, issues: Vali
         resource: annotation,
         specRef: "#body",
       });
+    } else if (!getType(annotation.body)) {
+      issue(issues, {
+        code: "annotation-body-type-required",
+        message: "Annotation.body must include a type",
+        path: `${nodePath}.body.type`,
+        resource: annotation,
+        specRef: "#body",
+      });
+    } else if (isAnnotationAggregate(annotation.body)) {
+      validateAnnotationAggregate(annotation.body, `${nodePath}.body`, "body", issues, annotation);
     }
   }
 
@@ -431,6 +487,220 @@ function walkResourceTreeWithParent(
       walkResourceTreeWithParent(value, `${path}.${key}`, visitor, resource);
     }
   }
+}
+
+function isCollectionMemberReference(node: any, nodePath: string, parent: any): boolean {
+  const parentType = getType(parent);
+  const type = getType(node);
+  return (
+    (parentType === "Collection" || parentType === "CollectionPage") &&
+    (type === "Collection" || type === "Manifest") &&
+    /\.items\[\d+\]$/.test(nodePath)
+  );
+}
+
+function isTopLevelRangeReference(node: any, nodePath: string, parent: any): boolean {
+  return (
+    getType(node) === "Range" &&
+    getType(parent) === "Manifest" &&
+    /\.structures\[\d+\]$/.test(nodePath) &&
+    !Object.hasOwn(node, "items")
+  );
+}
+
+function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+
+  if (!isPlainObject(resource)) {
+    issue(issues, {
+      code: "presentation-4-document-object",
+      message: "A Presentation 4 response must be a JSON object",
+      path: "$",
+      specRef: "#json-ld-contexts",
+    });
+    return issues;
+  }
+
+  const authored = resource as Record<string, any>;
+  const context = authored["@context"];
+  const contexts = Array.isArray(context) ? context : [context];
+  const presentationContextCount = contexts.filter((value) => value === PRESENTATION_4_CONTEXT).length;
+  if (
+    presentationContextCount !== 1 ||
+    (Array.isArray(context) && context[context.length - 1] !== PRESENTATION_4_CONTEXT) ||
+    (!Array.isArray(context) && context !== PRESENTATION_4_CONTEXT)
+  ) {
+    issue(issues, {
+      code: "presentation-4-context-required",
+      message: `The top-level @context must contain ${PRESENTATION_4_CONTEXT} exactly once and as its final value`,
+      path: "$.@context",
+      resource: authored,
+      specRef: "#json-ld-contexts",
+    });
+  }
+
+  if (Object.hasOwn(authored, "@graph")) {
+    issue(issues, {
+      code: "presentation-4-graph-forbidden",
+      message: "A Presentation 4 response must not include @graph at the top level",
+      path: "$.@graph",
+      resource: authored,
+      specRef: "#json-ld-contexts",
+    });
+  }
+
+  walkResourceTreeWithParent(authored, "$", (node, nodePath, parent) => {
+    if (nodePath !== "$" && Object.hasOwn(node, "@context")) {
+      issue(issues, {
+        code: "presentation-4-embedded-context-forbidden",
+        message: "Embedded resources must not include @context",
+        path: `${nodePath}.@context`,
+        resource: node,
+        specRef: "#json-ld-contexts",
+      });
+    }
+
+    if (pathIsReferenceContext(nodePath) || isCollectionMemberReference(node, nodePath, parent)) {
+      return;
+    }
+
+    const type = getType(node);
+    if (type === "Collection" || type === "CollectionPage") {
+      if (typeof node.items !== "undefined" && !Array.isArray(node.items)) {
+        issue(issues, {
+          code: `${type === "Collection" ? "collection" : "collection-page"}-items-array`,
+          message: `${type}.items must be an array`,
+          path: `${nodePath}.items`,
+          resource: node,
+          specRef: "#items",
+        });
+      }
+
+      if (Array.isArray(node.items)) {
+        for (let index = 0; index < node.items.length; index++) {
+          const item = node.items[index];
+          const itemPath = `${nodePath}.items[${index}]`;
+          if (!isPlainObject(item)) {
+            issue(issues, {
+              code: "collection-member-object",
+              message: `${type}.items entries must be JSON objects`,
+              path: itemPath,
+              resource: node,
+              specRef: "#items",
+            });
+            continue;
+          }
+          if (!["Collection", "Manifest"].includes(getType(item) || "")) {
+            issue(issues, {
+              code: "collection-member-type",
+              message: `${type}.items entries must be Collections or Manifests`,
+              path: `${itemPath}.type`,
+              resource: node,
+              specRef: "#items",
+            });
+          }
+          for (const property of ["id", "type", "label"]) {
+            if (!hasProperty(item, property)) {
+              issue(issues, {
+                code: "collection-member-reference-required",
+                message: `${type}.items references must include id, type and label`,
+                path: `${itemPath}.${property}`,
+                resource: item,
+                specRef: "#Collection",
+              });
+            }
+          }
+        }
+      }
+    }
+
+    if (type === "Collection") {
+      const hasItems = Array.isArray(node.items);
+      const hasFirst = typeof node.first !== "undefined";
+      const hasLast = typeof node.last !== "undefined";
+      if (!hasItems && !hasFirst && !hasLast) {
+        issue(issues, {
+          code: "collection-members-required",
+          message: "Collection must include items, or first and last Collection Page references",
+          path: nodePath,
+          resource: node,
+          specRef: "#Collection",
+        });
+      }
+    }
+
+    if (type === "CollectionPage") {
+      if (!Array.isArray(node.partOf) || node.partOf.length === 0) {
+        issue(issues, {
+          code: "collection-page-part-of-array",
+          message: "CollectionPage.partOf must be a non-empty array of Collection references",
+          path: `${nodePath}.partOf`,
+          resource: node,
+          specRef: "#partOf",
+        });
+      } else {
+        for (let index = 0; index < node.partOf.length; index++) {
+          const parent = node.partOf[index];
+          if (!isPlainObject(parent) || getType(parent) !== "Collection" || !getId(parent)) {
+            issue(issues, {
+              code: "collection-page-part-of-collection",
+              message: "CollectionPage.partOf entries must reference a Collection with id and type",
+              path: `${nodePath}.partOf[${index}]`,
+              resource: node,
+              specRef: "#partOf",
+            });
+          }
+        }
+      }
+    }
+
+    if (type === "Manifest" && Array.isArray(node.items)) {
+      for (let index = 0; index < node.items.length; index++) {
+        const item = node.items[index];
+        if (
+          isPlainObject(item) &&
+          containerTypes.has(getType(item) || "") &&
+          ((getType(item) === "Canvas" && isLikelyReferenceCanvas(item)) ||
+            (getType(item) === "Timeline" && isLikelyReferenceTimeline(item)) ||
+            (getType(item) === "Scene" && isLikelyReferenceScene(item)))
+        ) {
+          issue(issues, {
+            code: "manifest-container-embedded-required",
+            message: "Manifest.items Containers must be embedded, not reference-only objects",
+            path: `${nodePath}.items[${index}]`,
+            resource: item,
+            specRef: "#Manifest",
+          });
+        }
+      }
+    }
+
+    if (type === "AnnotationPage" && !Array.isArray(node.items)) {
+      issue(issues, {
+        code: "annotation-page-items-array",
+        message: "AnnotationPage.items must be an array",
+        path: `${nodePath}.items`,
+        resource: node,
+        specRef: "#items",
+      });
+    }
+
+    if (
+      type === "Range" &&
+      !isTopLevelRangeReference(node, nodePath, parent) &&
+      (!Array.isArray(node.items) || node.items.length === 0)
+    ) {
+      issue(issues, {
+        code: "range-items-required",
+        message: "Range.items must be a non-empty array",
+        path: `${nodePath}.items`,
+        resource: node,
+        specRef: "#items",
+      });
+    }
+  });
+
+  return issues;
 }
 
 function hasProperty(resource: any, property: string): boolean {
@@ -509,7 +779,7 @@ function checkCollectionMustNotRules(collection: any, nodePath: string, issues: 
         specRef: "#Collection",
       });
     }
-    if (itemType === "Manifest") {
+    if (itemType === "Manifest" && Object.hasOwn(item, "items")) {
       issue(issues, {
         code: "collection-item-manifest-forbidden",
         message: "Collection.items must not embed Manifest resources",
@@ -779,6 +1049,8 @@ export function runClassRequirementValidation(resource: any): {
     stats.nodesChecked++;
     const { className, requirement } = classRequirement;
     const rangeContainerReference = isRangeContainerReference(node, parent);
+    const collectionMemberReference = isCollectionMemberReference(node, nodePath, parent);
+    const topLevelRangeReference = isTopLevelRangeReference(node, nodePath, parent);
 
     for (const property of requirement.must) {
       stats.mustChecks++;
@@ -786,6 +1058,12 @@ export function runClassRequirementValidation(resource: any): {
         continue;
       }
       if (rangeContainerReference && property !== "id" && property !== "type") {
+        continue;
+      }
+      if (collectionMemberReference && property === "items") {
+        continue;
+      }
+      if (topLevelRangeReference && property === "items") {
         continue;
       }
       if (property === "width" || property === "height") {
@@ -814,6 +1092,12 @@ export function runClassRequirementValidation(resource: any): {
     for (const property of requirement.should) {
       stats.shouldChecks++;
       if (rangeContainerReference) {
+        continue;
+      }
+      if (collectionMemberReference && property !== "thumbnail") {
+        continue;
+      }
+      if (topLevelRangeReference) {
         continue;
       }
       if (!shouldCheckShouldProperty(className, property, node, parent)) {
@@ -927,6 +1211,9 @@ export function runRawValidation(resource: any, options: { skipAnnotationShape?:
     ],
     manifest: [
       (manifest, context) => {
+        if (isCollectionMemberReference(manifest, context.path, context.parent)) {
+          return;
+        }
         if (!Array.isArray(manifest.items) || manifest.items.length === 0) {
           issue(issues, {
             code: "manifest-items-required",
@@ -1143,6 +1430,46 @@ export function runPostNormalizationValidation(result: NormalizeResult): Validat
   return issues;
 }
 
+function finishValidation(
+  issues: ValidationIssue[],
+  classRequirementStats: ClassRequirementStats,
+  mode: ValidationMode
+): ValidationReport {
+  const report = createValidationReport(dedupeValidationIssues(issues), {
+    classRequirements: classRequirementStats,
+  });
+
+  if (mode === "strict" && !report.valid) {
+    const first = report.issues.find((item) => item.severity === "error") || report.issues[0];
+    const error = new Error(first ? `${first.code}: ${first.message}` : "Validation failed");
+    (error as any).report = report;
+    throw error;
+  }
+
+  return report;
+}
+
+/**
+ * Validates an authored Presentation 4 response as-is.
+ *
+ * Unlike validatePresentation4, this entry point does not upgrade legacy input
+ * or repair Presentation 4 shapes before validating them.
+ */
+export function validateAuthoredPresentation4(input: unknown, options: ValidateOptions = {}): ValidationReport {
+  const mode = options.mode || "tolerant";
+  const authored = deepClone(input);
+  const issues = [...runAuthoredDocumentValidation(authored), ...runAuthoredShapeValidation(authored)];
+  const classRequirementResult = runClassRequirementValidation(authored);
+  issues.push(...classRequirementResult.issues);
+  issues.push(...runRawValidation(deepClone(authored), { skipAnnotationShape: true }));
+
+  if (options.includePostNormalization === true) {
+    issues.push(...runPostNormalizationValidation(normalize(deepClone(authored))));
+  }
+
+  return finishValidation(issues, classRequirementResult.stats, mode);
+}
+
 export function validatePresentation4(input: unknown, options: ValidateOptions = {}): ValidationReport {
   const mode = options.mode || "tolerant";
   const includePostNormalization =
@@ -1164,22 +1491,5 @@ export function validatePresentation4(input: unknown, options: ValidateOptions =
     issues.push(...runPostNormalizationValidation(normalized));
   }
 
-  const report = createValidationReport(dedupeValidationIssues(issues), {
-    classRequirements: {
-      nodesChecked: classRequirementResult.stats.nodesChecked,
-      mustChecks: classRequirementResult.stats.mustChecks,
-      shouldChecks: classRequirementResult.stats.shouldChecks,
-      allowedPropertyChecks: classRequirementResult.stats.allowedPropertyChecks,
-      mustNotChecks: classRequirementResult.stats.mustNotChecks,
-    },
-  });
-
-  if (mode === "strict" && !report.valid) {
-    const first = report.issues.find((item) => item.severity === "error") || report.issues[0];
-    const error = new Error(first ? `${first.code}: ${first.message}` : "Validation failed");
-    (error as any).report = report;
-    throw error;
-  }
-
-  return report;
+  return finishValidation(issues, classRequirementResult.stats, mode);
 }
