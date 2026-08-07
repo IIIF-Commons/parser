@@ -21,4 +21,21 @@ export type { AnnotationNormalized } from "./resources/annotation";
 export type { RangeNormalized } from "./resources/range";
 export type { AgentNormalized, ProviderNormalized } from "./resources/provider";
 export type { ContentResourceNormalized, SpecificResourceNormalized } from "./resources/contentResource";
-export type { SceneComponentNormalized } from "./resources/scene-components";
+export type {
+  AmbientAudioNormalized,
+  AmbientLightNormalized,
+  AudioEmitterNormalized,
+  CameraNormalized,
+  DirectionalLightNormalized,
+  ImageBasedLightNormalized,
+  LightNormalized,
+  LookAtTargetNormalized,
+  OrthographicCameraNormalized,
+  PerspectiveCameraNormalized,
+  PointAudioNormalized,
+  PointLightNormalized,
+  SceneComponentNormalized,
+  SceneComponentNormalizedBase,
+  SpotAudioNormalized,
+  SpotLightNormalized,
+} from "./resources/scene-components";

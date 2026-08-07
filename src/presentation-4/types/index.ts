@@ -17,6 +17,7 @@ import type {
   ContentResourceLike,
   DatasetResource,
   DirectionalLight,
+  ImageBasedLight,
   ImageResource,
   IndependentsResource,
   ListResource,
@@ -73,6 +74,7 @@ export type Presentation4HelperTypes = {
   OrthographicCamera: OrthographicCamera;
   AmbientLight: AmbientLight;
   DirectionalLight: DirectionalLight;
+  ImageBasedLight: ImageBasedLight;
   PointLight: PointLight;
   SpotLight: SpotLight;
   AmbientAudio: AmbientAudio;
@@ -105,6 +107,16 @@ const presentation4Specs: ResourceSpecs<Presentation4HelperTypes> = {
       "Composite",
       "List",
       "Independents",
+      "PerspectiveCamera",
+      "OrthographicCamera",
+      "AmbientLight",
+      "DirectionalLight",
+      "ImageBasedLight",
+      "PointLight",
+      "SpotLight",
+      "AmbientAudio",
+      "PointAudio",
+      "SpotAudio",
     ],
   },
   Range: { type: "Range", aliases: ["sc:Range"] },
@@ -134,6 +146,7 @@ const presentation4Specs: ResourceSpecs<Presentation4HelperTypes> = {
   OrthographicCamera: { type: "OrthographicCamera" },
   AmbientLight: { type: "AmbientLight" },
   DirectionalLight: { type: "DirectionalLight" },
+  ImageBasedLight: { type: "ImageBasedLight" },
   PointLight: { type: "PointLight" },
   SpotLight: { type: "SpotLight" },
   AmbientAudio: { type: "AmbientAudio" },

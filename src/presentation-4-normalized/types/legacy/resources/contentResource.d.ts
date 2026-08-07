@@ -14,6 +14,7 @@ export type SpecificResourceNormalized = NormalizedEntityBase & {
   transform: readonly Transform[];
   action: readonly NormalizedJsonValue[];
   scope?: readonly NormalizedReference[];
+  position?: NormalizedReference;
   canonical?: string;
   via?: readonly string[];
   styleClass?: string;
@@ -30,7 +31,8 @@ export type ContentResourceNormalized = NormalizedLinkedEntity & {
   purpose?: readonly string[];
   provides: readonly string[];
   fileSize?: number;
-  lookAt?: NormalizedJsonValue;
+  lookAt?: Selector | NormalizedReference;
+  position?: NormalizedReference;
   properties?: NormalizedJsonValue;
   geometry?: NormalizedJsonValue;
   // @todo normalize to string | null

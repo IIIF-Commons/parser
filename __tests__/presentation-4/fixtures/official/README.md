@@ -20,6 +20,9 @@ references, and an ordered activating action list. It is tested only through
 the native Presentation 4 pipeline and is not part of the Presentation 3
 compatibility gate.
 
+The [`3d`](./3d/) directory contains the complete pinned 3D use-case corpus
+and its own byte-level checksums.
+
 ## SHA-256
 
 ```text

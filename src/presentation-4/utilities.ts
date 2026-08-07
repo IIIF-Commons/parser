@@ -192,6 +192,7 @@ export const sceneComponentTypes = new Set([
   "OrthographicCamera",
   "AmbientLight",
   "DirectionalLight",
+  "ImageBasedLight",
   "PointLight",
   "SpotLight",
   "AmbientAudio",

@@ -18,6 +18,7 @@ describe('presentation-4 meta generation', () => {
       'Service',
       'Quantity',
       'ImageApiSelector',
+      'ImageBasedLight',
       'PointSelector',
     ] as const;
 
@@ -56,6 +57,8 @@ describe('presentation-4 meta generation', () => {
       'source',
       'service',
       'services',
+      'environmentMap',
+      'viewHeight',
     ] as const;
 
     for (const property of requiredProperties) {

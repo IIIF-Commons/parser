@@ -12,6 +12,7 @@ import type { Prettify } from "../../../../../presentation-3/types/legacy/src/ut
 export type SelectorBase = {
   id?: string;
   type: string;
+  refinedBy?: Selector;
 };
 
 export type PointSelector = Prettify<

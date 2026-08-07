@@ -86,7 +86,7 @@ const contentResourceWithTechnicalFields = {
   behavior: ["no-nav"],
   service: [{ id: "https://example.org/service/image", type: "ImageService3", profile: "level1" }],
   services: [{ id: "https://example.org/service/auth", type: "AuthCookieService1" }],
-  lookAt: { x: 10, y: 20, z: 30 },
+  lookAt: { type: "PointSelector", x: 10, y: 20, z: 30 },
   provides: ["subtitles", "translation"],
   selector: [{ type: "PointSelector", x: 10, y: 20, z: 3 }],
   transform: [{ type: "RotateTransform", z: 90 }],

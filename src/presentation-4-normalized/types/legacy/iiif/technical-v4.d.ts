@@ -16,6 +16,7 @@ export interface NormalizedSpecificResourceReference extends NormalizedReference
   selector: readonly Selector[];
   transform: readonly Transform[];
   action: readonly NormalizedJsonValue[];
+  position?: NormalizedReference;
   purpose?: readonly string[];
   scope?: readonly NormalizedReference[];
   styleClass?: string;

@@ -115,6 +115,12 @@ const definedTypes: Record<string, DocDefinition> = {
       "The Image API Selector is used to describe the operations expected to occur via the definitions of the IIIF Image API. This can be used with IIIF Image API services in order to retrieve a particular image representation, but also can be applied client side on static images, such as to process rotation via CSS. In this case the resource is the abstract image as identified by the [IIIF Image API][image-api] base URI plus identifier, and the retrieval process involves adding the correct parameters after that base URI.",
     title: "IIIF Image API Selector",
   },
+  ImageBasedLight: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#ImageBasedLight",
+    summary:
+      "An Image-Based Light illuminates objects in a Scene using lighting information from an environment map image.",
+    title: "Image-Based Light",
+  },
   Light: {
     link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#Light",
     summary:
@@ -311,6 +317,11 @@ const propertyDocumentation: Record<string, DocDefinition> = {
     link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#duration",
     summary: "The duration of a container or external content resource, given in seconds.",
     title: "duration",
+  },
+  environmentMap: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#environmentMap",
+    summary: "The Image resource containing the environment map used by an Image-Based Light.",
+    title: "environmentMap",
   },
   exclude: {
     link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#exclude",
@@ -697,6 +708,11 @@ const propertyDocumentation: Record<string, DocDefinition> = {
     summary:
       "!!! TODO: Rewrite to be where is the navigation control to step to the next/ previous in the items of the manifest",
     title: "viewingDirection",
+  },
+  viewHeight: {
+    link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#viewHeight",
+    summary: "The height of an Orthographic Camera's visible region in Scene coordinate units.",
+    title: "viewHeight",
   },
   volume: {
     link: "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/#volume",

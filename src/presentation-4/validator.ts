@@ -245,6 +245,9 @@ function isTypedReferenceObject(node: any): boolean {
   if (type === "SpecificResource" || type === "TextualBody" || annotationAggregateTypes.has(type || "")) {
     return false;
   }
+  if (sceneComponentTypes.has(type || "")) {
+    return Object.keys(node).every((key) => key === "id" || key === "type");
+  }
 
   return true;
 }
@@ -258,6 +261,10 @@ function pathIsLinkedResourceValue(path: string): boolean {
 function isTypedReferenceContext(node: any, path: string, parent: any): boolean {
   if (!isTypedReferenceObject(node)) {
     return false;
+  }
+
+  if (getType(node) === "Annotation" && /\.lookAt$/.test(path)) {
+    return true;
   }
 
   if (

@@ -65,6 +65,7 @@ export type Scene = Prettify<
     via?: Array<string>;
     interactionMode?: InteractionMode[];
     spatialScale?: Quantity | null;
+    temporalScale?: Quantity | null;
     backgroundColor?: string | null;
     placeholderContainer?: Canvas | Timeline | Scene | null;
     accompanyingContainer?: Canvas | Timeline | Scene | null;

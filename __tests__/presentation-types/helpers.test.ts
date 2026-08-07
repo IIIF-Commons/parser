@@ -75,6 +75,20 @@ describe('presentation helper APIs', () => {
     expect(narrow3.isImage(resource3)).toBe(true);
     expect(narrow2.isImage(resource2)).toBe(true);
     expect(narrow4.isImage(resource4)).toBe(true);
+    expect(
+      narrow4.isContentResource({
+        type: 'ImageBasedLight',
+        environmentMap: { id: 'https://example.org/environment.hdr', type: 'Image' },
+      })
+    ).toBe(true);
+    expect(
+      narrow4.isImageBasedLight(
+        infer4.ImageBasedLight({
+          type: 'ImageBasedLight',
+          environmentMap: { id: 'https://example.org/environment.hdr', type: 'Image' },
+        })
+      )
+    ).toBe(true);
   });
 
   test('generic byType guard works', () => {

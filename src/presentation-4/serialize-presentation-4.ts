@@ -55,6 +55,7 @@ const serializedContentResourceProperties = new Set([
   "language",
   "items",
   "source",
+  "environmentMap",
   "selector",
   "transform",
   "action",
@@ -289,7 +290,10 @@ function serializeSpecificResource(resource: any, state: any): any {
   }
 
   if (isPlainObject(specificResource.position)) {
-    specificResource.position = serializeSpecificResource(specificResource.position, state);
+    specificResource.position = serializeSpecificResource(
+      resolveContentResourceReference(state, specificResource.position),
+      state
+    );
   }
 
   if (isPlainObject(specificResource.lookAt)) {
@@ -318,6 +322,21 @@ function serializeSpecificResource(resource: any, state: any): any {
   }
 
   return specificResource;
+}
+
+function serializePosition(position: any, state: any): any {
+  if (!isPlainObject(position)) {
+    return position;
+  }
+  return serializeSpecificResource(resolveContentResourceReference(state, position), state);
+}
+
+function serializeLookAt(lookAt: any, state: any): any {
+  if (!isPlainObject(lookAt)) {
+    return lookAt;
+  }
+  const resolved = resolveContentResourceReference(state, lookAt);
+  return serializeSpecificResource(resolved, state);
 }
 
 function serializeStartValue(start: any, state: any): any {
@@ -555,7 +574,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ["exclude", entity.exclude?.length ? entity.exclude : undefined],
         ["provides", entity.provides?.length ? entity.provides : undefined],
         ["scope", entity.scope?.length ? entity.scope : undefined],
-        ["position", entity.position ? yield entity.position : undefined],
+        ["position", entity.position ? serializePosition(entity.position, state) : undefined],
       ];
     },
 
@@ -591,11 +610,12 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ["language", serializeLanguage(entity.language)],
         ["items", entity.items ? filterList(yield entity.items) : undefined],
         ["source", entity.source ? preserveObjectOrOmitEmptyList(yield entity.source) : undefined],
-        ["selector", entity.selector ? filterList(yield entity.selector) : undefined],
-        ["transform", entity.transform ? filterList(yield entity.transform) : undefined],
+        ["environmentMap", entity.environmentMap ? yield entity.environmentMap : undefined],
+        ["selector", entity.selector ? compactList(cleanSpecificResourceWireValue(entity.selector)) : undefined],
+        ["transform", entity.transform ? compactList(cleanSpecificResourceWireValue(entity.transform)) : undefined],
         ["action", entity.action?.length ? entity.action : undefined],
-        ["lookAt", entity.lookAt ? yield entity.lookAt : undefined],
-        ["position", entity.position ? yield entity.position : undefined],
+        ["lookAt", entity.lookAt ? serializeLookAt(entity.lookAt, state) : undefined],
+        ["position", entity.position ? serializePosition(entity.position, state) : undefined],
         ["provides", entity.provides?.length ? entity.provides : undefined],
         ["fileSize", entity.fileSize],
         ["quantityValue", entity.quantityValue],

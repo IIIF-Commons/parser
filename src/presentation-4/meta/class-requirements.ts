@@ -405,6 +405,76 @@ export const presentation4ClassRequirements = {
       may: ["id", "metadata", "summary", "provider", "thumbnail", "requiredStatement", "behavior", "seeAlso"],
     },
 
+    PerspectiveCamera: {
+      typeValue: "PerspectiveCamera",
+      must: ["type"],
+      should: ["fieldOfView"],
+      may: ["id", "label", "lookAt", "near", "far", "interactionMode"],
+    },
+
+    OrthographicCamera: {
+      typeValue: "OrthographicCamera",
+      must: ["type"],
+      should: ["viewHeight"],
+      may: ["id", "label", "lookAt", "near", "far", "interactionMode"],
+    },
+
+    AmbientLight: {
+      typeValue: "AmbientLight",
+      must: ["type"],
+      should: ["intensity", "color"],
+      may: ["id", "label"],
+    },
+
+    DirectionalLight: {
+      typeValue: "DirectionalLight",
+      must: ["type"],
+      should: ["intensity", "color"],
+      may: ["id", "label", "lookAt"],
+    },
+
+    ImageBasedLight: {
+      typeValue: "ImageBasedLight",
+      must: ["type", "environmentMap"],
+      should: ["intensity"],
+      may: ["id", "label"],
+    },
+
+    PointLight: {
+      typeValue: "PointLight",
+      must: ["type"],
+      should: ["intensity", "color"],
+      may: ["id", "label"],
+    },
+
+    SpotLight: {
+      typeValue: "SpotLight",
+      must: ["type"],
+      should: ["intensity", "color", "angle"],
+      may: ["id", "label", "lookAt"],
+    },
+
+    AmbientAudio: {
+      typeValue: "AmbientAudio",
+      must: ["type", "source"],
+      should: ["volume"],
+      may: ["id", "label"],
+    },
+
+    PointAudio: {
+      typeValue: "PointAudio",
+      must: ["type", "source"],
+      should: ["volume"],
+      may: ["id", "label"],
+    },
+
+    SpotAudio: {
+      typeValue: "SpotAudio",
+      must: ["type", "source"],
+      should: ["volume", "angle"],
+      may: ["id", "label", "lookAt"],
+    },
+
     Service: {
       typeValue: "Service",
       must: ["id", "type"],
@@ -430,14 +500,14 @@ export const presentation4ClassRequirements = {
       typeValue: "PointSelector",
       must: ["type"],
       should: [],
-      may: ["id", "x", "y", "z", "instant"],
+      may: ["id", "x", "y", "z", "instant", "refinedBy"],
     },
 
     WktSelector: {
       typeValue: "WktSelector",
       must: ["type", "value"],
       should: [],
-      may: ["id"],
+      may: ["id", "refinedBy"],
     },
   },
 };

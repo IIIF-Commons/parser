@@ -100,7 +100,7 @@ export type Annotation = Prettify<{
   exclude?: ExcludeType[];
   provides?: Array<Provides>;
   scope?: Array<ResourceReference>;
-  position?: Selector;
+  position?: SpecificResource;
   timeMode?: string | null;
 }>;
 

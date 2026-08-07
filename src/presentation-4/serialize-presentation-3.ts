@@ -10,6 +10,7 @@ const unsupportedContentTypes = new Set([
   "OrthographicCamera",
   "AmbientLight",
   "DirectionalLight",
+  "ImageBasedLight",
   "PointLight",
   "SpotLight",
   "AmbientAudio",

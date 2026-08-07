@@ -42,6 +42,7 @@ const RESOURCE_GROUP_NAME = {
   Light: 'sceneComponents',
   AmbientLight: 'sceneComponents',
   DirectionalLight: 'sceneComponents',
+  ImageBasedLight: 'sceneComponents',
   PointLight: 'sceneComponents',
   SpotLight: 'sceneComponents',
   AudioEmitters: 'sceneComponents',
@@ -85,6 +86,7 @@ const CATEGORY_SETS = {
     'near',
     'far',
     'fieldOfView',
+    'viewHeight',
     'angle',
     'rotation',
     'size',
@@ -99,6 +101,7 @@ const CATEGORY_SETS = {
     'intensity',
     'color',
     'backgroundColor',
+    'environmentMap',
     'quality',
   ]),
   interaction: new Set([

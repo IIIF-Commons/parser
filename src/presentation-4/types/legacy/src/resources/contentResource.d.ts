@@ -196,6 +196,7 @@ export type TextualBodyResource = Prettify<
     type: "TextualBody";
     value: string;
     purpose?: Array<AnyMotivation | string>;
+    position?: SpecificResource;
   }
 >;
 
@@ -234,7 +235,7 @@ export type SpecificResource = Prettify<
     type: "SpecificResource";
     source: LinkedResource;
     selector?: Selector[];
-    position?: Selector;
+    position?: SpecificResource;
     transform?: Transform[];
     action?: LinkedResource[];
     purpose?: Array<AnyMotivation | string>;

@@ -76,9 +76,11 @@ export type { Scene } from "./src/resources/scene";
 export type {
   AmbientAudio,
   AmbientLight,
+  AudioEmitterSource,
   AudioEmitter,
   Camera,
   DirectionalLight,
+  ImageBasedLight,
   Light,
   LookAtTarget,
   OrthographicCamera,
@@ -87,6 +89,7 @@ export type {
   PointLight,
   SceneComponent,
   SceneComponentBase,
+  SceneSpecificResource,
   SpotAudio,
   SpotLight,
 } from "./src/resources/scene-components";

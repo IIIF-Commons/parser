@@ -60,6 +60,7 @@ const linkedResourceKeys = ["thumbnail", "homepage", "rendering", "seeAlso", "su
 
 const linkedObjectKeys = ["placeholderContainer", "accompanyingContainer", "start"] as const;
 const multiItemContentResourceTypes = new Set(["Choice", "Composite", "List", "Independents"]);
+const audioEmitterTypes = new Set(["AmbientAudio", "PointAudio", "SpotAudio"]);
 
 function isResourceReference(resource: any): boolean {
   if (!resource || typeof resource !== "object" || Array.isArray(resource)) {
@@ -545,6 +546,9 @@ export class Traverse {
   }
 
   traverseAnnotation(annotation: any, parent?: any, path = "$"): any {
+    if (annotation.position && typeof annotation.position === "object") {
+      annotation.position = this.traversePosition(annotation.position, annotation, `${path}.position`);
+    }
     return this.traverseType(
       this.traverseLinkedResources(
         this.traverseAnnotationTarget(this.traverseAnnotationBody(annotation, path), path),
@@ -582,6 +586,16 @@ export class Traverse {
 
   traverseTransform(transform: any, parent?: any, path = "$"): any {
     return this.traverseType(transform, { parent, path }, this.traversals.transform);
+  }
+
+  private traversePosition(position: any, parent: any, path: string): any {
+    if (isSpecificResource(position)) {
+      return this.traverseSpecificResource(position, undefined, parent, path);
+    }
+    if (isSelector(position)) {
+      return this.traverseSelector(position, parent, path);
+    }
+    return position;
   }
 
   traverseSpecificResource(specificResource: any, typeHint?: string, parent?: any, path = "$"): any {
@@ -631,9 +645,8 @@ export class Traverse {
     specificResource.transform = transforms;
 
     if (specificResource.position && typeof specificResource.position === "object") {
-      specificResource.position = this.traverseSpecificResource(
+      specificResource.position = this.traversePosition(
         specificResource.position,
-        "SpecificResource",
         specificResource,
         `${path}.position`
       );
@@ -664,6 +677,53 @@ export class Traverse {
 
     if (isSelector(contentResource)) {
       return this.traverseSelector(contentResource, parent, path);
+    }
+
+    if (audioEmitterTypes.has(contentResource.type) && contentResource.source) {
+      contentResource.source = this.traverseUnknown(contentResource.source, {
+        parent: contentResource,
+        path: `${path}.source`,
+        typeHint: "Audio",
+      });
+    }
+
+    if (contentResource.type === "ImageBasedLight" && contentResource.environmentMap) {
+      contentResource.environmentMap = this.traverseContentResource(
+        contentResource.environmentMap,
+        contentResource,
+        `${path}.environmentMap`
+      );
+    }
+
+    if (contentResource.lookAt && typeof contentResource.lookAt === "object") {
+      if (isSpecificResource(contentResource.lookAt)) {
+        contentResource.lookAt = this.traverseSpecificResource(
+          contentResource.lookAt,
+          undefined,
+          contentResource,
+          `${path}.lookAt`
+        );
+      } else if (isSelector(contentResource.lookAt)) {
+        contentResource.lookAt = this.traverseSelector(contentResource.lookAt, contentResource, `${path}.lookAt`);
+      } else if (getType(contentResource.lookAt) === "Annotation" && !isResourceReference(contentResource.lookAt)) {
+        contentResource.lookAt = this.traverseAnnotation(contentResource.lookAt, contentResource, `${path}.lookAt`);
+      }
+    }
+
+    if (contentResource.position && typeof contentResource.position === "object") {
+      contentResource.position = this.traversePosition(contentResource.position, contentResource, `${path}.position`);
+    }
+
+    if (contentResource.intensity && isQuantity(contentResource.intensity)) {
+      contentResource.intensity = this.traverseQuantity(
+        contentResource.intensity,
+        contentResource,
+        `${path}.intensity`
+      );
+    }
+
+    if (contentResource.volume && isQuantity(contentResource.volume)) {
+      contentResource.volume = this.traverseQuantity(contentResource.volume, contentResource, `${path}.volume`);
     }
 
     if (multiItemContentResourceTypes.has(contentResource.type) && contentResource.items) {
