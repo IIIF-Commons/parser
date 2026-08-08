@@ -148,14 +148,23 @@ const normalizedComponents = [
     lookAt: undefined,
   } satisfies OrthographicCameraNormalized,
   { ...normalizedBase, type: "AmbientLight", color: "#fff" } satisfies AmbientLightNormalized,
-  { ...normalizedBase, type: "DirectionalLight", lookAt: point } satisfies DirectionalLightNormalized,
+  {
+    ...normalizedBase,
+    type: "DirectionalLight",
+    lookAt: point,
+  } satisfies DirectionalLightNormalized,
   {
     ...normalizedBase,
     type: "ImageBasedLight",
     environmentMap: { id: "https://example.org/environment.hdr", type: "ContentResource" },
   } satisfies ImageBasedLightNormalized,
   { ...normalizedBase, type: "PointLight", color: "#fff" } satisfies PointLightNormalized,
-  { ...normalizedBase, type: "SpotLight", angle: 30, lookAt: undefined } satisfies SpotLightNormalized,
+  {
+    ...normalizedBase,
+    type: "SpotLight",
+    angle: 30,
+    lookAt: undefined,
+  } satisfies SpotLightNormalized,
   {
     ...normalizedBase,
     type: "AmbientAudio",

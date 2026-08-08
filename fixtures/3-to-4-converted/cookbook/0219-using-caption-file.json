@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Lunchroom Manners"
-    ]
+    "en": ["Lunchroom Manners"]
   },
   "items": [
     {
@@ -22,21 +20,15 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas/page2/a1",
               "type": "Annotation",
-              "motivation": [
-                "supplementing"
-              ],
+              "motivation": ["supplementing"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/lunchroom_manners.vtt",
                 "type": "Text",
                 "label": {
-                  "en": [
-                    "Captions in WebVTT format"
-                  ]
+                  "en": ["Captions in WebVTT format"]
                 },
                 "format": "text/vtt",
-                "language": [
-                  "en"
-                ]
+                "language": ["en"]
               },
               "target": {
                 "type": "SpecificResource",
@@ -57,9 +49,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/canvas/page/annotation1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
                 "type": "Video",

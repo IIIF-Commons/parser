@@ -222,7 +222,10 @@ describe("Presentation 4 model property policy", () => {
     expect(report.issues).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ code: "container-item-annotation-page" }),
-        expect.objectContaining({ code: "class-requirement-must", path: expect.stringMatching(/quantityValue$/) }),
+        expect.objectContaining({
+          code: "class-requirement-must",
+          path: expect.stringMatching(/quantityValue$/),
+        }),
         expect.objectContaining({ code: "annotation-exclude-values" }),
         expect.objectContaining({ code: "range-supplementary-annotation-collection" }),
       ])

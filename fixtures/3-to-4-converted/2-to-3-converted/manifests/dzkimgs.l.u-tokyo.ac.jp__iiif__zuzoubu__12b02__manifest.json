@@ -3,77 +3,53 @@
   "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/manifest.json",
   "type": "Manifest",
   "label": {
-    "@none": [
-      "大正新脩大藏經図像部第12b02巻"
-    ]
+    "@none": ["大正新脩大藏經図像部第12b02巻"]
   },
   "metadata": [
     {
       "label": {
-        "@none": [
-          "Author"
-        ]
+        "@none": ["Author"]
       },
       "value": {
-        "@none": [
-          "高楠順次郎"
-        ]
+        "@none": ["高楠順次郎"]
       }
     },
     {
       "label": {
-        "@none": [
-          "published"
-        ]
+        "@none": ["published"]
       },
       "value": {
-        "ja": [
-          "大蔵出版"
-        ]
+        "ja": ["大蔵出版"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Source"
-        ]
+        "@none": ["Source"]
       },
       "value": {
-        "@none": [
-          "大正新脩大藏經　図像部"
-        ]
+        "@none": ["大正新脩大藏經　図像部"]
       }
     },
     {
       "label": {
-        "@none": [
-          "manifest URI"
-        ]
+        "@none": ["manifest URI"]
       },
       "value": {
-        "@none": [
-          "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/manifest.json"
-        ]
+        "@none": ["https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/manifest.json"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Description"
-        ]
+        "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "大正新脩大藏經図像部"
-        ]
+        "@none": ["大正新脩大藏經図像部"]
       }
     }
   ],
   "requiredStatement": {
     "label": {
-      "@none": [
-        "Attribution"
-      ]
+      "@none": ["Attribution"]
     },
     "value": {
       "@none": [
@@ -82,18 +58,14 @@
     }
   },
   "rights": "http://creativecommons.org/licenses/by-sa/4.0/",
-  "behavior": [
-    "paged"
-  ],
+  "behavior": ["paged"],
   "viewingDirection": "right-to-left",
   "items": [
     {
       "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/p0001-0025",
       "type": "Canvas",
       "label": {
-        "@none": [
-          ""
-        ]
+        "@none": [""]
       },
       "height": 30000,
       "width": 22779,
@@ -112,9 +84,7 @@
             {
               "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/ano0001-0025",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://dzkimgs.l.u-tokyo.ac.jp/iiifimgs/zuzoubu/12b02/0001-0025.tif/full/full/0/default.jpg",
                 "type": "Image",

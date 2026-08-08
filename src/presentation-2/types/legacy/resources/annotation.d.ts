@@ -1,27 +1,27 @@
-import { OmitProperties, OneOrMany } from '../utility';
-import { TechnicalProperties } from '../iiif/technical';
-import { DescriptiveProperties } from '../iiif/descriptive';
-import { LinkingProperties } from '../iiif/linking';
-import { ContentResource, ContentResourceSelector } from './content-resource';
-import { RightsProperties } from '../iiif/rights';
+import { OmitProperties, OneOrMany } from "../utility";
+import { TechnicalProperties } from "../iiif/technical";
+import { DescriptiveProperties } from "../iiif/descriptive";
+import { LinkingProperties } from "../iiif/linking";
+import { ContentResource, ContentResourceSelector } from "./content-resource";
+import { RightsProperties } from "../iiif/rights";
 
-type AnnotationOmittedTechnical = '@id' | 'format' | 'height' | 'width' | 'viewingDirection' | 'navDate';
-type AnnotationOmittedLinking = 'startCanvas';
+type AnnotationOmittedTechnical = "@id" | "format" | "height" | "width" | "viewingDirection" | "navDate";
+type AnnotationOmittedLinking = "startCanvas";
 
 export type AnnotationStructural = {
   motivation: OneOrMany<string>;
   resource: OneOrMany<ContentResource>;
   stylesheet?: {
-    '@type': ['oa:CssStyle', 'cnt:ContentAsText'];
+    "@type": ["oa:CssStyle", "cnt:ContentAsText"];
     chars: string;
   };
-  on: OneOrMany<string | { '@id': string } | SpecificResource>; // @todo maybe need to expand this.
+  on: OneOrMany<string | { "@id": string } | SpecificResource>; // @todo maybe need to expand this.
 };
 
 export declare type SpecificResource = {
-  '@type': 'oa:SpecificResource',
-  full: string | ContentResource,
-  selector: ContentResourceSelector,
+  "@type": "oa:SpecificResource";
+  full: string | ContentResource;
+  selector: ContentResourceSelector;
 };
 
 /**
@@ -31,10 +31,11 @@ export declare type SpecificResource = {
  * their content with the descriptions created by others.
  */
 export interface Annotation
-  extends OmitProperties<TechnicalProperties, AnnotationOmittedTechnical>,
+  extends
+    OmitProperties<TechnicalProperties, AnnotationOmittedTechnical>,
     DescriptiveProperties,
     RightsProperties,
     AnnotationStructural,
     OmitProperties<LinkingProperties, AnnotationOmittedLinking> {
-  '@id'?: string;
+  "@id"?: string;
 }

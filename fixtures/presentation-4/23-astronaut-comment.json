@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/astronaut_comment.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Single Model with Comment Annotations"
-    ]
+    "en": ["Single Model with Comment Annotations"]
   },
   "summary": {
     "en": [
@@ -17,9 +15,7 @@
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "A Scene"
-        ]
+        "en": ["A Scene"]
       },
       "annotations": [
         {
@@ -29,11 +25,12 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "commenting"
-              ],
+              "motivation": ["commenting"],
               "body": {
-                "type": "TextualBody"
+                "type": "TextualBody",
+                "value": "The pressurised glove includes a red wrist connector and articulated fingers.",
+                "format": "text/plain",
+                "language": "en"
               },
               "target": {
                 "type": "SpecificResource",
@@ -56,11 +53,12 @@
             {
               "id": "https://example.org/iiif/3d/anno3",
               "type": "Annotation",
-              "motivation": [
-                "commenting"
-              ],
+              "motivation": ["commenting"],
               "body": {
-                "type": "TextualBody"
+                "type": "TextualBody",
+                "value": "The helmet visor and neck ring form the upper pressure seal.",
+                "format": "text/plain",
+                "language": "en"
               },
               "target": {
                 "type": "SpecificResource",
@@ -91,9 +89,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",

@@ -188,7 +188,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest/good",
           type: "Manifest",
           label: { en: ["Good"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );
@@ -233,7 +241,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest",
           type: "Manifest",
           label: { en: ["Test"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );
@@ -309,7 +325,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest",
           type: "Manifest",
           label: { en: ["Good"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );
@@ -343,7 +367,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest",
           type: "Manifest",
           label: { en: ["Good"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );
@@ -382,7 +414,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest/valid",
           type: "Manifest",
           label: { en: ["Good"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );
@@ -417,7 +457,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest/valid-2",
           type: "Manifest",
           label: { en: ["Good 2"] },
-          items: [{ id: "https://example.org/canvas/2", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/2",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );
@@ -468,7 +516,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest",
           type: "Manifest",
           label: { en: ["Test"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );
@@ -498,7 +554,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest",
           type: "Manifest",
           label: { en: ["Remote"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         };
       },
     });
@@ -526,7 +590,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest/local",
           type: "Manifest",
           label: { en: ["Local"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );
@@ -542,7 +614,15 @@ describe("iiif-parser CLI", () => {
             id: "https://example.org/manifest/remote",
             type: "Manifest",
             label: { en: ["Remote"] },
-            items: [{ id: "https://example.org/canvas/2", type: "Canvas", width: 1000, height: 1000, items: [] }],
+            items: [
+              {
+                id: "https://example.org/canvas/2",
+                type: "Canvas",
+                width: 1000,
+                height: 1000,
+                items: [],
+              },
+            ],
           };
         },
       };
@@ -588,7 +668,15 @@ describe("iiif-parser CLI", () => {
           id: "https://example.org/manifest",
           type: "Manifest",
           label: { en: ["Good"] },
-          items: [{ id: "https://example.org/canvas/1", type: "Canvas", width: 1000, height: 1000, items: [] }],
+          items: [
+            {
+              id: "https://example.org/canvas/1",
+              type: "Canvas",
+              width: 1000,
+              height: 1000,
+              items: [],
+            },
+          ],
         }),
         "utf8"
       );

@@ -2,12 +2,12 @@
   "@context": "http://iiif.io/api/presentation/4/context.json",
   "id": "https://iiif.io/api/presentation/4.0/example/uc03_issue1.json",
   "type": "Manifest",
-  "label": { "de": [ "Berliner Tageblatt - 1925-02-16" ] },
+  "label": { "de": ["Berliner Tageblatt - 1925-02-16"] },
   "behavior": ["paged"],
   "navDate": "1925-02-16T00:00:00Z",
   "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
   "requiredStatement": {
-    "label": { "en": [ "Attribution" ] },
+    "label": { "en": ["Attribution"] },
     "value": {
       "en": [
         "<p><a href='https://www.europeana.eu/portal/record/9200355/BibliographicResource_3000096302605.html'>Berliner Tageblatt</a> - Staatsbibliothek zu Berlin - Preußischer Kulturbesitz. Public Domain Mark - http://creativecommons.org/publicdomain/mark/1.0/</p>"
@@ -18,7 +18,7 @@
     {
       "id": "https://iiif.io/api/presentation/4.0/example/uc03_issue1/canvas/p1",
       "type": "Canvas",
-      "label": { "en": [ "p. 1" ] },
+      "label": { "en": ["p. 1"] },
       "height": 5000,
       "width": 3602,
       "items": [
@@ -42,9 +42,9 @@
                   }
                 ]
               },
-              "target":{
-                "id":"https://iiif.io/api/presentation/4.0/example/uc03_issue1/canvas/p1",
-                "type":"Canvas"
+              "target": {
+                "id": "https://iiif.io/api/presentation/4.0/example/uc03_issue1/canvas/p1",
+                "type": "Canvas"
               }
             }
           ]
@@ -54,7 +54,7 @@
     {
       "id": "https://iiif.io/api/presentation/4.0/example/uc03_issue1/canvas/p2",
       "type": "Canvas",
-      "label": { "none": [ "p. 2" ] },
+      "label": { "none": ["p. 2"] },
       "height": 5000,
       "width": 3602,
       "items": [
@@ -79,8 +79,8 @@
                 ]
               },
               "target": {
-                "id":"https://iiif.io/api/presentation/4.0/example/uc03_issue1/canvas/p2",
-                "type":"Canvas"
+                "id": "https://iiif.io/api/presentation/4.0/example/uc03_issue1/canvas/p2",
+                "type": "Canvas"
               }
             }
           ]

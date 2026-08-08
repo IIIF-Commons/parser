@@ -1,14 +1,9 @@
 {
-  "@context": [
-    "http://iiif.io/api/extension/navplace/context.json",
-    "http://iiif.io/api/presentation/3/context.json"
-  ],
+  "@context": ["http://iiif.io/api/extension/navplace/context.json", "http://iiif.io/api/presentation/3/context.json"],
   "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Laocöon, geolocated sculpture and painting."
-    ]
+    "en": ["Laocöon, geolocated sculpture and painting."]
   },
   "items": [
     {
@@ -17,9 +12,7 @@
       "height": 3000,
       "width": 2315,
       "label": {
-        "en": [
-          "Front of Bronze"
-        ]
+        "en": ["Front of Bronze"]
       },
       "navPlace": {
         "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/feature-collection/1",
@@ -30,20 +23,13 @@
             "type": "Feature",
             "properties": {
               "label": {
-                "en": [
-                  "Current Location of the Laocoön Bronze"
-                ],
-                "it": [
-                  "Ubicazione attuale del Bronzo Laocoonte e i suoi figli"
-                ]
+                "en": ["Current Location of the Laocoön Bronze"],
+                "it": ["Ubicazione attuale del Bronzo Laocoonte e i suoi figli"]
               }
             },
             "geometry": {
               "type": "Point",
-              "coordinates": [
-                -118.4745559,
-                34.0776376
-              ]
+              "coordinates": [-118.4745559, 34.0776376]
             }
           }
         ]
@@ -83,9 +69,7 @@
       "height": 3259,
       "width": 4096,
       "label": {
-        "en": [
-          "Painting"
-        ]
+        "en": ["Painting"]
       },
       "navPlace": {
         "id": "https://iiif.io/api/cookbook/recipe/0240-navPlace-on-canvases/feature-collection/2",
@@ -96,17 +80,12 @@
             "type": "Feature",
             "properties": {
               "label": {
-                "en": [
-                  "Current Location of Painting"
-                ]
+                "en": ["Current Location of Painting"]
               }
             },
             "geometry": {
               "type": "Point",
-              "coordinates": [
-                -77.0199025,
-                38.8920717
-              ]
+              "coordinates": [-77.0199025, 38.8920717]
             }
           }
         ]

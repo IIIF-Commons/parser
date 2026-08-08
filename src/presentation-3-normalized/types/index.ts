@@ -1,1 +1,1 @@
-export type * from './legacy/index';
+export type * from "./legacy/index";

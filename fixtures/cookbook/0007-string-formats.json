@@ -3,35 +3,25 @@
   "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Picture of Göttingen taken during the 2019 IIIF Conference"
-    ]
+    "en": ["Picture of Göttingen taken during the 2019 IIIF Conference"]
   },
   "summary": {
-    "en": [
-      "<p>Picture taken by the <a href=\"https://github.com/glenrobson\">IIIF Technical Coordinator</a></p>"
-    ]
+    "en": ["<p>Picture taken by the <a href=\"https://github.com/glenrobson\">IIIF Technical Coordinator</a></p>"]
   },
   "metadata": [
     {
       "label": {
-        "en": [
-          "Author"
-        ]
+        "en": ["Author"]
       },
       "value": {
-        "none": [
-          "<span><a href='https://github.com/glenrobson'>Glen Robson</a></span>"
-        ]
+        "none": ["<span><a href='https://github.com/glenrobson'>Glen Robson</a></span>"]
       }
     }
   ],
   "rights": "http://creativecommons.org/licenses/by-sa/3.0/",
   "requiredStatement": {
     "label": {
-      "en": [
-        "Attribution"
-      ]
+      "en": ["Attribution"]
     },
     "value": {
       "en": [

@@ -1,14 +1,14 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   plugins: [],
   test: {
-    include: ['**/*.{test,tests,spec}.{js,mjs,cjs,ts,mts,cts}'],
+    include: ["**/*.{test,tests,spec}.{js,mjs,cjs,ts,mts,cts}"],
     typecheck: {
-      include: ['__tests__/types/**/*.test-d.ts'],
-      exclude: ['node_modules/**', 'dist/**'],
+      include: ["__tests__/types/**/*.test-d.ts"],
+      exclude: ["node_modules/**", "dist/**"],
     },
-    environment: 'happy-dom',
+    environment: "happy-dom",
     globals: true,
   },
   server: {

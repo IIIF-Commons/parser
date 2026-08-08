@@ -1,13 +1,13 @@
-import { Collection } from './resources/collection';
-import { Manifest } from './resources/manifest';
-import { Canvas } from './resources/canvas';
-import { AnnotationList } from './resources/annotation-list';
-import { Annotation } from './resources/annotation';
-import { ChoiceEmbeddedContent, ContentResource } from './resources/content-resource';
-import { Sequence } from './resources/sequence';
-import { Service } from '../../../presentation-3/types';
-import { Layer } from './resources/layer';
-import { Range } from './resources/range';
+import { Collection } from "./resources/collection";
+import { Manifest } from "./resources/manifest";
+import { Canvas } from "./resources/canvas";
+import { AnnotationList } from "./resources/annotation-list";
+import { Annotation } from "./resources/annotation";
+import { ChoiceEmbeddedContent, ContentResource } from "./resources/content-resource";
+import { Sequence } from "./resources/sequence";
+import { Service } from "../../../presentation-3/types";
+import { Layer } from "./resources/layer";
+import { Range } from "./resources/range";
 
 export type Traversal<T> = (jsonLd: T) => Partial<T> | any;
 
@@ -26,15 +26,15 @@ export type TraversalMap = {
 };
 
 export type TraversableEntityTypes =
-  | 'sc:Collection'
-  | 'sc:Manifest'
-  | 'sc:Canvas'
-  | 'sc:AnnotationList'
-  | 'oa:Annotation'
-  | 'sc:Range'
-  | 'sc:Layer'
-  | 'sc:Sequence'
-  | 'oa:Choice'
+  | "sc:Collection"
+  | "sc:Manifest"
+  | "sc:Canvas"
+  | "sc:AnnotationList"
+  | "oa:Annotation"
+  | "sc:Range"
+  | "sc:Layer"
+  | "sc:Sequence"
+  | "oa:Choice"
   // Opaque.
-  | 'Service'
-  | 'ContentResource';
+  | "Service"
+  | "ContentResource";

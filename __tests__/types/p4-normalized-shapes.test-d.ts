@@ -173,7 +173,10 @@ void annotationWithInvalidBody;
 const rangeWithSupplementary = {
   ...emptyRange,
   start: { id: "https://example.org/canvas/5", type: "Canvas" },
-  supplementary: { id: "https://example.org/annotation-collection/1", type: "AnnotationCollection" },
+  supplementary: {
+    id: "https://example.org/annotation-collection/1",
+    type: "AnnotationCollection",
+  },
 } satisfies RangeNormalized;
 
 void rangeWithSupplementary;

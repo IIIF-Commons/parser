@@ -1,11 +1,11 @@
-import { OmitProperties } from '../utility';
-import { TechnicalProperties } from '../iiif/technical';
-import { DescriptiveProperties } from '../iiif/descriptive';
-import { Canvas } from './canvas';
-import { LinkingProperties } from '../iiif/linking';
-import { RightsProperties } from '../iiif/rights';
+import { OmitProperties } from "../utility";
+import { TechnicalProperties } from "../iiif/technical";
+import { DescriptiveProperties } from "../iiif/descriptive";
+import { Canvas } from "./canvas";
+import { LinkingProperties } from "../iiif/linking";
+import { RightsProperties } from "../iiif/rights";
 
-type SequenceTechnical = OmitProperties<TechnicalProperties, '@id' | 'format' | 'height' | 'width' | 'navDate'>;
+type SequenceTechnical = OmitProperties<TechnicalProperties, "@id" | "format" | "height" | "width" | "navDate">;
 export type SequenceStructural = {
   /**
    * the set of pages in the object, represented by canvas resources, are listed in order in the canvases property.
@@ -37,10 +37,6 @@ export type SequenceStructural = {
  * must not have the @context property.
  */
 export declare interface Sequence
-  extends SequenceTechnical,
-    DescriptiveProperties,
-    RightsProperties,
-    SequenceStructural,
-    LinkingProperties {
-  '@id'?: string;
+  extends SequenceTechnical, DescriptiveProperties, RightsProperties, SequenceStructural, LinkingProperties {
+  "@id"?: string;
 }

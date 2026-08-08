@@ -157,7 +157,8 @@ const presentation4Specs: ResourceSpecs<Presentation4HelperTypes> = {
 const presentation4Helpers = createPresentationHelpers(presentation4Specs);
 
 /** Runtime-checked identity helpers for Presentation 4 resources. */
-export const infer = presentation4Helpers.infer;
+const inferApi = presentation4Helpers.infer;
+export { inferApi as infer };
 /** Runtime assertion helpers for Presentation 4 resources. */
 export const cast = presentation4Helpers.cast;
 /** Type guards for Presentation 4 discriminated resources. */

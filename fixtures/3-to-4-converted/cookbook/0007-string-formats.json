@@ -3,34 +3,24 @@
   "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Picture of Göttingen taken during the 2019 IIIF Conference"
-    ]
+    "en": ["Picture of Göttingen taken during the 2019 IIIF Conference"]
   },
   "metadata": [
     {
       "label": {
-        "en": [
-          "Author"
-        ]
+        "en": ["Author"]
       },
       "value": {
-        "none": [
-          "<span><a href='https://github.com/glenrobson'>Glen Robson</a></span>"
-        ]
+        "none": ["<span><a href='https://github.com/glenrobson'>Glen Robson</a></span>"]
       }
     }
   ],
   "summary": {
-    "en": [
-      "<p>Picture taken by the <a href=\"https://github.com/glenrobson\">IIIF Technical Coordinator</a></p>"
-    ]
+    "en": ["<p>Picture taken by the <a href=\"https://github.com/glenrobson\">IIIF Technical Coordinator</a></p>"]
   },
   "requiredStatement": {
     "label": {
-      "en": [
-        "Attribution"
-      ]
+      "en": ["Attribution"]
     },
     "value": {
       "en": [
@@ -54,9 +44,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0007-string-formats/annotation/p0001-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
                 "type": "Image",

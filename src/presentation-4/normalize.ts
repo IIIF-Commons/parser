@@ -359,12 +359,12 @@ function isAnnotationTargetContext(context: TraversalContext): boolean {
 }
 
 function skipOnAnnotationTarget<T extends (resource: any, context: TraversalContext) => any>(traversal: T): T {
-  return (((resource: any, context: TraversalContext) => {
+  return ((resource: any, context: TraversalContext) => {
     if (isAnnotationTargetContext(context)) {
       return resource;
     }
     return traversal(resource, context);
-  }) as unknown) as T;
+  }) as unknown as T;
 }
 
 function ensureRangeSupplementaryObject<T extends { supplementary?: unknown }>(resource: T): T {

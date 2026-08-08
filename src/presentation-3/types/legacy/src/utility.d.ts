@@ -7,10 +7,10 @@ export type SomeRequired<T, K extends keyof T> = Prettify<
 export type OmitProperties<T, K extends keyof T> = Prettify<Pick<T, Exclude<keyof T, K>>>;
 
 export type JsonLDContext = {
-  '@context'?: string | string[];
+  "@context"?: string | string[];
 };
 
-export type IdOrAtId<T> = { id: T } | { '@id': T };
+export type IdOrAtId<T> = { id: T } | { "@id": T };
 
 interface Nothing {}
 type Union<T, U> = T | (U & Nothing);

@@ -3,12 +3,8 @@
   "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Koto, chess, calligraphy, and painting"
-    ],
-    "ja": [
-      "琴棋書画図屏風"
-    ]
+    "en": ["Koto, chess, calligraphy, and painting"],
+    "ja": ["琴棋書画図屏風"]
   },
   "items": [
     {
@@ -25,9 +21,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/annotation/p0001-comment",
               "type": "Annotation",
-              "motivation": [
-                "commenting"
-              ],
+              "motivation": ["commenting"],
               "body": {
                 "type": "Choice",
                 "items": [
@@ -35,17 +29,13 @@
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "Koto with a cover being carried",
-                    "language": [
-                      "en"
-                    ]
+                    "language": ["en"]
                   },
                   {
                     "type": "TextualBody",
                     "format": "text/plain",
                     "value": "袋に収められた琴",
-                    "language": [
-                      "ja"
-                    ]
+                    "language": ["ja"]
                   }
                 ]
               },
@@ -74,9 +64,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/annotation/p0001-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/36ca0a3370db128ec984b33d71a1543d-100320001004/full/max/0/default.jpg",
                 "type": "Image",

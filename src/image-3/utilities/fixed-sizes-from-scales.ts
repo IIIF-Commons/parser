@@ -1,4 +1,4 @@
-import type { ImageSize } from '../../presentation-3/types';
+import type { ImageSize } from "../../presentation-3/types";
 
 /**
  * Fixed sizes from scales.

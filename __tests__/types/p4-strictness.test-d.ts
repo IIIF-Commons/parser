@@ -240,7 +240,11 @@ const imageWithScalarService = {
   height: 100,
   width: 100,
   // @ts-expect-error service must be an array
-  service: { id: "https://example.org/service/array-required", type: "ImageService3", profile: "level1" },
+  service: {
+    id: "https://example.org/service/array-required",
+    type: "ImageService3",
+    profile: "level1",
+  },
 } satisfies ImageResource;
 
 void imageWithScalarService;

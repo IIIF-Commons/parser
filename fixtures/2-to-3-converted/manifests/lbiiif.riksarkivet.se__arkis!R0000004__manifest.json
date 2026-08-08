@@ -1,11 +1,7 @@
 {
   "label": {
-    "sv": [
-      "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
-    ],
-    "en": [
-      "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
-    ]
+    "sv": ["Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"],
+    "en": ["Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"]
   },
   "metadata": [
     {
@@ -68,9 +64,7 @@
         "en-GB": ["Source reference"]
       },
       "value": {
-        "@none": [
-          "Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"
-        ]
+        "@none": ["Originaltraktater med främmande makter (traktater), Danmark, SE/RA/25.3/1/1 (1568)"]
       }
     }
   ],
@@ -942,8 +936,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

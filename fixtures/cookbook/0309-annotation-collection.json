@@ -1,20 +1,14 @@
 {
-  "@context": [
-    "http://iiif.io/api/presentation/3/context.json"
-  ],
+  "@context": ["http://iiif.io/api/presentation/3/context.json"],
   "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/manifest.json",
   "type": "Manifest",
   "label": {
-    "de": [
-      "Berliner Tageblatt - 1925-02-16"
-    ]
+    "de": ["Berliner Tageblatt - 1925-02-16"]
   },
   "rights": "http://creativecommons.org/publicdomain/mark/1.0/",
   "requiredStatement": {
     "label": {
-      "en": [
-        "Attribution"
-      ]
+      "en": ["Attribution"]
     },
     "value": {
       "en": [
@@ -27,9 +21,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/canvas/p1",
       "type": "Canvas",
       "label": {
-        "none": [
-          "p. 1"
-        ]
+        "none": ["p. 1"]
       },
       "height": 5000,
       "width": 3602,
@@ -68,9 +60,7 @@
               "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_coll.json",
               "type": "AnnotationCollection",
               "label": {
-                "en": [
-                  "Newspaper layout markup"
-                ]
+                "en": ["Newspaper layout markup"]
               },
               "total": 8,
               "first": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",
@@ -85,9 +75,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/canvas/p2",
       "type": "Canvas",
       "label": {
-        "none": [
-          "p. 2"
-        ]
+        "none": ["p. 2"]
       },
       "height": 5000,
       "width": 3602,
@@ -126,9 +114,7 @@
               "id": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_coll.json",
               "type": "AnnotationCollection",
               "label": {
-                "en": [
-                  "Newspaper layout markup"
-                ]
+                "en": ["Newspaper layout markup"]
               },
               "total": 8,
               "first": "https://iiif.io/api/cookbook/recipe/0309-annotation-collection/anno_p1.json",

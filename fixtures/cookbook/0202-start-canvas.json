@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Multiple Related Images (Book, etc.)"
-    ]
+    "en": ["Multiple Related Images (Book, etc.)"]
   },
   "start": {
     "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
@@ -16,9 +14,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Blank page"
-        ]
+        "en": ["Blank page"]
       },
       "height": 4613,
       "width": 3204,
@@ -55,9 +51,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Frontispiece"
-        ]
+        "en": ["Frontispiece"]
       },
       "width": 3186,
       "height": 4612,
@@ -94,9 +88,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Title page"
-        ]
+        "en": ["Title page"]
       },
       "width": 3204,
       "height": 4613,
@@ -133,9 +125,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Blank page"
-        ]
+        "en": ["Blank page"]
       },
       "width": 3174,
       "height": 4578,
@@ -172,9 +162,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/canvas/p5",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Bookplate"
-        ]
+        "en": ["Bookplate"]
       },
       "width": 3198,
       "height": 4632,

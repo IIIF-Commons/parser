@@ -1,21 +1,17 @@
 {
-    "@context": "http://iiif.io/api/presentation/4/context.json",
-    "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite.json",
-    "type": "Manifest",
-    "label": {
-        "en": [
-            "Use case 7: Composite of two canvases"
-        ]
-    },
-    "items": [
-        {
-            "id": "https://iiif.io/api/presentation/4.0/example/uc07/canvas/1",
-            "type": "Canvas",
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite.json",
+  "type": "Manifest",
+  "label": {
+    "en": ["Use case 7: Composite of two canvases"]
+  },
+  "items": [
+    {
+      "id": "https://iiif.io/api/presentation/4.0/example/uc07/canvas/1",
+      "type": "Canvas",
 
       "label": {
-        "fr": [
-          "f. 033v-034r [Chilpéric Ier tue Galswinthe, se remarie et est assassiné] - reconstitué"
-        ]
+        "fr": ["f. 033v-034r [Chilpéric Ier tue Galswinthe, se remarie et est assassiné] - reconstitué"]
       },
       "width": 14432,
       "height": 10624,
@@ -27,15 +23,15 @@
             {
               "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite/canvas/1/annotations/1",
               "type": "Annotation",
-              "motivation": [ "painting" ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite_source_b/canvas/1",
                 "type": "Canvas",
                 "partOf": [
-                    {  
-                        "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite_source_b.json",
-                        "type": "Manifest"
-                    }
+                  {
+                    "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite_source_b.json",
+                    "type": "Manifest"
+                  }
                 ]
               },
               "target": {
@@ -46,15 +42,15 @@
             {
               "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite/canvas/1/annotations/2",
               "type": "Annotation",
-              "motivation": [ "painting" ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite_source_a/canvas/1",
                 "type": "Canvas",
                 "partOf": [
-                    {  
-                        "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite_source_a.json",
-                        "type": "Manifest"
-                    }
+                  {
+                    "id": "https://iiif.io/api/presentation/4.0/example/uc07_image_composite_source_a.json",
+                    "type": "Manifest"
+                  }
                 ]
               },
               "target": {

@@ -1,14 +1,9 @@
 {
-  "@context": [
-    "http://iiif.io/api/extension/navplace/context.json",
-    "http://iiif.io/api/presentation/3/context.json"
-  ],
+  "@context": ["http://iiif.io/api/extension/navplace/context.json", "http://iiif.io/api/presentation/3/context.json"],
   "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/manifest.json",
   "type": "Manifest",
   "label": {
-    "it": [
-      "Bronzo Laocoonte e i suoi figli"
-    ]
+    "it": ["Bronzo Laocoonte e i suoi figli"]
   },
   "navPlace": {
     "id": "https://iiif.io/api/cookbook/recipe/0154-geo-extension/feature-collection/1",
@@ -19,20 +14,13 @@
         "type": "Feature",
         "properties": {
           "label": {
-            "en": [
-              "The Laocoön Bronze"
-            ],
-            "it": [
-              "Bronzo Laocoonte e i suoi figli"
-            ]
+            "en": ["The Laocoön Bronze"],
+            "it": ["Bronzo Laocoonte e i suoi figli"]
           }
         },
         "geometry": {
           "type": "Point",
-          "coordinates": [
-            -118.4745559,
-            34.0776376
-          ]
+          "coordinates": [-118.4745559, 34.0776376]
         }
       }
     ]
@@ -44,9 +32,7 @@
       "height": 3000,
       "width": 2315,
       "label": {
-        "en": [
-          "Front of Bronze"
-        ]
+        "en": ["Front of Bronze"]
       },
       "items": [
         {

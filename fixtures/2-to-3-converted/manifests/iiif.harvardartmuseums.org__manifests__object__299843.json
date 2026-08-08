@@ -30,9 +30,7 @@
         "@none": ["Credit Line"]
       },
       "value": {
-        "@none": [
-          "Harvard Art Museums/Fogg Museum, Bequest from the Collection of Maurice Wertheim, Class of 1906"
-        ]
+        "@none": ["Harvard Art Museums/Fogg Museum, Bequest from the Collection of Maurice Wertheim, Class of 1906"]
       }
     },
     {
@@ -407,8 +405,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

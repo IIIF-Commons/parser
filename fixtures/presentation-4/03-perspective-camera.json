@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/model_origin.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Model with Explicit Perspective Camera"
-    ]
+    "en": ["Model with Explicit Perspective Camera"]
   },
   "summary": {
     "en": [
@@ -17,9 +15,7 @@
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "Scene with Model and Camera"
-        ]
+        "en": ["Scene with Model and Camera"]
       },
       "items": [
         {
@@ -29,9 +25,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "type": "List",
                 "items": [
@@ -44,9 +38,7 @@
                     "id": "https://example.org/iiif/3d/cameras/1",
                     "type": "PerspectiveCamera",
                     "label": {
-                      "en": [
-                        "Perspective Camera 1"
-                      ]
+                      "en": ["Perspective Camera 1"]
                     }
                   }
                 ]
@@ -59,9 +51,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "type": "List",
                 "items": [
@@ -74,9 +64,7 @@
                     "id": "https://example.org/iiif/3d/cameras/1",
                     "type": "PerspectiveCamera",
                     "label": {
-                      "en": [
-                        "Perspective Camera 1"
-                      ]
+                      "en": ["Perspective Camera 1"]
                     }
                   }
                 ]

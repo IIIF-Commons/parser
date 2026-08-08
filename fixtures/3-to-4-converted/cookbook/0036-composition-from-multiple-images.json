@@ -3,18 +3,14 @@
   "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Folio from Grandes Chroniques de France, ca. 1460"
-    ]
+    "en": ["Folio from Grandes Chroniques de France, ca. 1460"]
   },
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/canvas/p1",
       "type": "Canvas",
       "label": {
-        "none": [
-          "f. 033v-034r [Chilpéric Ier tue Galswinthe, se remarie et est assassiné]"
-        ]
+        "none": ["f. 033v-034r [Chilpéric Ier tue Galswinthe, se remarie et est assassiné]"]
       },
       "height": 5412,
       "width": 7216,
@@ -27,9 +23,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0001-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux/full/max/0/default.jpg",
                 "type": "Image",
@@ -55,16 +49,12 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0036-composition-from-multiple-images/annotation/p0002-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/899da506920824588764bc12b10fc800-bnf_chateauroux_miniature/full/max/0/default.jpg",
                 "type": "Image",
                 "label": {
-                  "fr": [
-                    "Miniature [Chilpéric Ier tue Galswinthe, se remarie et est assassiné]"
-                  ]
+                  "fr": ["Miniature [Chilpéric Ier tue Galswinthe, se remarie et est assassiné]"]
                 },
                 "format": "image/jpeg",
                 "height": 2414,

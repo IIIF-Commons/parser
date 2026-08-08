@@ -1,25 +1,25 @@
-import { describe, expect, test } from 'vitest';
-import { documentation, properties, resources } from '../../src/presentation-4/meta';
+import { describe, expect, test } from "vitest";
+import { documentation, properties, resources } from "../../src/presentation-4/meta";
 
-describe('presentation-4 meta generation', () => {
-  test('contains required class anchors', () => {
+describe("presentation-4 meta generation", () => {
+  test("contains required class anchors", () => {
     const requiredClasses = [
-      'Collection',
-      'Manifest',
-      'Timeline',
-      'Canvas',
-      'Scene',
-      'Annotation',
-      'AnnotationPage',
-      'AnnotationCollection',
-      'SpecificResource',
-      'Range',
-      'Agent',
-      'Service',
-      'Quantity',
-      'ImageApiSelector',
-      'ImageBasedLight',
-      'PointSelector',
+      "Collection",
+      "Manifest",
+      "Timeline",
+      "Canvas",
+      "Scene",
+      "Annotation",
+      "AnnotationPage",
+      "AnnotationCollection",
+      "SpecificResource",
+      "Range",
+      "Agent",
+      "Service",
+      "Quantity",
+      "ImageApiSelector",
+      "ImageBasedLight",
+      "PointSelector",
     ] as const;
 
     for (const className of requiredClasses) {
@@ -33,32 +33,32 @@ describe('presentation-4 meta generation', () => {
     }
   });
 
-  test('contains required property anchors', () => {
+  test("contains required property anchors", () => {
     const requiredProperties = [
-      'id',
-      'type',
-      'label',
-      'items',
-      'annotations',
-      'metadata',
-      'summary',
-      'requiredStatement',
-      'rights',
-      'provider',
-      'thumbnail',
-      'start',
-      'structures',
-      'behavior',
-      'viewingDirection',
-      'timeMode',
-      'body',
-      'target',
-      'selector',
-      'source',
-      'service',
-      'services',
-      'environmentMap',
-      'viewHeight',
+      "id",
+      "type",
+      "label",
+      "items",
+      "annotations",
+      "metadata",
+      "summary",
+      "requiredStatement",
+      "rights",
+      "provider",
+      "thumbnail",
+      "start",
+      "structures",
+      "behavior",
+      "viewingDirection",
+      "timeMode",
+      "body",
+      "target",
+      "selector",
+      "source",
+      "service",
+      "services",
+      "environmentMap",
+      "viewHeight",
     ] as const;
 
     for (const property of requiredProperties) {
@@ -72,7 +72,7 @@ describe('presentation-4 meta generation', () => {
     }
   });
 
-  test('resource groups and property categories are deterministic', () => {
+  test("resource groups and property categories are deterministic", () => {
     const sortedResources = [...resources.all].sort((a, b) => a.localeCompare(b));
     expect(resources.all).toEqual(sortedResources);
 

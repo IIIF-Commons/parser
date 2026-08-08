@@ -3,52 +3,36 @@
   "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json",
   "type": "Manifest",
   "label": {
-    "nl": [
-      "De familie van Grenthe, het kippenvrouwtje"
-    ]
+    "nl": ["De familie van Grenthe, het kippenvrouwtje"]
   },
   "metadata": [
     {
       "label": {
-        "nl": [
-          "Datum gemaakt"
-        ]
+        "nl": ["Datum gemaakt"]
       },
       "value": {
-        "nl": [
-          "2025-06-05T15:01:51"
-        ]
+        "nl": ["2025-06-05T15:01:51"]
       }
     },
     {
       "label": {
-        "nl": [
-          "Datum gewijzigd"
-        ]
+        "nl": ["Datum gewijzigd"]
       },
       "value": {
-        "nl": [
-          "2025-06-05T15:14:31"
-        ]
+        "nl": ["2025-06-05T15:14:31"]
       }
     },
     {
       "label": {
-        "nl": [
-          "dateCreated"
-        ]
+        "nl": ["dateCreated"]
       },
       "value": {
-        "nl": [
-          "1938"
-        ]
+        "nl": ["1938"]
       }
     },
     {
       "label": {
-        "nl": [
-          "beschrijving"
-        ]
+        "nl": ["beschrijving"]
       },
       "value": {
         "nl": [
@@ -58,68 +42,44 @@
     },
     {
       "label": {
-        "nl": [
-          "identificatie"
-        ]
+        "nl": ["identificatie"]
       },
       "value": {
-        "nl": [
-          "00002"
-        ]
+        "nl": ["00002"]
       }
     },
     {
       "label": {
-        "nl": [
-          "itemLocatie"
-        ]
+        "nl": ["itemLocatie"]
       },
       "value": {
-        "nl": [
-          "KO.rek06.40"
-        ]
+        "nl": ["KO.rek06.40"]
       }
     },
     {
       "label": {
-        "nl": [
-          "naam"
-        ]
+        "nl": ["naam"]
       },
       "value": {
-        "nl": [
-          "De familie van Grenthe, het kippenvrouwtje"
-        ]
+        "nl": ["De familie van Grenthe, het kippenvrouwtje"]
       }
     }
   ],
   "summary": {
-    "nl": [
-      "De kunstenares maakte zes illustraties voor het sprookje 'Grethe het kippenvrouwtje' van H.C. Andersen."
-    ]
+    "nl": ["De kunstenares maakte zes illustraties voor het sprookje 'Grethe het kippenvrouwtje' van H.C. Andersen."]
   },
   "requiredStatement": {
     "label": {
-      "en": [
-        "Attribution"
-      ],
-      "nl": [
-        "Naamsvermelding"
-      ]
+      "en": ["Attribution"],
+      "nl": ["Naamsvermelding"]
     },
     "value": {
-      "en": [
-        "Provided by Museum Kranenburgh"
-      ],
-      "nl": [
-        "Aangeboden door Museum Kranenburgh"
-      ]
+      "en": ["Provided by Museum Kranenburgh"],
+      "nl": ["Aangeboden door Museum Kranenburgh"]
     }
   },
   "rights": "http://creativecommons.org/licenses/by/4.0",
-  "behavior": [
-    "paged"
-  ],
+  "behavior": ["paged"],
   "viewingDirection": "right-to-left",
   "thumbnail": [
     {
@@ -200,9 +160,7 @@
       "id": "http://www.museumkranenburgh.nl",
       "type": "Agent",
       "label": {
-        "none": [
-          "Museum Kranenburgh"
-        ]
+        "none": ["Museum Kranenburgh"]
       },
       "seeAlso": [
         {
@@ -231,9 +189,7 @@
       "id": "https://www.ldmax.nl/datasets/q4350196/triples?subject=https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71",
       "type": "Text",
       "label": {
-        "nl": [
-          "Detailpagina"
-        ]
+        "nl": ["Detailpagina"]
       },
       "format": "text/html"
     }
@@ -249,9 +205,7 @@
       "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/1",
       "type": "Canvas",
       "label": {
-        "none": [
-          "p. 1"
-        ]
+        "none": ["p. 1"]
       },
       "height": 1000,
       "width": 750,
@@ -264,9 +218,7 @@
             {
               "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/1/annotation/image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/1/body",
                 "type": "Image",
@@ -295,9 +247,7 @@
       "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/2",
       "type": "Canvas",
       "label": {
-        "none": [
-          "p. 2"
-        ]
+        "none": ["p. 2"]
       },
       "height": 1000,
       "width": 750,
@@ -310,9 +260,7 @@
             {
               "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/2/annotation/image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/2/body",
                 "type": "Image",
@@ -341,9 +289,7 @@
       "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/3",
       "type": "Canvas",
       "label": {
-        "none": [
-          "p. 3"
-        ]
+        "none": ["p. 3"]
       },
       "height": 1000,
       "width": 750,
@@ -356,9 +302,7 @@
             {
               "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/3/annotation/image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/3/body",
                 "type": "Image",
@@ -387,9 +331,7 @@
       "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/4",
       "type": "Canvas",
       "label": {
-        "none": [
-          "p. 4"
-        ]
+        "none": ["p. 4"]
       },
       "height": 1000,
       "width": 750,
@@ -402,9 +344,7 @@
             {
               "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/4/annotation/image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/4/body",
                 "type": "Image",
@@ -433,9 +373,7 @@
       "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/5",
       "type": "Canvas",
       "label": {
-        "none": [
-          "p. 5"
-        ]
+        "none": ["p. 5"]
       },
       "height": 1000,
       "width": 750,
@@ -448,9 +386,7 @@
             {
               "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/5/annotation/image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/5/body",
                 "type": "Image",
@@ -479,9 +415,7 @@
       "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/6",
       "type": "Canvas",
       "label": {
-        "none": [
-          "p. 6"
-        ]
+        "none": ["p. 6"]
       },
       "height": 1000,
       "width": 750,
@@ -494,9 +428,7 @@
             {
               "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/6/annotation/image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://n2t.net/ark:/67039/a5b1a9b3dad04c24b01bc7415beb8b71/iiif.json/canvas/6/body",
                 "type": "Image",

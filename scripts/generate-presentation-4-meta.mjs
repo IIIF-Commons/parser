@@ -1,142 +1,179 @@
-import { promises as fs } from 'node:fs';
-import path from 'node:path';
+import { promises as fs } from "node:fs";
+import path from "node:path";
 
-const MODEL_URL = 'https://preview.iiif.io/api/prezi-4/presentation/4.0/model/';
-const ROOT = 'https://preview.iiif.io/api/prezi-4/presentation/4.0/model/';
-const OUT_DIR = path.join(process.cwd(), 'src', 'presentation-4', 'meta');
+const MODEL_URL = "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/";
+const ROOT = "https://preview.iiif.io/api/prezi-4/presentation/4.0/model/";
+const OUT_DIR = path.join(process.cwd(), "src", "presentation-4", "meta");
 
 const GROUP_HEADINGS = new Set([
-  'Containers',
-  'Annotations',
-  'ContentResources',
-  'Selectors',
-  'scene-components',
-  'utility-classes',
+  "Containers",
+  "Annotations",
+  "ContentResources",
+  "Selectors",
+  "scene-components",
+  "utility-classes",
 ]);
 
 const RESOURCE_GROUP_NAME = {
-  Collection: 'topLevel',
-  Manifest: 'topLevel',
-  Range: 'topLevel',
-  CollectionPage: 'paging',
-  Timeline: 'containers',
-  Canvas: 'containers',
-  Scene: 'containers',
-  Annotation: 'annotations',
-  AnnotationCollection: 'annotations',
-  AnnotationPage: 'annotations',
-  SpecificResource: 'annotations',
-  TextualBody: 'annotations',
-  Choice: 'annotations',
-  FragmentSelector: 'selectors',
-  SvgSelector: 'selectors',
-  PointSelector: 'selectors',
-  WktSelector: 'selectors',
-  AudioContentSelector: 'selectors',
-  VisualContentSelector: 'selectors',
-  AnimationSelector: 'selectors',
-  ImageApiSelector: 'selectors',
-  Camera: 'sceneComponents',
-  OrthographicCamera: 'sceneComponents',
-  PerspectiveCamera: 'sceneComponents',
-  Light: 'sceneComponents',
-  AmbientLight: 'sceneComponents',
-  DirectionalLight: 'sceneComponents',
-  ImageBasedLight: 'sceneComponents',
-  PointLight: 'sceneComponents',
-  SpotLight: 'sceneComponents',
-  AudioEmitters: 'sceneComponents',
-  AmbientAudio: 'sceneComponents',
-  PointAudio: 'sceneComponents',
-  SpotAudio: 'sceneComponents',
-  Transforms: 'sceneComponents',
-  RotateTransform: 'sceneComponents',
-  ScaleTransform: 'sceneComponents',
-  TranslateTransform: 'sceneComponents',
-  Agent: 'utility',
-  Quantity: 'utility',
-  Service: 'utility',
+  Collection: "topLevel",
+  Manifest: "topLevel",
+  Range: "topLevel",
+  CollectionPage: "paging",
+  Timeline: "containers",
+  Canvas: "containers",
+  Scene: "containers",
+  Annotation: "annotations",
+  AnnotationCollection: "annotations",
+  AnnotationPage: "annotations",
+  SpecificResource: "annotations",
+  TextualBody: "annotations",
+  Choice: "annotations",
+  FragmentSelector: "selectors",
+  SvgSelector: "selectors",
+  PointSelector: "selectors",
+  WktSelector: "selectors",
+  AudioContentSelector: "selectors",
+  VisualContentSelector: "selectors",
+  AnimationSelector: "selectors",
+  ImageApiSelector: "selectors",
+  Camera: "sceneComponents",
+  OrthographicCamera: "sceneComponents",
+  PerspectiveCamera: "sceneComponents",
+  Light: "sceneComponents",
+  AmbientLight: "sceneComponents",
+  DirectionalLight: "sceneComponents",
+  ImageBasedLight: "sceneComponents",
+  PointLight: "sceneComponents",
+  SpotLight: "sceneComponents",
+  AudioEmitters: "sceneComponents",
+  AmbientAudio: "sceneComponents",
+  PointAudio: "sceneComponents",
+  SpotAudio: "sceneComponents",
+  Transforms: "sceneComponents",
+  RotateTransform: "sceneComponents",
+  ScaleTransform: "sceneComponents",
+  TranslateTransform: "sceneComponents",
+  Agent: "utility",
+  Quantity: "utility",
+  Service: "utility",
 };
 
 const CATEGORY_SETS = {
   technical: new Set([
-    'id',
-    'type',
-    'format',
-    'profile',
-    'height',
-    'width',
-    'duration',
-    'behavior',
-    'timeMode',
-    'viewingDirection',
-    'version',
-    'fileSize',
-    'language',
+    "id",
+    "type",
+    "format",
+    "profile",
+    "height",
+    "width",
+    "duration",
+    "behavior",
+    "timeMode",
+    "viewingDirection",
+    "version",
+    "fileSize",
+    "language",
   ]),
-  descriptive: new Set(['label', 'metadata', 'summary', 'requiredStatement', 'rights', 'navDate', 'provider', 'thumbnail']),
-  linking: new Set(['homepage', 'logo', 'rendering', 'seeAlso', 'partOf', 'start', 'services', 'service', 'supplementary', 'canonical', 'via']),
-  structural: new Set(['items', 'structures', 'annotations', 'body', 'target', 'selector', 'source', 'first', 'last', 'next', 'prev', 'total', 'startIndex']),
+  descriptive: new Set([
+    "label",
+    "metadata",
+    "summary",
+    "requiredStatement",
+    "rights",
+    "navDate",
+    "provider",
+    "thumbnail",
+  ]),
+  linking: new Set([
+    "homepage",
+    "logo",
+    "rendering",
+    "seeAlso",
+    "partOf",
+    "start",
+    "services",
+    "service",
+    "supplementary",
+    "canonical",
+    "via",
+  ]),
+  structural: new Set([
+    "items",
+    "structures",
+    "annotations",
+    "body",
+    "target",
+    "selector",
+    "source",
+    "first",
+    "last",
+    "next",
+    "prev",
+    "total",
+    "startIndex",
+  ]),
   spatialTemporal: new Set([
-    'x',
-    'y',
-    'z',
-    'position',
-    'lookAt',
-    'near',
-    'far',
-    'fieldOfView',
-    'viewHeight',
-    'angle',
-    'rotation',
-    'size',
-    'region',
-    'spatialScale',
-    'temporalScale',
-    'unit',
-    'quantityValue',
-    'value',
-    'instant',
-    'volume',
-    'intensity',
-    'color',
-    'backgroundColor',
-    'environmentMap',
-    'quality',
+    "x",
+    "y",
+    "z",
+    "position",
+    "lookAt",
+    "near",
+    "far",
+    "fieldOfView",
+    "viewHeight",
+    "angle",
+    "rotation",
+    "size",
+    "region",
+    "spatialScale",
+    "temporalScale",
+    "unit",
+    "quantityValue",
+    "value",
+    "instant",
+    "volume",
+    "intensity",
+    "color",
+    "backgroundColor",
+    "environmentMap",
+    "quality",
   ]),
   interaction: new Set([
-    'action',
-    'exclude',
-    'provides',
-    'interactionMode',
-    'styleClass',
-    'stylesheet',
-    'placeholderContainer',
-    'accompanyingContainer',
-    'transform',
-    'motivation',
-    'navPlace',
+    "action",
+    "exclude",
+    "provides",
+    "interactionMode",
+    "styleClass",
+    "stylesheet",
+    "placeholderContainer",
+    "accompanyingContainer",
+    "transform",
+    "motivation",
+    "navPlace",
   ]),
 };
 
 const PROPERTY_ID_ALIASES = {
-  filesize: 'fileSize',
+  filesize: "fileSize",
 };
 
 function decodeEntities(value) {
   return value
-    .replaceAll('&amp;', '&')
-    .replaceAll('&lt;', '<')
-    .replaceAll('&gt;', '>')
-    .replaceAll('&quot;', '"')
-    .replaceAll('&#39;', "'")
-    .replaceAll('&nbsp;', ' ')
-    .replaceAll('&ndash;', '-')
-    .replaceAll('&mdash;', '-');
+    .replaceAll("&amp;", "&")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll("&nbsp;", " ")
+    .replaceAll("&ndash;", "-")
+    .replaceAll("&mdash;", "-");
 }
 
 function stripTags(value) {
-  return decodeEntities(value.replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim();
+  return decodeEntities(value.replace(/<[^>]*>/g, " "))
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function getSlice(html, startId, endId) {
@@ -185,7 +222,7 @@ function extractHeadingsWithSummary(htmlSlice, allowedLevels) {
       }
       return paragraph.length > 24;
     });
-    const summary = preferred || paragraphs[0] || '';
+    const summary = preferred || paragraphs[0] || "";
     return {
       level: entry.level,
       id: entry.id,
@@ -196,7 +233,7 @@ function extractHeadingsWithSummary(htmlSlice, allowedLevels) {
 }
 
 function extractClasses(html) {
-  const classSlice = getSlice(html, 'classes', 'properties');
+  const classSlice = getSlice(html, "classes", "properties");
   const headings = extractHeadingsWithSummary(classSlice, new Set([3, 4, 5]));
   const classes = {};
 
@@ -216,7 +253,7 @@ function extractClasses(html) {
 }
 
 function extractProperties(html) {
-  const propertySlice = getSlice(html, 'properties', 'dynamic-content');
+  const propertySlice = getSlice(html, "properties", "dynamic-content");
   const headings = extractHeadingsWithSummary(propertySlice, new Set([3]));
   const properties = {};
 
@@ -246,7 +283,7 @@ function makeResourceGroups(allClasses) {
   };
 
   for (const className of allClasses) {
-    const group = RESOURCE_GROUP_NAME[className] || 'other';
+    const group = RESOURCE_GROUP_NAME[className] || "other";
     groups[group].push(className);
   }
 
@@ -390,11 +427,11 @@ async function run() {
   const propertyCategories = makePropertyCategories(allProperties);
 
   await fs.mkdir(OUT_DIR, { recursive: true });
-  await fs.writeFile(path.join(OUT_DIR, 'documentation.ts'), createDocumentationSource(classes, properties));
-  await fs.writeFile(path.join(OUT_DIR, 'resources.ts'), createResourcesSource(allClasses, resourceGroups));
-  await fs.writeFile(path.join(OUT_DIR, 'properties.ts'), createPropertiesSource(allProperties, propertyCategories));
+  await fs.writeFile(path.join(OUT_DIR, "documentation.ts"), createDocumentationSource(classes, properties));
+  await fs.writeFile(path.join(OUT_DIR, "resources.ts"), createResourcesSource(allClasses, resourceGroups));
+  await fs.writeFile(path.join(OUT_DIR, "properties.ts"), createPropertiesSource(allProperties, propertyCategories));
   await fs.writeFile(
-    path.join(OUT_DIR, 'index.ts'),
+    path.join(OUT_DIR, "index.ts"),
     "export * from './documentation';\nexport * from './resources';\nexport * from './properties';\n"
   );
 

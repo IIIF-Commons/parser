@@ -3,23 +3,17 @@
   "id": "https://example.org/iiif/3d/model_position.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Single Positioned Model"
-    ]
+    "en": ["Single Positioned Model"]
   },
   "summary": {
-    "en": [
-      "Viewer should render the model at (-1,0,1), and then viewer should add default lighting and camera"
-    ]
+    "en": ["Viewer should render the model at (-1,0,1), and then viewer should add default lighting and camera"]
   },
   "items": [
     {
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "A Scene"
-        ]
+        "en": ["A Scene"]
       },
       "items": [
         {
@@ -29,9 +23,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",

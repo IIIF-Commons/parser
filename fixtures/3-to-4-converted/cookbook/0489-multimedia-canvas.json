@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Multimedia Canvas"
-    ]
+    "en": ["Multimedia Canvas"]
   },
   "items": [
     {
@@ -22,9 +20,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/annotation/p0001-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/36ca0a3370db128ec984b33d71a1543d-100320001004/full/max/0/default.jpg",
                 "type": "Image",
@@ -56,9 +52,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/annotation/p0002-video",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/indiana/30-minute-clock/medium/30-minute-clock.mp4",
                 "type": "Video",
@@ -84,16 +78,12 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/annotation/p0004-text",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
                 "value": "<p style='font-size:2000px'>Press Play</p>",
-                "language": [
-                  "en"
-                ]
+                "language": ["en"]
               },
               "target": {
                 "type": "SpecificResource",
@@ -112,16 +102,12 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/annotation/p0005-text",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
                 "value": "<p style='font-size:1500px'>In 10 seconds, this text will be replaced by a clock and an image. You will have 30 seconds (shown on the clock) in which to take notes on the image you see. After 30 seconds, the image will be replaced by the start screen. You will not be responsible for the part of the image covered by the clock.</p>",
-                "language": [
-                  "en"
-                ]
+                "language": ["en"]
               },
               "target": {
                 "type": "SpecificResource",
@@ -140,16 +126,12 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/annotation/p0006-text",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
                 "value": "<p style='font-size:2000px'>Close your browser</p>",
-                "language": [
-                  "en"
-                ]
+                "language": ["en"]
               },
               "target": {
                 "type": "SpecificResource",

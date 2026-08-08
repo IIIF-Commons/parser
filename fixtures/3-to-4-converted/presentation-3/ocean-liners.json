@@ -3,33 +3,23 @@
   "id": "https://iiif.vam.ac.uk/collections/O1023003/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Cunard Line - to all parts of the world"
-    ]
+    "en": ["Cunard Line - to all parts of the world"]
   },
   "metadata": [
     {
       "value": {
-        "en": [
-          "E.1829-2004"
-        ]
+        "en": ["E.1829-2004"]
       },
       "label": {
-        "en": [
-          "Museum number"
-        ]
+        "en": ["Museum number"]
       }
     },
     {
       "value": {
-        "en": [
-          "Cunard Line - to all parts of the world"
-        ]
+        "en": ["Cunard Line - to all parts of the world"]
       },
       "label": {
-        "en": [
-          "title"
-        ]
+        "en": ["title"]
       }
     },
     {
@@ -39,69 +29,47 @@
         ]
       },
       "label": {
-        "en": [
-          "Descriptive Line"
-        ]
+        "en": ["Descriptive Line"]
       }
     },
     {
       "value": {
-        "en": [
-          "PDP"
-        ]
+        "en": ["PDP"]
       },
       "label": {
-        "en": [
-          "Collection"
-        ]
+        "en": ["Collection"]
       }
     },
     {
       "value": {
-        "en": [
-          "Nottingham (printed)"
-        ]
+        "en": ["Nottingham (printed)"]
       },
       "label": {
-        "en": [
-          "Place"
-        ]
+        "en": ["Place"]
       }
     },
     {
       "value": {
-        "en": [
-          "chromolithograph"
-        ]
+        "en": ["chromolithograph"]
       },
       "label": {
-        "en": [
-          "Materials & Techniques"
-        ]
+        "en": ["Materials & Techniques"]
       }
     },
     {
       "value": {
-        "en": [
-          "ca. 1920 (made)"
-        ]
+        "en": ["ca. 1920 (made)"]
       },
       "label": {
-        "en": [
-          "Date"
-        ]
+        "en": ["Date"]
       }
     },
     {
       "value": {
-        "en": [
-          "Posters;Boats and ships;Tourism & Travel"
-        ]
+        "en": ["Posters;Boats and ships;Tourism & Travel"]
       },
       "label": {
-        "en": [
-          "Categories"
-        ]
+        "en": ["Categories"]
       }
     },
     {
@@ -111,15 +79,11 @@
         ]
       },
       "label": {
-        "en": [
-          "Description"
-        ]
+        "en": ["Description"]
       }
     }
   ],
-  "behavior": [
-    "individuals"
-  ],
+  "behavior": ["individuals"],
   "seeAlso": [
     {
       "@format": "application/ld+json",
@@ -132,9 +96,7 @@
       "id": "https://iiif.vam.ac.uk/collections/O1023003/canvas/c0",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Object image 0"
-        ]
+        "en": ["Object image 0"]
       },
       "height": 6000,
       "width": 3788,
@@ -147,9 +109,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a1",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -172,9 +132,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a2",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -197,9 +155,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a3",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -222,9 +178,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a4",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -247,9 +201,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a5",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -272,9 +224,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a6",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -297,9 +247,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a7",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -322,9 +270,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a8",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -347,9 +293,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a9",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -372,9 +316,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/annopage/p1/a10",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
@@ -405,9 +347,7 @@
             {
               "id": "https://iiif.vam.ac.uk/collections/O1023003/anno/a1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://framemark.vam.ac.uk/collections/2013GU2911/full/full/0/default.jpg",
                 "type": "Image",

@@ -3,18 +3,14 @@
   "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Abstracts",
   "type": "Collection",
   "label": {
-    "none": [
-      "Genre: Abstracts"
-    ]
+    "none": ["Genre: Abstracts"]
   },
   "items": [
     {
       "id": "https://iiif.wellcomecollection.org/presentation/b29011577",
       "type": "Manifest",
       "label": {
-        "none": [
-          "Titres et travaux scientifiques du Dr F. Lejars."
-        ]
+        "none": ["Titres et travaux scientifiques du Dr F. Lejars."]
       },
       "thumbnail": [
         {
@@ -56,9 +52,7 @@
       "id": "https://iiif.wellcomecollection.org/presentation/b32183859",
       "type": "Manifest",
       "label": {
-        "none": [
-          "Annotated bibliography on vital and health statistics."
-        ]
+        "none": ["Annotated bibliography on vital and health statistics."]
       },
       "thumbnail": [
         {
@@ -100,9 +94,7 @@
       "id": "https://iiif.wellcomecollection.org/presentation/b21782763",
       "type": "Manifest",
       "label": {
-        "none": [
-          "Notice sur les travaux scientifiques de M. Henri Becquerel."
-        ]
+        "none": ["Notice sur les travaux scientifiques de M. Henri Becquerel."]
       },
       "thumbnail": [
         {
@@ -144,9 +136,7 @@
       "id": "https://iiif.wellcomecollection.org/presentation/b29011553",
       "type": "Manifest",
       "label": {
-        "none": [
-          "Notice sur les titres et travaux scientifiques de M. Louis Lapicque."
-        ]
+        "none": ["Notice sur les titres et travaux scientifiques de M. Louis Lapicque."]
       },
       "thumbnail": [
         {

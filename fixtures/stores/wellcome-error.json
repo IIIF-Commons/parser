@@ -24,9 +24,7 @@
           "id": "https://iiif.wellcomecollection.org/presentation/collections/contributors/ze6kf2ag",
           "type": "Collection",
           "label": {
-            "en": [
-              "Contributor: Shepherd, George Sidney, 1784-1862."
-            ]
+            "en": ["Contributor: Shepherd, George Sidney, 1784-1862."]
           },
           "viewingDirection": "left-to-right",
           "behavior": [],
@@ -60,9 +58,7 @@
           "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/fxk455dn",
           "type": "Collection",
           "label": {
-            "en": [
-              "Subject: King's Cross (London, England)"
-            ]
+            "en": ["Subject: King's Cross (London, England)"]
           },
           "viewingDirection": "left-to-right",
           "behavior": [],
@@ -96,9 +92,7 @@
           "id": "https://iiif.wellcomecollection.org/presentation/collections/subjects/gjsmun8u",
           "type": "Collection",
           "label": {
-            "en": [
-              "Subject: Hospitals for the Small-pox and Inoculation (London, England)"
-            ]
+            "en": ["Subject: Hospitals for the Small-pox and Inoculation (London, England)"]
           },
           "viewingDirection": "left-to-right",
           "behavior": [],
@@ -132,9 +126,7 @@
           "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Oil_paintings",
           "type": "Collection",
           "label": {
-            "en": [
-              "Genre: Oil paintings"
-            ]
+            "en": ["Genre: Oil paintings"]
           },
           "viewingDirection": "left-to-right",
           "behavior": [],
@@ -168,9 +160,7 @@
           "id": "https://iiif.wellcomecollection.org/presentation/collections/genres/Paintings",
           "type": "Collection",
           "label": {
-            "en": [
-              "Genre: Paintings"
-            ]
+            "en": ["Genre: Paintings"]
           },
           "viewingDirection": "left-to-right",
           "behavior": [],
@@ -220,77 +210,52 @@
             }
           ],
           "label": {
-            "en": [
-              "Saint Pancras smallpox hospital, London. Oil painting after G.S. Shepherd, 1806."
-            ]
+            "en": ["Saint Pancras smallpox hospital, London. Oil painting after G.S. Shepherd, 1806."]
           },
           "metadata": [
             {
               "label": {
-                "en": [
-                  "Reference"
-                ]
+                "en": ["Reference"]
               },
               "value": {
-                "none": [
-                  "44655i"
-                ]
+                "none": ["44655i"]
               }
             },
             {
               "label": {
-                "en": [
-                  "Physical description"
-                ]
+                "en": ["Physical description"]
               },
               "value": {
-                "en": [
-                  "1 painting : oil on wood ; wood 35 x 40 cm"
-                ]
+                "en": ["1 painting : oil on wood ; wood 35 x 40 cm"]
               }
             },
             {
               "label": {
-                "en": [
-                  "Contributors"
-                ]
+                "en": ["Contributors"]
               },
               "value": {
-                "none": [
-                  "Shepherd, George Sidney, 1784-1862."
-                ]
+                "none": ["Shepherd, George Sidney, 1784-1862."]
               }
             },
             {
               "label": {
-                "en": [
-                  "Creator/production credits"
-                ]
+                "en": ["Creator/production credits"]
               },
               "value": {
-                "en": [
-                  "After an engraving by Woolnoth after a design by G.S. Shepherd"
-                ]
+                "en": ["After an engraving by Woolnoth after a design by G.S. Shepherd"]
               }
             },
             {
               "label": {
-                "en": [
-                  "Type/technique"
-                ]
+                "en": ["Type/technique"]
               },
               "value": {
-                "en": [
-                  "Oil paintings",
-                  "Paintings"
-                ]
+                "en": ["Oil paintings", "Paintings"]
               }
             },
             {
               "label": {
-                "en": [
-                  "Subjects"
-                ]
+                "en": ["Subjects"]
               },
               "value": {
                 "en": [
@@ -301,21 +266,15 @@
             },
             {
               "label": {
-                "en": [
-                  "Reference"
-                ]
+                "en": ["Reference"]
               },
               "value": {
-                "en": [
-                  "Wellcome Collection 44655i"
-                ]
+                "en": ["Wellcome Collection 44655i"]
               }
             },
             {
               "label": {
-                "en": [
-                  "Attribution and usage"
-                ]
+                "en": ["Attribution and usage"]
               },
               "value": {
                 "en": [
@@ -387,9 +346,7 @@
               "type": "Text",
               "profile": "https://github.com/wellcomecollection/iiif-builder/build-timestamp",
               "label": {
-                "none": [
-                  "2023-09-28T12:35:10.1608874Z"
-                ]
+                "none": ["2023-09-28T12:35:10.1608874Z"]
               }
             },
             {
@@ -397,21 +354,15 @@
               "type": "Text",
               "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
               "label": {
-                "en": [
-                  "open"
-                ]
+                "en": ["open"]
               },
               "metadata": [
                 {
                   "label": {
-                    "en": [
-                      "Open"
-                    ]
+                    "en": ["Open"]
                   },
                   "value": {
-                    "none": [
-                      "1"
-                    ]
+                    "none": ["1"]
                   }
                 }
               ]
@@ -443,9 +394,7 @@
           "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2",
           "type": "Canvas",
           "label": {
-            "none": [
-              "-"
-            ]
+            "none": ["-"]
           },
           "behavior": [],
           "thumbnail": [
@@ -515,9 +464,7 @@
         "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting/anno": {
           "id": "https://iiif.wellcomecollection.org/presentation/b12024673/canvases/b12024673_0001.jp2/painting/anno",
           "type": "Annotation",
-          "motivation": [
-            "painting"
-          ],
+          "motivation": ["painting"],
           "body": [
             {
               "id": "https://iiif.wellcomecollection.org/image/b12024673_0001.jp2/full/1024,912/0/default.jpg",
@@ -676,9 +623,7 @@
           "type": "Dataset",
           "profile": "https://api.wellcomecollection.org/catalogue/v2/context.json",
           "label": {
-            "en": [
-              "Wellcome Collection Catalogue API"
-            ]
+            "en": ["Wellcome Collection Catalogue API"]
           },
           "format": "application/json",
           "iiif-parser:hasPart": [
@@ -693,14 +638,10 @@
           "id": "https://wellcomecollection.org/works/kqy8b2yh",
           "type": "Text",
           "label": {
-            "en": [
-              "Saint Pancras smallpox hospital, London. Oil painting after G.S. Shepherd, 1806."
-            ]
+            "en": ["Saint Pancras smallpox hospital, London. Oil painting after G.S. Shepherd, 1806."]
           },
           "format": "text/html",
-          "language": [
-            "en"
-          ],
+          "language": ["en"],
           "iiif-parser:hasPart": [
             {
               "iiif-parser:partOf": "https://iiif.wellcomecollection.org/presentation/b12024673",
@@ -713,9 +654,7 @@
           "id": "https://iiif.wellcomecollection.org/pdf/b12024673",
           "type": "Text",
           "label": {
-            "en": [
-              "View as PDF"
-            ]
+            "en": ["View as PDF"]
           },
           "format": "application/pdf",
           "iiif-parser:hasPart": [
@@ -742,9 +681,7 @@
           "id": "https://wellcomecollection.org",
           "type": "Text",
           "label": {
-            "en": [
-              "Wellcome Collection"
-            ]
+            "en": ["Wellcome Collection"]
           },
           "format": "text/html",
           "iiif-parser:hasPart": [
@@ -782,9 +719,7 @@
           "type": "Text",
           "profile": "https://github.com/wellcomecollection/iiif-builder/build-timestamp",
           "label": {
-            "none": [
-              "2023-09-28T12:35:10.1608874Z"
-            ]
+            "none": ["2023-09-28T12:35:10.1608874Z"]
           }
         },
         "https://iiif.wellcomecollection.org/presentation/b12024673#accesscontrolhints": {
@@ -792,21 +727,15 @@
           "type": "Text",
           "profile": "http://wellcomelibrary.org/ld/iiif-ext/access-control-hints",
           "label": {
-            "en": [
-              "open"
-            ]
+            "en": ["open"]
           },
           "metadata": [
             {
               "label": {
-                "en": [
-                  "Open"
-                ]
+                "en": ["Open"]
               },
               "value": {
-                "none": [
-                  "1"
-                ]
+                "none": ["1"]
               }
             }
           ]

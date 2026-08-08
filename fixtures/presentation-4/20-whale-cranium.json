@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/whale_cranium_and_mandible_position.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Whale Cranium and Mandible Positioned"
-    ]
+    "en": ["Whale Cranium and Mandible Positioned"]
   },
   "summary": {
     "en": [
@@ -17,9 +15,7 @@
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "A Scene Containing a Whale Cranium and Mandible"
-        ]
+        "en": ["A Scene Containing a Whale Cranium and Mandible"]
       },
       "items": [
         {
@@ -29,9 +25,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_mandible.glb",
                 "type": "Model",
@@ -58,9 +52,7 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_cranium.glb",
                 "type": "Model",

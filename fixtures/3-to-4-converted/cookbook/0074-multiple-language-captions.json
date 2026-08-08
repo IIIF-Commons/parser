@@ -3,23 +3,15 @@
   "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json",
   "type": "Manifest",
   "label": {
-    "it": [
-      "Per voi signore. Modelli francesi"
-    ],
-    "en": [
-      "For ladies. French models"
-    ]
+    "it": ["Per voi signore. Modelli francesi"],
+    "en": ["For ladies. French models"]
   },
   "requiredStatement": {
     "label": {
-      "en": [
-        "Rights"
-      ]
+      "en": ["Rights"]
     },
     "value": {
-      "en": [
-        "All rights reserved Cinecittà Luce spa"
-      ]
+      "en": ["All rights reserved Cinecittà Luce spa"]
     }
   },
   "rights": "http://rightsstatements.org/vocab/InC/1.0/",
@@ -38,9 +30,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/manifest.json/subtitles_captions-files-vtt",
               "type": "Annotation",
-              "motivation": [
-                "supplementing"
-              ],
+              "motivation": ["supplementing"],
               "body": {
                 "type": "Choice",
                 "items": [
@@ -48,27 +38,19 @@
                     "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_en.vtt",
                     "type": "Text",
                     "label": {
-                      "en": [
-                        "Captions in WebVTT format"
-                      ]
+                      "en": ["Captions in WebVTT format"]
                     },
                     "format": "text/vtt",
-                    "language": [
-                      "en"
-                    ]
+                    "language": ["en"]
                   },
                   {
                     "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/Per_voi_signore_Modelli_francesi_it.vtt",
                     "type": "Text",
                     "label": {
-                      "it": [
-                        "Sottotitoli in formato WebVTT"
-                      ]
+                      "it": ["Sottotitoli in formato WebVTT"]
                     },
                     "format": "text/vtt",
-                    "language": [
-                      "it"
-                    ]
+                    "language": ["it"]
                   }
                 ]
               },
@@ -91,9 +73,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0074-multiple-language-captions/canvas/page/annotation",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/europeana/Per_voi_signore_Modelli_francesi.mp4",
                 "type": "Video",

@@ -3,23 +3,17 @@
   "id": "https://example.org/iiif/3d/model_origin.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Model with Green AmbientLight"
-    ]
+    "en": ["Model with Green AmbientLight"]
   },
   "summary": {
-    "en": [
-      "Viewer should render the model at the scene origin with green AmbientLight, and add default camera"
-    ]
+    "en": ["Viewer should render the model at the scene origin with green AmbientLight, and add default camera"]
   },
   "items": [
     {
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "Scene with Model and AmbientLight"
-        ]
+        "en": ["Scene with Model and AmbientLight"]
       },
       "items": [
         {
@@ -29,9 +23,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",
@@ -45,16 +37,14 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://example.org/iiif/3d/cameras/1",
                 "type": "AmbientLight",
+                "color": "#00FF00",
+                "intensity": 2,
                 "label": {
-                  "en": [
-                    "Ambient Green Light"
-                  ]
+                  "en": ["Ambient Green Light"]
                 }
               },
               "target": {

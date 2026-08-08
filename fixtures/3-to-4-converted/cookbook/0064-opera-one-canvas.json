@@ -3,36 +3,24 @@
   "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/manifest.json",
   "type": "Manifest",
   "label": {
-    "it": [
-      "L'Elisir D'Amore"
-    ],
-    "en": [
-      "The Elixir of Love"
-    ]
+    "it": ["L'Elisir D'Amore"],
+    "en": ["The Elixir of Love"]
   },
   "metadata": [
     {
       "label": {
-        "en": [
-          "Date Issued"
-        ]
+        "en": ["Date Issued"]
       },
       "value": {
-        "en": [
-          "2019"
-        ]
+        "en": ["2019"]
       }
     },
     {
       "label": {
-        "en": [
-          "Publisher"
-        ]
+        "en": ["Publisher"]
       },
       "value": {
-        "en": [
-          "Indiana University Jacobs School of Music"
-        ]
+        "en": ["Indiana University Jacobs School of Music"]
       }
     }
   ],
@@ -57,9 +45,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_1.mp4",
                 "type": "Video",
@@ -85,9 +71,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/canvas/1/annotation_page/1/annotation/2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
                 "type": "Video",
@@ -120,27 +104,21 @@
       "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/1",
       "type": "Range",
       "label": {
-        "it": [
-          "Gaetano Donizetti, L'Elisir D'Amore"
-        ]
+        "it": ["Gaetano Donizetti, L'Elisir D'Amore"]
       },
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/2",
           "type": "Range",
           "label": {
-            "it": [
-              "Atto Primo"
-            ]
+            "it": ["Atto Primo"]
           },
           "items": [
             {
               "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/3",
               "type": "Range",
               "label": {
-                "it": [
-                  "Preludio e Coro d'introduzione – Bel conforto al mietitore"
-                ]
+                "it": ["Preludio e Coro d'introduzione – Bel conforto al mietitore"]
               },
               "items": [
                 {
@@ -156,9 +134,7 @@
               "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/4",
               "type": "Range",
               "label": {
-                "en": [
-                  "Remainder of Atto Primo"
-                ]
+                "en": ["Remainder of Atto Primo"]
               },
               "items": [
                 {
@@ -176,9 +152,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0064-opera-one-canvas/range/5",
           "type": "Range",
           "label": {
-            "it": [
-              "Atto Secondo"
-            ]
+            "it": ["Atto Secondo"]
           },
           "items": [
             {

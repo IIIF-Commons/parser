@@ -3,9 +3,7 @@
   "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Simplest Video Example (IIIF Presentation 4)"
-    ]
+    "en": ["Simplest Video Example (IIIF Presentation 4)"]
   },
   "items": [
     {
@@ -22,9 +20,7 @@
             {
               "id": "https://preview.iiif.io/cookbook/v4/recipe/0003-mvm-video/v4/canvas/page/annotation",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/indiana/lunchroom_manners/high/lunchroom_manners_1024kb.mp4",
                 "type": "Video",

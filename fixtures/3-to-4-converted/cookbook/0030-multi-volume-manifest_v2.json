@@ -3,22 +3,16 @@
   "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v2.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Seirō ehon nenjū gyōji : kan 2 | 青楼絵本年中行事 : 巻 2"
-    ]
+    "en": ["Seirō ehon nenjū gyōji : kan 2 | 青楼絵本年中行事 : 巻 2"]
   },
-  "behavior": [
-    "individuals"
-  ],
+  "behavior": ["individuals"],
   "viewingDirection": "right-to-left",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Front cover"
-        ]
+        "en": ["Front cover"]
       },
       "height": 5745,
       "width": 4114,
@@ -31,9 +25,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0001-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_001/full/max/0/default.jpg",
                 "type": "Image",
@@ -64,9 +56,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Page spread 1"
-        ]
+        "en": ["Page spread 1"]
       },
       "height": 5745,
       "width": 7253,
@@ -79,9 +69,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0002-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_002/full/max/0/default.jpg",
                 "type": "Image",
@@ -112,9 +100,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Page spread 2"
-        ]
+        "en": ["Page spread 2"]
       },
       "height": 5745,
       "width": 7253,
@@ -127,9 +113,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0003-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_003/full/max/0/default.jpg",
                 "type": "Image",
@@ -160,9 +144,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Page spread 3"
-        ]
+        "en": ["Page spread 3"]
       },
       "height": 5745,
       "width": 7253,
@@ -175,9 +157,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0004-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_004/full/max/0/default.jpg",
                 "type": "Image",
@@ -208,9 +188,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p5",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Page spread 4"
-        ]
+        "en": ["Page spread 4"]
       },
       "height": 5745,
       "width": 7253,
@@ -223,9 +201,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/annotation/p0005-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/ecbc73b7cd459faf609e54eb4305da1f-uclaeal_wahon_A06_bib1974505_vol02_005/full/max/0/default.jpg",
                 "type": "Image",

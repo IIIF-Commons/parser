@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/manifest.json ",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Video navigation with thumbnails in a Range"
-    ]
+    "en": ["Video navigation with thumbnails in a Range"]
   },
   "items": [
     {
@@ -22,9 +20,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/canvas/1/annotation_page/1/annotation/2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low_act_2.mp4",
                 "type": "Video",
@@ -51,20 +47,14 @@
       "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/1",
       "type": "Range",
       "label": {
-        "en": [
-          "Thumbnail Navigation"
-        ]
+        "en": ["Thumbnail Navigation"]
       },
-      "behavior": [
-        "thumbnail-nav"
-      ],
+      "behavior": ["thumbnail-nav"],
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/1.1",
           "type": "Range",
-          "behavior": [
-            "no-nav"
-          ],
+          "behavior": ["no-nav"],
           "items": [
             {
               "type": "SpecificResource",
@@ -79,9 +69,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/2",
           "type": "Range",
           "label": {
-            "en": [
-              "9s – 305s"
-            ]
+            "en": ["9s – 305s"]
           },
           "thumbnail": [
             {
@@ -106,9 +94,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/3",
           "type": "Range",
           "label": {
-            "en": [
-              "305s – 610s"
-            ]
+            "en": ["305s – 610s"]
           },
           "thumbnail": [
             {
@@ -133,9 +119,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/4",
           "type": "Range",
           "label": {
-            "en": [
-              "610s – 915s"
-            ]
+            "en": ["610s – 915s"]
           },
           "thumbnail": [
             {
@@ -160,9 +144,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/5",
           "type": "Range",
           "label": {
-            "en": [
-              "915s – 1220s"
-            ]
+            "en": ["915s – 1220s"]
           },
           "thumbnail": [
             {
@@ -187,9 +169,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/6",
           "type": "Range",
           "label": {
-            "en": [
-              "1220s – 1525s"
-            ]
+            "en": ["1220s – 1525s"]
           },
           "thumbnail": [
             {
@@ -214,9 +194,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/7",
           "type": "Range",
           "label": {
-            "en": [
-              "1525s – 1830s"
-            ]
+            "en": ["1525s – 1830s"]
           },
           "thumbnail": [
             {
@@ -241,9 +219,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/8",
           "type": "Range",
           "label": {
-            "en": [
-              "1830s – 2135s"
-            ]
+            "en": ["1830s – 2135s"]
           },
           "thumbnail": [
             {
@@ -268,9 +244,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/9",
           "type": "Range",
           "label": {
-            "en": [
-              "2135s – 2440s"
-            ]
+            "en": ["2135s – 2440s"]
           },
           "thumbnail": [
             {
@@ -295,9 +269,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/10",
           "type": "Range",
           "label": {
-            "en": [
-              "2440s – 2745s"
-            ]
+            "en": ["2440s – 2745s"]
           },
           "thumbnail": [
             {
@@ -322,9 +294,7 @@
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/11",
           "type": "Range",
           "label": {
-            "en": [
-              "2745s – end"
-            ]
+            "en": ["2745s – end"]
           },
           "thumbnail": [
             {

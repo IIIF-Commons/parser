@@ -3,64 +3,44 @@
   "id": "https://data.ucd.ie/api/img/manifests/ucdlib:33064",
   "type": "Manifest",
   "label": {
-    "@none": [
-      "Housing Plans for Greater Dublin"
-    ]
+    "@none": ["Housing Plans for Greater Dublin"]
   },
   "metadata": [
     {
       "label": {
-        "@none": [
-          "title"
-        ]
+        "@none": ["title"]
       },
       "value": {
-        "@none": [
-          "Housing Plans for Greater Dublin"
-        ]
+        "@none": ["Housing Plans for Greater Dublin"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Type of resource"
-        ]
+        "@none": ["Type of resource"]
       },
       "value": {
-        "@none": [
-          "dctypes:StillImage"
-        ]
+        "@none": ["dctypes:StillImage"]
       }
     },
     {
       "label": {
-        "@none": [
-          "published"
-        ]
+        "@none": ["published"]
       },
       "value": {
-        "@none": [
-          "Urbana, Ill."
-        ]
+        "@none": ["Urbana, Ill."]
       }
     },
     {
       "label": {
-        "@none": [
-          "created"
-        ]
+        "@none": ["created"]
       },
       "value": {
-        "@none": [
-          "1914"
-        ]
+        "@none": ["1914"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Exhibitions"
-        ]
+        "@none": ["Exhibitions"]
       },
       "value": {
         "@none": [
@@ -70,9 +50,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Ownership/custodial history"
-        ]
+        "@none": ["Ownership/custodial history"]
       },
       "value": {
         "@none": [
@@ -82,58 +60,39 @@
     },
     {
       "label": {
-        "@none": [
-          "permalink"
-        ]
+        "@none": ["permalink"]
       },
       "value": {
-        "@none": [
-          "doi:10.7925/drs1.ucdlib_33064"
-        ]
+        "@none": ["doi:10.7925/drs1.ucdlib_33064"]
       }
     },
     {
       "label": {
-        "@none": [
-          "topic-LCSH"
-        ]
+        "@none": ["topic-LCSH"]
       },
       "value": {
-        "@none": [
-          "City planning",
-          "Architecture, Domestic"
-        ]
+        "@none": ["City planning", "Architecture, Domestic"]
       }
     },
     {
       "label": {
-        "@none": [
-          "genre"
-        ]
+        "@none": ["genre"]
       },
       "value": {
-        "@none": [
-          "Competition drawings"
-        ]
+        "@none": ["Competition drawings"]
       }
     },
     {
       "label": {
-        "@none": [
-          "genre"
-        ]
+        "@none": ["genre"]
       },
       "value": {
-        "@none": [
-          "Architectural drawings"
-        ]
+        "@none": ["Architectural drawings"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Description"
-        ]
+        "@none": ["Description"]
       },
       "value": {
         "@none": [
@@ -144,14 +103,10 @@
   ],
   "requiredStatement": {
     "label": {
-      "@none": [
-        "Attribution"
-      ]
+      "@none": ["Attribution"]
     },
     "value": {
-      "@none": [
-        "Irish Architectural Archive"
-      ]
+      "@none": ["Irish Architectural Archive"]
     }
   },
   "thumbnail": [
@@ -165,9 +120,7 @@
       "id": "https://digital.ucd.ie/view/ucdlib:33064.xml",
       "type": "Dataset",
       "label": {
-        "@none": [
-          "MODS metadata describing this object"
-        ]
+        "@none": ["MODS metadata describing this object"]
       },
       "profile": "http://www.loc.gov/mods/v3",
       "format": "text/xml"
@@ -176,9 +129,7 @@
       "id": "https://digital.ucd.ie/view/ucdlib:33064.n3",
       "type": "Dataset",
       "label": {
-        "@none": [
-          "RDF n3 serialisation of metadata describing this object"
-        ]
+        "@none": ["RDF n3 serialisation of metadata describing this object"]
       },
       "format": "text/rdf+n3"
     },
@@ -186,9 +137,7 @@
       "id": "https://data.ucd.ie/api/edm/v1/ucdlib:33064",
       "type": "Dataset",
       "label": {
-        "@none": [
-          "EDM (Europeana Data Model) RDF metadata"
-        ]
+        "@none": ["EDM (Europeana Data Model) RDF metadata"]
       },
       "profile": "http://www.europeana.eu/schemas/edm/",
       "format": "application/x.europeana-edm+xml"
@@ -197,9 +146,7 @@
       "id": "https://digital.ucd.ie/view/ucdlib:33064.rdf",
       "type": "Dataset",
       "label": {
-        "@none": [
-          "RDF-XML metadata describing this object"
-        ]
+        "@none": ["RDF-XML metadata describing this object"]
       },
       "format": "application/rdf+xml"
     }
@@ -215,9 +162,7 @@
       "id": "https://data.ucd.ie/api/img/ucdlib:33064/canvas/ucdlib:33543",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "recto"
-        ]
+        "@none": ["recto"]
       },
       "height": 14214,
       "width": 14451,
@@ -238,9 +183,7 @@
             {
               "id": "https://data.ucd.ie/api/img/ucdlib:33064/annotation/ucdlib:33543",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.ucd.ie/loris/ucdlib:33543/full/full/0/default.jpg",
                 "type": "dcTypes:Image",
@@ -273,14 +216,9 @@
       "id": "https://data.ucd.ie/api/img/manifests/ucdlib:33064/sequence/normal",
       "type": "Range",
       "label": {
-        "@none": [
-          "Current Page Order"
-        ]
+        "@none": ["Current Page Order"]
       },
-      "behavior": [
-        "sequence",
-        "individuals"
-      ],
+      "behavior": ["sequence", "individuals"],
       "items": [
         {
           "type": "SpecificResource",

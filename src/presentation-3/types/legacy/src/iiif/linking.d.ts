@@ -1,8 +1,8 @@
-import { ContentResource } from '../resources/contentResource';
-import { Service } from '../resources/service';
-import { Canvas } from '../resources/canvas';
-import { AnnotationCollection } from '../resources/annotationCollection';
-import { Reference } from '../reference';
+import { ContentResource } from "../resources/contentResource";
+import { Service } from "../resources/service";
+import { Canvas } from "../resources/canvas";
+import { AnnotationCollection } from "../resources/annotationCollection";
+import { Reference } from "../reference";
 
 export type LinkingProperties = {
   /**
@@ -107,7 +107,7 @@ export type LinkingProperties = {
    *   * Any resource type may have the partOf property with at least one item
    *   * Clients may render partOf on any resource type.
    */
-  partOf: Array<ContentResource | Canvas | AnnotationCollection | Reference<'Manifest'> | Reference<'Collection'>>;
+  partOf: Array<ContentResource | Canvas | AnnotationCollection | Reference<"Manifest"> | Reference<"Collection">>;
 
   /**
    * A Canvas, or part of a Canvas, which the client should show on initialization for the resource that has the start

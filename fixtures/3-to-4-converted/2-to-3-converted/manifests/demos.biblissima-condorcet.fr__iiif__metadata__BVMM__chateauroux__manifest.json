@@ -3,52 +3,36 @@
   "id": "http://demos.biblissima-condorcet.fr/iiif/metadata/BVMM/chateauroux/manifest.json",
   "type": "Manifest",
   "label": {
-    "@none": [
-      "Reconstructed manifest (partial): Grandes Chroniques de France (Châteauroux, BM, ms 5)"
-    ]
+    "@none": ["Reconstructed manifest (partial): Grandes Chroniques de France (Châteauroux, BM, ms 5)"]
   },
   "metadata": [
     {
       "label": {
-        "@none": [
-          "Type"
-        ]
+        "@none": ["Type"]
       },
       "value": {
-        "@none": [
-          "Reconstructed manuscrit (partial reconstruction)"
-        ]
+        "@none": ["Reconstructed manuscrit (partial reconstruction)"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Holding institution (manuscript)"
-        ]
+        "@none": ["Holding institution (manuscript)"]
       },
       "value": {
-        "@none": [
-          "Bibliothèque municipale de Châteauroux"
-        ]
+        "@none": ["Bibliothèque municipale de Châteauroux"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Holding institution (cuttings)"
-        ]
+        "@none": ["Holding institution (cuttings)"]
       },
       "value": {
-        "@none": [
-          "Bibliothèque nationale de France, Département des Estampes et de la photographie"
-        ]
+        "@none": ["Bibliothèque nationale de France, Département des Estampes et de la photographie"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Shelfmarks"
-        ]
+        "@none": ["Shelfmarks"]
       },
       "value": {
         "@none": [
@@ -59,9 +43,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Images Providers"
-        ]
+        "@none": ["Images Providers"]
       },
       "value": {
         "@none": [
@@ -72,21 +54,15 @@
     },
     {
       "label": {
-        "@none": [
-          "Manifest Provider"
-        ]
+        "@none": ["Manifest Provider"]
       },
       "value": {
-        "@none": [
-          "Equipex Biblissima"
-        ]
+        "@none": ["Equipex Biblissima"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Description"
-        ]
+        "@none": ["Description"]
       },
       "value": {
         "@none": [
@@ -96,9 +72,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Related"
-        ]
+        "@none": ["Related"]
       },
       "value": {
         "@none": [
@@ -108,9 +82,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Related"
-        ]
+        "@none": ["Related"]
       },
       "value": {
         "@none": [
@@ -120,9 +92,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Related"
-        ]
+        "@none": ["Related"]
       },
       "value": {
         "@none": [
@@ -132,9 +102,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Related"
-        ]
+        "@none": ["Related"]
       },
       "value": {
         "@none": [
@@ -145,9 +113,7 @@
   ],
   "requiredStatement": {
     "label": {
-      "@none": [
-        "Attribution"
-      ]
+      "@none": ["Attribution"]
     },
     "value": {
       "@none": [
@@ -166,9 +132,7 @@
       "id": "http://bvmm.irht.cnrs.fr/consult/consult.php?reproductionId=4490",
       "type": "Text",
       "label": {
-        "@none": [
-          "Digitized manuscript (BVMM, IRHT-CNRS)"
-        ]
+        "@none": ["Digitized manuscript (BVMM, IRHT-CNRS)"]
       }
     }
   ],
@@ -177,9 +141,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981394",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 033v - 034"
-        ]
+        "@none": ["f. 033v - 034"]
       },
       "height": 5412,
       "width": 7216,
@@ -192,9 +154,7 @@
             {
               "id": "https://example.org/uuid/e9618d7e-ed21-47ed-ad33-4206ed79762e",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0038/full/full/0/default.jpg",
                 "type": "Image",
@@ -220,9 +180,7 @@
             {
               "id": "https://example.org/uuid/59103bf1-d5b2-48f3-bcdb-757a43bd6d2b",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511139b/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -259,9 +217,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981395",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 034v - 035"
-        ]
+        "@none": ["f. 034v - 035"]
       },
       "height": 5412,
       "width": 7216,
@@ -274,9 +230,7 @@
             {
               "id": "https://example.org/uuid/cc127582-de23-45bc-b591-93f5fb2b2254",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0039/full/full/0/default.jpg",
                 "type": "Image",
@@ -302,9 +256,7 @@
             {
               "id": "https://example.org/uuid/f5c3fe24-f7c5-4866-bd81-57a66b55375f",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511139b/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -341,9 +293,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981406",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 045v - 046"
-        ]
+        "@none": ["f. 045v - 046"]
       },
       "height": 5412,
       "width": 7216,
@@ -356,9 +306,7 @@
             {
               "id": "https://example.org/uuid/8d5171ce-08cd-42fb-9af3-f8bd38b5e35b",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0050/full/full/0/default.jpg",
                 "type": "Image",
@@ -384,9 +332,7 @@
             {
               "id": "https://example.org/uuid/fd91238f-b309-4967-a864-7db8c5f855d2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111432/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -423,9 +369,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981407",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 046v - 047"
-        ]
+        "@none": ["f. 046v - 047"]
       },
       "height": 5412,
       "width": 7216,
@@ -438,9 +382,7 @@
             {
               "id": "https://example.org/uuid/001744a1-9d1c-471c-8b8d-3a300636dd8e",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0051/full/full/0/default.jpg",
                 "type": "Image",
@@ -466,9 +408,7 @@
             {
               "id": "https://example.org/uuid/b3991a64-7eec-432a-9094-5f424f2b7f92",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111432/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -505,9 +445,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981414",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 053v - 054"
-        ]
+        "@none": ["f. 053v - 054"]
       },
       "height": 5412,
       "width": 7216,
@@ -520,9 +458,7 @@
             {
               "id": "https://example.org/uuid/89fd5f39-d6ef-4e8c-aa46-9c3f78492a21",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0058/full/full/0/default.jpg",
                 "type": "Image",
@@ -548,9 +484,7 @@
             {
               "id": "https://example.org/uuid/da8acf69-1bcb-4e26-8212-2eadef54278c",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511147v/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -587,9 +521,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981415",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 054v - 055"
-        ]
+        "@none": ["f. 054v - 055"]
       },
       "height": 5412,
       "width": 7216,
@@ -602,9 +534,7 @@
             {
               "id": "https://example.org/uuid/5b3deb20-7b67-4c70-aab1-4e54e67ee9f3",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0059/full/full/0/default.jpg",
                 "type": "Image",
@@ -630,9 +560,7 @@
             {
               "id": "https://example.org/uuid/91d1b01e-6217-4487-b21b-d96171e58ec8",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511147v/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -669,9 +597,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981428",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 067v - 068"
-        ]
+        "@none": ["f. 067v - 068"]
       },
       "height": 5412,
       "width": 7216,
@@ -684,9 +610,7 @@
             {
               "id": "https://example.org/uuid/9aca10df-0da4-42ec-93f1-4c20c011e655",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0072/full/full/0/default.jpg",
                 "type": "Image",
@@ -712,9 +636,7 @@
             {
               "id": "https://example.org/uuid/a7f04eaf-2c34-45ec-a8f9-7ed818ee212c",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111504/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -751,9 +673,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981429",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 068v - 069"
-        ]
+        "@none": ["f. 068v - 069"]
       },
       "height": 5412,
       "width": 7216,
@@ -766,9 +686,7 @@
             {
               "id": "https://example.org/uuid/0edb1fac-2ad1-4a28-b0f6-5d9e3c94a8a5",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0073/full/full/0/default.jpg",
                 "type": "Image",
@@ -794,9 +712,7 @@
             {
               "id": "https://example.org/uuid/e299cb5b-9066-4e39-9fe4-16103a4c8e0c",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111504/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -833,9 +749,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981441",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 080v - 081"
-        ]
+        "@none": ["f. 080v - 081"]
       },
       "height": 5412,
       "width": 7216,
@@ -848,9 +762,7 @@
             {
               "id": "https://example.org/uuid/948c049c-d6e9-4acc-b3cb-a73bff01f02b",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0085/full/full/0/default.jpg",
                 "type": "Image",
@@ -876,9 +788,7 @@
             {
               "id": "https://example.org/uuid/552c7765-7a64-40a4-972b-0781a78710c0",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511154x/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -915,9 +825,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981442",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 081v - 082"
-        ]
+        "@none": ["f. 081v - 082"]
       },
       "height": 5412,
       "width": 7216,
@@ -930,9 +838,7 @@
             {
               "id": "https://example.org/uuid/61baeb0c-1584-46cb-8f14-e5ba856e3515",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0086/full/full/0/default.jpg",
                 "type": "Image",
@@ -958,9 +864,7 @@
             {
               "id": "https://example.org/uuid/a736cc82-c11a-44e0-928d-4d1aed795e22",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511154x/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -997,9 +901,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981445",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 084v - 085"
-        ]
+        "@none": ["f. 084v - 085"]
       },
       "height": 5412,
       "width": 7216,
@@ -1012,9 +914,7 @@
             {
               "id": "https://example.org/uuid/7afcb16a-662a-4207-b646-863827662948",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0089/full/full/0/default.jpg",
                 "type": "Image",
@@ -1040,9 +940,7 @@
             {
               "id": "https://example.org/uuid/26af6c1a-63fd-4985-a276-b0785a166bb4",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511158q/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -1079,9 +977,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981446",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 085v - 086"
-        ]
+        "@none": ["f. 085v - 086"]
       },
       "height": 5412,
       "width": 7216,
@@ -1094,9 +990,7 @@
             {
               "id": "https://example.org/uuid/4324ffe6-f99d-4522-b844-9bef382b54a4",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0090/full/full/0/default.jpg",
                 "type": "Image",
@@ -1122,9 +1016,7 @@
             {
               "id": "https://example.org/uuid/dc1c62bb-3560-4bd5-983c-d0b7bf5d70ea",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511158q/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -1161,9 +1053,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981449",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 088v - 089"
-        ]
+        "@none": ["f. 088v - 089"]
       },
       "height": 5412,
       "width": 7216,
@@ -1176,9 +1066,7 @@
             {
               "id": "https://example.org/uuid/ce4b7733-3add-4a58-8dcb-8158efbfc66e",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0093/full/full/0/default.jpg",
                 "type": "Image",
@@ -1204,9 +1092,7 @@
             {
               "id": "https://example.org/uuid/c7739be7-c274-4a1f-a30d-536ff9eb1852",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111610/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -1243,9 +1129,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981450",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 089v - 090"
-        ]
+        "@none": ["f. 089v - 090"]
       },
       "height": 5412,
       "width": 7216,
@@ -1258,9 +1142,7 @@
             {
               "id": "https://example.org/uuid/32902573-0c4d-4470-9bdd-8c67552d6e84",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0094/full/full/0/default.jpg",
                 "type": "Image",
@@ -1286,9 +1168,7 @@
             {
               "id": "https://example.org/uuid/91ee62c7-3845-4524-b357-1a58158eb3fe",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111610/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -1325,9 +1205,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981542",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 181v - 182"
-        ]
+        "@none": ["f. 181v - 182"]
       },
       "height": 5412,
       "width": 7216,
@@ -1340,9 +1218,7 @@
             {
               "id": "https://example.org/uuid/a29fb20e-5db3-4468-bddb-f766c631e53c",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0186/full/full/0/default.jpg",
                 "type": "Image",
@@ -1368,9 +1244,7 @@
             {
               "id": "https://example.org/uuid/36678d9c-c7fb-45b8-8035-82c53a8b3ad2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511164b/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -1407,9 +1281,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981543",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 182v - 183"
-        ]
+        "@none": ["f. 182v - 183"]
       },
       "height": 5412,
       "width": 7216,
@@ -1422,9 +1294,7 @@
             {
               "id": "https://example.org/uuid/6d43244a-d1e9-4dc6-8173-13eb592e2721",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0187/full/full/0/default.jpg",
                 "type": "Image",
@@ -1450,9 +1320,7 @@
             {
               "id": "https://example.org/uuid/48c645ac-68a9-4fc3-ad73-765ecd24b61c",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511164b/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -1489,9 +1357,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981549",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 188v - 189"
-        ]
+        "@none": ["f. 188v - 189"]
       },
       "height": 5412,
       "width": 7216,
@@ -1504,9 +1370,7 @@
             {
               "id": "https://example.org/uuid/2bca9afa-096e-470c-b242-9f0e2f76d343",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0193/full/full/0/default.jpg",
                 "type": "Image",
@@ -1532,9 +1396,7 @@
             {
               "id": "https://example.org/uuid/a2dc5623-8f64-4e03-a9d6-5eaab919506d",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511167p/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -1571,9 +1433,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981550",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 189v - 190"
-        ]
+        "@none": ["f. 189v - 190"]
       },
       "height": 5412,
       "width": 7216,
@@ -1586,9 +1446,7 @@
             {
               "id": "https://example.org/uuid/a9430862-1d59-4a0d-9f1c-f1fb910c20fb",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0194/full/full/0/default.jpg",
                 "type": "Image",
@@ -1614,9 +1472,7 @@
             {
               "id": "https://example.org/uuid/34de1b61-e72d-4b0d-bf5f-f355e5e84515",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511167p/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -1653,9 +1509,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981720",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 359v - 360"
-        ]
+        "@none": ["f. 359v - 360"]
       },
       "height": 5412,
       "width": 7216,
@@ -1668,9 +1522,7 @@
             {
               "id": "https://example.org/uuid/ff9a29f2-48a3-42b8-bfa0-92c695a01f1f",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0364/full/full/0/default.jpg",
                 "type": "Image",
@@ -1696,9 +1548,7 @@
             {
               "id": "https://example.org/uuid/86605cd4-07db-4fb4-884b-3c5b5e262f03",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511170z/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -1735,9 +1585,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981721",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 360v - 361"
-        ]
+        "@none": ["f. 360v - 361"]
       },
       "height": 5412,
       "width": 7216,
@@ -1750,9 +1598,7 @@
             {
               "id": "https://example.org/uuid/ec7bc4c0-df72-4811-a0b9-69a62940d5a0",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0365/full/full/0/default.jpg",
                 "type": "Image",
@@ -1778,9 +1624,7 @@
             {
               "id": "https://example.org/uuid/49e11810-2bbf-4beb-8327-75dab46c9fc8",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b10511170z/f1/full/full/0/native.jpg",
                 "type": "Image",
@@ -1817,9 +1661,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981776",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 415v - 416"
-        ]
+        "@none": ["f. 415v - 416"]
       },
       "height": 5412,
       "width": 7216,
@@ -1832,9 +1674,7 @@
             {
               "id": "https://example.org/uuid/cf96470a-3ca8-4fd6-8092-694eb65aec4d",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0420/full/full/0/default.jpg",
                 "type": "Image",
@@ -1860,9 +1700,7 @@
             {
               "id": "https://example.org/uuid/a4b0c83b-3e81-4081-84c8-de164fd05b70",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111739/f2/full/full/0/native.jpg",
                 "type": "Image",
@@ -1899,9 +1737,7 @@
       "id": "http://bvmm.irht.cnrs.fr/iiif/2309/canvas/981777",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "f. 416v - 417"
-        ]
+        "@none": ["f. 416v - 417"]
       },
       "height": 5412,
       "width": 7216,
@@ -1914,9 +1750,7 @@
             {
               "id": "https://example.org/uuid/580d867a-cd6f-4b48-b4ae-ea902dd7acda",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.irht.cnrs.fr/iiif/Châteauroux/B360446201_MS0005/jp2/B360446201_MS0005_0421/full/full/0/default.jpg",
                 "type": "Image",
@@ -1942,9 +1776,7 @@
             {
               "id": "https://example.org/uuid/4a445562-d56d-46e8-8293-b63fd31b69d9",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://gallica.bnf.fr/iiif/ark:/12148/btv1b105111739/f1/full/full/0/native.jpg",
                 "type": "Image",

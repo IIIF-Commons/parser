@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Playbill Cover with Manifest Thumbnail"
-    ]
+    "en": ["Playbill Cover with Manifest Thumbnail"]
   },
   "summary": {
     "en": [
@@ -26,24 +24,13 @@
           "profile": "level1",
           "height": 4823,
           "width": 3497,
-          "extraFormats": [
-            "png"
-          ],
-          "extraQualities": [
-            "default",
-            "color",
-            "gray"
-          ],
+          "extraFormats": ["png"],
+          "extraQualities": ["default", "color", "gray"],
           "protocol": "http://iiif.io/api/image",
           "tiles": [
             {
               "height": 512,
-              "scaleFactors": [
-                1,
-                2,
-                4,
-                8
-              ],
+              "scaleFactors": [1, 2, 4, 8],
               "width": 512
             }
           ]
@@ -56,9 +43,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/canvas/p0",
       "type": "Canvas",
       "label": {
-        "en": [
-          "front cover with color bar"
-        ]
+        "en": ["front cover with color bar"]
       },
       "height": 5312,
       "width": 4520,
@@ -71,9 +56,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/annotation/p0000-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/4f92cceb12dd53b52433425ce44308c7-ucla_bib1987273_no001_rs_001_full/full/max/0/default.jpg",
                 "type": "Image",

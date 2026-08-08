@@ -7,9 +7,7 @@
       "Outlines of geology being the substance of a course of lectures delivered in the Theatre of the Royal Institution in the year 1816"
     ]
   },
-  "behavior": [
-    "paged"
-  ],
+  "behavior": ["paged"],
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/1",
@@ -17,9 +15,7 @@
       "height": 4429,
       "width": 2533,
       "label": {
-        "en": [
-          "Front cover"
-        ]
+        "en": ["Front cover"]
       },
       "items": [
         {
@@ -56,9 +52,7 @@
       "height": 4315,
       "width": 2490,
       "label": {
-        "en": [
-          "Inside front cover"
-        ]
+        "en": ["Inside front cover"]
       },
       "items": [
         {
@@ -95,9 +89,7 @@
       "height": 4278,
       "width": 2197,
       "label": {
-        "en": [
-          "Foldout, folded"
-        ]
+        "en": ["Foldout, folded"]
       },
       "items": [
         {
@@ -131,15 +123,11 @@
     {
       "id": "https://iiif.io/api/cookbook/recipe/0035-foldouts/canvas/4",
       "type": "Canvas",
-      "behavior": [
-        "non-paged"
-      ],
+      "behavior": ["non-paged"],
       "height": 1968,
       "width": 3688,
       "label": {
-        "en": [
-          "Foldout, unfolded"
-        ]
+        "en": ["Foldout, unfolded"]
       },
       "items": [
         {
@@ -176,9 +164,7 @@
       "height": 1968,
       "width": 3688,
       "label": {
-        "en": [
-          "Foldout, folded (recto)"
-        ]
+        "en": ["Foldout, folded (recto)"]
       },
       "items": [
         {
@@ -215,9 +201,7 @@
       "height": 4315,
       "width": 2490,
       "label": {
-        "en": [
-          "Title page"
-        ]
+        "en": ["Title page"]
       },
       "items": [
         {
@@ -254,9 +238,7 @@
       "height": 4315,
       "width": 2490,
       "label": {
-        "en": [
-          "Back of title page"
-        ]
+        "en": ["Back of title page"]
       },
       "items": [
         {
@@ -293,9 +275,7 @@
       "height": 4315,
       "width": 2490,
       "label": {
-        "en": [
-          "Inside back cover"
-        ]
+        "en": ["Inside back cover"]
       },
       "items": [
         {
@@ -332,9 +312,7 @@
       "height": 4315,
       "width": 2490,
       "label": {
-        "en": [
-          "Back cover"
-        ]
+        "en": ["Back cover"]
       },
       "items": [
         {

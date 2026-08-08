@@ -1,14 +1,14 @@
-import { OmitProperties } from '../utility';
-import { TechnicalProperties } from '../iiif/technical';
-import { DescriptiveProperties } from '../iiif/descriptive';
-import { LinkingProperties } from '../iiif/linking';
-import { PagingProperties } from '../iiif/paging';
-import { Annotation } from './annotation';
-import { RightsProperties } from '../iiif/rights';
+import { OmitProperties } from "../utility";
+import { TechnicalProperties } from "../iiif/technical";
+import { DescriptiveProperties } from "../iiif/descriptive";
+import { LinkingProperties } from "../iiif/linking";
+import { PagingProperties } from "../iiif/paging";
+import { Annotation } from "./annotation";
+import { RightsProperties } from "../iiif/rights";
 
-type AnnotationListOmittedTechnical = 'format' | 'height' | 'width' | 'viewingDirection' | 'navDate';
-type AnnotationListOmittedLinking = 'startCanvas';
-type AnnotationListOmittedPaging = 'first' | 'last' | 'total';
+type AnnotationListOmittedTechnical = "format" | "height" | "width" | "viewingDirection" | "navDate";
+type AnnotationListOmittedLinking = "startCanvas";
+type AnnotationListOmittedPaging = "first" | "last" | "total";
 
 export type AnnotationListStructural = {
   resources: Annotation[];
@@ -21,7 +21,8 @@ export type AnnotationListStructural = {
  * their content with the descriptions created by others.
  */
 export interface AnnotationList
-  extends OmitProperties<TechnicalProperties, AnnotationListOmittedTechnical>,
+  extends
+    OmitProperties<TechnicalProperties, AnnotationListOmittedTechnical>,
     DescriptiveProperties,
     RightsProperties,
     AnnotationListStructural,

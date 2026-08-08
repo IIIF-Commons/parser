@@ -3,26 +3,20 @@
   "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/manifest",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Inventing Creativity"
-    ]
+    "en": ["Inventing Creativity"]
   },
   "homepage": [
     {
       "id": "https://heritage.tudelft.nl/nl/exhibitions/inventing-creativity",
       "type": "Text",
       "format": "text/html",
-      "language": [
-        "nl"
-      ]
+      "language": ["nl"]
     },
     {
       "id": "https://heritage.tudelft.nl/en/exhibitions/inventing-creativity",
       "type": "Text",
       "format": "text/html",
-      "language": [
-        "en"
-      ]
+      "language": ["en"]
     }
   ],
   "items": [
@@ -30,14 +24,9 @@
       "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Constructing the Creative Personality"
-        ]
+        "en": ["Constructing the Creative Personality"]
       },
-      "behavior": [
-        "w-6",
-        "h-6"
-      ],
+      "behavior": ["w-6", "h-6"],
       "height": 1000,
       "width": 1000,
       "duration": 0,
@@ -49,9 +38,7 @@
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/35",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "target": {
                 "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c",
                 "type": "Annotation"
@@ -60,9 +47,7 @@
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/36",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "target": {
                 "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254",
                 "type": "Annotation"
@@ -71,9 +56,7 @@
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/37",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "target": {
                 "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee",
                 "type": "Annotation"
@@ -82,9 +65,7 @@
             {
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59/annotations/38",
               "type": "Annotation",
-              "motivation": [
-                "describing"
-              ],
+              "motivation": ["describing"],
               "target": {
                 "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/742f09f4-1005-6fb1-0a56-7b2967a9c627",
                 "type": "Annotation"
@@ -102,9 +83,7 @@
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c",
               "type": "Annotation",
               "label": {
-                "en": [
-                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
-                ]
+                "en": ["Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"]
               },
               "summary": {
                 "en": [
@@ -123,15 +102,9 @@
                       "profile": [
                         "http://iiif.io/api/image/2/level0.json",
                         {
-                          "formats": [
-                            "jpg"
-                          ],
-                          "qualities": [
-                            "color"
-                          ],
-                          "supports": [
-                            "sizeByWhListed"
-                          ]
+                          "formats": ["jpg"],
+                          "qualities": ["color"],
+                          "supports": ["sizeByWhListed"]
                         }
                       ],
                       "width": 1024,
@@ -158,9 +131,7 @@
                   ]
                 }
               ],
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/92fab8fb-2fff-9abe-f901-f07122318a1c/specificResource",
                 "type": "SpecificResource",
@@ -171,9 +142,7 @@
                   "height": 6036,
                   "width": 8174,
                   "label": {
-                    "en": [
-                      "-"
-                    ]
+                    "en": ["-"]
                   },
                   "service": [
                     {
@@ -186,14 +155,7 @@
                         {
                           "width": 256,
                           "height": 256,
-                          "scaleFactors": [
-                            1,
-                            2,
-                            4,
-                            8,
-                            16,
-                            32
-                          ]
+                          "scaleFactors": [1, 2, 4, 8, 16, 32]
                         }
                       ],
                       "sizes": [
@@ -217,14 +179,8 @@
                       "profile": [
                         "http://iiif.io/api/image/2/level1.json",
                         {
-                          "formats": [
-                            "jpg"
-                          ],
-                          "qualities": [
-                            "native",
-                            "color",
-                            "gray"
-                          ],
+                          "formats": ["jpg"],
+                          "qualities": ["native", "color", "gray"],
                           "supports": [
                             "regionByPct",
                             "sizeByForcedWh",
@@ -264,9 +220,7 @@
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254",
               "type": "Annotation",
               "label": {
-                "en": [
-                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
-                ]
+                "en": ["Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"]
               },
               "summary": {
                 "en": [
@@ -285,15 +239,9 @@
                       "profile": [
                         "http://iiif.io/api/image/2/level0.json",
                         {
-                          "formats": [
-                            "jpg"
-                          ],
-                          "qualities": [
-                            "color"
-                          ],
-                          "supports": [
-                            "sizeByWhListed"
-                          ]
+                          "formats": ["jpg"],
+                          "qualities": ["color"],
+                          "supports": ["sizeByWhListed"]
                         }
                       ],
                       "width": 1024,
@@ -320,9 +268,7 @@
                   ]
                 }
               ],
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254/specificResource",
                 "type": "SpecificResource",
@@ -333,9 +279,7 @@
                   "height": 6237,
                   "width": 8713,
                   "label": {
-                    "en": [
-                      "-"
-                    ]
+                    "en": ["-"]
                   },
                   "service": [
                     {
@@ -348,15 +292,7 @@
                         {
                           "width": 256,
                           "height": 256,
-                          "scaleFactors": [
-                            1,
-                            2,
-                            4,
-                            8,
-                            16,
-                            32,
-                            64
-                          ]
+                          "scaleFactors": [1, 2, 4, 8, 16, 32, 64]
                         }
                       ],
                       "sizes": [
@@ -380,14 +316,8 @@
                       "profile": [
                         "http://iiif.io/api/image/2/level1.json",
                         {
-                          "formats": [
-                            "jpg"
-                          ],
-                          "qualities": [
-                            "native",
-                            "color",
-                            "gray"
-                          ],
+                          "formats": ["jpg"],
+                          "qualities": ["native", "color", "gray"],
                           "supports": [
                             "regionByPct",
                             "sizeByForcedWh",
@@ -427,9 +357,7 @@
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee",
               "type": "Annotation",
               "label": {
-                "en": [
-                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
-                ]
+                "en": ["Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"]
               },
               "summary": {
                 "en": [
@@ -448,15 +376,9 @@
                       "profile": [
                         "http://iiif.io/api/image/2/level0.json",
                         {
-                          "formats": [
-                            "jpg"
-                          ],
-                          "qualities": [
-                            "color"
-                          ],
-                          "supports": [
-                            "sizeByWhListed"
-                          ]
+                          "formats": ["jpg"],
+                          "qualities": ["color"],
+                          "supports": ["sizeByWhListed"]
                         }
                       ],
                       "width": 1024,
@@ -483,9 +405,7 @@
                   ]
                 }
               ],
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee/specificResource",
                 "type": "SpecificResource",
@@ -496,9 +416,7 @@
                   "height": 6452,
                   "width": 8840,
                   "label": {
-                    "en": [
-                      "-"
-                    ]
+                    "en": ["-"]
                   },
                   "service": [
                     {
@@ -511,15 +429,7 @@
                         {
                           "width": 256,
                           "height": 256,
-                          "scaleFactors": [
-                            1,
-                            2,
-                            4,
-                            8,
-                            16,
-                            32,
-                            64
-                          ]
+                          "scaleFactors": [1, 2, 4, 8, 16, 32, 64]
                         }
                       ],
                       "sizes": [
@@ -543,14 +453,8 @@
                       "profile": [
                         "http://iiif.io/api/image/2/level1.json",
                         {
-                          "formats": [
-                            "jpg"
-                          ],
-                          "qualities": [
-                            "native",
-                            "color",
-                            "gray"
-                          ],
+                          "formats": ["jpg"],
+                          "qualities": ["native", "color", "gray"],
                           "supports": [
                             "regionByPct",
                             "sizeByForcedWh",
@@ -590,9 +494,7 @@
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/742f09f4-1005-6fb1-0a56-7b2967a9c627",
               "type": "Annotation",
               "label": {
-                "en": [
-                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
-                ]
+                "en": ["Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"]
               },
               "summary": {
                 "en": [
@@ -611,15 +513,9 @@
                       "profile": [
                         "http://iiif.io/api/image/2/level0.json",
                         {
-                          "formats": [
-                            "jpg"
-                          ],
-                          "qualities": [
-                            "color"
-                          ],
-                          "supports": [
-                            "sizeByWhListed"
-                          ]
+                          "formats": ["jpg"],
+                          "qualities": ["color"],
+                          "supports": ["sizeByWhListed"]
                         }
                       ],
                       "width": 1024,
@@ -646,16 +542,12 @@
                   ]
                 }
               ],
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://dlc.services/iiif-img/7/21/00298292-8c7a-4939-b153-bef45c24160a/full/full/0/default.jpg",
                 "type": "Image",
                 "label": {
-                  "en": [
-                    "-"
-                  ]
+                  "en": ["-"]
                 },
                 "format": "image/jpeg",
                 "height": 6423,
@@ -671,15 +563,7 @@
                       {
                         "width": 256,
                         "height": 256,
-                        "scaleFactors": [
-                          1,
-                          2,
-                          4,
-                          8,
-                          16,
-                          32,
-                          64
-                        ]
+                        "scaleFactors": [1, 2, 4, 8, 16, 32, 64]
                       }
                     ],
                     "sizes": [
@@ -703,14 +587,8 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level1.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "native",
-                          "color",
-                          "gray"
-                        ],
+                        "formats": ["jpg"],
+                        "qualities": ["native", "color", "gray"],
                         "supports": [
                           "regionByPct",
                           "sizeByForcedWh",

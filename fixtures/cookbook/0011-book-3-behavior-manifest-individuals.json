@@ -7,17 +7,13 @@
       "[Conoximent de las orines] Ihesus, Ihesus. En nom de Deu et dela beneyeta sa mare e de tots los angels i archangels e de tots los sants e santes de paradis yo micer Johannes comense aquest libre de reseptes en l’ayn Mi 466."
     ]
   },
-  "behavior": [
-    "individuals"
-  ],
+  "behavior": ["individuals"],
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/v1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "inside cover; 1r"
-        ]
+        "en": ["inside cover; 1r"]
       },
       "width": 3375,
       "height": 2250,
@@ -54,9 +50,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/v2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "2v, 3r"
-        ]
+        "en": ["2v, 3r"]
       },
       "width": 3375,
       "height": 2250,
@@ -93,9 +87,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/v3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "3v, 4r"
-        ]
+        "en": ["3v, 4r"]
       },
       "width": 3375,
       "height": 2250,
@@ -132,9 +124,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0011-book-3-behavior/canvas/v4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "4v, 5r"
-        ]
+        "en": ["4v, 5r"]
       },
       "width": 3375,
       "height": 2250,

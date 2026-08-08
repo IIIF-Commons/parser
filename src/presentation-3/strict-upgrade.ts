@@ -1,6 +1,6 @@
-import type * as Presentation3 from './types';
-import { Traverse } from './traverse';
-import { removeUndefinedProperties } from '../shared/remove-undefined-properties';
+import type * as Presentation3 from "./types";
+import { Traverse } from "./traverse";
+import { removeUndefinedProperties } from "../shared/remove-undefined-properties";
 
 const validNavDate =
   /-?([1-9]\d{3,}|0\d{3})-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])T(([01]\d|2[0-3]):[0-5]\d:[0-5]\d(\.\d+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0\d|1[0-3]):[0-5]\d|14:00))?/;
@@ -16,16 +16,16 @@ function technicalProperties(
   logging: InternalLogging = globalWarnings
 ): Partial<Presentation3.TechnicalProperties> {
   if (item.behavior) {
-    item.behavior = ensureArrayWarning(item.behavior, 'behavior', logging);
+    item.behavior = ensureArrayWarning(item.behavior, "behavior", logging);
   }
 
-  item.width = ensureValidNumber(item.width, 'width', false, logging);
-  item.height = ensureValidNumber(item.height, 'height', false, logging);
-  item.duration = ensureValidNumber(item.duration, 'duration', true, logging);
+  item.width = ensureValidNumber(item.width, "width", false, logging);
+  item.height = ensureValidNumber(item.height, "height", false, logging);
+  item.duration = ensureValidNumber(item.duration, "duration", true, logging);
 
-  if (item.format && typeof item.format !== 'string') {
+  if (item.format && typeof item.format !== "string") {
     logging.warnings.push(`"format" should be a single string`);
-    if (Array.isArray(item.format) && typeof item.format[0] === 'string') {
+    if (Array.isArray(item.format) && typeof item.format[0] === "string") {
       item.format = item.format[0];
     } else {
       item.format = undefined;
@@ -77,20 +77,20 @@ function ensureValidNumber(
   isFloat = false,
   logging: InternalLogging = globalWarnings
 ): number | undefined {
-  if (typeof value === 'undefined') {
+  if (typeof value === "undefined") {
     return undefined;
   }
 
-  if (typeof value === 'string') {
+  if (typeof value === "string") {
     const newValue = isFloat ? parseFloat(value) : Math.abs(Number(value));
     if (Number.isNaN(newValue) || newValue <= 0) {
       logging.warnings.push(
-        `"${propName}" expected value to be a ${isFloat ? 'Number' : 'Integer'}, instead found an invalid value`
+        `"${propName}" expected value to be a ${isFloat ? "Number" : "Integer"}, instead found an invalid value`
       );
       return undefined;
     }
     logging.warnings.push(
-      `"${propName}" expected value to be a ${isFloat ? 'Number' : 'Integer'}, instead found a string`
+      `"${propName}" expected value to be a ${isFloat ? "Number" : "Integer"}, instead found a string`
     );
     return newValue;
   }
@@ -110,15 +110,15 @@ function ensureValidLanguageMap(
 ): Presentation3.InternationalString {
   // Handle {"label": ["an array of strings"]}
   if (Array.isArray(str)) {
-    if (typeof str[0] === 'string') {
+    if (typeof str[0] === "string") {
       logging.warnings.push(`"${propName}" should be a language map instead found a string`);
       return { none: str };
     }
     logging.warnings.push(`"${propName}" should be a language map instead found an unknown value`);
-    return { none: [''] };
+    return { none: [""] };
   }
 
-  if (typeof str === 'string') {
+  if (typeof str === "string") {
     logging.warnings.push(`"${propName}" should be a language map instead found a string`);
     return { none: [str] };
   }
@@ -130,13 +130,13 @@ function ensureValidLanguageMap(
   for (const key of keys) {
     const values = str[key] as unknown;
     const fixedItem = [];
-    if (typeof values === 'string') {
+    if (typeof values === "string") {
       didFix = true;
       logging.warnings.push(`"${propName}" values inside a language map should be an Array of strings, found a string`);
       fixedItem.push(values);
     } else if (Array.isArray(values)) {
       for (const str of values) {
-        if (!(typeof str === 'string')) {
+        if (!(typeof str === "string")) {
           didFix = true;
           logging.warnings.push(
             `"${propName}" values inside a language map should be an Array of strings, found an unknown value`
@@ -159,7 +159,7 @@ function ensureValidLanguageMap(
 
   if (didFix) {
     if (Object.keys(fixed).length === 0) {
-      return { none: [''] };
+      return { none: [""] };
     }
 
     return fixed;
@@ -171,10 +171,10 @@ function ensureValidLanguageMap(
 function validMetadataValue(
   input: Presentation3.MetadataItem,
   propName: string,
-  defaultLabel = '',
+  defaultLabel = "",
   logging: InternalLogging = globalWarnings
 ): Presentation3.MetadataItem {
-  if (typeof input === 'string') {
+  if (typeof input === "string") {
     logging.warnings.push(`"${propName}" should be a {label, value} set of Language maps`);
     return {
       label: { none: [defaultLabel] },
@@ -192,7 +192,7 @@ function validMetadataValue(
     if (input.value) {
       input.value = ensureValidLanguageMap(input.value, `${propName}.value`, logging);
     } else {
-      input.value = { none: [''] };
+      input.value = { none: [""] };
     }
   }
 
@@ -204,17 +204,17 @@ function descriptiveProperties(
   logging: InternalLogging = globalWarnings
 ): Partial<Presentation3.DescriptiveProperties> {
   if (item.label) {
-    item.label = ensureValidLanguageMap(item.label, 'label', logging);
+    item.label = ensureValidLanguageMap(item.label, "label", logging);
   }
   if (item.summary) {
-    item.summary = ensureValidLanguageMap(item.summary, 'summary', logging);
+    item.summary = ensureValidLanguageMap(item.summary, "summary", logging);
   }
 
   if (item.requiredStatement) {
     item.requiredStatement = validMetadataValue(
       item.requiredStatement,
-      'requiredStatement',
-      'Required statement',
+      "requiredStatement",
+      "Required statement",
       logging
     );
   }
@@ -222,7 +222,7 @@ function descriptiveProperties(
   if (item.metadata) {
     if (Array.isArray(item.metadata)) {
       for (let i = 0; i < item.metadata.length; i++) {
-        item.metadata[i] = validMetadataValue(item.metadata[i]!, `metadata.${i}`, '', logging);
+        item.metadata[i] = validMetadataValue(item.metadata[i]!, `metadata.${i}`, "", logging);
       }
     } else {
       logging.warnings.push(`"metadata" should be an array of {label, value} Language maps`);
@@ -233,11 +233,11 @@ function descriptiveProperties(
   if (item.rights) {
     if (Array.isArray(item.rights)) {
       logging.warnings.push(`"rights" should only contain a single string`);
-      item.rights = typeof item.rights[0] === 'string' ? item.rights[0] : '';
+      item.rights = typeof item.rights[0] === "string" ? item.rights[0] : "";
     }
-    if (typeof item.rights === 'string' && !item.rights.startsWith('http')) {
+    if (typeof item.rights === "string" && !item.rights.startsWith("http")) {
       logging.warnings.push(`"rights" should be a valid URI`);
-    } else if (typeof item.rights === 'string' && item.rights.startsWith('https')) {
+    } else if (typeof item.rights === "string" && item.rights.startsWith("https")) {
       logging.warnings.push(
         `"rights" is an informative property and should contain the http variation of the rights statement`
       );
@@ -246,55 +246,55 @@ function descriptiveProperties(
   }
 
   if (item.navDate) {
-    const trimmedNavDate = typeof item.navDate === 'string' ? item.navDate.trim() : undefined;
+    const trimmedNavDate = typeof item.navDate === "string" ? item.navDate.trim() : undefined;
     if (trimmedNavDate !== item.navDate) {
       logging.warnings.push(`"navDate" should not contain extra whitespace`);
       item.navDate = trimmedNavDate;
     }
-    if (typeof item.navDate !== 'string' || !item.navDate.match(validNavDate)) {
+    if (typeof item.navDate !== "string" || !item.navDate.match(validNavDate)) {
       logging.warnings.push(`"navDate" should be a valid XSD dateTime literal`);
       item.navDate = undefined;
     }
   }
 
   if (item.language) {
-    item.language = ensureArrayWarning(item.language, 'language', logging);
+    item.language = ensureArrayWarning(item.language, "language", logging);
     item.language = ensureArrayMatches(
       item.language,
-      (value) => (typeof value === 'string' ? undefined : `'"language" expected array of strings`),
+      (value) => (typeof value === "string" ? undefined : `'"language" expected array of strings`),
       logging
     );
   }
   if (item.accompanyingCanvas) {
-    item.accompanyingCanvas = ensureNotArrayWarning(item.accompanyingCanvas, 'accompanyingCanvas', logging);
-    if (item.accompanyingCanvas?.type !== 'Canvas') {
+    item.accompanyingCanvas = ensureNotArrayWarning(item.accompanyingCanvas, "accompanyingCanvas", logging);
+    if (item.accompanyingCanvas?.type !== "Canvas") {
       logging.warnings.push(`"accompanyingCanvas" should be a Canvas`);
     }
   }
   if (item.placeholderCanvas) {
-    item.placeholderCanvas = ensureNotArrayWarning(item.placeholderCanvas, 'placeholderCanvas', logging);
-    if (item.placeholderCanvas?.type !== 'Canvas') {
+    item.placeholderCanvas = ensureNotArrayWarning(item.placeholderCanvas, "placeholderCanvas", logging);
+    if (item.placeholderCanvas?.type !== "Canvas") {
       logging.warnings.push(`"placeholderCanvas" should be a Canvas`);
     }
   }
   if (item.thumbnail) {
-    item.thumbnail = ensureArrayWarning(item.thumbnail, 'thumbnail', logging);
+    item.thumbnail = ensureArrayWarning(item.thumbnail, "thumbnail", logging);
   }
   return item;
 }
 
 const validItemMapping: any = {
-  Manifest: 'Canvas',
-  Canvas: 'AnnotationPage',
-  AnnotationPage: 'Annotation',
+  Manifest: "Canvas",
+  Canvas: "AnnotationPage",
+  AnnotationPage: "Annotation",
 };
 
 function structuralProperties(resource: any, logging: InternalLogging = globalWarnings) {
   const type = resource.type;
   switch (type) {
-    case 'Canvas':
-    case 'AnnotationPage':
-    case 'Manifest': {
+    case "Canvas":
+    case "AnnotationPage":
+    case "Manifest": {
       if (resource && resource.items) {
         resource.items = ensureArrayMatches(
           resource.items,
@@ -316,38 +316,38 @@ function linkingProperties(
   logging: InternalLogging = globalWarnings
 ): Partial<Presentation3.LinkingProperties> {
   if (item.logo) {
-    item.logo = ensureArrayWarning(item.logo, 'logo', logging);
+    item.logo = ensureArrayWarning(item.logo, "logo", logging);
   }
   if (item.service) {
-    item.service = ensureArrayWarning(item.service, 'service', logging);
+    item.service = ensureArrayWarning(item.service, "service", logging);
   }
 
   if (item.seeAlso) {
-    item.seeAlso = ensureArrayWarning(item.seeAlso, 'seeAlso', logging);
+    item.seeAlso = ensureArrayWarning(item.seeAlso, "seeAlso", logging);
   }
 
   if (item.rendering) {
-    item.rendering = ensureArrayWarning(item.rendering, 'rendering', logging);
+    item.rendering = ensureArrayWarning(item.rendering, "rendering", logging);
   }
 
   if (item.partOf) {
-    item.partOf = ensureArrayWarning(item.partOf, 'partOf', logging);
+    item.partOf = ensureArrayWarning(item.partOf, "partOf", logging);
   }
 
   if (item.homepage) {
-    item.homepage = ensureArrayWarning(item.homepage, 'homepage', logging);
+    item.homepage = ensureArrayWarning(item.homepage, "homepage", logging);
   }
 
   if (item.services) {
-    item.services = ensureArrayWarning(item.services, 'services', logging);
+    item.services = ensureArrayWarning(item.services, "services", logging);
   }
 
   if (item.supplementary) {
-    item.supplementary = ensureArrayWarning(item.supplementary, 'supplementary', logging);
+    item.supplementary = ensureArrayWarning(item.supplementary, "supplementary", logging);
   }
 
   if (item.start) {
-    item.start = ensureNotArrayWarning(item.start, 'start', logging);
+    item.start = ensureNotArrayWarning(item.start, "start", logging);
   }
 
   return item;
@@ -359,7 +359,7 @@ function upgradeResource(state: InternalLogging) {
       return undefined;
     }
 
-    if (typeof resource === 'string') {
+    if (typeof resource === "string") {
       return resource;
     }
 

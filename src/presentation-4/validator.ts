@@ -233,9 +233,17 @@ function isTypedReferenceObject(node: any): boolean {
 
   const type = getType(node);
   if (
-    ["Collection", "CollectionPage", "Manifest", "Range", "Timeline", "Canvas", "Scene", "AnnotationCollection", "AnnotationPage"].includes(
-      type || ""
-    )
+    [
+      "Collection",
+      "CollectionPage",
+      "Manifest",
+      "Range",
+      "Timeline",
+      "Canvas",
+      "Scene",
+      "AnnotationCollection",
+      "AnnotationPage",
+    ].includes(type || "")
   ) {
     return !Object.hasOwn(node, "items");
   }
@@ -253,9 +261,7 @@ function isTypedReferenceObject(node: any): boolean {
 }
 
 function pathIsLinkedResourceValue(path: string): boolean {
-  return linkedResourceProperties.some((property) =>
-    new RegExp(`(?:^|\\.)${property}(?:\\[\\d+\\])?$`).test(path)
-  );
+  return linkedResourceProperties.some((property) => new RegExp(`(?:^|\\.)${property}(?:\\[\\d+\\])?$`).test(path));
 }
 
 function isTypedReferenceContext(node: any, path: string, parent: any): boolean {
@@ -333,8 +339,7 @@ function isRangeContainerReference(node: any, nodePath: string, parent: any): bo
 
   const type = getType(node);
   return (
-    (type === "Canvas" || type === "Timeline" || type === "Scene") &&
-    isTypedReferenceContext(node, nodePath, parent)
+    (type === "Canvas" || type === "Timeline" || type === "Scene") && isTypedReferenceContext(node, nodePath, parent)
   );
 }
 
@@ -527,11 +532,7 @@ function isCollectionMemberReference(node: any, nodePath: string, parent: any): 
 }
 
 function isTopLevelRangeReference(node: any, nodePath: string, parent: any): boolean {
-  return (
-    getType(node) === "Range" &&
-    getType(parent) === "Manifest" &&
-    isTypedReferenceContext(node, nodePath, parent)
-  );
+  return getType(node) === "Range" && getType(parent) === "Manifest" && isTypedReferenceContext(node, nodePath, parent);
 }
 
 function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {

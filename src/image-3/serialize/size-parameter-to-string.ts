@@ -1,4 +1,4 @@
-import { SizeParameter } from '../types';
+import { SizeParameter } from "../types";
 
 export function sizeParameterToString({
   max,
@@ -13,16 +13,16 @@ export function sizeParameterToString({
   const sb: string[] = [];
 
   if (upscaled) {
-    sb.push('^');
+    sb.push("^");
   }
 
   if (max) {
-    sb.push(serialiseAsFull ? 'full' : 'max');
-    return sb.join('');
+    sb.push(serialiseAsFull ? "full" : "max");
+    return sb.join("");
   }
 
   if (confined) {
-    sb.push('!');
+    sb.push("!");
   }
 
   if (percentScale) {
@@ -33,11 +33,11 @@ export function sizeParameterToString({
     sb.push(`${width}`);
   }
 
-  sb.push(',');
+  sb.push(",");
 
   if (height && version === 3) {
     sb.push(`${height}`);
   }
 
-  return sb.join('');
+  return sb.join("");
 }

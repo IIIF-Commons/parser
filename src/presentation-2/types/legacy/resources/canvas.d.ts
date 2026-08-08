@@ -1,13 +1,13 @@
-import { OmitProperties } from '../utility';
-import { TechnicalProperties } from '../iiif/technical';
-import { DescriptiveProperties } from '../iiif/descriptive';
-import { LinkingProperties } from '../iiif/linking';
-import { Annotation } from './annotation';
-import { AnnotationList } from './annotation-list';
-import { RightsProperties } from '../iiif/rights';
+import { OmitProperties } from "../utility";
+import { TechnicalProperties } from "../iiif/technical";
+import { DescriptiveProperties } from "../iiif/descriptive";
+import { LinkingProperties } from "../iiif/linking";
+import { Annotation } from "./annotation";
+import { AnnotationList } from "./annotation-list";
+import { RightsProperties } from "../iiif/rights";
 
-type CanvasOmittedTechnical = 'format' | 'viewingDirection' | 'navDate';
-type CanvasOmittedLinking = 'startCanvas';
+type CanvasOmittedTechnical = "format" | "viewingDirection" | "navDate";
+type CanvasOmittedLinking = "startCanvas";
 
 export type CanvasStructural = {
   images: Annotation[];
@@ -21,7 +21,8 @@ export type CanvasStructural = {
  * canvas and images, text and other resources are “painted” on to it.
  */
 export interface Canvas
-  extends OmitProperties<TechnicalProperties, CanvasOmittedTechnical>,
+  extends
+    OmitProperties<TechnicalProperties, CanvasOmittedTechnical>,
     DescriptiveProperties,
     RightsProperties,
     CanvasStructural,

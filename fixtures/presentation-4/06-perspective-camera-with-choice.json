@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/choice_of_cameras.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Multiple cameras without Choice"
-    ]
+    "en": ["Multiple cameras without Choice"]
   },
   "summary": {
     "en": [
@@ -24,9 +22,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",
@@ -40,41 +36,51 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://example.org/iiif/3d/cameras/1",
                 "type": "PerspectiveCamera",
+                "fieldOfView": 50,
+                "lookAt": {
+                  "id": "https://example.org/iiif/3d/anno1",
+                  "type": "Annotation"
+                },
                 "label": {
-                  "en": [
-                    "Perspective Camera 1"
-                  ]
+                  "en": ["Perspective Camera 1"]
                 }
               },
               "target": {
-                "id": "https://example.org/iiif/scene1/page/p1/1",
-                "type": "Scene"
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                },
+                "selector": [{ "type": "PointSelector", "x": 0, "y": 2, "z": 8 }]
               }
             },
             {
               "id": "https://example.org/iiif/3d/anno3",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://example.org/iiif/3d/cameras/2",
                 "type": "OrthographicCamera",
+                "viewHeight": 5,
+                "lookAt": {
+                  "id": "https://example.org/iiif/3d/anno1",
+                  "type": "Annotation"
+                },
                 "label": {
-                  "en": [
-                    "Orthographic Camera 1"
-                  ]
+                  "en": ["Orthographic Camera 1"]
                 }
               },
               "target": {
-                "id": "https://example.org/iiif/scene1/page/p1/1",
-                "type": "Scene"
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://example.org/iiif/scene1/page/p1/1",
+                  "type": "Scene"
+                },
+                "selector": [{ "type": "PointSelector", "x": 4, "y": 2, "z": 4 }]
               }
             }
           ]

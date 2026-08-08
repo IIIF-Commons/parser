@@ -2,9 +2,7 @@
   "@context": "http://iiif.io/api/presentation/3/context.json",
   "id": "https://iiif.io/api/cookbook/recipe/0540-link-for-opening-multiple-canvases/annotation.json",
   "type": "Annotation",
-  "motivation": [
-    "contentState"
-  ],
+  "motivation": ["contentState"],
   "target": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0540-link-for-opening-multiple-canvases/canvas/2",

@@ -28,9 +28,7 @@
         "@none": ["Available Online"]
       },
       "value": {
-        "@none": [
-          "<a href='https://purl.stanford.edu/qm670kv1873'>https://purl.stanford.edu/qm670kv1873</a>"
-        ]
+        "@none": ["<a href='https://purl.stanford.edu/qm670kv1873'>https://purl.stanford.edu/qm670kv1873</a>"]
       }
     },
     {
@@ -410,9 +408,7 @@
         "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Full-page miniature on fol. 108v; historiated initial \"D,\" fol. 109r"
-        ]
+        "@none": ["Full-page miniature on fol. 108v; historiated initial \"D,\" fol. 109r"]
       }
     },
     {
@@ -430,9 +426,7 @@
         "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Full-page miniature on fol. 128v; historiated initial \"D,\" fol. 129r"
-        ]
+        "@none": ["Full-page miniature on fol. 128v; historiated initial \"D,\" fol. 129r"]
       }
     },
     {
@@ -440,9 +434,7 @@
         "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Full-page miniature on fol. 148v; historiated initial \"D,\" fol. 149r"
-        ]
+        "@none": ["Full-page miniature on fol. 148v; historiated initial \"D,\" fol. 149r"]
       }
     },
     {
@@ -450,9 +442,7 @@
         "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Full-page miniature on fol. 166v; historiated initial \"D,\" fol. 167r"
-        ]
+        "@none": ["Full-page miniature on fol. 166v; historiated initial \"D,\" fol. 167r"]
       }
     },
     {
@@ -460,9 +450,7 @@
         "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Historiated initials on fols. 213r, 213v, 214v, 215v, 216v, 217v, 218v, 221r, 222r, and 222v"
-        ]
+        "@none": ["Historiated initials on fols. 213r, 213v, 214v, 215v, 216v, 217v, 218v, 221r, 222r, and 222v"]
       }
     },
     {
@@ -788,9 +776,7 @@
         "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Second quarter of the 15th century (ca. 1430-35), with additions ca. 1460"
-        ]
+        "@none": ["Second quarter of the 15th century (ca. 1430-35), with additions ca. 1460"]
       }
     },
     {
@@ -17820,8 +17806,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

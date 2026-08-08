@@ -1,8 +1,6 @@
 {
   "label": {
-    "@none": [
-      "Aa, Admont, Benediktinerstift Admont Bibliothek & Museum, Admont MS 43"
-    ]
+    "@none": ["Aa, Admont, Benediktinerstift Admont Bibliothek & Museum, Admont MS 43"]
   },
   "metadata": [
     {
@@ -14396,8 +14394,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

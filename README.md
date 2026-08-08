@@ -148,10 +148,7 @@ Presentation 3 Canvases, including their identities and references:
 
 ```ts
 import { normalize } from "@iiif/parser";
-import {
-  getPresentation3CompatibilityDiagnostics,
-  Presentation4CompatibilityError,
-} from "@iiif/parser/upgrader";
+import { getPresentation3CompatibilityDiagnostics, Presentation4CompatibilityError } from "@iiif/parser/upgrader";
 
 const diagnostics = getPresentation3CompatibilityDiagnostics(input);
 if (diagnostics.length) {
@@ -284,10 +281,7 @@ const supportsSizes = supports(imageService, {
 Upgrades IIIF JSON to the latest IIIF Presentation version (current: 3).
 
 ```ts
-import {
-  getPresentation3CompatibilityDiagnostics,
-  upgrade,
-} from "@iiif/parser/upgrader";
+import { getPresentation3CompatibilityDiagnostics, upgrade } from "@iiif/parser/upgrader";
 
 upgrade(presentation2Manifest); // Presentation 3 Manifest or Collection
 

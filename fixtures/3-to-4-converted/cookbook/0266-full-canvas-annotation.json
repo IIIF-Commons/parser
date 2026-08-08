@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Picture of Göttingen taken during the 2019 IIIF Conference"
-    ]
+    "en": ["Picture of Göttingen taken during the 2019 IIIF Conference"]
   },
   "items": [
     {
@@ -22,16 +20,12 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-2/anno-1",
               "type": "Annotation",
-              "motivation": [
-                "commenting"
-              ],
+              "motivation": ["commenting"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/plain",
                 "value": "Göttinger Marktplatz mit Gänseliesel Brunnen",
-                "language": [
-                  "de"
-                ]
+                "language": ["de"]
               },
               "target": {
                 "type": "SpecificResource",
@@ -52,9 +46,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/canvas-1/annopage-1/anno-1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
                 "type": "Image",

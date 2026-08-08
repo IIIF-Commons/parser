@@ -1,8 +1,6 @@
 {
   "label": {
-    "@none": [
-      "La Surprise (1718–1719), Jean-Antoine Watteau (French, 1684 - 1721)"
-    ]
+    "@none": ["La Surprise (1718–1719), Jean-Antoine Watteau (French, 1684 - 1721)"]
   },
   "metadata": [
     {
@@ -66,9 +64,7 @@
         "@none": ["Collection"]
       },
       "value": {
-        "@none": [
-          "<a href='http://www.getty.edu/art/collection/' target='_blank'>The J. Paul Getty Museum</a>"
-        ]
+        "@none": ["<a href='http://www.getty.edu/art/collection/' target='_blank'>The J. Paul Getty Museum</a>"]
       }
     },
     {
@@ -125,10 +121,12 @@
       ]
     }
   },
-  "homepage": [{
-    "id": "https://www.getty.edu/art/collection/objects/298147/jean-antoine-watteau-la-surprise-french-1718-1719/",
-    "type": "Text"
-  }],
+  "homepage": [
+    {
+      "id": "https://www.getty.edu/art/collection/objects/298147/jean-antoine-watteau-la-surprise-french-1718-1719/",
+      "type": "Text"
+    }
+  ],
   "partOf": [
     {
       "id": "http://www.getty.edu/art/collection/",
@@ -180,8 +178,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

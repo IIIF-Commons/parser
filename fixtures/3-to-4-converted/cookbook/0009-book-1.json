@@ -3,21 +3,15 @@
   "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Simple Manifest - Book"
-    ]
+    "en": ["Simple Manifest - Book"]
   },
-  "behavior": [
-    "paged"
-  ],
+  "behavior": ["paged"],
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Blank page"
-        ]
+        "en": ["Blank page"]
       },
       "height": 4613,
       "width": 3204,
@@ -30,9 +24,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0001-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f18/full/max/0/default.jpg",
                 "type": "Image",
@@ -63,9 +55,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/canvas/p2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Frontispiece"
-        ]
+        "en": ["Frontispiece"]
       },
       "height": 4612,
       "width": 3186,
@@ -78,9 +68,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0002-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f19/full/max/0/default.jpg",
                 "type": "Image",
@@ -111,9 +99,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/canvas/p3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Title page"
-        ]
+        "en": ["Title page"]
       },
       "height": 4613,
       "width": 3204,
@@ -126,9 +112,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0003-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f20/full/max/0/default.jpg",
                 "type": "Image",
@@ -159,9 +143,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/canvas/p4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Blank page"
-        ]
+        "en": ["Blank page"]
       },
       "height": 4578,
       "width": 3174,
@@ -174,9 +156,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0004-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f21/full/max/0/default.jpg",
                 "type": "Image",
@@ -207,9 +187,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/canvas/p5",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Bookplate"
-        ]
+        "en": ["Bookplate"]
       },
       "height": 4632,
       "width": 3198,
@@ -222,9 +200,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0009-book-1/annotation/p0005-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/59d09e6773341f28ea166e9f3c1e674f-gallica_ark_12148_bpt6k1526005v_f22/full/max/0/default.jpg",
                 "type": "Image",

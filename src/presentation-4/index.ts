@@ -7,5 +7,6 @@ export * from "./serialize-presentation-3";
 export * from "./serialize-presentation-4";
 export * from "./traverse";
 export * from "./types";
+export { infer } from "./types";
 export * from "./upgrade";
 export * from "./utilities";

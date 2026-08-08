@@ -3,12 +3,8 @@
   "id": "https://iiif.io/api/cookbook/recipe/0346-multilingual-annotation-body/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Koto, chess, calligraphy, and painting"
-    ],
-    "ja": [
-      "琴棋書画図屏風"
-    ]
+    "en": ["Koto, chess, calligraphy, and painting"],
+    "ja": ["琴棋書画図屏風"]
   },
   "items": [
     {

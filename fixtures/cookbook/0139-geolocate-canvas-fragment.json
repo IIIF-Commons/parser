@@ -6,9 +6,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Recipe Manifest for #139"
-    ]
+    "en": ["Recipe Manifest for #139"]
   },
   "summary": {
     "en": [
@@ -20,9 +18,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0139-geolocate-canvas-fragment/canvas.json",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Chesapeake and Ohio Canal Pamphlet"
-        ]
+        "en": ["Chesapeake and Ohio Canal Pamphlet"]
       },
       "width": 5212,
       "height": 7072,
@@ -68,31 +64,17 @@
                 "type": "Feature",
                 "properties": {
                   "label": {
-                    "en": [
-                      "Targeted Map from Chesapeake and Ohio Canal Pamphlet"
-                    ]
+                    "en": ["Targeted Map from Chesapeake and Ohio Canal Pamphlet"]
                   }
                 },
                 "geometry": {
                   "type": "Polygon",
                   "coordinates": [
                     [
-                      [
-                        -77.019853,
-                        38.913101
-                      ],
-                      [
-                        -77.110013,
-                        38.843254
-                      ],
-                      [
-                        -77.284698,
-                        38.997574
-                      ],
-                      [
-                        -77.188911,
-                        39.062648
-                      ]
+                      [-77.019853, 38.913101],
+                      [-77.110013, 38.843254],
+                      [-77.284698, 38.997574],
+                      [-77.188911, 39.062648]
                     ]
                   ]
                 }

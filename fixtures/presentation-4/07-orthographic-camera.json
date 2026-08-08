@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/orthographic_camera.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Orthographic Camera"
-    ]
+    "en": ["Orthographic Camera"]
   },
   "summary": {
     "en": [
@@ -24,9 +22,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",
@@ -40,23 +36,17 @@
             {
               "id": "https://example.org/iiif/3d/anno3",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://example.org/iiif/3d/cameras/2",
                 "type": "OrthographicCamera",
                 "label": {
-                  "en": [
-                    "Orthographic Camera 1"
-                  ]
+                  "en": ["Orthographic Camera 1"]
                 },
                 "lookAt": {
                   "id": "https://example.org/iiif/3d/anno1",
                   "type": "Annotation",
-                  "motivation": [
-                    "painting"
-                  ],
+                  "motivation": ["painting"],
                   "body": {
                     "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                     "type": "Model",

@@ -1,14 +1,14 @@
-import type { ImageService } from '../../presentation-3/types';
-import { extraFeatures, Profile } from './profiles';
-import { isImageService } from '../utilities/is-image-service';
-import { combineProfiles } from './combine-profiles';
+import type { ImageService } from "../../presentation-3/types";
+import { extraFeatures, Profile } from "./profiles";
+import { isImageService } from "../utilities/is-image-service";
+import { combineProfiles } from "./combine-profiles";
 
 export function supports(
   service: ImageService,
   req: Partial<Profile> & { exactSize?: { width?: number; height?: number } }
 ) {
   if (!isImageService(service)) {
-    return [false, 'Not a valid image service'] as const;
+    return [false, "Not a valid image service"] as const;
   }
 
   req.extraFeatures = req.extraFeatures ? req.extraFeatures : [];
@@ -21,14 +21,14 @@ export function supports(
     if (service.sizes) {
       for (const size of service.sizes) {
         if (size.width && size.width === req.exactSize.width) {
-          if (extraFeatures.indexOf('sizeByW') !== -1) {
+          if (extraFeatures.indexOf("sizeByW") !== -1) {
             valid = true;
           } else if (size.height && size.height === req.exactSize.height) {
             valid = true;
           }
         }
         if (size.height && size.height === req.exactSize.height) {
-          if (extraFeatures.indexOf('sizeByH') !== -1) {
+          if (extraFeatures.indexOf("sizeByH") !== -1) {
             valid = true;
           } else if (size.width && size.width === req.exactSize.width) {
             valid = true;
@@ -47,12 +47,12 @@ export function supports(
         ) || undefined;
 
       if (!req.exactSize.height && req.exactSize.width) {
-        if (req.extraFeatures.indexOf('sizeByW') === -1) {
-          req.extraFeatures.push('sizeByW');
+        if (req.extraFeatures.indexOf("sizeByW") === -1) {
+          req.extraFeatures.push("sizeByW");
         }
       } else if (!req.exactSize.width && req.exactSize.height) {
-        if (req.extraFeatures.indexOf('sizeByH') === -1) {
-          req.extraFeatures.push('sizeByH');
+        if (req.extraFeatures.indexOf("sizeByH") === -1) {
+          req.extraFeatures.push("sizeByH");
         }
       }
     }
@@ -78,7 +78,7 @@ export function supports(
       }
     }
     if (missingFeatures.length) {
-      return [false, `Missing features: ${missingFeatures.join(', ')}`] as const;
+      return [false, `Missing features: ${missingFeatures.join(", ")}`] as const;
     }
   }
 
@@ -90,7 +90,7 @@ export function supports(
       }
     }
     if (missingFormats.length) {
-      return [false, `Missing formats: ${missingFormats.join(', ')}`] as const;
+      return [false, `Missing formats: ${missingFormats.join(", ")}`] as const;
     }
   }
 
@@ -102,7 +102,7 @@ export function supports(
       }
     }
     if (missingQualities.length) {
-      return [false, `Missing qualities: ${missingQualities.join(', ')}`] as const;
+      return [false, `Missing qualities: ${missingQualities.join(", ")}`] as const;
     }
   }
 

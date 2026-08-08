@@ -3,9 +3,7 @@
   "id": "http://iiif.io/api/presentation/2.1/example/fixtures/1/manifest.json",
   "type": "Manifest",
   "label": {
-    "@none": [
-      "Test 1 Manifest: Minimum Required Fields"
-    ]
+    "@none": ["Test 1 Manifest: Minimum Required Fields"]
   },
   "partOf": [
     {
@@ -18,9 +16,7 @@
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/canvas/1/c1.json",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "Test 1 Canvas: 1"
-        ]
+        "@none": ["Test 1 Canvas: 1"]
       },
       "height": 1800,
       "width": 1200,
@@ -33,9 +29,7 @@
             {
               "id": "https://example.org/uuid/3644c005-bf7a-48d0-9fa9-1e1757bf8df1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
                 "type": "Image",

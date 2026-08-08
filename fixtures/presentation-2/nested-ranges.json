@@ -15,7 +15,10 @@
     },
     { "label": "Other Titles", "value": "First Folio" },
     { "label": "Other Titles", "value": "Plays" },
-    { "label": "Other Titles", "value": "Mr. VVilliam Shakespeares comedies, histories, & tragedies" },
+    {
+      "label": "Other Titles",
+      "value": "Mr. VVilliam Shakespeares comedies, histories, & tragedies"
+    },
     { "label": "Shelfmark", "value": "Bodleian Library Arch. G c.7" },
     { "label": "Author", "value": "Heminge, John, approximately 1556-1630" },
     { "label": "Author", "value": "Shakespeare, William, 1564-1616" },
@@ -112,7 +115,10 @@
     { "label": "Other Identifier", "value": "Aleph Control Number: 015592789" },
     { "label": "Record Created", "value": "2016-04-07T17:48:28Z" },
     { "label": "Holding Institution", "value": "Bodleian Libraries, University of Oxford" },
-    { "label": "Digitization Sponsor", "value": "<span>The donors to the Sprint for Shakespeare campaign</span>" }
+    {
+      "label": "Digitization Sponsor",
+      "value": "<span>The donors to the Sprint for Shakespeare campaign</span>"
+    }
   ],
   "navDate": "1623-01-01T00:00:00Z",
   "rendering": {
@@ -25143,7 +25149,10 @@
       "label": "To the Memorie of the deceaſed Authour Maiſter W. Shakespeare.",
       "canvases": ["https://iiif.bodleian.ox.ac.uk/iiif/canvas/20b95ac7-40b2-4e00-818d-86152acb8a74.json"],
       "metadata": [
-        { "label": "Titles", "value": "To the Memorie of the deceaſed Authour Maiſter W. Shakespeare." },
+        {
+          "label": "Titles",
+          "value": "To the Memorie of the deceaſed Authour Maiſter W. Shakespeare."
+        },
         { "label": "Image Range", "value": "[Digges poem recto]" },
         { "label": "Author", "value": "Digges, Leonard, 1588-1635" }
       ],
@@ -29235,7 +29244,10 @@
       "canvases": [],
       "ranges": ["https://iiif.bodleian.ox.ac.uk/iiif/range/390fd0e8-9eae-475d-9564-ed916ab9035c/LOG_0280"],
       "metadata": [
-        { "label": "Titles", "value": "The ſecond Part of Henry the Sixt, with the death of the Good Duke Hvmfrey." },
+        {
+          "label": "Titles",
+          "value": "The ſecond Part of Henry the Sixt, with the death of the Good Duke Hvmfrey."
+        },
         { "label": "Image Range", "value": "fol. m2v–fol. o3v" }
       ],
       "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/09b44bb5-ce9e-4ea6-b59b-2b0b58e78b61.json"
@@ -29286,7 +29298,10 @@
       "canvases": [],
       "ranges": ["https://iiif.bodleian.ox.ac.uk/iiif/range/390fd0e8-9eae-475d-9564-ed916ab9035c/LOG_0282"],
       "metadata": [
-        { "label": "Titles", "value": "The third Part of Henry the Sixt, with the death of the Duke of Yorke." },
+        {
+          "label": "Titles",
+          "value": "The third Part of Henry the Sixt, with the death of the Duke of Yorke."
+        },
         { "label": "Image Range", "value": "fol. o4r–fol. q4v" }
       ],
       "startCanvas": "https://iiif.bodleian.ox.ac.uk/iiif/canvas/45778a2f-6cc6-4bfd-815e-4aeb3ddee222.json"

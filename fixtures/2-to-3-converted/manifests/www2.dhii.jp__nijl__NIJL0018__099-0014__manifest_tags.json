@@ -24,9 +24,7 @@
         "@none": ["Source"]
       },
       "value": {
-        "@none": [
-          "From: IDR in NII http://www.nii.ac.jp/dsc/idr/nijl/nijl.html"
-        ]
+        "@none": ["From: IDR in NII http://www.nii.ac.jp/dsc/idr/nijl/nijl.html"]
       }
     },
     {
@@ -63,11 +61,13 @@
     }
   },
   "behavior": ["paged"],
-  "homepage": [{
-    "format": "text/html",
-    "type": "Text",
-    "id": "http://www.nii.ac.jp/dsc/idr/nijl/nijl.html"
-  }],
+  "homepage": [
+    {
+      "format": "text/html",
+      "type": "Text",
+      "id": "http://www.nii.ac.jp/dsc/idr/nijl/nijl.html"
+    }
+  ],
   "partOf": [
     {
       "id": "http://www.nii.ac.jp/dsc/idr/nijl/nijl.html",
@@ -2148,8 +2148,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

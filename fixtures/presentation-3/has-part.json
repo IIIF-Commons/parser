@@ -3,18 +3,14 @@
   "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Picture of Göttingen taken during the 2019 IIIF Conference"
-    ]
+    "en": ["Picture of Göttingen taken during the 2019 IIIF Conference"]
   },
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0005-image-service/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Canvas with a single IIIF image"
-        ]
+        "en": ["Canvas with a single IIIF image"]
       },
       "thumbnail": [
         {

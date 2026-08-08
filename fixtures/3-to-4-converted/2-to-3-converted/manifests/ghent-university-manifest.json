@@ -3,16 +3,12 @@
   "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91",
   "type": "Manifest",
   "label": {
-    "@none": [
-      "Document uit het archief van de dichter Dioskoros van Aphrodite (?)[manuscript]"
-    ]
+    "@none": ["Document uit het archief van de dichter Dioskoros van Aphrodite (?)[manuscript]"]
   },
   "metadata": [
     {
       "label": {
-        "@none": [
-          "Record"
-        ]
+        "@none": ["Record"]
       },
       "value": {
         "@none": [
@@ -22,69 +18,47 @@
     },
     {
       "label": {
-        "@none": [
-          "Title"
-        ]
+        "@none": ["Title"]
       },
       "value": {
-        "@none": [
-          "[papyrus] Document uit het archief van de dichter Dioskoros van Aphrodite (?)."
-        ]
+        "@none": ["[papyrus] Document uit het archief van de dichter Dioskoros van Aphrodite (?)."]
       }
     },
     {
       "label": {
-        "@none": [
-          "Description"
-        ]
+        "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "34 regels ; 29 x 72,5 cm."
-        ]
+        "@none": ["34 regels ; 29 x 72,5 cm."]
       }
     },
     {
       "label": {
-        "@none": [
-          "Description"
-        ]
+        "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Papyrus"
-        ]
+        "@none": ["Papyrus"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Publisher"
-        ]
+        "@none": ["Publisher"]
       },
       "value": {
-        "@none": [
-          "537-538?"
-        ]
+        "@none": ["537-538?"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Provenance"
-        ]
+        "@none": ["Provenance"]
       },
       "value": {
-        "@none": [
-          "BHSL.PAP.000044 Herkomst: Aphroditô"
-        ]
+        "@none": ["BHSL.PAP.000044 Herkomst: Aphroditô"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Contents"
-        ]
+        "@none": ["Contents"]
       },
       "value": {
         "@none": [
@@ -94,21 +68,15 @@
     },
     {
       "label": {
-        "@none": [
-          "Object ID"
-        ]
+        "@none": ["Object ID"]
       },
       "value": {
-        "@none": [
-          "archive.ugent.be:4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"
-        ]
+        "@none": ["archive.ugent.be:4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Description"
-        ]
+        "@none": ["Description"]
       },
       "value": {
         "@none": [
@@ -119,14 +87,10 @@
   ],
   "requiredStatement": {
     "label": {
-      "@none": [
-        "Attribution"
-      ]
+      "@none": ["Attribution"]
     },
     "value": {
-      "@none": [
-        "Provided by Ghent University Library"
-      ]
+      "@none": ["Provided by Ghent University Library"]
     }
   },
   "rights": "http://rightsstatements.org/vocab/UND/1.0/",
@@ -155,20 +119,14 @@
       "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "1"
-        ]
+        "@none": ["1"]
       },
       "requiredStatement": {
         "label": {
-          "@none": [
-            "Attribution"
-          ]
+          "@none": ["Attribution"]
         },
         "value": {
-          "@none": [
-            "Provided by Ghent University Library"
-          ]
+          "@none": ["Provided by Ghent University Library"]
         }
       },
       "rights": "http://rightsstatements.org/vocab/UND/1.0/",
@@ -186,9 +144,7 @@
           "id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1&svc_id=original",
           "type": "Image",
           "label": {
-            "@none": [
-              "Download as jpeg2000 (78.77 MB)"
-            ]
+            "@none": ["Download as jpeg2000 (78.77 MB)"]
           },
           "format": "image/jp2"
         }
@@ -201,16 +157,12 @@
             {
               "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.1/image-annotations/0",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.1/full/full/0/native.jpg",
                 "type": "Image",
                 "label": {
-                  "@none": [
-                    "BHSL-PAP-000044_2010_0001_AC.jp2"
-                  ]
+                  "@none": ["BHSL-PAP-000044_2010_0001_AC.jp2"]
                 },
                 "format": "image/jpeg",
                 "height": 15076,
@@ -239,20 +191,14 @@
       "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "2"
-        ]
+        "@none": ["2"]
       },
       "requiredStatement": {
         "label": {
-          "@none": [
-            "Attribution"
-          ]
+          "@none": ["Attribution"]
         },
         "value": {
-          "@none": [
-            "Provided by Ghent University Library"
-          ]
+          "@none": ["Provided by Ghent University Library"]
         }
       },
       "rights": "http://rightsstatements.org/vocab/UND/1.0/",
@@ -270,9 +216,7 @@
           "id": "http://adore.ugent.be/OpenURL/resolve?rft_id=archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3&svc_id=original",
           "type": "Image",
           "label": {
-            "@none": [
-              "Download as jpeg2000 (78.29 MB)"
-            ]
+            "@none": ["Download as jpeg2000 (78.29 MB)"]
           },
           "format": "image/jp2"
         }
@@ -285,16 +229,12 @@
             {
               "id": "http://adore.ugent.be/IIIF/manifests/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91/canvases/DS.3/image-annotations/0",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://adore.ugent.be/IIIF/images/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91%3ADS.3/full/full/0/native.jpg",
                 "type": "Image",
                 "label": {
-                  "@none": [
-                    "BHSL-PAP-000044_2010_0002_AC.jp2"
-                  ]
+                  "@none": ["BHSL-PAP-000044_2010_0002_AC.jp2"]
                 },
                 "format": "image/jpeg",
                 "height": 15036,

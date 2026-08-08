@@ -227,15 +227,13 @@ function coerceAnnotation(annotation: any, typeLookup: TypeLookup, fallbackTarge
   annotation.motivation = ensureArray(annotation.motivation);
   if (Array.isArray(annotation.body)) {
     const items = annotation.body.filter((item: any) => item !== null && typeof item !== "undefined");
-    annotation.body =
-      items.length > 1 ? { type: "Independents", items } : items.length === 1 ? items[0] : undefined;
+    annotation.body = items.length > 1 ? { type: "Independents", items } : items.length === 1 ? items[0] : undefined;
   }
   if (Array.isArray(annotation.target)) {
     const items = annotation.target
       .filter((item: any) => item !== null && typeof item !== "undefined")
       .map((target: any) => coerceAnnotationTarget(target, typeLookup, fallbackTargetType));
-    annotation.target =
-      items.length > 1 ? { type: "Independents", items } : items.length === 1 ? items[0] : undefined;
+    annotation.target = items.length > 1 ? { type: "Independents", items } : items.length === 1 ? items[0] : undefined;
   } else if (
     isPlainObject(annotation.target) &&
     ["Choice", "Composite", "List", "Independents"].includes(getType(annotation.target) || "") &&

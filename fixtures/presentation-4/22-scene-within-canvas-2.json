@@ -3,23 +3,17 @@
   "id": "https://example.org/iiif/3d/model_origin.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Scene with a Canvas"
-    ]
+    "en": ["Scene with a Canvas"]
   },
   "summary": {
-    "en": [
-      "..."
-    ]
+    "en": ["..."]
   },
   "items": [
     {
       "id": "https://example.org/iiif/scene1",
       "type": "Scene",
       "label": {
-        "en": [
-          "A Scene"
-        ]
+        "en": ["A Scene"]
       },
       "items": [
         {
@@ -29,9 +23,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "type": "List",
                 "items": [
@@ -73,16 +65,12 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://example.org/iiif/canvas/1",
                 "type": "Canvas",
                 "label": {
-                  "en": [
-                    "Painting"
-                  ]
+                  "en": ["Painting"]
                 },
                 "height": 28273,
                 "width": 21687,
@@ -95,9 +83,7 @@
                       {
                         "id": "https://example.org/iiif/3d/anno1",
                         "type": "Annotation",
-                        "motivation": [
-                          "painting"
-                        ],
+                        "motivation": ["painting"],
                         "body": {
                           "type": "List",
                           "items": [
@@ -164,9 +150,7 @@
       "id": "https://example.org/iiif/canvas/1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Painting"
-        ]
+        "en": ["Painting"]
       },
       "height": 28273,
       "width": 21687,
@@ -179,9 +163,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "type": "List",
                 "items": [
@@ -229,9 +211,7 @@
     {
       "id": "https://example.org/iiif/ranges/1",
       "type": "Range",
-      "behavior": [
-        "sequence"
-      ],
+      "behavior": ["sequence"],
       "items": [
         {
           "id": "https://example.org/iiif/scene1/page/p1/1",

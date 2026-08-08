@@ -1,13 +1,13 @@
-import { OmitProperties } from '../utility';
-import { TechnicalProperties } from '../iiif/technical';
-import { DescriptiveProperties } from '../iiif/descriptive';
-import { Sequence } from './sequence';
-import { LinkingProperties } from '../iiif/linking';
-import { Range } from './range';
-import { RightsProperties } from '../iiif/rights';
+import { OmitProperties } from "../utility";
+import { TechnicalProperties } from "../iiif/technical";
+import { DescriptiveProperties } from "../iiif/descriptive";
+import { Sequence } from "./sequence";
+import { LinkingProperties } from "../iiif/linking";
+import { Range } from "./range";
+import { RightsProperties } from "../iiif/rights";
 
-type ManifestOmittedTechnical = 'format' | 'height' | 'width';
-type ManifestOmittedLinking = 'startCanvas';
+type ManifestOmittedTechnical = "format" | "height" | "width";
+type ManifestOmittedLinking = "startCanvas";
 
 type ManifestTechnical = OmitProperties<TechnicalProperties, ManifestOmittedTechnical>;
 export type ManifestStructural = {
@@ -51,8 +51,4 @@ type ManifestLinking = OmitProperties<LinkingProperties, ManifestOmittedLinking>
  * multiple entries with a single field and how to be explicit about the language of a particular entry.
  */
 export interface Manifest
-  extends ManifestTechnical,
-    DescriptiveProperties,
-    RightsProperties,
-    ManifestStructural,
-    Partial<ManifestLinking> {}
+  extends ManifestTechnical, DescriptiveProperties, RightsProperties, ManifestStructural, Partial<ManifestLinking> {}

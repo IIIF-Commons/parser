@@ -3,9 +3,7 @@
   "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Simplest Image Example (IIIF Presentation v4)"
-    ]
+    "en": ["Simplest Image Example (IIIF Presentation v4)"]
   },
   "items": [
     {
@@ -21,9 +19,7 @@
             {
               "id": "https://preview.iiif.io/cookbook/v4/recipe/0001-mvm-image/v4/annotation/p0001-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "http://iiif.io/api/presentation/2.1/example/fixtures/resources/page1-full.png",
                 "type": "Image",

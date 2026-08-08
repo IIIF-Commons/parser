@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/whale_comment.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Whale Cranium and Mandible with Point Comment Annotation"
-    ]
+    "en": ["Whale Cranium and Mandible with Point Comment Annotation"]
   },
   "summary": {
     "en": [
@@ -17,9 +15,7 @@
       "id": "https://example.org/iiif/scene1",
       "type": "Scene",
       "label": {
-        "en": [
-          "A Scene Containing a Whale Cranium and Mandible"
-        ]
+        "en": ["A Scene Containing a Whale Cranium and Mandible"]
       },
       "annotations": [
         {
@@ -29,11 +25,12 @@
             {
               "id": "https://example.org/iiif/3d/anno3",
               "type": "Annotation",
-              "motivation": [
-                "commenting"
-              ],
+              "motivation": ["commenting"],
               "body": {
-                "type": "TextualBody"
+                "type": "TextualBody",
+                "value": "Right pterygoid hamulus: a hook-like process on the underside of the cranium.",
+                "format": "text/plain",
+                "language": "en"
               },
               "target": {
                 "type": "SpecificResource",
@@ -64,9 +61,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_mandible.glb",
                 "type": "Model",
@@ -93,9 +88,7 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/whale/whale_cranium.glb",
                 "type": "Model",

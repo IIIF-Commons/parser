@@ -1,6 +1,6 @@
-import { ResourceProvider } from '../resources/provider';
-import { Canvas } from '../resources/canvas';
-import { ContentResource } from '../resources/contentResource';
+import { ResourceProvider } from "../resources/provider";
+import { Canvas } from "../resources/canvas";
+import { ContentResource } from "../resources/contentResource";
 
 export type InternationalString = {
   [language: string]: string[] | undefined;

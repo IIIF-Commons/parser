@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Playbill Cover with Manifest Thumbnail"
-    ]
+    "en": ["Playbill Cover with Manifest Thumbnail"]
   },
   "summary": {
     "en": [
@@ -26,24 +24,13 @@
           "profile": "level1",
           "height": 4823,
           "width": 3497,
-          "extraFormats": [
-            "png"
-          ],
-          "extraQualities": [
-            "default",
-            "color",
-            "gray"
-          ],
+          "extraFormats": ["png"],
+          "extraQualities": ["default", "color", "gray"],
           "protocol": "http://iiif.io/api/image",
           "tiles": [
             {
               "height": 512,
-              "scaleFactors": [
-                1,
-                2,
-                4,
-                8
-              ],
+              "scaleFactors": [1, 2, 4, 8],
               "width": 512
             }
           ]
@@ -56,9 +43,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0117-add-image-thumbnail/canvas/p0",
       "type": "Canvas",
       "label": {
-        "en": [
-          "front cover with color bar"
-        ]
+        "en": ["front cover with color bar"]
       },
       "width": 4520,
       "height": 5312,

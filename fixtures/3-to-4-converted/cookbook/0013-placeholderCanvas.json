@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Video recording of Donizetti's _The Elixer of Love_"
-    ]
+    "en": ["Video recording of Donizetti's _The Elixer of Love_"]
   },
   "items": [
     {
@@ -28,9 +26,7 @@
               {
                 "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/canvas/donizetti/placeholder/1-image",
                 "type": "Annotation",
-                "motivation": [
-                  "painting"
-                ],
+                "motivation": ["painting"],
                 "body": {
                   "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/act1-thumbnail.png",
                   "type": "Image",
@@ -58,9 +54,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0013-placeholderCanvas/donizetti/1-video",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/video/indiana/donizetti-elixir/vae0637_accessH264_low.mp4",
                 "type": "Video",

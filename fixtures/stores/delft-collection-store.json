@@ -9,12 +9,8 @@
           "id": "https://delft-static-site-generator.netlify.com/collections/lib-tr-universiteitsgeschiedenis",
           "type": "Collection",
           "label": {
-            "en": [
-              "History of the university"
-            ],
-            "nl": [
-              "Universiteitsgeschiedenis"
-            ]
+            "en": ["History of the university"],
+            "nl": ["Universiteitsgeschiedenis"]
           },
           "viewingDirection": "left-to-right",
           "behavior": [],
@@ -33,14 +29,10 @@
           "metadata": [
             {
               "label": {
-                "none": [
-                  ""
-                ]
+                "none": [""]
               },
               "value": {
-                "none": [
-                  ""
-                ]
+                "none": [""]
               }
             }
           ],
@@ -55,10 +47,7 @@
           "rendering": [],
           "service": [],
           "services": [],
-          "@context": [
-            "http://www.w3.org/ns/anno.jsonld",
-            "http://iiif.io/api/presentation/3/context.json"
-          ],
+          "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"],
           "iiif-parser:isExternal": true,
           "iiif-parser:hasPart": [
             {

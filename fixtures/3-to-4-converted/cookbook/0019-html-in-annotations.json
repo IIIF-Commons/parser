@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Picture of Göttingen taken during the 2019 IIIF Conference"
-    ]
+    "en": ["Picture of Göttingen taken during the 2019 IIIF Conference"]
   },
   "items": [
     {
@@ -22,16 +20,12 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1/annopage-2/anno-1",
               "type": "Annotation",
-              "motivation": [
-                "commenting"
-              ],
+              "motivation": ["commenting"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/html",
                 "value": "<p>Göttinger Marktplatz mit <a href='https://de.wikipedia.org/wiki/G%C3%A4nseliesel-Brunnen_(G%C3%B6ttingen)'>Gänseliesel Brunnen <img src='https://en.wikipedia.org/static/images/project-logos/enwiki.png' alt='Wikipedia logo'></a></p>",
-                "language": [
-                  "de"
-                ]
+                "language": ["de"]
               },
               "target": {
                 "type": "SpecificResource",
@@ -52,9 +46,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0019-html-in-annotations/canvas-1/annopage-1/anno-1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
                 "type": "Image",

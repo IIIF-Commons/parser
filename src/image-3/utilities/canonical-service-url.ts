@@ -5,9 +5,9 @@
  * @param serviceId
  */
 export function canonicalServiceUrl(serviceId: string) {
-  return serviceId.endsWith('info.json')
+  return serviceId.endsWith("info.json")
     ? serviceId
-    : serviceId.endsWith('/')
-    ? `${serviceId}info.json`
-    : `${serviceId}/info.json`;
+    : serviceId.endsWith("/")
+      ? `${serviceId}info.json`
+      : `${serviceId}/info.json`;
 }

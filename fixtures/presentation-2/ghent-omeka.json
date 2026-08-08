@@ -14,7 +14,10 @@
     "@id": "https://www.omeka.ugent.be/libraries.lw21/s/Indo-IranianVirtualLibrary/item/235",
     "format": "text/html"
   },
-  "seeAlso": { "@id": "https://www.omeka.ugent.be/libraries.lw21/api/items/235", "format": "application/ld+json" },
+  "seeAlso": {
+    "@id": "https://www.omeka.ugent.be/libraries.lw21/api/items/235",
+    "format": "application/ld+json"
+  },
   "metadata": [
     { "label": "Title", "value": "BU29" },
     { "label": "Coverage", "value": "Rivāyāts" },

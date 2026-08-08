@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate-collection.json",
   "type": "Collection",
   "label": {
-    "en": [
-      "Chesapeake and Ohio Canal map and guide pamphlets"
-    ]
+    "en": ["Chesapeake and Ohio Canal map and guide pamphlets"]
   },
   "thumbnail": [
     {
@@ -28,9 +26,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_2-manifest.json",
       "type": "Manifest",
       "label": {
-        "en": [
-          "1986 Chesapeake and Ohio Canal, Washington, D.C., Maryland, West Virginia, official map and guide"
-        ]
+        "en": ["1986 Chesapeake and Ohio Canal, Washington, D.C., Maryland, West Virginia, official map and guide"]
       },
       "navDate": "1986-01-01T00:00:00+00:00"
     },
@@ -38,9 +34,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0230-navdate/navdate_map_1-manifest.json",
       "type": "Manifest",
       "label": {
-        "en": [
-          "1987 Chesapeake and Ohio Canal, Washington, D.C., Maryland, West Virginia, official map and guide"
-        ]
+        "en": ["1987 Chesapeake and Ohio Canal, Washington, D.C., Maryland, West Virginia, official map and guide"]
       },
       "navDate": "1987-01-01T00:00:00+00:00"
     }

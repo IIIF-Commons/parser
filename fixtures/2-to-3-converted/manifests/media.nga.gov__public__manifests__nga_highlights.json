@@ -14,9 +14,7 @@
         "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Highlights from the collection of the National Gallery of Art"
-        ]
+        "@none": ["Highlights from the collection of the National Gallery of Art"]
       }
     },
     {
@@ -1447,8 +1445,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/model_transform_translate_scale_position.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Scaled Model with original for comparison"
-    ]
+    "en": ["Scaled Model with original for comparison"]
   },
   "summary": {
     "en": [
@@ -17,9 +15,7 @@
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "A Scene"
-        ]
+        "en": ["A Scene"]
       },
       "items": [
         {
@@ -29,9 +25,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",
@@ -58,9 +52,16 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
+              "body": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                  "type": "Model",
+                  "format": "model/gltf-binary"
+                },
+                "transform": [{ "type": "ScaleTransform", "x": 2, "y": 2, "z": 2 }]
+              },
               "target": {
                 "type": "SpecificResource",
                 "selector": [

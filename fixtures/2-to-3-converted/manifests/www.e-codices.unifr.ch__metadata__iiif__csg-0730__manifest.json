@@ -114,9 +114,7 @@
         "@none": ["Persons"]
       },
       "value": {
-        "@none": [
-          "Librarian: Arx, Ildefons von; Author: Rothari, Langobardenreich, König"
-        ]
+        "@none": ["Librarian: Arx, Ildefons von; Author: Rothari, Langobardenreich, König"]
       }
     },
     {
@@ -179,10 +177,12 @@
       "@none": ["e-codices - Virtual Manuscript Library of Switzerland"]
     }
   },
-  "homepage": [{
-    "id": "https://www.e-codices.ch/en/list/one/csg/0730",
-    "type": "Text"
-  }],
+  "homepage": [
+    {
+      "id": "https://www.e-codices.ch/en/list/one/csg/0730",
+      "type": "Text"
+    }
+  ],
   "partOf": [
     {
       "id": "https://www.e-codices.ch/en/list/csg",
@@ -5944,8 +5944,5 @@
       }
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

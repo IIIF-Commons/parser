@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0219-using-caption-file/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Lunchroom Manners"
-    ]
+    "en": ["Lunchroom Manners"]
   },
   "items": [
     {
@@ -50,9 +48,7 @@
                 "type": "Text",
                 "format": "text/vtt",
                 "label": {
-                  "en": [
-                    "Captions in WebVTT format"
-                  ]
+                  "en": ["Captions in WebVTT format"]
                 },
                 "language": "en"
               },

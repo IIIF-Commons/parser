@@ -21,37 +21,23 @@
     },
     {
       "label": "Contributors",
-      "value": [
-        "United States. Army Map Service.",
-        "United States. Army. American Expeditionary Forces."
-      ]
+      "value": ["United States. Army Map Service.", "United States. Army. American Expeditionary Forces."]
     },
     {
       "label": "Created Published",
-      "value": [
-        "Washington : Army Map Service, U.S. Army, 1943-"
-      ]
+      "value": ["Washington : Army Map Service, U.S. Army, 1943-"]
     },
     {
       "label": "Original Format",
-      "value": [
-        "map"
-      ]
+      "value": ["map"]
     },
     {
       "label": "Subjects",
-      "value": [
-        "maps",
-        "netherlands",
-        "topographic maps",
-        "military maps"
-      ]
+      "value": ["maps", "netherlands", "topographic maps", "military maps"]
     },
     {
       "label": "Online Format",
-      "value": [
-        "image"
-      ]
+      "value": ["image"]
     },
     {
       "label": "Item Url",

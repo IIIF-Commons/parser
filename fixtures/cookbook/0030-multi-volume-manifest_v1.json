@@ -3,22 +3,16 @@
   "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/manifest_v1.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Seirō ehon nenjū gyōji : kan 1 | 青楼絵本年中行事 : 巻 1"
-    ]
+    "en": ["Seirō ehon nenjū gyōji : kan 1 | 青楼絵本年中行事 : 巻 1"]
   },
-  "behavior": [
-    "individuals"
-  ],
+  "behavior": ["individuals"],
   "viewingDirection": "right-to-left",
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Front cover"
-        ]
+        "en": ["Front cover"]
       },
       "height": 5730,
       "width": 4301,
@@ -55,9 +49,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Page spread 1"
-        ]
+        "en": ["Page spread 1"]
       },
       "height": 5702,
       "width": 7451,
@@ -94,9 +86,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Page spread 2"
-        ]
+        "en": ["Page spread 2"]
       },
       "height": 5702,
       "width": 7451,
@@ -133,9 +123,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Page spread 3"
-        ]
+        "en": ["Page spread 3"]
       },
       "height": 5702,
       "width": 7451,
@@ -172,9 +160,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0030-multi-volume/canvas/p5",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Page spread 4"
-        ]
+        "en": ["Page spread 4"]
       },
       "height": 5702,
       "width": 7451,

@@ -1,13 +1,9 @@
 {
-  "@context": [
-    "http://iiif.io/api/presentation/3/context.json"
-  ],
+  "@context": ["http://iiif.io/api/presentation/3/context.json"],
   "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/manifest.json ",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Video navigation with thumbnails in a Range"
-    ]
+    "en": ["Video navigation with thumbnails in a Range"]
   },
   "items": [
     {
@@ -45,20 +41,14 @@
       "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/1",
       "type": "Range",
       "label": {
-        "en": [
-          "Thumbnail Navigation"
-        ]
+        "en": ["Thumbnail Navigation"]
       },
-      "behavior": [
-        "thumbnail-nav"
-      ],
+      "behavior": ["thumbnail-nav"],
       "items": [
         {
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/1.1",
-          "behavior": [
-            "no-nav"
-          ],
+          "behavior": ["no-nav"],
           "items": [
             {
               "type": "Canvas",
@@ -70,9 +60,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/2",
           "label": {
-            "en": [
-              "9s – 305s"
-            ]
+            "en": ["9s – 305s"]
           },
           "items": [
             {
@@ -94,9 +82,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/3",
           "label": {
-            "en": [
-              "305s – 610s"
-            ]
+            "en": ["305s – 610s"]
           },
           "items": [
             {
@@ -118,9 +104,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/4",
           "label": {
-            "en": [
-              "610s – 915s"
-            ]
+            "en": ["610s – 915s"]
           },
           "items": [
             {
@@ -142,9 +126,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/5",
           "label": {
-            "en": [
-              "915s – 1220s"
-            ]
+            "en": ["915s – 1220s"]
           },
           "items": [
             {
@@ -166,9 +148,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/6",
           "label": {
-            "en": [
-              "1220s – 1525s"
-            ]
+            "en": ["1220s – 1525s"]
           },
           "items": [
             {
@@ -190,9 +170,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/7",
           "label": {
-            "en": [
-              "1525s – 1830s"
-            ]
+            "en": ["1525s – 1830s"]
           },
           "items": [
             {
@@ -214,9 +192,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/8",
           "label": {
-            "en": [
-              "1830s – 2135s"
-            ]
+            "en": ["1830s – 2135s"]
           },
           "items": [
             {
@@ -238,9 +214,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/9",
           "label": {
-            "en": [
-              "2135s – 2440s"
-            ]
+            "en": ["2135s – 2440s"]
           },
           "items": [
             {
@@ -262,9 +236,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/10",
           "label": {
-            "en": [
-              "2440s – 2745s"
-            ]
+            "en": ["2440s – 2745s"]
           },
           "items": [
             {
@@ -286,9 +258,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0229-behavior-ranges/range/11",
           "label": {
-            "en": [
-              "2745s – end"
-            ]
+            "en": ["2745s – end"]
           },
           "items": [
             {

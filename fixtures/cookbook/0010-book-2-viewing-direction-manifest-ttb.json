@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/manifest-ttb.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Diary with Top-to-Bottom Viewing Direction"
-    ]
+    "en": ["Diary with Top-to-Bottom Viewing Direction"]
   },
   "summary": {
     "en": [
@@ -18,9 +16,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "image 1"
-        ]
+        "en": ["image 1"]
       },
       "width": 2251,
       "height": 3152,
@@ -57,9 +53,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "image 2"
-        ]
+        "en": ["image 2"]
       },
       "width": 2268,
       "height": 3135,
@@ -96,9 +90,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "image 3"
-        ]
+        "en": ["image 3"]
       },
       "width": 2274,
       "height": 3135,
@@ -135,9 +127,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0010-book-2-viewing-direction/canvas/v4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "image 4"
-        ]
+        "en": ["image 4"]
       },
       "width": 2268,
       "height": 3135,

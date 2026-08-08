@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/model_origin.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Multiple lights with intensities and colors."
-    ]
+    "en": ["Multiple lights with intensities and colors."]
   },
   "summary": {
     "en": [
@@ -17,9 +15,7 @@
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "Model with Two Spotlights and an Ambient light"
-        ]
+        "en": ["Model with Two Spotlights and an Ambient light"]
       },
       "backgroundColor": "#33404d",
       "items": [
@@ -30,9 +26,22 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
+              "body": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://example.org/iiif/3d/lights/red",
+                  "type": "SpotLight",
+                  "label": { "en": ["Red Spot Light"] },
+                  "color": "#ff0000",
+                  "intensity": { "type": "Value", "value": 100, "unit": "relative" },
+                  "angle": 5
+                },
+                "transform": [
+                  { "type": "RotateTransform", "x": 90, "y": 0, "z": 0 },
+                  { "type": "TranslateTransform", "x": 0, "y": 3.5, "z": 3.5 }
+                ]
+              },
               "target": {
                 "type": "SpecificResource",
                 "selector": [],
@@ -47,9 +56,14 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
+              "body": {
+                "id": "https://example.org/iiif/3d/lights/ambient",
+                "type": "AmbientLight",
+                "label": { "en": ["Green Ambient Light"] },
+                "color": "#7aff40",
+                "intensity": { "type": "Value", "value": 0.5, "unit": "relative" }
+              },
               "target": {
                 "type": "SpecificResource",
                 "selector": [],
@@ -64,9 +78,22 @@
             {
               "id": "https://example.org/iiif/3d/anno3",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
+              "body": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://example.org/iiif/3d/lights/blue",
+                  "type": "SpotLight",
+                  "label": { "en": ["Blue Spot Light"] },
+                  "color": "#0f00ff",
+                  "intensity": { "type": "Value", "value": 10, "unit": "relative" },
+                  "angle": 5
+                },
+                "transform": [
+                  { "type": "RotateTransform", "x": 90, "y": 0, "z": 0 },
+                  { "type": "TranslateTransform", "x": 0, "y": 2.5, "z": 3.5 }
+                ]
+              },
               "target": {
                 "type": "SpecificResource",
                 "selector": [],
@@ -81,9 +108,13 @@
             {
               "id": "https://example.org/iiif/3d/anno4",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
+              "body": {
+                "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
+                "type": "Model",
+                "label": { "en": ["Astronaut"] },
+                "format": "model/gltf-binary"
+              },
               "target": {
                 "type": "SpecificResource",
                 "selector": [],

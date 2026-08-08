@@ -1,17 +1,17 @@
-import { compressSpecificResource } from '../../src/shared/compress-specific-resource';
-import { SpecificResource } from '../../src/presentation-3/types';
-import { frameResource, WILDCARD } from '../../src';
+import { compressSpecificResource } from "../../src/shared/compress-specific-resource";
+import { SpecificResource } from "../../src/presentation-3/types";
+import { frameResource, WILDCARD } from "../../src";
 
-describe('Misc Utilites', function () {
-  test('compressSpecificResource', () => {
+describe("Misc Utilites", function () {
+  test("compressSpecificResource", () => {
     const state: SpecificResource = {
-      id: 'https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1',
-      type: 'SpecificResource',
+      id: "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
+      type: "SpecificResource",
       source: {
-        id: 'https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1',
-        type: 'Canvas',
+        id: "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+        type: "Canvas",
       },
-      selector: { type: 'PointSelector', t: 120.5 },
+      selector: { type: "PointSelector", t: 120.5 },
     };
 
     expect(compressSpecificResource(state, { allowSourceString: false })).toMatchInlineSnapshot(`
@@ -29,15 +29,15 @@ describe('Misc Utilites', function () {
       }
     `);
   });
-  test('compressSpecificResource (allowString=true)', () => {
+  test("compressSpecificResource (allowString=true)", () => {
     const state: SpecificResource = {
-      id: 'https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1',
-      type: 'SpecificResource',
+      id: "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
+      type: "SpecificResource",
       source: {
-        id: 'https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1',
-        type: 'Canvas',
+        id: "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+        type: "Canvas",
       },
-      selector: { type: 'PointSelector', t: 120.5 },
+      selector: { type: "PointSelector", t: 120.5 },
     };
 
     expect(compressSpecificResource(state, { allowSourceString: true })).toMatchInlineSnapshot(`
@@ -53,22 +53,28 @@ describe('Misc Utilites', function () {
     `);
   });
 
-  test('compressSpecificResource (with styleClass)', () => {
+  test("compressSpecificResource (with styleClass)", () => {
     const state: SpecificResource = {
-      id: 'https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1',
-      type: 'SpecificResource',
+      id: "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
+      type: "SpecificResource",
       source: {
-        id: 'https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1',
-        type: 'Canvas',
+        id: "https://iiif.io/api/cookbook/recipe/0015-start/canvas/segment1",
+        type: "Canvas",
       },
       selector: {
-        type: 'FragmentSelector',
-        value: 'xywh=225,70,750,150',
+        type: "FragmentSelector",
+        value: "xywh=225,70,750,150",
       },
-      styleClass: 'some-class',
+      styleClass: "some-class",
     };
 
-    expect(compressSpecificResource(state, { allowString: true, allowSourceString: true, allowedStringType: 'Canvas' })).toMatchInlineSnapshot(`
+    expect(
+      compressSpecificResource(state, {
+        allowString: true,
+        allowSourceString: true,
+        allowedStringType: "Canvas",
+      })
+    ).toMatchInlineSnapshot(`
       {
         "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
         "selector": {
@@ -82,16 +88,19 @@ describe('Misc Utilites', function () {
     `);
   });
 
-  test('compressSpecificResource (single content resource)', () => {
+  test("compressSpecificResource (single content resource)", () => {
     const state: SpecificResource = {
-      type: 'SpecificResource',
+      type: "SpecificResource",
       source: {
-        id: 'https://exameple.org/link-to-something',
-        type: 'ContentResource',
+        id: "https://exameple.org/link-to-something",
+        type: "ContentResource",
       },
     };
 
-    const compressed = compressSpecificResource(state, { allowSourceString: true, allowString: false });
+    const compressed = compressSpecificResource(state, {
+      allowSourceString: true,
+      allowString: false,
+    });
 
     expect(compressed).toMatchInlineSnapshot(`
       {
@@ -101,48 +110,48 @@ describe('Misc Utilites', function () {
     `);
   });
 
-  test('frameResource', () => {
+  test("frameResource", () => {
     const resource = {
-      id: 'test',
-      type: 'test-type',
-      nested: { id: 'something', type: 'something-else' },
-      ignored: 'not included',
+      id: "test",
+      type: "test-type",
+      nested: { id: "something", type: "something-else" },
+      ignored: "not included",
     };
 
     expect(frameResource(resource, {})).toEqual(resource);
     expect(
       frameResource(resource, {
-        '@explicit': true,
+        "@explicit": true,
         id: {},
         type: {},
       })
     ).toEqual({
-      id: 'test',
-      type: 'test-type',
+      id: "test",
+      type: "test-type",
     });
     expect(
       frameResource(resource, {
-        '@explicit': true,
+        "@explicit": true,
         id: {},
         type: {},
-        override: 'concrete value',
+        override: "concrete value",
       })
     ).toEqual({
-      id: 'test',
-      type: 'test-type',
-      override: 'concrete value',
+      id: "test",
+      type: "test-type",
+      override: "concrete value",
     });
     expect(
       frameResource(resource, {
-        '@explicit': true,
+        "@explicit": true,
         id: {},
         type: {},
         nested: {},
       })
     ).toEqual({
-      id: 'test',
-      type: 'test-type',
-      nested: { id: 'something', type: 'something-else' },
+      id: "test",
+      type: "test-type",
+      nested: { id: "something", type: "something-else" },
     });
   });
 });

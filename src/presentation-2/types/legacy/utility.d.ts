@@ -34,7 +34,7 @@ export declare type OneOrMany<T> = T | Array<T>;
  * ```
  *
  */
-export declare type URIRepresentation = string | { '@id': string; format?: string };
+export declare type URIRepresentation = string | { "@id": string; format?: string };
 
 /**
  * Minimal HTML markup may be included in the description, attribution and metadata properties. It must not be used in
@@ -85,14 +85,14 @@ export declare type HTMLMarkup = string;
  *   - If some of the values have a language associated with them, but none match the language preference, the client
  *     must display all of the values that do not have a language associated with them.
  */
-export declare type LanguageProperty = HTMLMarkup | string | { '@language': string; '@value': string };
+export declare type LanguageProperty = HTMLMarkup | string | { "@language": string; "@value": string };
 
 export declare type Required<T> = T extends object ? { [P in keyof T]-?: NonNullable<T[P]> } : T;
 
 export declare type OmitProperties<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
-export declare type Snippet<T extends { '@id': string; '@type': string }> = {
-  '@id': T['@id'];
-  '@type': T['@type'];
+export declare type Snippet<T extends { "@id": string; "@type": string }> = {
+  "@id": T["@id"];
+  "@type": T["@type"];
   label?: OneOrMany<LanguageProperty>;
 };

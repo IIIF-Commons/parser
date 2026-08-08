@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/model_origin.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Model with Rotated DirectionalLight"
-    ]
+    "en": ["Model with Rotated DirectionalLight"]
   },
   "summary": {
     "en": [
@@ -17,9 +15,7 @@
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "Scene with Model and Rotated DirectionalLight"
-        ]
+        "en": ["Scene with Model and Rotated DirectionalLight"]
       },
       "items": [
         {
@@ -29,9 +25,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",
@@ -45,9 +39,16 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
+              "body": {
+                "type": "SpecificResource",
+                "source": {
+                  "id": "https://example.org/iiif/3d/lights/1",
+                  "type": "DirectionalLight",
+                  "label": { "en": ["Directional Light 1"] }
+                },
+                "transform": [{ "type": "RotateTransform", "x": 30, "y": 0, "z": 0 }]
+              },
               "target": {
                 "id": "https://example.org/iiif/scene1/page/p1/1",
                 "type": "Scene"

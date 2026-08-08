@@ -1,5 +1,5 @@
-import type { ImageService, Service } from '../../presentation-3/types';
-import { isImageService } from './is-image-service';
+import type { ImageService, Service } from "../../presentation-3/types";
+import { isImageService } from "./is-image-service";
 
 /**
  * Given a resource, will return only the image services on that resource.

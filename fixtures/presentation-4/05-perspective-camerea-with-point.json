@@ -3,9 +3,7 @@
   "id": "https://example.org/iiif/3d/model_origin.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Model with Explicit Perspective Camera Looking at a Point"
-    ]
+    "en": ["Model with Explicit Perspective Camera Looking at a Point"]
   },
   "summary": {
     "en": [
@@ -17,9 +15,7 @@
       "id": "https://example.org/iiif/scene1/page/p1/1",
       "type": "Scene",
       "label": {
-        "en": [
-          "Scene with a Model and Camera Looking at a Point"
-        ]
+        "en": ["Scene with a Model and Camera Looking at a Point"]
       },
       "items": [
         {
@@ -29,9 +25,7 @@
             {
               "id": "https://example.org/iiif/3d/anno1",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut/astronaut.glb",
                 "type": "Model",
@@ -45,16 +39,12 @@
             {
               "id": "https://example.org/iiif/3d/anno2",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://example.org/iiif/3d/cameras/1",
                 "type": "PerspectiveCamera",
                 "label": {
-                  "en": [
-                    "Perspective Camera 1"
-                  ]
+                  "en": ["Perspective Camera 1"]
                 }
               },
               "target": {

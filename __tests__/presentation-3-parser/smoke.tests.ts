@@ -1,12 +1,12 @@
-import { promises } from 'node:fs';
-import { cwd } from 'node:process';
-import { join } from 'path';
-import cookbookIndex from '../../fixtures/cookbook/_index.json';
+import { promises } from "node:fs";
+import { cwd } from "node:process";
+import { join } from "path";
+import cookbookIndex from "../../fixtures/cookbook/_index.json";
 
 const { readFile, readdir } = promises;
 
-import { expect } from 'vitest';
-import { normalize, serialize, serializeConfigPresentation2, serializeConfigPresentation3 } from '../../src';
+import { expect } from "vitest";
+import { normalize, serialize, serializeConfigPresentation2, serializeConfigPresentation3 } from "../../src";
 
 const skipThese: string[] = [
   // '0219-using-caption-file', // https://github.com/IIIF/cookbook-recipes/pull/340
@@ -14,38 +14,38 @@ const skipThese: string[] = [
   // @todo
   //   - Bad service array
   //   - Strange Image service behaviour (id/type vs @id/@type)
-  'exhibition-1.json',
+  "exhibition-1.json",
 
   // @todo
   //   - Has ImageService3 and ImageService2 with the same identifier :(
-  'bodleian.json',
+  "bodleian.json",
 
   // @todo
   //  - Updates to service.
-  'ghent-choices.json',
+  "ghent-choices.json",
 
   // This is because the test is designed to infer the type of the resource.
-  'specific-resource-infer.json',
+  "specific-resource-infer.json",
 
   // Specific resource is not in a canonical format.
-  'css.json',
+  "css.json",
 ];
 
-describe('Smoke tests', async () => {
-  const files = await readdir(join(cwd(), 'fixtures/presentation-3'));
-  const twoThreeConverted = await readdir(join(cwd(), 'fixtures/2-to-3-converted'));
-  const presentation2 = await readdir(join(cwd(), 'fixtures/presentation-2'));
+describe("Smoke tests", async () => {
+  const files = await readdir(join(cwd(), "fixtures/presentation-3"));
+  const twoThreeConverted = await readdir(join(cwd(), "fixtures/2-to-3-converted"));
+  const presentation2 = await readdir(join(cwd(), "fixtures/presentation-2"));
 
   const tests = files.filter((item: string) => skipThese.indexOf(item) === -1).map((item) => [item]);
   const twoThreeConvertedTests = twoThreeConverted
-    .filter((item: string) => item.endsWith('.json') && skipThese.indexOf(item) === -1)
+    .filter((item: string) => item.endsWith(".json") && skipThese.indexOf(item) === -1)
     .map((item: any) => [item]);
   const presentation2Tests = presentation2
-    .filter((item: string) => item.endsWith('.json') && skipThese.indexOf(item) === -1)
+    .filter((item: string) => item.endsWith(".json") && skipThese.indexOf(item) === -1)
     .map((item: any) => [item]);
 
-  test.each(tests)('Smoke test: ./fixtures/presentation-3/%s', (async (id: string) => {
-    const json = await readFile(join(cwd(), 'fixtures/presentation-3', `${id}`));
+  test.each(tests)("Smoke test: ./fixtures/presentation-3/%s", (async (id: string) => {
+    const json = await readFile(join(cwd(), "fixtures/presentation-3", `${id}`));
     const jsonString = json.toString();
     const manifest = JSON.parse(jsonString);
     const original = JSON.parse(jsonString);
@@ -67,8 +67,8 @@ describe('Smoke tests', async () => {
     // Immutability:
     // expect(manifest).toEqual(original);
   }) as any);
-  test.each(twoThreeConvertedTests)('Smoke test: ./fixtures/2-to-3-converted/%s', (async (id: string) => {
-    const json = await readFile(join(cwd(), 'fixtures/2-to-3-converted', `${id}`));
+  test.each(twoThreeConvertedTests)("Smoke test: ./fixtures/2-to-3-converted/%s", (async (id: string) => {
+    const json = await readFile(join(cwd(), "fixtures/2-to-3-converted", `${id}`));
     const jsonString = json.toString();
     const manifest = JSON.parse(jsonString);
     const original = JSON.parse(jsonString);

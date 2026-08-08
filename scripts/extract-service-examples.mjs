@@ -247,8 +247,8 @@ function main() {
         signatures: sortedSignatures,
       },
       null,
-      2,
-    ),
+      2
+    )
   );
 
   console.log(`Scanned files: ${files.length}`);

@@ -3,112 +3,76 @@
   "id": "https://data.getty.edu/museum/api/iiif/298147/manifest.json",
   "type": "Manifest",
   "label": {
-    "@none": [
-      "La Surprise (1718–1719), Jean-Antoine Watteau (French, 1684 - 1721)"
-    ]
+    "@none": ["La Surprise (1718–1719), Jean-Antoine Watteau (French, 1684 - 1721)"]
   },
   "metadata": [
     {
       "label": {
-        "@none": [
-          "Artist / Maker"
-        ]
+        "@none": ["Artist / Maker"]
       },
       "value": {
-        "@none": [
-          "Jean-Antoine Watteau (French, 1684 - 1721)"
-        ]
+        "@none": ["Jean-Antoine Watteau (French, 1684 - 1721)"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Culture & Date"
-        ]
+        "@none": ["Culture & Date"]
       },
       "value": {
-        "@none": [
-          "French, 1718–1719"
-        ]
+        "@none": ["French, 1718–1719"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Medium"
-        ]
+        "@none": ["Medium"]
       },
       "value": {
-        "@none": [
-          "Oil on panel"
-        ]
+        "@none": ["Oil on panel"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Dimensions"
-        ]
+        "@none": ["Dimensions"]
       },
       "value": {
-        "@none": [
-          "36.4 × 28.2 cm (14 5/16 × 11 1/8 in.)"
-        ]
+        "@none": ["36.4 × 28.2 cm (14 5/16 × 11 1/8 in.)"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Object Number"
-        ]
+        "@none": ["Object Number"]
       },
       "value": {
-        "@none": [
-          "2017.72"
-        ]
+        "@none": ["2017.72"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Object Type"
-        ]
+        "@none": ["Object Type"]
       },
       "value": {
-        "@none": [
-          "Painting"
-        ]
+        "@none": ["Painting"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Place Created"
-        ]
+        "@none": ["Place Created"]
       },
       "value": {
-        "@none": [
-          "France"
-        ]
+        "@none": ["France"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Collection"
-        ]
+        "@none": ["Collection"]
       },
       "value": {
-        "@none": [
-          "<a href='http://www.getty.edu/art/collection/' target='_blank'>The J. Paul Getty Museum</a>"
-        ]
+        "@none": ["<a href='http://www.getty.edu/art/collection/' target='_blank'>The J. Paul Getty Museum</a>"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Rights Statement"
-        ]
+        "@none": ["Rights Statement"]
       },
       "value": {
         "@none": [
@@ -118,21 +82,15 @@
     },
     {
       "label": {
-        "@none": [
-          "Rights/License"
-        ]
+        "@none": ["Rights/License"]
       },
       "value": {
-        "@none": [
-          "http://www.getty.edu/legal/copyright.html#oc"
-        ]
+        "@none": ["http://www.getty.edu/legal/copyright.html#oc"]
       }
     },
     {
       "label": {
-        "@none": [
-          "Description"
-        ]
+        "@none": ["Description"]
       },
       "value": {
         "@none": [
@@ -143,9 +101,7 @@
   ],
   "requiredStatement": {
     "label": {
-      "@none": [
-        "Attribution"
-      ]
+      "@none": ["Attribution"]
     },
     "value": {
       "@none": [
@@ -176,9 +132,7 @@
       "id": "https://data.getty.edu/museum/api/iiif/298147/canvas/main",
       "type": "Canvas",
       "label": {
-        "@none": [
-          "Main Image"
-        ]
+        "@none": ["Main Image"]
       },
       "height": 6406,
       "width": 4937,
@@ -197,9 +151,7 @@
             {
               "id": "https://data.getty.edu/museum/api/iiif/298147/annotation/main-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://data.getty.edu/museum/api/iiif/633385/full/789,1024/0/default.jpg",
                 "type": "Image",

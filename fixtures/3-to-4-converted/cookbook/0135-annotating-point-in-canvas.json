@@ -3,23 +3,17 @@
   "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Using a point selector for annotating a location on a map."
-    ]
+    "en": ["Using a point selector for annotating a location on a map."]
   },
   "summary": {
-    "en": [
-      "A map containing an point with an annotation of the location."
-    ]
+    "en": ["A map containing an point with an annotation of the location."]
   },
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Chesapeake and Ohio Canal Pamphlet"
-        ]
+        "en": ["Chesapeake and Ohio Canal Pamphlet"]
       },
       "height": 7072,
       "width": 5212,
@@ -32,16 +26,12 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/annotation/p0002-tag",
               "type": "Annotation",
-              "motivation": [
-                "tagging"
-              ],
+              "motivation": ["tagging"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/plain",
                 "value": "Town Creek Aqueduct",
-                "language": [
-                  "en"
-                ]
+                "language": ["en"]
               },
               "target": {
                 "type": "SpecificResource",
@@ -69,9 +59,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/content.json",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/43153e2ec7531f14dd1c9b2fc401678a-88695674/full/max/0/default.jpg",
                 "type": "Image",

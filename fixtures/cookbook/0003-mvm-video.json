@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0003-mvm-video/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Video Example 3"
-    ]
+    "en": ["Video Example 3"]
   },
   "items": [
     {

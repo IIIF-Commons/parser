@@ -3,9 +3,7 @@
   "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Simplest Audio Example (IIIF Presentation v4)"
-    ]
+    "en": ["Simplest Audio Example (IIIF Presentation v4)"]
   },
   "items": [
     {
@@ -20,9 +18,7 @@
             {
               "id": "https://preview.iiif.io/cookbook/v4/recipe/0002-mvm-audio/v4/timeline/page/annotation",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://fixtures.iiif.io/audio/indiana/mahler-symphony-3/CD1/medium/128Kbps.mp4",
                 "type": "Sound",

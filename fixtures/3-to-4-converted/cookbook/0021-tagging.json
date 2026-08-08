@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Picture of Göttingen taken during the 2019 IIIF Conference"
-    ]
+    "en": ["Picture of Göttingen taken during the 2019 IIIF Conference"]
   },
   "items": [
     {
@@ -22,16 +20,12 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0002-tag",
               "type": "Annotation",
-              "motivation": [
-                "tagging"
-              ],
+              "motivation": ["tagging"],
               "body": {
                 "type": "TextualBody",
                 "format": "text/plain",
                 "value": "Gänseliesel-Brunnen",
-                "language": [
-                  "de"
-                ]
+                "language": ["de"]
               },
               "target": {
                 "type": "SpecificResource",
@@ -58,9 +52,7 @@
             {
               "id": "https://iiif.io/api/cookbook/recipe/0021-tagging/annotation/p0001-image",
               "type": "Annotation",
-              "motivation": [
-                "painting"
-              ],
+              "motivation": ["painting"],
               "body": {
                 "id": "https://iiif.io/api/image/3.0/example/reference/918ecd18c2592080851777620de9bcb5-gottingen/full/max/0/default.jpg",
                 "type": "Image",

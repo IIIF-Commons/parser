@@ -97,18 +97,8 @@ describe("Presentation 4 authored validation", () => {
       "source",
       "class-requirement-must",
     ],
-    [
-      "TextualBody",
-      { id: "https://example.org/text", type: "TextualBody" },
-      "value",
-      "class-requirement-must",
-    ],
-    [
-      "Choice",
-      { id: "https://example.org/choice", type: "Choice" },
-      "items",
-      "annotation-body-aggregate-items-array",
-    ],
+    ["TextualBody", { id: "https://example.org/text", type: "TextualBody" }, "value", "class-requirement-must"],
+    ["Choice", { id: "https://example.org/choice", type: "Choice" }, "items", "annotation-body-aggregate-items-array"],
   ])("does not treat embedded %s bodies as reference-only", (_type, body, requiredProperty, code) => {
     const input = JSON.parse(readFileSync(join(goldDirectory, "manifest-canvas.json"), "utf8"));
     input.items[0].items[0].items[0].body = body;

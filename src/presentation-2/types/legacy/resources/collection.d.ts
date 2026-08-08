@@ -1,12 +1,12 @@
-import { OmitProperties, Snippet } from '../utility';
-import { TechnicalProperties } from '../iiif/technical';
-import { LinkingProperties } from '../iiif/linking';
-import { Manifest } from './manifest';
-import { DescriptiveProperties } from '../iiif/descriptive';
-import { RightsProperties } from '../iiif/rights';
+import { OmitProperties, Snippet } from "../utility";
+import { TechnicalProperties } from "../iiif/technical";
+import { LinkingProperties } from "../iiif/linking";
+import { Manifest } from "./manifest";
+import { DescriptiveProperties } from "../iiif/descriptive";
+import { RightsProperties } from "../iiif/rights";
 
-type CollectionOmittedTechnical = 'format' | 'height' | 'width' | 'viewingDirection';
-type CollectionOmittedLinking = 'startCanvas';
+type CollectionOmittedTechnical = "format" | "height" | "width" | "viewingDirection";
+type CollectionOmittedLinking = "startCanvas";
 
 export type CollectionStructural = {
   members?: Array<Snippet<Collection | Manifest>>;
@@ -22,7 +22,8 @@ export type CollectionStructural = {
  * clients with a means to locate all of the manifests known to the publishing institution.
  */
 export interface Collection
-  extends OmitProperties<TechnicalProperties, CollectionOmittedTechnical>,
+  extends
+    OmitProperties<TechnicalProperties, CollectionOmittedTechnical>,
     DescriptiveProperties,
     RightsProperties,
     CollectionStructural,

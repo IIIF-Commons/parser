@@ -1,40 +1,40 @@
-import { GlobalRegistrator } from '@happy-dom/global-registrator';
-import { promises as fs } from 'node:fs';
-import { join } from 'node:path';
-import { cwd } from 'node:process';
+import { GlobalRegistrator } from "@happy-dom/global-registrator";
+import { promises as fs } from "node:fs";
+import { join } from "node:path";
+import { cwd } from "node:process";
 
 const { mkdir, readdir, readFile, rm, writeFile } = fs;
 
-const BASE_URL = 'https://preview.iiif.io/cookbook/v4/';
-const ROOT_SELECTOR = 'a[href]';
+const BASE_URL = "https://preview.iiif.io/cookbook/v4/";
+const ROOT_SELECTOR = "a[href]";
 const RECIPE_PATH_MATCHER = /^\/cookbook\/v4\/recipe\/([^/]+)\/?$/;
-const EXCLUDED_RECIPE_IDS = new Set(['matrix', 'code']);
-const FIXTURE_DIR = join(cwd(), 'fixtures', 'cookbook-v4');
+const EXCLUDED_RECIPE_IDS = new Set(["matrix", "code"]);
+const FIXTURE_DIR = join(cwd(), "fixtures", "cookbook-v4");
 const fetch = globalThis.fetch.bind(globalThis);
 const ARRAY_FIELDS = new Set([
-  'thumbnail',
-  'provider',
-  'seeAlso',
-  'service',
-  'services',
-  'homepage',
-  'rendering',
-  'partOf',
-  'annotations',
-  'items',
-  'structures',
-  'motivation',
-  'body',
-  'target',
-  'selector',
-  'transform',
-  'action',
-  'provides',
-  'exclude',
-  'behavior',
-  'metadata',
+  "thumbnail",
+  "provider",
+  "seeAlso",
+  "service",
+  "services",
+  "homepage",
+  "rendering",
+  "partOf",
+  "annotations",
+  "items",
+  "structures",
+  "motivation",
+  "body",
+  "target",
+  "selector",
+  "transform",
+  "action",
+  "provides",
+  "exclude",
+  "behavior",
+  "metadata",
 ]);
-const CONTAINER_TYPES = new Set(['Timeline', 'Canvas', 'Scene']);
+const CONTAINER_TYPES = new Set(["Timeline", "Canvas", "Scene"]);
 
 GlobalRegistrator.register();
 
@@ -67,18 +67,16 @@ function normalizeRecipeUrl(recipeId) {
 }
 
 function isPresentation4Context(resource) {
-  if (!resource || typeof resource !== 'object') {
+  if (!resource || typeof resource !== "object") {
     return false;
   }
-  const context = resource['@context'];
+  const context = resource["@context"];
   const values = Array.isArray(context) ? context : [context];
-  return values.some(
-    (value) => typeof value === 'string' && /\/api\/presentation\/4\/context\.json$/.test(value)
-  );
+  return values.some((value) => typeof value === "string" && /\/api\/presentation\/4\/context\.json$/.test(value));
 }
 
 function createDom(html) {
-  const wrapper = document.createElement('div');
+  const wrapper = document.createElement("div");
   wrapper.innerHTML = html;
   return wrapper;
 }
@@ -88,7 +86,7 @@ function collectRecipeUrls(indexHtml) {
   const recipeIds = new Set();
 
   for (const anchor of wrapper.querySelectorAll(ROOT_SELECTOR)) {
-    const href = anchor.getAttribute('href');
+    const href = anchor.getAttribute("href");
     const absoluteUrl = toAbsoluteUrl(href, BASE_URL);
     const recipeId = absoluteUrl ? getRecipeId(absoluteUrl) : null;
     if (recipeId) {
@@ -103,38 +101,38 @@ function collectJsonCandidates(recipeHtml, recipeUrl) {
   const wrapper = createDom(recipeHtml);
   const candidates = new Set();
 
-  for (const anchor of wrapper.querySelectorAll('a[href]')) {
-    const href = anchor.getAttribute('href');
+  for (const anchor of wrapper.querySelectorAll("a[href]")) {
+    const href = anchor.getAttribute("href");
     const absoluteUrl = toAbsoluteUrl(href, recipeUrl);
     if (!absoluteUrl) {
       continue;
     }
     const parsed = new URL(absoluteUrl);
-    if (parsed.pathname.endsWith('.json')) {
+    if (parsed.pathname.endsWith(".json")) {
       candidates.add(absoluteUrl);
     }
   }
 
-  for (const element of wrapper.querySelectorAll('[data-src]')) {
-    const value = element.getAttribute('data-src');
+  for (const element of wrapper.querySelectorAll("[data-src]")) {
+    const value = element.getAttribute("data-src");
     const absoluteUrl = toAbsoluteUrl(value, recipeUrl);
     if (!absoluteUrl) {
       continue;
     }
     const parsed = new URL(absoluteUrl);
-    if (parsed.pathname.endsWith('.json')) {
+    if (parsed.pathname.endsWith(".json")) {
       candidates.add(absoluteUrl);
     }
   }
 
-  for (const element of wrapper.querySelectorAll('[data-iiif-content]')) {
-    const value = element.getAttribute('data-iiif-content');
+  for (const element of wrapper.querySelectorAll("[data-iiif-content]")) {
+    const value = element.getAttribute("data-iiif-content");
     const absoluteUrl = toAbsoluteUrl(value, recipeUrl);
     if (!absoluteUrl) {
       continue;
     }
     const parsed = new URL(absoluteUrl);
-    if (parsed.pathname.endsWith('.json')) {
+    if (parsed.pathname.endsWith(".json")) {
       candidates.add(absoluteUrl);
     }
   }
@@ -147,10 +145,10 @@ function createIndexKey(recipeId, manifestUrl, existingKeys) {
   const basePrefix = `/cookbook/v4/recipe/${recipeId}/`;
   const relativePath = parsed.pathname.startsWith(basePrefix)
     ? parsed.pathname.slice(basePrefix.length)
-    : parsed.pathname.split('/').pop() || 'manifest.json';
+    : parsed.pathname.split("/").pop() || "manifest.json";
 
-  const normalized = relativePath.replace(/^v4\//, '').replace(/\.json$/, '');
-  const baseKey = normalized === 'manifest' ? recipeId : `${recipeId}-${normalized.replace(/\//g, '-')}`;
+  const normalized = relativePath.replace(/^v4\//, "").replace(/\.json$/, "");
+  const baseKey = normalized === "manifest" ? recipeId : `${recipeId}-${normalized.replace(/\//g, "-")}`;
   let key = baseKey;
   let index = 2;
 
@@ -173,14 +171,14 @@ function canonicalizeForParser(value) {
     return value.map((item) => canonicalizeForParser(item));
   }
 
-  if (!value || typeof value !== 'object') {
+  if (!value || typeof value !== "object") {
     return value;
   }
 
   const output = {};
   for (const [key, nested] of Object.entries(value)) {
     const normalizedNested = canonicalizeForParser(nested);
-    if (ARRAY_FIELDS.has(key) && typeof normalizedNested !== 'undefined' && !Array.isArray(normalizedNested)) {
+    if (ARRAY_FIELDS.has(key) && typeof normalizedNested !== "undefined" && !Array.isArray(normalizedNested)) {
       output[key] = [normalizedNested];
       continue;
     }
@@ -197,16 +195,16 @@ function collectTypeLookup(value, lookup = {}) {
     return lookup;
   }
 
-  if (!value || typeof value !== 'object') {
+  if (!value || typeof value !== "object") {
     return lookup;
   }
 
-  if (typeof value.id === 'string' && typeof value.type === 'string' && !lookup[value.id]) {
+  if (typeof value.id === "string" && typeof value.type === "string" && !lookup[value.id]) {
     lookup[value.id] = value.type;
   }
 
   for (const nested of Object.values(value)) {
-    if (nested && typeof nested === 'object') {
+    if (nested && typeof nested === "object") {
       collectTypeLookup(nested, lookup);
     }
   }
@@ -215,7 +213,7 @@ function collectTypeLookup(value, lookup = {}) {
 }
 
 function inferTypeFromLookup(id, lookup, fallbackType) {
-  if (!id || typeof id !== 'string') {
+  if (!id || typeof id !== "string") {
     return fallbackType;
   }
 
@@ -223,7 +221,7 @@ function inferTypeFromLookup(id, lookup, fallbackType) {
     return lookup[id];
   }
 
-  const fragmentIndex = id.indexOf('#');
+  const fragmentIndex = id.indexOf("#");
   if (fragmentIndex !== -1) {
     const withoutFragment = id.slice(0, fragmentIndex);
     if (lookup[withoutFragment]) {
@@ -234,31 +232,31 @@ function inferTypeFromLookup(id, lookup, fallbackType) {
   return fallbackType;
 }
 
-function normalizeAnnotationTargets(value, lookup, containerHint = 'Canvas') {
+function normalizeAnnotationTargets(value, lookup, containerHint = "Canvas") {
   if (Array.isArray(value)) {
     return value.map((item) => normalizeAnnotationTargets(item, lookup, containerHint));
   }
 
-  if (!value || typeof value !== 'object') {
+  if (!value || typeof value !== "object") {
     return value;
   }
 
-  const currentType = typeof value.type === 'string' ? value.type : undefined;
+  const currentType = typeof value.type === "string" ? value.type : undefined;
   const nextContainerHint = currentType && CONTAINER_TYPES.has(currentType) ? currentType : containerHint;
   const output = {};
 
   for (const [key, nested] of Object.entries(value)) {
-    if (currentType === 'Annotation' && key === 'target') {
+    if (currentType === "Annotation" && key === "target") {
       const targets = Array.isArray(nested) ? nested : [nested];
       output[key] = targets.map((target) => {
-        if (typeof target === 'string') {
+        if (typeof target === "string") {
           return {
             id: target,
             type: inferTypeFromLookup(target, lookup, nextContainerHint),
           };
         }
-        if (target && typeof target === 'object' && !Array.isArray(target)) {
-          if (typeof target.id === 'string' && typeof target.type !== 'string') {
+        if (target && typeof target === "object" && !Array.isArray(target)) {
+          if (typeof target.id === "string" && typeof target.type !== "string") {
             return {
               ...normalizeAnnotationTargets(target, lookup, nextContainerHint),
               type: inferTypeFromLookup(target.id, lookup, nextContainerHint),
@@ -296,9 +294,7 @@ async function resetFixtureDirectory() {
   await mkdir(FIXTURE_DIR, { recursive: true });
   const existing = await readdir(FIXTURE_DIR);
   await Promise.all(
-    existing
-      .filter((file) => file.endsWith('.json'))
-      .map((file) => rm(join(FIXTURE_DIR, file), { force: true }))
+    existing.filter((file) => file.endsWith(".json")).map((file) => rm(join(FIXTURE_DIR, file), { force: true }))
   );
 }
 
@@ -357,7 +353,7 @@ async function main() {
   }
 
   const sortedIndex = sortObjectByKey(index);
-  await writeFile(join(FIXTURE_DIR, '_index.json'), `${JSON.stringify(sortedIndex, null, 2)}\n`);
+  await writeFile(join(FIXTURE_DIR, "_index.json"), `${JSON.stringify(sortedIndex, null, 2)}\n`);
   console.log(`Wrote ${Object.keys(sortedIndex).length} Presentation 4 fixtures to ${FIXTURE_DIR}`);
 }
 

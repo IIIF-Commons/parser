@@ -1,42 +1,42 @@
 /**
  * Content resources such as images or texts that are associated with a canvas.
  */
-import { ImageService, Service as P3Service } from '../../../../presentation-3/types';
+import { ImageService, Service as P3Service } from "../../../../presentation-3/types";
 
 export type ContentResourceSelector =
   | {
-      '@context': 'http://iiif.io/api/annex/openannotation/context.json';
-      '@type': 'iiif:ImageApiSelector';
+      "@context": "http://iiif.io/api/annex/openannotation/context.json";
+      "@type": "iiif:ImageApiSelector";
       region: string;
     }
   | {
-      '@type': ['oa:SvgSelector', 'cnt:ContentAsText'] | [ 'cnt:ContentAsText', 'oa:SvgSelector' ] | 'oa:SvgSelector';
+      "@type": ["oa:SvgSelector", "cnt:ContentAsText"] | ["cnt:ContentAsText", "oa:SvgSelector"] | "oa:SvgSelector";
       chars: string;
     }
   | {
-      '@context': 'http://iiif.io/api/annex/openannotation/context.json';
-      '@type': 'iiif:ImageApiSelector';
+      "@context": "http://iiif.io/api/annex/openannotation/context.json";
+      "@type": "iiif:ImageApiSelector";
       rotation: string;
     }
   | {
-      '@context': 'http://iiif.io/api/annex/openannotation/context.json';
-      '@type': 'iiif:ImageApiSelector';
+      "@context": "http://iiif.io/api/annex/openannotation/context.json";
+      "@type": "iiif:ImageApiSelector";
       region: string;
       rotation: string;
     }
   | {
-      '@type': 'oa:Choice';
+      "@type": "oa:Choice";
       default: ContentResourceSelector;
       item: ContentResourceSelector | ContentResourceSelector[];
     }
   | {
-      '@type': 'oa:FragmentSelector';
+      "@type": "oa:FragmentSelector";
       value: string;
-    }
+    };
 
 export type ImageResourceSegment = {
-  '@id': string;
-  '@type': 'dctypes:Image';
+  "@id": string;
+  "@type": "dctypes:Image";
   height?: number;
   width?: number;
   format?: string;
@@ -44,42 +44,42 @@ export type ImageResourceSegment = {
 };
 
 type TextContentResource = {
-  '@id': string;
-  '@type': 'dctypes:Text';
-  format: 'text/html';
+  "@id": string;
+  "@type": "dctypes:Text";
+  format: "text/html";
 };
 
 type SoundResource = {
-  '@id': string;
-  '@type': 'dctypes:Sound';
+  "@id": string;
+  "@type": "dctypes:Sound";
   format: string;
 };
 
 export type ImageResourceSegmentWithService = {
-  '@id': 'http://www.example.org/iiif/book1-page1/50,50,1250,1850/full/0/default.jpg';
-  '@type': 'oa:SpecificResource';
+  "@id": "http://www.example.org/iiif/book1-page1/50,50,1250,1850/full/0/default.jpg";
+  "@type": "oa:SpecificResource";
   style?: string;
   full: ImageResourceSegment;
   selector?: ContentResourceSelector;
 };
 
 export type XmlResourceResourceSegment = {
-  '@id': string;
-  '@type': 'dctypes:Text';
-  format: 'application/tei+xml';
+  "@id": string;
+  "@type": "dctypes:Text";
+  format: "application/tei+xml";
 };
 
 export type CharsEmbeddedContent = {
-  '@type': 'cnt:ContentAsText';
+  "@type": "cnt:ContentAsText";
   chars: string;
-  format?: 'text/plain';
-  language?: 'en';
+  format?: "text/plain";
+  language?: "en";
 };
 
 export type ChoiceEmbeddedContent = {
-  '@type': 'oa:Choice';
-  default: CommonContentResource | 'rdf:nil';
-  item: Array<CommonContentResource> | 'rdf:nil';
+  "@type": "oa:Choice";
+  default: CommonContentResource | "rdf:nil";
+  item: Array<CommonContentResource> | "rdf:nil";
 };
 
 export type Service = P3Service;
@@ -96,12 +96,12 @@ export declare type CommonContentResource =
 export declare type ContentResource =
   | CommonContentResource
   | {
-      '@id': string;
-      '@type': string;
+      "@id": string;
+      "@type": string;
       format?: string;
       language?: string;
-      default?: ContentResource | 'rdf:nil';
-      item?: Array<ContentResource> | 'rdf:nil';
+      default?: ContentResource | "rdf:nil";
+      item?: Array<ContentResource> | "rdf:nil";
       selector?: ContentResourceSelector;
       full?: ImageResourceSegment;
       height?: number;
