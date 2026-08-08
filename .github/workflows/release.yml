@@ -13,11 +13,11 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: "22.x"
+          node-version: "24.x"
 
       - uses: pnpm/action-setup@v3
         with:
-          version: 9
+          version: 11.13.0
           run_install: |
             - recursive: true
               args: [--frozen-lockfile, --strict-peer-dependencies]
@@ -37,7 +37,7 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: "22.x"
+          node-version: "24.x"
 
       - name: Set tag
         id: tagName
@@ -45,7 +45,7 @@ jobs:
 
       - uses: pnpm/action-setup@v3
         with:
-          version: 9
+          version: 11.13.0
           run_install: |
             - recursive: true
               args: [--frozen-lockfile, --strict-peer-dependencies]
