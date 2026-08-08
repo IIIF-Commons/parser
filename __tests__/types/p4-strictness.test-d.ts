@@ -239,8 +239,8 @@ const imageWithScalarService = {
   format: "image/jpeg",
   height: 100,
   width: 100,
-  // @ts-expect-error service must be an array
   service: {
+    // @ts-expect-error service must be an array
     id: "https://example.org/service/array-required",
     type: "ImageService3",
     profile: "level1",

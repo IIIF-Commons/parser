@@ -3,16 +3,18 @@
 import { readdir, readFile, stat, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+import packageJson from "../package.json";
 import pc from "picocolors";
 import { convertPresentation2 } from "./presentation-2";
 import {
+  createValidationReport,
   normalize,
   serialize,
   serializeConfigPresentation3,
   serializeConfigPresentation4,
   upgradeToPresentation4,
 } from "./presentation-4";
-import { validatePresentation4 } from "./presentation-4/validator";
+import { validateAuthoredPresentation4 } from "./presentation-4/validator";
 
 type CliDeps = {
   readFileText: (path: string) => Promise<string>;
@@ -168,6 +170,7 @@ function usage(c: Colors): string {
     `  ${c.bold(c.cyan("Usage:"))}`,
     "",
     `    ${c.green("iiif-parser")} ${c.yellow("upgrade")}      ${c.dim("<input.json> <output.json>")}`,
+    `    ${c.green("iiif-parser")} ${c.yellow("convert")}      ${c.dim("<input-path-or-url> <output.json> --version 3|4")}`,
     `    ${c.green("iiif-parser")} ${c.yellow("download")}     ${c.dim("<manifest-url> <output.json>")} ${c.dim("[--version 3|4]")}`,
     `    ${c.green("iiif-parser")} ${c.yellow("validate-p4")}  ${c.dim("<input-path-or-url...>")} ${c.dim("[--strict] [--json] [--show-warnings]")}`,
     "",
@@ -176,17 +179,20 @@ function usage(c: Colors): string {
     `    ${c.yellow("upgrade")}       Upgrade a local IIIF Presentation 2 manifest/collection`,
     `                  to Presentation 3.`,
     "",
+    `    ${c.yellow("convert")}       Convert a local or remote Presentation 2, 3, or 4 resource`,
+    `                  to Presentation 3 or 4.`,
+    "",
     `    ${c.yellow("download")}      Download a manifest and save as Presentation 3`,
     `                  ${c.dim("(default)")} or Presentation 4.`,
     "",
-    `    ${c.yellow("validate-p4")}   Validate one or more files/folders/URLs of Presentation 4`,
-    `                  manifests.`,
+    `    ${c.yellow("validate-p4")}   Validate one or more files/folders/URLs containing authored`,
+    `                  Presentation 4 resources.`,
     "",
     `  ${c.bold(c.cyan("Options:"))}`,
     "",
-    `    ${c.dim("--help")}        Show this help message`,
-    `    ${c.dim("--version")}     Output version (for download: target version 3|4)`,
-    `    ${c.dim("--strict")}          Enable strict validation mode ${c.dim("(validate-p4)")}`,
+    `    ${c.dim("--help")}            Show this help message`,
+    `    ${c.dim("--version")}         Output CLI version, or select target version 3|4`,
+    `    ${c.dim("--strict")}          Treat validation warnings as failures ${c.dim("(validate-p4)")}`,
     `    ${c.dim("--json")}            Output validation results as JSON ${c.dim("(validate-p4)")}`,
     `    ${c.dim("--show-warnings")}   Show warning details in output ${c.dim("(validate-p4)")}`,
     "",
@@ -199,6 +205,7 @@ function usage(c: Colors): string {
 function parseArgs(args: string[]): ParsedArgs {
   const positionals: string[] = [];
   const options: Record<string, string | boolean> = {};
+  const booleanOptions = new Set(["help", "strict", "json", "show-warnings"]);
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -219,7 +226,7 @@ function parseArgs(args: string[]): ParsedArgs {
 
     const key = arg.slice(2);
     const next = args[i + 1];
-    if (next && !next.startsWith("--")) {
+    if (!booleanOptions.has(key) && next && !next.startsWith("--")) {
       options[key] = next;
       i++;
       continue;
@@ -248,6 +255,13 @@ function isHttpUrl(value: string): boolean {
   } catch {
     return false;
   }
+}
+
+function hasPresentationContext(value: unknown): boolean {
+  const context = (value as { "@context"?: unknown } | null)?.["@context"];
+  return (Array.isArray(context) ? context : [context]).some(
+    (entry) => typeof entry === "string" && entry.includes("/api/presentation/")
+  );
 }
 
 function toSerializedPresentation4(input: unknown): unknown {
@@ -282,6 +296,10 @@ function formatJson(value: unknown): string {
   return `${JSON.stringify(value, null, 2)}\n`;
 }
 
+async function readJsonSource(source: string, deps: CliDeps): Promise<unknown> {
+  return isHttpUrl(source) ? deps.fetchJson(source) : parseJson(await deps.readFileText(source), source);
+}
+
 // ── Commands ───────────────────────────────────────────────────────
 
 async function runUpgrade(positionals: string[], deps: CliDeps, c: Colors): Promise<number> {
@@ -306,7 +324,8 @@ async function runUpgrade(positionals: string[], deps: CliDeps, c: Colors): Prom
   return 0;
 }
 
-async function runDownload(
+async function runConvert(
+  command: "convert" | "download",
   positionals: string[],
   options: ParsedArgs["options"],
   deps: CliDeps,
@@ -315,25 +334,42 @@ async function runDownload(
   if (positionals.length < 3) {
     deps.stderr(`\n  ${c.red(`${SYM.cross} Missing arguments`)}\n`);
     deps.stderr(
-      `  Usage: ${c.green("iiif-parser")} ${c.yellow("download")} ${c.dim("<manifest-url> <output.json> [--version 3|4]")}\n`
+      `  Usage: ${c.green("iiif-parser")} ${c.yellow(command)} ${c.dim(
+        command === "convert"
+          ? "<input-path-or-url> <output.json> --version 3|4"
+          : "<manifest-url> <output.json> [--version 3|4]"
+      )}\n`
     );
     return 2;
   }
 
-  const url = positionals[1]!;
+  const source = positionals[1]!;
   const outputPath = positionals[2]!;
-  const version = options.version === "4" ? "4" : "3";
+  if (command === "download" && !isHttpUrl(source)) {
+    deps.stderr(`\n  ${c.red(`${SYM.cross} Invalid URL:`)} ${source}\n`);
+    return 2;
+  }
+
+  const versionOption = options.version;
+  if (
+    (command === "convert" && typeof versionOption === "undefined") ||
+    (typeof versionOption !== "undefined" && versionOption !== "3" && versionOption !== "4")
+  ) {
+    deps.stderr(`\n  ${c.red(`${SYM.cross} --version must be 3 or 4`)}\n`);
+    return 2;
+  }
+  const version = versionOption === "4" ? "4" : "3";
 
   deps.stdout("");
-  deps.stdout(`  ${c.dim(`${SYM.arrow} Downloading from`)} ${c.underline(url)}`);
+  deps.stdout(`  ${c.dim(`${SYM.arrow} Reading from`)} ${c.underline(source)}`);
 
-  const downloaded = await deps.fetchJson(url);
-  const output = version === "4" ? toSerializedPresentation4(downloaded) : toSerializedPresentation3(downloaded);
+  const input = await readJsonSource(source, deps);
+  const output = version === "4" ? toSerializedPresentation4(input) : toSerializedPresentation3(input);
 
   await deps.writeFileText(outputPath, formatJson(output));
 
   deps.stdout(
-    `  ${c.green(SYM.check)} ${c.bold(`Saved as Presentation ${version}`)} ${c.dim(`${SYM.arrow} ${outputPath}`)}`
+    `  ${c.green(SYM.check)} ${c.bold(`Converted to Presentation ${version}`)} ${c.dim(`${SYM.arrow} ${outputPath}`)}`
   );
   deps.stdout("");
   return 0;
@@ -365,7 +401,13 @@ async function runValidateP4(
       return;
     }
 
-    const pathInfo = await stat(path);
+    let pathInfo: Awaited<ReturnType<typeof stat>>;
+    try {
+      pathInfo = await stat(path);
+    } catch {
+      expandedInputs.push({ type: "file", path });
+      return;
+    }
     if (!pathInfo.isDirectory()) {
       expandedInputs.push({ type: "file", path });
       return;
@@ -419,47 +461,71 @@ async function runValidateP4(
 
   for (const inputRef of expandedInputs) {
     const inputPath = inputRef.path;
-    const input =
-      inputRef.type === "url"
-        ? await deps.fetchJson(inputPath)
-        : parseJson(await deps.readFileText(inputPath), inputPath);
-    const resourceType = (input as { type?: string; "@type"?: string })?.type ?? (input as any)?.["@type"];
-    if (resourceType !== "Manifest") {
+    let input: unknown;
+    let report: ReturnType<typeof validateAuthoredPresentation4> | undefined;
+
+    try {
+      input = await readJsonSource(inputPath, deps);
+    } catch (error) {
+      report = createValidationReport([
+        {
+          code: "input-processing-error",
+          severity: "error",
+          message: (error as Error).message,
+          path: "$",
+        },
+      ]);
+    }
+
+    const resourceType =
+      (input as { type?: string; "@type"?: string } | undefined)?.type ??
+      (input as { "@type"?: string } | undefined)?.["@type"];
+    if (!report && !resourceType && !hasPresentationContext(input)) {
       summary.skipped++;
       reports.push({
         path: inputPath,
         valid: true,
         skipped: true,
-        reason: `type is ${String(resourceType)}`,
+        reason: "no IIIF resource type",
       });
       if (!jsonOutput) {
-        deps.stdout(`  ${c.dim(SYM.skip)} ${c.dim("SKIP")} ${c.dim(inputPath)} ${c.dim(`(${String(resourceType)})`)}`);
+        deps.stdout(`  ${c.dim(SYM.skip)} ${c.dim("SKIP")} ${c.dim(inputPath)} ${c.dim("(no IIIF resource type)")}`);
       }
       continue;
     }
 
     summary.validated++;
 
-    let report: ReturnType<typeof validatePresentation4>;
-    try {
-      report = validatePresentation4(input, {
-        mode: strict ? "strict" : "tolerant",
-      });
-    } catch (error) {
-      const reportFromError = (error as { report?: unknown }).report;
-      if (!reportFromError) {
-        throw error;
+    if (!report) {
+      try {
+        report = validateAuthoredPresentation4(input, {
+          mode: strict ? "strict" : "tolerant",
+        });
+      } catch (error) {
+        const reportFromError = (error as { report?: unknown }).report;
+        if (!reportFromError) {
+          report = createValidationReport([
+            {
+              code: "input-processing-error",
+              severity: "error",
+              message: (error as Error).message,
+              path: "$",
+            },
+          ]);
+        } else {
+          report = reportFromError as ReturnType<typeof validateAuthoredPresentation4>;
+        }
       }
-      report = reportFromError as ReturnType<typeof validatePresentation4>;
     }
 
+    const valid = report.valid && (!strict || report.stats.warnings === 0);
     reports.push({
       path: inputPath,
-      valid: report.valid,
+      valid,
       skipped: false,
       report,
     });
-    if (report.valid) {
+    if (valid) {
       summary.valid++;
     } else {
       summary.invalid++;
@@ -467,8 +533,8 @@ async function runValidateP4(
 
     if (!jsonOutput) {
       // Compact one-liner per file
-      const statusIcon = report.valid ? c.green(SYM.check) : c.red(SYM.cross);
-      const statusText = report.valid ? c.green("PASS") : c.red("FAIL");
+      const statusIcon = valid ? c.green(SYM.check) : c.red(SYM.cross);
+      const statusText = valid ? c.green("PASS") : c.red("FAIL");
 
       const hints: string[] = [];
       if (report.stats.errors > 0) {
@@ -491,12 +557,12 @@ async function runValidateP4(
   if (!jsonOutput) {
     // Collect files that have errors
     const filesWithErrors = reports.filter(
-      (r) => !r.skipped && r.report && (r.report as ReturnType<typeof validatePresentation4>).stats.errors > 0
+      (r) => !r.skipped && r.report && (r.report as ReturnType<typeof validateAuthoredPresentation4>).stats.errors > 0
     );
 
     // Collect files that have warnings
     const filesWithWarnings = reports.filter(
-      (r) => !r.skipped && r.report && (r.report as ReturnType<typeof validatePresentation4>).stats.warnings > 0
+      (r) => !r.skipped && r.report && (r.report as ReturnType<typeof validateAuthoredPresentation4>).stats.warnings > 0
     );
 
     if (filesWithErrors.length > 0) {
@@ -506,7 +572,7 @@ async function runValidateP4(
       deps.stdout(`  ${c.bold(c.red("Errors"))}`);
 
       for (const entry of filesWithErrors) {
-        const report = entry.report as ReturnType<typeof validatePresentation4>;
+        const report = entry.report as ReturnType<typeof validateAuthoredPresentation4>;
         const errorIssues = report.issues.filter((i) => i.severity === "error");
 
         deps.stdout("");
@@ -532,7 +598,7 @@ async function runValidateP4(
       deps.stdout(`  ${c.bold(c.yellow("Warnings"))}`);
 
       for (const entry of filesWithWarnings) {
-        const report = entry.report as ReturnType<typeof validatePresentation4>;
+        const report = entry.report as ReturnType<typeof validateAuthoredPresentation4>;
         const warningIssues = report.issues.filter((i) => i.severity === "warning");
 
         deps.stdout("");
@@ -551,7 +617,7 @@ async function runValidateP4(
       }
     } else if (!showWarnings && filesWithWarnings.length > 0) {
       const totalWarnings = filesWithWarnings.reduce(
-        (sum, r) => sum + (r.report as ReturnType<typeof validatePresentation4>).stats.warnings,
+        (sum, r) => sum + (r.report as ReturnType<typeof validateAuthoredPresentation4>).stats.warnings,
         0
       );
       deps.stdout("");
@@ -596,9 +662,9 @@ async function runValidateP4(
     if (summary.invalid > 0) {
       deps.stdout(`  ${badge(c, "FAIL", "error")} ${c.red("Validation failed")}`);
     } else if (summary.validated > 0) {
-      deps.stdout(`  ${badge(c, "PASS", "success")} ${c.green("All manifests are valid")}`);
+      deps.stdout(`  ${badge(c, "PASS", "success")} ${c.green("All resources are valid")}`);
     } else {
-      deps.stdout(`  ${badge(c, "DONE", "info")} ${c.dim("No manifests found to validate")}`);
+      deps.stdout(`  ${badge(c, "DONE", "info")} ${c.dim("No IIIF resources found to validate")}`);
     }
 
     deps.stdout("");
@@ -610,6 +676,14 @@ async function runValidateP4(
 // ── Main entry ─────────────────────────────────────────────────────
 
 export async function runCli(args: string[], deps: CliDeps = defaultDeps): Promise<number> {
+  if (args.length === 1 && (args[0] === "--version" || args[0] === "-V")) {
+    deps.stdout(packageJson.version);
+    return 0;
+  }
+  if (args.length === 1 && args[0] === "-h") {
+    args = ["--help"];
+  }
+
   const colorEnabled = deps.color !== undefined ? deps.color : (process.stdout.isTTY ?? false);
   const c = makeColors(colorEnabled);
   const { positionals, options } = parseArgs(args);
@@ -624,8 +698,8 @@ export async function runCli(args: string[], deps: CliDeps = defaultDeps): Promi
     if (command === "upgrade") {
       return await runUpgrade(positionals, deps, c);
     }
-    if (command === "download") {
-      return await runDownload(positionals, options, deps, c);
+    if (command === "convert" || command === "download") {
+      return await runConvert(command, positionals, options, deps, c);
     }
     if (command === "validate-p4") {
       return await runValidateP4(positionals, options, deps, c);
@@ -643,7 +717,9 @@ export async function runCli(args: string[], deps: CliDeps = defaultDeps): Promi
   }
 }
 
-if (import.meta.main) {
+const isMain = process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1];
+
+if (import.meta.main || isMain) {
   runCli(process.argv.slice(2)).then((exitCode) => {
     process.exit(exitCode);
   });

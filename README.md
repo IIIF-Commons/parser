@@ -21,6 +21,34 @@ These include:
 > contracts: the package root keeps the Presentation 3 application model, while
 > `@iiif/parser/presentation-4` opts into a Presentation 4 model.
 
+### Command line
+
+The package includes an `iiif-parser` executable:
+
+```sh
+npx @iiif/parser --help
+
+# Upgrade a local Presentation 2 resource to Presentation 3.
+iiif-parser upgrade input.json output.json
+
+# Convert a local file or URL to Presentation 3 or 4.
+iiif-parser convert input.json output.json --version 4
+
+# Download and convert a remote resource (Presentation 3 by default).
+iiif-parser download https://example.org/manifest.json output.json --version 4
+
+# Validate files, folders, or URLs as authored Presentation 4 resources.
+iiif-parser validate-p4 manifest.json
+iiif-parser validate-p4 fixtures/ --show-warnings
+iiif-parser validate-p4 fixtures/ --strict # Treat warnings as failures.
+iiif-parser validate-p4 manifest.json --json
+```
+
+Validation exits with `0` when every detected IIIF resource is valid, `1` when
+validation or input processing fails, and `2` for invalid CLI usage. Folder
+scans recurse into `.json` files and skip JSON documents without an IIIF
+resource type.
+
 ### Features
 
 The features of this library are focussed on encoding the structure of all types of IIIF and providing utilities for extracting data from the IIIF or converting it into another format that is easier to develop with. The aim of the parser is to maximize the IIIF compatibility of other tools built on top of it.

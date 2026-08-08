@@ -9,6 +9,72 @@ const goldFixtures = readdirSync(goldDirectory)
   .sort();
 
 describe("Presentation 4 authored validation", () => {
+  test.each([null, [], "not a resource"])("reports non-object input %j without throwing", (input) => {
+    const report = validateAuthoredPresentation4(input);
+
+    expect(report.valid).toBe(false);
+    expect(report.issues).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "presentation-4-document-object", path: "$" })])
+    );
+  });
+
+  test("requires a top-level resource type", () => {
+    const report = validateAuthoredPresentation4({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/resource",
+    });
+
+    expect(report.valid).toBe(false);
+    expect(report.issues).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "presentation-4-type-required", path: "$.type" })])
+    );
+  });
+
+  test("compatibility validation reports malformed roots instead of throwing", () => {
+    expect(validatePresentation4(null).issues).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "presentation-4-document-object" })])
+    );
+    expect(validatePresentation4({}).issues).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "presentation-resource-type-required" })])
+    );
+  });
+
+  test.each([
+    ["primitive Manifest item", { items: [1] }],
+    ["primitive Annotation Page item", { items: [{ id: "page", type: "AnnotationPage", items: [1] }] }],
+    ["untyped partOf entry", { partOf: [{ id: "https://example.org/parent" }] }],
+  ])("reports a malformed %s without throwing", (_name, change) => {
+    const report = validateAuthoredPresentation4({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest",
+      type: "Manifest",
+      label: { en: ["Malformed"] },
+      items: [],
+      ...change,
+    });
+
+    expect(report.valid).toBe(false);
+    expect(report.issues).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "validation-processing-error" })])
+    );
+  });
+
+  test("requires provider values to be arrays of Agents", () => {
+    const report = validateAuthoredPresentation4({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/collection",
+      type: "Collection",
+      label: { en: ["Providers"] },
+      items: [],
+      provider: [1],
+    });
+
+    expect(report.valid).toBe(false);
+    expect(report.issues).toEqual(
+      expect.arrayContaining([expect.objectContaining({ code: "provider-agent", path: "$.provider[0]" })])
+    );
+  });
+
   test.each(goldFixtures)("accepts gold fixture %s without changing it", (file) => {
     const input = JSON.parse(readFileSync(join(goldDirectory, file), "utf8"));
     const before = structuredClone(input);

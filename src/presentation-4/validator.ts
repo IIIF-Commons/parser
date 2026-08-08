@@ -35,6 +35,14 @@ type ClassRequirementStats = {
   mustNotChecks: number;
 };
 
+const EMPTY_CLASS_REQUIREMENT_STATS: ClassRequirementStats = {
+  nodesChecked: 0,
+  mustChecks: 0,
+  shouldChecks: 0,
+  allowedPropertyChecks: 0,
+  mustNotChecks: 0,
+};
+
 const classRequirementsByType = new Map<string, { className: string; requirement: ClassRequirement }>(
   Object.entries(presentation4ClassRequirements.classes).map(([className, requirement]) => [
     requirement.typeValue,
@@ -95,6 +103,14 @@ function issue(
     resourceId: params.resource ? getId(params.resource) : undefined,
     resourceType: params.resource ? getType(params.resource) : undefined,
     specRef: params.specRef,
+  });
+}
+
+function processingIssue(issues: ValidationIssue[], error: unknown) {
+  issue(issues, {
+    code: "validation-processing-error",
+    message: `Validation could not inspect the complete resource: ${(error as Error).message}`,
+    path: "$",
   });
 }
 
@@ -535,7 +551,7 @@ function isTopLevelRangeReference(node: any, nodePath: string, parent: any): boo
   return getType(node) === "Range" && getType(parent) === "Manifest" && isTypedReferenceContext(node, nodePath, parent);
 }
 
-function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {
+function runDocumentObjectValidation(resource: unknown): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
 
   if (!isPlainObject(resource)) {
@@ -545,10 +561,27 @@ function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {
       path: "$",
       specRef: "#json-ld-contexts",
     });
+  }
+
+  return issues;
+}
+
+function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {
+  const issues = runDocumentObjectValidation(resource);
+  if (issues.length > 0) {
     return issues;
   }
 
   const authored = resource as Record<string, any>;
+  if (!getType(authored)) {
+    issue(issues, {
+      code: "presentation-4-type-required",
+      message: "A Presentation 4 response must include a top-level type",
+      path: "$.type",
+      resource: authored,
+    });
+  }
+
   const context = authored["@context"];
   const contexts = Array.isArray(context) ? context : [context];
   const presentationContextCount = contexts.filter((value) => value === PRESENTATION_4_CONTEXT).length;
@@ -589,6 +622,31 @@ function runAuthoredDocumentValidation(resource: unknown): ValidationIssue[] {
 
     if (isTypedReferenceContext(node, nodePath, parent)) {
       return;
+    }
+
+    if (typeof node.provider !== "undefined") {
+      if (!Array.isArray(node.provider)) {
+        issue(issues, {
+          code: "provider-array",
+          message: "provider must be an array of Agents",
+          path: `${nodePath}.provider`,
+          resource: node,
+          specRef: "#provider",
+        });
+      } else {
+        for (let index = 0; index < node.provider.length; index++) {
+          const provider = node.provider[index];
+          if (!isPlainObject(provider) || getType(provider) !== "Agent") {
+            issue(issues, {
+              code: "provider-agent",
+              message: "provider entries must be Agent objects",
+              path: `${nodePath}.provider[${index}]`,
+              resource: node,
+              specRef: "#provider",
+            });
+          }
+        }
+      }
     }
 
     const type = getType(node);
@@ -1572,13 +1630,29 @@ function finishValidation(
 export function validateAuthoredPresentation4(input: unknown, options: ValidateOptions = {}): ValidationReport {
   const mode = options.mode || "tolerant";
   const authored = deepClone(input);
-  const issues = [...runAuthoredDocumentValidation(authored), ...runAuthoredShapeValidation(authored)];
+  const issues = runAuthoredDocumentValidation(authored);
+  if (!isPlainObject(authored)) {
+    return finishValidation(issues, EMPTY_CLASS_REQUIREMENT_STATS, mode);
+  }
+  if (!getType(authored)) {
+    return finishValidation(issues, EMPTY_CLASS_REQUIREMENT_STATS, mode);
+  }
+
+  issues.push(...runAuthoredShapeValidation(authored));
   const classRequirementResult = runClassRequirementValidation(authored);
   issues.push(...classRequirementResult.issues);
-  issues.push(...runRawValidation(deepClone(authored), { skipAnnotationShape: true }));
+  try {
+    issues.push(...runRawValidation(deepClone(authored), { skipAnnotationShape: true }));
+  } catch (error) {
+    processingIssue(issues, error);
+  }
 
   if (options.includePostNormalization === true) {
-    issues.push(...runPostNormalizationValidation(normalize(deepClone(authored))));
+    try {
+      issues.push(...runPostNormalizationValidation(normalize(deepClone(authored))));
+    } catch (error) {
+      processingIssue(issues, error);
+    }
   }
 
   return finishValidation(issues, classRequirementResult.stats, mode);
@@ -1590,19 +1664,46 @@ export function validatePresentation4(input: unknown, options: ValidateOptions =
     typeof options.includePostNormalization === "undefined" ? true : options.includePostNormalization;
   const hasContext = hasPresentation4Context(input);
 
-  const issues: ValidationIssue[] = [];
+  const issues = runDocumentObjectValidation(input);
+  if (!isPlainObject(input)) {
+    return finishValidation(issues, EMPTY_CLASS_REQUIREMENT_STATS, mode);
+  }
+  if (!getType(input)) {
+    issue(issues, {
+      code: "presentation-resource-type-required",
+      message: "A Presentation resource must include a top-level type",
+      path: "$.type",
+      resource: input,
+    });
+    return finishValidation(issues, EMPTY_CLASS_REQUIREMENT_STATS, mode);
+  }
+
   if (hasContext) {
     issues.push(...runAuthoredShapeValidation(input as any));
   }
 
-  const upgraded = upgradeToPresentation4(input);
+  let upgraded: any;
+  try {
+    upgraded = upgradeToPresentation4(input);
+  } catch (error) {
+    processingIssue(issues, error);
+    return finishValidation(issues, EMPTY_CLASS_REQUIREMENT_STATS, mode);
+  }
   const classRequirementResult = runClassRequirementValidation(upgraded);
   issues.push(...classRequirementResult.issues);
-  issues.push(...runRawValidation(upgraded, { skipAnnotationShape: hasContext }));
+  try {
+    issues.push(...runRawValidation(upgraded, { skipAnnotationShape: hasContext }));
+  } catch (error) {
+    processingIssue(issues, error);
+  }
 
   if (includePostNormalization) {
-    const normalized = normalize(upgraded);
-    issues.push(...runPostNormalizationValidation(normalized));
+    try {
+      const normalized = normalize(upgraded);
+      issues.push(...runPostNormalizationValidation(normalized));
+    } catch (error) {
+      processingIssue(issues, error);
+    }
   }
 
   return finishValidation(issues, classRequirementResult.stats, mode);

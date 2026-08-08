@@ -78,6 +78,15 @@ describe("iiif-parser CLI", () => {
     expect(output).toContain("--show-warnings");
   });
 
+  test("outputs the package version", async () => {
+    const { stdout, deps } = testDeps({});
+
+    const code = await runCli(["--version"], deps);
+
+    expect(code).toBe(0);
+    expect(stdout).toEqual([expect.stringMatching(/^\d+\.\d+\.\d+/)]);
+  });
+
   test("returns error for unknown command", async () => {
     const { stderr, deps } = testDeps({});
     const code = await runCli(["foobar"], deps);
@@ -175,6 +184,45 @@ describe("iiif-parser CLI", () => {
     expect(stderr.some((line) => line.includes("Missing arguments"))).toBe(true);
   });
 
+  test("rejects unsupported download target versions", async () => {
+    const { stderr, deps } = testDeps({});
+
+    const code = await runCli(["download", "https://example.org/manifest", "downloaded.json", "--version", "5"], deps);
+
+    expect(code).toBe(2);
+    expect(stderr.join("\n")).toContain("--version must be 3 or 4");
+  });
+
+  // ── Convert command ──────────────────────────────────────────────
+
+  test("converts a local Presentation 3 resource to Presentation 4", async () => {
+    const { files, deps } = testDeps({
+      files: {
+        "input.json": JSON.stringify({
+          "@context": "http://iiif.io/api/presentation/3/context.json",
+          id: "https://example.org/manifest",
+          type: "Manifest",
+          label: { en: ["Example"] },
+          items: [],
+        }),
+      },
+    });
+
+    const code = await runCli(["convert", "input.json", "output.json", "--version", "4"], deps);
+
+    expect(code).toBe(0);
+    expect(JSON.parse(files["output.json"]!)["@context"]).toBe("http://iiif.io/api/presentation/4/context.json");
+  });
+
+  test("convert requires an explicit target version", async () => {
+    const { stderr, deps } = testDeps({});
+
+    const code = await runCli(["convert", "input.json", "output.json"], deps);
+
+    expect(code).toBe(2);
+    expect(stderr.join("\n")).toContain("--version must be 3 or 4");
+  });
+
   // ── Validate-p4: compact output ──────────────────────────────────
 
   test("compact output shows PASS/FAIL on one line per file", async () => {
@@ -260,7 +308,6 @@ describe("iiif-parser CLI", () => {
 
       expect(code).toBe(0);
 
-      const allOutput = stdout.join("\n");
       // The compact PASS line should contain the warning symbol and a count
       const passLine = stdout.find((line) => line.includes("PASS") && line.includes("manifest.json"));
       expect(passLine).toBeDefined();
@@ -402,7 +449,7 @@ describe("iiif-parser CLI", () => {
 
   // ── Validate-p4: skips ───────────────────────────────────────────
 
-  test("validates all JSON files in a folder and skips non-manifest resources", async () => {
+  test("validates all Presentation 4 resources in a folder", async () => {
     const dir = await mkdtemp(join(tmpdir(), "iiif-parser-cli-"));
     const nested = join(dir, "nested");
 
@@ -480,8 +527,8 @@ describe("iiif-parser CLI", () => {
 
       const allOutput = stdout.join("\n");
 
-      // Skip message for the collection
-      expect(allOutput).toContain("SKIP");
+      // Collections are authored Presentation 4 resources and are validated too.
+      expect(allOutput).not.toContain("SKIP");
       expect(allOutput).toContain("collection.json");
 
       // Summary section with structured output
@@ -489,11 +536,11 @@ describe("iiif-parser CLI", () => {
       expect(allOutput).toContain("Scanned:");
       expect(allOutput).toContain("4");
       expect(allOutput).toContain("Validated:");
-      expect(allOutput).toContain("3");
+      expect(allOutput).toContain("4");
       expect(allOutput).toContain("Skipped:");
-      expect(allOutput).toContain("1");
+      expect(allOutput).toContain("0");
       expect(allOutput).toContain("Valid:");
-      expect(allOutput).toContain("2");
+      expect(allOutput).toContain("3");
       expect(allOutput).toContain("Invalid:");
       // Overall result
       expect(allOutput).toContain("FAIL");
@@ -575,6 +622,111 @@ describe("iiif-parser CLI", () => {
     expect(allOutput).toContain(manifestUrl);
     expect(allOutput).toContain("Scanned:");
     expect(allOutput).toContain("1");
+  });
+
+  test("strict flags can appear before inputs and treat warnings as failures", async () => {
+    const manifestUrl = "https://example.org/manifest.json";
+    const { deps } = testDeps({
+      fetchJson: async () => ({
+        "@context": "http://iiif.io/api/presentation/4/context.json",
+        id: "https://example.org/manifest",
+        type: "Manifest",
+        label: { en: ["Remote"] },
+        items: [
+          {
+            id: "https://example.org/canvas/1",
+            type: "Canvas",
+            width: 1000,
+            height: 1000,
+            items: [],
+          },
+        ],
+      }),
+    });
+
+    expect(await runCli(["validate-p4", "--strict", manifestUrl], deps)).toBe(1);
+  });
+
+  test("validates authored Presentation 4 Collections instead of skipping them", async () => {
+    const collectionPath = join(import.meta.dirname, "presentation-4/fixtures/gold/collection.json");
+    const stdout: string[] = [];
+
+    const code = await runCli(["validate-p4", collectionPath], fsDeps(stdout, []));
+
+    expect(code).toBe(0);
+    expect(stdout.join("\n")).toContain("PASS");
+    expect(stdout.join("\n")).not.toContain("SKIP");
+  });
+
+  test("rejects Presentation 3 input as authored Presentation 4", async () => {
+    const { stdout, deps } = testDeps({
+      fetchJson: async () => ({
+        "@context": "http://iiif.io/api/presentation/3/context.json",
+        id: "https://example.org/manifest",
+        type: "Manifest",
+        label: { en: ["Presentation 3"] },
+        items: [],
+      }),
+    });
+
+    const code = await runCli(["validate-p4", "https://example.org/manifest.json"], deps);
+
+    expect(code).toBe(1);
+    expect(stdout.join("\n")).toContain("presentation-4-context-required");
+  });
+
+  test("reports a Presentation document with no resource type", async () => {
+    const { stdout, deps } = testDeps({
+      fetchJson: async () => ({
+        "@context": "http://iiif.io/api/presentation/4/context.json",
+        id: "https://example.org/resource",
+      }),
+    });
+
+    const code = await runCli(["validate-p4", "https://example.org/resource.json"], deps);
+
+    expect(code).toBe(1);
+    expect(stdout.join("\n")).toContain("presentation-4-type-required");
+  });
+
+  test("reports malformed JSON without aborting the rest of a folder", async () => {
+    const dir = await mkdtemp(join(tmpdir(), "iiif-parser-cli-"));
+
+    try {
+      await writeFile(join(dir, "broken.json"), "{", "utf8");
+      await writeFile(
+        join(dir, "good.json"),
+        JSON.stringify({
+          "@context": "http://iiif.io/api/presentation/4/context.json",
+          id: "https://example.org/collection",
+          type: "Collection",
+          label: { en: ["Good"] },
+          items: [],
+        }),
+        "utf8"
+      );
+      const stdout: string[] = [];
+
+      const code = await runCli(["validate-p4", dir], fsDeps(stdout, []));
+
+      expect(code).toBe(1);
+      expect(stdout.join("\n")).toContain("broken.json");
+      expect(stdout.join("\n")).toContain("input-processing-error");
+      expect(stdout.find((line) => line.includes("good.json"))).toContain("PASS");
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
+  });
+
+  test("reports an unreadable input in JSON output", async () => {
+    const stdout: string[] = [];
+
+    const code = await runCli(["validate-p4", "/missing/manifest.json", "--json"], fsDeps(stdout, []));
+
+    expect(code).toBe(1);
+    const output = JSON.parse(stdout.join("\n"));
+    expect(output.summary.invalid).toBe(1);
+    expect(output.reports[0].report.issues[0].code).toBe("input-processing-error");
   });
 
   test("validate-p4 supports mixed local path and URL inputs", async () => {
@@ -688,7 +840,7 @@ describe("iiif-parser CLI", () => {
 
       const allOutput = stdout.join("\n");
       expect(allOutput).toContain("PASS");
-      expect(allOutput).toContain("All manifests are valid");
+      expect(allOutput).toContain("All resources are valid");
     } finally {
       await rm(dir, { recursive: true, force: true });
     }
