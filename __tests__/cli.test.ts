@@ -76,6 +76,7 @@ describe("iiif-parser CLI", () => {
 
     const output = stdout.join("\n");
     expect(output).toContain("--show-warnings");
+    expect(output).toContain("--ignore-unknown");
   });
 
   test("outputs the package version", async () => {
@@ -907,5 +908,100 @@ describe("iiif-parser CLI", () => {
     } finally {
       await rm(dir, { recursive: true, force: true });
     }
+  });
+
+  // ── Unified validation ────────────────────────────────────────────
+
+  test("validate auto-detects Presentation 3 and 4 per input", async () => {
+    const { stdout, deps } = testDeps({
+      files: {
+        "v3.json": JSON.stringify({
+          "@context": "http://iiif.io/api/presentation/3/context.json",
+          id: "https://example.org/v3",
+          type: "Manifest",
+          label: { en: ["Version 3"] },
+          items: [],
+        }),
+        "v4.json": JSON.stringify({
+          "@context": "http://iiif.io/api/presentation/4/context.json",
+          id: "https://example.org/v4",
+          type: "Manifest",
+          label: { en: ["Version 4"] },
+          items: [{ id: "https://example.org/canvas", type: "Canvas", width: 1, height: 1, items: [] }],
+        }),
+      },
+    });
+
+    const code = await runCli(["validate", "v3.json", "v4.json", "--version", "auto", "--json"], deps);
+    const output = JSON.parse(stdout.join("\n"));
+
+    expect(code).toBe(0);
+    expect(output.reports.map((report: { version: string }) => report.version)).toEqual(["3", "4"]);
+  });
+
+  test("validate accepts an explicit version", async () => {
+    const { deps } = testDeps({
+      files: {
+        "manifest.json": JSON.stringify({
+          "@context": "http://iiif.io/api/presentation/3/context.json",
+          id: "https://example.org/manifest",
+          type: "Manifest",
+          label: { en: ["Version 3"] },
+          items: [],
+        }),
+      },
+    });
+
+    expect(await runCli(["validate", "manifest.json", "--version", "3"], deps)).toBe(0);
+  });
+
+  test("validate reports an unknown context in auto mode", async () => {
+    const { stdout, deps } = testDeps({
+      files: {
+        "manifest.json": JSON.stringify({
+          "@context": "https://example.org/context.json",
+          id: "https://example.org/manifest",
+          type: "Manifest",
+          label: { en: ["Unknown"] },
+          items: [],
+        }),
+      },
+    });
+
+    expect(await runCli(["validate", "manifest.json", "--json"], deps)).toBe(1);
+    expect(stdout.join("\n")).toContain("presentation-version-not-detected");
+  });
+
+  test("validate can skip documents with unknown contexts", async () => {
+    const { stdout, deps } = testDeps({
+      files: {
+        "unknown.json": JSON.stringify({
+          "@context": "https://example.org/context.json",
+          id: "https://example.org/manifest",
+          type: "Manifest",
+        }),
+        "v3.json": JSON.stringify({
+          "@context": "http://iiif.io/api/presentation/3/context.json",
+          id: "https://example.org/v3",
+          type: "Manifest",
+          label: { en: ["Version 3"] },
+          items: [],
+        }),
+      },
+    });
+
+    const code = await runCli(["validate", "--ignore-unknown", "unknown.json", "v3.json", "--json"], deps);
+    const output = JSON.parse(stdout.join("\n"));
+
+    expect(code).toBe(0);
+    expect(output.summary).toMatchObject({ scanned: 2, validated: 1, skipped: 1, valid: 1, invalid: 0 });
+    expect(output.reports[0]).toMatchObject({ path: "unknown.json", skipped: true });
+  });
+
+  test("validate rejects unsupported versions", async () => {
+    const { stderr, deps } = testDeps({ files: { "manifest.json": "{}" } });
+
+    expect(await runCli(["validate", "manifest.json", "--version", "2"], deps)).toBe(2);
+    expect(stderr.join("\n")).toContain("--version must be 3, 4 or auto");
   });
 });

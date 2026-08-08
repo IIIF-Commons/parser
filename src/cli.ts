@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 import packageJson from "../package.json";
 import pc from "picocolors";
 import { convertPresentation2 } from "./presentation-2";
+import { validateAuthoredPresentation3 } from "./presentation-3/validator";
 import {
   createValidationReport,
   normalize,
@@ -15,6 +16,7 @@ import {
   upgradeToPresentation4,
 } from "./presentation-4";
 import { validateAuthoredPresentation4 } from "./presentation-4/validator";
+import type { ValidationReport } from "./shared/validation";
 
 type CliDeps = {
   readFileText: (path: string) => Promise<string>;
@@ -36,6 +38,8 @@ type JsonToken = {
   end: number;
   value?: unknown;
 };
+
+type PresentationVersion = "3" | "4";
 
 // ── Symbols ────────────────────────────────────────────────────────
 
@@ -179,7 +183,7 @@ function usage(c: Colors): string {
     `    ${c.green("iiif-parser")} ${c.yellow("upgrade")}      ${c.dim("<input.json> <output.json>")}`,
     `    ${c.green("iiif-parser")} ${c.yellow("convert")}      ${c.dim("<input-path-or-url> <output.json> --version 3|4")}`,
     `    ${c.green("iiif-parser")} ${c.yellow("download")}     ${c.dim("<manifest-url> <output.json>")} ${c.dim("[--version 3|4]")}`,
-    `    ${c.green("iiif-parser")} ${c.yellow("validate-p4")}  ${c.dim("<input-path-or-url...>")} ${c.dim("[--strict] [--json] [--show-warnings]")}`,
+    `    ${c.green("iiif-parser")} ${c.yellow("validate")}     ${c.dim("<input-path-or-url...>")} ${c.dim("[--version 3|4|auto] [--ignore-unknown] [--strict] [--json] [--show-warnings]")}`,
     "",
     `  ${c.bold(c.cyan("Commands:"))}`,
     "",
@@ -192,16 +196,18 @@ function usage(c: Colors): string {
     `    ${c.yellow("download")}      Download a manifest and save as Presentation 3`,
     `                  ${c.dim("(default)")} or Presentation 4.`,
     "",
-    `    ${c.yellow("validate-p4")}   Validate one or more files/folders/URLs containing authored`,
-    `                  Presentation 4 resources.`,
+    `    ${c.yellow("validate")}      Validate one or more files/folders/URLs containing authored`,
+    `                  Presentation 3 or 4 resources. The default version is auto.`,
+    `    ${c.yellow("validate-p4")}   Compatibility alias for validate --version 4.`,
     "",
     `  ${c.bold(c.cyan("Options:"))}`,
     "",
     `    ${c.dim("--help")}            Show this help message`,
-    `    ${c.dim("--version")}         Output CLI version, or select target version 3|4`,
-    `    ${c.dim("--strict")}          Treat validation warnings as failures ${c.dim("(validate-p4)")}`,
-    `    ${c.dim("--json")}            Output validation results as JSON ${c.dim("(validate-p4)")}`,
-    `    ${c.dim("--show-warnings")}   Show warning details in output ${c.dim("(validate-p4)")}`,
+    `    ${c.dim("--version")}         Output CLI version, select target version 3|4, or auto-detect`,
+    `    ${c.dim("--ignore-unknown")}  Skip documents without a recognized Presentation context`,
+    `    ${c.dim("--strict")}          Treat validation warnings as failures ${c.dim("(validate)")}`,
+    `    ${c.dim("--json")}            Output validation results as JSON ${c.dim("(validate)")}`,
+    `    ${c.dim("--show-warnings")}   Show warning details in output ${c.dim("(validate)")}`,
     "",
   ];
   return lines.join("\n");
@@ -212,7 +218,7 @@ function usage(c: Colors): string {
 function parseArgs(args: string[]): ParsedArgs {
   const positionals: string[] = [];
   const options: Record<string, string | boolean> = {};
-  const booleanOptions = new Set(["help", "strict", "json", "show-warnings"]);
+  const booleanOptions = new Set(["help", "strict", "json", "show-warnings", "ignore-unknown"]);
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
@@ -269,6 +275,17 @@ function hasPresentationContext(value: unknown): boolean {
   return (Array.isArray(context) ? context : [context]).some(
     (entry) => typeof entry === "string" && entry.includes("/api/presentation/")
   );
+}
+
+function presentationVersionFromContext(value: unknown): PresentationVersion | undefined {
+  const context = (value as { "@context"?: unknown } | null)?.["@context"];
+  const versions = new Set<PresentationVersion>();
+  for (const entry of Array.isArray(context) ? context : [context]) {
+    if (typeof entry !== "string") continue;
+    const match = entry.match(/^https?:\/\/iiif\.io\/api\/presentation\/([34])\/context\.json$/);
+    if (match?.[1] === "3" || match?.[1] === "4") versions.add(match[1]);
+  }
+  return versions.size === 1 ? [...versions][0] : undefined;
 }
 
 function toSerializedPresentation4(input: unknown): unknown {
@@ -552,7 +569,7 @@ async function runConvert(
   return 0;
 }
 
-async function runValidateP4(
+async function runValidate(
   positionals: string[],
   options: ParsedArgs["options"],
   deps: CliDeps,
@@ -561,8 +578,14 @@ async function runValidateP4(
   if (positionals.length < 2) {
     deps.stderr(`\n  ${c.red(`${SYM.cross} Missing arguments`)}\n`);
     deps.stderr(
-      `  Usage: ${c.green("iiif-parser")} ${c.yellow("validate-p4")} ${c.dim("<input-path-or-url...> [--strict] [--json] [--show-warnings]")}\n`
+      `  Usage: ${c.green("iiif-parser")} ${c.yellow("validate")} ${c.dim("<input-path-or-url...> [--version 3|4|auto] [--ignore-unknown] [--strict] [--json] [--show-warnings]")}\n`
     );
+    return 2;
+  }
+
+  const requestedVersion = options.version ?? "auto";
+  if (requestedVersion !== "3" && requestedVersion !== "4" && requestedVersion !== "auto") {
+    deps.stderr(`\n  ${c.red(`${SYM.cross} --version must be 3, 4 or auto`)}\n`);
     return 2;
   }
 
@@ -570,6 +593,7 @@ async function runValidateP4(
   const strict = options.strict === true;
   const jsonOutput = options.json === true;
   const showWarnings = options["show-warnings"] === true;
+  const ignoreUnknown = options["ignore-unknown"] === true;
   const expandedInputs: Array<{ type: "file" | "url"; path: string }> = [];
   const sourceTexts = new Map<string, string>();
 
@@ -620,16 +644,17 @@ async function runValidateP4(
 
   const reports: Array<{
     path: string;
+    version?: PresentationVersion;
     valid: boolean;
     skipped: boolean;
     reason?: string;
-    report?: unknown;
+    report?: ValidationReport;
   }> = [];
 
   if (!jsonOutput) {
     deps.stdout("");
     deps.stdout(
-      `  ${c.bold(c.cyan("Presentation 4 Validation"))} ${c.dim(`(${strict ? "strict" : "tolerant"} mode)`)}`
+      `  ${c.bold(c.cyan("IIIF Presentation Validation"))} ${c.dim(`(${requestedVersion === "auto" ? "auto-detect, " : `version ${requestedVersion}, `}${strict ? "strict" : "tolerant"} mode)`)}`
     );
     deps.stdout(`  ${c.dim(`Scanning ${expandedInputs.length} input${expandedInputs.length === 1 ? "" : "s"}...`)}`);
     deps.stdout("");
@@ -640,7 +665,8 @@ async function runValidateP4(
   for (const inputRef of expandedInputs) {
     const inputPath = inputRef.path;
     let input: unknown;
-    let report: ReturnType<typeof validateAuthoredPresentation4> | undefined;
+    let report: ValidationReport | undefined;
+    let version: PresentationVersion | undefined;
 
     try {
       const document = await readJsonDocument(inputPath, deps);
@@ -674,13 +700,43 @@ async function runValidateP4(
       continue;
     }
 
+    const detectedVersion = presentationVersionFromContext(input);
+    if (!report && ignoreUnknown && !detectedVersion) {
+      summary.skipped++;
+      reports.push({
+        path: inputPath,
+        valid: true,
+        skipped: true,
+        reason: "unknown Presentation context",
+      });
+      if (!jsonOutput) {
+        deps.stdout(
+          `  ${c.dim(SYM.skip)} ${c.dim("SKIP")} ${c.dim(inputPath)} ${c.dim("(unknown Presentation context)")}`
+        );
+      }
+      continue;
+    }
+
     summary.validated++;
 
     if (!report) {
+      version = requestedVersion === "auto" ? detectedVersion : requestedVersion;
+      if (!version) {
+        report = createValidationReport([
+          {
+            code: "presentation-version-not-detected",
+            severity: "error",
+            message: "Could not detect Presentation version 3 or 4 from the top-level @context",
+            path: "$.@context",
+          },
+        ]);
+      }
+    }
+
+    if (!report && version) {
       try {
-        report = validateAuthoredPresentation4(input, {
-          mode: strict ? "strict" : "tolerant",
-        });
+        const validator = version === "3" ? validateAuthoredPresentation3 : validateAuthoredPresentation4;
+        report = validator(input, { mode: strict ? "strict" : "tolerant" });
       } catch (error) {
         const reportFromError = (error as { report?: unknown }).report;
         if (!reportFromError) {
@@ -693,14 +749,17 @@ async function runValidateP4(
             },
           ]);
         } else {
-          report = reportFromError as ReturnType<typeof validateAuthoredPresentation4>;
+          report = reportFromError as ValidationReport;
         }
       }
     }
 
+    if (!report) throw new Error(`Validation did not produce a report for ${inputPath}`);
+
     const valid = report.valid && (!strict || report.stats.warnings === 0);
     reports.push({
       path: inputPath,
+      version,
       valid,
       skipped: false,
       report,
@@ -736,14 +795,10 @@ async function runValidateP4(
 
   if (!jsonOutput) {
     // Collect files that have errors
-    const filesWithErrors = reports.filter(
-      (r) => !r.skipped && r.report && (r.report as ReturnType<typeof validateAuthoredPresentation4>).stats.errors > 0
-    );
+    const filesWithErrors = reports.filter((r) => !r.skipped && r.report && r.report.stats.errors > 0);
 
     // Collect files that have warnings
-    const filesWithWarnings = reports.filter(
-      (r) => !r.skipped && r.report && (r.report as ReturnType<typeof validateAuthoredPresentation4>).stats.warnings > 0
-    );
+    const filesWithWarnings = reports.filter((r) => !r.skipped && r.report && r.report.stats.warnings > 0);
 
     if (filesWithErrors.length > 0) {
       deps.stdout("");
@@ -752,7 +807,7 @@ async function runValidateP4(
       deps.stdout(`  ${c.bold(c.red("Errors"))}`);
 
       for (const entry of filesWithErrors) {
-        const report = entry.report as ReturnType<typeof validateAuthoredPresentation4>;
+        const report = entry.report!;
         const errorIssues = report.issues.filter((i) => i.severity === "error");
 
         deps.stdout("");
@@ -783,7 +838,7 @@ async function runValidateP4(
       deps.stdout(`  ${c.bold(c.yellow("Warnings"))}`);
 
       for (const entry of filesWithWarnings) {
-        const report = entry.report as ReturnType<typeof validateAuthoredPresentation4>;
+        const report = entry.report!;
         const warningIssues = report.issues.filter((i) => i.severity === "warning");
 
         deps.stdout("");
@@ -801,10 +856,7 @@ async function runValidateP4(
         }
       }
     } else if (!showWarnings && filesWithWarnings.length > 0) {
-      const totalWarnings = filesWithWarnings.reduce(
-        (sum, r) => sum + (r.report as ReturnType<typeof validateAuthoredPresentation4>).stats.warnings,
-        0
-      );
+      const totalWarnings = filesWithWarnings.reduce((sum, r) => sum + r.report!.stats.warnings, 0);
       deps.stdout("");
       deps.stdout(
         `  ${c.dim(`${SYM.info} ${totalWarnings} warning${totalWarnings === 1 ? "" : "s"} hidden. Use ${c.yellow("--show-warnings")} to show details.`)}`
@@ -886,8 +938,13 @@ export async function runCli(args: string[], deps: CliDeps = defaultDeps): Promi
     if (command === "convert" || command === "download") {
       return await runConvert(command, positionals, options, deps, c);
     }
-    if (command === "validate-p4") {
-      return await runValidateP4(positionals, options, deps, c);
+    if (command === "validate" || command === "validate-p4") {
+      return await runValidate(
+        positionals,
+        command === "validate-p4" ? { ...options, version: "4" } : options,
+        deps,
+        c
+      );
     }
 
     deps.stderr("");

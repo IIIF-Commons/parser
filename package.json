@@ -70,6 +70,16 @@
         "default": "./dist/presentation-3/types.js"
       }
     },
+    "./presentation-3/validator": {
+      "require": {
+        "types": "./dist/presentation-3/validator.d.cts",
+        "default": "./dist/presentation-3/validator.cjs"
+      },
+      "import": {
+        "types": "./dist/presentation-3/validator.d.ts",
+        "default": "./dist/presentation-3/validator.js"
+      }
+    },
     "./presentation-3-normalized": {
       "require": {
         "types": "./dist/presentation-3-normalized.d.cts",
@@ -202,7 +212,7 @@
     "reserialize-p4-fixtures": "node scripts/reserialize-p4-fixtures.mjs",
     "convert-p3-to-p4": "node scripts/convert-p3-manifests-to-p4.mjs",
     "extract:service-examples": "node scripts/extract-service-examples.mjs --scope all",
-    "validate:p4:fixtures": "bun run src/cli.ts validate-p4 fixtures/presentation-4 fixtures/cookbook-v4",
+    "validate:p4:fixtures": "bun run src/cli.ts validate fixtures/presentation-4 fixtures/cookbook-v4 --version 4",
     "prepack": "tsdown && tsdown --config tsdown.umd.ts && tsdown --config tsdown.cli.ts",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",

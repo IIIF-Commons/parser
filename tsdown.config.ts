@@ -12,6 +12,7 @@ export default defineConfig({
     "presentation-2/types": "src/presentation-2/types/index.ts",
     "presentation-3": "src/presentation-3/index.ts",
     "presentation-3/types": "src/presentation-3/types/index.ts",
+    "presentation-3/validator": "src/presentation-3/validator.ts",
     "presentation-3-normalized": "src/presentation-3-normalized/index.ts",
     "presentation-3-normalized/types": "src/presentation-3-normalized/types/index.ts",
     "presentation-4": "src/presentation-4/index.ts",

@@ -37,11 +37,12 @@ iiif-parser convert input.json output.json --version 4
 # Download and convert a remote resource (Presentation 3 by default).
 iiif-parser download https://example.org/manifest.json output.json --version 4
 
-# Validate files, folders, or URLs as authored Presentation 4 resources.
-iiif-parser validate-p4 manifest.json
-iiif-parser validate-p4 fixtures/ --show-warnings
-iiif-parser validate-p4 fixtures/ --strict # Treat warnings as failures.
-iiif-parser validate-p4 manifest.json --json
+# Validate authored Presentation 3 or 4 resources (auto-detected by default).
+iiif-parser validate manifest.json
+iiif-parser validate fixtures/ --version 3 --show-warnings
+iiif-parser validate fixtures/ --version 4 --strict # Treat warnings as failures.
+iiif-parser validate manifest.json --version auto --json
+iiif-parser validate mixed-json/ --ignore-unknown # Skip unknown contexts.
 ```
 
 Validation exits with `0` when every detected IIIF resource is valid, `1` when
@@ -49,6 +50,13 @@ validation or input processing fails, and `2` for invalid CLI usage. Folder
 scans recurse into `.json` files and skip JSON documents without an IIIF
 resource type. Human-readable errors include source code frames with line and
 column numbers; `--json` output remains machine-readable.
+
+The validators are also available as package entrypoints:
+
+```ts
+import { validateAuthoredPresentation3 } from "@iiif/parser/presentation-3/validator";
+import { validateAuthoredPresentation4 } from "@iiif/parser/presentation-4/validator";
+```
 
 ### Features
 

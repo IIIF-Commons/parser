@@ -17,6 +17,7 @@ const imports = [
   "@iiif/parser/presentation-2/types",
   "@iiif/parser/presentation-3",
   "@iiif/parser/presentation-3/types",
+  "@iiif/parser/presentation-3/validator",
   "@iiif/parser/presentation-3-normalized",
   "@iiif/parser/presentation-3-normalized/types",
   "@iiif/parser/presentation-4",
