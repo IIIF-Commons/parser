@@ -3,6 +3,7 @@ import type { SpecificationBehaviors } from "../../../../../presentation-3/types
 import type { LiteralUnion, Prettify } from "../../../../../presentation-3/types/legacy/src/utility";
 import type { GeoJSON } from "../../../../../shared/geojson";
 import type { ViewingDirection } from "../iiif/technical";
+import type { AnnotationPage } from "./annotationPage";
 import type { Canvas } from "./canvas";
 import type {
   AgentLike,
@@ -29,8 +30,9 @@ export type AnnotationCollection = Prettify<{
   thumbnail?: Array<ContentResourceLike> | undefined;
   provider?: Array<AgentLike | ResourceReference<"Agent">> | undefined;
   total?: number | undefined;
-  first: string | ResourceReference<"AnnotationPage">;
-  last: string | ResourceReference<"AnnotationPage">;
+  items?: Array<AnnotationPage | ResourceReference<"AnnotationPage">>;
+  first?: string | ResourceReference<"AnnotationPage">;
+  last?: string | ResourceReference<"AnnotationPage">;
   annotations?: Array<ResourceReference<"AnnotationPage"> | string>;
   canonical?: string;
   via?: Array<string>;

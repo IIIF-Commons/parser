@@ -42,6 +42,10 @@ import type {
 
 export type Container = Collection | Manifest | Timeline | Canvas | Scene;
 
+export type Presentation4Document<Resource> = Resource & {
+  "@context": string | readonly string[];
+};
+
 export type Presentation4HelperTypes = {
   Collection: Collection;
   CollectionPage: CollectionPage;

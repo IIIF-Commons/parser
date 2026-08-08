@@ -43,7 +43,7 @@ export type Range = Prettify<{
   placeholderContainer?: Canvas | Timeline | Scene | null;
   accompanyingContainer?: Canvas | Timeline | Scene | null;
 
-  items?: Array<RangeItem>;
+  items: [RangeItem, ...RangeItem[]];
   annotations?: Array<RangeAnnotation>;
   thumbnail?: Array<LinkedResource>;
   provider?: Array<AgentLike | ResourceReference<"Agent">>;
