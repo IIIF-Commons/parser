@@ -359,6 +359,20 @@ describe("iiif-parser CLI", () => {
     }
   });
 
+  test("validation errors include a compiler-style JSON code frame", async () => {
+    const fixturePath = join(import.meta.dirname, "../fixtures/presentation-4/21-scene-within-canvas.json");
+    const stdout: string[] = [];
+
+    const code = await runCli(["validate-p4", fixturePath], fsDeps(stdout, []));
+
+    expect(code).toBe(1);
+    const output = stdout.join("\n");
+    expect(output).toContain("$.items[0].items[0].items[0].body.items[1]");
+    expect(output).toMatch(/21-scene-within-canvas\.json:\d+:\d+/);
+    expect(output).toContain('"type": "Image"');
+    expect(output).toMatch(/\^+/);
+  });
+
   // ── Validate-p4: --show-warnings ─────────────────────────────────
 
   test("warning details are hidden by default but hint is shown", async () => {

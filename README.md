@@ -47,7 +47,8 @@ iiif-parser validate-p4 manifest.json --json
 Validation exits with `0` when every detected IIIF resource is valid, `1` when
 validation or input processing fails, and `2` for invalid CLI usage. Folder
 scans recurse into `.json` files and skip JSON documents without an IIIF
-resource type.
+resource type. Human-readable errors include source code frames with line and
+column numbers; `--json` output remains machine-readable.
 
 ### Features
 

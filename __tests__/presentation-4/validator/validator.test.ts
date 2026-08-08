@@ -75,6 +75,23 @@ describe("Presentation 4 authored validation", () => {
     );
   });
 
+  test("reports aggregate Scene painting errors at the authored body item path", () => {
+    const input = JSON.parse(
+      readFileSync(join(process.cwd(), "fixtures/presentation-4/21-scene-within-canvas.json"), "utf8")
+    );
+
+    const report = validateAuthoredPresentation4(input);
+
+    expect(report.issues).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          code: "scene-painting-non-3d-body",
+          path: "$.items[0].items[0].items[0].body.items[1]",
+        }),
+      ])
+    );
+  });
+
   test.each(goldFixtures)("accepts gold fixture %s without changing it", (file) => {
     const input = JSON.parse(readFileSync(join(goldDirectory, file), "utf8"));
     const before = structuredClone(input);

@@ -30,6 +30,13 @@ type ParsedArgs = {
   options: Record<string, string | boolean>;
 };
 
+type JsonToken = {
+  kind: "{" | "}" | "[" | "]" | ":" | "," | "value";
+  start: number;
+  end: number;
+  value?: unknown;
+};
+
 // ── Symbols ────────────────────────────────────────────────────────
 
 const SYM = {
@@ -296,8 +303,178 @@ function formatJson(value: unknown): string {
   return `${JSON.stringify(value, null, 2)}\n`;
 }
 
+async function readJsonDocument(source: string, deps: CliDeps): Promise<{ input: unknown; text: string }> {
+  if (isHttpUrl(source)) {
+    const input = await deps.fetchJson(source);
+    return { input, text: formatJson(input) };
+  }
+  const text = await deps.readFileText(source);
+  return { input: parseJson(text, source), text };
+}
+
 async function readJsonSource(source: string, deps: CliDeps): Promise<unknown> {
-  return isHttpUrl(source) ? deps.fetchJson(source) : parseJson(await deps.readFileText(source), source);
+  return (await readJsonDocument(source, deps)).input;
+}
+
+function tokenizeJson(source: string): JsonToken[] {
+  const tokens: JsonToken[] = [];
+  const punctuation = new Set(["{", "}", "[", "]", ":", ","]);
+
+  for (let index = 0; index < source.length;) {
+    const character = source[index]!;
+    if (/\s/.test(character)) {
+      index++;
+      continue;
+    }
+    if (punctuation.has(character)) {
+      tokens.push({ kind: character as JsonToken["kind"], start: index, end: index + 1 });
+      index++;
+      continue;
+    }
+    if (character === '"') {
+      let end = index + 1;
+      while (end < source.length) {
+        const current = source[end];
+        if (current === "\\") {
+          end += 2;
+        } else {
+          end++;
+          if (current === '"') break;
+        }
+      }
+      const raw = source.slice(index, end);
+      tokens.push({ kind: "value", start: index, end, value: JSON.parse(raw) });
+      index = end;
+      continue;
+    }
+
+    let end = index + 1;
+    while (end < source.length && !/\s/.test(source[end]!) && !punctuation.has(source[end]!)) {
+      end++;
+    }
+    const raw = source.slice(index, end);
+    tokens.push({ kind: "value", start: index, end, value: JSON.parse(raw) });
+    index = end;
+  }
+
+  return tokens;
+}
+
+function parseJsonPath(path: string): Array<string | number> | undefined {
+  if (!path.startsWith("$")) {
+    return undefined;
+  }
+
+  const segments: Array<string | number> = [];
+  let remaining = path.slice(1);
+  while (remaining) {
+    const match = remaining.match(/^(?:\.([^.[\]]+)|\[(\d+)\]|\[("(?:\\.|[^"\\])*")\])/);
+    if (!match) {
+      return undefined;
+    }
+    segments.push(typeof match[1] === "string" ? match[1] : match[2] ? Number(match[2]) : JSON.parse(match[3]!));
+    remaining = remaining.slice(match[0].length);
+  }
+  return segments;
+}
+
+function findJsonSpan(source: string, path: string): { start: number; end: number } | undefined {
+  const requestedSegments = parseJsonPath(path);
+  if (!requestedSegments) {
+    return undefined;
+  }
+
+  const tokens = tokenizeJson(source);
+  const spans = new Map<string, { start: number; end: number }>();
+
+  function walk(tokenIndex: number, segments: Array<string | number>): number {
+    const token = tokens[tokenIndex];
+    if (!token) {
+      return tokenIndex;
+    }
+    const start = token.start;
+
+    if (token.kind === "{") {
+      tokenIndex++;
+      while (tokens[tokenIndex]?.kind !== "}" && tokenIndex < tokens.length) {
+        const key = tokens[tokenIndex]?.value;
+        tokenIndex += 2;
+        tokenIndex = walk(tokenIndex, [...segments, String(key)]);
+        if (tokens[tokenIndex]?.kind === ",") tokenIndex++;
+      }
+    } else if (token.kind === "[") {
+      tokenIndex++;
+      let itemIndex = 0;
+      while (tokens[tokenIndex]?.kind !== "]" && tokenIndex < tokens.length) {
+        tokenIndex = walk(tokenIndex, [...segments, itemIndex++]);
+        if (tokens[tokenIndex]?.kind === ",") tokenIndex++;
+      }
+    }
+
+    const end = tokens[tokenIndex]?.end ?? token.end;
+    spans.set(JSON.stringify(segments), { start, end });
+    return tokenIndex + 1;
+  }
+
+  walk(0, []);
+
+  const exact = spans.get(JSON.stringify(requestedSegments));
+  if (exact) {
+    const type = spans.get(JSON.stringify([...requestedSegments, "type"]));
+    return type ?? exact;
+  }
+
+  while (requestedSegments.length > 0) {
+    requestedSegments.pop();
+    const parent = spans.get(JSON.stringify(requestedSegments));
+    if (parent) {
+      return { start: Math.max(parent.start, parent.end - 1), end: parent.end };
+    }
+  }
+  return spans.get("[]");
+}
+
+function jsonCodeFrame(source: string, path: string, sourceName: string, c: Colors): string[] {
+  const span = findJsonSpan(source, path);
+  if (!span) {
+    return [];
+  }
+
+  const lineStarts = [0];
+  for (let index = 0; index < source.length; index++) {
+    if (source[index] === "\n") lineStarts.push(index + 1);
+  }
+  let lineIndex = lineStarts.length - 1;
+  while (lineStarts[lineIndex]! > span.start) lineIndex--;
+  const lineStart = lineStarts[lineIndex]!;
+  const lineEnd = source.indexOf("\n", lineStart);
+  const lines = source.split(/\r?\n/);
+  const lineNumber = lineIndex + 1;
+  const column = span.start - lineStart + 1;
+  const markerWidth = Math.max(1, Math.min(span.end, lineEnd === -1 ? source.length : lineEnd) - span.start);
+  const firstLine = Math.max(0, lineIndex - 1);
+  const lastLine = Math.min(lines.length - 1, lineIndex + 1);
+  const gutterWidth = String(lastLine + 1).length;
+  const maxLineWidth = 140;
+  const cropStart = Math.max(0, Math.min(column - 41, (lines[lineIndex]?.length ?? 0) - maxLineWidth));
+  const markerColumn = column - 1 - cropStart + (cropStart > 0 ? 1 : 0);
+  const frame = [`${c.dim("┌─")} ${c.cyan(`${sourceName}:${lineNumber}:${column}`)}`, c.dim("│")];
+
+  for (let current = firstLine; current <= lastLine; current++) {
+    const rawLine = lines[current] ?? "";
+    const displayedLine = `${cropStart > 0 ? "…" : ""}${rawLine.slice(cropStart, cropStart + maxLineWidth)}${
+      rawLine.length > cropStart + maxLineWidth ? "…" : ""
+    }`;
+    frame.push(`${c.dim(String(current + 1).padStart(gutterWidth))} ${c.dim("│")} ${displayedLine}`);
+    if (current === lineIndex) {
+      frame.push(
+        `${" ".repeat(gutterWidth)} ${c.dim("│")} ${" ".repeat(markerColumn)}${c.red(
+          "^".repeat(Math.min(markerWidth, maxLineWidth - markerColumn + 1))
+        )}`
+      );
+    }
+  }
+  return frame;
 }
 
 // ── Commands ───────────────────────────────────────────────────────
@@ -394,6 +571,7 @@ async function runValidateP4(
   const jsonOutput = options.json === true;
   const showWarnings = options["show-warnings"] === true;
   const expandedInputs: Array<{ type: "file" | "url"; path: string }> = [];
+  const sourceTexts = new Map<string, string>();
 
   async function collectJsonFiles(path: string): Promise<void> {
     if (isHttpUrl(path)) {
@@ -465,7 +643,9 @@ async function runValidateP4(
     let report: ReturnType<typeof validateAuthoredPresentation4> | undefined;
 
     try {
-      input = await readJsonSource(inputPath, deps);
+      const document = await readJsonDocument(inputPath, deps);
+      input = document.input;
+      sourceTexts.set(inputPath, document.text);
     } catch (error) {
       report = createValidationReport([
         {
@@ -586,6 +766,11 @@ async function runValidateP4(
           deps.stdout(`           ${issue.message}`);
           if (issue.path) {
             deps.stdout(`           ${c.dim("at")} ${c.cyan(issue.path)}`);
+            const frame = jsonCodeFrame(sourceTexts.get(entry.path) ?? "", issue.path, entry.path, c);
+            if (frame.length > 0) {
+              deps.stdout("");
+              for (const line of frame) deps.stdout(`           ${line}`);
+            }
           }
         }
       }

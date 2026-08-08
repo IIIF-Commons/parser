@@ -1043,14 +1043,17 @@ function checkSceneMustNotRules(scene: any, nodePath: string, issues: Validation
       if (!motivations.includes("painting")) {
         continue;
       }
-      const bodyEntries = getAnnotationEntries((annotation as any).body);
+      const annotationBody = (annotation as any).body;
+      const bodyEntries = getAnnotationEntries(annotationBody);
       for (let bodyIndex = 0; bodyIndex < bodyEntries.length; bodyIndex++) {
         const body = bodyEntries[bodyIndex];
         if (!isAllowedScenePaintBody(body)) {
           issue(issues, {
             code: "scene-painting-non-3d-body",
             message: "Scene painting annotations must paint 3D resources, containers, or audio emitters",
-            path: `${nodePath}.items[${pageIndex}].items[${annotationIndex}].body[${bodyIndex}]`,
+            path: isAnnotationAggregate(annotationBody)
+              ? `${nodePath}.items[${pageIndex}].items[${annotationIndex}].body.items[${bodyIndex}]`
+              : `${nodePath}.items[${pageIndex}].items[${annotationIndex}].body`,
             resource: annotation,
             specRef: "#Scene",
           });
