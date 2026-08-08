@@ -78,6 +78,14 @@ function filterList<T>(value: T[] | typeof UNSET): T[] | undefined {
   return filtered.length ? filtered : undefined;
 }
 
+function requiredList<T>(value: T[] | typeof UNSET): T[] {
+  return Array.isArray(value) ? (value.filter((item) => item !== UNSET) as T[]) : [];
+}
+
+function topLevelContext(isTopLevel?: boolean): Array<[string, string]> {
+  return isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : [];
+}
+
 function compactList<T>(value: T[] | T | null | undefined): T[] | undefined {
   if (value === null || typeof value === "undefined") {
     return undefined;
@@ -483,8 +491,9 @@ function* withLinkedProperties(entity: any): Generator<any, Array<[string, any]>
   ];
 }
 
-function* serializeContainer(entity: any, includeStructures = false): Generator<any, any, any> {
+function* serializeContainer(entity: any, includeStructures = false, isTopLevel = false): Generator<any, any, any> {
   return [
+    ...topLevelContext(isTopLevel),
     ...baseProperties(entity),
     ...(yield* withLinkedProperties(entity)),
     ["items", filterList(yield entity.items)],
@@ -496,7 +505,7 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
   return {
     Collection: function* (entity, state, { isTopLevel }) {
       return [
-        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
+        ...topLevelContext(isTopLevel),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
@@ -509,10 +518,10 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
 
     CollectionPage: function* (entity, _state, { isTopLevel }) {
       return [
-        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
+        ...topLevelContext(isTopLevel),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
-        ["items", filterList(yield entity.items)],
+        ["items", requiredList(yield entity.items)],
         ["next", entity.next],
         ["prev", entity.prev],
         ["startIndex", entity.startIndex],
@@ -521,34 +530,38 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
 
     Manifest: function* (entity, state, { isTopLevel }) {
       return [
-        ...(isTopLevel ? [["@context", PRESENTATION_4_CONTEXT]] : []),
-        ...(yield* serializeContainer(entity, true)),
+        ...(yield* serializeContainer(entity, true, isTopLevel)),
         ["start", serializeStartValue(resolveContentResourceReference(state, entity.start), state)],
       ];
     },
 
-    Timeline: function* (entity) {
-      return yield* serializeContainer(entity);
+    Timeline: function* (entity, _state, { isTopLevel }) {
+      return yield* serializeContainer(entity, false, isTopLevel);
     },
 
-    Canvas: function* (entity) {
-      return yield* serializeContainer(entity);
+    Canvas: function* (entity, _state, { isTopLevel }) {
+      return yield* serializeContainer(entity, false, isTopLevel);
     },
 
-    Scene: function* (entity) {
-      return yield* serializeContainer(entity);
+    Scene: function* (entity, _state, { isTopLevel }) {
+      return yield* serializeContainer(entity, false, isTopLevel);
     },
 
-    AnnotationPage: function* (entity) {
+    AnnotationPage: function* (entity, _state, { isTopLevel }) {
       return [
+        ...topLevelContext(isTopLevel),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
-        ["items", filterList(yield entity.items)],
+        ["items", requiredList(yield entity.items)],
+        ["next", entity.next],
+        ["prev", entity.prev],
+        ["startIndex", entity.startIndex],
       ];
     },
 
-    AnnotationCollection: function* (entity) {
+    AnnotationCollection: function* (entity, _state, { isTopLevel }) {
       return [
+        ...topLevelContext(isTopLevel),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["items", filterList(yield entity.items)],
@@ -558,8 +571,9 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
       ];
     },
 
-    Annotation: function* (entity, state) {
+    Annotation: function* (entity, state, { isTopLevel }) {
       return [
+        ...topLevelContext(isTopLevel),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["motivation", entity.motivation?.length ? entity.motivation : undefined],
@@ -575,11 +589,13 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
         ["provides", entity.provides?.length ? entity.provides : undefined],
         ["scope", entity.scope?.length ? entity.scope : undefined],
         ["position", entity.position ? serializePosition(entity.position, state) : undefined],
+        ["stylesheet", entity.stylesheet],
       ];
     },
 
-    Range: function* (entity, state) {
+    Range: function* (entity, state, { isTopLevel }) {
       return [
+        ...topLevelContext(isTopLevel),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),
         ["items", yield* serializeRangeItems(resolveContentResourceReference(state, entity.items), state)],
@@ -588,21 +604,31 @@ export function createSerializeConfigPresentation4(_options: SerializePresentati
       ];
     },
 
-    Agent: function* (entity) {
+    Agent: function* (entity, _state, { isTopLevel }) {
       return [
+        ...topLevelContext(isTopLevel),
         ["id", stripVaultId(entity.id)],
         ["type", entity.type || "Agent"],
         ["label", entity.label],
+        ["summary", entity.summary],
         ...(yield* withLinkedProperties(entity)),
+        ["logo", filterList(yield entity.logo)],
       ];
     },
 
-    ContentResource: function* (entity, state) {
+    ContentResource: function* (entity, state, { isTopLevel }) {
       if (entity.type === "SpecificResource") {
-        return [UNWRAP, serializeSpecificResource(entity, state)];
+        const serialized = serializeSpecificResource(entity, state);
+        return [
+          UNWRAP,
+          isTopLevel && serialized && typeof serialized === "object"
+            ? { "@context": PRESENTATION_4_CONTEXT, ...serialized }
+            : serialized,
+        ];
       }
 
       return [
+        ...topLevelContext(isTopLevel),
         ...opaqueContentResourceProperties(entity),
         ...baseProperties(entity),
         ...(yield* withLinkedProperties(entity)),

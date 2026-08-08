@@ -9,7 +9,115 @@ import {
   serializeConfigPresentation4,
 } from "../../src/presentation-4";
 
+function roundTrip(resource: any) {
+  const normalized = normalize(resource);
+  return serialize<any>(
+    {
+      entities: normalized.entities as any,
+      mapping: normalized.mapping as any,
+      requests: {},
+    },
+    normalized.resource,
+    serializeConfigPresentation4
+  );
+}
+
 describe("presentation-4 serializer", () => {
+  test.each([
+    ["Timeline", { label: { en: ["Timeline"] }, items: [] }],
+    ["Canvas", { label: { en: ["Canvas"] }, width: 100, height: 100, items: [] }],
+    ["Scene", { label: { en: ["Scene"] }, items: [] }],
+    ["AnnotationPage", { items: [] }],
+    ["AnnotationCollection", { items: [] }],
+    [
+      "Annotation",
+      {
+        motivation: ["commenting"],
+        body: { type: "TextualBody", value: "Comment", format: "text/plain" },
+        target: { id: "https://example.org/canvas/target", type: "Canvas" },
+      },
+    ],
+    ["Range", { label: { en: ["Range"] }, items: [{ id: "https://example.org/canvas/target", type: "Canvas" }] }],
+    ["Agent", { label: { en: ["Agent"] } }],
+    ["Image", { format: "image/jpeg", width: 100, height: 100 }],
+  ])("adds the Presentation 4 context to a standalone %s", (type, properties) => {
+    const serialized = roundTrip({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: `https://example.org/${String(type).toLowerCase()}/root`,
+      type,
+      ...properties,
+    });
+
+    expect(serialized["@context"]).toBe("http://iiif.io/api/presentation/4/context.json");
+  });
+
+  test.each([
+    ["AnnotationPage", {}],
+    ["CollectionPage", { partOf: { id: "https://example.org/collection/1", type: "Collection" } }],
+  ])("preserves required empty items on a standalone %s", (type, properties) => {
+    const serialized = roundTrip({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: `https://example.org/${String(type).toLowerCase()}/empty`,
+      type,
+      items: [],
+      ...properties,
+    });
+
+    expect(serialized.items).toEqual([]);
+  });
+
+  test("preserves AnnotationPage paging metadata", () => {
+    const serialized = roundTrip({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/annotation-page/1",
+      type: "AnnotationPage",
+      items: [],
+      next: "https://example.org/annotation-page/2",
+      prev: "https://example.org/annotation-page/0",
+      startIndex: 10,
+    });
+
+    expect(serialized).toMatchObject({
+      next: "https://example.org/annotation-page/2",
+      prev: "https://example.org/annotation-page/0",
+      startIndex: 10,
+    });
+  });
+
+  test("preserves Annotation stylesheet and Agent summary/logo", () => {
+    const annotation = roundTrip({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/annotation/stylesheet",
+      type: "Annotation",
+      motivation: ["commenting"],
+      body: { type: "TextualBody", value: "Comment", format: "text/plain" },
+      target: { id: "https://example.org/canvas/target", type: "Canvas" },
+      stylesheet: "https://example.org/styles/annotations.css",
+    });
+    expect(annotation.stylesheet).toBe("https://example.org/styles/annotations.css");
+
+    const manifest = roundTrip({
+      "@context": "http://iiif.io/api/presentation/4/context.json",
+      id: "https://example.org/manifest/provider",
+      type: "Manifest",
+      label: { en: ["Provider metadata"] },
+      items: [],
+      provider: [
+        {
+          id: "https://example.org/agent/provider",
+          type: "Agent",
+          label: { en: ["Provider"] },
+          summary: { en: ["Provider summary"] },
+          logo: [{ id: "https://example.org/logo.png", type: "Image", format: "image/png" }],
+        },
+      ],
+    });
+    expect(manifest.provider[0].summary).toEqual({ en: ["Provider summary"] });
+    expect(manifest.provider[0].logo).toEqual([
+      { id: "https://example.org/logo.png", type: "Image", format: "image/png" },
+    ]);
+  });
+
   test("serializes normalized v4 back to a v4 manifest", () => {
     const fixture = JSON.parse(readFileSync(join(cwd(), "fixtures/presentation-4/01-model-in-scene.json"), "utf8"));
     const normalized = normalize(fixture);
