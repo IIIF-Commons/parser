@@ -1509,7 +1509,8 @@ export function runRawValidation(resource: any, options: { skipAnnotationShape?:
     ],
     selector: [
       (selector, context) => {
-        if (!selector.type || !selector.type.endsWith("Selector")) {
+        const selectorType = typeof selector === "string" ? undefined : selector.type;
+        if (!selectorType || !selectorType.endsWith("Selector")) {
           issue(issues, {
             code: "selector-type-invalid",
             message: 'Selector.type must end with "Selector"',
@@ -1544,7 +1545,13 @@ export function runRawValidation(resource: any, options: { skipAnnotationShape?:
     ],
     contentResource: [
       (resource, context) => {
-        if (resource.spatialScale && resource.spatialScale.type !== "Quantity") {
+        if (
+          typeof resource === "object" &&
+          resource &&
+          "spatialScale" in resource &&
+          resource.spatialScale &&
+          getType(resource.spatialScale) !== "Quantity"
+        ) {
           issue(issues, {
             code: "spatial-scale-quantity",
             message: "spatialScale must be a Quantity object",
@@ -1553,7 +1560,13 @@ export function runRawValidation(resource: any, options: { skipAnnotationShape?:
             specRef: "#spatialScale",
           });
         }
-        if (resource.temporalScale && resource.temporalScale.type !== "Quantity") {
+        if (
+          typeof resource === "object" &&
+          resource &&
+          "temporalScale" in resource &&
+          resource.temporalScale &&
+          getType(resource.temporalScale) !== "Quantity"
+        ) {
           issue(issues, {
             code: "temporal-scale-quantity",
             message: "temporalScale must be a Quantity object",

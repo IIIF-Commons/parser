@@ -38,9 +38,30 @@ export const types = [
   "Agent",
 ];
 
-export type TraversalContext = { parent?: any };
+export type Presentation3Resource =
+  | Collection
+  | Manifest
+  | Canvas
+  | AnnotationCollection
+  | AnnotationPage
+  | Annotation
+  | ContentResource
+  | ChoiceTarget
+  | ChoiceBody
+  | Range
+  | Service
+  | ResourceProvider
+  | SpecificResource
+  | GeoJSON;
 
-export type Traversal<T> = (jsonLd: T, context: TraversalContext) => Partial<T> | any;
+export type TraversalContext = { parent?: unknown };
+
+export type Traversal<T> = (jsonLd: T, context: TraversalContext) => unknown;
+
+export type AllTraversal = <Resource extends Presentation3Resource>(
+  resource: Resource,
+  context: TraversalContext
+) => unknown;
 
 export type TraversalMap = {
   collection?: Array<Traversal<Collection>>;
@@ -62,7 +83,7 @@ export type TraverseOptions = {
   allowUndefinedReturn: boolean;
 };
 
-export function identifyResource(resource: any, typeHint?: string): string {
+export function identifyResource(resource: unknown, typeHint?: string): string {
   if (typeof resource === "undefined" || resource === null) {
     throw new Error("Null or undefined is not a valid entity.");
   }
@@ -76,14 +97,14 @@ export function identifyResource(resource: any, typeHint?: string): string {
     throw new Error(`${typeof resource} is not a valid entity`);
   }
 
-  if (typeof resource!.type === "string") {
+  if ("type" in resource && typeof resource.type === "string") {
     const hasType = types.indexOf(resource.type);
     if (hasType !== -1) {
       return types[hasType]!;
     }
   }
 
-  if (resource!.profile) {
+  if ("profile" in resource && resource.profile) {
     return "Service";
   }
 
@@ -118,7 +139,7 @@ export class Traverse {
     };
   }
 
-  static all(traversal: (resource: any) => any) {
+  static all(traversal: AllTraversal) {
     return new Traverse({
       collection: [traversal],
       manifest: [traversal],
@@ -136,7 +157,7 @@ export class Traverse {
     });
   }
 
-  traverseDescriptive<T extends Partial<DescriptiveProperties>>(resource: T): T {
+  traverseDescriptive<T extends Presentation3Resource & Partial<DescriptiveProperties>>(resource: T): T {
     if (resource.thumbnail) {
       resource.thumbnail = ensureArray(resource.thumbnail).map((thumbnail) =>
         this.traverseType(thumbnail, { parent: resource }, this.traversals.contentResource)
@@ -148,7 +169,7 @@ export class Traverse {
     return resource;
   }
 
-  traverseLinking<T extends Partial<LinkingProperties>>(resource: T): T {
+  traverseLinking<T extends Presentation3Resource & Partial<LinkingProperties>>(resource: T): T {
     if (resource.seeAlso) {
       resource.seeAlso = ensureArray(resource.seeAlso).map((content) =>
         this.traverseType(content, { parent: resource }, this.traversals.contentResource)
@@ -227,6 +248,7 @@ export class Traverse {
     return collection;
   }
 
+  traverseCollection(collection: Collection, parent?: Presentation3Resource): Collection;
   traverseCollection(collection: Collection, parent?: any): Collection {
     return this.traverseType<Collection>(
       this.traverseDescriptive(
@@ -241,6 +263,7 @@ export class Traverse {
     );
   }
 
+  traverseGeoJson(geoJson: GeoJSON, parent?: Presentation3Resource): GeoJSON;
   traverseGeoJson(geoJson: GeoJSON, parent?: any): GeoJSON {
     return this.traverseType<GeoJSON>(geoJson, { parent }, this.traversals.geoJson);
   }
@@ -276,6 +299,7 @@ export class Traverse {
     this.traverseInlineAnnotationPages.bind(this)
   );
 
+  traverseManifest(manifest: Manifest, parent?: Presentation3Resource): Manifest;
   traverseManifest(manifest: Manifest, parent?: any): Manifest {
     return this.traverseType<Manifest>(this._traverseManifest(manifest), { parent }, this.traversals.manifest);
   }
@@ -309,6 +333,7 @@ export class Traverse {
     this.traverseInlineAnnotationPages.bind(this)
   );
 
+  traverseCanvas(canvas: Canvas, parent?: Presentation3Resource): Canvas;
   traverseCanvas(canvas: Canvas, parent?: any): Canvas {
     return this.traverseType<Canvas>(this._traverseCanvas(canvas), { parent }, this.traversals.canvas);
   }
@@ -328,6 +353,7 @@ export class Traverse {
     this.traverseDescriptive.bind(this)
   );
 
+  traverseAnnotationPage(annotationPageJson: AnnotationPage, parent?: Presentation3Resource): AnnotationPage;
   traverseAnnotationPage(annotationPageJson: AnnotationPage, parent?: any): AnnotationPage {
     return this.traverseType<AnnotationPage>(
       this._traverseAnnotationPage(annotationPageJson),
@@ -363,6 +389,7 @@ export class Traverse {
   }
 
   // @todo traverseAnnotationSelector
+  traverseAnnotation(annotationJson: Annotation, parent?: Presentation3Resource): Annotation;
   traverseAnnotation(annotationJson: Annotation, parent?: any): Annotation {
     return this.traverseType<Annotation>(
       this.traverseLinking(this.traverseAnnotationBody(this.traverseDescriptive(annotationJson as any))),
@@ -384,6 +411,7 @@ export class Traverse {
     return contentResourceJson;
   }
 
+  traverseContentResource(contentResourceJson: ContentResource, parent?: Presentation3Resource): ContentResource;
   traverseContentResource(contentResourceJson: ContentResource, parent?: any): ContentResource {
     if ((contentResourceJson as any).type === "Choice") {
       (contentResourceJson as any).items = (contentResourceJson as any).items.map((choiceItem: ContentResource) => {
@@ -407,6 +435,11 @@ export class Traverse {
     );
   }
 
+  traverseSpecificResource(
+    specificResource: SpecificResource,
+    typeHint?: string,
+    parent?: Presentation3Resource
+  ): SpecificResource;
   traverseSpecificResource(specificResource: SpecificResource, typeHint?: string, parent?: any): SpecificResource {
     let source = specificResource.source;
     if (typeof specificResource.source === "string") {
@@ -420,7 +453,7 @@ export class Traverse {
           typeHint === "Canvas" || source.type === "Canvas"
             ? this.traverseType(source, { parent }, this.traversals.canvas)
             : typeHint === "ContentResource"
-              ? this.traverseContentResource(source, { parent })
+              ? this.traverseContentResource(source, parent)
               : this.traverseUnknown(source, { parent, typeHint }),
       },
       { parent },
@@ -455,10 +488,12 @@ export class Traverse {
     this.traverseLinkedCanvases.bind(this)
   );
 
+  traverseRange(range: Range, parent?: Presentation3Resource): Range;
   traverseRange(range: Range, parent?: any): Range {
     return this.traverseType<Range>(this._traverseRange(range), { parent }, this.traversals.range);
   }
 
+  traverseAgent(agent: ResourceProvider, parent?: Presentation3Resource): ResourceProvider;
   traverseAgent(agent: ResourceProvider, parent?: any) {
     return this.traverseType<ResourceProvider>(
       this.traverseDescriptive(this.traverseLinking(agent)),
@@ -473,10 +508,11 @@ export class Traverse {
       if (typeof returnValue === "undefined" && !this.options.allowUndefinedReturn) {
         return acc;
       }
-      return returnValue;
+      return returnValue as T;
     }, object);
   }
 
+  traverseService(service: Service, parent?: Presentation3Resource): Service;
   traverseService(service: Service, parent?: any): Service {
     const _service: any = Object.assign({}, service);
     if (_service && _service.service) {
@@ -485,6 +521,10 @@ export class Traverse {
     return this.traverseType<Service>(_service, { parent }, this.traversals.service);
   }
 
+  traverseUnknown(
+    resource: unknown,
+    options?: { typeHint?: string; parent?: Presentation3Resource }
+  ): Presentation3Resource;
   traverseUnknown(
     resource: any,
     { parent, typeHint }: { typeHint?: string; parent?: any } = {}
