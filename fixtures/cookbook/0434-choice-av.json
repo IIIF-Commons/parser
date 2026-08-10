@@ -3,14 +3,10 @@
   "id": "https://iiif.io/api/cookbook/recipe/0434-choice-av/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Excerpt from Egbe Iyawo"
-    ]
+    "en": ["Excerpt from Egbe Iyawo"]
   },
   "summary": {
-    "en": [
-      "Excerpt from a performance of Egbe Iyawo recorded in Kabba Division, Kwara State. "
-    ]
+    "en": ["Excerpt from a performance of Egbe Iyawo recorded in Kabba Division, Kwara State. "]
   },
   "rights": "http://creativecommons.org/publicdomain/zero/1.0/",
   "items": [
@@ -37,9 +33,7 @@
                     "format": "audio/alac",
                     "duration": 16.0,
                     "label": {
-                      "en": [
-                        "ALAC"
-                      ]
+                      "en": ["ALAC"]
                     }
                   },
                   {
@@ -48,9 +42,7 @@
                     "format": "audio/mpeg",
                     "duration": 16.0,
                     "label": {
-                      "en": [
-                        "MP3"
-                      ]
+                      "en": ["MP3"]
                     }
                   },
                   {
@@ -59,9 +51,7 @@
                     "format": "audio/flac",
                     "duration": 16.0,
                     "label": {
-                      "en": [
-                        "FLAC"
-                      ]
+                      "en": ["FLAC"]
                     }
                   },
                   {
@@ -70,9 +60,7 @@
                     "format": "audio/ogg",
                     "duration": 16.0,
                     "label": {
-                      "en": [
-                        "OGG Vorbis OGG"
-                      ]
+                      "en": ["OGG Vorbis OGG"]
                     }
                   },
                   {
@@ -81,9 +69,7 @@
                     "format": "audio/mpeg",
                     "duration": 16.0,
                     "label": {
-                      "en": [
-                        "MPEG2"
-                      ]
+                      "en": ["MPEG2"]
                     }
                   },
                   {
@@ -92,9 +78,7 @@
                     "format": "audio/wav",
                     "duration": 16.0,
                     "label": {
-                      "en": [
-                        "WAV"
-                      ]
+                      "en": ["WAV"]
                     }
                   }
                 ]

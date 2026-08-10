@@ -121,20 +121,20 @@
       "@none": ["Attribution"]
     },
     "value": {
-      "@none": [
-        "The Nubian Message (LH1 .H6 N83), Special Collections Research Center at NCSU Libraries"
-      ]
+      "@none": ["The Nubian Message (LH1 .H6 N83), Special Collections Research Center at NCSU Libraries"]
     }
   },
-  "homepage": {
-    "format": "text/html",
-    "label": {
-      "@none": ["HTML page for the resource"]
-    },
-    "dcterms:modified": "2018-05-04T19:59:35.01Z",
-    "type": "Text",
-    "id": "https://d.lib.ncsu.edu/collections/catalog/nubian-message-1992-11-30"
-  },
+  "homepage": [
+    {
+      "format": "text/html",
+      "label": {
+        "@none": ["HTML page for the resource"]
+      },
+      "dcterms:modified": "2018-05-04T19:59:35.01Z",
+      "type": "Text",
+      "id": "https://d.lib.ncsu.edu/collections/catalog/nubian-message-1992-11-30"
+    }
+  ],
   "items": [
     {
       "width": 4703,
@@ -1385,8 +1385,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

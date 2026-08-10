@@ -3,33 +3,23 @@
   "id": "https://iiif.io/api/cookbook/recipe/0032-collection/manifest-02.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Northeaster"
-    ]
+    "en": ["Northeaster"]
   },
   "metadata": [
     {
       "label": {
-        "en": [
-          "Artist"
-        ]
+        "en": ["Artist"]
       },
       "value": {
-        "en": [
-          "Winslow Homer (1836–1910)"
-        ]
+        "en": ["Winslow Homer (1836–1910)"]
       }
     },
     {
       "label": {
-        "en": [
-          "Date"
-        ]
+        "en": ["Date"]
       },
       "value": {
-        "en": [
-          "1895"
-        ]
+        "en": ["1895"]
       }
     }
   ],

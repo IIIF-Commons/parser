@@ -226,17 +226,13 @@
       "@id": "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497\/range\/range-4",
       "@type": "sc:Range",
       "label": "Vorderdeckel",
-      "canvases": [
-        "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0001\/canvas"
-      ]
+      "canvases": ["https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0001\/canvas"]
     },
     {
       "@id": "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497\/range\/range-5",
       "@type": "sc:Range",
       "label": "Spiegel",
-      "canvases": [
-        "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0002\/canvas"
-      ]
+      "canvases": ["https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0002\/canvas"]
     },
     {
       "@id": "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497\/range\/range-6",
@@ -307,25 +303,19 @@
       "@id": "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497\/range\/range-11",
       "@type": "sc:Range",
       "label": "Spiegel",
-      "canvases": [
-        "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0015\/canvas"
-      ]
+      "canvases": ["https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0015\/canvas"]
     },
     {
       "@id": "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497\/range\/range-12",
       "@type": "sc:Range",
       "label": "Rückdeckel",
-      "canvases": [
-        "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0016\/canvas"
-      ]
+      "canvases": ["https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0016\/canvas"]
     },
     {
       "@id": "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497\/range\/range-13",
       "@type": "sc:Range",
       "label": "Farbinformation",
-      "canvases": [
-        "https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0017\/canvas"
-      ]
+      "canvases": ["https:\/\/content.staatsbibliothek-berlin.de\/dc\/840973497-0017\/canvas"]
     }
   ],
   "sequences": [

@@ -1,0 +1,117 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/manifest/aggregates",
+  "type": "Manifest",
+  "label": {
+    "en": ["Gold annotation aggregate manifest"]
+  },
+  "items": [
+    {
+      "id": "https://example.org/iiif/canvas/aggregate/1",
+      "type": "Canvas",
+      "label": {
+        "en": ["Aggregate canvas 1"]
+      },
+      "height": 1000,
+      "width": 1000,
+      "items": [
+        {
+          "id": "https://example.org/iiif/canvas/aggregate/1/page/painting",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/canvas/aggregate/1/annotation/painting",
+              "type": "Annotation",
+              "motivation": ["painting"],
+              "body": {
+                "type": "Choice",
+                "label": {
+                  "en": ["Choose an image representation"]
+                },
+                "items": [
+                  {
+                    "id": "https://example.org/media/image-large.jpg",
+                    "type": "Image",
+                    "format": "image/jpeg",
+                    "height": 1000,
+                    "width": 1000
+                  },
+                  {
+                    "id": "https://example.org/media/image-small.jpg",
+                    "type": "Image",
+                    "format": "image/jpeg",
+                    "height": 500,
+                    "width": 500
+                  }
+                ]
+              },
+              "target": {
+                "id": "https://example.org/iiif/canvas/aggregate/1",
+                "type": "Canvas"
+              }
+            }
+          ]
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://example.org/iiif/canvas/aggregate/1/page/commenting",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/iiif/canvas/aggregate/1/annotation/commenting",
+              "type": "Annotation",
+              "motivation": ["commenting"],
+              "body": {
+                "type": "Composite",
+                "label": {
+                  "en": ["Bilingual comment"]
+                },
+                "items": [
+                  {
+                    "type": "TextualBody",
+                    "value": "First comment",
+                    "language": ["en"],
+                    "format": "text/plain"
+                  },
+                  {
+                    "type": "TextualBody",
+                    "value": "Premier commentaire",
+                    "language": ["fr"],
+                    "format": "text/plain"
+                  }
+                ]
+              },
+              "target": {
+                "type": "Independents",
+                "label": {
+                  "en": ["Each canvas independently"]
+                },
+                "items": [
+                  {
+                    "id": "https://example.org/iiif/canvas/aggregate/1",
+                    "type": "Canvas"
+                  },
+                  {
+                    "id": "https://example.org/iiif/canvas/aggregate/2",
+                    "type": "Canvas"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://example.org/iiif/canvas/aggregate/2",
+      "type": "Canvas",
+      "label": {
+        "en": ["Aggregate canvas 2"]
+      },
+      "height": 1000,
+      "width": 1000,
+      "items": []
+    }
+  ]
+}

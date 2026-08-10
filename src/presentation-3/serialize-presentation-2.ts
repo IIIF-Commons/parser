@@ -1,15 +1,15 @@
-import { SerializeConfig } from './serialize';
-import {
+import { SerializeConfig } from "./serialize";
+import type {
   FragmentSelector,
   InternationalString,
   Reference,
   Selector,
   SpecificResource,
   TechnicalProperties,
-} from '@iiif/presentation-3';
-import { DescriptiveNormalized, LinkingNormalized } from '@iiif/presentation-3-normalized';
-import * as Presentation2 from '@iiif/presentation-2';
-import { compressSpecificResource } from '../shared/compress-specific-resource';
+} from "./types";
+import type { DescriptiveNormalized, LinkingNormalized } from "../presentation-3-normalized/types";
+import type * as Presentation2 from "../presentation-2/types";
+import { compressSpecificResource } from "../shared/compress-specific-resource";
 
 export function languageString2to3(
   value: InternationalString | null | undefined
@@ -28,25 +28,25 @@ export function languageString2to3(
   if (languages.length === 1) {
     const language = languages[0];
     if (!language) {
-      return '';
+      return "";
     }
 
-    const singleValue = (value[language] || []).join('');
+    const singleValue = (value[language] || []).join("");
 
-    if (language === '@none' || language === 'none' || language === 'en') {
+    if (language === "@none" || language === "none" || language === "en") {
       return singleValue;
     }
 
     return {
-      '@language': language,
-      '@value': singleValue,
+      "@language": language,
+      "@value": singleValue,
     };
   }
 
   return languages.map((language) => {
     return {
-      '@language': language,
-      '@value': (value[language] || []).join(''),
+      "@language": language,
+      "@value": (value[language] || []).join(""),
     };
   });
 }
@@ -56,11 +56,11 @@ function parseCanvasTarget(target: any): any {
     return target.map((t) => parseCanvasTarget(t));
   }
 
-  if (typeof target === 'string') {
+  if (typeof target === "string") {
     return target;
   }
 
-  if (target.type && target.type === 'Canvas') {
+  if (target.type && target.type === "Canvas") {
     return target.id;
   }
 
@@ -83,37 +83,37 @@ function convertService(service: any) {
     return undefined;
   }
 
-  if (typeof service === 'string') {
+  if (typeof service === "string") {
     return {
-      '@id': service,
+      "@id": service,
     };
   }
 
-  if ('@id' in service) {
+  if ("@id" in service) {
     const newService = { ...service };
-    delete newService['@type'];
+    delete newService["@type"];
     return newService;
   }
 
   // @todo support auth.
   return {
-    '@context': 'http://iiif.io/api/image/2/context.json',
-    '@id': service.id,
+    "@context": "http://iiif.io/api/image/2/context.json",
+    "@id": service.id,
     profile: `http://iiif.io/api/image/2/profiles/${service.profile}.json`,
   };
 }
 
 function technicalProperties(props: Partial<TechnicalProperties>, type?: string) {
   return [
-    ['@id', props.id],
-    ['@type', type],
-    ['format', props.format],
-    ['height', props.height],
-    ['width', props.width],
-    ['viewingDirection', props.viewingDirection !== 'left-to-right' ? props.viewingDirection : undefined],
+    ["@id", props.id],
+    ["@type", type],
+    ["format", props.format],
+    ["height", props.height],
+    ["width", props.width],
+    ["viewingDirection", props.viewingDirection !== "left-to-right" ? props.viewingDirection : undefined],
 
     // Non-standard property.
-    ['license', (props as any).license ? (props as any).license : undefined],
+    ["license", (props as any).license ? (props as any).license : undefined],
     // @todo Viewing hint is merged with behavior
     // ['viewingHint', props.]
   ];
@@ -123,49 +123,49 @@ function* descriptiveProperties(prop: Partial<DescriptiveNormalized>): Generator
   const provider = prop.provider ? yield prop.provider[0] : undefined;
 
   return [
-    ['label', languageString2to3(prop.label)],
+    ["label", languageString2to3(prop.label)],
     [
-      'metadata',
+      "metadata",
       prop.metadata && prop.metadata.length
         ? prop.metadata.map((item) => ({
-            label: languageString2to3(item.label) || '',
-            value: languageString2to3(item.value) || '',
+            label: languageString2to3(item.label) || "",
+            value: languageString2to3(item.value) || "",
           }))
         : undefined,
     ],
-    ['description', languageString2to3(prop.summary)],
-    ['thumbnail', unNestArray(yield prop.thumbnail)],
-    ['navDate', prop.navDate],
+    ["description", languageString2to3(prop.summary)],
+    ["thumbnail", unNestArray(yield prop.thumbnail)],
+    ["navDate", prop.navDate],
     // @todo these needs consideration if the way provider is parsed changes.
-    ['logo', provider ? unNestArray(provider.logo) : undefined],
-    ['homepage', provider ? provider.homepage : undefined],
-    ['attribution', prop.requiredStatement ? languageString2to3(prop.requiredStatement.value) : undefined],
+    ["logo", provider ? unNestArray(provider.logo) : undefined],
+    ["homepage", provider ? provider.homepage : undefined],
+    ["attribution", prop.requiredStatement ? languageString2to3(prop.requiredStatement.value) : undefined],
   ];
 }
 
 function* linkingProperties(prop: Partial<LinkingNormalized>) {
   const startProp =
-    prop.start && prop.start.type && (prop.start as any).type === 'SpecificResource'
+    prop.start && prop.start.type && (prop.start as any).type === "SpecificResource"
       ? compressSpecificResource(prop.start as any)
       : prop.start;
 
   return [
-    ['seeAlso', unNestArray(yield prop.seeAlso)],
+    ["seeAlso", unNestArray(yield prop.seeAlso)],
     // @todo support more services (like auth)
-    ['service', unNestArray((prop.service || []).map(convertService))],
-    ['rendering', unNestArray(yield prop.rendering)],
+    ["service", unNestArray((prop.service || []).map(convertService))],
+    ["rendering", unNestArray(yield prop.rendering)],
     // @todo part of to within
     // ['within', unNestArray(yield prop.partOf)],
     // @todo this may not work completely.
-    ['startCanvas', startProp ? startProp.id : undefined],
+    ["startCanvas", startProp ? startProp.id : undefined],
   ];
 }
 
 function isSpecificResource(resource: unknown): resource is SpecificResource {
-  return (resource as any).type === 'SpecificResource';
+  return (resource as any).type === "SpecificResource";
 }
 function isFragmentSelector(resource: unknown): resource is FragmentSelector {
-  return (resource as any) && (resource as any).type === 'FragmentSelector';
+  return (resource as any) && (resource as any).type === "FragmentSelector";
 }
 
 function specificResourceToString(resource: Reference<any> | SpecificResource) {
@@ -178,7 +178,7 @@ function specificResourceToString(resource: Reference<any> | SpecificResource) {
       : undefined;
 
     if (isFragmentSelector(selector)) {
-      id += '#' + selector.value;
+      id += "#" + selector.value;
     }
     return id;
   }
@@ -188,23 +188,23 @@ function specificResourceToString(resource: Reference<any> | SpecificResource) {
 export const serializeConfigPresentation2: SerializeConfig = {
   Manifest: function* (entity, state, { isTopLevel }) {
     return [
-      ...(isTopLevel ? [['@context', 'http://iiif.io/api/presentation/2/context.json']] : []),
-      ...technicalProperties(entity, 'sc:Manifest'),
+      ...(isTopLevel ? [["@context", "http://iiif.io/api/presentation/2/context.json"]] : []),
+      ...technicalProperties(entity, "sc:Manifest"),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
       // Structural.
       // @todo structures
       [
-        'sequences',
+        "sequences",
         [
           {
-            '@id': `${entity.id}/sequence0`,
-            '@type': 'sc:Sequence',
+            "@id": `${entity.id}/sequence0`,
+            "@type": "sc:Sequence",
             canvases: yield entity.items,
           },
         ],
       ],
-      ['structures', yield entity.structures],
+      ["structures", yield entity.structures],
     ];
   },
 
@@ -213,13 +213,13 @@ export const serializeConfigPresentation2: SerializeConfig = {
     const resources = paintingPage[0];
     return [
       // Items.
-      ...technicalProperties(entity, 'sc:Canvas'),
+      ...technicalProperties(entity, "sc:Canvas"),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ['images', resources ? [resources.resources] : undefined],
+      ["images", resources ? [resources.resources] : undefined],
       [
         // @todo use otherContent if they are inlined
-        'annotations',
+        "annotations",
         entity.annotations && entity.annotations.length ? unNestArray(yield entity.annotations) : undefined,
       ],
     ];
@@ -227,34 +227,34 @@ export const serializeConfigPresentation2: SerializeConfig = {
 
   AnnotationPage: function* (entity) {
     return [
-      ...technicalProperties(entity, 'sc:AnnotationList'),
+      ...technicalProperties(entity, "sc:AnnotationList"),
       ...(yield* descriptiveProperties(entity)),
-      ['resources', entity.items && entity.items.length ? unNestArray(yield entity.items) : undefined],
+      ["resources", entity.items && entity.items.length ? unNestArray(yield entity.items) : undefined],
     ];
   },
 
   Annotation: function* (entity) {
     return [
-      ['@id', entity.id],
-      ['@type', 'oa:Annotation'],
+      ["@id", entity.id],
+      ["@type", "oa:Annotation"],
       // This could be improved.
-      ['motivation', 'sc:painting'],
-      ['on', parseCanvasTarget(entity.target)],
-      ['resource', unNestArray(yield entity.body, true)],
+      ["motivation", "sc:painting"],
+      ["on", parseCanvasTarget(entity.target)],
+      ["resource", unNestArray(yield entity.body, true)],
     ];
   },
 
   ContentResource: function* (entity: any) {
     switch (entity.type) {
-      case 'Image':
+      case "Image":
         return [
           // Image properties.
-          ...technicalProperties(entity, 'dctypes:Image'),
+          ...technicalProperties(entity, "dctypes:Image"),
           ...(yield* descriptiveProperties(entity)),
           ...(yield* linkingProperties(entity)),
         ];
-      case 'Text':
-      case 'Dataset':
+      case "Text":
+      case "Dataset":
       default:
         return [...technicalProperties(entity, undefined), ...(yield* descriptiveProperties(entity))];
     }
@@ -263,18 +263,18 @@ export const serializeConfigPresentation2: SerializeConfig = {
   AnnotationCollection: function* (entity) {
     return [
       // @todo expand properties if they are actually used.
-      ['@id', entity.id],
-      ['@type', 'sc:Layer'],
-      ['label', languageString2to3(entity.label)],
+      ["@id", entity.id],
+      ["@type", "sc:Layer"],
+      ["label", languageString2to3(entity.label)],
     ];
   },
 
   Collection: function* (entity) {
     return [
-      ...technicalProperties(entity, 'sc:Collection'),
+      ...technicalProperties(entity, "sc:Collection"),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ['members', yield* entity.items],
+      ["members", yield* entity.items],
     ];
   },
 
@@ -284,16 +284,16 @@ export const serializeConfigPresentation2: SerializeConfig = {
 
     if (entity.items) {
       for (const _item of entity.items) {
-        const item = _item.type === 'SpecificResource' ? _item.source : _item;
+        const item = _item.type === "SpecificResource" ? _item.source : _item;
         if (item) {
           const canvas = yield item;
           members.push({
-            '@id': specificResourceToString(_item),
-            '@type': item.type,
+            "@id": specificResourceToString(_item),
+            "@type": item.type,
             label: canvas ? canvas.label : undefined,
             within: entity.id,
           });
-          if (item.type === 'Canvas') {
+          if (item.type === "Canvas") {
             canvases.push(item.id);
           }
         }
@@ -301,11 +301,11 @@ export const serializeConfigPresentation2: SerializeConfig = {
     }
 
     return [
-      ...technicalProperties(entity, 'sc:Range'),
+      ...technicalProperties(entity, "sc:Range"),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ['canvases', canvases.length === members.length ? canvases : undefined],
-      ['members', canvases.length !== members.length ? members : undefined],
+      ["canvases", canvases.length === members.length ? canvases : undefined],
+      ["members", canvases.length !== members.length ? members : undefined],
     ];
   },
 };

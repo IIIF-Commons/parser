@@ -10,9 +10,7 @@
         "@none": ["Creator(s)"]
       },
       "value": {
-        "@none": [
-          "Peter Gaspar Scheemakers, 1691–1781, Flemish, active in Britain (from ca. 1720)"
-        ]
+        "@none": ["Peter Gaspar Scheemakers, 1691–1781, Flemish, active in Britain (from ca. 1720)"]
       }
     },
     {
@@ -103,9 +101,7 @@
         "@none": ["Description"]
       },
       "value": {
-        "@none": [
-          "Overall: 27 x 18 x 9 inches (68.6 x 45.7 x 22.9 cm), Chiseled on front of socle: \"POPE.\""
-        ]
+        "@none": ["Overall: 27 x 18 x 9 inches (68.6 x 45.7 x 22.9 cm), Chiseled on front of socle: \"POPE.\""]
       }
     }
   ],
@@ -135,19 +131,19 @@
       "@none": ["Attribution"]
     },
     "value": {
-      "@none": [
-        "<span>Yale Center for British Art, Paul Mellon Collection,<br/>Public Domain</span>"
-      ]
+      "@none": ["<span>Yale Center for British Art, Paul Mellon Collection,<br/>Public Domain</span>"]
     }
   },
-  "homepage": {
-    "label": {
-      "@none": ["catalog entry at the Yale Center for British Art"]
-    },
-    "format": "text/html",
-    "type": "Text",
-    "id": "http://collections.britishart.yale.edu/vufind/Record/1666375"
-  },
+  "homepage": [
+    {
+      "label": {
+        "@none": ["catalog entry at the Yale Center for British Art"]
+      },
+      "format": "text/html",
+      "type": "Text",
+      "id": "http://collections.britishart.yale.edu/vufind/Record/1666375"
+    }
+  ],
   "items": [
     {
       "width": 6127,
@@ -382,8 +378,5 @@
       }
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

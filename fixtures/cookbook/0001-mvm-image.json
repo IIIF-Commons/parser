@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0001-mvm-image/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Single Image Example"
-    ]
+    "en": ["Single Image Example"]
   },
   "items": [
     {

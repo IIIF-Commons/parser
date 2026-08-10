@@ -26,9 +26,7 @@
                   "@context": "http://iiif.io/api/image/2/context.json",
                   "@id": "https://iiifmediawiki.herokuapp.com/image/a/a0/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project_2.jpg",
                   "height": 2777,
-                  "profile": [
-                    "http://iiif.io/api/image/2/level0.json"
-                  ],
+                  "profile": ["http://iiif.io/api/image/2/level0.json"],
                   "protocol": "http://iiif.io/api/image",
                   "sizes": [
                     {

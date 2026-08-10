@@ -15,9 +15,7 @@
         "@none": ["Title"]
       },
       "value": {
-        "@none": [
-          "[papyrus] Document uit het archief van de dichter Dioskoros van Aphrodite (?)."
-        ]
+        "@none": ["[papyrus] Document uit het archief van de dichter Dioskoros van Aphrodite (?)."]
       }
     },
     {
@@ -95,9 +93,7 @@
     }
   ],
   "label": {
-    "@none": [
-      "Document uit het archief van de dichter Dioskoros van Aphrodite (?)[manuscript]"
-    ]
+    "@none": ["Document uit het archief van de dichter Dioskoros van Aphrodite (?)[manuscript]"]
   },
   "thumbnail": [
     {
@@ -116,11 +112,13 @@
       "@none": ["Provided by Ghent University Library"]
     }
   },
-  "homepage": {
-    "format": "text/html",
-    "type": "Text",
-    "id": "https://lib.ugent.be/viewer/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"
-  },
+  "homepage": [
+    {
+      "format": "text/html",
+      "type": "Text",
+      "id": "https://lib.ugent.be/viewer/archive.ugent.be%3A4B39C8CA-6FF9-11E1-8C42-C8A93B7C8C91"
+    }
+  ],
   "items": [
     {
       "thumbnail": [
@@ -253,8 +251,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

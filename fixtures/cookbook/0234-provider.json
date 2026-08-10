@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0234-provider/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Playbill Cover"
-    ]
+    "en": ["Playbill Cover"]
   },
   "summary": {
     "en": [
@@ -17,23 +15,17 @@
       "id": "https://id.loc.gov/authorities/n79055331",
       "type": "Agent",
       "label": {
-        "en": [
-          "UCLA Library"
-        ]
+        "en": ["UCLA Library"]
       },
       "homepage": [
         {
           "id": "https://digital.library.ucla.edu/",
           "type": "Text",
           "label": {
-            "en": [
-              "UCLA Library Digital Collections"
-            ]
+            "en": ["UCLA Library Digital Collections"]
           },
           "format": "text/html",
-          "language": [
-            "en"
-          ]
+          "language": ["en"]
         }
       ],
       "logo": [
@@ -70,9 +62,7 @@
           "id": "https://id.loc.gov/authorities/names/n79055331.madsxml.xml",
           "type": "Dataset",
           "label": {
-            "en": [
-              "US Library of Congress data about the UCLA Library"
-            ]
+            "en": ["US Library of Congress data about the UCLA Library"]
           },
           "format": "application/xml",
           "profile": "http://www.loc.gov/mads/v2"
@@ -85,9 +75,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0234-provider/canvas/p0",
       "type": "Canvas",
       "label": {
-        "en": [
-          "front cover with color bar"
-        ]
+        "en": ["front cover with color bar"]
       },
       "width": 4520,
       "height": 5312,

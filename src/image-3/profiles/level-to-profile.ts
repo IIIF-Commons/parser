@@ -1,4 +1,4 @@
-import { level0, level1, level1Support, level2, level2Support, Profile } from './profiles';
+import { level0, level1, level1Support, level2, level2Support, Profile } from "./profiles";
 
 export function levelToProfile(levelProfile: string): Profile {
   const isLevel2 = level2Support.indexOf(levelProfile) !== -1;

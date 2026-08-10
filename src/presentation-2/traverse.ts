@@ -18,21 +18,21 @@ import type {
   TraversableEntityTypes,
   Traversal,
   TraversalMap,
-} from '@iiif/presentation-2';
+} from "./types";
 
 export const types: TraversableEntityTypes[] = [
-  'sc:Collection',
-  'sc:Manifest',
-  'sc:Canvas',
-  'sc:AnnotationList',
-  'oa:Annotation',
-  'sc:Range',
-  'sc:Layer',
-  'sc:Sequence',
-  'oa:Choice',
+  "sc:Collection",
+  "sc:Manifest",
+  "sc:Canvas",
+  "sc:AnnotationList",
+  "oa:Annotation",
+  "sc:Range",
+  "sc:Layer",
+  "sc:Sequence",
+  "oa:Choice",
   // Opaque.
-  'Service',
-  'ContentResource',
+  "Service",
+  "ContentResource",
 ];
 
 export type TraverseOptions = {
@@ -42,37 +42,37 @@ export type TraverseOptions = {
 };
 
 export function identifyResource(resource: any): TraversableEntityTypes {
-  if (typeof resource === 'undefined' || resource === null) {
-    throw new Error('Null or undefined is not a valid entity.');
+  if (typeof resource === "undefined" || resource === null) {
+    throw new Error("Null or undefined is not a valid entity.");
   }
   if (Array.isArray(resource)) {
-    throw new Error('Array is not a valid entity');
+    throw new Error("Array is not a valid entity");
   }
-  if (typeof resource !== 'object') {
+  if (typeof resource !== "object") {
     throw new Error(`${typeof resource} is not a valid entity`);
   }
 
-  if (typeof resource['@type'] === 'string') {
-    const hasType = types.indexOf(resource['@type'] as any);
+  if (typeof resource["@type"] === "string") {
+    const hasType = types.indexOf(resource["@type"] as any);
     if (hasType !== -1) {
       return types[hasType]!;
     }
   }
 
   if (resource.profile) {
-    return 'Service';
+    return "Service";
   }
 
   if (resource.format) {
-    return 'ContentResource';
+    return "ContentResource";
   }
 
   // Big o'l fallback.
-  if (resource['@type']) {
-    return 'ContentResource';
+  if (resource["@type"]) {
+    return "ContentResource";
   }
 
-  throw new Error('Resource type is not known');
+  throw new Error("Resource type is not known");
 }
 
 export class Traverse<
@@ -144,7 +144,7 @@ export class Traverse<
     });
   }
 
-  traverseCollection(collection: Collection): T['Collection'] {
+  traverseCollection(collection: Collection): T["Collection"] {
     return this.traverseType(
       this.traverseDescriptive(this.traverseLinking(this.traverseCollectionItems(collection))),
       this.traversals.collection
@@ -155,17 +155,17 @@ export class Traverse<
     if (this.options.mergeMemberProperties) {
       const members = [
         ...(collection.manifests || []).map((manifest) => {
-          if (typeof manifest === 'string') {
-            return { '@id': manifest, '@type': 'sc:Manifest' };
+          if (typeof manifest === "string") {
+            return { "@id": manifest, "@type": "sc:Manifest" };
           }
-          if (!manifest['@type']) {
-            manifest['@type'] = 'sc:Manifest';
+          if (!manifest["@type"]) {
+            manifest["@type"] = "sc:Manifest";
           }
           return manifest;
         }),
         ...(collection.collections || []).map((subCollection) => {
-          if (typeof subCollection === 'string') {
-            return { '@id': subCollection, '@type': 'sc:Collection' };
+          if (typeof subCollection === "string") {
+            return { "@id": subCollection, "@type": "sc:Collection" };
           }
           return subCollection;
         }),
@@ -174,10 +174,10 @@ export class Traverse<
 
       const seenIds: string[] = [];
       const filteredMembers = members.filter((resource) => {
-        if (seenIds.includes(resource['@id'])) {
+        if (seenIds.includes(resource["@id"])) {
           return false;
         }
-        seenIds.push(resource['@id']);
+        seenIds.push(resource["@id"]);
         return true;
       });
 
@@ -189,11 +189,11 @@ export class Traverse<
     if (collection.manifests) {
       collection.manifests = collection.manifests.map((manifest) => {
         let _manifest = manifest;
-        if (typeof manifest === 'string') {
-          _manifest = { '@id': manifest, '@type': 'sc:Manifest' } as Manifest;
+        if (typeof manifest === "string") {
+          _manifest = { "@id": manifest, "@type": "sc:Manifest" } as Manifest;
         }
-        if (!(_manifest as any)['@type']) {
-          (_manifest as any)['@type'] = 'sc:Manifest';
+        if (!(_manifest as any)["@type"]) {
+          (_manifest as any)["@type"] = "sc:Manifest";
         }
 
         return this.traverseManifest(_manifest as Manifest);
@@ -203,8 +203,8 @@ export class Traverse<
     if (collection.collections) {
       collection.collections = collection.collections.map((subCollection) =>
         this.traverseCollection(
-          typeof subCollection === 'string'
-            ? ({ '@id': subCollection, '@type': 'sc:Collection' } as Collection)
+          typeof subCollection === "string"
+            ? ({ "@id": subCollection, "@type": "sc:Collection" } as Collection)
             : (subCollection as Collection)
         )
       );
@@ -212,13 +212,13 @@ export class Traverse<
 
     if (collection.members) {
       collection.members = collection.members.map((member) => {
-        if (typeof member === 'string') {
+        if (typeof member === "string") {
           return member;
         }
-        if (member['@type'] === 'sc:Collection') {
+        if (member["@type"] === "sc:Collection") {
           return this.traverseCollection(member);
         }
-        if (member['@type'] === 'sc:Manifest') {
+        if (member["@type"] === "sc:Manifest") {
           return this.traverseManifest(member as any);
         }
         return this.traverseUnknown(member);
@@ -228,7 +228,7 @@ export class Traverse<
     return collection;
   }
 
-  traverseManifest(manifest: Manifest): T['Manifest'] {
+  traverseManifest(manifest: Manifest): T["Manifest"] {
     return this.traverseType(
       this.traverseDescriptive(this.traverseLinking(this.traverseManifestItems(manifest))),
       this.traversals.manifest
@@ -245,7 +245,7 @@ export class Traverse<
     return manifest;
   }
 
-  traverseSequence(sequence: Sequence): T['Sequence'] {
+  traverseSequence(sequence: Sequence): T["Sequence"] {
     return this.traverseType(
       this.traverseDescriptive(this.traverseLinking(this.traverseSequenceItems(sequence))),
       this.traversals.sequence
@@ -259,7 +259,7 @@ export class Traverse<
     return sequence;
   }
 
-  traverseCanvas(canvas: Canvas): T['Canvas'] {
+  traverseCanvas(canvas: Canvas): T["Canvas"] {
     return this.traverseType(
       this.traverseDescriptive(this.traverseLinking(this.traverseCanvasItems(canvas))),
       this.traversals.canvas
@@ -271,8 +271,8 @@ export class Traverse<
       canvas.images = canvas.images.map((image) => {
         // Fix malformed annotations where @type is missing or incorrect (e.g., "dctypes:Image" instead of "oa:Annotation").
         // Detect by presence of "on" property which is unique to annotations.
-        if (image.on && image['@type'] !== 'oa:Annotation' && image['@type'] !== 'Annotation') {
-          image['@type'] = 'oa:Annotation';
+        if (image.on && image["@type"] !== "oa:Annotation" && image["@type"] !== "Annotation") {
+          image["@type"] = "oa:Annotation";
         }
         return this.traverseAnnotation(image);
       });
@@ -283,9 +283,9 @@ export class Traverse<
     return canvas;
   }
 
-  traverseRange(range: Range): T['Range'] {
-    if (range['@type'] !== 'sc:Range') {
-      range['@type'] = 'sc:Range';
+  traverseRange(range: Range): T["Range"] {
+    if (range["@type"] !== "sc:Range") {
+      range["@type"] = "sc:Range";
     }
     return this.traverseType(
       this.traverseDescriptive(this.traverseLinking(this.traverseRangeItems(range))),
@@ -297,14 +297,14 @@ export class Traverse<
     if (this.options.mergeMemberProperties) {
       const members = [
         ...(range.ranges || []).map((innerRange: any) => {
-          if (typeof innerRange === 'string') {
-            return { '@id': innerRange, '@type': 'sc:Range' };
+          if (typeof innerRange === "string") {
+            return { "@id": innerRange, "@type": "sc:Range" };
           }
           return innerRange;
         }),
         ...(range.canvases || []).map((canvas: any) => {
-          if (typeof canvas === 'string') {
-            return { '@id': canvas, '@type': 'sc:Canvas' };
+          if (typeof canvas === "string") {
+            return { "@id": canvas, "@type": "sc:Canvas" };
           }
           return canvas;
         }),
@@ -333,10 +333,10 @@ export class Traverse<
     return range;
   }
 
-  traverseAnnotationList(annotationList: AnnotationList): T['AnnotationList'] {
+  traverseAnnotationList(annotationList: AnnotationList): T["AnnotationList"] {
     const list =
-      typeof annotationList === 'string'
-        ? ({ '@id': annotationList, '@type': 'sc:AnnotationList' } as any)
+      typeof annotationList === "string"
+        ? ({ "@id": annotationList, "@type": "sc:AnnotationList" } as any)
         : annotationList;
 
     return this.traverseType(
@@ -353,7 +353,7 @@ export class Traverse<
     return annotationList;
   }
 
-  traverseAnnotation(annotation: Annotation): T['Annotation'] {
+  traverseAnnotation(annotation: Annotation): T["Annotation"] {
     return this.traverseType(
       this.traverseDescriptive(this.traverseLinking(this.traverseAnnotationItems(annotation))),
       this.traversals.annotation
@@ -379,7 +379,7 @@ export class Traverse<
     return annotation;
   }
 
-  traverseLayer(layer: Layer): T['Layer'] {
+  traverseLayer(layer: Layer): T["Layer"] {
     return this.traverseType(this.traverseLinking(this.traverseLayerItems(layer)), this.traversals.layer);
   }
 
@@ -390,27 +390,27 @@ export class Traverse<
     return layer;
   }
 
-  traverseChoice(choice: ChoiceEmbeddedContent): T['Choice'] {
+  traverseChoice(choice: ChoiceEmbeddedContent): T["Choice"] {
     return this.traverseType(this.traverseChoiceItems(choice), this.traversals.choice);
   }
 
   traverseChoiceItems(choice: ChoiceEmbeddedContent) {
-    if (choice.default && choice.default !== 'rdf:nil') {
+    if (choice.default && choice.default !== "rdf:nil") {
       choice.default = this.traverseContentResource(choice.default);
     }
-    if (choice.item && choice.item !== 'rdf:nil') {
+    if (choice.item && choice.item !== "rdf:nil") {
       choice.item = choice.item.map((item) => this.traverseContentResource(item));
     }
 
     return choice;
   }
 
-  traverseService(service: Service): T['Service'] {
+  traverseService(service: Service): T["Service"] {
     return this.traverseType(this.traverseLinking(service as any), this.traversals.service);
   }
 
-  traverseContentResource(contentResource: CommonContentResource): T['ContentResource'] {
-    if (contentResource['@type'] === 'oa:Choice') {
+  traverseContentResource(contentResource: CommonContentResource): T["ContentResource"] {
+    if (contentResource["@type"] === "oa:Choice") {
       return this.traverseChoice(contentResource as any);
     }
 
@@ -421,32 +421,32 @@ export class Traverse<
   }
 
   traverseUnknown(item: any) {
-    if (!item['@type'] || typeof item === 'string') {
+    if (!item["@type"] || typeof item === "string") {
       // Unknown item.
       return item;
     }
     switch (identifyResource(item)) {
-      case 'sc:Collection':
+      case "sc:Collection":
         return this.traverseCollection(item);
-      case 'sc:Manifest':
+      case "sc:Manifest":
         return this.traverseManifest(item);
-      case 'sc:Canvas':
+      case "sc:Canvas":
         return this.traverseCanvas(item);
-      case 'sc:Sequence':
+      case "sc:Sequence":
         return this.traverseSequence(item);
-      case 'sc:Range':
+      case "sc:Range":
         return this.traverseRange(item);
-      case 'oa:Annotation':
+      case "oa:Annotation":
         return this.traverseAnnotation(item);
-      case 'sc:AnnotationList':
+      case "sc:AnnotationList":
         return this.traverseAnnotationList(item);
-      case 'sc:Layer':
+      case "sc:Layer":
         return this.traverseLayer(item);
-      case 'Service':
+      case "Service":
         return this.traverseService(item);
-      case 'oa:Choice':
+      case "oa:Choice":
         return this.traverseChoice(item);
-      case 'ContentResource':
+      case "ContentResource":
         return this.traverseContentResource(item);
     }
 
@@ -463,11 +463,11 @@ export class Traverse<
     const newResourceList: any[] = [];
 
     for (const singleResource of resourceList) {
-      if (typeof singleResource === 'string') {
+      if (typeof singleResource === "string") {
         newResourceList.push(
           this.traverseContentResource({
-            '@id': singleResource,
-            '@type': 'dctypes:Image',
+            "@id": singleResource,
+            "@type": "dctypes:Image",
           })
         );
       } else {
@@ -523,7 +523,7 @@ export class Traverse<
       resource.seeAlso = this.traverseOneOrManyType(resource.seeAlso, this.traversals.contentResource);
     }
     if (resource.within) {
-      if (typeof resource.within === 'string') {
+      if (typeof resource.within === "string") {
         // I don't know. skip?
       } else {
         resource.within = this.traverseOneOrManyType(
@@ -533,9 +533,9 @@ export class Traverse<
       }
     }
     if (resource.startCanvas) {
-      if (typeof resource.startCanvas === 'string') {
+      if (typeof resource.startCanvas === "string") {
         resource.startCanvas = this.traverseType(
-          { '@id': resource.startCanvas, '@type': 'sc:Canvas' } as Canvas,
+          { "@id": resource.startCanvas, "@type": "sc:Canvas" } as Canvas,
           this.traversals.canvas
         );
       } else if (resource.startCanvas) {
@@ -543,10 +543,10 @@ export class Traverse<
       }
     }
     if (resource.contentLayer) {
-      if (typeof resource.contentLayer === 'string') {
+      if (typeof resource.contentLayer === "string") {
         resource.contentLayer = this.traverseLayer({
-          '@id': resource.contentLayer,
-          '@type': 'sc:Layer',
+          "@id": resource.contentLayer,
+          "@type": "sc:Layer",
         });
       } else {
         resource.contentLayer = this.traverseLayer(resource.contentLayer);
@@ -569,7 +569,7 @@ export class Traverse<
   traverseType<T, Return = T>(object: T, traversals: Array<Traversal<T>>): Return {
     return traversals.reduce((acc: T, traversal: Traversal<T>): T => {
       const returnValue = traversal(acc);
-      if (typeof returnValue === 'undefined' && !this.options.allowUndefinedReturn) {
+      if (typeof returnValue === "undefined" && !this.options.allowUndefinedReturn) {
         return acc;
       }
       return returnValue;

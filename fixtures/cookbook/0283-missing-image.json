@@ -3,18 +3,14 @@
   "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Ethiopic Ms 10"
-    ]
+    "en": ["Ethiopic Ms 10"]
   },
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 1r"
-        ]
+        "en": ["f. 1r"]
       },
       "height": 2504,
       "width": 1768,
@@ -51,37 +47,27 @@
       "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 1v — MISSING"
-        ]
+        "en": ["f. 1v — MISSING"]
       },
       "height": 2504,
       "width": 1768,
       "metadata": [
         {
           "label": {
-            "en": [
-              "Description"
-            ]
+            "en": ["Description"]
           },
           "value": {
-            "en": [
-              "Image unavailable or does not exist"
-            ]
+            "en": ["Image unavailable or does not exist"]
           }
         }
       ],
-      "items": [
-
-      ]
+      "items": []
     },
     {
       "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 2r"
-        ]
+        "en": ["f. 2r"]
       },
       "height": 2456,
       "width": 1792,
@@ -118,9 +104,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0283-missing-image/canvas/p4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 2v"
-        ]
+        "en": ["f. 2v"]
       },
       "height": 2440,
       "width": 1760,

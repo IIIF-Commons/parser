@@ -3,69 +3,41 @@
   "id": "https://iiif.io/api/cookbook/recipe/0006-text-language/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Whistler's Mother"
-    ],
-    "fr": [
-      "La Mère de Whistler"
-    ]
+    "en": ["Whistler's Mother"],
+    "fr": ["La Mère de Whistler"]
   },
   "metadata": [
     {
       "label": {
-        "en": [
-          "Creator"
-        ],
-        "fr": [
-          "Auteur"
-        ]
+        "en": ["Creator"],
+        "fr": ["Auteur"]
       },
       "value": {
-        "none": [
-          "Whistler, James Abbott McNeill"
-        ]
+        "none": ["Whistler, James Abbott McNeill"]
       }
     },
     {
       "label": {
-        "en": [
-          "Subject"
-        ],
-        "fr": [
-          "Sujet"
-        ]
+        "en": ["Subject"],
+        "fr": ["Sujet"]
       },
       "value": {
-        "en": [
-          "McNeill Anna Matilda, mother of Whistler (1804-1881)"
-        ],
-        "fr": [
-          "McNeill Anna Matilda, mère de Whistler (1804-1881)"
-        ]
+        "en": ["McNeill Anna Matilda, mother of Whistler (1804-1881)"],
+        "fr": ["McNeill Anna Matilda, mère de Whistler (1804-1881)"]
       }
     }
   ],
   "summary": {
-    "en": [
-      "Arrangement in Grey and Black No. 1, also called Portrait of the Artist's Mother."
-    ],
-    "fr": [
-      "Arrangement en gris et noir n°1, also called Portrait de la mère de l'artiste."
-    ]
+    "en": ["Arrangement in Grey and Black No. 1, also called Portrait of the Artist's Mother."],
+    "fr": ["Arrangement en gris et noir n°1, also called Portrait de la mère de l'artiste."]
   },
   "requiredStatement": {
     "label": {
-      "en": [
-        "Held By"
-      ],
-      "fr": [
-        "Détenu par"
-      ]
+      "en": ["Held By"],
+      "fr": ["Détenu par"]
     },
     "value": {
-      "none": [
-        "Musée d'Orsay, Paris, France"
-      ]
+      "none": ["Musée d'Orsay, Paris, France"]
     }
   },
   "items": [

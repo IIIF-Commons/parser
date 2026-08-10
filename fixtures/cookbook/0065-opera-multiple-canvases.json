@@ -3,36 +3,24 @@
   "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/manifest.json",
   "type": "Manifest",
   "label": {
-    "it": [
-      "L'Elisir D'Amore"
-    ],
-    "en": [
-      "The Elixir of Love"
-    ]
+    "it": ["L'Elisir D'Amore"],
+    "en": ["The Elixir of Love"]
   },
   "metadata": [
     {
       "label": {
-        "en": [
-          "Date Issued"
-        ]
+        "en": ["Date Issued"]
       },
       "value": {
-        "en": [
-          "2019"
-        ]
+        "en": ["2019"]
       }
     },
     {
       "label": {
-        "en": [
-          "Publisher"
-        ]
+        "en": ["Publisher"]
       },
       "value": {
-        "en": [
-          "Indiana University Jacobs School of Music"
-        ]
+        "en": ["Indiana University Jacobs School of Music"]
       }
     }
   ],
@@ -44,9 +32,7 @@
       "height": 1080,
       "duration": 3971.24,
       "label": {
-        "en": [
-          "Atto Primo"
-        ]
+        "en": ["Atto Primo"]
       },
       "items": [
         {
@@ -84,9 +70,7 @@
       "height": 1080,
       "duration": 3307.22,
       "label": {
-        "en": [
-          "Atto Secondo"
-        ]
+        "en": ["Atto Secondo"]
       },
       "items": [
         {
@@ -123,27 +107,21 @@
       "type": "Range",
       "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/1",
       "label": {
-        "it": [
-          "Gaetano Donizetti, L'Elisir D'Amore"
-        ]
+        "it": ["Gaetano Donizetti, L'Elisir D'Amore"]
       },
       "items": [
         {
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/2",
           "label": {
-            "en": [
-              "Atto Primo"
-            ]
+            "en": ["Atto Primo"]
           },
           "items": [
             {
               "type": "Range",
               "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/3",
               "label": {
-                "it": [
-                  "Preludio e Coro d'introduzione – Bel conforto al mietitore"
-                ]
+                "it": ["Preludio e Coro d'introduzione – Bel conforto al mietitore"]
               },
               "items": [
                 {
@@ -156,9 +134,7 @@
               "type": "Range",
               "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/4",
               "label": {
-                "en": [
-                  "Remainder of Atto Primo"
-                ]
+                "en": ["Remainder of Atto Primo"]
               },
               "items": [
                 {
@@ -173,9 +149,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0065-opera-multiple-canvases/range/5",
           "label": {
-            "en": [
-              "Atto Secondo"
-            ]
+            "en": ["Atto Secondo"]
           },
           "items": [
             {

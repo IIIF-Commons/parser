@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Linking to Structured Metadata"
-    ]
+    "en": ["Linking to Structured Metadata"]
   },
   "summary": {
     "en": [
@@ -18,9 +16,7 @@
       "id": "https://fixtures.iiif.io/other/UCLA/ezukushi_mods.xml",
       "type": "Dataset",
       "label": {
-        "en": [
-          "MODS metadata"
-        ]
+        "en": ["MODS metadata"]
       },
       "format": "text/xml",
       "profile": "http://www.loc.gov/mods/v3"
@@ -31,9 +27,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "front cover"
-        ]
+        "en": ["front cover"]
       },
       "width": 3497,
       "height": 4823,
@@ -70,9 +64,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/canvas/p2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "pages 1–2"
-        ]
+        "en": ["pages 1–2"]
       },
       "width": 6062,
       "height": 4804,
@@ -109,9 +101,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/canvas/p3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "pages 3–4"
-        ]
+        "en": ["pages 3–4"]
       },
       "width": 6127,
       "height": 4776,
@@ -148,9 +138,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/canvas/p4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "pages 5–6"
-        ]
+        "en": ["pages 5–6"]
       },
       "width": 6124,
       "height": 4751,
@@ -187,9 +175,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0053-seeAlso/canvas/p5",
       "type": "Canvas",
       "label": {
-        "en": [
-          "back cover"
-        ]
+        "en": ["back cover"]
       },
       "width": 3510,
       "height": 4808,

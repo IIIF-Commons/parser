@@ -32,9 +32,7 @@
         "@none": ["manifest URI"]
       },
       "value": {
-        "@none": [
-          "https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/manifest.json"
-        ]
+        "@none": ["https://dzkimgs.l.u-tokyo.ac.jp/iiif/zuzoubu/12b02/manifest.json"]
       }
     },
     {
@@ -112,8 +110,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

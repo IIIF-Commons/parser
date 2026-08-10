@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0326-annotating-image-layer/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Choice Example with layer specific annotation"
-    ]
+    "en": ["Choice Example with layer specific annotation"]
   },
   "items": [
     {
@@ -29,9 +27,7 @@
                     "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-natural/full/max/0/default.jpg",
                     "type": "Image",
                     "label": {
-                      "en": [
-                        "Natural Light"
-                      ]
+                      "en": ["Natural Light"]
                     },
                     "format": "image/jpeg",
                     "height": 1271,
@@ -48,9 +44,7 @@
                     "id": "https://iiif.io/api/image/3.0/example/reference/421e65be2ce95439b3ad6ef1f2ab87a9-dee-xray/full/2000,1271/0/default.jpg",
                     "type": "Image",
                     "label": {
-                      "en": [
-                        "X-ray"
-                      ]
+                      "en": ["X-ray"]
                     },
                     "format": "image/jpeg",
                     "height": 1271,

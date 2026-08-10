@@ -1,5 +1,5 @@
-import { RotationParameter } from '../types';
+import { RotationParameter } from "../types";
 
 export function rotationParameterToString(rotationParameter: RotationParameter) {
-  return `${rotationParameter.mirror ? '!' : ''}${(rotationParameter.angle || 0) % 360}`;
+  return `${rotationParameter.mirror ? "!" : ""}${(rotationParameter.angle || 0) % 360}`;
 }

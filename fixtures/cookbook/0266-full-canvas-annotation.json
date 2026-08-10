@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0266-full-canvas-annotation/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Picture of Göttingen taken during the 2019 IIIF Conference"
-    ]
+    "en": ["Picture of Göttingen taken during the 2019 IIIF Conference"]
   },
   "items": [
     {

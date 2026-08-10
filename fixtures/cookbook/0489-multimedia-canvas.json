@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0489-multimedia-canvas/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Multimedia Canvas"
-    ]
+    "en": ["Multimedia Canvas"]
   },
   "items": [
     {

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Fixed incorrectly formatted label/value maps in Manifests (#33)
+
 <!--
 
 ### Fixed
@@ -74,6 +75,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Collection` now has a `iiif-parser:hasPart` when normalized
 
 [^1]: A `Reference<T>` has the shape: `{ id: string, type: T }` and is usually narrowed to one or more types
+
 [^2]: SpecificResource is defined by the W3C Annotation specification, but in short you can access the original reference by accessing `specificResource.source`
+
 [^3]: These properties were added to the specification pre-3.0 and then later removed.
+
 [^4]: This does not replace the inline services with references, instead it's a parallel store of normalized services. Editing tools will have to update both. This moves the problem of multiple services with different structures and fields to the user. The normalized structures will be specifically useful for loading Image services progressively in a store without affecting the serialisation of the IIIF.

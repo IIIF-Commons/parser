@@ -47,21 +47,21 @@ export type RotationParameter = {
 
 export type ImageServiceImageRequest =
   | {
-      type: 'base';
+      type: "base";
       scheme: string;
       server: string;
       prefix: string;
       identifier: string;
     }
   | {
-      type: 'info';
+      type: "info";
       scheme: string;
       server: string;
       prefix: string;
       identifier: string;
     }
   | {
-      type: 'image';
+      type: "image";
       scheme: string;
       server: string;
       prefix: string;

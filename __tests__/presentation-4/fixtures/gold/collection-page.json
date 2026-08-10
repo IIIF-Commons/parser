@@ -1,0 +1,32 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/collection/page/1",
+  "type": "CollectionPage",
+  "partOf": [
+    {
+      "id": "https://example.org/iiif/collection/paged",
+      "type": "Collection"
+    }
+  ],
+  "startIndex": 0,
+  "next": {
+    "id": "https://example.org/iiif/collection/page/2",
+    "type": "CollectionPage"
+  },
+  "items": [
+    {
+      "id": "https://example.org/iiif/manifest/canvas",
+      "type": "Manifest",
+      "label": {
+        "en": ["Canvas manifest"]
+      }
+    },
+    {
+      "id": "https://example.org/iiif/manifest/timeline",
+      "type": "Manifest",
+      "label": {
+        "en": ["Timeline manifest"]
+      }
+    }
+  ]
+}

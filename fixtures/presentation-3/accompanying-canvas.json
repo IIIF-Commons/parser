@@ -3,27 +3,21 @@
   "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Partial audio recording of Gustav Mahler's _Symphony No. 3_"
-    ]
+    "en": ["Partial audio recording of Gustav Mahler's _Symphony No. 3_"]
   },
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Gustav Mahler, Symphony No. 3, CD 1"
-        ]
+        "en": ["Gustav Mahler, Symphony No. 3, CD 1"]
       },
       "duration": 1985.024,
       "accompanyingCanvas": {
         "id": "https://iiif.io/api/cookbook/recipe/0014-accompanyingcanvas/canvas/accompanying",
         "type": "Canvas",
         "label": {
-          "en": [
-            "First page of score for Gustav Mahler, Symphony No. 3"
-          ]
+          "en": ["First page of score for Gustav Mahler, Symphony No. 3"]
         },
         "height": 998,
         "width": 772,

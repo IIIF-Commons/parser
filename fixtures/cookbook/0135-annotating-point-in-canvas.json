@@ -3,23 +3,17 @@
   "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Using a point selector for annotating a location on a map."
-    ]
+    "en": ["Using a point selector for annotating a location on a map."]
   },
   "summary": {
-    "en": [
-      "A map containing an point with an annotation of the location."
-    ]
+    "en": ["A map containing an point with an annotation of the location."]
   },
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0135-annotating-point-in-canvas/canvas.json",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Chesapeake and Ohio Canal Pamphlet"
-        ]
+        "en": ["Chesapeake and Ohio Canal Pamphlet"]
       },
       "height": 7072,
       "width": 5212,

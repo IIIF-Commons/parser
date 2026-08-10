@@ -3,18 +3,14 @@
   "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Ethiopic Ms 10"
-    ]
+    "en": ["Ethiopic Ms 10"]
   },
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 1r"
-        ]
+        "en": ["f. 1r"]
       },
       "height": 2504,
       "width": 1768,
@@ -51,9 +47,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 1v"
-        ]
+        "en": ["f. 1v"]
       },
       "height": 2512,
       "width": 1792,
@@ -90,9 +84,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 2r"
-        ]
+        "en": ["f. 2r"]
       },
       "height": 2456,
       "width": 1792,
@@ -129,9 +121,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 2v"
-        ]
+        "en": ["f. 2v"]
       },
       "height": 2440,
       "width": 1760,
@@ -168,9 +158,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p5",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 3r"
-        ]
+        "en": ["f. 3r"]
       },
       "height": 2416,
       "width": 1776,
@@ -207,9 +195,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/canvas/p6",
       "type": "Canvas",
       "label": {
-        "en": [
-          "f. 3v"
-        ]
+        "en": ["f. 3v"]
       },
       "height": 2416,
       "width": 1776,
@@ -248,18 +234,14 @@
       "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r0",
       "type": "Range",
       "label": {
-        "en": [
-          "Table of Contents"
-        ]
+        "en": ["Table of Contents"]
       },
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r1",
           "type": "Range",
           "label": {
-            "gez": [
-              "Tabiba Tabiban [ጠቢበ ጠቢባን]"
-            ]
+            "gez": ["Tabiba Tabiban [ጠቢበ ጠቢባን]"]
           },
           "items": [
             {
@@ -276,18 +258,14 @@
           "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2",
           "type": "Range",
           "label": {
-            "gez": [
-              "Arede'et [አርድዕት]"
-            ]
+            "gez": ["Arede'et [አርድዕት]"]
           },
           "items": [
             {
               "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/1",
               "type": "Range",
               "label": {
-                "en": [
-                  "Monday"
-                ]
+                "en": ["Monday"]
               },
               "items": [
                 {
@@ -304,9 +282,7 @@
               "id": "https://iiif.io/api/cookbook/recipe/0024-book-4-toc/range/r2/2",
               "type": "Range",
               "label": {
-                "en": [
-                  "Tuesday"
-                ]
+                "en": ["Tuesday"]
               },
               "items": [
                 {

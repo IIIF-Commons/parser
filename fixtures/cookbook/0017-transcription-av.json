@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0017-transcription-av/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Volleyball for Boys"
-    ]
+    "en": ["Volleyball for Boys"]
   },
   "items": [
     {
@@ -41,9 +39,7 @@
           "id": "https://fixtures.iiif.io/video/indiana/volleyball/volleyball.txt",
           "type": "Text",
           "label": {
-            "en": [
-              "Transcript"
-            ]
+            "en": ["Transcript"]
           },
           "format": "text/plain"
         }

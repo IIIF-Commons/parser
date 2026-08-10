@@ -40,9 +40,7 @@
                   "height": 1024
                 }
               ],
-              "profile": [
-                "http://iiif.io/api/image/2/level0.json"
-              ]
+              "profile": ["http://iiif.io/api/image/2/level0.json"]
             }
           },
           "height": 3626,
@@ -100,9 +98,7 @@
                   "height": 392
                 }
               ],
-              "profile": [
-                "http://iiif.io/api/image/2/level0.json"
-              ]
+              "profile": ["http://iiif.io/api/image/2/level0.json"]
             }
           },
           "height": 2110,
@@ -160,9 +156,7 @@
                   "height": 631
                 }
               ],
-              "profile": [
-                "http://iiif.io/api/image/2/level0.json"
-              ]
+              "profile": ["http://iiif.io/api/image/2/level0.json"]
             }
           },
           "height": 3294,

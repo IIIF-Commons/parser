@@ -58,9 +58,7 @@
         "@none": ["Title"]
       },
       "value": {
-        "@none": [
-          "Romance of Alexander, Alexander and Dindimus, Li Livres du Graunt Caam"
-        ]
+        "@none": ["Romance of Alexander, Alexander and Dindimus, Li Livres du Graunt Caam"]
       }
     },
     {
@@ -159,10 +157,12 @@
     }
   },
   "behavior": ["paged"],
-  "homepage": {
-    "id": "https://digital.bodleian.ox.ac.uk/inquire/p/60834383-7146-41ab-bfe1-48ee97bc04be",
-    "type": "Text"
-  },
+  "homepage": [
+    {
+      "id": "https://digital.bodleian.ox.ac.uk/inquire/p/60834383-7146-41ab-bfe1-48ee97bc04be",
+      "type": "Text"
+    }
+  ],
   "items": [
     {
       "label": {
@@ -21070,8 +21070,5 @@
       ]
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

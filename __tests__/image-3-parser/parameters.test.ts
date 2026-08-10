@@ -1,18 +1,18 @@
-import { createImageServiceRequest, imageServiceRequestToString, parseImageServiceRequest } from '../../src/image-3';
+import { createImageServiceRequest, imageServiceRequestToString, parseImageServiceRequest } from "../../src/image-3";
 
-describe('IIIF Image API Parameters', () => {
+describe("IIIF Image API Parameters", () => {
   /// {scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}
 
-  describe('munch.emuseum.com examples', () => {
+  describe("munch.emuseum.com examples", () => {
     // https://munch.emuseum.com/apis/iiif/image/v2/17261/full/max/0/default.jpg
     // https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/0/default.jpg
     // https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/90/default.jpg
     // https://munch.emuseum.com/apis/iiif/image/v2/17261/info.json
 
-    test('full/max/0/default.jpg', () => {
+    test("full/max/0/default.jpg", () => {
       const parsed = parseImageServiceRequest(
-        'https://munch.emuseum.com/apis/iiif/image/v2/17261/full/max/0/default.jpg',
-        'apis/iiif/image/v2'
+        "https://munch.emuseum.com/apis/iiif/image/v2/17261/full/max/0/default.jpg",
+        "apis/iiif/image/v2"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -40,14 +40,14 @@ describe('IIIF Image API Parameters', () => {
       `);
 
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://munch.emuseum.com/apis/iiif/image/v2/17261/full/max/0/default.jpg'
+        "https://munch.emuseum.com/apis/iiif/image/v2/17261/full/max/0/default.jpg"
       );
     });
 
-    test('90,0,350,220/max/0/default.jpg', () => {
+    test("90,0,350,220/max/0/default.jpg", () => {
       const parsed = parseImageServiceRequest(
-        'https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/0/default.jpg',
-        'apis/iiif/image/v2'
+        "https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/0/default.jpg",
+        "apis/iiif/image/v2"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -79,13 +79,13 @@ describe('IIIF Image API Parameters', () => {
       `);
 
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/0/default.jpg'
+        "https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/0/default.jpg"
       );
     });
-    test('90,0,350,220/max/90/default.jpg', () => {
+    test("90,0,350,220/max/90/default.jpg", () => {
       const parsed = parseImageServiceRequest(
-        'https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/90/default.jpg',
-        'apis/iiif/image/v2'
+        "https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/90/default.jpg",
+        "apis/iiif/image/v2"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -117,13 +117,13 @@ describe('IIIF Image API Parameters', () => {
       `);
 
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/90/default.jpg'
+        "https://munch.emuseum.com/apis/iiif/image/v2/17261/90,0,350,220/max/90/default.jpg"
       );
     });
-    test('info.json', () => {
+    test("info.json", () => {
       const parsed = parseImageServiceRequest(
-        'https://munch.emuseum.com/apis/iiif/image/v2/17261/info.json',
-        'apis/iiif/image/v2'
+        "https://munch.emuseum.com/apis/iiif/image/v2/17261/info.json",
+        "apis/iiif/image/v2"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -136,16 +136,16 @@ describe('IIIF Image API Parameters', () => {
       `);
 
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://munch.emuseum.com/apis/iiif/image/v2/17261/info.json'
+        "https://munch.emuseum.com/apis/iiif/image/v2/17261/info.json"
       );
     });
   });
 
-  describe('V&A Documentation examples', () => {
+  describe("V&A Documentation examples", () => {
     // https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/default.jpg
-    test('Request an image at full size', () => {
+    test("Request an image at full size", () => {
       const parsed = parseImageServiceRequest(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/default.jpg'
+        "https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/default.jpg"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -172,12 +172,12 @@ describe('IIIF Image API Parameters', () => {
         }
       `);
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/default.jpg'
+        "https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/default.jpg"
       );
     });
-    test('Request an image fixed at 600 by 400', () => {
+    test("Request an image fixed at 600 by 400", () => {
       const parsed = parseImageServiceRequest(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/600,/0/default.jpg'
+        "https://framemark.vam.ac.uk/collections/2006AN7529/full/600,/0/default.jpg"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -204,12 +204,12 @@ describe('IIIF Image API Parameters', () => {
         }
       `);
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/600,/0/default.jpg'
+        "https://framemark.vam.ac.uk/collections/2006AN7529/full/600,/0/default.jpg"
       );
     });
-    test('Request a 100 by 100 (retaining aspect ratio) thumbnail', () => {
+    test("Request a 100 by 100 (retaining aspect ratio) thumbnail", () => {
       const parsed = parseImageServiceRequest(
-        'https://framemark.vam.ac.uk/collections/2016JL5779/full/!100,/0/default.jpg'
+        "https://framemark.vam.ac.uk/collections/2016JL5779/full/!100,/0/default.jpg"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -236,12 +236,12 @@ describe('IIIF Image API Parameters', () => {
         }
       `);
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://framemark.vam.ac.uk/collections/2016JL5779/full/!100,/0/default.jpg'
+        "https://framemark.vam.ac.uk/collections/2016JL5779/full/!100,/0/default.jpg"
       );
     });
-    test('Request a greyscale version', () => {
+    test("Request a greyscale version", () => {
       const parsed = parseImageServiceRequest(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/grey.jpg'
+        "https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/grey.jpg"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -268,12 +268,12 @@ describe('IIIF Image API Parameters', () => {
         }
       `);
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/grey.jpg'
+        "https://framemark.vam.ac.uk/collections/2006AN7529/full/full/0/grey.jpg"
       );
     });
-    test('Request a image rotated by 180 degrees', () => {
+    test("Request a image rotated by 180 degrees", () => {
       const parsed = parseImageServiceRequest(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/full/180/default.jpg'
+        "https://framemark.vam.ac.uk/collections/2006AN7529/full/full/180/default.jpg"
       );
       expect(parsed).toMatchInlineSnapshot(`
         {
@@ -300,15 +300,15 @@ describe('IIIF Image API Parameters', () => {
         }
       `);
       expect(imageServiceRequestToString(parsed)).toEqual(
-        'https://framemark.vam.ac.uk/collections/2006AN7529/full/full/180/default.jpg'
+        "https://framemark.vam.ac.uk/collections/2006AN7529/full/full/180/default.jpg"
       );
     });
   });
 
-  test('Creating requests', () => {
+  test("Creating requests", () => {
     const req = createImageServiceRequest({
-      id: 'https://framemark.vam.ac.uk/collections/2006AN7529',
-      profile: 'level0',
+      id: "https://framemark.vam.ac.uk/collections/2006AN7529",
+      profile: "level0",
     });
     expect(req).toMatchInlineSnapshot(`
       {

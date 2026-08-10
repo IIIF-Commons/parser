@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0002-mvm-audio/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Simplest Audio Example 1"
-    ]
+    "en": ["Simplest Audio Example 1"]
   },
   "items": [
     {

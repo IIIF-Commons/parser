@@ -2,16 +2,12 @@
   "@context": "http://iiif.io/api/presentation/3/context.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Inventing Creativity"
-    ]
+    "en": ["Inventing Creativity"]
   },
   "items": [
     {
       "label": {
-        "en": [
-          "Constructing the Creative Personality"
-        ]
+        "en": ["Constructing the Creative Personality"]
       },
       "height": 1000,
       "width": 1000,
@@ -33,9 +29,7 @@
                   "height": 6036,
                   "width": 8174,
                   "label": {
-                    "en": [
-                      "-"
-                    ]
+                    "en": ["-"]
                   },
                   "service": {
                     "type": "ImageService2",
@@ -47,14 +41,7 @@
                       {
                         "width": 256,
                         "height": 256,
-                        "scaleFactors": [
-                          1,
-                          2,
-                          4,
-                          8,
-                          16,
-                          32
-                        ]
+                        "scaleFactors": [1, 2, 4, 8, 16, 32]
                       }
                     ],
                     "sizes": [
@@ -78,14 +65,8 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level1.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "native",
-                          "color",
-                          "gray"
-                        ],
+                        "formats": ["jpg"],
+                        "qualities": ["native", "color", "gray"],
                         "supports": [
                           "regionByPct",
                           "sizeByForcedWh",
@@ -116,15 +97,9 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level0.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "color"
-                        ],
-                        "supports": [
-                          "sizeByWhListed"
-                        ]
+                        "formats": ["jpg"],
+                        "qualities": ["color"],
+                        "supports": ["sizeByWhListed"]
                       }
                     ],
                     "width": 1024,
@@ -158,9 +133,7 @@
                 ]
               },
               "label": {
-                "en": [
-                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
-                ]
+                "en": ["Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"]
               }
             },
             {
@@ -176,9 +149,7 @@
                   "height": 6237,
                   "width": 8713,
                   "label": {
-                    "en": [
-                      "-"
-                    ]
+                    "en": ["-"]
                   },
                   "service": {
                     "type": "ImageService2",
@@ -190,15 +161,7 @@
                       {
                         "width": 256,
                         "height": 256,
-                        "scaleFactors": [
-                          1,
-                          2,
-                          4,
-                          8,
-                          16,
-                          32,
-                          64
-                        ]
+                        "scaleFactors": [1, 2, 4, 8, 16, 32, 64]
                       }
                     ],
                     "sizes": [
@@ -222,14 +185,8 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level1.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "native",
-                          "color",
-                          "gray"
-                        ],
+                        "formats": ["jpg"],
+                        "qualities": ["native", "color", "gray"],
                         "supports": [
                           "regionByPct",
                           "sizeByForcedWh",
@@ -260,15 +217,9 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level0.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "color"
-                        ],
-                        "supports": [
-                          "sizeByWhListed"
-                        ]
+                        "formats": ["jpg"],
+                        "qualities": ["color"],
+                        "supports": ["sizeByWhListed"]
                       }
                     ],
                     "width": 1024,
@@ -297,9 +248,7 @@
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/27efc122-6e41-0792-dcfe-aa001147d254",
               "target": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59#xywh=365,622,205,296",
               "label": {
-                "en": [
-                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
-                ]
+                "en": ["Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"]
               },
               "summary": {
                 "en": [
@@ -320,9 +269,7 @@
                   "height": 6452,
                   "width": 8840,
                   "label": {
-                    "en": [
-                      "-"
-                    ]
+                    "en": ["-"]
                   },
                   "service": {
                     "type": "ImageService2",
@@ -334,15 +281,7 @@
                       {
                         "width": 256,
                         "height": 256,
-                        "scaleFactors": [
-                          1,
-                          2,
-                          4,
-                          8,
-                          16,
-                          32,
-                          64
-                        ]
+                        "scaleFactors": [1, 2, 4, 8, 16, 32, 64]
                       }
                     ],
                     "sizes": [
@@ -366,14 +305,8 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level1.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "native",
-                          "color",
-                          "gray"
-                        ],
+                        "formats": ["jpg"],
+                        "qualities": ["native", "color", "gray"],
                         "supports": [
                           "regionByPct",
                           "sizeByForcedWh",
@@ -404,15 +337,9 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level0.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "color"
-                        ],
-                        "supports": [
-                          "sizeByWhListed"
-                        ]
+                        "formats": ["jpg"],
+                        "qualities": ["color"],
+                        "supports": ["sizeByWhListed"]
                       }
                     ],
                     "width": 1024,
@@ -441,9 +368,7 @@
               "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/annotation/3c6f823d-4999-2cd7-d7a8-3ff9209f6dee",
               "target": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59#xywh=603,622,203,293",
               "label": {
-                "en": [
-                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
-                ]
+                "en": ["Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"]
               },
               "summary": {
                 "en": [
@@ -461,9 +386,7 @@
                 "height": 6423,
                 "width": 8722,
                 "label": {
-                  "en": [
-                    "-"
-                  ]
+                  "en": ["-"]
                 },
                 "service": [
                   {
@@ -476,15 +399,7 @@
                       {
                         "width": 256,
                         "height": 256,
-                        "scaleFactors": [
-                          1,
-                          2,
-                          4,
-                          8,
-                          16,
-                          32,
-                          64
-                        ]
+                        "scaleFactors": [1, 2, 4, 8, 16, 32, 64]
                       }
                     ],
                     "sizes": [
@@ -508,14 +423,8 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level1.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "native",
-                          "color",
-                          "gray"
-                        ],
+                        "formats": ["jpg"],
+                        "qualities": ["native", "color", "gray"],
                         "supports": [
                           "regionByPct",
                           "sizeByForcedWh",
@@ -541,15 +450,9 @@
                     "profile": [
                       "http://iiif.io/api/image/2/level0.json",
                       {
-                        "formats": [
-                          "jpg"
-                        ],
-                        "qualities": [
-                          "color"
-                        ],
-                        "supports": [
-                          "sizeByWhListed"
-                        ]
+                        "formats": ["jpg"],
+                        "qualities": ["color"],
+                        "supports": ["sizeByWhListed"]
                       }
                     ],
                     "width": 1024,
@@ -583,9 +486,7 @@
                 ]
               },
               "label": {
-                "en": [
-                  "Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"
-                ]
+                "en": ["Sidney J. Parnes and Harold F. Harding eds., The Sourcebook for Creative Thinking, 1962"]
               }
             }
           ],
@@ -593,10 +494,7 @@
         }
       ],
       "id": "https://heritage.tudelft.nl/iiif/inventing-creativity/canvas/66dc7c31-e263-79bc-08a7-43a5f6e6ad59",
-      "behavior": [
-        "w-6",
-        "h-6"
-      ],
+      "behavior": ["w-6", "h-6"],
       "annotations": [
         {
           "type": "AnnotationPage",
@@ -649,17 +547,13 @@
       "id": "https://heritage.tudelft.nl/nl/exhibitions/inventing-creativity",
       "type": "Text",
       "format": "text/html",
-      "language": [
-        "nl"
-      ]
+      "language": ["nl"]
     },
     {
       "id": "https://heritage.tudelft.nl/en/exhibitions/inventing-creativity",
       "type": "Text",
       "format": "text/html",
-      "language": [
-        "en"
-      ]
+      "language": ["en"]
     }
   ]
 }

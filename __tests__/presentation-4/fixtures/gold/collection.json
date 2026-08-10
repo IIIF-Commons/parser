@@ -1,0 +1,25 @@
+{
+  "@context": "http://iiif.io/api/presentation/4/context.json",
+  "id": "https://example.org/iiif/collection",
+  "type": "Collection",
+  "label": {
+    "en": ["Gold collection"]
+  },
+  "total": 2,
+  "items": [
+    {
+      "id": "https://example.org/iiif/manifest/canvas",
+      "type": "Manifest",
+      "label": {
+        "en": ["Canvas manifest"]
+      }
+    },
+    {
+      "id": "https://example.org/iiif/collection/child",
+      "type": "Collection",
+      "label": {
+        "en": ["Child collection"]
+      }
+    }
+  ]
+}

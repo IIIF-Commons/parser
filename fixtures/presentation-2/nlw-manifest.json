@@ -178,13 +178,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -225,13 +219,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -272,13 +260,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -319,13 +301,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -366,13 +342,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -413,13 +383,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -460,13 +424,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -507,13 +465,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -554,13 +506,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -601,13 +547,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -648,13 +588,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },
@@ -695,13 +629,7 @@
                   "tiles": [
                     {
                       "width": 256,
-                      "scaleFactors": [
-                        1,
-                        2,
-                        4,
-                        8,
-                        16
-                      ]
+                      "scaleFactors": [1, 2, 4, 8, 16]
                     }
                   ]
                 },

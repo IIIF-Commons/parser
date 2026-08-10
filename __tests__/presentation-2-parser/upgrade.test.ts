@@ -1,46 +1,46 @@
-import { Validator } from '@hyperion-framework/validator';
-import { expect } from 'vitest';
-import choiceAnnoList from '../../fixtures/presentation-2/anno_list_choice.json';
-import artic from '../../fixtures/presentation-2/artic-manifest.json';
-import biblissimaCollection from '../../fixtures/presentation-2/biblissima-collection.json';
-import iiifManifest2 from '../../fixtures/presentation-2/biblissima-manifest.json';
-import blManifest from '../../fixtures/presentation-2/bl-manifest.json';
-import bodleianManifest from '../../fixtures/presentation-2/bodleian-manifest.json';
-import bodyChoice from '../../fixtures/presentation-2/body-choice.json';
-import codexManifest from '../../fixtures/presentation-2/codex.json';
-import sctaCollection from '../../fixtures/presentation-2/collection-scta.json';
-import duplicateMemberCollection from '../../fixtures/presentation-2/duplicate-member-collection.json';
-import europeana from '../../fixtures/presentation-2/europeana.json';
-import folgerManifest from '../../fixtures/presentation-2/folger-manifest.json';
-import ghent from '../../fixtures/presentation-2/ghent.json';
-import annoList from '../../fixtures/presentation-2/iiif-fixture-annotation-list.json';
-import iiifManifest from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
-import iiifManifestInvalid from '../../fixtures/presentation-2/iiif-fixture-manifest.json';
-import withDimensions from '../../fixtures/presentation-2/iiif-fixture-manifest-with-dimensions.json';
-import loc from '../../fixtures/presentation-2/loc.json';
-import malformedImageAnnotation from '../../fixtures/presentation-2/malformed-image-annotation.json';
-import level0manifest from '../../fixtures/presentation-2/manifest-l0.json';
-import nestedRanges from '../../fixtures/presentation-2/nested-ranges.json';
-import ngaManifest from '../../fixtures/presentation-2/nga-manifest.json';
-import nlsCollection from '../../fixtures/presentation-2/nls-collection.json';
-import nlsManifest from '../../fixtures/presentation-2/nls-manifest.json';
-import nlsManifest2 from '../../fixtures/presentation-2/nls-manifest-2.json';
-import nlwManifest from '../../fixtures/presentation-2/nlw-manifest.json';
-import paginatedCollection from '../../fixtures/presentation-2/paginated-collection.json';
-import paginatedCollectionPage from '../../fixtures/presentation-2/paginated-collection-page.json';
-import quatarManifest from '../../fixtures/presentation-2/quatar-manifest.json';
-import sbbManifest from '../../fixtures/presentation-2/sbb-test.json';
-import scroll from '../../fixtures/presentation-2/scroll.json';
-import stanfordManifest from '../../fixtures/presentation-2/stanford-manifest.json';
-import goettingen from '../../fixtures/presentation-2/uni-goettingen.json';
-import villanovaManifest from '../../fixtures/presentation-2/villanova-manifest.json';
-import wikimediaProxy from '../../fixtures/presentation-2/wikimedia-proxy.json';
-import { convertPresentation2, presentation2to3 } from '../../src/presentation-2';
+import { Validator } from "@hyperion-framework/validator";
+import { expect } from "vitest";
+import choiceAnnoList from "../../fixtures/presentation-2/anno_list_choice.json";
+import artic from "../../fixtures/presentation-2/artic-manifest.json";
+import biblissimaCollection from "../../fixtures/presentation-2/biblissima-collection.json";
+import iiifManifest2 from "../../fixtures/presentation-2/biblissima-manifest.json";
+import blManifest from "../../fixtures/presentation-2/bl-manifest.json";
+import bodleianManifest from "../../fixtures/presentation-2/bodleian-manifest.json";
+import bodyChoice from "../../fixtures/presentation-2/body-choice.json";
+import codexManifest from "../../fixtures/presentation-2/codex.json";
+import sctaCollection from "../../fixtures/presentation-2/collection-scta.json";
+import duplicateMemberCollection from "../../fixtures/presentation-2/duplicate-member-collection.json";
+import europeana from "../../fixtures/presentation-2/europeana.json";
+import folgerManifest from "../../fixtures/presentation-2/folger-manifest.json";
+import ghent from "../../fixtures/presentation-2/ghent.json";
+import annoList from "../../fixtures/presentation-2/iiif-fixture-annotation-list.json";
+import iiifManifest from "../../fixtures/presentation-2/iiif-fixture-manifest.json";
+import iiifManifestInvalid from "../../fixtures/presentation-2/iiif-fixture-manifest.json";
+import withDimensions from "../../fixtures/presentation-2/iiif-fixture-manifest-with-dimensions.json";
+import loc from "../../fixtures/presentation-2/loc.json";
+import malformedImageAnnotation from "../../fixtures/presentation-2/malformed-image-annotation.json";
+import level0manifest from "../../fixtures/presentation-2/manifest-l0.json";
+import nestedRanges from "../../fixtures/presentation-2/nested-ranges.json";
+import ngaManifest from "../../fixtures/presentation-2/nga-manifest.json";
+import nlsCollection from "../../fixtures/presentation-2/nls-collection.json";
+import nlsManifest from "../../fixtures/presentation-2/nls-manifest.json";
+import nlsManifest2 from "../../fixtures/presentation-2/nls-manifest-2.json";
+import nlwManifest from "../../fixtures/presentation-2/nlw-manifest.json";
+import paginatedCollection from "../../fixtures/presentation-2/paginated-collection.json";
+import paginatedCollectionPage from "../../fixtures/presentation-2/paginated-collection-page.json";
+import quatarManifest from "../../fixtures/presentation-2/quatar-manifest.json";
+import sbbManifest from "../../fixtures/presentation-2/sbb-test.json";
+import scroll from "../../fixtures/presentation-2/scroll.json";
+import stanfordManifest from "../../fixtures/presentation-2/stanford-manifest.json";
+import goettingen from "../../fixtures/presentation-2/uni-goettingen.json";
+import villanovaManifest from "../../fixtures/presentation-2/villanova-manifest.json";
+import wikimediaProxy from "../../fixtures/presentation-2/wikimedia-proxy.json";
+import { convertPresentation2, presentation2to3 } from "../../src/presentation-2";
 
-describe('Presentation 2 to 3', () => {
+describe("Presentation 2 to 3", () => {
   const validator = new Validator();
 
-  test('Simple manifest', () => {
+  test("Simple manifest", () => {
     const result = presentation2to3.traverseManifest(iiifManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -48,7 +48,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Biblissima manifest', () => {
+  test("Biblissima manifest", () => {
     const result = presentation2to3.traverseManifest(iiifManifest2 as any);
     const isValid = validator.validateManifest(result);
 
@@ -56,7 +56,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('British Library manifest', () => {
+  test("British Library manifest", () => {
     const result = presentation2to3.traverseManifest(blManifest as any);
 
     const isValid = validator.validateManifest(result);
@@ -117,7 +117,7 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('NLW manifest', () => {
+  test("NLW manifest", () => {
     const result = presentation2to3.traverseManifest(nlwManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -125,7 +125,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Ghent manifest', () => {
+  test("Ghent manifest", () => {
     const result = presentation2to3.traverseManifest(ghent as any);
     const isValid = validator.validateManifest(result);
 
@@ -138,7 +138,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Bodleian manifest', () => {
+  test("Bodleian manifest", () => {
     const result = presentation2to3.traverseManifest(bodleianManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -146,7 +146,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Stanford manifest', () => {
+  test("Stanford manifest", () => {
     const result = presentation2to3.traverseManifest(stanfordManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -154,7 +154,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Folger manifest', () => {
+  test("Folger manifest", () => {
     const result = presentation2to3.traverseManifest(folgerManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -162,7 +162,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Villanova manifest', () => {
+  test("Villanova manifest", () => {
     const result = presentation2to3.traverseManifest(villanovaManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -170,22 +170,22 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Choices body', () => {
+  test("Choices body", () => {
     const results = presentation2to3.traverseManifest(bodyChoice as any);
     const isValid = validator.validateManifest(results);
 
     // @ts-expect-error
     const body = results.items[0]!.items[0]!.items[0].body as any;
 
-    expect(body.type).toEqual('Choice');
-    expect(body.id).toEqual('http://example.org/oa:Choice/335');
+    expect(body.type).toEqual("Choice");
+    expect(body.id).toEqual("http://example.org/oa:Choice/335");
     expect(body.items.length).toEqual(4);
 
     expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
 
-  test('NGA manifest', () => {
+  test("NGA manifest", () => {
     const result = presentation2to3.traverseManifest(ngaManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -193,7 +193,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Quatar manifest', () => {
+  test("Quatar manifest", () => {
     const result: any = presentation2to3.traverseManifest(quatarManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -206,7 +206,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(false);
   });
 
-  test('NLS Collection', () => {
+  test("NLS Collection", () => {
     const result = presentation2to3.traverseManifest(nlsCollection as any);
     const isValid = validator.validateCollection(result);
 
@@ -214,7 +214,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('NLS Manifest', () => {
+  test("NLS Manifest", () => {
     const result = presentation2to3.traverseManifest(nlsManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -252,7 +252,7 @@ describe('Presentation 2 to 3', () => {
     expect(validator.validators.manifest!.errors).toEqual(null);
     expect(isValid).toEqual(true);
   });
-  test('NLS Manifest 2', () => {
+  test("NLS Manifest 2", () => {
     const result = presentation2to3.traverseManifest(nlsManifest2 as any);
     const isValid = validator.validateManifest(result);
 
@@ -260,7 +260,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('SBB manifest', () => {
+  test("SBB manifest", () => {
     const result = presentation2to3.traverseManifest(sbbManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -284,7 +284,7 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('Codex manifest', () => {
+  test("Codex manifest", () => {
     const result = presentation2to3.traverseManifest(codexManifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -292,7 +292,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('presentation 2 with level 0', () => {
+  test("presentation 2 with level 0", () => {
     const result = presentation2to3.traverseManifest(level0manifest as any);
     const isValid = validator.validateManifest(result);
 
@@ -300,10 +300,10 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Wikimedia proxy manifest', () => {
+  test("Wikimedia proxy manifest", () => {
     const result = presentation2to3.traverseManifest(wikimediaProxy as any);
 
-    expect(result.type).toEqual('Manifest');
+    expect(result.type).toEqual("Manifest");
 
     const isValid = validator.validateManifest(result);
 
@@ -311,12 +311,12 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('LOC manifest', () => {
+  test("LOC manifest", () => {
     const result = presentation2to3.traverseManifest(loc as any);
 
-    expect(result.type).toEqual('Manifest');
+    expect(result.type).toEqual("Manifest");
 
-    expect(result.thumbnail![0]!.type).toEqual('Image');
+    expect(result.thumbnail![0]!.type).toEqual("Image");
 
     const isValid = validator.validateManifest(result);
 
@@ -324,9 +324,9 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
   });
 
-  test('Art Institute of Chicago manifest', () => {
+  test("Art Institute of Chicago manifest", () => {
     const result = presentation2to3.traverseManifest(artic as any);
-    expect(result.type).toEqual('Manifest');
+    expect(result.type).toEqual("Manifest");
 
     expect(result.metadata).toMatchInlineSnapshot(`
       [
@@ -404,9 +404,9 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('IIIF Fixture with dimensions', () => {
+  test("IIIF Fixture with dimensions", () => {
     const result = presentation2to3.traverseManifest(withDimensions as any);
-    expect(result.type).toEqual('Manifest');
+    expect(result.type).toEqual("Manifest");
 
     const isValid = validator.validateManifest(result);
 
@@ -427,19 +427,19 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('europeana', () => {
+  test("europeana", () => {
     const result = presentation2to3.traverseCanvas(europeana as any);
-    expect(result.type).toEqual('Canvas');
+    expect(result.type).toEqual("Canvas");
 
     expect(result.annotations).toEqual([
       {
-        id: 'https://iiif.europeana.eu/presentation/9200396/BibliographicResource_3000118436165/annopage/21',
-        type: 'AnnotationPage',
+        id: "https://iiif.europeana.eu/presentation/9200396/BibliographicResource_3000118436165/annopage/21",
+        type: "AnnotationPage",
       },
     ]);
   });
 
-  test('annotation list', () => {
+  test("annotation list", () => {
     const result = presentation2to3.traverseAnnotationList(annoList as any);
     expect(result).toMatchInlineSnapshot(`
       {
@@ -514,7 +514,7 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('annotation list with choices', () => {
+  test("annotation list with choices", () => {
     const result = presentation2to3.traverseAnnotationList(choiceAnnoList as any);
     expect(result).toMatchInlineSnapshot(`
       {
@@ -616,28 +616,28 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('goettingen manifest', () => {
+  test("goettingen manifest", () => {
     const result = presentation2to3.traverseManifest(goettingen as any);
     expect(result).toMatchSnapshot();
   });
 
-  test('nested ranges', () => {
+  test("nested ranges", () => {
     const result = presentation2to3.traverseManifest(nestedRanges as any);
     const found = result.structures!.find(
-      (r) => r.id === 'https://iiif.bodleian.ox.ac.uk/iiif/range/390fd0e8-9eae-475d-9564-ed916ab9035c/LOG_0281'
+      (r) => r.id === "https://iiif.bodleian.ox.ac.uk/iiif/range/390fd0e8-9eae-475d-9564-ed916ab9035c/LOG_0281"
     );
 
     expect(result).toMatchSnapshot();
   });
 
-  test('Invalid Language map', () => {
+  test("Invalid Language map", () => {
     const invalid = {
       ...JSON.parse(JSON.stringify(iiifManifestInvalid)),
       metadata: [
-        { label: 'Test 1', value: '' },
-        { label: 'Test 2' },
-        { label: '', value: 'Test 3' },
-        { value: 'Test 4' },
+        { label: "Test 1", value: "" },
+        { label: "Test 2" },
+        { label: "", value: "Test 3" },
+        { value: "Test 4" },
       ],
     };
     const result = presentation2to3.traverseManifest(invalid as any);
@@ -645,13 +645,13 @@ describe('Presentation 2 to 3', () => {
     expect(result.metadata).toMatchSnapshot();
   });
 
-  test('scroll', () => {
+  test("scroll", () => {
     const result = convertPresentation2(scroll as any);
 
-    expect(result.viewingDirection).toEqual('top-to-bottom');
+    expect(result.viewingDirection).toEqual("top-to-bottom");
   });
 
-  test('paginated collection', () => {
+  test("paginated collection", () => {
     const result = convertPresentation2(paginatedCollection as any);
 
     expect(result).toMatchInlineSnapshot(`
@@ -689,7 +689,7 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('paginated collection page', () => {
+  test("paginated collection page", () => {
     const result = convertPresentation2(paginatedCollectionPage as any);
 
     result.items = [];
@@ -726,7 +726,7 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('duplicate member collection', () => {
+  test("duplicate member collection", () => {
     const result = convertPresentation2(duplicateMemberCollection as any);
 
     expect(result).toMatchInlineSnapshot(`
@@ -754,7 +754,7 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('scta collection', () => {
+  test("scta collection", () => {
     const result = convertPresentation2(sctaCollection as any);
 
     expect(result).toMatchInlineSnapshot(`
@@ -2618,7 +2618,7 @@ describe('Presentation 2 to 3', () => {
     `);
   });
 
-  test('Malformed annotation with dctypes:Image instead of oa:Annotation', () => {
+  test("Malformed annotation with dctypes:Image instead of oa:Annotation", () => {
     // Some manifests (e.g., St. Andrews) have @type: "dctypes:Image" on annotations
     // instead of the correct @type: "oa:Annotation". The converter should fix this.
     const result = presentation2to3.traverseManifest(malformedImageAnnotation as any);
@@ -2633,12 +2633,12 @@ describe('Presentation 2 to 3', () => {
     const annotation = annotationPage?.items?.[0];
 
     expect(annotation).toBeDefined();
-    expect(annotation?.type).toEqual('Annotation');
-    expect(annotation?.motivation).toEqual('painting');
+    expect(annotation?.type).toEqual("Annotation");
+    expect(annotation?.motivation).toEqual("painting");
     expect(annotation?.body).toBeDefined();
   });
 
-  test('automatic @type=sc:Manifest for Biblissima Collection', () => {
+  test("automatic @type=sc:Manifest for Biblissima Collection", () => {
     const result = presentation2to3.traverseCollection(biblissimaCollection as any);
     const isValid = validator.validateCollection(result);
 
@@ -2647,7 +2647,7 @@ describe('Presentation 2 to 3', () => {
     expect(isValid).toEqual(true);
 
     const collection = result as any;
-    expect(collection.type).toEqual('Collection');
-    expect(collection.items?.[0].type).toEqual('Manifest');
+    expect(collection.type).toEqual("Collection");
+    expect(collection.items?.[0].type).toEqual("Manifest");
   });
 });

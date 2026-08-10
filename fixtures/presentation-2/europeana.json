@@ -22,7 +22,5 @@
       "on": "https://iiif.europeana.eu/presentation/9200396/BibliographicResource_3000118436165/canvas/p21"
     }
   ],
-  "otherContent": [
-    "https://iiif.europeana.eu/presentation/9200396/BibliographicResource_3000118436165/annopage/21"
-  ]
+  "otherContent": ["https://iiif.europeana.eu/presentation/9200396/BibliographicResource_3000118436165/annopage/21"]
 }

@@ -28,9 +28,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Test 4 Manifest: Metadata Pairs with Multiple Values in same Language"
-        ]
+        "@none": ["Test 4 Manifest: Metadata Pairs with Multiple Values in same Language"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/4/manifest.json"
@@ -156,9 +154,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Test 22 Manifest: /Sequence/ with non l-t-r viewingDirection"
-        ]
+        "@none": ["Test 22 Manifest: /Sequence/ with non l-t-r viewingDirection"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/22/manifest.json"
@@ -242,9 +238,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Test 34 Manifest: Detail Image with Choice, and 'no image' as option"
-        ]
+        "@none": ["Test 34 Manifest: Detail Image with Choice, and 'no image' as option"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/34/manifest.json"
@@ -258,9 +252,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Test 36 Manifest: Partial Image as Main Image with IIIF Service"
-        ]
+        "@none": ["Test 36 Manifest: Partial Image as Main Image with IIIF Service"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/36/manifest.json"
@@ -274,9 +266,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Test 38 Manifest: Partial Image as Detail Image with IIIF Service"
-        ]
+        "@none": ["Test 38 Manifest: Partial Image as Detail Image with IIIF Service"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/38/manifest.json"
@@ -311,27 +301,21 @@
     },
     {
       "label": {
-        "@none": [
-          "Test 44 Manifest: Embedded Transcription on Fragment Segment"
-        ]
+        "@none": ["Test 44 Manifest: Embedded Transcription on Fragment Segment"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/44/manifest.json"
     },
     {
       "label": {
-        "@none": [
-          "Test 45 Manifest: External text/plain Transcription on Canvas"
-        ]
+        "@none": ["Test 45 Manifest: External text/plain Transcription on Canvas"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/45/manifest.json"
     },
     {
       "label": {
-        "@none": [
-          "Test 46 Manifest: External text/plain Transcription on Segment"
-        ]
+        "@none": ["Test 46 Manifest: External text/plain Transcription on Segment"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/46/manifest.json"
@@ -373,9 +357,7 @@
     },
     {
       "label": {
-        "@none": [
-          "Test 61 Manifest: Embedded Transcription on Selector Segment"
-        ]
+        "@none": ["Test 61 Manifest: Embedded Transcription on Selector Segment"]
       },
       "type": "Manifest",
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/61/manifest.json"
@@ -410,8 +392,5 @@
       "id": "http://iiif.io/api/presentation/2.1/example/fixtures/65/manifest.json"
     }
   ],
-  "@context": [
-    "http://www.w3.org/ns/anno.jsonld",
-    "http://iiif.io/api/presentation/3/context.json"
-  ]
+  "@context": ["http://www.w3.org/ns/anno.jsonld", "http://iiif.io/api/presentation/3/context.json"]
 }

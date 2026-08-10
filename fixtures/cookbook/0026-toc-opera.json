@@ -3,12 +3,8 @@
   "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/manifest.json",
   "type": "Manifest",
   "label": {
-    "it": [
-      "L'Elisir D'Amore"
-    ],
-    "en": [
-      "The Elixir of Love"
-    ]
+    "it": ["L'Elisir D'Amore"],
+    "en": ["The Elixir of Love"]
   },
   "items": [
     {
@@ -46,27 +42,21 @@
       "type": "Range",
       "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/1",
       "label": {
-        "it": [
-          "Gaetano Donizetti, L'Elisir D'Amore"
-        ]
+        "it": ["Gaetano Donizetti, L'Elisir D'Amore"]
       },
       "items": [
         {
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/2",
           "label": {
-            "it": [
-              "Atto Primo"
-            ]
+            "it": ["Atto Primo"]
           },
           "items": [
             {
               "type": "Range",
               "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/3",
               "label": {
-                "it": [
-                  "Preludio e Coro d'introduzione – Bel conforto al mietitore"
-                ]
+                "it": ["Preludio e Coro d'introduzione – Bel conforto al mietitore"]
               },
               "items": [
                 {
@@ -79,9 +69,7 @@
               "type": "Range",
               "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/4",
               "label": {
-                "en": [
-                  "Remainder of Atto Primo"
-                ]
+                "en": ["Remainder of Atto Primo"]
               },
               "items": [
                 {
@@ -96,9 +84,7 @@
           "type": "Range",
           "id": "https://iiif.io/api/cookbook/recipe/0026-toc-opera/range/5",
           "label": {
-            "it": [
-              "Atto Secondo"
-            ]
+            "it": ["Atto Secondo"]
           },
           "items": [
             {

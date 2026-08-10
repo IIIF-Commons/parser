@@ -1364,321 +1364,241 @@
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-1",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/1"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/1"],
       "label": "Imaginative depiction of the completed Forth Rail Bridge"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-2",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/2"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/2"],
       "label": "No. 2 - Fife S.W. skewback & tubes in  construction, 7 Sept. 1886"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-3",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/3"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/3"],
       "label": "No. 3 - Superstructure, Fife, 15 Sept. 1886"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-4",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/4"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/4"],
       "label": "No. 4 - Superstructure, North Side"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-5",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/5"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/5"],
       "label": "General views from high ground back of South Queensferry"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-6",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/6"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/6"],
       "label": "General views from high ground back of South Queensferry"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-7",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/7"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/7"],
       "label": "Fife superstructure from sea shore"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-8",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/8"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/8"],
       "label": "Queensferry superstructure, showing arrangement of lifting platforms"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-9",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/9"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/9"],
       "label": "Inchgarvie superstructure, showing erection of skewbacks"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-10",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/10"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/10"],
       "label": "Detail of top member joint"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-11",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/11"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/11"],
       "label": "Works at Inchgarvie, showing completion of lifting platforms"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-12",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/12"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/12"],
       "label": "Queensferry cantilever from end of approach viaduct"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-13",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/13"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/13"],
       "label": "Detail of the top member"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-14",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/14"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/14"],
       "label": "Queensferry cantilever at rail level"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-15",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/15"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/15"],
       "label": "Inchgarvie cantilever as seen from the landing stage"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-16",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/16"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/16"],
       "label": "Fife cantilever from the east side"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-17",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/17"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/17"],
       "label": "Fife from Village Pier (west side)"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-18",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/18"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/18"],
       "label": "Works at Inchgarvie after first three lifts"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-19",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/19"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/19"],
       "label": "Queensferry cantilever two thirds full height"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-20",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/20"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/20"],
       "label": "Works at Inchgarvie from wind gauge on castle ruins"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-21",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/21"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/21"],
       "label": "Queensferry cantilever at full height from north end of approach viaduct"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-22",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/22"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/22"],
       "label": "Three cantilevers from the south shore on the occasion of Queensferry superstructure attaining its full height"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-23",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/23"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/23"],
       "label": "Three cantilevers from the south shore on the occasion of Queensferry superstructure attaining its full height"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-24",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/24"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/24"],
       "label": "Fife cantilever, at full height from village pier"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-25",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/25"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/25"],
       "label": "General view from Port Edgar, with trees in the foreground"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-26",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/26"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/26"],
       "label": "General view taken from the east end of South Queensferry"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-27",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/27"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/27"],
       "label": "General view taken from Dalmeny Park at water level"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-28",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/28"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/28"],
       "label": "General view taken late in the evening"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-29",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/29"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/29"],
       "label": "Queensferry cantilever and eight spans of approach viaduct"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-30",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/30"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/30"],
       "label": "Inchgarvie cantilever, three-fourths full height"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-31",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/31"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/31"],
       "label": "General view from North Queensferry hills depicting the three cantilevers at very nearly their full height"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-32",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/32"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/32"],
       "label": "Birds'-eye view of Inchgarvie and surrounding country"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-33",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/33"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/33"],
       "label": "Fife cantilever, showing arrangement of platforms for construction of struts and ties"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-34",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/34"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/34"],
       "label": "Queensferry approach viaduct and half span of cantilever"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-35",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/35"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/35"],
       "label": "General view from the high ground situated S.W. of South Queensferry"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-36",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/36"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/36"],
       "label": "General view from back of Newhalls Inn, South Queensferry"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-37",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/37"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/37"],
       "label": "Fife cantilever with No. 1 strut and lifting platform nearly up to rail level"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-38",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/38"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/38"],
       "label": "Queensferry cantilever from end of Hawes Pier"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-39",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/39"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/39"],
       "label": "Inchgarvie superstructure at full height"
     },
     {
       "@id": "https://view.nls.uk/iiif/7446/74464117/range/r-40",
       "@type": "sc:Range",
-      "canvases": [
-        "https://view.nls.uk/iiif/7446/74464117/canvas/40"
-      ],
+      "canvases": ["https://view.nls.uk/iiif/7446/74464117/canvas/40"],
       "label": "Part of Inchgarvie and Queensferry works, showing the span to be bridged"
     }
   ]

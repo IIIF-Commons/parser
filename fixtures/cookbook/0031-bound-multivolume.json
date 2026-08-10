@@ -3,18 +3,14 @@
   "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/manifest.json",
   "type": "Manifest",
   "label": {
-    "de": [
-      "Gottesdienstliche Ceremonien, Oder H. Kirchen-Gebräuche Und Religions-Pflichten Der Christen"
-    ]
+    "de": ["Gottesdienstliche Ceremonien, Oder H. Kirchen-Gebräuche Und Religions-Pflichten Der Christen"]
   },
   "items": [
     {
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p1",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Front cover"
-        ]
+        "en": ["Front cover"]
       },
       "height": 7230,
       "width": 5428,
@@ -51,9 +47,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p2",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Inside front cover"
-        ]
+        "en": ["Inside front cover"]
       },
       "height": 7230,
       "width": 5428,
@@ -90,9 +84,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p3",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Vol. 1 title page"
-        ]
+        "en": ["Vol. 1 title page"]
       },
       "height": 7230,
       "width": 5428,
@@ -129,9 +121,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p4",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Vol. 1 title page (verso)"
-        ]
+        "en": ["Vol. 1 title page (verso)"]
       },
       "height": 7230,
       "width": 5428,
@@ -168,9 +158,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p5",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Vol. 2 title page"
-        ]
+        "en": ["Vol. 2 title page"]
       },
       "height": 7230,
       "width": 5428,
@@ -207,9 +195,7 @@
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/canvas/p6",
       "type": "Canvas",
       "label": {
-        "en": [
-          "Vol. 2 title page (verso)"
-        ]
+        "en": ["Vol. 2 title page (verso)"]
       },
       "height": 7230,
       "width": 5428,
@@ -248,18 +234,14 @@
       "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r0",
       "type": "Range",
       "label": {
-        "de": [
-          "Gottesdienstliche Ceremonien, Oder H. Kirchen-Gebräuche Und Religions-Pflichten Der Christen"
-        ]
+        "de": ["Gottesdienstliche Ceremonien, Oder H. Kirchen-Gebräuche Und Religions-Pflichten Der Christen"]
       },
       "items": [
         {
           "id": "https://iiif.io/api/cookbook/recipe/0031-bound-multivolume/range/r1",
           "type": "Range",
           "label": {
-            "en": [
-              "Front Matter"
-            ]
+            "en": ["Front Matter"]
           },
           "items": [
             {

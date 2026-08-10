@@ -3,9 +3,7 @@
   "id": "https://iiif.io/api/cookbook/recipe/0015-start/manifest.json",
   "type": "Manifest",
   "label": {
-    "en": [
-      "Video of a 30-minute digital clock"
-    ]
+    "en": ["Video of a 30-minute digital clock"]
   },
   "start": {
     "id": "https://iiif.io/api/cookbook/recipe/0015-start/canvas-start/segment1",
@@ -19,9 +17,7 @@
   "rights": "http://creativecommons.org/licenses/by/3.0/",
   "requiredStatement": {
     "label": {
-      "en": [
-        "Attribution"
-      ]
+      "en": ["Attribution"]
     },
     "value": {
       "en": [
