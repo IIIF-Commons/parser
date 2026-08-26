@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { cwd } from "node:process";
 import { describe, expect, test } from "vitest";
 import { Traverse } from "../../src/presentation-4";
+import type { Annotation } from "../../src/presentation-4/types";
 
 describe("presentation-4 traverse", () => {
   test("dispatches callbacks across mixed resource types", () => {
@@ -88,7 +89,7 @@ describe("presentation-4 traverse", () => {
 
     const annotation = {
       id: "https://example.org/anno/1",
-      type: "Annotation",
+      type: "Annotation" as const,
       motivation: ["painting"],
       target: [
         {
@@ -104,11 +105,11 @@ describe("presentation-4 traverse", () => {
       ],
     };
 
-    const traversed = traverse.traverseAnnotation(annotation, undefined, "$.annotation");
-    const target = traversed.target;
-
-    expect(target.type).toBe("SpecificResource");
-    expect(target.selector[0].type).toBe("FragmentSelector");
+    const traversed = traverse.traverseAnnotation(annotation as unknown as Annotation, undefined, "$.annotation");
+    expect(traversed.target).toMatchObject({
+      type: "SpecificResource",
+      selector: [{ type: "FragmentSelector" }],
+    });
     expect(selectorCount).toBe(1);
   });
 
@@ -116,7 +117,7 @@ describe("presentation-4 traverse", () => {
     const traverse = new Traverse();
     const annotation = {
       id: "https://example.org/anno/list-wrapper",
-      type: "Annotation",
+      type: "Annotation" as const,
       motivation: ["painting"],
       body: {
         type: "List",
@@ -135,26 +136,27 @@ describe("presentation-4 traverse", () => {
     };
 
     const traversed = traverse.traverseAnnotation(annotation, undefined, "$.annotation");
-    expect(Array.isArray(traversed.body)).toBe(false);
-    expect(Array.isArray(traversed.target)).toBe(false);
-    expect(traversed.body.type).toBe("List");
-    expect(traversed.target.type).toBe("List");
-    expect(traversed.target.items[0].type).toBe("SpecificResource");
-    expect(traversed.target.items[0].selector[0].type).toBe("FragmentSelector");
+    expect(traversed).toMatchObject({
+      body: { type: "List" },
+      target: {
+        type: "List",
+        items: [{ type: "SpecificResource", selector: [{ type: "FragmentSelector" }] }],
+      },
+    });
   });
 
   test("coerces PointSelector.t to PointSelector.instant by default", () => {
     const traverse = new Traverse();
     const selector = {
-      type: "PointSelector",
+      type: "PointSelector" as const,
       x: 1,
       y: 2,
       t: 3.5,
     };
 
     const traversed = traverse.traverseSelector(selector, undefined, "$.selector");
-    expect(traversed.instant).toBe(3.5);
-    expect(Object.hasOwn(traversed, "t")).toBe(false);
+    expect(traversed).toMatchObject({ instant: 3.5 });
+    expect(traversed).not.toHaveProperty("t");
   });
 
   test("can disable PointSelector.t coercion via traverse option", () => {
@@ -165,22 +167,23 @@ describe("presentation-4 traverse", () => {
       }
     );
     const selector = {
-      type: "PointSelector",
+      type: "PointSelector" as const,
       x: 1,
       y: 2,
       t: 3.5,
     };
 
     const traversed = traverse.traverseSelector(selector, undefined, "$.selector");
-    expect(traversed.t).toBe(3.5);
-    expect(Object.hasOwn(traversed, "instant")).toBe(false);
+    expect(traversed).toMatchObject({ t: 3.5 });
+    expect(traversed).not.toHaveProperty("instant");
   });
 
   test("normalizes paging first/last string references to typed objects", () => {
     const traverse = new Traverse();
     const annotationCollection = {
       id: "https://example.org/annotation-collection/1",
-      type: "AnnotationCollection",
+      type: "AnnotationCollection" as const,
+      label: null,
       first: "https://example.org/annotation-collection/1/page/1",
       last: "https://example.org/annotation-collection/1/page/2",
       items: [],
@@ -203,10 +206,10 @@ describe("presentation-4 traverse", () => {
 
     const collection = {
       id: "https://example.org/collection/1",
-      type: "Collection",
+      type: "Collection" as const,
+      label: { en: ["Collection"] },
       first: "https://example.org/collection/1/page/1",
       last: "https://example.org/collection/1/page/2",
-      items: [],
     };
 
     const traversedCollection = traverse.traverseCollection(collection, undefined, "$.collection");

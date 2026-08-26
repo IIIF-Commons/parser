@@ -1,4 +1,7 @@
 import { convertPresentation2 } from "../presentation-2";
+import type { Collection as Collection2, Manifest as Manifest2 } from "../presentation-2/types";
+import type { Collection as Collection3, Manifest as Manifest3 } from "../presentation-3/types";
+import type { Collection, Manifest } from "./types";
 import {
   deepClone,
   ensureArray,
@@ -426,12 +429,22 @@ function coerceV4Shape(
   return resource;
 }
 
+export function upgradePresentation3To4(entity: Manifest3): Manifest;
+export function upgradePresentation3To4(entity: Collection3): Collection;
+export function upgradePresentation3To4(entity: unknown): Manifest | Collection;
 export function upgradePresentation3To4(entity: any): any {
   const clone = prepareContainerIds(deepClone(entity));
   const typeLookup = collectKnownTypes(clone);
   return coerceV4Shape(clone, typeLookup, true);
 }
 
+export function upgradeToPresentation4(entity: Manifest): Manifest;
+export function upgradeToPresentation4(entity: Collection): Collection;
+export function upgradeToPresentation4(entity: Manifest3): Manifest;
+export function upgradeToPresentation4(entity: Collection3): Collection;
+export function upgradeToPresentation4(entity: Manifest2): Manifest;
+export function upgradeToPresentation4(entity: Collection2): Collection;
+export function upgradeToPresentation4(entity: unknown): Manifest | Collection;
 export function upgradeToPresentation4(entity: any): any {
   const upgraded = convertPresentation2(deepClone(entity));
   if (hasPresentation4Context(upgraded)) {

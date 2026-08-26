@@ -1,6 +1,26 @@
 import { splitCanvasFragment } from "../shared/canvas-fragments";
 import { compose } from "../shared/compose";
 import { ensureArray } from "../shared/ensure-array";
+import type {
+  Agent,
+  Annotation,
+  AnnotationCollection,
+  AnnotationPage,
+  Canvas,
+  Collection,
+  CollectionPage,
+  ContentResourceLike,
+  ListResource,
+  Manifest,
+  Quantity,
+  Range,
+  Scene,
+  Selector,
+  Service,
+  SpecificResource,
+  Timeline,
+  Transform,
+} from "./types";
 import {
   annotationTypes,
   containerTypes,
@@ -15,32 +35,56 @@ import {
   structuralTypes,
 } from "./utilities";
 
+export type Presentation4Resource =
+  | Collection
+  | CollectionPage
+  | Manifest
+  | Timeline
+  | Canvas
+  | Scene
+  | AnnotationPage
+  | AnnotationCollection
+  | Annotation
+  | ContentResourceLike
+  | Range
+  | Service
+  | Agent
+  | SpecificResource
+  | Selector
+  | Quantity
+  | Transform;
+
 export type TraversalContext = {
-  parent?: any;
+  parent?: Presentation4Resource;
   path: string;
   typeHint?: string;
 };
 
-export type Traversal<T = any> = (resource: T, context: TraversalContext) => T | void;
+export type Traversal<T = Presentation4Resource> = (resource: T, context: TraversalContext) => unknown;
+
+export type AllTraversal = <Resource extends Presentation4Resource>(
+  resource: Resource,
+  context: TraversalContext
+) => unknown;
 
 export type TraversalMap = {
-  collection?: Array<Traversal>;
-  collectionPage?: Array<Traversal>;
-  manifest?: Array<Traversal>;
-  timeline?: Array<Traversal>;
-  canvas?: Array<Traversal>;
-  scene?: Array<Traversal>;
-  annotationCollection?: Array<Traversal>;
-  annotationPage?: Array<Traversal>;
-  annotation?: Array<Traversal>;
-  contentResource?: Array<Traversal>;
-  range?: Array<Traversal>;
-  service?: Array<Traversal>;
-  agent?: Array<Traversal>;
-  specificResource?: Array<Traversal>;
-  selector?: Array<Traversal>;
-  quantity?: Array<Traversal>;
-  transform?: Array<Traversal>;
+  collection?: Array<Traversal<Collection>>;
+  collectionPage?: Array<Traversal<CollectionPage>>;
+  manifest?: Array<Traversal<Manifest>>;
+  timeline?: Array<Traversal<Timeline>>;
+  canvas?: Array<Traversal<Canvas>>;
+  scene?: Array<Traversal<Scene>>;
+  annotationCollection?: Array<Traversal<AnnotationCollection>>;
+  annotationPage?: Array<Traversal<AnnotationPage>>;
+  annotation?: Array<Traversal<Annotation>>;
+  contentResource?: Array<Traversal<ContentResourceLike>>;
+  range?: Array<Traversal<Range>>;
+  service?: Array<Traversal<Service>>;
+  agent?: Array<Traversal<Agent>>;
+  specificResource?: Array<Traversal<SpecificResource>>;
+  selector?: Array<Traversal<Selector>>;
+  quantity?: Array<Traversal<Quantity>>;
+  transform?: Array<Traversal<Transform>>;
 };
 
 export type TraverseOptions = {
@@ -51,7 +95,7 @@ export type TraverseOptions = {
 };
 
 type UnknownTraversalArgs = {
-  parent?: any;
+  parent?: Presentation4Resource;
   path: string;
   typeHint?: string;
 };
@@ -109,7 +153,7 @@ export class Traverse {
     };
   }
 
-  static all(traversal: Traversal) {
+  static all(traversal: AllTraversal) {
     return new Traverse({
       collection: [traversal],
       collectionPage: [traversal],
@@ -288,6 +332,7 @@ export class Traverse {
     return collection;
   }
 
+  traverseCollection(collection: Collection, parent?: Presentation4Resource, path?: string): Collection;
   traverseCollection(collection: any, parent?: any, path = "$"): any {
     const withCollectionItems = this.traverseCollectionItems(collection, path);
     const withContainerItems = this.options.legacyPresentation3Behavior
@@ -302,6 +347,7 @@ export class Traverse {
     );
   }
 
+  traverseCollectionPage(collectionPage: CollectionPage, parent?: Presentation4Resource, path?: string): CollectionPage;
   traverseCollectionPage(collectionPage: any, parent?: any, path = "$"): any {
     const withItems = this.traverseCollectionItems(collectionPage, path);
     const withLinks = this.traversePageReferences(withItems, path, "CollectionPage");
@@ -312,6 +358,7 @@ export class Traverse {
     );
   }
 
+  traverseManifest(manifest: Manifest, parent?: Presentation4Resource, path?: string): Manifest;
   traverseManifest(manifest: any, parent?: any, path = "$"): any {
     const pipeline = compose<any>(
       (value: any) => this.traverseManifestItems(value, path),
@@ -321,6 +368,7 @@ export class Traverse {
     return this.traverseType(pipeline(manifest), { parent, path }, this.traversals.manifest);
   }
 
+  traverseTimeline(timeline: Timeline, parent?: Presentation4Resource, path?: string): Timeline;
   traverseTimeline(timeline: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseContainerItems(timeline, path), path),
@@ -329,6 +377,7 @@ export class Traverse {
     );
   }
 
+  traverseCanvas(canvas: Canvas, parent?: Presentation4Resource, path?: string): Canvas;
   traverseCanvas(canvas: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseContainerItems(canvas, path), path),
@@ -337,6 +386,7 @@ export class Traverse {
     );
   }
 
+  traverseScene(scene: Scene, parent?: Presentation4Resource, path?: string): Scene;
   traverseScene(scene: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseContainerItems(scene, path), path),
@@ -407,6 +457,7 @@ export class Traverse {
     return resource;
   }
 
+  traverseAnnotationPage(annotationPage: AnnotationPage, parent?: Presentation4Resource, path?: string): AnnotationPage;
   traverseAnnotationPage(annotationPage: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(this.traverseAnnotationItems(annotationPage, path), path),
@@ -415,6 +466,11 @@ export class Traverse {
     );
   }
 
+  traverseAnnotationCollection(
+    annotationCollection: AnnotationCollection,
+    parent?: Presentation4Resource,
+    path?: string
+  ): AnnotationCollection;
   traverseAnnotationCollection(annotationCollection: any, parent?: any, path = "$"): any {
     return this.traverseType(
       this.traverseLinkedResources(
@@ -439,7 +495,7 @@ export class Traverse {
             {
               id: body,
               type: "ContentResource",
-            },
+            } as ContentResourceLike,
             annotation,
             `${path}.body[${index}]`
           );
@@ -545,6 +601,7 @@ export class Traverse {
     });
   }
 
+  traverseAnnotation(annotation: Annotation, parent?: Presentation4Resource, path?: string): Annotation;
   traverseAnnotation(annotation: any, parent?: any, path = "$"): any {
     if (annotation.position && typeof annotation.position === "object") {
       annotation.position = this.traversePosition(annotation.position, annotation, `${path}.position`);
@@ -559,6 +616,7 @@ export class Traverse {
     );
   }
 
+  traverseSelector(selector: Selector, parent?: Presentation4Resource, path?: string): Selector;
   traverseSelector(selector: any, parent?: any, path = "$"): any {
     if (
       this.options.coerceLegacyPointSelectorTime &&
@@ -580,10 +638,12 @@ export class Traverse {
     return this.traverseType(selector, { parent, path }, this.traversals.selector);
   }
 
+  traverseQuantity(quantity: Quantity, parent?: Presentation4Resource, path?: string): Quantity;
   traverseQuantity(quantity: any, parent?: any, path = "$"): any {
     return this.traverseType(quantity, { parent, path }, this.traversals.quantity);
   }
 
+  traverseTransform(transform: Transform, parent?: Presentation4Resource, path?: string): Transform;
   traverseTransform(transform: any, parent?: any, path = "$"): any {
     return this.traverseType(transform, { parent, path }, this.traversals.transform);
   }
@@ -598,6 +658,12 @@ export class Traverse {
     return position;
   }
 
+  traverseSpecificResource(
+    specificResource: SpecificResource,
+    typeHint?: string,
+    parent?: Presentation4Resource,
+    path?: string
+  ): SpecificResource;
   traverseSpecificResource(specificResource: any, typeHint?: string, parent?: any, path = "$"): any {
     const normalizedSpecificResource = this.toSpecificResource(specificResource, typeHint || "Canvas");
     if (normalizedSpecificResource) {
@@ -659,6 +725,11 @@ export class Traverse {
     return this.traverseType(specificResource, { parent, path }, this.traversals.specificResource);
   }
 
+  traverseContentResource(
+    contentResource: ContentResourceLike,
+    parent?: Presentation4Resource,
+    path?: string
+  ): ContentResourceLike;
   traverseContentResource(contentResource: any, parent?: any, path = "$"): any {
     if (!contentResource || typeof contentResource !== "object") {
       if (this.options.legacyPresentation3Behavior && typeof contentResource === "string") {
@@ -757,6 +828,7 @@ export class Traverse {
     );
   }
 
+  traverseRange(range: Range, parent?: Presentation4Resource, path?: string): Range;
   traverseRange(range: any, parent?: any, path = "$"): any {
     if (range.items) {
       range.items = ensureArray(range.items).map((item: any, index: number) => {
@@ -779,10 +851,12 @@ export class Traverse {
     return this.traverseType(this.traverseLinkedResources(range, path), { parent, path }, this.traversals.range);
   }
 
+  traverseAgent(agent: Agent, parent?: Presentation4Resource, path?: string): Agent;
   traverseAgent(agent: any, parent?: any, path = "$"): any {
     return this.traverseType(this.traverseLinkedResources(agent, path), { parent, path }, this.traversals.agent);
   }
 
+  traverseService(service: Service, parent?: Presentation4Resource, path?: string): Service;
   traverseService(service: any, parent?: any, path = "$"): any {
     if (service && typeof service === "object" && service.service) {
       service.service = ensureArray(service.service).map((innerService: any, index: number) =>
@@ -797,7 +871,7 @@ export class Traverse {
       return values[0];
     }
 
-    const listResource = {
+    const listResource: ListResource = {
       id: mintDeterministicId(
         {
           type: "List",
@@ -962,6 +1036,7 @@ export class Traverse {
     return this.toSpecificResource(target, typeHint);
   }
 
+  traverseUnknown(resource: unknown, options: UnknownTraversalArgs): Presentation4Resource;
   traverseUnknown(resource: any, { parent, path, typeHint }: UnknownTraversalArgs): any {
     const type = identifyResourceType(resource, typeHint);
 
