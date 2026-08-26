@@ -2650,4 +2650,100 @@ describe("Presentation 2 to 3", () => {
     expect(collection.type).toEqual("Collection");
     expect(collection.items?.[0].type).toEqual("Manifest");
   });
+  test("does not double-encode percent-escaped identifiers", () => {
+    // IIIF Image API identifiers often contain a slash encoded as %2F.
+    // Re-encoding turns that into %252F, which no image server can resolve.
+    const serviceId = "https://example.org/iiif/3/book%2Fpage%2F0001.tif";
+    const imageId = `${serviceId}/full/max/0/default.jpg`;
+
+    const result = convertPresentation2({
+      "@context": "http://iiif.io/api/presentation/2/context.json",
+      "@id": "https://example.org/manifest",
+      "@type": "sc:Manifest",
+      label: "Percent-encoded identifiers",
+      sequences: [
+        {
+          "@id": "https://example.org/sequence",
+          "@type": "sc:Sequence",
+          canvases: [
+            {
+              "@id": "https://example.org/canvas/1",
+              "@type": "sc:Canvas",
+              label: "1",
+              width: 1000,
+              height: 1000,
+              images: [
+                {
+                  "@id": "https://example.org/annotation/1",
+                  "@type": "oa:Annotation",
+                  motivation: "sc:painting",
+                  on: "https://example.org/canvas/1",
+                  resource: {
+                    "@id": imageId,
+                    "@type": "dctypes:Image",
+                    format: "image/jpeg",
+                    width: 1000,
+                    height: 1000,
+                    service: {
+                      "@context": "http://iiif.io/api/image/2/context.json",
+                      "@id": serviceId,
+                      profile: "http://iiif.io/api/image/2/level2.json",
+                    },
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    } as any) as any;
+
+    const body = result.items[0].items[0].items[0].body;
+
+    expect(body.id).toEqual(imageId);
+    expect(body.id).not.toContain("%252F");
+  });
+
+  test("still encodes characters that are not escaped", () => {
+    const result = convertPresentation2({
+      "@context": "http://iiif.io/api/presentation/2/context.json",
+      "@id": "https://example.org/manifest",
+      "@type": "sc:Manifest",
+      label: "Unescaped characters",
+      sequences: [
+        {
+          "@id": "https://example.org/sequence",
+          "@type": "sc:Sequence",
+          canvases: [
+            {
+              "@id": "https://example.org/canvas/1",
+              "@type": "sc:Canvas",
+              label: "1",
+              width: 1000,
+              height: 1000,
+              images: [
+                {
+                  "@id": "https://example.org/annotation/1",
+                  "@type": "oa:Annotation",
+                  motivation: "sc:painting",
+                  on: "https://example.org/canvas/1",
+                  resource: {
+                    "@id": "https://example.org/iiif/3/a b.tif/full/max/0/default.jpg",
+                    "@type": "dctypes:Image",
+                    format: "image/jpeg",
+                    width: 1000,
+                    height: 1000,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    } as any) as any;
+
+    expect(result.items[0].items[0].items[0].body.id).toEqual(
+      "https://example.org/iiif/3/a%20b.tif/full/max/0/default.jpg"
+    );
+  });
 });
