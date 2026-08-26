@@ -1,6 +1,6 @@
 {
   "name": "@iiif/parser",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "IIIF Presentation 2, 3 and 4 parsing utilities",
   "bugs": "https://github.com/iiif-commons/parser/issues",
   "license": "MIT",
