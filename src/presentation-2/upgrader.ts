@@ -358,11 +358,27 @@ function convertMetadata(
 
 let mintedIdCounter = 0;
 
+/**
+ * Encode a URI without corrupting percent-escapes that are already present.
+ *
+ * `encodeURI` escapes a literal `%`, so calling it on a URI that is already
+ * encoded turns `%2F` into `%252F`. IIIF Image API identifiers routinely
+ * contain `%2F` (a slash inside the identifier), so re-encoding produces URLs
+ * that no image server can resolve.
+ *
+ * Encoding first and then collapsing `%25XX` back to `%XX` leaves existing
+ * escape sequences untouched while still encoding characters that need it
+ * (spaces, non-ASCII, ...).
+ */
+function encodeURIPreservingEscapes(value: string) {
+  return encodeURI(value).replace(/%25([0-9A-Fa-f]{2})/g, "%$1");
+}
+
 function mintNewIdFromResource(
   resource: Presentation3.SomeRequired<Presentation2.TechnicalProperties, "@type">,
   subResource?: string
 ) {
-  const origId = encodeURI((resource as { id?: string }).id || resource["@id"] || "").trim();
+  const origId = encodeURIPreservingEscapes((resource as { id?: string }).id || resource["@id"] || "").trim();
 
   if (origId && subResource) {
     return `${origId}/${subResource}`;
