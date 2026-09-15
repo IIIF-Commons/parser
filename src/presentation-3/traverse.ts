@@ -18,6 +18,7 @@ import type {
   SpecificResource,
   ResourceProvider,
   StructuralProperties,
+  Services,
 } from "./types";
 import type { GeoJSON } from "../shared/geojson";
 import { isSpecificResource } from "../shared/is-specific-resource";
@@ -50,6 +51,7 @@ export type Presentation3Resource =
   | ChoiceBody
   | Range
   | Service
+  | Services
   | ResourceProvider
   | SpecificResource
   | GeoJSON;
@@ -73,7 +75,7 @@ export type TraversalMap = {
   contentResource?: Array<Traversal<ContentResource>>;
   choice?: Array<Traversal<ChoiceTarget | ChoiceBody>>;
   range?: Array<Traversal<Range>>;
-  service?: Array<Traversal<Service>>;
+  service?: Array<Traversal<Services>>;
   agent?: Array<Traversal<ResourceProvider>>;
   specificResource?: Array<Traversal<SpecificResource>>;
   geoJson?: Array<Traversal<GeoJSON>>;
@@ -512,13 +514,14 @@ export class Traverse {
     }, object);
   }
 
+  traverseService<S extends Service | Services>(service: S, parent?: Presentation3Resource): S;
   traverseService(service: Service, parent?: Presentation3Resource): Service;
-  traverseService(service: Service, parent?: any): Service {
+  traverseService<S extends Service | Services>(service: S, parent?: any): S {
     const _service: any = Object.assign({}, service);
     if (_service && _service.service) {
       _service.service = ensureArray(_service.service).map((innerService: any) => this.traverseService(innerService));
     }
-    return this.traverseType<Service>(_service, { parent }, this.traversals.service);
+    return this.traverseType<S>(_service, { parent }, this.traversals.service);
   }
 
   traverseUnknown(

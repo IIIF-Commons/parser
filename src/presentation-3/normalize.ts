@@ -10,6 +10,7 @@ import type {
   ResourceProvider,
   Selector,
   Service,
+  Services,
   SpecificResource,
 } from "./types";
 import type {
@@ -85,13 +86,13 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
       if (resource && resource.id && type) {
         storeType[resource.id] = storeType[resource.id]
           ? (mergeEntities(storeType[resource.id]!, resource, {
-              parent: context.parent,
-              isTopLevel: topLevel.id === resource.id,
-            }) as any)
+            parent: context.parent,
+            isTopLevel: topLevel.id === resource.id,
+          }) as any)
           : mergeEntities({ id: resource.id, type: resource.type } as any, resource, {
-              parent: context.parent,
-              isTopLevel: topLevel.id === resource.id,
-            });
+            parent: context.parent,
+            isTopLevel: topLevel.id === resource.id,
+          });
         return {
           id: resource.id,
           type: type === "ContentResource" ? type : resource.type,
@@ -257,8 +258,7 @@ export function mergeEntities(
     }
 
     throw new Error(
-      `Can only merge entities with identical identifiers and type! ${incoming.type}(${incoming.id}) => ${
-        (existing as any).type
+      `Can only merge entities with identical identifiers and type! ${incoming.type}(${incoming.id}) => ${(existing as any).type
       }(${(existing as any).id})`
     );
   }
@@ -308,7 +308,7 @@ function normalizeService(_service: any): any {
 }
 
 function recordServiceForLoading(store: CompatibleStore["entities"]) {
-  return (resource: Service) => {
+  return (resource: Service | Services) => {
     store.Service = store.Service ? store.Service : {};
     const id: string = (resource as any).id || (resource as any)["@id"];
     const normalizedResource = normalizeService(resource);
