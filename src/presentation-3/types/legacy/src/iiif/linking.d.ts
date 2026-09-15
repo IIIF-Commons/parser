@@ -1,5 +1,5 @@
 import { ContentResource } from "../resources/contentResource";
-import { Service } from "../resources/service";
+import { Service, Services } from "../resources/service";
 import { Canvas } from "../resources/canvas";
 import { AnnotationCollection } from "../resources/annotationCollection";
 import { Reference } from "../reference";
@@ -71,7 +71,7 @@ export type LinkingProperties = {
    * A Manifest may have the services property.
    * Clients should process services on a Manifest.
    */
-  services: Service[];
+  services: Services[];
 
   /**
    * A resource that is an alternative, non-IIIF representation of the resource that has the rendering property. Such
