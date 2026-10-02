@@ -2,7 +2,7 @@ import { describe, expect, test } from "vitest";
 import { normalize } from "../../src/presentation-3";
 
 describe("Canvas references", () => {
-  test.each([false, true])("marks a partOf Canvas as external when items is present: %s", (hasItems) => {
+  test.each([false, true])("distinguishes references from complete canvases (items present: %s)", (hasItems) => {
     const canvasId = "https://example.org/canvas";
     const result = normalize({
       id: "https://example.org/annotations",
@@ -11,7 +11,7 @@ describe("Canvas references", () => {
       partOf: [{ id: canvasId, type: "Canvas", width: 2160, height: 3426, ...(hasItems ? { items: [] } : {}) }],
     });
 
-    const canvas = result.entities.Canvas[canvasId] as any;
+    const canvas = (result.entities.Canvas as Record<string, any>)[canvasId];
     expect(canvas["iiif-parser:isExternal"]).toBe(hasItems ? undefined : true);
     expect(canvas.items).toEqual([]);
     expect(canvas.width).toBe(2160);

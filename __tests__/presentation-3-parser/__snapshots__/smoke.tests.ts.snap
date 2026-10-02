@@ -9735,6 +9735,7 @@ exports[`Smoke tests > Smoke test: ./fixtures/presentation-3/start-canvas.json 1
             "type": "Canvas",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p2/1",

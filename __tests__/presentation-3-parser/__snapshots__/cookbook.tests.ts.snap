@@ -10013,6 +10013,7 @@ exports[`Cookbook > Testing normalize %p (%p) 47`] = `
             "type": "Canvas",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0015-start/annotation/segment1/page",
@@ -13913,6 +13914,7 @@ exports[`Cookbook > Testing normalize %p (%p) 61`] = `
             "type": "Canvas",
           },
         ],
+        "iiif-parser:isExternal": true,
         "items": [
           {
             "id": "https://iiif.io/api/cookbook/recipe/0202-start-canvas/page/p2/1",

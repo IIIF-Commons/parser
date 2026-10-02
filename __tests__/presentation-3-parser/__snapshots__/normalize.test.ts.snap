@@ -294,6 +294,7 @@ exports[`normalize > normalize full example from specification 1`] = `
           "type": "Canvas",
         },
       ],
+      "iiif-parser:isExternal": true,
       "items": [],
       "label": null,
       "metadata": [],
