@@ -486,7 +486,7 @@ export function traverseSpecificResource(specificResource: SpecificResource): Sp
   return specificResource;
 }
 
-export function addFlagForExternalResource<T extends AnnotationPage | Manifest | Collection>(resource: T): T {
+export function addFlagForExternalResource<T extends AnnotationPage | Manifest | Collection | Canvas>(resource: T): T {
   if (typeof resource.items === "undefined") {
     (resource as any)[IS_EXTERNAL] = true;
   }
@@ -515,6 +515,7 @@ export function normalize(unknownEntity: unknown) {
       addToEntities<Manifest>("Manifest"),
     ],
     canvas: [
+      addFlagForExternalResource,
       ensureDefaultFields<Canvas, CanvasNormalized>(emptyCanvas),
       addToMapping<Canvas>("Canvas"),
       addToEntities<Canvas>("Canvas"),
