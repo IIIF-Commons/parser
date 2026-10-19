@@ -3,14 +3,14 @@ import { Collection, Manifest } from "../../src/presentation-3/types";
 import hotspot from "../../fixtures/cookbook/0022-linking-with-a-hotspot.json";
 
 describe("serializer", () => {
-  test("manifest homepage thumbnails are serialized", () => {
+  test.each(["homepage", "seeAlso"] as const)("manifest %s thumbnails are serialized", (property) => {
     const input = () =>
       ({
         "@context": "http://iiif.io/api/presentation/3/context.json",
         id: "https://example.org/iiif/book1/manifest",
         type: "Manifest",
         label: { en: ["Book 1"] },
-        homepage: [
+        [property]: [
           {
             id: "https://example.org/info/book1/",
             type: "Text",

@@ -174,7 +174,7 @@ export class Traverse {
   traverseLinking<T extends Presentation3Resource & Partial<LinkingProperties>>(resource: T): T {
     if (resource.seeAlso) {
       resource.seeAlso = ensureArray(resource.seeAlso).map((content) =>
-        this.traverseType(content, { parent: resource }, this.traversals.contentResource)
+        this.traverseContentResource(content, resource)
       );
     }
     if (resource.service) {
