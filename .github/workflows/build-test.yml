@@ -1,6 +1,6 @@
 name: Build
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build:
@@ -11,11 +11,12 @@ jobs:
 
     name: Node ${{ matrix.node }} build
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
       - name: Setup node
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node }}
+          package-manager-cache: false
 
       - uses: pnpm/action-setup@v3
         with:
@@ -35,4 +36,4 @@ jobs:
       - run: node pkg-tests/node-load.mjs
       - run: node pkg-tests/node-umd.mjs
       - run: pnpm dlx pkg-pr-new publish
-        if: matrix.node == '22'
+        if: matrix.node == '22' && github.event_name == 'push'
