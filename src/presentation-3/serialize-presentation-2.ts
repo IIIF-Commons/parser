@@ -10,6 +10,7 @@ import type {
 import type { DescriptiveNormalized, LinkingNormalized } from "../presentation-3-normalized/types";
 import type * as Presentation2 from "../presentation-2/types";
 import { compressSpecificResource } from "../shared/compress-specific-resource";
+import { IS_EXTERNAL } from "./utilities";
 
 export function languageString2to3(
   value: InternationalString | null | undefined
@@ -52,6 +53,7 @@ export function languageString2to3(
 }
 
 function parseCanvasTarget(target: any): any {
+  if (!target) return undefined;
   if (Array.isArray(target)) {
     return target.map((t) => parseCanvasTarget(t));
   }
@@ -64,7 +66,44 @@ function parseCanvasTarget(target: any): any {
     return target.id;
   }
 
+  if (target.type === "SpecificResource") {
+    const source = typeof target.source === "string" ? target.source : target.source.id;
+    if (!target.selector) return source;
+    if (target.selector.type === "FragmentSelector" && !target.styleClass) {
+      return `${source}#${target.selector.value}`;
+    }
+    return {
+      "@type": "oa:SpecificResource",
+      full: source,
+      selector: selectorToPresentation2(target.selector),
+      ...(target.styleClass ? { style: target.styleClass } : {}),
+    };
+  }
+
+  if (target.items) return target.items.map(parseCanvasTarget);
+
   return target;
+}
+
+function selectorToPresentation2(selector: any): any {
+  if (Array.isArray(selector)) {
+    return {
+      "@type": "oa:Choice",
+      default: selectorToPresentation2(selector[0]),
+      item: selector.slice(1).map(selectorToPresentation2),
+    };
+  }
+  if (selector.type === "SvgSelector") return { "@type": "oa:SvgSelector", chars: selector.value };
+  if (selector.type === "ImageApiSelector") {
+    const { type: _type, ...parameters } = selector;
+    return {
+      "@context": "http://iiif.io/api/annex/openannotation/context.json",
+      "@type": "iiif:ImageApiSelector",
+      ...parameters,
+    };
+  }
+  const { type, ...properties } = selector;
+  return { "@type": `oa:${type}`, ...properties };
 }
 
 function unNestArray<T>(oneOrArray: T[] | undefined, onlyOne = false): T | T[] | undefined {
@@ -105,7 +144,7 @@ function convertService(service: any) {
 
 function technicalProperties(props: Partial<TechnicalProperties>, type?: string) {
   return [
-    ["@id", props.id],
+    ["@id", props.id?.startsWith("vault://") ? undefined : props.id],
     ["@type", type],
     ["format", props.format],
     ["height", props.height],
@@ -170,7 +209,7 @@ function isFragmentSelector(resource: unknown): resource is FragmentSelector {
 
 function specificResourceToString(resource: Reference<any> | SpecificResource) {
   if (resource && isSpecificResource(resource)) {
-    let id = resource.id;
+    let id = typeof resource.source === "string" ? resource.source : resource.source.id;
     const selector: Selector | undefined = resource.selector
       ? Array.isArray(resource.selector)
         ? resource.selector[0]
@@ -187,6 +226,9 @@ function specificResourceToString(resource: Reference<any> | SpecificResource) {
 
 export const serializeConfigPresentation2: SerializeConfig = {
   Manifest: function* (entity, state, { isTopLevel }) {
+    if (!isTopLevel) {
+      return [...technicalProperties(entity, "sc:Manifest"), ...(yield* descriptiveProperties(entity))];
+    }
     return [
       ...(isTopLevel ? [["@context", "http://iiif.io/api/presentation/2/context.json"]] : []),
       ...technicalProperties(entity, "sc:Manifest"),
@@ -210,42 +252,74 @@ export const serializeConfigPresentation2: SerializeConfig = {
 
   Canvas: function* (entity) {
     const paintingPage = yield entity.items;
-    const resources = paintingPage[0];
+    const resources = paintingPage.flatMap((page: any) => page.resources || []);
     return [
       // Items.
       ...technicalProperties(entity, "sc:Canvas"),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ["images", resources ? [resources.resources] : undefined],
+      ["images", resources.length ? resources : undefined],
       [
         // @todo use otherContent if they are inlined
-        "annotations",
-        entity.annotations && entity.annotations.length ? unNestArray(yield entity.annotations) : undefined,
+        "otherContent",
+        entity.annotations && entity.annotations.length ? yield entity.annotations : undefined,
       ],
     ];
   },
 
-  AnnotationPage: function* (entity) {
+  AnnotationPage: function* (entity, state, { isTopLevel }) {
     return [
+      ...(isTopLevel ? [["@context", "http://iiif.io/api/presentation/2/context.json"]] : []),
       ...technicalProperties(entity, "sc:AnnotationList"),
       ...(yield* descriptiveProperties(entity)),
-      ["resources", entity.items && entity.items.length ? unNestArray(yield entity.items) : undefined],
+      ["resources", (entity as any)[IS_EXTERNAL] ? undefined : yield entity.items],
     ];
   },
 
-  Annotation: function* (entity) {
+  Annotation: function* (entity, state, { isTopLevel }) {
+    const bodies = [];
+    const annotationBodies = (Array.isArray(entity.body) ? entity.body : entity.body ? [entity.body] : []) as any[];
+    for (const body of annotationBodies) {
+      if (isSpecificResource(body)) {
+        bodies.push({
+          "@type": "oa:SpecificResource",
+          full: yield body.source,
+          ...(body.selector ? { selector: selectorToPresentation2(body.selector) } : {}),
+          ...(body.styleClass ? { style: body.styleClass } : {}),
+        });
+      } else {
+        bodies.push(yield body);
+      }
+    }
+    const motivations = (
+      Array.isArray(entity.motivation) ? entity.motivation : entity.motivation ? [entity.motivation] : []
+    ).map((motivation) =>
+      motivation.includes(":") ? motivation : `${motivation === "painting" ? "sc" : "oa"}:${motivation}`
+    );
     return [
-      ["@id", entity.id],
-      ["@type", "oa:Annotation"],
-      // This could be improved.
-      ["motivation", "sc:painting"],
+      ...(isTopLevel ? [["@context", "http://iiif.io/api/presentation/2/context.json"]] : []),
+      ...technicalProperties(entity as any, "oa:Annotation"),
+      ...(yield* descriptiveProperties(entity as any)),
+      ...(yield* linkingProperties(entity)),
+      ["motivation", unNestArray(motivations)],
       ["on", parseCanvasTarget(entity.target)],
-      ["resource", unNestArray(yield entity.body, true)],
+      ["resource", unNestArray(bodies)],
     ];
   },
 
   ContentResource: function* (entity: any) {
     switch (entity.type) {
+      case "TextualBody":
+        return [
+          ...technicalProperties(entity, "cnt:ContentAsText"),
+          ["chars", entity.value ?? entity.chars],
+          ["language", entity.language],
+          ...(yield* descriptiveProperties(entity)),
+        ];
+      case "Choice": {
+        const items = yield entity.items;
+        return [...technicalProperties(entity, "oa:Choice"), ["default", items[0]], ["item", items.slice(1)]];
+      }
       case "Image":
         return [
           // Image properties.
@@ -255,8 +329,17 @@ export const serializeConfigPresentation2: SerializeConfig = {
         ];
       case "Text":
       case "Dataset":
+      case "Sound":
+      case "Video":
       default:
-        return [...technicalProperties(entity, undefined), ...(yield* descriptiveProperties(entity))];
+        return [
+          ...technicalProperties(
+            entity,
+            entity.type === "Sound" ? "dctypes:Sound" : entity.type === "Video" ? "dctypes:MovingImage" : undefined
+          ),
+          ["chars", entity.chars ?? entity.value],
+          ...(yield* descriptiveProperties(entity)),
+        ];
     }
   },
 
@@ -269,15 +352,16 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  Collection: function* (entity) {
+  Collection: function* (entity, state, { isTopLevel }) {
     return [
+      ...(isTopLevel ? [["@context", "http://iiif.io/api/presentation/2/context.json"]] : []),
       ...technicalProperties(entity, "sc:Collection"),
       ...["first", "last", "prev", "next"].map((key) => [key, (entity as any)[key]?.id || (entity as any)[key]]),
       ["total", (entity as any).total],
       ["startIndex", (entity as any).startIndex],
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
-      ["members", yield* entity.items],
+      ["members", isTopLevel ? yield entity.items : undefined],
     ];
   },
 
@@ -292,12 +376,12 @@ export const serializeConfigPresentation2: SerializeConfig = {
           const canvas = yield item;
           members.push({
             "@id": specificResourceToString(_item),
-            "@type": item.type,
+            "@type": `sc:${item.type}`,
             label: canvas ? canvas.label : undefined,
             within: entity.id,
           });
           if (item.type === "Canvas") {
-            canvases.push(item.id);
+            canvases.push(specificResourceToString(_item));
           }
         }
       }
