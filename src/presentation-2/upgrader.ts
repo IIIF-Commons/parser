@@ -949,7 +949,8 @@ export function convertPresentation2(entity: any): Presentation3.Manifest | Pres
     entity["@context"] === "http://iiif.io/api/image/2/context.json" ||
     // No-context is possible.
     (entity["@id"] && entity["@type"] === "sc:Collection") ||
-    (entity["@id"] && entity["@type"] === "sc:Manifest")
+    (entity["@id"] && entity["@type"] === "sc:Manifest") ||
+    (entity["@id"] && entity["@type"] === "sc:Canvas")
   ) {
     if (!entity["@context"]) {
       entity["@context"] = "http://iiif.io/api/presentation/2/context.json";
