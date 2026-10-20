@@ -86,13 +86,13 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
       if (resource && resource.id && type) {
         storeType[resource.id] = storeType[resource.id]
           ? (mergeEntities(storeType[resource.id]!, resource, {
-            parent: context.parent,
-            isTopLevel: topLevel.id === resource.id,
-          }) as any)
+              parent: context.parent,
+              isTopLevel: topLevel.id === resource.id,
+            }) as any)
           : mergeEntities({ id: resource.id, type: resource.type } as any, resource, {
-            parent: context.parent,
-            isTopLevel: topLevel.id === resource.id,
-          });
+              parent: context.parent,
+              isTopLevel: topLevel.id === resource.id,
+            });
         return {
           id: resource.id,
           type: type === "ContentResource" ? type : resource.type,
@@ -103,11 +103,23 @@ function mapToEntities(entities: Record<string, Record<string, NormalizedEntity>
   };
 }
 
+function equalMergeValues(left: any, right: any): boolean {
+  if (left === right) return true;
+  if (!left || !right || typeof left !== "object" || typeof right !== "object") return false;
+  if (Array.isArray(left) !== Array.isArray(right)) return false;
+  const keys = Object.keys(left);
+  return (
+    keys.length === Object.keys(right).length &&
+    keys.every((key) => Object.prototype.hasOwnProperty.call(right, key) && equalMergeValues(left[key], right[key]))
+  );
+}
+
 export function merge(existing: any, incoming: any, context?: { parent?: any; isTopLevel?: boolean }): any {
   if (!incoming) {
     // Falsy values are ignored
     return existing;
   }
+  if (existing === null || typeof existing === "undefined") return incoming;
   if (Array.isArray(existing)) {
     if (!Array.isArray(incoming)) {
       throw new Error("Cannot merge array with non-array");
@@ -118,24 +130,24 @@ export function merge(existing: any, incoming: any, context?: { parent?: any; is
     // merged with the existing value.
     const merged = [...existing];
     for (const item of incoming) {
-      if (item["@id"] && !item.id) {
-        item.id = item["@id"];
-      }
-      if (item["@type"] && !item.type) {
-        item.type = item["@type"];
-      }
-      if (item === null || item === undefined) {
-        continue;
-      }
+      if (item === null || item === undefined) continue;
+      if (item["@id"] && !item.id) item.id = item["@id"];
+      if (item["@type"] && !item.type) item.type = item["@type"];
+      const itemId = item.id;
+      const itemType = item.type;
       if (Array.isArray(item)) {
         // FIXME: How to handle this properly?
         merged.push(item);
-      } else if (typeof item === "object" && item.id && item.type) {
-        const existingIdx = merged.findIndex((e) => e.id === item.id && e.type === item.type);
+      } else if (typeof item === "object" && itemId && itemType) {
+        const existingIdx = merged.findIndex(
+          (e) => (e?.id || e?.["@id"]) === itemId && (e?.type || e?.["@type"]) === itemType
+        );
         if (existingIdx >= 0) {
           merged[existingIdx] = merge(merged[existingIdx], item);
+        } else {
+          merged.push(item);
         }
-      } else if (existing.indexOf(item) === -1) {
+      } else if (!existing.some((entry: any) => equalMergeValues(entry, item))) {
         merged.push(item);
       }
     }
@@ -258,7 +270,8 @@ export function mergeEntities(
     }
 
     throw new Error(
-      `Can only merge entities with identical identifiers and type! ${incoming.type}(${incoming.id}) => ${(existing as any).type
+      `Can only merge entities with identical identifiers and type! ${incoming.type}(${incoming.id}) => ${
+        (existing as any).type
       }(${(existing as any).id})`
     );
   }
