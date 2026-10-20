@@ -22,6 +22,7 @@ import type {
 } from "./types";
 import type { GeoJSON } from "../shared/geojson";
 import { isSpecificResource } from "../shared/is-specific-resource";
+import { splitCanvasFragment } from "../shared/canvas-fragments";
 import { ensureArray } from "../shared/ensure-array";
 import { compose } from "../shared/compose";
 
@@ -466,8 +467,19 @@ export class Traverse {
   traverseRangeRanges(range: Range): Range {
     if (range.items) {
       range.items = range.items.map((rangeOrManifest: RangeItems) => {
-        if (typeof rangeOrManifest === "string") {
-          return this.traverseCanvas({ id: rangeOrManifest, type: "Canvas" }, range);
+        if (typeof rangeOrManifest === "string" || rangeOrManifest.type === "Canvas") {
+          const canvas = typeof rangeOrManifest === "string"
+            ? { id: rangeOrManifest, type: "Canvas" as const }
+            : rangeOrManifest;
+          const [id, fragment] = splitCanvasFragment(canvas.id);
+          if (fragment) {
+            return this.traverseSpecificResource({
+              type: "SpecificResource",
+              source: { ...canvas, id },
+              selector: { type: "FragmentSelector", value: fragment },
+            } as SpecificResource, "Canvas", range);
+          }
+          return this.traverseCanvas(canvas as Canvas, range);
         }
         if (isSpecificResource(rangeOrManifest)) {
           return this.traverseSpecificResource(rangeOrManifest, "Canvas", range);
