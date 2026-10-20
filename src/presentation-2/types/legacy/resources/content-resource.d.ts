@@ -3,26 +3,22 @@
  */
 import { ImageService, Service as P3Service } from "../../../../presentation-3/types";
 
+type ImageApiSelectorParameters = {
+  "@context": "http://iiif.io/api/annex/openannotation/context.json";
+  "@type": "iiif:ImageApiSelector";
+  size?: string;
+  quality?: string;
+  format?: string;
+};
+
 export type ContentResourceSelector =
-  | {
-      "@context": "http://iiif.io/api/annex/openannotation/context.json";
-      "@type": "iiif:ImageApiSelector";
-      region: string;
-    }
+  | (ImageApiSelectorParameters & { region: string })
+  | (ImageApiSelectorParameters & { rotation: string })
+  | (ImageApiSelectorParameters & { region: string; rotation: string })
+  | ImageApiSelectorParameters
   | {
       "@type": ["oa:SvgSelector", "cnt:ContentAsText"] | ["cnt:ContentAsText", "oa:SvgSelector"] | "oa:SvgSelector";
       chars: string;
-    }
-  | {
-      "@context": "http://iiif.io/api/annex/openannotation/context.json";
-      "@type": "iiif:ImageApiSelector";
-      rotation: string;
-    }
-  | {
-      "@context": "http://iiif.io/api/annex/openannotation/context.json";
-      "@type": "iiif:ImageApiSelector";
-      region: string;
-      rotation: string;
     }
   | {
       "@type": "oa:Choice";

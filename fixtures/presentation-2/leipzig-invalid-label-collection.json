@@ -1,0 +1,406 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://iiif.ub.uni-leipzig.de/static/collections/misc/cdvost2018.json",
+  "@type": "sc:Collection",
+  "label": "Auswahl illuminierter mittelalterlicher Handschriften",
+  "description": "Auswahl illuminierter mittelalterlicher Handschriften der Universitaetsbibliothek Leipzig. Aufbereitet anlaesslich Coding da Vinci Ost 2018. Kontakt: https://www.ub.uni-leipzig.de",
+  "attribution": "Public Domain Mark 1.0",
+  "logo": "http://iiif.ub.uni-leipzig.de/ubl-logo.png",
+   "manifests": [
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000002636/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 13"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000002974/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 14"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004536/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 49"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000002216/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 51"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000002519/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 57"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004578/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 58"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004723/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 61"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004684/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 63"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000005111/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 75"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000007413/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 85"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000007023/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 91"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004763/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 93"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000007221/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 101"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004596/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 106"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000001791/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 115"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000007416/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 148"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006377/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 173"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004595/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 187"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000007336/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 202"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000003064/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 219"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006144/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 220"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006231/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 232"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006939/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 244"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006946/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 247"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006345/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 283"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006769/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 290"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006352/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 305"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000008291/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 316"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004682/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 326"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006672/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 332"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004467/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 335"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000007343/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 372"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006395/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 388"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006384/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 389"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000002165/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 391"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004718/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 397"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000002660/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 410"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004604/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 412"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000005957/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 433"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006217/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 667"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004967/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 763"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004986/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 777"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004673/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 786"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000002544/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 788"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004694/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 793"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004984/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 809"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004133/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 827"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004762/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 828"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000005368/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 843"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004410/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 847"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004132/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 848"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000005375/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 849"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000003065/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 855"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004409/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 859"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004726/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 861"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000005128/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1111"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004482/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1329"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004476/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1361"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004124/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1369"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004395/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1399"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004084/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1402"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004077/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1403"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004114/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1405"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000003063/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1419"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000003150/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1420"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000003860/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1452"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000003234/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1459"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004120/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1466"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004437/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1505"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004411/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1515"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004368/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1526"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004380/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1528"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004631/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Ms 1555"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000006185/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Rep. I 4"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004677/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Rep. I 16"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004590/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Rep. I 19"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004679/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Rep. I 72"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004577/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Cod. gr. 6"
+		},
+		{
+			"@id":"https://iiif.ub.uni-leipzig.de/0000004592/manifest.json",
+			"@type":"sc:Manifest",
+			"@label":"Cod. gr. 76"
+		}
+  ]
+}

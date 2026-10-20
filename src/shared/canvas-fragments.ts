@@ -7,5 +7,5 @@ export function splitCanvasFragment(originalUrl?: string): string[] {
 }
 
 export function isValidCanvasFragment(fragment: string): boolean {
-  return fragment.includes("xywh=") || fragment.includes("t=");
+  return /(?:^|&)(?:xywh|t)=/.test(fragment);
 }

@@ -11,9 +11,9 @@ export function parseImageServiceRequest(input: string, _prefix = ""): ImageServ
   const [fileName, rotation, size, region, ...others] = parts;
   const identifier = others.reverse().filter(Boolean).join("/");
 
-  if (parts.length === 1 || fileName === "") {
+  if (parts.filter(Boolean).length === 1 || fileName === "") {
     // likely the server will want to redirect this
-    return { type: "base", scheme, server, prefix, identifier };
+    return { type: "base", scheme, server, prefix, identifier: path.split("/").filter(Boolean).join("/") };
   }
 
   if (fileName === "info.json") {

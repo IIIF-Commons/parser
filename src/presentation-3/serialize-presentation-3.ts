@@ -107,10 +107,15 @@ function* descriptiveProperties(
 
 function* linkingProperties(
   entity: Partial<LinkingNormalized>,
-  parent?: any
+  parent?: any,
+  omitPartOf = false
 ): Generator<any, any, Array<[keyof LinkingNormalized, any]>> {
   let filteredPartOf = [];
-  for (let partOf of entity.partOf || []) {
+  for (let partOf of omitPartOf ? [] : entity.partOf || []) {
+    if (parent?.type === "AnnotationCollection" && partOf.id === parent.id) {
+      filteredPartOf.push({ id: partOf.id, type: "AnnotationCollection" });
+      continue;
+    }
     if (partOf.type === "Manifest" && parent?.type === "Manifest") continue;
     filteredPartOf.push(yield partOf);
   }
@@ -141,6 +146,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         // Only a snippet.
         ...technicalProperties(entity),
         ...(yield* descriptiveProperties(entity)),
+        ...(yield* linkingProperties(entity, undefined, true)),
         ["navPlace", (entity as any).navPlace],
       ];
     }
@@ -192,7 +198,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
     ];
   },
 
-  AnnotationPage: function* (entity) {
+  AnnotationPage: function* (entity, state, { parent }) {
     const entries = Object.entries(entity)
       .map(([key, item]) => {
         return [key, Array.isArray(item) ? filterEmpty(item as any) : item];
@@ -207,8 +213,8 @@ export const serializeConfigPresentation3: SerializeConfig = {
       // Any more properties?
       ["id", !entity.id?.startsWith("vault://") ? entity.id : undefined],
       ...entries,
-      ...(yield* linkingProperties(entity)),
-      ["items", items.length || (entity as any)[IS_EXTERNAL] === false ? items : UNSET],
+      ...(yield* linkingProperties(entity, parent)),
+      ["items", items.length || (entity as any)[IS_EXTERNAL] !== true ? items : UNSET],
     ];
   },
 
@@ -301,10 +307,13 @@ export const serializeConfigPresentation3: SerializeConfig = {
 
   AnnotationCollection: function* (entity) {
     return [
-      // @todo expand properties if they are actually used.
-      ["id", entity.id],
-      ["type", "AnnotationCollection"],
-      ["label", entity.label],
+      ["@context", (entity as any)["@context"]],
+      ...technicalProperties(entity),
+      ...(yield* descriptiveProperties(entity)),
+      ...(yield* linkingProperties(entity)),
+      ["total", (entity as any).total],
+      ["first", typeof (entity as any).first === "string" ? (entity as any).first : yield (entity as any).first],
+      ["last", typeof (entity as any).last === "string" ? (entity as any).last : yield (entity as any).last],
     ];
   },
 
@@ -322,6 +331,12 @@ export const serializeConfigPresentation3: SerializeConfig = {
       return [
         ["@context", context],
         ...technicalProperties(entity),
+        ["first", (entity as any).first],
+        ["last", (entity as any).last],
+        ["startIndex", (entity as any).startIndex],
+        ["prev", (entity as any).prev],
+        ["next", (entity as any).next],
+        ["total", (entity as any).total],
         ...(yield* descriptiveProperties(entity)),
         ...(yield* linkingProperties(entity)),
         ["items", filterEmpty(yield entity.items)],
@@ -330,7 +345,14 @@ export const serializeConfigPresentation3: SerializeConfig = {
     }
     return [
       ...technicalProperties(entity),
+      ["first", (entity as any).first],
+      ["last", (entity as any).last],
+      ["startIndex", (entity as any).startIndex],
+      ["prev", (entity as any).prev],
+      ["next", (entity as any).next],
+      ["total", (entity as any).total],
       ...(yield* descriptiveProperties(entity)),
+      ...(yield* linkingProperties(entity, undefined, true)),
       ["navPlace", (entity as any).navPlace],
     ];
   },

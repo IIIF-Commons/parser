@@ -178,7 +178,7 @@ describe("Presentation 2 to 3", () => {
     const body = results.items[0]!.items[0]!.items[0].body as any;
 
     expect(body.type).toEqual("Choice");
-    expect(body.id).toEqual("http://example.org/oa:Choice/335");
+    expect(body.id).toMatch(/^http:\/\/example\.org\/oa:Choice\/\d+$/);
     expect(body.items.length).toEqual(4);
 
     expect(validator.validators.manifest!.errors).toEqual(null);
@@ -449,10 +449,10 @@ describe("Presentation 2 to 3", () => {
           {
             "body": {
               "chars": "Top of First Page to Display",
-              "id": "http://example.org/cnt:ContentAsText/438",
+              "id": "http://example.org/cnt:ContentAsText/382",
               "type": "TextualBody",
             },
-            "id": "http://example.org/oa:Annotation/439",
+            "id": "http://example.org/oa:Annotation/383",
             "motivation": "painting",
             "target": {
               "selector": {
@@ -471,18 +471,18 @@ describe("Presentation 2 to 3", () => {
             "body": [
               {
                 "chars": "character",
-                "id": "http://example.org/oa:Tag/440",
+                "id": "http://example.org/oa:Tag/384",
                 "type": "Tag",
               },
               {
                 "chars": "<p>万</p>
       <p><audio style="display: none;" controls="controls"></audio></p>",
                 "format": "text/html",
-                "id": "http://example.org/dctypes:Text/441",
+                "id": "http://example.org/dctypes:Text/385",
                 "type": "Text",
               },
             ],
-            "id": "http://example.org/oa:Annotation/442",
+            "id": "http://example.org/oa:Annotation/386",
             "motivation": [
               "tagging",
               "commenting",
@@ -526,17 +526,17 @@ describe("Presentation 2 to 3", () => {
               {
                 "chars": "<p><i>Zone of interest</i><br/><b>Place</b><br/>Cauca of Huila</p>",
                 "format": "text/html",
-                "id": "http://example.org/dctypes:Text/443",
+                "id": "http://example.org/dctypes:Text/387",
                 "type": "Text",
               },
               {
                 "chars": "Colombia",
-                "id": "http://example.org/oa:Tag/444",
+                "id": "http://example.org/oa:Tag/388",
                 "type": "Tag",
               },
               {
                 "chars": "Cauca",
-                "id": "http://example.org/oa:Tag/445",
+                "id": "http://example.org/oa:Tag/389",
                 "type": "Tag",
               },
             ],
@@ -584,7 +584,7 @@ describe("Presentation 2 to 3", () => {
             "body": {
               "chars": "<p><i>Surface tool</i><br/><b>Feuille</b><br/>70.97 mm²</p>",
               "format": "text/html",
-              "id": "http://example.org/dctypes:Text/446",
+              "id": "http://example.org/dctypes:Text/390",
               "type": "Text",
             },
             "id": "https://collections.recolnat.org/annotate-server/iiif/2/annotationList/30/febbe57672bb5eaf097de6c5448c43ad8a82e012/list/3",

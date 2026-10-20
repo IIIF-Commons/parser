@@ -1,0 +1,1526 @@
+{
+  "@id" : "https://t-pen.org/TPEN/canvas/13250383",
+  "@type" : "sc:Canvas",
+  "label" : "bav_pal_lat_51_0041.jpg",
+  "width" : 666,
+  "height" : 1000,
+  "otherContent" : [ {
+    "@id" : "https://t-pen.org/TPEN/project/7157/annotations/13250383",
+    "@type" : "sc:AnnotationList",
+    "label" : "https://t-pen.org/TPEN/canvas/13250383 List",
+    "proj" : 7157,
+    "on" : "https://t-pen.org/TPEN/canvas/13250383",
+    "@context" : "http://iiif.io/api/presentation/2/context.json",
+    "resources" : [ ]
+  }, {
+    "@id" : "https://t-pen.org/TPEN/project/7158/annotations/13250383",
+    "@type" : "sc:AnnotationList",
+    "label" : "https://t-pen.org/TPEN/canvas/13250383 List",
+    "proj" : 7158,
+    "on" : "https://t-pen.org/TPEN/canvas/13250383",
+    "@context" : "http://iiif.io/api/presentation/2/context.json",
+    "resources" : [ {
+      "@id" : "https://t-pen.org/TPEN/line/104710760",
+      "_tpen_line_id" : "line/104710760",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶Hec singule beatitudines ut impleantur postulant suffragium, septe donorum, que "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,81,346,24",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:49:55.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710968",
+      "_tpen_line_id" : "line/104710968",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "dona ut habeantur in oratione dominica, vii precibus oramus. Ecce qualiter sapientia dei "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,105,346,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:50:07.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710969",
+      "_tpen_line_id" : "line/104710969",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "cuncta prouidit uirtus beatitudinis precipitur ex dono spiritus sancti, donum prece ora"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,120,346,22",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:50:24.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710761",
+      "_tpen_line_id" : "line/104710761",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "tionis quam composuit impetratur."
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,142,181,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:50:26.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710807",
+      "_tpen_line_id" : "line/104710807",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Septem quippe sunt dona, sed unus spiritus; "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,154,181,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:52:15.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710808",
+      "_tpen_line_id" : "line/104710808",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "vii orationes, sed una petitio. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,166,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:52:24.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710809",
+      "_tpen_line_id" : "line/104710809",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Unde<SEG ref=\"Ps 26:4\"> unam petii a domino hanc requiram.</SEG> Septem "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,180,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2489,
+      "modified" : "2021-05-17 09:36:07.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710810",
+      "_tpen_line_id" : "line/104710810",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "uirtutum beatitudines, una ca"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,195,181,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:52:55.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710811",
+      "_tpen_line_id" : "line/104710811",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "ritas. ¶ Iusticie lumen est misericordia, misericordie "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,209,181,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:54:10.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710812",
+      "_tpen_line_id" : "line/104710812",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "uirtus iusticia. Hec misericordia eget spiritu "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,225,181,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:54:27.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710813",
+      "_tpen_line_id" : "line/104710813",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "consilii, sine quo nemo circumspecte mi"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,241,181,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:54:37.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710814",
+      "_tpen_line_id" : "line/104710814",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "seretur. Initium est sui misereri, finis "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,257,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:54:45.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710815",
+      "_tpen_line_id" : "line/104710815",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "est pro alio mori. Ordo enim miseren"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,272,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:55:06.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710816",
+      "_tpen_line_id" : "line/104710816",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "di  est, ut unusquisque incipiat a se finem "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,287,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:55:13.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710817",
+      "_tpen_line_id" : "line/104710817",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Christo insinuat, pro peccatoribus mortuus ex "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,302,181,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:55:25.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710818",
+      "_tpen_line_id" : "line/104710818",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "misericordia. ¶ Misericordia de precedentibus nascitur quia "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,315,181,18",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:56:17.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710819",
+      "_tpen_line_id" : "line/104710819",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "si precesserit uera humilitas et animus "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,333,181,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:56:28.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710820",
+      "_tpen_line_id" : "line/104710820",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "mansuescat, et suos et aliorum casus "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,346,181,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:56:38.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710821",
+      "_tpen_line_id" : "line/104710821",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "fleat, et iusticiam esuriat; post nasci"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,362,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:56:51.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710822",
+      "_tpen_line_id" : "line/104710822",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "tur uera misericordia, tunc enim alienas miserias "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,377,181,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:57:02.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710823",
+      "_tpen_line_id" : "line/104710823",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "faciet suas, et pro uiribus uiuabit, et si "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,393,181,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:57:08.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710824",
+      "_tpen_line_id" : "line/104710824",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "facultas uiuandi deest, compassio "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,410,181,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:57:19.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710825",
+      "_tpen_line_id" : "line/104710825",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "non deerit, de hac dicitur, <SEG ref=\"Lc 6:36\"> \"Estote miseri"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,426,181,19",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-06-07 13:20:06.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710826",
+      "_tpen_line_id" : "line/104710826",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "cordes, sicut et pater uerum misericors est,\"</SEG> id est, ad hoc misere"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,445,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-06-07 13:20:17.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710827",
+      "_tpen_line_id" : "line/104710827",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "amini, ad quod et deus, ut bonitas redun"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,460,181,19",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-18 12:58:16.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710828",
+      "_tpen_line_id" : "line/104710828",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "det in omnibus. ¶Pax est unigenitus de quo "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,479,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:30:27.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710829",
+      "_tpen_line_id" : "line/104710829",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "dicitur ipse pax nostra. Qui pacem diligit "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,494,181,18",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:30:35.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710830",
+      "_tpen_line_id" : "line/104710830",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "filius est pacis. ¶ <Target text=\"Pacifici\"> sunt qui omnes motus "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,512,181,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:32:43.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710831",
+      "_tpen_line_id" : "line/104710831",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "animi componunt, et rationi subiciunt quia his "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,524,181,18",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:32:53.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710832",
+      "_tpen_line_id" : "line/104710832",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "nihil repugnat, similes patri suo "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,541,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:33:02.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710833",
+      "_tpen_line_id" : "line/104710833",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "sunt , qui est summa quies. De hac pace  eiectus "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,556,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:33:24.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710834",
+      "_tpen_line_id" : "line/104710834",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "est qui peruersis dominatur; hac pace intus  fir"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,571,181,18",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:33:40.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710835",
+      "_tpen_line_id" : "line/104710835",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "ma quecumque exterius concitauerit, qui eiectus est "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,589,181,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:34:04.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710836",
+      "_tpen_line_id" : "line/104710836",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "foras, auget gloriam et cum deficit inno"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,602,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:34:22.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710837",
+      "_tpen_line_id" : "line/104710837",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "tescere facit quanta firmitas intus sit. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,617,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:34:31.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710838",
+      "_tpen_line_id" : "line/104710838",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Unde  <SEG ref=\"Mt 5:10\">“Beati qui persecutionem patiuntur”</SEG> propter iusticiam quoniam "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,632,181,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-06-07 13:21:18.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710839",
+      "_tpen_line_id" : "line/104710839",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "ipsorum est regnum celorum .”</Target> ¶<Target text=\"Beati pacifici.\"> Pax a nobis incipit "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,646,181,9",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:35:50.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710840",
+      "_tpen_line_id" : "line/104710840",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "quia dum lex carnis repugnat legi "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,655,181,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:35:59.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710841",
+      "_tpen_line_id" : "line/104710841",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "mentis, non modo alterius sed nobis possumus "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,669,181,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:36:20.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710842",
+      "_tpen_line_id" : "line/104710842",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "esse pacifici. Sed postquam spiritus impetrat ut "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,682,181,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:36:38.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710843",
+      "_tpen_line_id" : "line/104710843",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "totus homo spiritui seruiat, tunc pax ad alios "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,698,181,18",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:36:48.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710806",
+      "_tpen_line_id" : "line/104710806",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "deriuatur, ut cum omnibus pacem habeamus. Vera quidem pax est ubi nichil repugnat, pax dei omnem sensum superat, que et si non potest capi ut est, tamen pro capacitate "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,716,562,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:37:32.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710844",
+      "_tpen_line_id" : "line/104710844",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "nostra capi potest non quanta est, sed quantum ad reconciliationem adoptionis sufficit infinitas eterne pacis. Et si non potest intelligi, et quomodo filiis ire pax conueniat, "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,728,562,18",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:41:03.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710845",
+      "_tpen_line_id" : "line/104710845",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "et quomodo deus pax seuere iudicat, et quanta et qualis sit pax totius trinitatis, ubi una uirtus, una operatio, tamen quod est et quod tanta et talis est, quanta predicatur, fide capi"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,746,562,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:41:36.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710846",
+      "_tpen_line_id" : "line/104710846",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "mus ad gradum pacis qui purgatus est intendit et dirigitur.</Target>"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=53,759,562,22",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:41:40.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710759",
+      "_tpen_line_id" : "line/104710759",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Congrua ascensio prius conte(m)ptus seculi "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,81,222,21",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:44:25.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710762",
+      "_tpen_line_id" : "line/104710762",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "cui dantur eterna, inde mores temperat mansue"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,102,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:44:37.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710763",
+      "_tpen_line_id" : "line/104710763",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "tudo et lenitas, et non est mitis qui prius pauper non fuerit. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,118,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:44:52.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710764",
+      "_tpen_line_id" : "line/104710764",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Impossibilem est enim secundum gaudium ascendere nisi primum "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,135,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:45:39.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710765",
+      "_tpen_line_id" : "line/104710765",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "apprehenderis, quia inter diuitias, curas, odia ani"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,148,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:45:57.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710766",
+      "_tpen_line_id" : "line/104710766",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "mus non est mitis. Sed huius incendii materia uix ad "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,161,222,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:46:11.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710767",
+      "_tpen_line_id" : "line/104710767",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "purum detrahitur et ideo hec lenitas sepe corrumpitur. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,173,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-04-30 14:26:09.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710768",
+      "_tpen_line_id" : "line/104710768",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Unde subdit, ‘Beati qui lugent pro suis uel aliorum pec"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,188,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:50:22.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710769",
+      "_tpen_line_id" : "line/104710769",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "catis, quod est ab irriguo inferius. Sed quod fit "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,204,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:50:40.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710770",
+      "_tpen_line_id" : "line/104710770",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "ab irriguo superius est ex desiderio celestis patrie. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,219,222,18",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:50:47.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710771",
+      "_tpen_line_id" : "line/104710771",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Ille lauat presentes sordes, hic accendit artius "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,237,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:51:04.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710772",
+      "_tpen_line_id" : "line/104710772",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "aeternorum amatores. Qui ante peccata deposu"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,250,222,10",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:51:19.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710773",
+      "_tpen_line_id" : "line/104710773",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "it mores mansuetudine correxit, flens etiam "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,260,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:51:28.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710774",
+      "_tpen_line_id" : "line/104710774",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "potest esurire et sitire iusticiam, quod prius "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,275,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:52:16.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710777",
+      "_tpen_line_id" : "line/104710777",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "non poterat. Hec uirtus sine spiritu fortitudinis non "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,288,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:52:28.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710778",
+      "_tpen_line_id" : "line/104710778",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "impletur, quia per eum esuriendo ad satietatem "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,302,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:52:35.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710779",
+      "_tpen_line_id" : "line/104710779",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "quandoque ueniemus."
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,318,222,18",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:52:37.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710780",
+      "_tpen_line_id" : "line/104710780",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶Octaua sententia que ad caput redit perfectumque "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,336,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:53:43.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710781",
+      "_tpen_line_id" : "line/104710781",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "hominem declarat significat et circumcisio"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,351,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:53:56.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710782",
+      "_tpen_line_id" : "line/104710782",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "nem octaua die et resurrectionem domini post sabbatum, "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,365,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:54:09.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710783",
+      "_tpen_line_id" : "line/104710783",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "qui est octauus et primus dies et octauas quas in "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,382,222,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:54:30.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710784",
+      "_tpen_line_id" : "line/104710784",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "nouo testamento celebramus et numerus pente"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,393,222,19",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:54:49.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710785",
+      "_tpen_line_id" : "line/104710785",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "costes. Nam septem  numero septies multipli"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,413,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:55:01.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710786",
+      "_tpen_line_id" : "line/104710786",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "cato quo fuerit , xlix. quasi octauus additur ut "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,428,222,21",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:55:14.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710787",
+      "_tpen_line_id" : "line/104710787",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "l. compleantur, et tanquam redeatur ad caput quo die "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,448,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:55:27.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710788",
+      "_tpen_line_id" : "line/104710788",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "missus est spiritus quo in regno celorum ducimur, et heredi"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,463,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:55:49.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710789",
+      "_tpen_line_id" : "line/104710789",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "tatem accipimus, consolamur, et pascimur, et misericordiam "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,478,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:57:00.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710790",
+      "_tpen_line_id" : "line/104710790",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "consequimur et mundamur et pacificamur et ita perse"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,494,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:57:09.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710791",
+      "_tpen_line_id" : "line/104710791",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "cutiones exterius illatas, et molestias pro ueritate et "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,507,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:57:19.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710792",
+      "_tpen_line_id" : "line/104710792",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "iusti[ci]a  sustinemus. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,522,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:57:21.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710793",
+      "_tpen_line_id" : "line/104710793",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶Mundicia cordis sexto loco ponitur, ut homo sexta "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,538,222,10",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 13:59:18.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710794",
+      "_tpen_line_id" : "line/104710794",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "die conditus per hanc restituatur, et depulsis uiciis "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,549,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:00:14.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710795",
+      "_tpen_line_id" : "line/104710795",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "preceptum domini illuminet oculos, ut possit uideri. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,565,222,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:00:42.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710796",
+      "_tpen_line_id" : "line/104710796",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Premissis ergo quinque gradibus purgandus est mentis oculos, "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,577,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:00:55.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710797",
+      "_tpen_line_id" : "line/104710797",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "ne mandatorum offensus animus fiat omnium reus. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,592,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:02:28.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710798",
+      "_tpen_line_id" : "line/104710798",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Ideo homo se a mundo exuat, eterna diligat. Am"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,605,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:02:57.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710799",
+      "_tpen_line_id" : "line/104710799",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "plectatur deum quo appossit uidere eum, quem tantum "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,620,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:03:16.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710800",
+      "_tpen_line_id" : "line/104710800",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "uidet quantum seculo moritur. In futuro sicut est oculo "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,633,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:03:42.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710801",
+      "_tpen_line_id" : "line/104710801",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "mentis uidebitur. Ideo spiritus intelligentie huic "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,649,222,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:03:51.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710802",
+      "_tpen_line_id" : "line/104710802",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "gradui aptatur, quia intellectus mentis est oculos, et ex"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,666,222,15",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:04:07.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710803",
+      "_tpen_line_id" : "line/104710803",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "pletio mandatorum dei aperit intellectum."
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,680,222,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:04:09.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710804",
+      "_tpen_line_id" : "line/104710804",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "beatitudo martyrio terminatur, que probatum reddit "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,694,222,12",
+      "_tpen_note" : "This line and the one right after it are a continuation of an interlinear gloss.",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:06:18.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104710805",
+      "_tpen_line_id" : "line/104710805",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "et suppletur precedentibus bonis"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=404,706,222,4",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-24 14:06:20.0"
+    } ]
+  }, {
+    "@id" : "https://t-pen.org/TPEN/project/7162/annotations/13250383",
+    "@type" : "sc:AnnotationList",
+    "label" : "https://t-pen.org/TPEN/canvas/13250383 List",
+    "proj" : 7162,
+    "on" : "https://t-pen.org/TPEN/canvas/13250383",
+    "@context" : "http://iiif.io/api/presentation/2/context.json",
+    "resources" : [ {
+      "@id" : "https://t-pen.org/TPEN/line/104708459",
+      "_tpen_line_id" : "line/104708459",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶Restat post predicta rimarum colluuionem luctu pur"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,130,240,22",
+      "_tpen_note" : "This gloss continues onto the next line",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-05 15:43:32.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708460",
+      "_tpen_line_id" : "line/104708460",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "gare. Luctus pro peccatis uel desiderio celesti consolationem meretur "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,152,240,22",
+      "_tpen_note" : "This gloss continues onto the next line",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-05 15:44:04.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708461",
+      "_tpen_line_id" : "line/104708461",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "et non alius. ¶ propter consolationem beati. ¶Spiritu paracleto  de eterna"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,175,240,13",
+      "_tpen_note" : "\"Spiritu\" starts a gloss which continues onto the next line",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-05 15:52:25.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708462",
+      "_tpen_line_id" : "line/104708462",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "leticia. ¶Amatores ueri boni, quibus non satis est quod iusti sunt, "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,188,240,12",
+      "_tpen_note" : "\"Amatores\" starts a gloss which continues onto the next line.",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-05 15:55:17.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708463",
+      "_tpen_line_id" : "line/104708463",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "sed semper sitiunt  opera iusticie ¶ Esuries iusticie spiritu "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,200,240,12",
+      "_tpen_note" : "\"Esuries\" starts a gloss which continues onto the next line",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-05 15:57:59.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708464",
+      "_tpen_line_id" : "line/104708464",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "fortitudinis fulcitur, ne in uia lacescat."
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,212,240,25",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-05 15:58:08.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708465",
+      "_tpen_line_id" : "line/104708465",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶Ueritia est sua cuiqus tribuere sibi et proximis et deo. Hec iusticia"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,237,240,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-04-30 12:43:05.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708466",
+      "_tpen_line_id" : "line/104708466",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "non plene in nobis inplebitur donec deus omnia in omnibus. Ideo hec possi"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,250,240,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 11:36:14.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708467",
+      "_tpen_line_id" : "line/104708467",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "mus esurire, non satiari. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,262,240,36",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 11:37:00.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708468",
+      "_tpen_line_id" : "line/104708468",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶<Target text=\"Saturabuntur\"> Adepto quod desiderant.</Target> ¶Qui aliis in quibuslibet  assis"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,297,240,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 11:41:14.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708469",
+      "_tpen_line_id" : "line/104708469",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "tunt, quibus hoc a deo rependitur, ut a miseria liberentur."
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,311,240,10",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 11:41:24.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708470",
+      "_tpen_line_id" : "line/104708470",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶Misericordia est dare et dimittere."
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,321,240,37",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 11:42:24.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708471",
+      "_tpen_line_id" : "line/104708471",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : ""
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,358,240,59",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-04 14:17:19.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708472",
+      "_tpen_line_id" : "line/104708472",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶Iudicium sine misericordia illi qui noluit misereri. ¶ Quos non "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,417,240,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:01:17.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708473",
+      "_tpen_line_id" : "line/104708473",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "arguit  conscientia peccati,  templum enim  dei sanctum est."
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,430,240,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:01:28.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708474",
+      "_tpen_line_id" : "line/104708474",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶ Quorum mentes premissa beatitudinis illustrant exercicia, "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,442,240,34",
+      "_tpen_note" : "This line contains a gloss which goes on to the next line",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:02:48.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708475",
+      "_tpen_line_id" : "line/104708475",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "et earum mundicia cor ad deum gubernat, ut refor"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,476,240,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:02:58.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708476",
+      "_tpen_line_id" : "line/104708476",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "metur imago per peccatum deleta. "
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,490,240,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:03:00.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708477",
+      "_tpen_line_id" : "line/104708477",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "¶<Target text=\"Deum uidebunt\"> hic per spem, illic per rem.</Target>"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,503,240,31",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:04:16.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708478",
+      "_tpen_line_id" : "line/104708478",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : ""
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,534,240,62",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-04 14:17:30.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708479",
+      "_tpen_line_id" : "line/104708479",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "Hec pax ubi nisi bona uoluntate nutritur, unde <SEG ref=\"Lc 2:14\">\"et in terra"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,596,240,13",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-06-07 14:11:03.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708480",
+      "_tpen_line_id" : "line/104708480",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "pax hominibus bone uoluntatis\"</SEG> hanc mundus dare non potest, sed Iesus qui ait, <SEG ref=\"Io 14:27\">\"Pacem"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,609,240,12",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-06-07 14:12:17.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708481",
+      "_tpen_line_id" : "line/104708481",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "meam do uobis.\"</SEG> Hec superat omnem sensum, sed fide capitur, unde et ea"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,621,240,30",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-06-07 14:11:25.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708482",
+      "_tpen_line_id" : "line/104708482",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "ea illustramur et ei reconciliati ab omni quod ab ea dissentit nos"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,651,240,16",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:13:32.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708483",
+      "_tpen_line_id" : "line/104708483",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "abdicimus, cum autem deus erit omnia in omnibus tunc beatitudo ad"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,667,240,10",
+      "_tpen_note" : "",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:15:53.0"
+    }, {
+      "@id" : "https://t-pen.org/TPEN/line/104708484",
+      "_tpen_line_id" : "line/104708484",
+      "@type" : "oa:Annotation",
+      "motivation" : "oad:transcribing",
+      "resource" : {
+        "@type" : "cnt:ContentAsText",
+        "cnt:chars" : "optionis dabitur. ¶Octaua uere circumcisionis"
+      },
+      "on" : "https://t-pen.org/TPEN/canvas/13250383#xywh=201,678,240,35",
+      "_tpen_note" : "Octaua uere\" starts a gloss which continues in the margin. There is a line pointing to the continuation of the gloss, \"beatitudo martyrio terminatur, que probatum reddit et suppletur",
+      "_tpen_creator" : 2490,
+      "modified" : "2021-03-11 12:19:24.0"
+    } ]
+  } ],
+  "images" : [ {
+    "@type" : "oa:Annotation",
+    "motivation" : "sc:painting",
+    "resource" : {
+      "@id" : "https://t-pen.org/TPEN/pageImage?folio=13250383",
+      "@type" : "dctypes:Image",
+      "format" : "image/jpeg",
+      "width" : 1332,
+      "height" : 2000
+    },
+    "on" : "https://t-pen.org/TPEN/canvas/13250383"
+  } ]
+}

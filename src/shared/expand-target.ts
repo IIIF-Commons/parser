@@ -10,7 +10,7 @@ export function expandTargetToSpecificResource(
 ): SpecificResource {
   if (Array.isArray(target)) {
     // Don't support multiple targets for now.
-    return expandTargetToSpecificResource(target[0]!);
+    return expandTargetToSpecificResource(target[0]!, options);
   }
 
   if (typeof target === "string") {
@@ -29,7 +29,7 @@ export function expandTargetToSpecificResource(
 
     return {
       type: "SpecificResource",
-      source: { id, type: options.typeHint || "Unknown" },
+      source: { id, type: (options.typeMap && options.typeMap[id!]) || options.typeHint || "Unknown" } as any,
       selector: {
         type: "FragmentSelector",
         value: fragment,
@@ -45,7 +45,7 @@ export function expandTargetToSpecificResource(
     target.type === "Independents"
   ) {
     // we also don't support these, just choose the first.
-    return expandTargetToSpecificResource(target.items[0]!);
+    return expandTargetToSpecificResource(target.items[0]!, options);
   }
 
   if (!target.type && "source" in target) {

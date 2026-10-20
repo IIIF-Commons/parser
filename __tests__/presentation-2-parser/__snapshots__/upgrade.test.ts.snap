@@ -60,6 +60,18 @@ exports[`Presentation 2 to 3 > goettingen manifest 1`] = `
     "paged",
     "paged",
   ],
+  "homepage": [
+    {
+      "format": "text/html",
+      "id": "http://kalliope-verbund.info/DE-611-HS-3216958",
+      "label": {
+        "none": [
+          "Kalliope",
+        ],
+      },
+      "type": "Text",
+    },
+  ],
   "id": "https://manifests.sub.uni-goettingen.de/id/DE-611-HS-3216958",
   "items": [
     {
@@ -2960,18 +2972,6 @@ exports[`Presentation 2 to 3 > goettingen manifest 1`] = `
   "navDate": "1902-01-01T00:00:00+01:00",
   "provider": [
     {
-      "homepage": [
-        {
-          "format": "text/html",
-          "id": "http://kalliope-verbund.info/DE-611-HS-3216958",
-          "label": {
-            "none": [
-              "Kalliope",
-            ],
-          },
-          "type": "Text",
-        },
-      ],
       "id": "http://example.org/provider",
       "label": {
         "none": [
@@ -40346,7 +40346,6 @@ exports[`Presentation 2 to 3 > nested ranges 1`] = `
   "navDate": "1623-01-01T00:00:00Z",
   "provider": [
     {
-      "homepage": undefined,
       "id": "http://example.org/provider",
       "label": {
         "none": [
