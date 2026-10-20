@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/iiif-commons/parser.git"
+    "url": "git+https://github.com/IIIF-Commons/parser"
   },
   "bin": {
     "iiif-parser": "./dist/cli.mjs"
