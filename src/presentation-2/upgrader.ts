@@ -206,6 +206,8 @@ function getNewType(resource: any): string {
     }
 
     switch (oldType) {
+      case "MovingImage":
+        return "Video";
       case "Layer":
         return "AnnotationCollection";
       case "AnnotationList":
@@ -221,6 +223,8 @@ function getNewType(resource: any): string {
   }
 
   if (resource.format) {
+    if (resource.format.startsWith("audio/")) return "Sound";
+    if (resource.format.startsWith("video/")) return "Video";
     if (resource.format.startsWith("image/")) {
       return "Image";
     }
@@ -514,17 +518,16 @@ function linkingProperties(resource: Presentation2.LinkingProperties & Presentat
   const layer = resource.contentLayer as Presentation2.Layer;
 
   return {
-    provider:
-      resource.logo
-        ? [
-            {
-              id: configuration.providerId,
-              type: "Agent" as const,
-              logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
-              label: convertLanguageMapping(configuration.providerName),
-            },
-          ]
-        : undefined,
+    provider: resource.logo
+      ? [
+          {
+            id: configuration.providerId,
+            type: "Agent" as const,
+            logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
+            label: convertLanguageMapping(configuration.providerName),
+          },
+        ]
+      : undefined,
     homepage: related.length
       ? related.map((link: any) => ({ ...link, type: link.type === "unknown" ? "Text" : link.type }))
       : undefined,
@@ -652,10 +655,18 @@ function flattenArray<T>(array: T[][]): T[] {
 
 function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manifest {
   const allCanvases = [];
+  const mediaElements = (manifest.mediaSequences || []).flatMap((sequence) => sequence.elements || []);
+  const mediaCanvases = upgradeMediaElements(manifest, mediaElements);
   const behavior = [];
   let start = undefined;
   let viewingDirection = undefined;
   for (const sequence of manifest.sequences || []) {
+    if (
+      mediaCanvases.length &&
+      mediaCanvases.length === mediaElements.length &&
+      (sequence as any).compatibilityHint === "displayIfContentUnsupported"
+    )
+      continue;
     if (sequence.canvases.length) {
       allCanvases.push(...sequence.canvases);
     }
@@ -686,9 +697,72 @@ function upgradeManifest(manifest: Presentation2.Manifest): Presentation3.Manife
     ...linkingProperties(manifest),
     viewingDirection,
     start: start,
-    items: allCanvases,
+    items: [...allCanvases, ...mediaCanvases],
     structures: flattenStructures(manifest.structures as any),
   });
+}
+
+function upgradeMediaElements(
+  manifest: Presentation2.Manifest,
+  elements: NonNullable<Presentation2.Manifest["mediaSequences"]>[number]["elements"]
+): Presentation3.Canvas[] {
+  const canvases: Presentation3.Canvas[] = [];
+  for (const [index, element] of elements.entries()) {
+    const type = getNewType(element);
+    if (type !== "Sound" && type !== "Video") continue;
+    const length = element.duration ?? element.metadata?.find((entry) => entry.label === "length")?.value;
+    const match = String(length ?? "")
+      .trim()
+      .match(/^(?:(\d+(?:\.\d+)?)\s*h\s*)?(?:(\d+(?:\.\d+)?)\s*(?:mn|min|m)\s*)?(?:(\d+(?:\.\d+)?)\s*s?)?$/);
+    const duration = match ? Number(match[1] || 0) * 3600 + Number(match[2] || 0) * 60 + Number(match[3] || 0) : 0;
+    if (!Number.isFinite(duration) || duration <= 0) continue;
+    if (type === "Video" && (!(element as any).width || !(element as any).height)) continue;
+
+    const upgraded = presentation2to3.traverseContentResource(structuredClone(element) as any) as any;
+    const renderings = (upgraded.rendering || []).filter((resource: any) =>
+      resource.format?.startsWith(type === "Sound" ? "audio/" : "video/")
+    );
+    const bodies = (renderings.length ? renderings : [upgraded]).map((resource: any) =>
+      removeUndefinedProperties({
+        ...resource,
+        type,
+        duration,
+        width: upgraded.width,
+        height: upgraded.height,
+        label: resource.label || upgraded.label,
+      })
+    );
+    const id = `${manifest["@id"]}/canvas/av-${index + 1}`;
+    canvases.push(
+      removeUndefinedProperties({
+        id,
+        type: "Canvas",
+        label: upgraded.label,
+        duration,
+        width: upgraded.width,
+        height: upgraded.height,
+        thumbnail: upgraded.thumbnail,
+        metadata: upgraded.metadata,
+        rendering: upgraded.rendering,
+        items: [
+          {
+            id: `${id}/page`,
+            type: "AnnotationPage",
+            items: [
+              {
+                id: `${id}/annotation`,
+                type: "Annotation",
+                motivation: "painting",
+                target: id,
+                body: bodies.length === 1 ? bodies[0] : { type: "Choice", items: bodies },
+              },
+            ],
+          },
+        ],
+      }) as Presentation3.Canvas
+    );
+  }
+  return canvases;
 }
 
 function flattenStructures(structures: Presentation3.Range[]): Presentation3.Range[] {
@@ -755,6 +829,7 @@ function upgradeSequence(sequence: Presentation2.Sequence): {
   behavior?: string[];
   startCanvas?: Presentation3.Reference<"Canvas"> | undefined;
   viewingDirection?: "left-to-right" | "right-to-left" | "top-to-bottom" | "bottom-to-top";
+  compatibilityHint?: string;
 } {
   /*
     rng = {"id": s.get('@id', self.mint_uri()), "type": "Range"}
@@ -786,6 +861,7 @@ function upgradeSequence(sequence: Presentation2.Sequence): {
     behavior: sequence.viewingHint ? [sequence.viewingHint] : [],
     viewingDirection: sequence.viewingDirection,
     startCanvas: sequence.startCanvas as any,
+    ...((sequence as any).compatibilityHint ? { compatibilityHint: (sequence as any).compatibilityHint } : {}),
   };
 }
 
@@ -852,9 +928,9 @@ function upgradeContentResource(inputContentResource: Presentation2.ContentResou
     }) as Presentation3.ContentResource;
   }
 
-  const contentResource = (typeof inputContentResource === "string"
-    ? { "@id": inputContentResource }
-    : inputContentResource) as Presentation2.CommonContentResource;
+  const contentResource = (
+    typeof inputContentResource === "string" ? { "@id": inputContentResource } : inputContentResource
+  ) as Presentation2.CommonContentResource;
 
   // @todo there might be some field dropped here.
   return removeUndefinedProperties({
@@ -1006,8 +1082,8 @@ function upgradeSelector(
   if (selector["@type"] === "oa:Choice") {
     return [
       upgradeSelector(selector.default, preserveUnknown) as Presentation3.Selector,
-      ...((Array.isArray(selector.item) ? selector.item : [selector.item]).map(
-        (item) => upgradeSelector(item, preserveUnknown)
+      ...((Array.isArray(selector.item) ? selector.item : [selector.item]).map((item) =>
+        upgradeSelector(item, preserveUnknown)
       ) as Presentation3.Selector[]),
     ];
   }

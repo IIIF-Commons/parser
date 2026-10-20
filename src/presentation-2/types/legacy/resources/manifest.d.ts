@@ -5,6 +5,7 @@ import { Sequence } from "./sequence";
 import { LinkingProperties } from "../iiif/linking";
 import { Range } from "./range";
 import { RightsProperties } from "../iiif/rights";
+import { ContentResource } from "./content-resource";
 
 type ManifestOmittedTechnical = "format" | "height" | "width";
 type ManifestOmittedLinking = "startCanvas";
@@ -18,6 +19,12 @@ export type ManifestStructural = {
    */
   sequences: Sequence[];
   structures?: Range[];
+  /** Legacy IxIF media sequences, upgraded to temporal canvases when their duration is known. */
+  mediaSequences?: Array<{
+    "@id"?: string;
+    "@type"?: "ixif:MediaSequence";
+    elements: Array<ContentResource & Partial<DescriptiveProperties & LinkingProperties> & { duration?: number }>;
+  }>;
 };
 type ManifestLinking = OmitProperties<LinkingProperties, ManifestOmittedLinking>;
 
