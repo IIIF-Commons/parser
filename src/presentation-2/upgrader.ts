@@ -510,24 +510,24 @@ function parseWithin(resource: Presentation2.AbstractResource): undefined | Pres
 }
 
 function linkingProperties(resource: Presentation2.LinkingProperties & Presentation2.RightsProperties) {
-  // @todo related links to metadata.
-
   const related = resource.related ? (Array.isArray(resource.related) ? resource.related : [resource.related]) : [];
   const layer = resource.contentLayer as Presentation2.Layer;
 
   return {
     provider:
-      resource.logo || related.length
+      resource.logo
         ? [
             {
               id: configuration.providerId,
               type: "Agent" as const,
-              homepage: related.length ? [related[0] as any] : undefined,
               logo: resource.logo ? (Array.isArray(resource.logo) ? resource.logo : [resource.logo]) : undefined,
               label: convertLanguageMapping(configuration.providerName),
             },
           ]
         : undefined,
+    homepage: related.length
+      ? related.map((link: any) => ({ ...link, type: link.type === "unknown" ? "Text" : link.type }))
+      : undefined,
     partOf: parseWithin(resource),
     rendering: resource.rendering,
     seeAlso: resource.seeAlso,
