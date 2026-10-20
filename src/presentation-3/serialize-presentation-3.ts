@@ -107,10 +107,11 @@ function* descriptiveProperties(
 
 function* linkingProperties(
   entity: Partial<LinkingNormalized>,
-  parent?: any
+  parent?: any,
+  omitPartOf = false
 ): Generator<any, any, Array<[keyof LinkingNormalized, any]>> {
   let filteredPartOf = [];
-  for (let partOf of entity.partOf || []) {
+  for (let partOf of omitPartOf ? [] : entity.partOf || []) {
     if (partOf.type === "Manifest" && parent?.type === "Manifest") continue;
     filteredPartOf.push(yield partOf);
   }
@@ -141,6 +142,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         // Only a snippet.
         ...technicalProperties(entity),
         ...(yield* descriptiveProperties(entity)),
+        ...(yield* linkingProperties(entity, undefined, true)),
         ["navPlace", (entity as any).navPlace],
       ];
     }
@@ -343,6 +345,7 @@ export const serializeConfigPresentation3: SerializeConfig = {
         ["next", (entity as any).next],
         ["total", (entity as any).total],
       ...(yield* descriptiveProperties(entity)),
+      ...(yield* linkingProperties(entity, undefined, true)),
       ["navPlace", (entity as any).navPlace],
     ];
   },
