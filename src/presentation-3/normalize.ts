@@ -1,5 +1,6 @@
 import type {
   Annotation,
+  AnnotationCollection,
   AnnotationPage,
   Canvas,
   Collection,
@@ -548,6 +549,13 @@ export function normalize(unknownEntity: unknown) {
       annotationTargetToSpecificResource,
       addToMapping<Annotation>("Annotation"),
       addToEntities<Annotation>("Annotation"),
+    ],
+    annotationCollection: [
+      (collection, context) => {
+        if (context.parent) return collection;
+        addToMapping<AnnotationCollection>("AnnotationCollection")(collection);
+        return addToEntities<AnnotationCollection>("AnnotationCollection")(collection, context);
+      },
     ],
     contentResource: [
       // This won't be normalized before going into the state.

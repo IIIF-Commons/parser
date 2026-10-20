@@ -350,6 +350,20 @@ export class Traverse {
     return annotationPage;
   }
 
+  traverseAnnotationCollection(collection: AnnotationCollection, parent?: Presentation3Resource): AnnotationCollection {
+    for (const key of ["first", "last"] as const) {
+      const page = collection[key];
+      if (page && typeof page !== "string") {
+        collection[key] = this.traverseAnnotationPage(page as AnnotationPage, collection);
+      }
+    }
+    return this.traverseType(
+      this.traverseDescriptive(this.traverseLinking(collection as any)) as AnnotationCollection,
+      { parent },
+      this.traversals.annotationCollection
+    );
+  }
+
   _traverseAnnotationPage: (page: AnnotationPage) => AnnotationPage = compose<AnnotationPage>(
     this.traverseAnnotationPageItems.bind(this),
     this.traverseLinking.bind(this),
@@ -468,16 +482,19 @@ export class Traverse {
     if (range.items) {
       range.items = range.items.map((rangeOrManifest: RangeItems) => {
         if (typeof rangeOrManifest === "string" || rangeOrManifest.type === "Canvas") {
-          const canvas = typeof rangeOrManifest === "string"
-            ? { id: rangeOrManifest, type: "Canvas" as const }
-            : rangeOrManifest;
+          const canvas =
+            typeof rangeOrManifest === "string" ? { id: rangeOrManifest, type: "Canvas" as const } : rangeOrManifest;
           const [id, fragment] = splitCanvasFragment(canvas.id);
           if (fragment) {
-            return this.traverseSpecificResource({
-              type: "SpecificResource",
-              source: { ...canvas, id },
-              selector: { type: "FragmentSelector", value: fragment },
-            } as SpecificResource, "Canvas", range);
+            return this.traverseSpecificResource(
+              {
+                type: "SpecificResource",
+                source: { ...canvas, id },
+                selector: { type: "FragmentSelector", value: fragment },
+              } as SpecificResource,
+              "Canvas",
+              range
+            );
           }
           return this.traverseCanvas(canvas as Canvas, range);
         }
@@ -564,6 +581,8 @@ export class Traverse {
         return this.traverseCanvas(resource as Canvas, parent);
       case "AnnotationPage":
         return this.traverseAnnotationPage(resource as AnnotationPage, parent);
+      case "AnnotationCollection":
+        return this.traverseAnnotationCollection(resource as AnnotationCollection, parent) as any;
       case "Annotation":
         return this.traverseAnnotation(resource as Annotation, parent);
       case "ContentResource":

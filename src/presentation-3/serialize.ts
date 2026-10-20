@@ -96,16 +96,20 @@ export function serialize<Return>(state: CompatibleStore, subject: Reference, co
   }
 
   function flatten(sub: Reference, parent?: any, depth = 0) {
-    const generator = config[sub.type as keyof SerializeConfig] || (typeof sub?.type === "string" && typeof sub.id === "string" && !state.entities[sub.type] && config.ContentResource);
+    const generator =
+      config[sub.type as keyof SerializeConfig] ||
+      (typeof sub?.type === "string" &&
+        typeof sub.id === "string" &&
+        !state.entities[sub.type] &&
+        config.ContentResource);
     if (!generator) {
       return UNSET;
     }
     if (depth > 20) {
       throw new Error("Circular reference: " + sub.id + " " + sub.type);
     }
-    const [resource, fullResource] = state.entities[sub.type]
-      ? resolveIfExists(state, sub, parent)
-      : [sub, sub];
+    const [storedResource, fullResource] = state.entities[sub.type] ? resolveIfExists(state, sub, parent) : [sub, sub];
+    const resource = storedResource || (sub.type === "AnnotationCollection" ? sub : undefined);
     if (!resource) {
       return UNSET;
     }
