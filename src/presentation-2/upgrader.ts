@@ -443,12 +443,13 @@ function descriptiveProperties<T extends Partial<Presentation3.DescriptiveProper
     Partial<Presentation2.TechnicalProperties>
 ): T {
   const [rights, extraMetadata] = fixLicense(resource.license);
+  const label = resource.label || (resource as any)["@label"];
   const allMetadata = [...(resource.metadata ? convertMetadata(resource.metadata) : []), ...extraMetadata];
 
   return {
     rights,
     metadata: allMetadata.length ? allMetadata : undefined,
-    label: resource.label ? convertLanguageMapping(resource.label) : undefined,
+    label: label ? convertLanguageMapping(label) : undefined,
     requiredStatement: resource.attribution
       ? {
           label: convertLanguageMapping(configuration.attributionLabel),
