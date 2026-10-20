@@ -834,13 +834,24 @@ function upgradeAnnotation(annotation: Presentation2.Annotation): Presentation3.
 function upgradeContentResourceOrChoice(
   resource: Presentation2.ContentResource | Presentation2.ChoiceEmbeddedContent
 ): Presentation3.ContentResource | Presentation3.ChoiceBody {
-  if ((resource as any).type === "Choice") {
+  if ((resource as any).type === "Choice" || (resource as any).type === "SpecificResource") {
     return resource as any;
   }
   return upgradeContentResource(resource);
 }
 
 function upgradeContentResource(inputContentResource: Presentation2.ContentResource): Presentation3.ContentResource {
+  if (inputContentResource["@type"] === "oa:SpecificResource" && "full" in inputContentResource) {
+    const specific = inputContentResource as Presentation2.ImageResourceSegmentWithService;
+    return removeUndefinedProperties({
+      id: specific["@id"],
+      type: "SpecificResource",
+      source: presentation2to3.traverseContentResource(specific.full),
+      selector: specific.selector ? upgradeSelector(specific.selector, true) : undefined,
+      styleClass: specific.style,
+    }) as Presentation3.ContentResource;
+  }
+
   const contentResource = (typeof inputContentResource === "string"
     ? { "@id": inputContentResource }
     : inputContentResource) as Presentation2.CommonContentResource;
@@ -973,7 +984,8 @@ export function convertPresentation2(entity: any): Presentation3.Manifest | Pres
 }
 
 function upgradeSelector(
-  selector: Presentation2.ContentResourceSelector
+  selector: Presentation2.ContentResourceSelector,
+  preserveUnknown = false
 ): Presentation3.Selector | Presentation3.Selector[] {
   const isSvgSelector =
     ((Array.isArray(selector["@type"]) && selector["@type"].includes("oa:SvgSelector")) ||
@@ -993,9 +1005,9 @@ function upgradeSelector(
   }
   if (selector["@type"] === "oa:Choice") {
     return [
-      upgradeSelector(selector.default) as Presentation3.Selector,
+      upgradeSelector(selector.default, preserveUnknown) as Presentation3.Selector,
       ...((Array.isArray(selector.item) ? selector.item : [selector.item]).map(
-        upgradeSelector
+        (item) => upgradeSelector(item, preserveUnknown)
       ) as Presentation3.Selector[]),
     ];
   }
@@ -1008,6 +1020,10 @@ function upgradeSelector(
       quality: selector.quality,
       format: selector.format,
     };
+  }
+  if (preserveUnknown) {
+    const { "@type": type, ...properties } = selector as any;
+    return { ...properties, type: typeof type === "string" ? removePrefix(type) : type };
   }
   throw new Error(`Unsupported selector type: ${selector["@type"]}`);
 }

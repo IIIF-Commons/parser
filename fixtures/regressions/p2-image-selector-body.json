@@ -1,0 +1,29 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "https://example.org/annotation/rotation",
+  "@type": "oa:Annotation",
+  "motivation": "sc:painting",
+  "on": "https://example.org/canvas/rotation",
+  "resource": {
+    "@type": "oa:SpecificResource",
+    "full": {
+      "@id": "https://example.org/iiif/image1",
+      "@type": "dctypes:Image",
+      "label": "Image to rotate",
+      "service": {
+        "@id": "https://example.org/iiif/image1",
+        "@context": "http://iiif.io/api/image/2/context.json",
+        "profile": "http://iiif.io/api/image/2/level1.json"
+      }
+    },
+    "selector": {
+      "@context": "http://iiif.io/api/annex/openannotation/context.json",
+      "@type": "iiif:ImageApiSelector",
+      "region": "pct:0,0,10,10",
+      "size": "200,",
+      "rotation": "90",
+      "quality": "gray",
+      "format": "png"
+    }
+  }
+}
