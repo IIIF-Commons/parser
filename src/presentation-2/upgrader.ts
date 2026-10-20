@@ -590,6 +590,15 @@ function paginationProperties(collection: Presentation2.Collection) {
     }
   }
 
+  if ((collection as any).last) {
+    const ref = stringOrRefToRef((collection as any).last, "Collection");
+    if (ref) additionalProperties.last = ref;
+  }
+
+  if ((collection as any).startIndex || (collection as any).startIndex === 0) {
+    additionalProperties.startIndex = (collection as any).startIndex;
+  }
+
   if ((collection as any).total || (collection as any).total === 0) {
     additionalProperties.total = (collection as any).total;
   }

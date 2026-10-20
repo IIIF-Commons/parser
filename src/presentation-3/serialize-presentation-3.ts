@@ -322,6 +322,12 @@ export const serializeConfigPresentation3: SerializeConfig = {
       return [
         ["@context", context],
         ...technicalProperties(entity),
+        ["first", (entity as any).first],
+        ["last", (entity as any).last],
+        ["startIndex", (entity as any).startIndex],
+        ["prev", (entity as any).prev],
+        ["next", (entity as any).next],
+        ["total", (entity as any).total],
         ...(yield* descriptiveProperties(entity)),
         ...(yield* linkingProperties(entity)),
         ["items", filterEmpty(yield entity.items)],
@@ -330,6 +336,12 @@ export const serializeConfigPresentation3: SerializeConfig = {
     }
     return [
       ...technicalProperties(entity),
+        ["first", (entity as any).first],
+        ["last", (entity as any).last],
+        ["startIndex", (entity as any).startIndex],
+        ["prev", (entity as any).prev],
+        ["next", (entity as any).next],
+        ["total", (entity as any).total],
       ...(yield* descriptiveProperties(entity)),
       ["navPlace", (entity as any).navPlace],
     ];

@@ -272,6 +272,9 @@ export const serializeConfigPresentation2: SerializeConfig = {
   Collection: function* (entity) {
     return [
       ...technicalProperties(entity, "sc:Collection"),
+      ...["first", "last", "prev", "next"].map((key) => [key, (entity as any)[key]?.id || (entity as any)[key]]),
+      ["total", (entity as any).total],
+      ["startIndex", (entity as any).startIndex],
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
       ["members", yield* entity.items],
