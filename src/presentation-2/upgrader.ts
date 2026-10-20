@@ -832,7 +832,9 @@ function upgradeContentResourceOrChoice(
 }
 
 function upgradeContentResource(inputContentResource: Presentation2.ContentResource): Presentation3.ContentResource {
-  const contentResource = inputContentResource as Presentation2.CommonContentResource;
+  const contentResource = (typeof inputContentResource === "string"
+    ? { "@id": inputContentResource }
+    : inputContentResource) as Presentation2.CommonContentResource;
 
   // @todo there might be some field dropped here.
   return removeUndefinedProperties({
