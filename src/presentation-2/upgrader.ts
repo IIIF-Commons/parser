@@ -995,6 +995,9 @@ function upgradeSelector(
       type: "ImageApiSelector",
       region: "region" in selector ? selector.region : undefined,
       rotation: "rotation" in selector ? selector.rotation : undefined,
+      size: selector.size,
+      quality: selector.quality,
+      format: selector.format,
     };
   }
   throw new Error(`Unsupported selector type: ${selector["@type"]}`);
