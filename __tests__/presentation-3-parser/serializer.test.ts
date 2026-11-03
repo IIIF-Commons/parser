@@ -513,6 +513,18 @@ describe("serializer", () => {
         "attribution": "Provided by Example Organization",
         "description": "Book 1, written by Anne Author, published in Paris around 1400.",
         "label": "Book 1",
+        "license": "http://creativecommons.org/licenses/by/4.0/",
+        "logo": {
+          "@id": "https://example.org/service/inst1/full/max/0/default.png",
+          "@type": "dctypes:Image",
+          "format": "image/png",
+          "service": {
+            "@context": "http://iiif.io/api/image/3/context.json",
+            "@id": "https://example.org/service/inst1",
+            "@type": "ImageService3",
+            "profile": "level2",
+          },
+        },
         "metadata": [
           {
             "label": "Author",
@@ -541,14 +553,22 @@ describe("serializer", () => {
           },
         ],
         "navDate": "1856-01-01T00:00:00Z",
+        "related": {
+          "@id": "https://example.org/info/book1/",
+          "@type": "dctypes:Text",
+          "format": "text/html",
+          "label": "Home page for Book 1",
+        },
         "rendering": {
           "@id": "https://example.org/iiif/book1.pdf",
+          "@type": "dctypes:Text",
           "format": "application/pdf",
           "label": "Download as PDF",
         },
         "seeAlso": {
           "@id": "https://example.org/library/catalog/book1.xml",
           "format": "text/xml",
+          "profile": "https://example.org/profiles/bibliographic",
         },
         "sequences": [
           {
@@ -566,9 +586,9 @@ describe("serializer", () => {
           },
         ],
         "service": {
-          "@context": "http://iiif.io/api/image/2/context.json",
           "@id": "https://example.org/service/example",
-          "profile": "http://iiif.io/api/image/2/profiles/https://example.org/docs/example-service.html.json",
+          "@type": "ExampleExtensionService",
+          "profile": "https://example.org/docs/example-service.html",
         },
         "startCanvas": "https://example.org/iiif/book1/canvas/p2",
         "structures": [
@@ -583,12 +603,15 @@ describe("serializer", () => {
           "@type": "dctypes:Image",
           "format": "image/jpeg",
           "service": {
-            "@context": "http://iiif.io/api/image/2/context.json",
+            "@context": "http://iiif.io/api/image/3/context.json",
             "@id": "https://example.org/iiif/book1/page1",
-            "profile": "http://iiif.io/api/image/2/profiles/level1.json",
+            "@type": "ImageService3",
+            "profile": "level1",
           },
         },
         "viewingDirection": "right-to-left",
+        "viewingHint": "paged",
+        "within": "https://example.org/collections/books/",
       }
     `);
   });

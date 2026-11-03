@@ -9,7 +9,6 @@ import type {
 } from "./types";
 import type { DescriptiveNormalized, LinkingNormalized } from "../presentation-3-normalized/types";
 import type * as Presentation2 from "../presentation-2/types";
-import { compressSpecificResource } from "../shared/compress-specific-resource";
 import { IS_EXTERNAL } from "./utilities";
 
 export function languageString2to3(
@@ -128,18 +127,33 @@ function convertService(service: any) {
     };
   }
 
-  if ("@id" in service) {
-    const newService = { ...service };
-    delete newService["@type"];
-    return newService;
-  }
+  const { id, type, service: nested, ...properties } = service;
+  const serviceType = type || service["@type"];
+  const converted: any = { ...properties, "@id": service["@id"] || id };
+  if (serviceType) converted["@type"] = serviceType;
 
-  // @todo support auth.
-  return {
-    "@context": "http://iiif.io/api/image/2/context.json",
-    "@id": service.id,
-    profile: `http://iiif.io/api/image/2/profiles/${service.profile}.json`,
-  };
+  // Only image services get image profiles. Preserve other service protocols:
+  // changing a declaration cannot turn a Search 2 endpoint into Search 1.
+  if (/^ImageService[123]$/.test(serviceType)) {
+    const version = serviceType.slice(-1);
+    converted["@context"] = service["@context"] || `http://iiif.io/api/image/${version}/context.json`;
+    if (version !== "3" && /^level[012]$/.test(service.profile)) {
+      converted.profile = `http://iiif.io/api/image/${version}/${service.profile}.json`;
+    }
+    if (version !== "3") delete converted["@type"];
+  } else if (/^(Search|AutoComplete)Service[12]$/.test(serviceType)) {
+    const version = serviceType.endsWith("1") ? "1" : "2";
+    converted["@context"] = service["@context"] || `http://iiif.io/api/search/${version}/context.json`;
+    if (version === "1") {
+      converted.profile =
+        service.profile ||
+        `http://iiif.io/api/search/1/${serviceType.startsWith("Search") ? "search" : "autocomplete"}`;
+    }
+  }
+  if (nested) {
+    converted.service = unNestArray((Array.isArray(nested) ? nested : [nested]).map(convertService));
+  }
+  return converted;
 }
 
 function technicalProperties(props: Partial<TechnicalProperties>, type?: string) {
@@ -151,10 +165,13 @@ function technicalProperties(props: Partial<TechnicalProperties>, type?: string)
     ["width", props.width],
     ["viewingDirection", props.viewingDirection !== "left-to-right" ? props.viewingDirection : undefined],
 
-    // Non-standard property.
-    ["license", (props as any).license ? (props as any).license : undefined],
-    // @todo Viewing hint is merged with behavior
-    // ['viewingHint', props.]
+    ["license", (props as any).rights || (props as any).license || undefined],
+    [
+      "viewingHint",
+      props.behavior?.find((behavior) =>
+        ["individuals", "paged", "continuous", "multi-part", "non-paged", "top", "facing-pages"].includes(behavior)
+      ),
+    ],
   ];
 }
 
@@ -177,26 +194,18 @@ function* descriptiveProperties(prop: Partial<DescriptiveNormalized>): Generator
     ["navDate", prop.navDate],
     // @todo these needs consideration if the way provider is parsed changes.
     ["logo", provider ? unNestArray(provider.logo) : undefined],
-    ["homepage", provider ? provider.homepage : undefined],
     ["attribution", prop.requiredStatement ? languageString2to3(prop.requiredStatement.value) : undefined],
   ];
 }
 
 function* linkingProperties(prop: Partial<LinkingNormalized>) {
-  const startProp =
-    prop.start && prop.start.type && (prop.start as any).type === "SpecificResource"
-      ? compressSpecificResource(prop.start as any)
-      : prop.start;
-
   return [
     ["seeAlso", unNestArray(yield prop.seeAlso)],
-    // @todo support more services (like auth)
     ["service", unNestArray((prop.service || []).map(convertService))],
     ["rendering", unNestArray(yield prop.rendering)],
-    // @todo part of to within
-    // ['within', unNestArray(yield prop.partOf)],
-    // @todo this may not work completely.
-    ["startCanvas", startProp ? startProp.id : undefined],
+    ["related", unNestArray(yield prop.homepage)],
+    ["within", unNestArray(prop.partOf?.map((resource) => resource.id))],
+    ["startCanvas", prop.start ? specificResourceToString(prop.start as any) : undefined],
   ];
 }
 
@@ -235,7 +244,6 @@ export const serializeConfigPresentation2: SerializeConfig = {
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
       // Structural.
-      // @todo structures
       [
         "sequences",
         [
@@ -250,20 +258,16 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  Canvas: function* (entity) {
+  Canvas: function* (entity, state, { isTopLevel }) {
     const paintingPage = yield entity.items;
     const resources = paintingPage.flatMap((page: any) => page.resources || []);
     return [
-      // Items.
+      ...(isTopLevel ? [["@context", "http://iiif.io/api/presentation/2/context.json"]] : []),
       ...technicalProperties(entity, "sc:Canvas"),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
       ["images", resources.length ? resources : undefined],
-      [
-        // @todo use otherContent if they are inlined
-        "otherContent",
-        entity.annotations && entity.annotations.length ? yield entity.annotations : undefined,
-      ],
+      ["otherContent", entity.annotations && entity.annotations.length ? yield entity.annotations : undefined],
     ];
   },
 
@@ -294,7 +298,9 @@ export const serializeConfigPresentation2: SerializeConfig = {
     const motivations = (
       Array.isArray(entity.motivation) ? entity.motivation : entity.motivation ? [entity.motivation] : []
     ).map((motivation) =>
-      motivation.includes(":") ? motivation : `${motivation === "painting" ? "sc" : "oa"}:${motivation}`
+      motivation.includes(":")
+        ? motivation
+        : `${motivation === "painting" || motivation === "supplementing" ? "sc" : "oa"}:${motivation === "supplementing" ? "painting" : motivation}`
     );
     return [
       ...(isTopLevel ? [["@context", "http://iiif.io/api/presentation/2/context.json"]] : []),
@@ -309,10 +315,20 @@ export const serializeConfigPresentation2: SerializeConfig = {
 
   ContentResource: function* (entity: any) {
     switch (entity.type) {
+      case "Text":
+        if (entity.value === undefined && entity.chars === undefined) {
+          return [
+            ...technicalProperties(entity, "dctypes:Text"),
+            ...(yield* descriptiveProperties(entity)),
+            ...(yield* linkingProperties(entity)),
+          ];
+        }
+      // Text with embedded content is also encountered in legacy transcriptions.
       case "TextualBody":
         return [
           ...technicalProperties(entity, "cnt:ContentAsText"),
           ["chars", entity.value ?? entity.chars],
+          ["format", entity.format || "text/plain"],
           ["language", entity.language],
           ...(yield* descriptiveProperties(entity)),
         ];
@@ -327,7 +343,6 @@ export const serializeConfigPresentation2: SerializeConfig = {
           ...(yield* descriptiveProperties(entity)),
           ...(yield* linkingProperties(entity)),
         ];
-      case "Text":
       case "Dataset":
       case "Sound":
       case "Video":
@@ -338,9 +353,18 @@ export const serializeConfigPresentation2: SerializeConfig = {
             entity.type === "Sound" ? "dctypes:Sound" : entity.type === "Video" ? "dctypes:MovingImage" : undefined
           ),
           ["chars", entity.chars ?? entity.value],
+          ["profile", entity.profile],
           ...(yield* descriptiveProperties(entity)),
+          ...(yield* linkingProperties(entity)),
         ];
     }
+  },
+
+  Agent: function* (entity) {
+    return [
+      ["@id", entity.id],
+      ["logo", yield entity.logo],
+    ];
   },
 
   AnnotationCollection: function* (entity) {
@@ -365,7 +389,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     ];
   },
 
-  Range: function* (entity) {
+  Range: function* (entity, state, { isTopLevel }) {
     const members = [];
     const canvases = [];
 
@@ -375,6 +399,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
         if (item) {
           const canvas = yield item;
           members.push({
+            ...(item.type === "Range" ? canvas : {}),
             "@id": specificResourceToString(_item),
             "@type": `sc:${item.type}`,
             label: canvas ? canvas.label : undefined,
@@ -388,6 +413,7 @@ export const serializeConfigPresentation2: SerializeConfig = {
     }
 
     return [
+      ...(isTopLevel ? [["@context", "http://iiif.io/api/presentation/2/context.json"]] : []),
       ...technicalProperties(entity, "sc:Range"),
       ...(yield* descriptiveProperties(entity)),
       ...(yield* linkingProperties(entity)),
