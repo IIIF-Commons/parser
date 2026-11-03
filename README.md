@@ -327,3 +327,24 @@ upgrade(presentation2Manifest); // Presentation 3 Manifest or Collection
 // throws Presentation4CompatibilityError with the same diagnostics.
 const diagnostics = getPresentation3CompatibilityDiagnostics(presentation4Manifest);
 ```
+
+### Downgrade Presentation 3 to Presentation 2
+
+```ts
+import { presentation3to2downgrade } from "@iiif/parser/presentation-2";
+
+const manifest2 = presentation3to2downgrade(manifest3);
+```
+
+The helper normalizes and serializes a resource without mutating the input. It also
+accepts individual canvases, annotation pages, annotations and ranges. Annotation
+pages become v2 AnnotationLists with `resources`, `resource`, `chars` and `on`
+(including region fragments); `supplementing` becomes `sc:painting`.
+
+This is a best-effort Presentation JSON conversion, not a service proxy. Service
+URLs and protocol versions are preserved, including Search 2 and Image 3. A v2
+viewer that needs Search 1 or Image 2 still needs compatible service endpoints or
+a bridge. External annotation-page URLs are preserved too: convert the responses
+at those URLs separately, or embed the pages before downgrading. Features without
+a Presentation 2 equivalent (such as temporal canvas playback) are not made
+compatible by this helper.
