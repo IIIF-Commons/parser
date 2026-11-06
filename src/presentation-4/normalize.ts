@@ -504,12 +504,15 @@ export function normalize(input: unknown): NormalizeResult {
         map("Timeline"),
         record("Timeline"),
       ],
+      // Targets stay inline, like target SpecificResources and content resources.
+      // A target-only Canvas must not import empty defaults over a loaded Canvas.
       canvas: [
+        ...(isLegacySource ? [addFlagForExternalResource] : []),
         withId("Canvas", diagnostics),
         ensureDefaultFields((isLegacySource ? legacyEmptyCanvas : emptyCanvas) as any),
         map("Canvas"),
         record("Canvas"),
-      ],
+      ].map(skipOnAnnotationTarget),
       scene: [withId("Scene", diagnostics), ensureDefaultFields(emptyScene), map("Scene"), record("Scene")],
       annotationCollection: [
         withId("AnnotationCollection", diagnostics),
